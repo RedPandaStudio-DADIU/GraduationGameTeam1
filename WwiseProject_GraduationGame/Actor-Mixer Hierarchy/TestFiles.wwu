@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="TestFiles" ID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="TestSound" ID="{4205C742-04E1-4CF1-A3C3-43F7FF0DEE52}" ShortID="419507097">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Tone Generator" ID="{7B0A3F77-55C6-4507-8403-AA0B69D86D5C}" ShortID="63893666" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+							<PropertyList>
+								<Property Name="FixDur" Type="Real32" Value="0.5"/>
+								<Property Name="StartFreq" Type="Real32" Value="4009"/>
+								<Property Name="StopFreq" Type="Real32" Value="100"/>
+								<Property Name="SweepFreq" Type="bool" Value="True"/>
+								<Property Name="SweepFreqType" Type="int32" Value="1"/>
+							</PropertyList>
+							<Language>SFX</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Tone Generator" ID="{7B0A3F77-55C6-4507-8403-AA0B69D86D5C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="sfx_test_Beep_1000hz" ID="{95D810FC-2D52-4A2D-BC27-6EFB0BB4F5C3}" ShortID="441981322">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926" ID="{6E16CD00-1DBD-409B-B8BD-90B8F479BFAB}">
+							<Language>SFX</Language>
+							<AudioFile>TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="921613273"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926" ID="{6E16CD00-1DBD-409B-B8BD-90B8F479BFAB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SFX_TestSound_lp" ID="{FBF0CE47-587F-4766-98B8-DABA032ECBD6}" ShortID="497637216">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Beep Loop by DongKingKong Id-395901 9" ID="{43F30653-F2F6-4ED2-BBBC-94CA5C7DF54B}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0.245257043994068"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>TestFiles\Beep Loop by DongKingKong Id-395901 9.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="911602909"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Beep Loop by DongKingKong Id-395901 9" ID="{43F30653-F2F6-4ED2-BBBC-94CA5C7DF54B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<ActorMixer Name="3D_TestFiles" ID="{B0C94946-B2BA-4B2D-8895-B6E7150E8702}" ShortID="311502366">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_test_Beep_1000hz_3D" ID="{1F0DD7C7-AEA5-4EEB-9848-04D28D677B30}" ShortID="626131445">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926" ID="{305C99A7-A382-486B-A78C-15B89795431E}">
+									<Language>SFX</Language>
+									<AudioFile>TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="921613273"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926" ID="{305C99A7-A382-486B-A78C-15B89795431E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_TestSound_lp_3D" ID="{A4732938-176C-4390-9D5C-83550C9112E6}" ShortID="841380117">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Beep Loop by DongKingKong Id-395901 9" ID="{0966184E-B94B-49D2-8254-943A61AC53EA}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.245257043994068"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TestFiles\Beep Loop by DongKingKong Id-395901 9.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="911602909"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Beep Loop by DongKingKong Id-395901 9" ID="{0966184E-B94B-49D2-8254-943A61AC53EA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

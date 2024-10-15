@@ -292,6 +292,33 @@ MonoBehaviour:
         guid: 8e474652dac50c4ea0dec98d1479529a
       Path: Virtual Acoustics/Factory Acoustic Textures/Textures/Wood_Deep
   AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Audio Master.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Audio Master
+      ObjectType: 12
+      guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+    ParentPath: Master-Mixer Hierarchy/Audio Master
+    guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+    GuidInternal: 
+    m_lastTime: -8584730210604248550
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy/Audio Master/Master Audio Bus
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -303,36 +330,34 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 3be0afac34163a4f837bd40a522cdaa8
     GuidInternal: 
-    m_lastTime: -8584730969475982877
-    List:
-    - name: Master Audio Bus
-      guid: d8a41415a61d2a41a17e75ca0c2149f3
-      id: 3803692087
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 3be0afac34163a4f837bd40a522cdaa8
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-        guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
-    - name: Motion Factory Bus
-      guid: c6b9f92af16ee946b5f2e30c9e602c74
-      id: 985987111
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 3be0afac34163a4f837bd40a522cdaa8
-      - ElementName: Motion Factory Bus
-        ObjectType: 2
-        guid: c6b9f92af16ee946b5f2e30c9e602c74
-      Path: Master-Mixer Hierarchy/Default Work Unit/Motion Factory Bus
+    m_lastTime: -8584730210604864421
+    List: []
+  - PhysicalPath: Master-Mixer Hierarchy/Effects Busses.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Effects Busses
+      ObjectType: 12
+      guid: 8076f1e943eefc438b8dbb683da5f64b
+    ParentPath: Master-Mixer Hierarchy/Effects Busses
+    guid: 8076f1e943eefc438b8dbb683da5f64b
+    GuidInternal: 
+    m_lastTime: -8584730211016067042
+    List: []
+  - PhysicalPath: Master-Mixer Hierarchy/Interactive Music Busses.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Interactive Music Busses
+      ObjectType: 12
+      guid: 201a6927b26739488cc3ca7e91b821ec
+    ParentPath: Master-Mixer Hierarchy/Interactive Music Busses
+    guid: 201a6927b26739488cc3ca7e91b821ec
+    GuidInternal: 
+    m_lastTime: -8584730210890780416
+    List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -345,8 +370,22 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 6f15ec5307adb44d95839214506ad9b8
     GuidInternal: 
-    m_lastTime: -8584730969472698331
-    List: []
+    m_lastTime: -8584730187488862902
+    List:
+    - name: Main
+      guid: 938dfbf4c8b2e64f98b3cd4e7f1ec106
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6f15ec5307adb44d95839214506ad9b8
+      - ElementName: Main
+        ObjectType: 7
+        guid: 938dfbf4c8b2e64f98b3cd4e7f1ec106
+      Path: SoundBanks/Default Work Unit/Main
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -359,7 +398,63 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584730969475989630
+    m_lastTime: -8584730188677440271
+    List:
+    - name: Play_TestSound
+      guid: 8b4c6f59cb016e429bb576b35bb72198
+      id: 2752533807
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
+      - ElementName: Play_TestSound
+        ObjectType: 3
+        guid: 8b4c6f59cb016e429bb576b35bb72198
+      Path: Events/Default Work Unit/Play_TestSound
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
+  - PhysicalPath: Events/Locomotion.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Locomotion
+      ObjectType: 12
+      guid: a2c848ff1589744f939bb3dc40287186
+    ParentPath: Events/Locomotion
+    guid: a2c848ff1589744f939bb3dc40287186
+    GuidInternal: 
+    m_lastTime: -8584730375793966247
+    List: []
+  - PhysicalPath: Events/NPC.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: NPC
+      ObjectType: 12
+      guid: b80379d52c10a44581b347f021ebb1af
+    ParentPath: Events/NPC
+    guid: b80379d52c10a44581b347f021ebb1af
+    GuidInternal: 
+    m_lastTime: -8584730375793957259
+    List: []
+  - PhysicalPath: Events/Player.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Player
+      ObjectType: 12
+      guid: 8207cda29fb9e2459b243d8e7eaae86e
+    ParentPath: Events/Player
+    guid: 8207cda29fb9e2459b243d8e7eaae86e
+    GuidInternal: 
+    m_lastTime: -8584730375793949454
     List: []
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu

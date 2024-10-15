@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" SchemaVersion="119">
+	<Switches>
+		<WorkUnit Name="Switches" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GroundMaterialSwitch" ID="{3CFB2835-D747-4294-B504-B635B37AA31E}">
+					<ChildrenList>
+						<Switch Name="TileType1" ID="{691EF04D-1242-49B4-B680-9D7985011C04}"/>
+						<Switch Name="TileType2" ID="{0B463E6F-7621-4998-B770-1770F35273D1}"/>
+						<Switch Name="Rubber" ID="{8C140E43-EBD6-4712-ACED-A7024942D684}"/>
+						<Switch Name="Linoleum" ID="{3746198D-F1DD-44CA-9B15-44C6626F2019}"/>
+						<Switch Name="Wood" ID="{DBC4BC59-00C1-459C-A77B-C8775E93748B}"/>
+						<Switch Name="Water" ID="{63A7B25C-7406-4C6C-8424-832C80F32DD7}"/>
+						<Switch Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}"/>
+						<Switch Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerSpeedSwitch" ID="{AFE3D45E-5678-4BBE-896C-93B9C1200FE6}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Walk" ID="{1B451580-82DE-4619-90B2-6958121BA75F}"/>
+						<Switch Name="Run" ID="{95A146E9-0AD6-496B-9949-606A7CBADBCD}"/>
+						<Switch Name="Sprint" ID="{7AB238C2-3493-4704-8754-FC3AADF0F3F5}"/>
+						<Switch Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_PlayerSpeed" ID="{5F5AE7DD-3784-43FE-9184-4FBE90A9F930}"/>
+						<Curve Name="" ID="{4C4E3154-6896-45DD-B06A-DBE3DEF5560E}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>4</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1.5</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3.0077</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4.00001</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>4</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerHealth" ID="{BDC210DF-FAFE-4476-8FF8-5636E437639C}">
+					<ChildrenList>
+						<Switch Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<Switch Name="LowHealth" ID="{80121DAB-9764-416C-94C9-15005ADB9B83}"/>
+						<Switch Name="NearDeath" ID="{1C22D404-D8B6-4B82-84F8-7055C035381A}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

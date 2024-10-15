@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Locomotion" ID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" PersistMode="Standalone"/>
+		<WorkUnit Name="Locomotion" ID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="PlayerLocomotion" ID="{42B88A57-E40B-4377-81C9-DC30979D03C2}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
