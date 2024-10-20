@@ -3,20 +3,3530 @@
 	<AudioObjects>
 		<WorkUnit Name="PlayerFootsteps" ID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}" OwnerID="{04B51F7B-58ED-43D7-9FDF-3505548C7E75}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Player_fs_Dirt" ID="{23B6B05D-4693-45FD-B1B6-F2400D6E8779}" ShortID="32144550">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="10"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
+				<SwitchContainer Name="Player_Footsteps_MaterialSwitch" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" ShortID="204484632">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Dirt" ID="{C14B422D-4797-4DEC-BC71-2A88B04D1A34}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="GroundMaterialSwitch" ID="{3CFB2835-D747-4294-B504-B635B37AA31E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+						</Reference>
 					</ReferenceList>
-				</RandomSequenceContainer>
+					<ChildrenList>
+						<SwitchContainer Name="WetnessTemplate" ID="{2994B75E-25F4-44D2-B024-666AF60EDE79}" ShortID="615910864">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{4AF4D264-1162-4DAF-8162-164B5D2EF8DA}" ShortID="731108100">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{067985DC-0CF8-4F66-88AC-342B995D3255}" ShortID="346061301">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{9515254A-A846-42A7-BD4D-94F452B70ABE}" ShortID="27303956">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{A7A1D13F-F1F4-4308-BC6E-2071978AE668}" ShortID="829773885">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{A7A1D13F-F1F4-4308-BC6E-2071978AE668}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{9515254A-A846-42A7-BD4D-94F452B70ABE}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{4AF4D264-1162-4DAF-8162-164B5D2EF8DA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{067985DC-0CF8-4F66-88AC-342B995D3255}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{9515254A-A846-42A7-BD4D-94F452B70ABE}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{067985DC-0CF8-4F66-88AC-342B995D3255}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{A7A1D13F-F1F4-4308-BC6E-2071978AE668}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{4AF4D264-1162-4DAF-8162-164B5D2EF8DA}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Dirt_WetnessSwitch" ID="{1D90AACF-9368-458C-9221-76A1A7394A25}" ShortID="720367687">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0DA9B3A3-25D0-4041-B805-BC99010F68D9}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{5F2F3E66-6E3A-4EB3-8872-EC0B8CAFF2F1}" ShortID="615006624">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{7368B0AA-6CA2-4981-8B7B-463DD75BF775}" ShortID="789660727">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-100</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{AEEE42D5-016B-4B5A-871B-FC77DD05D32B}" ShortID="310803756" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.01"/>
+														<Property Name="DecayTime" Type="Real32" Value="0.02"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.15"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-18"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.08"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{AEEE42D5-016B-4B5A-871B-FC77DD05D32B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{F655EDCD-D9D4-4755-A138-FF9191EE6689}" ShortID="1014447842">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{541E91F3-EF67-4832-A2C6-8EB6A1D3237D}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{17E6BC53-9167-4817-9AD9-28FA8F256015}" ShortID="985435244">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>280</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{EC7C8446-6C17-4CAA-9743-DE432FD8C404}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="202"/>
+																	<Property Name="Min" Type="Real64" Value="-177"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{A6B86610-E53D-4215-92C1-28CE46B87BCA}" ShortID="323944449" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="DecayTime" Type="Real32" Value="0.02"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.1"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-21.7"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.08"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{A6B86610-E53D-4215-92C1-28CE46B87BCA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{7D57D54E-80F9-4C80-9F58-8A0208C8068B}" ShortID="317088763">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B760082A-F2FE-4AC8-8935-D0F0A5BB9605}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="379"/>
+															<Property Name="Min" Type="Real64" Value="-253"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3006188F-3A30-4B7C-B672-32CA4255B1FD}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{44C5012B-53E4-4E48-AC18-726A2D0DFB83}" ShortID="949458783">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-360</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{2087F363-C247-40D1-9A18-118EF24B0C4F}" ShortID="793404368" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.1"/>
+														<Property Name="DecayTime" Type="Real32" Value="0.1"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.6"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-22.2"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.1"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{2087F363-C247-40D1-9A18-118EF24B0C4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{9CE778E5-1EC1-4727-9098-79588B0ACBAA}" ShortID="280103414">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{C5E3B5EE-A118-4F33-BC6E-666E640CD849}" ShortID="847734534">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-180</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{DA01BA89-A882-4B5B-98A0-F808D1DF0B35}" ShortID="184931808" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.04"/>
+														<Property Name="DecayTime" Type="Real32" Value="0.05"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-22.2"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.1"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{DA01BA89-A882-4B5B-98A0-F808D1DF0B35}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{7D57D54E-80F9-4C80-9F58-8A0208C8068B}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{5F2F3E66-6E3A-4EB3-8872-EC0B8CAFF2F1}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{F655EDCD-D9D4-4755-A138-FF9191EE6689}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{9CE778E5-1EC1-4727-9098-79588B0ACBAA}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{7D57D54E-80F9-4C80-9F58-8A0208C8068B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{F655EDCD-D9D4-4755-A138-FF9191EE6689}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{9CE778E5-1EC1-4727-9098-79588B0ACBAA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{5F2F3E66-6E3A-4EB3-8872-EC0B8CAFF2F1}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Flowers_WetnessSwitch" ID="{C5F406C0-4B35-4157-8C9A-C10EC4D88922}" ShortID="454883753">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{C5C3A514-E78B-4F7E-A51F-CC78673CDC32}" ShortID="575743437">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{FE1D2E24-8E1C-42A4-976A-EBE21C5F5CF6}" ShortID="502573801">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{4CEB1143-74CE-49C6-9506-ED42C3D7C554}" ShortID="1010493746">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{5BEBBBEC-C19C-4B51-B4BA-42A531C4A94D}" ShortID="284661270">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{C5C3A514-E78B-4F7E-A51F-CC78673CDC32}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{FE1D2E24-8E1C-42A4-976A-EBE21C5F5CF6}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{4CEB1143-74CE-49C6-9506-ED42C3D7C554}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{5BEBBBEC-C19C-4B51-B4BA-42A531C4A94D}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{4CEB1143-74CE-49C6-9506-ED42C3D7C554}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{FE1D2E24-8E1C-42A4-976A-EBE21C5F5CF6}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{5BEBBBEC-C19C-4B51-B4BA-42A531C4A94D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{C5C3A514-E78B-4F7E-A51F-CC78673CDC32}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Forest_WetnessSwitch" ID="{2C1FC3B1-FED0-4DD5-BDD2-0E4BEDCD7CBA}" ShortID="315249396">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{12AF2BF3-1FEB-4018-9A4C-BA1A92B92696}" ShortID="230148723">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>33</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{7B4ACAE1-D55B-4D42-B301-F5F79AA61F18}" ShortID="626400573">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{91AD2FD4-D27D-4514-9634-0C79E49D8100}" ShortID="117791070" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.1"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.2"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-4.4"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.1"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{91AD2FD4-D27D-4514-9634-0C79E49D8100}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{DC4DD215-CF7A-44BF-86E3-BD47D5CBB0D9}" ShortID="246186101">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+																<ObjectRef Name="New_Tremolo" ID="{B3B08CB1-D3A3-4C3F-90D0-53518F41A9C7}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{D9448775-EC5F-4C74-A380-944111CBD431}" ShortID="598416297">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{894F3E5C-37D3-463F-9A57-763E5AE3FA27}" ShortID="330280028">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>14</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>24</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CC8691CD-46D8-4858-BF31-AEA93EF41A92}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="15"/>
+															<Property Name="Min" Type="Real64" Value="-20"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3266F084-C21C-4611-9F93-F31A2D6EF232}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="354"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{EC0B6AB4-D6C6-48EA-95D8-9D4BE4B111BD}" ShortID="241946279">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{A804EAAD-AD02-43E9-ADBD-CD41590858F8}" ShortID="303634001" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.02"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.2"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-4.4"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.1"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{A804EAAD-AD02-43E9-ADBD-CD41590858F8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{9CE7243F-965C-4297-8847-D8413258B189}" ShortID="93238085">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+																<ObjectRef Name="New_Tremolo" ID="{B3B08CB1-D3A3-4C3F-90D0-53518F41A9C7}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{FCD23BDE-8024-4880-8476-E9E25E9F9699}" ShortID="1034606335">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{1EBDA936-D0CF-4B3F-9657-CF91EA306772}" ShortID="432367663">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>38</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3B9B92F2-3E4E-40F7-A62B-721A6266E3F4}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="707"/>
+															<Property Name="Min" Type="Real64" Value="-556"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{764476F8-42B5-49B7-8DA5-11D6E076F597}" ShortID="1032394847">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{B7CB23ED-F06E-4D44-8A5C-CFC26B912793}" ShortID="296736778" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.2"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-3.6"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.2"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{B7CB23ED-F06E-4D44-8A5C-CFC26B912793}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{3C95816D-F076-4474-AA07-1209574A9834}" ShortID="540291245">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+																<ObjectRef Name="New_Tremolo" ID="{B3B08CB1-D3A3-4C3F-90D0-53518F41A9C7}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{1271DB9C-6C47-4CB3-A49A-F9CBFD3D07AA}" ShortID="58776806">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{AB8A9340-8D01-422B-9EAE-B4344F7FE4DF}" ShortID="822300606">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>32</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Sfx_fs_TestSound" ID="{6C16600B-275B-4F26-A161-CAAF799DF581}" ShortID="930803067">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<SourcePlugin Name="Tone Generator" ID="{FC818904-053C-48A0-A611-9B69F41B7020}" ShortID="176643587" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+													<PropertyList>
+														<Property Name="AttackTime" Type="Real32" Value="0.3"/>
+														<Property Name="DurMode" Type="int32" Value="1"/>
+														<Property Name="FixDur" Type="Real32" Value="0.1"/>
+														<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
+														<Property Name="SustainLevel" Type="Real32" Value="-3.6"/>
+														<Property Name="SustainTime" Type="Real32" Value="0.2"/>
+														<Property Name="WaveType" Type="int32" Value="5"/>
+													</PropertyList>
+													<Language>SFX</Language>
+												</SourcePlugin>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone Generator" ID="{FC818904-053C-48A0-A611-9B69F41B7020}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{AF0DE827-C6EB-49A0-93A8-A225C11A2594}" ShortID="135812578">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+																<ObjectRef Name="New_Tremolo" ID="{B3B08CB1-D3A3-4C3F-90D0-53518F41A9C7}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{0393CD00-D3E1-40D3-9D01-EEFE41D72251}" ShortID="9315863">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{1EBDA936-D0CF-4B3F-9657-CF91EA306772}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{AB8A9340-8D01-422B-9EAE-B4344F7FE4DF}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{894F3E5C-37D3-463F-9A57-763E5AE3FA27}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{12AF2BF3-1FEB-4018-9A4C-BA1A92B92696}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{1EBDA936-D0CF-4B3F-9657-CF91EA306772}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{894F3E5C-37D3-463F-9A57-763E5AE3FA27}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{AB8A9340-8D01-422B-9EAE-B4344F7FE4DF}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{12AF2BF3-1FEB-4018-9A4C-BA1A92B92696}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Grass_WetnessSwitch" ID="{1AE8329D-561F-4446-A61F-76C4C65394FD}" ShortID="505768013">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{4DF9F0A3-1B3E-492D-87D0-0C10D30F867A}" ShortID="737075762">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{395C9C66-C7B6-4B88-BA81-FF63436E1C08}" ShortID="698043298">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{333AD266-174D-41CC-839C-2021378608F3}" ShortID="55043482">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{780373A3-319B-48BD-A45E-15A0A13151CA}" ShortID="445161869">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{395C9C66-C7B6-4B88-BA81-FF63436E1C08}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{333AD266-174D-41CC-839C-2021378608F3}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{780373A3-319B-48BD-A45E-15A0A13151CA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{4DF9F0A3-1B3E-492D-87D0-0C10D30F867A}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{333AD266-174D-41CC-839C-2021378608F3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{395C9C66-C7B6-4B88-BA81-FF63436E1C08}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{780373A3-319B-48BD-A45E-15A0A13151CA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{4DF9F0A3-1B3E-492D-87D0-0C10D30F867A}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Gravel_WetnessSwitch" ID="{86858F47-C142-4552-9A1F-9F83135053E0}" ShortID="389629255">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{41C48DD7-62C6-4E0A-B11E-FCAAD0A7997C}" ShortID="735642482">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{BEAE578F-E3B5-450F-9A97-18829FE2FFE0}" ShortID="739204718">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{45539DF1-998E-4AE0-8ED3-957BE3B5AD9B}" ShortID="378798563">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{93EBB667-C369-48A5-BAC5-5D26858BB792}" ShortID="227251351">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{93EBB667-C369-48A5-BAC5-5D26858BB792}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{BEAE578F-E3B5-450F-9A97-18829FE2FFE0}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{41C48DD7-62C6-4E0A-B11E-FCAAD0A7997C}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{45539DF1-998E-4AE0-8ED3-957BE3B5AD9B}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{45539DF1-998E-4AE0-8ED3-957BE3B5AD9B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{BEAE578F-E3B5-450F-9A97-18829FE2FFE0}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{93EBB667-C369-48A5-BAC5-5D26858BB792}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{41C48DD7-62C6-4E0A-B11E-FCAAD0A7997C}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Ice_WetnessSwitch" ID="{78091546-E04E-45B0-8D68-3C0BB779150C}" ShortID="131876888">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{63885B3D-1D77-4C95-930A-A4DA57451259}" ShortID="1002314646">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{2E78A124-E422-41DD-80FF-26CA18E66FEE}" ShortID="301075337">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{8BB282D3-5967-4C49-8D16-E0EF2BF9E5E8}" ShortID="662768199">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{59E9B23D-0682-48F7-B162-646E15A91360}" ShortID="805537343">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{2E78A124-E422-41DD-80FF-26CA18E66FEE}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{63885B3D-1D77-4C95-930A-A4DA57451259}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{59E9B23D-0682-48F7-B162-646E15A91360}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{8BB282D3-5967-4C49-8D16-E0EF2BF9E5E8}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{8BB282D3-5967-4C49-8D16-E0EF2BF9E5E8}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{2E78A124-E422-41DD-80FF-26CA18E66FEE}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{59E9B23D-0682-48F7-B162-646E15A91360}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{63885B3D-1D77-4C95-930A-A4DA57451259}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Leaves_WetnessSwitch" ID="{64CCBB05-CA25-44B2-B5C6-E325C8E9F0BE}" ShortID="906047757">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{A07F9533-0458-4055-A207-0E15DE609901}" ShortID="42331818">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{E9E60A57-A593-4EA8-B47C-B377D0661D9C}" ShortID="378291503">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{D2925228-6D4C-4B51-8CD1-9BA90BF6F8A1}" ShortID="196590770">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{F07ACE48-6442-41C2-953B-9085FF4F26F3}" ShortID="665176305">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{D2925228-6D4C-4B51-8CD1-9BA90BF6F8A1}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{A07F9533-0458-4055-A207-0E15DE609901}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{F07ACE48-6442-41C2-953B-9085FF4F26F3}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{E9E60A57-A593-4EA8-B47C-B377D0661D9C}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{D2925228-6D4C-4B51-8CD1-9BA90BF6F8A1}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{E9E60A57-A593-4EA8-B47C-B377D0661D9C}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{F07ACE48-6442-41C2-953B-9085FF4F26F3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{A07F9533-0458-4055-A207-0E15DE609901}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Marsh_WetnessSwitch" ID="{8149D3A7-C66A-4052-B8B8-D33CDC41ADF9}" ShortID="964544638">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{AADABDE0-D437-490D-9EFF-49E4F8DB5790}" ShortID="806385492">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{1980B3CC-879D-48BD-8741-79CD01D94C08}" ShortID="646582309">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{F8D4042B-F7CF-4162-910C-286F3DE6BF72}" ShortID="785912469">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{86556ED9-0F69-4578-9AF2-43DBE0507150}" ShortID="268179899">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{F8D4042B-F7CF-4162-910C-286F3DE6BF72}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{1980B3CC-879D-48BD-8741-79CD01D94C08}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{86556ED9-0F69-4578-9AF2-43DBE0507150}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{AADABDE0-D437-490D-9EFF-49E4F8DB5790}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{F8D4042B-F7CF-4162-910C-286F3DE6BF72}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{1980B3CC-879D-48BD-8741-79CD01D94C08}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{86556ED9-0F69-4578-9AF2-43DBE0507150}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{AADABDE0-D437-490D-9EFF-49E4F8DB5790}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="PuddleDirt_WetnessSwitch" ID="{84B020D6-65A6-4746-A3E7-1FC6BC405F6F}" ShortID="301669887">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{2A59CA99-C16B-4FD4-A6F4-55D78B44B39A}" ShortID="951961753">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{975C4868-7094-4D35-9B89-8155A5FA8657}" ShortID="886436017">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{4DA2A91F-DE31-4EBF-80EA-967CB531722D}" ShortID="265387530">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{DAEC6EE1-2071-4188-971C-29B426664BD4}" ShortID="1050913882">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{4DA2A91F-DE31-4EBF-80EA-967CB531722D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{975C4868-7094-4D35-9B89-8155A5FA8657}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{2A59CA99-C16B-4FD4-A6F4-55D78B44B39A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{DAEC6EE1-2071-4188-971C-29B426664BD4}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{4DA2A91F-DE31-4EBF-80EA-967CB531722D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{975C4868-7094-4D35-9B89-8155A5FA8657}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{DAEC6EE1-2071-4188-971C-29B426664BD4}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{2A59CA99-C16B-4FD4-A6F4-55D78B44B39A}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="PuddleGrass_WetnessSwitch" ID="{6B1401EB-D266-4524-9E1E-4283FED0D25C}" ShortID="633915704">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{F3A65838-58C0-46D8-8357-E58A27C92D35}" ShortID="423044915">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{0CA8910B-D278-4202-A2E6-7FEA0823B429}" ShortID="730437728">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{FA418D38-E822-49C5-949E-714E50806242}" ShortID="47174500">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{1BBC3530-6E4D-4F96-8162-376936BD424B}" ShortID="1057039077">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{0CA8910B-D278-4202-A2E6-7FEA0823B429}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{1BBC3530-6E4D-4F96-8162-376936BD424B}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{F3A65838-58C0-46D8-8357-E58A27C92D35}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{FA418D38-E822-49C5-949E-714E50806242}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{FA418D38-E822-49C5-949E-714E50806242}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{0CA8910B-D278-4202-A2E6-7FEA0823B429}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{1BBC3530-6E4D-4F96-8162-376936BD424B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{F3A65838-58C0-46D8-8357-E58A27C92D35}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Rock_WetnessSwitch" ID="{A4D77C0C-7CD3-4109-AF67-5D795750124B}" ShortID="1027894356">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{6F1BDA2A-EA02-4601-8E3B-7E99A8631C7D}" ShortID="672153659">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{C40E415A-F0D8-4C7F-A65B-4DB56C74BF9B}" ShortID="634676260">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{D83E1E00-AEB5-48F6-BED8-E1CB0DC06824}" ShortID="15985355">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{76046234-1F0C-467C-8691-9AC4FE5F2BDB}" ShortID="452675269">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{D83E1E00-AEB5-48F6-BED8-E1CB0DC06824}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{6F1BDA2A-EA02-4601-8E3B-7E99A8631C7D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{76046234-1F0C-467C-8691-9AC4FE5F2BDB}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{C40E415A-F0D8-4C7F-A65B-4DB56C74BF9B}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{D83E1E00-AEB5-48F6-BED8-E1CB0DC06824}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{C40E415A-F0D8-4C7F-A65B-4DB56C74BF9B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{76046234-1F0C-467C-8691-9AC4FE5F2BDB}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{6F1BDA2A-EA02-4601-8E3B-7E99A8631C7D}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Rubber_WetnessSwitch" ID="{EDFEBFDD-265C-451E-A5B5-C91F59D607D5}" ShortID="98470876">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{10D9FBB7-8304-40CE-9CCD-4BB7B387BC70}" ShortID="256798043">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{1B2EEF4A-FF46-4C6C-ACCC-F2D371D877D8}" ShortID="1012844120">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{F9FE7B70-B168-4CAF-A756-21DB71ABE6B5}" ShortID="981307489">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{122709A4-FD01-487D-8065-66323BCEB93D}" ShortID="255862110">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{1B2EEF4A-FF46-4C6C-ACCC-F2D371D877D8}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{F9FE7B70-B168-4CAF-A756-21DB71ABE6B5}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{122709A4-FD01-487D-8065-66323BCEB93D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{10D9FBB7-8304-40CE-9CCD-4BB7B387BC70}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{F9FE7B70-B168-4CAF-A756-21DB71ABE6B5}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{1B2EEF4A-FF46-4C6C-ACCC-F2D371D877D8}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{122709A4-FD01-487D-8065-66323BCEB93D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{10D9FBB7-8304-40CE-9CCD-4BB7B387BC70}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Sand_WetnessSwitch" ID="{BDFF129F-BCE1-4A01-902F-8B839D7D13F4}" ShortID="121391270">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{E29D4C02-0C03-419F-B9ED-78BC087218F5}" ShortID="370877587">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{6DF7BF44-CEE3-48C7-8D9E-299F9041CB0E}" ShortID="161698073">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{CF7CD98B-0CEE-47FF-AF2D-D30F0E3EA072}" ShortID="499118913">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{BDD0190D-92F0-4A07-8A6B-14729C4D1E9A}" ShortID="944995940">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{E29D4C02-0C03-419F-B9ED-78BC087218F5}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{BDD0190D-92F0-4A07-8A6B-14729C4D1E9A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{6DF7BF44-CEE3-48C7-8D9E-299F9041CB0E}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{CF7CD98B-0CEE-47FF-AF2D-D30F0E3EA072}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{CF7CD98B-0CEE-47FF-AF2D-D30F0E3EA072}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{6DF7BF44-CEE3-48C7-8D9E-299F9041CB0E}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{BDD0190D-92F0-4A07-8A6B-14729C4D1E9A}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{E29D4C02-0C03-419F-B9ED-78BC087218F5}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="WoodFloor_WetnessSwitch" ID="{BAE9D8AF-040D-41B5-B07A-FE4C3F2BC62E}" ShortID="668208323">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{B43FF10D-A3AF-4571-8238-BC0597B7526D}" ShortID="1005724780">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{A27903CF-961E-4384-A809-465AD741C8B3}" ShortID="19648949">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{CEA7DD5F-0A50-449A-92E9-952E5918288D}" ShortID="994380248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{BA5FF5A8-B356-4031-BC6A-D71EB83FCB7C}" ShortID="690322515">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{B43FF10D-A3AF-4571-8238-BC0597B7526D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{CEA7DD5F-0A50-449A-92E9-952E5918288D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{BA5FF5A8-B356-4031-BC6A-D71EB83FCB7C}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{A27903CF-961E-4384-A809-465AD741C8B3}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{CEA7DD5F-0A50-449A-92E9-952E5918288D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{A27903CF-961E-4384-A809-465AD741C8B3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{BA5FF5A8-B356-4031-BC6A-D71EB83FCB7C}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{B43FF10D-A3AF-4571-8238-BC0597B7526D}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Snow_WetnessSwitch" ID="{8C4AEB7D-6D74-499F-A56A-6AAA737BD847}" ShortID="209177840">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{5718075B-4A06-4EB9-B9AB-F119D4AF9515}" ShortID="1019677161">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{C8065FAD-0A36-4445-8B11-DDCE43DA1326}" ShortID="284193443">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{A04B1199-6381-4964-AD46-01EFC90CBD16}" ShortID="391854546">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{A708A141-D7EF-4A85-B0C0-396195F43390}" ShortID="205687861">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{A708A141-D7EF-4A85-B0C0-396195F43390}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{5718075B-4A06-4EB9-B9AB-F119D4AF9515}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{A04B1199-6381-4964-AD46-01EFC90CBD16}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{C8065FAD-0A36-4445-8B11-DDCE43DA1326}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{A04B1199-6381-4964-AD46-01EFC90CBD16}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{C8065FAD-0A36-4445-8B11-DDCE43DA1326}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{A708A141-D7EF-4A85-B0C0-396195F43390}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{5718075B-4A06-4EB9-B9AB-F119D4AF9515}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Stone_WetnessSwitch" ID="{679875C7-7FD8-4893-AE64-6D2E69DC42FE}" ShortID="377536265">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{4FEF44C0-3260-41B3-B60D-0DCA2A21F283}" ShortID="406566111">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{52DC67AB-B8F6-4F85-86AA-CDA59675C16A}" ShortID="245453850">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{075013EF-9F65-41FC-8A31-B9B56DDEFEC7}" ShortID="531876752">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{AFCADDF9-9314-4C76-96EA-2ECC8F2A8724}" ShortID="615821458">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{52DC67AB-B8F6-4F85-86AA-CDA59675C16A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{4FEF44C0-3260-41B3-B60D-0DCA2A21F283}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{075013EF-9F65-41FC-8A31-B9B56DDEFEC7}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{AFCADDF9-9314-4C76-96EA-2ECC8F2A8724}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{075013EF-9F65-41FC-8A31-B9B56DDEFEC7}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{52DC67AB-B8F6-4F85-86AA-CDA59675C16A}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{AFCADDF9-9314-4C76-96EA-2ECC8F2A8724}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{4FEF44C0-3260-41B3-B60D-0DCA2A21F283}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="StoneFloor_WetnessSwitch" ID="{56F1F819-4A0F-4845-B934-AA20C4B2CA0F}" ShortID="491119641">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{B3298006-9EB4-444D-BA38-3F137EC7177A}" ShortID="1025416848">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{626F255F-C4F6-4D37-A482-EC371F1CA22D}" ShortID="902449512">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{DACBFC69-AFEE-41A6-8D3B-B8F64561685D}" ShortID="327524255">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{82586FC4-D57A-4ABB-A5D3-FFA2FC6941FC}" ShortID="743094807">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{B3298006-9EB4-444D-BA38-3F137EC7177A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{626F255F-C4F6-4D37-A482-EC371F1CA22D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{DACBFC69-AFEE-41A6-8D3B-B8F64561685D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{82586FC4-D57A-4ABB-A5D3-FFA2FC6941FC}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{DACBFC69-AFEE-41A6-8D3B-B8F64561685D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{626F255F-C4F6-4D37-A482-EC371F1CA22D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{82586FC4-D57A-4ABB-A5D3-FFA2FC6941FC}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{B3298006-9EB4-444D-BA38-3F137EC7177A}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Swamp_WetnessSwitch" ID="{27D3AFD9-27B8-404A-9ADA-34FE1DE8B772}" ShortID="357985353">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{EA0523C1-59E2-4C45-BB62-17407C3145C0}" ShortID="1061070349">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{6A4FAE0A-8C11-4E6C-AFFC-6F5CD4FCF915}" ShortID="1071971760">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{A21E74CC-CDB5-4BBC-A11A-463B2A9C30B9}" ShortID="488073309">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{E6C33036-BF44-4C06-AD71-251F5B960903}" ShortID="350581640">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{6A4FAE0A-8C11-4E6C-AFFC-6F5CD4FCF915}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{E6C33036-BF44-4C06-AD71-251F5B960903}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{EA0523C1-59E2-4C45-BB62-17407C3145C0}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{A21E74CC-CDB5-4BBC-A11A-463B2A9C30B9}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{A21E74CC-CDB5-4BBC-A11A-463B2A9C30B9}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{6A4FAE0A-8C11-4E6C-AFFC-6F5CD4FCF915}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{E6C33036-BF44-4C06-AD71-251F5B960903}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{EA0523C1-59E2-4C45-BB62-17407C3145C0}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="WaterWade_WetnessSwitch" ID="{3CE153D0-28D3-46A0-B1BC-3E22C8D849AD}" ShortID="313786268">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{D2DA7D96-5B90-49EF-8E14-672EF488A5FF}" ShortID="235334293">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{ADBC6E3C-75DE-462C-A299-BE73D9FC5A75}" ShortID="71378523">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{B78B43F9-FAFD-40AE-BDF7-2A219964CA57}" ShortID="1028191267">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{B7E79235-FE22-4A0C-94CC-D3B239601E5C}" ShortID="1028291598">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{B7E79235-FE22-4A0C-94CC-D3B239601E5C}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{ADBC6E3C-75DE-462C-A299-BE73D9FC5A75}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{D2DA7D96-5B90-49EF-8E14-672EF488A5FF}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{B78B43F9-FAFD-40AE-BDF7-2A219964CA57}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{B78B43F9-FAFD-40AE-BDF7-2A219964CA57}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{ADBC6E3C-75DE-462C-A299-BE73D9FC5A75}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{B7E79235-FE22-4A0C-94CC-D3B239601E5C}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{D2DA7D96-5B90-49EF-8E14-672EF488A5FF}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="PineForest_WetnessSwitch" ID="{512EA875-7A89-449C-9767-424405C60C31}" ShortID="833961767">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{F7CD74DE-9D82-4CA6-A3F2-0F82579363CA}" ShortID="56572950">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{A7380D2A-F924-4AE2-A9C1-E167A985AF5D}" ShortID="207565804">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{BB0DDBAA-D48B-48ED-8D90-3317554169CB}" ShortID="56572880">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{5ACDEC6C-5FFC-47DD-94FB-5029BED2B3F6}" ShortID="486181691">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{A7380D2A-F924-4AE2-A9C1-E167A985AF5D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{5ACDEC6C-5FFC-47DD-94FB-5029BED2B3F6}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{BB0DDBAA-D48B-48ED-8D90-3317554169CB}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{F7CD74DE-9D82-4CA6-A3F2-0F82579363CA}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{BB0DDBAA-D48B-48ED-8D90-3317554169CB}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{A7380D2A-F924-4AE2-A9C1-E167A985AF5D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{5ACDEC6C-5FFC-47DD-94FB-5029BED2B3F6}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{F7CD74DE-9D82-4CA6-A3F2-0F82579363CA}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Concrete_WetnessSwitch" ID="{AF221A19-6F75-462D-8554-D33C1340FACB}" ShortID="514137869">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{B3770107-6FB4-4B17-98B8-D553B17AB9DD}" ShortID="211073305">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{6F9A1977-0B8C-41F5-B09F-310DA13051D9}" ShortID="1039218912">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{9CE3C34D-52C0-4C73-93C3-2D107C2B1618}" ShortID="996262708">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{789B66DC-56C2-49C3-AF79-CB2B58A6E3C7}" ShortID="356654503">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{B3770107-6FB4-4B17-98B8-D553B17AB9DD}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{9CE3C34D-52C0-4C73-93C3-2D107C2B1618}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{6F9A1977-0B8C-41F5-B09F-310DA13051D9}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{789B66DC-56C2-49C3-AF79-CB2B58A6E3C7}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{9CE3C34D-52C0-4C73-93C3-2D107C2B1618}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{6F9A1977-0B8C-41F5-B09F-310DA13051D9}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{789B66DC-56C2-49C3-AF79-CB2B58A6E3C7}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{B3770107-6FB4-4B17-98B8-D553B17AB9DD}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Metal_WetnessSwitch" ID="{3FC6EC37-6726-40CD-AF7D-8B64E29412DD}" ShortID="612225530">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{A703539A-22B8-413D-B479-03CF358A94B7}" ShortID="135663200">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{516E7F1E-289C-4A21-978B-8FDEF7FAE611}" ShortID="934458512">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{7C9F5C6E-7DDC-4972-BACE-6F0AD6F451DF}" ShortID="525190190">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{A80BC4D2-7218-4473-816F-CBE6E66470F7}" ShortID="848448022">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{516E7F1E-289C-4A21-978B-8FDEF7FAE611}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{7C9F5C6E-7DDC-4972-BACE-6F0AD6F451DF}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{A703539A-22B8-413D-B479-03CF358A94B7}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{A80BC4D2-7218-4473-816F-CBE6E66470F7}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{7C9F5C6E-7DDC-4972-BACE-6F0AD6F451DF}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{516E7F1E-289C-4A21-978B-8FDEF7FAE611}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{A80BC4D2-7218-4473-816F-CBE6E66470F7}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{A703539A-22B8-413D-B479-03CF358A94B7}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Linoleum_WetnessSwitch" ID="{DDCA5742-5D03-4384-8C53-9C6E5B3F7152}" ShortID="420456846">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{4296E9F0-92B3-4C57-B3A2-F4D828A26E74}" ShortID="207884026">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{D4260541-CE5E-42C5-A53C-A8EE2DA5EFE4}" ShortID="252553770">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{4F27A58D-77AD-4A26-A239-089F00975973}" ShortID="185153570">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{FCAE7E82-8F5D-43BF-9E4E-30260CE7CF09}" ShortID="533180746">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{D4260541-CE5E-42C5-A53C-A8EE2DA5EFE4}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{FCAE7E82-8F5D-43BF-9E4E-30260CE7CF09}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{4F27A58D-77AD-4A26-A239-089F00975973}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{4296E9F0-92B3-4C57-B3A2-F4D828A26E74}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{4F27A58D-77AD-4A26-A239-089F00975973}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{D4260541-CE5E-42C5-A53C-A8EE2DA5EFE4}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{FCAE7E82-8F5D-43BF-9E4E-30260CE7CF09}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{4296E9F0-92B3-4C57-B3A2-F4D828A26E74}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="TileType1_WetnessSwitch" ID="{CF7EC4EA-070B-4790-9F46-FC559BA95D3A}" ShortID="620221290">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{CA2A9946-10A9-43D4-90DB-6CAC31F3E79F}" ShortID="796440281">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{EE335BC3-B812-4B81-831C-527E32357C0D}" ShortID="16728726">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{028A6B75-B5F4-434B-90A6-14840BBD5831}" ShortID="919837413">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{5EB89063-FDF8-44FA-8B2E-A61CC0062950}" ShortID="35255993">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{CA2A9946-10A9-43D4-90DB-6CAC31F3E79F}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{5EB89063-FDF8-44FA-8B2E-A61CC0062950}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{028A6B75-B5F4-434B-90A6-14840BBD5831}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{EE335BC3-B812-4B81-831C-527E32357C0D}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{028A6B75-B5F4-434B-90A6-14840BBD5831}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{EE335BC3-B812-4B81-831C-527E32357C0D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{5EB89063-FDF8-44FA-8B2E-A61CC0062950}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{CA2A9946-10A9-43D4-90DB-6CAC31F3E79F}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="RubberTile_WetnessSwitch" ID="{30727FC4-ABA1-4D6F-9E78-73DA8663284D}" ShortID="400406046">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damp" ID="{DDFA9116-EE6C-433A-8FA4-076B7AB2FBEA}" ShortID="844367828">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Dry" ID="{65ED4350-AAD7-4B4D-BCDE-272E578FBEFD}" ShortID="809298394">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Soaked" ID="{405BD8B6-6BF4-46ED-A1A7-A04090178648}" ShortID="677167153">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Wet" ID="{A2800EA5-13D1-4623-8D9A-463B24DFA9B6}" ShortID="1002870101">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Damp" ID="{DDFA9116-EE6C-433A-8FA4-076B7AB2FBEA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Dry" ID="{65ED4350-AAD7-4B4D-BCDE-272E578FBEFD}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Wet" ID="{A2800EA5-13D1-4623-8D9A-463B24DFA9B6}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soaked" ID="{405BD8B6-6BF4-46ED-A1A7-A04090178648}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+										<ItemList>
+											<ItemRef Name="Soaked" ID="{405BD8B6-6BF4-46ED-A1A7-A04090178648}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+										<ItemList>
+											<ItemRef Name="Dry" ID="{65ED4350-AAD7-4B4D-BCDE-272E578FBEFD}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+										<ItemList>
+											<ItemRef Name="Wet" ID="{A2800EA5-13D1-4623-8D9A-463B24DFA9B6}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+										<ItemList>
+											<ItemRef Name="Damp" ID="{DDFA9116-EE6C-433A-8FA4-076B7AB2FBEA}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Leaves_WetnessSwitch" ID="{64CCBB05-CA25-44B2-B5C6-E325C8E9F0BE}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Rock_WetnessSwitch" ID="{A4D77C0C-7CD3-4109-AF67-5D795750124B}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Concrete_WetnessSwitch" ID="{AF221A19-6F75-462D-8554-D33C1340FACB}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="StoneFloor_WetnessSwitch" ID="{56F1F819-4A0F-4845-B934-AA20C4B2CA0F}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Metal_WetnessSwitch" ID="{3FC6EC37-6726-40CD-AF7D-8B64E29412DD}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Linoleum_WetnessSwitch" ID="{DDCA5742-5D03-4384-8C53-9C6E5B3F7152}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Ice_WetnessSwitch" ID="{78091546-E04E-45B0-8D68-3C0BB779150C}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Gravel_WetnessSwitch" ID="{86858F47-C142-4552-9A1F-9F83135053E0}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WetnessTemplate" ID="{2994B75E-25F4-44D2-B024-666AF60EDE79}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="PineForest_WetnessSwitch" ID="{512EA875-7A89-449C-9767-424405C60C31}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Snow_WetnessSwitch" ID="{8C4AEB7D-6D74-499F-A56A-6AAA737BD847}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Grass_WetnessSwitch" ID="{1AE8329D-561F-4446-A61F-76C4C65394FD}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Sand_WetnessSwitch" ID="{BDFF129F-BCE1-4A01-902F-8B839D7D13F4}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Marsh_WetnessSwitch" ID="{8149D3A7-C66A-4052-B8B8-D33CDC41ADF9}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WoodFloor_WetnessSwitch" ID="{BAE9D8AF-040D-41B5-B07A-FE4C3F2BC62E}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Forest_WetnessSwitch" ID="{2C1FC3B1-FED0-4DD5-BDD2-0E4BEDCD7CBA}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Flowers_WetnessSwitch" ID="{C5F406C0-4B35-4157-8C9A-C10EC4D88922}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="RubberTile_WetnessSwitch" ID="{30727FC4-ABA1-4D6F-9E78-73DA8663284D}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Stone_WetnessSwitch" ID="{679875C7-7FD8-4893-AE64-6D2E69DC42FE}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Dirt_WetnessSwitch" ID="{1D90AACF-9368-458C-9221-76A1A7394A25}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="WaterWade_WetnessSwitch" ID="{3CE153D0-28D3-46A0-B1BC-3E22C8D849AD}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="PuddleDirt_WetnessSwitch" ID="{84B020D6-65A6-4746-A3E7-1FC6BC405F6F}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Swamp_WetnessSwitch" ID="{27D3AFD9-27B8-404A-9ADA-34FE1DE8B772}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Rubber_WetnessSwitch" ID="{EDFEBFDD-265C-451E-A5B5-C91F59D607D5}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="TileType1_WetnessSwitch" ID="{CF7EC4EA-070B-4790-9F46-FC559BA95D3A}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="PuddleGrass_WetnessSwitch" ID="{6B1401EB-D266-4524-9E1E-4283FED0D25C}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="WaterWade" ID="{47A3BA02-58FB-439C-8AD8-AE7490AB5635}"/>
+								<ItemList>
+									<ItemRef Name="WaterWade_WetnessSwitch" ID="{3CE153D0-28D3-46A0-B1BC-3E22C8D849AD}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="PineForest" ID="{256D2F0F-8B0D-4E6F-BEF3-E39F448CAE1E}"/>
+								<ItemList>
+									<ItemRef Name="PineForest_WetnessSwitch" ID="{512EA875-7A89-449C-9767-424405C60C31}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Dirt" ID="{C14B422D-4797-4DEC-BC71-2A88B04D1A34}"/>
+								<ItemList>
+									<ItemRef Name="Dirt_WetnessSwitch" ID="{1D90AACF-9368-458C-9221-76A1A7394A25}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Swamp" ID="{0DCDA030-DBDA-4393-8A5D-26C235579E1D}"/>
+								<ItemList>
+									<ItemRef Name="Swamp_WetnessSwitch" ID="{27D3AFD9-27B8-404A-9ADA-34FE1DE8B772}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Rubber" ID="{8C140E43-EBD6-4712-ACED-A7024942D684}"/>
+								<ItemList>
+									<ItemRef Name="Rubber_WetnessSwitch" ID="{EDFEBFDD-265C-451E-A5B5-C91F59D607D5}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}"/>
+								<ItemList>
+									<ItemRef Name="Metal_WetnessSwitch" ID="{3FC6EC37-6726-40CD-AF7D-8B64E29412DD}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Forest" ID="{65E9D44D-877B-4C31-B54E-E628DFB5100F}"/>
+								<ItemList>
+									<ItemRef Name="Forest_WetnessSwitch" ID="{2C1FC3B1-FED0-4DD5-BDD2-0E4BEDCD7CBA}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="TileType1" ID="{691EF04D-1242-49B4-B680-9D7985011C04}"/>
+								<ItemList>
+									<ItemRef Name="TileType1_WetnessSwitch" ID="{CF7EC4EA-070B-4790-9F46-FC559BA95D3A}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Leaves" ID="{3251A34F-6D49-4237-8F4E-DD32CEB5745E}"/>
+								<ItemList>
+									<ItemRef Name="Leaves_WetnessSwitch" ID="{64CCBB05-CA25-44B2-B5C6-E325C8E9F0BE}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Stone" ID="{04CB7352-4D57-4986-A90D-582D29064CF7}"/>
+								<ItemList>
+									<ItemRef Name="Stone_WetnessSwitch" ID="{679875C7-7FD8-4893-AE64-6D2E69DC42FE}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="WoodFloor" ID="{DBC4BC59-00C1-459C-A77B-C8775E93748B}"/>
+								<ItemList>
+									<ItemRef Name="WoodFloor_WetnessSwitch" ID="{BAE9D8AF-040D-41B5-B07A-FE4C3F2BC62E}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="PuddleGrass" ID="{EFE9855C-2FBB-4639-8B55-2C2C1C36B969}"/>
+								<ItemList>
+									<ItemRef Name="PuddleGrass_WetnessSwitch" ID="{6B1401EB-D266-4524-9E1E-4283FED0D25C}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Grass" ID="{F4FE465F-36B6-4C38-A249-EE10E999D216}"/>
+								<ItemList>
+									<ItemRef Name="Grass_WetnessSwitch" ID="{1AE8329D-561F-4446-A61F-76C4C65394FD}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Snow" ID="{1ED9EF62-F752-4F25-9DAE-96B34253F1BB}"/>
+								<ItemList>
+									<ItemRef Name="Snow_WetnessSwitch" ID="{8C4AEB7D-6D74-499F-A56A-6AAA737BD847}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Gravel" ID="{43F10880-4976-4F5C-8128-4B821BD50BD0}"/>
+								<ItemList>
+									<ItemRef Name="Gravel_WetnessSwitch" ID="{86858F47-C142-4552-9A1F-9F83135053E0}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Sand" ID="{BA986786-4F34-44E2-A0CE-A492DE324A46}"/>
+								<ItemList>
+									<ItemRef Name="Sand_WetnessSwitch" ID="{BDFF129F-BCE1-4A01-902F-8B839D7D13F4}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Linoleum" ID="{3746198D-F1DD-44CA-9B15-44C6626F2019}"/>
+								<ItemList>
+									<ItemRef Name="Linoleum_WetnessSwitch" ID="{DDCA5742-5D03-4384-8C53-9C6E5B3F7152}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+								<ItemList>
+									<ItemRef Name="Concrete_WetnessSwitch" ID="{AF221A19-6F75-462D-8554-D33C1340FACB}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Ice" ID="{515769B4-7725-4485-97D6-AAE1DF47DAE8}"/>
+								<ItemList>
+									<ItemRef Name="Ice_WetnessSwitch" ID="{78091546-E04E-45B0-8D68-3C0BB779150C}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="RubberTile" ID="{B27324B9-4C82-413E-B216-1C48E4C1AB72}"/>
+								<ItemList>
+									<ItemRef Name="RubberTile_WetnessSwitch" ID="{30727FC4-ABA1-4D6F-9E78-73DA8663284D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Flowers" ID="{DEF555BC-90A4-46D6-9568-EE6D88E03BAA}"/>
+								<ItemList>
+									<ItemRef Name="Flowers_WetnessSwitch" ID="{C5F406C0-4B35-4157-8C9A-C10EC4D88922}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Rock" ID="{094217D0-9A72-4C85-94D8-4CC19D2FBEF7}"/>
+								<ItemList>
+									<ItemRef Name="Rock_WetnessSwitch" ID="{A4D77C0C-7CD3-4109-AF67-5D795750124B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="PuddleDirt" ID="{6D66D6DE-CEE8-4D14-9B81-71965752FB54}"/>
+								<ItemList>
+									<ItemRef Name="PuddleDirt_WetnessSwitch" ID="{84B020D6-65A6-4746-A3E7-1FC6BC405F6F}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Marsh" ID="{B77F1FE1-3FC8-48BD-9A10-5D9786A5C28C}"/>
+								<ItemList>
+									<ItemRef Name="Marsh_WetnessSwitch" ID="{8149D3A7-C66A-4052-B8B8-D33CDC41ADF9}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="StoneFloor" ID="{9286E7F2-874B-4FA7-A8AF-77F3F4FB9722}"/>
+								<ItemList>
+									<ItemRef Name="StoneFloor_WetnessSwitch" ID="{56F1F819-4A0F-4845-B934-AA20C4B2CA0F}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
