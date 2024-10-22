@@ -4,7 +4,19 @@
 		<WorkUnit Name="Sound FX" ID="{A7713C0B-5257-4622-9054-AD6A7751F8C0}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="MainSoundFXBank" ID="{E139340C-4D94-4B5A-8385-C27C400BAB65}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_TestSound" ID="{596F4C8B-01CB-426E-9BB5-76B35BB72198}" WorkUnitID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MainMusicSwitch_test" ID="{28025BC5-D66E-4314-B951-3310C747826B}" WorkUnitID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PlayerLocomotion" ID="{42B88A57-E40B-4377-81C9-DC30979D03C2}" WorkUnitID="{42B88A57-E40B-4377-81C9-DC30979D03C2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Player_Footsteps" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}" WorkUnitID="{42B88A57-E40B-4377-81C9-DC30979D03C2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="TestEvents" ID="{2892190A-446E-44CD-8D50-8C2E1E150F58}" WorkUnitID="{2892190A-446E-44CD-8D50-8C2E1E150F58}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="NPC" ID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player" ID="{A2CD0782-B99F-45E2-9B24-3D8E7EAAE86E}" WorkUnitID="{A2CD0782-B99F-45E2-9B24-3D8E7EAAE86E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambience" ID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" WorkUnitID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Locomotion" ID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" WorkUnitID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

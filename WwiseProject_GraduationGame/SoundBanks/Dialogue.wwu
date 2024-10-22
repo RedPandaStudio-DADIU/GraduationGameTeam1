@@ -4,7 +4,9 @@
 		<WorkUnit Name="Dialogue" ID="{48EE7866-BAD0-4A78-A4A3-A4BC056E71F7}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="MainDialogueBank" ID="{F6818A0F-C6C0-4E57-9525-DD1F0FFC2F58}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Dynamic Dialogue" ID="{309AF5DE-031F-4CE0-9B9B-C0A536275343}" WorkUnitID="{309AF5DE-031F-4CE0-9B9B-C0A536275343}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
