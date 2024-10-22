@@ -1,0 +1,82 @@
+Event	ID	Name			Wwise Object Path	Notes
+	98439365	Play_Player_Footsteps			\Locomotion\PlayerLocomotion\Play_Player_Footsteps	
+	161393517	Play_TestBeep_lp_3D			\TestEvents\Play_TestBeep_lp_3D	
+	858964037	Play_TestBeep_lp			\TestEvents\Play_TestBeep_lp	
+	903081441	Play_AmbienceMain			\Ambience\Play_AmbienceMain	
+	1670385919	Stop_TestBeep_lp_3D			\TestEvents\Stop_TestBeep_lp_3D	
+	1681067324	Play_TestBeep_3D			\TestEvents\Play_TestBeep_3D	
+	1955951874	Play_TestBeep			\TestEvents\Play_TestBeep	
+	2752533807	Play_TestSound			\Default Work Unit\Play_TestSound	
+	3106700779	Stop_TestBeep_lp			\TestEvents\Stop_TestBeep_lp	
+	3625855865	Play_MainMusicSwitch_test			\Default Work Unit\Play_MainMusicSwitch_test	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1044534455	GroundMaterialSwitch			\Switches\GroundMaterialSwitch	
+	3968804893	GroundWetnessSwitch			\Switches\GroundWetnessSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	187032587	Flowers	GroundMaterialSwitch			
+	344481046	Ice	GroundMaterialSwitch			
+	437659151	Rubber	GroundMaterialSwitch			
+	491961918	Forest	GroundMaterialSwitch			
+	582824249	Leaves	GroundMaterialSwitch			
+	787898836	Snow	GroundMaterialSwitch			
+	803837735	Sand	GroundMaterialSwitch			
+	841620460	Concrete	GroundMaterialSwitch			
+	967535525	PuddleGrass	GroundMaterialSwitch			
+	1115562054	StoneFloor	GroundMaterialSwitch			
+	1216965916	Stone	GroundMaterialSwitch			
+	1442397674	Marsh	GroundMaterialSwitch			
+	1669493947	RubberTile	GroundMaterialSwitch			
+	2144363834	Rock	GroundMaterialSwitch			
+	2185786256	Gravel	GroundMaterialSwitch			
+	2195636714	Dirt	GroundMaterialSwitch			
+	2473969246	Metal	GroundMaterialSwitch			
+	2482365692	PineForest	GroundMaterialSwitch			
+	2612303067	WaterWade	GroundMaterialSwitch			
+	2654748154	Water	GroundMaterialSwitch			
+	2681948225	TileType2	GroundMaterialSwitch			
+	2681948226	TileType1	GroundMaterialSwitch			
+	2721243382	PuddleDirt	GroundMaterialSwitch			
+	2907906111	Swamp	GroundMaterialSwitch			
+	3111880208	WoodFloor	GroundMaterialSwitch			
+	3995207278	Linoleum	GroundMaterialSwitch			
+	4248645337	Grass	GroundMaterialSwitch			
+	630539344	Dry	GroundWetnessSwitch			
+	1181096339	Wet	GroundWetnessSwitch			
+	1842026663	Damp	GroundWetnessSwitch			
+	1905651656	Soaked	GroundWetnessSwitch			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2064552269	AreaState			\States\AreaState	
+
+State	ID	Name	State Group			Notes
+	748895195	None	AreaState			
+	2485288013	FarmlandArea_01	AreaState			
+	2485288014	FarmlandArea_02	AreaState			
+	2485288015	FarmlandArea_03	AreaState			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	870672907	RTPC_GroundWetness			\GameParameters\RTPC_GroundWetness	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1232150908	New_Tremolo	Wwise Tremolo			
+	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	63893666	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\TestFiles\TestSound\Tone Generator	
+	117791070	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Forest_WetnessSwitch\Damp\Sfx_fs_TestSound\Tone Generator	
+	176643587	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Forest_WetnessSwitch\Wet\Sfx_fs_TestSound\Tone Generator	
+	184931808	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Dirt_WetnessSwitch\Wet\Sfx_fs_TestSound\Tone Generator	
+	296736778	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Forest_WetnessSwitch\Soaked\Sfx_fs_TestSound\Tone Generator	
+	303634001	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Forest_WetnessSwitch\Dry\Sfx_fs_TestSound\Tone Generator	
+	310803756	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Dirt_WetnessSwitch\Damp\Sfx_fs_TestSound\Tone Generator	
+	323944449	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Dirt_WetnessSwitch\Dry\Sfx_fs_TestSound\Tone Generator	
+	793404368	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\Sound FX\Sounds\PlayerSounds\Player_Locomotion\PlayerFootsteps\Player_Footsteps_MaterialSwitch\Dirt_WetnessSwitch\Soaked\Sfx_fs_TestSound\Tone Generator	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	118223763	Musical, Song & Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Musical, Song & Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MainMusicSwitch_test\Musical, Song & Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626\Musical, Song & Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626		2748512
+	599996232	Musical, Loop, Intro, 80s Pop Music SND70455 1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\TestMusic\Musical, Loop, Intro, 80s Pop Music SND70455 1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\MainMusicSwitch_test\New Music Segment\Musical, Loop, Intro, 80s Pop Music SND70455 1		3205664
+	911602909	SFX_TestSound_lp_3D	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\TestFiles\Beep Loop by DongKingKong Id-395901 9_1E14C19D.wem		\Actor-Mixer Hierarchy\TestFiles\3D_TestFiles\SFX_TestSound_lp_3D		198606
+	921613273	sfx_test_Beep_1000hz	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926_818F3B66.wem		\Actor-Mixer Hierarchy\TestFiles\sfx_test_Beep_1000hz		3624
+
