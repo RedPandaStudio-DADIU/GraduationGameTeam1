@@ -159,6 +159,22 @@ public class FirstPersonController : MonoBehaviour
 			// normalise input direction
 			Vector3 inputDirection = moveInput.normalized;
 
+			if (inputDirection != Vector3.zero)
+			{
+				
+				Vector3 forward = _mainCamera.transform.forward;
+				Vector3 right = _mainCamera.transform.right;
+
+				
+				forward.y = 0f;
+				right.y = 0f;
+				forward.Normalize();
+				right.Normalize();
+
+				
+				inputDirection = forward * moveInput.z + right * moveInput.x;
+			}
+
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 		}
