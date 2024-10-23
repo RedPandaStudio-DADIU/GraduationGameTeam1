@@ -8,10 +8,10 @@ public abstract class EnemyBaseClass : MonoBehaviour
     private float health = 20f;
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
+    private float stoppingDistance = 10f;
 
 
     public abstract void Attack();
-    public abstract void Hide();
     public abstract void Die();
 
 
@@ -48,5 +48,14 @@ public abstract class EnemyBaseClass : MonoBehaviour
     public void SetFieldOfView(float fieldOfView){
         this.fieldOfView = fieldOfView;
     }
+
+    public float GetStoppingDistance(){
+        return this.stoppingDistance;
+    }
+
+    public void SetStoppingDistance(float distance){
+        this.stoppingDistance = distance;
+    }
+
 
 }
