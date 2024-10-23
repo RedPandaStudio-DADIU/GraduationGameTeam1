@@ -8,7 +8,7 @@ public abstract class EnemyBaseClass : MonoBehaviour
     private float health = 20f;
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
-    private float stoppingDistance = 10f;
+    private float stoppingDistance = 4f;
 
 
     public abstract void Attack();

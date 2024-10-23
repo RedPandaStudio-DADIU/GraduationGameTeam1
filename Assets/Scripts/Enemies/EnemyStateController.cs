@@ -10,12 +10,17 @@ public class EnemyStateController : MonoBehaviour
     private IEnemyState previousState;
     private EnemyBaseClass enemy;
     private Transform playerTransform;
+    private Transform playerBodyTransform;
+
+    private bool playerInRange = false;
 
     void Start()
     {
         currentState = new EnemyIdleState();
         currentState.OnEnter(this);
         playerTransform = GameObject.FindWithTag("Player").transform;
+        playerBodyTransform =  GameObject.Find("Capsule").transform;
+
         enemy = GetComponent<EnemyBaseClass>();
     }
 
@@ -39,10 +44,17 @@ public class EnemyStateController : MonoBehaviour
         return this.playerTransform;
     }
 
+    public void SetPlayerPosition(Vector3 position){
+        this.playerTransform.localPosition = position;
+    }
+
+
     public void SetAgentsDestination(){
         NavMeshAgent navMeshAgent = enemy.GetComponent<NavMeshAgent>();
         navMeshAgent.destination = playerTransform.position;
+        navMeshAgent.stoppingDistance = enemy.GetStoppingDistance();
     }
+
 
     public void SetNavAgent(){
         NavMeshAgent navMeshAgent = enemy.GetComponent<NavMeshAgent>();
@@ -53,4 +65,60 @@ public class EnemyStateController : MonoBehaviour
         }
         SetAgentsDestination();
     }
+
+
+    public bool CanSeePlayer(){
+
+        // Check if enemy within attacking distance of the player
+        float attackDistance = enemy.GetAttackDistance();
+
+
+        Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
+        // Vector3 directionToPlayer = playerTransform.position - enemy.transform.position;
+        float distanceToPlayer = directionToPlayer.magnitude;
+
+        if (distanceToPlayer > attackDistance){
+            playerInRange = false;
+            return playerInRange;
+        }
+
+        // Check if enemy can see the player - player in the field of view of an enemy
+        float fieldOfViewAngle = enemy.GetFieldOfView();
+
+        float angleToPlayer = Vector3.Angle(enemy.transform.forward, directionToPlayer);
+        if (angleToPlayer > fieldOfViewAngle){
+            playerInRange = false;
+            return playerInRange;
+        }  
+
+        Debug.DrawRay(enemy.transform.position, directionToPlayer.normalized * distanceToPlayer, Color.red);
+
+        // Check whether there are no obstacles on the way to the player
+        if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
+                GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position);
+
+                playerInRange = true;
+                return playerInRange;
+            }
+        }
+
+        Debug.Log("Raycast check not passed " + enemy.name);
+
+        playerInRange = false;
+        return playerInRange;
+
+    }
+
+    public bool GetPlayerInRange(){
+        return this.playerInRange;
+    }
+
+    public void SetPlayerInRange(bool flag){
+        this.playerInRange = flag;
+    }
+
 }
