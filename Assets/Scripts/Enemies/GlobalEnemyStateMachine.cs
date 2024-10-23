@@ -40,6 +40,9 @@ public class GlobalEnemyStateMachine : MonoBehaviour
     }
 
     void Update(){
+
+        isLost = true;
+
         foreach (EnemyStateController enemy in enemies)
         {
             if (enemy != null)
