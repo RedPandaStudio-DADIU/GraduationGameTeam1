@@ -9,7 +9,7 @@ public abstract class EnemyBaseClass : MonoBehaviour
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
     private float stoppingDistance = 4f;
-
+    public float fallThreshold = -5f;
 
     private bool isRagdoll = false;
     private Rigidbody[] ragdollBodies;
@@ -149,20 +149,40 @@ public abstract class EnemyBaseClass : MonoBehaviour
         SetRagdollMode(false);
     }
 
+    void Update()
+    {
+        
+        if (torsoRigidbody != null)
+        {
+            if (torsoRigidbody.position.y < fallThreshold)
+            {
+                
+                Destroy(gameObject);
+                Debug.Log("Enemy fell off the platform and was destroyed.");
+            }
+        }
+    }
+
     public void SetRagdollMode(bool isRagdollActive)
     {
         isRagdoll = isRagdollActive;
-        animator.enabled = !isRagdollActive; 
-
+         if (animator != null)
+        {
+            animator.enabled = !isRagdollActive; 
+        }
         foreach (Rigidbody rb in ragdollBodies)
         {
-            rb.isKinematic = !isRagdollActive; // If isRagdollActive is true, make the rigidbody kinematic (not affected by physics)
+            if (rb != null)
+            {
+                rb.isKinematic = !isRagdollActive; 
+            }
+        
         }
 
         UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         if (agent != null)
         {
-            agent.enabled = !isRagdollActive;  // 禁用或启用 NavMeshAgent
+            agent.enabled = !isRagdollActive;  
         }
 
         Debug.Log("Setting Ragdoll mode to: " + isRagdollActive);

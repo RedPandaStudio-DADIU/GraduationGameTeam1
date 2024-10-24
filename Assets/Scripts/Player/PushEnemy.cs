@@ -8,7 +8,7 @@ public class PushEnemy : MonoBehaviour
     public float pushForce = 500f; 
     public float pushRadius = 3f; 
 
-    private float ragdollDuration = 3.0f; 
+    private float ragdollDuration = 5.0f; 
  
 
     
@@ -58,9 +58,11 @@ public class PushEnemy : MonoBehaviour
         
         yield return new WaitForSeconds(delay);
 
-       
+        if (enemy != null)
+        {
         enemy.RecoverFromRagdoll();
         Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+         }
     }
 
 }
