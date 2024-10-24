@@ -55,8 +55,10 @@ public class EnemyStateController : MonoBehaviour
 
     public void SetAgentsDestination(){
         NavMeshAgent navMeshAgent = enemy.GetComponent<NavMeshAgent>();
-        navMeshAgent.destination = playerTransform.position;
+        // navMeshAgent.destination = playerTransform.position;
+        navMeshAgent.destination = playerBodyTransform.position;
         navMeshAgent.stoppingDistance = enemy.GetStoppingDistance();
+        Debug.Log("Enemy: " + enemy.name + ", stopping distance: "+ enemy.GetStoppingDistance());
         // navMeshAgent.angularSpeed = 0f;
         Vector3 direction = navMeshAgent.velocity.normalized;
 
@@ -114,7 +116,7 @@ public class EnemyStateController : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
-                GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position);
+                GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
 
                 playerInRange = true;
                 return playerInRange;
@@ -126,6 +128,18 @@ public class EnemyStateController : MonoBehaviour
         playerInRange = false;
         return playerInRange;
 
+    }
+
+    public bool CheckIfReachedDestination(){
+        if (!enemy.GetComponent<NavMeshAgent>().pathPending){
+            if (enemy.GetComponent<NavMeshAgent>().remainingDistance<= enemy.GetComponent<NavMeshAgent>().stoppingDistance){
+                if (!enemy.GetComponent<NavMeshAgent>().hasPath || enemy.GetComponent<NavMeshAgent>().velocity.sqrMagnitude == 0f){
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public bool GetPlayerInRange(){

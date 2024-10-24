@@ -17,7 +17,14 @@ public class EnemyAttackState : IEnemyState
         if (stateController.CanSeePlayer())
         {
             stateController.GetEnemy().Attack();
-        } 
+        } else {
+            // reaches destination - goes into idle state
+            if(stateController.CheckIfReachedDestination()){
+                stateController.ChangeState(new EnemyIdleState());
+            }
+        }
+
+        
     }
     public void OnExit(EnemyStateController stateController){
         // Debug.Log("Exiting Attack State");

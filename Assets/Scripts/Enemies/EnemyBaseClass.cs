@@ -6,7 +6,9 @@ public abstract class EnemyBaseClass : MonoBehaviour
 {
     [SerializeField] private bool isMovable = true;
 
-    private float health = 20f;
+    // Remove serialize field after proper health damage done
+    [SerializeField] private float health = 20f;
+
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
     private float stoppingDistance = 4f;
@@ -14,12 +16,12 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     public abstract void Attack();
     public abstract void Die();
+    public abstract void LosePlayer(Vector3 playerPosition);
+
 
 
     public Vector3 DetectPlayer(){
         return new Vector3(0, 0, 0);
-    }
-    public void LosePlayer(){
     }
 
     public float GetHealth(){
@@ -66,6 +68,10 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     public void SetIsMovable(bool movable){
         this.isMovable = movable;
+    }
+
+    public EnemyRagdollController GetRagdollController(){
+        return this.GetComponent<EnemyRagdollController>();
     }
 
 }
