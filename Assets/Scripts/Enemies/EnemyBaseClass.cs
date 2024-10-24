@@ -42,10 +42,10 @@ public abstract class EnemyBaseClass : MonoBehaviour
     }
     private IEnumerator SmoothRecoverToStanding()
 {
-    float transitionTime = 2.0f;  // 过渡时间
+    float transitionTime = 2.0f;  
     float elapsedTime = 0.0f;
 
-    // 在恢复过程中逐步调整每个骨骼的局部位置和旋转
+    
     while (elapsedTime < transitionTime)
     {
         elapsedTime += Time.deltaTime;
@@ -56,16 +56,16 @@ public abstract class EnemyBaseClass : MonoBehaviour
             Transform bone = entry.Key;
             BoneTransform savedTransform = entry.Value;
 
-            // 插值恢复局部位置
+           
             bone.localPosition = Vector3.Lerp(bone.localPosition, savedTransform.localPosition, t);
-            // 插值恢复局部旋转
+           
             bone.localRotation = Quaternion.Lerp(bone.localRotation, savedTransform.localRotation, t);
         }
 
-        yield return null;  // 等待下一帧
+        yield return null;  
     }
 
-    // 确保最终完全恢复
+   
     foreach (var entry in boneTransforms)
     {
         Transform bone = entry.Key;
@@ -77,11 +77,11 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     Debug.Log("Smooth recovery to standing complete.");
 
-    // 恢复完成后，重新启用 NavMeshAgent
-    NavMeshAgent agent = GetComponent<NavMeshAgent>();
+    
+    UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     if (agent != null)
     {
-        agent.enabled = true;  // 启用 NavMeshAgent
+        agent.enabled = true;  
     }
 }
 
@@ -159,7 +159,7 @@ public abstract class EnemyBaseClass : MonoBehaviour
             rb.isKinematic = !isRagdollActive; // If isRagdollActive is true, make the rigidbody kinematic (not affected by physics)
         }
 
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         if (agent != null)
         {
             agent.enabled = !isRagdollActive;  // 禁用或启用 NavMeshAgent
