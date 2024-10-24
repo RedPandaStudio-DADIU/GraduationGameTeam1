@@ -11,6 +11,16 @@ public abstract class EnemyBaseClass : MonoBehaviour
     private float stoppingDistance = 4f;
 
 
+    private bool isRagdoll = false;
+    private Rigidbody[] ragdollBodies;
+    private Rigidbody torsoRigidbody;
+
+    private Collider mainCollider; 
+    private Rigidbody mainRigidbody; 
+
+    public Animator animator;
+
+
     public abstract void Attack();
     public abstract void Die();
 
@@ -56,6 +66,55 @@ public abstract class EnemyBaseClass : MonoBehaviour
     public void SetStoppingDistance(float distance){
         this.stoppingDistance = distance;
     }
+
+
+
+     void Start()
+    {
+        ragdollBodies = GetComponentsInChildren<Rigidbody>();
+        mainCollider = GetComponent<Collider>(); 
+        mainRigidbody = GetComponent<Rigidbody>(); 
+
+        
+        SetRagdollMode(false);
+    }
+
+    public void SetRagdollMode(bool isRagdollActive)
+    {
+        isRagdoll = isRagdollActive;
+        animator.enabled = !isRagdollActive; 
+
+        foreach (Rigidbody rb in ragdollBodies)
+        {
+            rb.isKinematic = !isRagdollActive; // If isRagdollActive is true, make the rigidbody kinematic (not affected by physics)
+        }
+
+        mainRigidbody.isKinematic = isRagdollActive;
+        mainCollider.enabled = !isRagdollActive;
+    }
+
+    public void SwitchToRagdollAndApplyForce(Vector3 forceDirection, float force)
+    {
+        SetRagdollMode(true); 
+
+        // add the force
+        if (torsoRigidbody == null)
+        {
+            torsoRigidbody = FindTorsoRigidbody();
+        }
+        
+        if (torsoRigidbody != null)
+        {
+            torsoRigidbody.AddForce(forceDirection * force, ForceMode.Impulse);
+        }
+    }
+
+    private Rigidbody FindTorsoRigidbody()
+    {
+        Transform torsoTransform = transform.Find("Pelvis");
+        return torsoTransform?.GetComponent<Rigidbody>();
+    }
+
 
 
 }
