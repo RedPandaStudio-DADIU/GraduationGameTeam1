@@ -28,6 +28,10 @@ public class EnemyStateController : MonoBehaviour
     {
         currentState.OnUpdate(this);
         previousState = currentState;
+
+        if(this.GetEnemy().GetHealth() == 0){
+            ChangeState(new EnemyDieState());
+        }
     }
 
     public void ChangeState(IEnemyState newState){

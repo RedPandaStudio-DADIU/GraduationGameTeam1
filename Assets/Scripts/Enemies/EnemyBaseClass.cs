@@ -31,7 +31,9 @@ public abstract class EnemyBaseClass : MonoBehaviour
     }
 
     public void DecreaseHealth(float damage){
-        this.health -= damage;
+        if(this.health > 0){
+            this.health -= damage;
+        }
     }
 
     public float GetAttackDistance(){

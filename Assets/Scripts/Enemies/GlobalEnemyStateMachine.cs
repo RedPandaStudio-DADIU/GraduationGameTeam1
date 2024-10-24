@@ -10,6 +10,7 @@ public class GlobalEnemyStateMachine : MonoBehaviour
     private bool playerDetected = false;
     private Vector3 playerPosition;
     private bool isLost = true;
+    private float notificationDistance = 5f;
 
 
     void Awake()
@@ -62,6 +63,7 @@ public class GlobalEnemyStateMachine : MonoBehaviour
         }
     }
 
+    //TODO pass enemy who detected the player
     public void DetectPlayer(Vector3 detectedPosition){
         Debug.Log("Inside DetectPlayer");
 
@@ -84,12 +86,14 @@ public class GlobalEnemyStateMachine : MonoBehaviour
         }
     }
 
+    //TODO pass enemy who detected the player
     public void NotifyEnemies(bool detected){
 
         foreach (EnemyStateController enemy in enemies)
         {
             if (enemy != null)
             {
+                //TODO find the enemies close by to the notifier
                 if(detected){
                     Debug.Log("Notifying: " + enemy.GetEnemy().name);
                     enemy.SetPlayerPosition(playerPosition);
