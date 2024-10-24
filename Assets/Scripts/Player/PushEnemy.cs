@@ -5,8 +5,11 @@ using UnityEngine;
 public class PushEnemy : MonoBehaviour
 {
     
-    public float pushForce = 50f; 
+    public float pushForce = 500f; 
     public float pushRadius = 3f; 
+
+    private float ragdollDuration = 3.0f; 
+ 
 
     
     // Start is called before the first frame update
@@ -34,19 +37,30 @@ public class PushEnemy : MonoBehaviour
             
             if (hitCollider.CompareTag("Enemy"))
             {
+                
                 EnemyBaseClass enemy = hitCollider.GetComponent<EnemyBaseClass>();
 
                 if (enemy != null)
                 {
                     
                     Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
-
+                    Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
                     
                     enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
+
+                    StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
                 }
             }
         }
     }
+    IEnumerator RecoverAfterDelay(EnemyBaseClass enemy, float delay)
+    {
+        
+        yield return new WaitForSeconds(delay);
 
+       
+        enemy.RecoverFromRagdoll();
+        Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+    }
 
 }
