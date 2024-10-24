@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class EnemyBaseClass : MonoBehaviour
 {
+    [SerializeField] private bool isMovable = true;
 
     private float health = 20f;
     private float attackDistance = 10f;
@@ -57,5 +58,12 @@ public abstract class EnemyBaseClass : MonoBehaviour
         this.stoppingDistance = distance;
     }
 
+    public bool GetIsMovable(){
+        return this.isMovable;
+    }
+
+    public void SetIsMovable(bool movable){
+        this.isMovable = movable;
+    }
 
 }

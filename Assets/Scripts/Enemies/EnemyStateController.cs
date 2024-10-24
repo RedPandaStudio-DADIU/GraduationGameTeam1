@@ -53,6 +53,17 @@ public class EnemyStateController : MonoBehaviour
         NavMeshAgent navMeshAgent = enemy.GetComponent<NavMeshAgent>();
         navMeshAgent.destination = playerTransform.position;
         navMeshAgent.stoppingDistance = enemy.GetStoppingDistance();
+        // navMeshAgent.angularSpeed = 0f;
+        Vector3 direction = navMeshAgent.velocity.normalized;
+
+
+        // Adjust 
+        if(direction != Vector3.zero){
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            // Quaternion targetRotation = Quaternion.LookRotation(playerBodyTransform.position);
+
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, targetRotation, Time.deltaTime *0f);
+        }
     }
 
 
