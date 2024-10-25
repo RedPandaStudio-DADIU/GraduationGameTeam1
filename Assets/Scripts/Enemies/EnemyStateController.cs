@@ -113,17 +113,20 @@ public class EnemyStateController : MonoBehaviour
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            if (hit.collider.CompareTag("Player"))
+            // if (hit.collider.CompareTag("Player"))
+            if (hit.collider.CompareTag("PlayerBody"))
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
                 GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
 
                 playerInRange = true;
+                Debug.Log("Raycast check passed by: " + enemy.name);
+
                 return playerInRange;
             }
         }
 
-        Debug.Log("Raycast check not passed " + enemy.name);
+        // Debug.Log("Raycast check not passed " + enemy.name);
 
         playerInRange = false;
         return playerInRange;

@@ -157,97 +157,97 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
      void Start()
     {
-        ragdollBodies = GetComponentsInChildren<Rigidbody>();
-        mainCollider = GetComponent<Collider>(); 
-        mainRigidbody = GetComponent<Rigidbody>(); 
+        // ragdollBodies = GetComponentsInChildren<Rigidbody>();
+        // mainCollider = GetComponent<Collider>(); 
+        // mainRigidbody = GetComponent<Rigidbody>(); 
 
         
-        SetRagdollMode(false);
+        // SetRagdollMode(false);
     }
 
     void Update()
     {
         
-        if (torsoRigidbody != null)
-        {
-            if (torsoRigidbody.position.y < fallThreshold)
-            {
+        // if (torsoRigidbody != null)
+        // {
+        //     if (torsoRigidbody.position.y < fallThreshold)
+        //     {
                 
-                Destroy(gameObject);
-                Debug.Log("Enemy fell off the platform and was destroyed.");
-            }
-        }
+        //         Destroy(gameObject);
+        //         Debug.Log("Enemy fell off the platform and was destroyed.");
+        //     }
+        // }
     }
 
-    public void SetRagdollMode(bool isRagdollActive)
-    {
-        isRagdoll = isRagdollActive;
-         if (animator != null)
-        {
-            animator.enabled = !isRagdollActive; 
-        }
-        foreach (Rigidbody rb in ragdollBodies)
-        {
-            if (rb != null)
-            {
-                rb.isKinematic = !isRagdollActive; 
-            }
+    // public void SetRagdollMode(bool isRagdollActive)
+    // {
+    //     isRagdoll = isRagdollActive;
+    //      if (animator != null)
+    //     {
+    //         animator.enabled = !isRagdollActive; 
+    //     }
+    //     foreach (Rigidbody rb in ragdollBodies)
+    //     {
+    //         if (rb != null)
+    //         {
+    //             rb.isKinematic = !isRagdollActive; 
+    //         }
         
-        }
+    //     }
 
-        UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        if (agent != null)
-        {
-            agent.enabled = !isRagdollActive;  
-        }
+    //     UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+    //     if (agent != null)
+    //     {
+    //         agent.enabled = !isRagdollActive;  
+    //     }
 
-        Debug.Log("Setting Ragdoll mode to: " + isRagdollActive);
+    //     Debug.Log("Setting Ragdoll mode to: " + isRagdollActive);
 
-        mainRigidbody.isKinematic = isRagdollActive;
-        mainCollider.enabled = !isRagdollActive;
-    }
+    //     mainRigidbody.isKinematic = isRagdollActive;
+    //     mainCollider.enabled = !isRagdollActive;
+    // }
 
-    public void SwitchToRagdollAndApplyForce(Vector3 forceDirection, float force)
-    {
-        Debug.Log("Switching to ragdoll and applying force. Force direction: " + forceDirection + ", Force: " + force);
+    // public void SwitchToRagdollAndApplyForce(Vector3 forceDirection, float force)
+    // {
+    //     Debug.Log("Switching to ragdoll and applying force. Force direction: " + forceDirection + ", Force: " + force);
         
-        RecordBoneTransforms();
+    //     RecordBoneTransforms();
 
-        SetRagdollMode(true); 
+    //     SetRagdollMode(true); 
 
-        // add the force
-        if (torsoRigidbody == null)
-        {
-            torsoRigidbody = FindTorsoRigidbody();
-        }
+    //     // add the force
+    //     if (torsoRigidbody == null)
+    //     {
+    //         torsoRigidbody = FindTorsoRigidbody();
+    //     }
         
-        if (torsoRigidbody != null)
-        {
-            torsoRigidbody.AddForce(forceDirection * force, ForceMode.Impulse);
-            Debug.Log("Applied force to torso.");
-        }
-        else
-        {
-            Debug.LogError("Torso Rigidbody not found!");
-        }
+    //     if (torsoRigidbody != null)
+    //     {
+    //         torsoRigidbody.AddForce(forceDirection * force, ForceMode.Impulse);
+    //         Debug.Log("Applied force to torso.");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("Torso Rigidbody not found!");
+    //     }
         
 
-    }
+    // }
 
-    private Rigidbody FindTorsoRigidbody()
-    {
-        Transform torsoTransform = transform.Find("Pelvis");
-        return torsoTransform?.GetComponent<Rigidbody>();
-    }
+    // private Rigidbody FindTorsoRigidbody()
+    // {
+    //     Transform torsoTransform = transform.Find("Pelvis");
+    //     return torsoTransform?.GetComponent<Rigidbody>();
+    // }
 
-    public void RecoverFromRagdoll()
-    {
+    // public void RecoverFromRagdoll()
+    // {
         
-        SetRagdollMode(false);
+    //     SetRagdollMode(false);
 
-        StartCoroutine(SmoothRecoverToStanding());
-        Debug.Log("Recovering from ragdoll...");
-    }
+    //     StartCoroutine(SmoothRecoverToStanding());
+    //     Debug.Log("Recovering from ragdoll...");
+    // }
 
      
 

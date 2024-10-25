@@ -46,7 +46,7 @@ public class PushEnemy : MonoBehaviour
                     Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
                     Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
                     
-                    enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
+                    // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
 
                     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
                 }
@@ -60,9 +60,9 @@ public class PushEnemy : MonoBehaviour
 
         if (enemy != null)
         {
-        enemy.RecoverFromRagdoll();
-        Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
-         }
+            // enemy.RecoverFromRagdoll();
+            Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+        }
     }
 
 }

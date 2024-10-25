@@ -47,7 +47,7 @@ public class HitScanBasic : MonoBehaviour
                     Vector3 pushDirection = hit.point - playerCamera.transform.position; 
                     pushDirection = pushDirection.normalized;
 
-                    enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce); 
+                    // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce); 
                 }
             }    
 
