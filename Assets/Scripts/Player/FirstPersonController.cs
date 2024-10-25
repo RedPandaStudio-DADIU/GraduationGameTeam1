@@ -61,6 +61,7 @@ public class FirstPersonController : MonoBehaviour
 	private GameObject _mainCamera;
 
 	private const float _threshold = 0.01f;
+	private bool isRightClickPressed = false;
 
 	private void Awake()
 	{
@@ -86,11 +87,23 @@ public class FirstPersonController : MonoBehaviour
 		JumpAndGravity();
 		GroundedCheck();
 		Move();
+
+		if (Input.GetMouseButtonDown(1)) 
+        {
+            isRightClickPressed = true; 
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            isRightClickPressed = false; 
+        }
 	}
 
 		private void LateUpdate()
 		{
-			CameraRotation();
+			if (!isRightClickPressed)
+			{
+				CameraRotation();
+			}
 		}
 
 		private void GroundedCheck()
