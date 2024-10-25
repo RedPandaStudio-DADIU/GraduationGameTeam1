@@ -38,7 +38,9 @@ public class PushEnemy : MonoBehaviour
             if (hitCollider.CompareTag("Enemy"))
             {
                 
-                EnemyBaseClass enemy = hitCollider.GetComponent<EnemyBaseClass>();
+                // EnemyBaseClass enemy = hitCollider.GetComponent<EnemyBaseClass>();
+                EnemyStateController enemy = hitCollider.GetComponent<EnemyStateController>();
+
 
                 if (enemy != null)
                 {
@@ -47,13 +49,17 @@ public class PushEnemy : MonoBehaviour
                     Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
                     
                     // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
+                    enemy.SetForceDirection(pushDirection);
+                    enemy.SetForce(pushForce);
+
+                    enemy.ChangeState(new EnemyHitState());
 
                     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
                 }
             }
         }
     }
-    IEnumerator RecoverAfterDelay(EnemyBaseClass enemy, float delay)
+    IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
     {
         
         yield return new WaitForSeconds(delay);
@@ -61,7 +67,10 @@ public class PushEnemy : MonoBehaviour
         if (enemy != null)
         {
             // enemy.RecoverFromRagdoll();
+            enemy.GetEnemy().GetRagdollController().RecoverFromRagdoll();
             Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+            IEnemyState prevState = enemy.GetPreviousState();
+            enemy.ChangeState(prevState);
         }
     }
 

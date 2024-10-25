@@ -37,20 +37,24 @@ public class HitScanBasic : MonoBehaviour
             if (hit.collider.CompareTag("Enemy"))
             {
                 
-                EnemyBaseClass enemy = hit.transform.GetComponent<EnemyBaseClass>();
+                // EnemyBaseClass enemy = hit.transform.GetComponent<EnemyBaseClass>();
+                EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
+
                 if (enemy != null)
                 {
-                    
-                    enemy.DecreaseHealth(damage);
-
+                    enemy.GetEnemy().DecreaseHealth(damage);
+                    // enemy.DecreaseHealth(damage);
                     
                     Vector3 pushDirection = hit.point - playerCamera.transform.position; 
                     pushDirection = pushDirection.normalized;
 
                     // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce); 
+                    enemy.SetForceDirection(pushDirection);
+                    enemy.SetForce(pushForce);
+                    enemy.ChangeState(new EnemyHitState());
+
                 }
             }    
-
             
         }
     }
