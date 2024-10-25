@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7CADBB8B-BAD7-4A7C-B964-381DE7F98BD9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_TestSound" ID="{596F4C8B-01CB-426E-9BB5-76B35BB72198}">
+					<ChildrenList>
+						<Action Name="" ID="{5B35D0CE-F0B7-44D8-89D8-BB95DAAB8E29}" ShortID="102275307">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TestSound" ID="{4205C742-04E1-4CF1-A3C3-43F7FF0DEE52}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MainMusicSwitch_test" ID="{28025BC5-D66E-4314-B951-3310C747826B}">
+					<ChildrenList>
+						<Action Name="" ID="{D40B5775-0EDA-4DB0-A2CA-919EC05DEB49}" ShortID="33301567">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MainMusicSwitch_test" ID="{3B227CF4-50A2-49F9-A265-43C0EBF06449}" WorkUnitID="{CAB400F9-F9AE-4E84-B090-367F8132941D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

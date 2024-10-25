@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}" SchemaVersion="119">
+	<Busses>
+		<WorkUnit Name="Audio Master" ID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{B5DDC2AC-E04A-4701-A98E-953AA116FD74}" WorkUnitID="{9AC2D1BD-0F2A-430F-A729-F4ECF7958EF2}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="Music" ID="{89C77C7D-2A70-4F6E-A79C-5590C19167CB}" PersistMode="Reference"/>
+						<WorkUnit Name="SharedEffects" ID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}" PersistMode="Reference"/>
+						<WorkUnit Name="SFX" ID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}" PersistMode="Reference"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

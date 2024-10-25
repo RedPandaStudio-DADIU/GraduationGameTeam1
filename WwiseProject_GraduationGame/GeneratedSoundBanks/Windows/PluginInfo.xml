@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Windows" BasePlatform="Windows">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Tone Generator" LibId="6684674" Type="Source" DLL="AkToneGen" StaticLib="AkToneSource"/>
+		<PluginLib LibName="Wwise Guitar Distortion" LibId="8257539" Type="Effect" DLL="AkGuitarDistortion" StaticLib="AkGuitarDistortionFX"/>
+		<PluginLib LibName="Wwise Tremolo" LibId="8585219" Type="Effect" DLL="AkTremolo" StaticLib="AkTremoloFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
+		<PluginLib LibName="Wwise Motion" LibId="33226759" Type="AudioDevice" DLL="AkMotion" StaticLib="AkMotionSink"/>
 	</PluginLibs>
-	<FileHash>{0A13F4BA-B100-584C-1D1C-B9267B7D267A}</FileHash>
+	<FileHash>{FD2F0C68-8930-DD4A-2D99-B4DA61061E0A}</FileHash>
 </PluginInfo>

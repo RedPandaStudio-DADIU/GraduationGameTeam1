@@ -1,6 +1,451 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CAB400F9-F9AE-4E84-B090-367F8132941D}" SchemaVersion="119">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{CAB400F9-F9AE-4E84-B090-367F8132941D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CAB400F9-F9AE-4E84-B090-367F8132941D}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="MainMusicSwitch_test" ID="{3B227CF4-50A2-49F9-A265-43C0EBF06449}" ShortID="618466105">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{48182F92-C901-41D2-87BE-64C2B2142C87}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{930AA56D-31DE-429F-9D86-8149A37DDA6F}">
+											<PropertyList>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+											</PropertyList>
+											<TransitionInfo>
+												<TransitionObjectRef Name="New Music Segment" ID="{12A20DBF-A0B4-4957-8F19-50F868FD67FA}" WorkUnitID="{CAB400F9-F9AE-4E84-B090-367F8132941D}"/>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{B1C4E773-3144-4217-B51F-C37E2780C16C}">
+														<PropertyList>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+											</TransitionInfo>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{2543CE95-5027-407F-8A46-E69AD626C81A}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="New Music Segment" ID="{12A20DBF-A0B4-4957-8F19-50F868FD67FA}" WorkUnitID="{CAB400F9-F9AE-4E84-B090-367F8132941D}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{512B1925-B28B-4F18-9676-3E91BD556B1B}" WorkUnitID="{CAB400F9-F9AE-4E84-B090-367F8132941D}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="New Music Segment" ID="{12A20DBF-A0B4-4957-8F19-50F868FD67FA}" ShortID="579642067">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="17695.6666666667"/>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="115"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Musical, Loop, Intro, 80s Pop Music SND70455 1" ID="{EB99EBD9-31A4-4194-9519-2810ECC7217A}" ShortID="200909015">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{C99298AD-2E5C-4EEF-8DB7-89EFF0E135E4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Musical, Loop, Intro, 80s Pop Music SND70455 1" ID="{CC9A99A4-FE9C-45E5-B639-09407438EF28}">
+											<Language>SFX</Language>
+											<AudioFile>TestMusic\Musical, Loop, Intro, 80s Pop Music SND70455 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="599996232"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{D992CCDE-1DC5-4472-B1D3-29345B5B35EA}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Musical, Loop, Intro, 80s Pop Music SND70455 1" ID="{5761B72F-8DD5-475E-A431-1A8C9D6F5288}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="8.59312621059871E-14"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="16695.6666666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="-8.59312621059871E-14"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Musical, Loop, Intro, 80s Pop Music SND70455 1" ID="{CC9A99A4-FE9C-45E5-B639-09407438EF28}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{43947C9D-54E3-4073-910F-193C493568E2}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>16.69567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{ED465595-7696-4E03-99C1-7EFA1961C9C8}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>16.69567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{DDAC6B46-F4C5-4986-BEED-6D611B542250}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>16.69567</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{0F7A3DC1-8FEA-4CAE-B187-4BF5CFB47D2F}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{0ECFF7E9-9ED2-4E34-B33E-DA6615B22532}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="14000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{512B1925-B28B-4F18-9676-3E91BD556B1B}" ShortID="559339922">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="22354.7830487034"/>
+								<Property Name="GridFrequencyPreset" Type="int16" Value="51"/>
+								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
+								<Property Name="Tempo" Type="Real64" Value="115"/>
+								<Property Name="TimeSignatureUpper" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{1F996196-4CA9-498E-BC46-B063B271434C}" ShortID="867086090">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{C0FF5E3D-C730-4398-9C60-9D4ADB88455D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{181E83E2-67EC-4EA2-A660-854506E64EF8}">
+											<Language>SFX</Language>
+											<AudioFile>Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="118223763"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{63A39342-33D1-4B58-9411-5ED014738179}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{EB0B1736-3DF4-4A31-83AD-A83A2140084F}">
+																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="-369.946842213991"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="14314.6666666667"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="151.792288220791"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="570.413662239089"/>
+																				<Property Name="PlayAt" Type="Real64" Value="1043.47826086957"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{181E83E2-67EC-4EA2-A660-854506E64EF8}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{17A06743-C76F-486D-81F0-60F93C1342BB}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>-0.36995</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>14.3146666666667</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{81A82B40-CE17-4251-A885-4F21279DD6E0}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>-0.36995</XPos>
+																								<YPos>-2E-05</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>14.3146666666667</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{3FEAF2F4-142F-4E28-9E51-D9FC98DE8A71}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>-0.36995</XPos>
+																								<YPos>-0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>14.3146666666667</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="New Music Track" ID="{BC1E1B16-98A2-49F6-A90E-A422BF29A8D3}" ShortID="40627094">
+									<PropertyList>
+										<Property Name="MusicTrackType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{510C840F-E42B-476C-9752-C2AB1C05CC3A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{6FE8EED7-1DDA-4EF6-A442-319D06D772FC}">
+															<TransitionInfo/>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{032DE76D-C572-4650-B0E1-4A9E01AF258C}"/>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{78475ABF-62EB-4567-91A2-2FB45BBA670C}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="1043.47826086957"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{4E32CB8A-6DAC-49F2-A13F-D2240FF35806}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="14543.2682671947"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<Reference>
+								<ObjectRef Name="AreaState" ID="{677AD7FE-43DB-49B1-B10B-721D1E000093}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{76AAE125-84F7-412F-AC99-519E70C01143}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626" ID="{512B1925-B28B-4F18-9676-3E91BD556B1B}" WorkUnitID="{CAB400F9-F9AE-4E84-B090-367F8132941D}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="FarmlandArea_01" ID="{4468B167-364C-4B75-8E87-1E126A38887B}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{67BD5071-3784-411B-923D-0B1DB6040F2D}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="New Music Segment" ID="{12A20DBF-A0B4-4957-8F19-50F868FD67FA}" WorkUnitID="{CAB400F9-F9AE-4E84-B090-367F8132941D}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="FarmlandArea_02" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

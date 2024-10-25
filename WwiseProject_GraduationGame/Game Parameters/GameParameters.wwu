@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B3C6B8CF-98E9-498E-BDF1-0630114D5C83}" SchemaVersion="119">
+	<GameParameters>
+		<WorkUnit Name="GameParameters" ID="{B3C6B8CF-98E9-498E-BDF1-0630114D5C83}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_Distance" ID="{9097E1D3-3E1B-4D54-9B15-C4D9A676128B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1000"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_PlayerSpeed" ID="{5F5AE7DD-3784-43FE-9184-4FBE90A9F930}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="5"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_WeaponCharge" ID="{8CB27FEB-D5C7-4EF8-9E59-7ADD1FF2860B}"/>
+				<GameParameter Name="RTPC_GroundWetness" ID="{A09E2BD8-89AF-4611-A276-B746794C67D6}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_GroundWetness_Slow" ID="{1D77DB7B-07CC-484B-B051-D20ACAEC0367}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_RainAmount" ID="{AEC1D18F-5259-48BC-9F46-E72BC7829D35}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_TimeOfDay" ID="{09977800-71BE-489A-9464-2A5806272ED6}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="24"/>
+						<Property Name="Max" Type="Real64" Value="24"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

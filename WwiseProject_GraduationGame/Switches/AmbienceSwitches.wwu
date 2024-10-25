@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1F92430F-23A8-449A-90DF-D556FB11667D}" SchemaVersion="119">
+	<Switches>
+		<WorkUnit Name="AmbienceSwitches" ID="{1F92430F-23A8-449A-90DF-D556FB11667D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="AmbTimeOfDay" ID="{9F65AA38-863C-41DC-90A6-99A1A2323A11}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Night" ID="{26FF31EC-2B08-4210-ADD8-4B78181A0E66}"/>
+						<Switch Name="Dawn" ID="{E7A02004-AC85-4B04-8432-8719EF7413CF}"/>
+						<Switch Name="EarlyMorning" ID="{DC39B341-F118-4990-96EB-FD54F891C7FC}"/>
+						<Switch Name="Midday" ID="{CF51DAE9-61CD-417F-9AA8-CF4105780921}"/>
+						<Switch Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
+						<Switch Name="Evening" ID="{C361B860-2B4F-4B22-8150-FC7C0993AC64}"/>
+						<Switch Name="Dusk" ID="{22024FB0-F367-4750-BFFC-DDED31F711D5}"/>
+						<Switch Name="Nightfall" ID="{7DE11318-D8B0-40C1-8D95-4D9AA7E3F22D}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_TimeOfDay" ID="{09977800-71BE-489A-9464-2A5806272ED6}"/>
+						<Curve Name="" ID="{77275F4D-6640-4BBC-8C42-A8F9603EAAC0}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>3.5</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6.5</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>10</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>14</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>16.5</XPos>
+									<YPos>6</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>20</XPos>
+									<YPos>7</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>22.5</XPos>
+									<YPos>8</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>24</XPos>
+									<YPos>8</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="AmbBiomeType" ID="{73CD150C-B0A0-4068-8BB2-1990CB0322B4}">
+					<ChildrenList>
+						<Switch Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
+						<Switch Name="Grassland" ID="{98EE51CA-5028-48D3-91DB-E31C71682209}"/>
+						<Switch Name="Mountain" ID="{582D2CEF-91E7-4A50-8C28-17C1C9BF8C5D}"/>
+						<Switch Name="Swamp" ID="{715B41B1-5BFD-4319-8112-5DB15E0A24B3}"/>
+						<Switch Name="SpaceStation" ID="{444A85BF-F22F-49EC-8B2F-69B622A1778E}"/>
+						<Switch Name="MainHub" ID="{7D83AD1C-408C-4ECB-8D9A-6EA11AD66FE3}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
