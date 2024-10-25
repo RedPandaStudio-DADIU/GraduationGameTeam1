@@ -25,7 +25,6 @@ public class EnemyRagdollController : MonoBehaviour
     public float fallThreshold = -5f;
 
 
-
     private class BoneTransform
     {
         public Vector3 localPosition;
@@ -108,12 +107,11 @@ public class EnemyRagdollController : MonoBehaviour
         Debug.Log("Recorded bone transforms.");
     }
 
-
     private IEnumerator SmoothRecoverToStanding(){
         float transitionTime = 2.0f;  
         float elapsedTime = 0.0f;
 
-        
+
         while (elapsedTime < transitionTime)
         {
             elapsedTime += Time.deltaTime;
@@ -133,6 +131,8 @@ public class EnemyRagdollController : MonoBehaviour
             yield return null;  
         }
 
+        transform.position += finalPositionOffset;
+        transform.rotation *= finalRotationOffset;
     
         foreach (var entry in boneTransforms)
         {

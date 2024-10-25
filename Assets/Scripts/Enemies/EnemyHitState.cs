@@ -27,6 +27,7 @@ public class EnemyHitState : IEnemyState
         
         // possible problems: Trying to stand up in the place where there is a wall or some other object
 
+        stateController.GetEnemy().GetRagdollController().RecoverFromRagdoll();
 
         // stateController.GetEnemy().GetRagdollController().RecordBoneTransforms();
 

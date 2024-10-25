@@ -67,7 +67,7 @@ public class PushEnemy : MonoBehaviour
         if (enemy != null)
         {
             // enemy.RecoverFromRagdoll();
-            enemy.GetEnemy().GetRagdollController().RecoverFromRagdoll();
+            // enemy.GetEnemy().GetRagdollController().RecoverFromRagdoll();
             Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
             IEnemyState prevState = enemy.GetPreviousState();
             enemy.ChangeState(prevState);
