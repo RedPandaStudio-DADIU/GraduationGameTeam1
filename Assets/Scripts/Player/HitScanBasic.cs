@@ -85,7 +85,10 @@ public class HitScanBasic : MonoBehaviour
                 DistroyableObstacle destructible = hit.transform.GetComponent<DistroyableObstacle>();
                 if (destructible != null)
                 {
-                    destructible.TakeHit();
+                    Vector3 hitDirection = hit.transform.position - playerCamera.transform.position;
+                    hitDirection = hitDirection.normalized;
+
+                    destructible.TakeHit(hitDirection);
                 }
             }    
 

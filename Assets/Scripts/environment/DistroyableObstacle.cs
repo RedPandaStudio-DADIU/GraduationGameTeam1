@@ -6,7 +6,7 @@ public class DistroyableObstacle : MonoBehaviour
 {
     private int hitCount = 0; 
     public int maxHits = 3;   
-
+    public float pushForce = 2f; 
     void Start()
     {
         
@@ -17,7 +17,8 @@ public class DistroyableObstacle : MonoBehaviour
             
             if (child.gameObject.GetComponent<Rigidbody>() == null)
             {
-                child.gameObject.AddComponent<Rigidbody>();
+                Rigidbody rb = child.gameObject.AddComponent<Rigidbody>();
+                 rb.useGravity = false; 
             }
 
             
@@ -29,10 +30,18 @@ public class DistroyableObstacle : MonoBehaviour
     }
 
     
-    public void TakeHit()
+    public void TakeHit(Vector3 hitDirection)
     {
         hitCount++;
         Debug.Log(gameObject.name + " has been hit " + hitCount + " times.");
+
+        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
+
+        foreach (Rigidbody rb in rigidbodies)
+        {
+            
+            rb.AddForce(hitDirection * pushForce, ForceMode.Impulse);
+        }
 
         if (hitCount >= maxHits)
         {

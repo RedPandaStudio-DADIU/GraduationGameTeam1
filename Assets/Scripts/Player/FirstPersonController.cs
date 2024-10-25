@@ -117,20 +117,14 @@ public class FirstPersonController : MonoBehaviour
             isRightClickPressed = true;
 
             
-            if (crosshairImage != null)
-            {
-                crosshairImage.gameObject.SetActive(true);
-            }
+           
         }
         if (Input.GetMouseButtonUp(1))
         {
             isRightClickPressed = false;
 
             
-            if (crosshairImage != null)
-            {
-                crosshairImage.gameObject.SetActive(false);
-            }
+            
         }
 
 		 if (isRecoiling)
@@ -164,7 +158,7 @@ public class FirstPersonController : MonoBehaviour
 		{
 			 // if there is an input
 			float mouseX = Input.GetAxis("Mouse X");
-			float mouseY = Input.GetAxis("Mouse Y");
+			float mouseY = -Input.GetAxis("Mouse Y");
 
 			if (Mathf.Abs(mouseX) > _threshold || Mathf.Abs(mouseY) > _threshold)
 			{
@@ -203,10 +197,10 @@ public class FirstPersonController : MonoBehaviour
 
 		public void ApplyRecoil(float recoilAmount)
 		{
-			// 设置后坐力状态和初始值
+			
 			isRecoiling = true;
 			recoilTimer = 0f;
-			this.recoilAmount = recoilAmount;  // 将后坐力强度设置为传入的值
+			this.recoilAmount = recoilAmount;  
 		}
 
 		private void Move()
