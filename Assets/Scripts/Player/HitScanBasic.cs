@@ -13,20 +13,11 @@ public class HitScanBasic : MonoBehaviour
 
      public LayerMask pushableLayer;
     
-    public float recoilAmount = 2f;           
-    public float recoilRecoverySpeed = 5f;
-
-    private Vector3 originalCameraRotation;   
-    private bool isRecoiling = false;         
-    private float recoilTimer = 0f; 
-    private FirstPersonController playerController;  // 引用 FirstPersonController
-
+   
     // Start is called before the first frame update
     void Start()
     {
-        originalCameraRotation = playerCamera.transform.localEulerAngles;
-        playerController = GetComponent<FirstPersonController>();
-    }
+         }
 
     // Update is called once per frame
     void Update()
@@ -36,30 +27,18 @@ public class HitScanBasic : MonoBehaviour
             Shoot();
         }
 
-         if (isRecoiling)
-        {
-            recoilTimer += Time.deltaTime * recoilRecoverySpeed;
-            playerCamera.transform.localEulerAngles = Vector3.Lerp(playerCamera.transform.localEulerAngles, originalCameraRotation, recoilTimer);
-
-            if (recoilTimer >= 1f)
-            {
-                isRecoiling = false; 
-            }
-        }
+        
     }
 
     void Shoot()
     {
-        if (playerController != null)
-        {
-            playerController.ApplyRecoil(2f);  // 这里的 2f 是后坐力的强度
-        }
+        
 
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
             Debug.Log("Hit: " + hit.transform.name);
-             ApplyRecoil();
+             
 
             
             if (hit.collider.CompareTag("Enemy"))
@@ -90,23 +69,21 @@ public class HitScanBasic : MonoBehaviour
 
                     destructible.TakeHit(hitDirection);
                 }
-            }    
+            } 
+            else
+            {
+                Debug.Log("Hit object is not in pushable layer.");
+            }   
 
             
         }
+        else
+        {
+            Debug.Log("No object hit.");
+        }
+
     }
 
-    void ApplyRecoil()
-    {
-        
-        Vector3 recoilRotation = playerCamera.transform.localEulerAngles;
-        recoilRotation.x -= recoilAmount;  
-
-        playerCamera.transform.localEulerAngles = recoilRotation;
-
-       
-        isRecoiling = true;
-        recoilTimer = 0f;
-    }
+    
 
 }

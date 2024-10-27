@@ -6,27 +6,23 @@ public class DistroyableObstacle : MonoBehaviour
 {
     private int hitCount = 0; 
     public int maxHits = 3;   
-    public float pushForce = 2f; 
+    public float pushForce = 20f; 
+    public float objectMass = 10f;
+    public float objectDrag = 2f; 
     void Start()
     {
         
-        Transform[] childTransforms = GetComponentsInChildren<Transform>();
-
-        foreach (Transform child in childTransforms)
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        if (rb == null)
         {
-            
-            if (child.gameObject.GetComponent<Rigidbody>() == null)
-            {
-                Rigidbody rb = child.gameObject.AddComponent<Rigidbody>();
-                 rb.useGravity = false; 
-            }
-
-            
-            if (child.gameObject.GetComponent<DistroyableObstacle>() == null)
-            {
-                child.gameObject.AddComponent<DistroyableObstacle>();
-            }
+            rb = gameObject.AddComponent<Rigidbody>();
         }
+
+        rb.mass = objectMass;    
+        rb.drag = objectDrag;   
+        rb.useGravity = true;
+
+
     }
 
     
@@ -35,9 +31,9 @@ public class DistroyableObstacle : MonoBehaviour
         hitCount++;
         Debug.Log(gameObject.name + " has been hit " + hitCount + " times.");
 
-        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
 
-        foreach (Rigidbody rb in rigidbodies)
+        if (rb != null)
         {
             
             rb.AddForce(hitDirection * pushForce, ForceMode.Impulse);

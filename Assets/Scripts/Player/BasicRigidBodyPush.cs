@@ -3,8 +3,8 @@
 public class BasicRigidBodyPush : MonoBehaviour
 {
 	public LayerMask pushLayers;
-	public bool canPush;
-	[Range(0.5f, 5f)] public float strength = 1.1f;
+	public bool canPush= true;
+	[Range(0.5f, 5f)] public float strength = 4f;
 
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
@@ -20,8 +20,7 @@ public class BasicRigidBodyPush : MonoBehaviour
 		if (body == null || body.isKinematic) return;
 
 		// make sure we only push desired layer(s)
-		var bodyLayerMask = 1 << body.gameObject.layer;
-		if ((bodyLayerMask & pushLayers.value) == 0) return;
+		if ((pushLayers.value & (1 << hit.gameObject.layer)) == 0) return;
 
 		// We dont want to push objects below us
 		if (hit.moveDirection.y < -0.3f) return;

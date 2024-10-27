@@ -45,18 +45,10 @@ public class FirstPersonController : MonoBehaviour
 	public float BottomClamp = -90.0f;
 
 
-	[Header("Recoiling ")]
-	 //private float _cinemachineTargetPitch;
-    private bool isRecoiling = false;    
-    private float recoilTimer = 0f;     
-    private Vector3 originalCameraRotation;  
-    public float recoilRecoverySpeed = 5f;  
-	public float recoilAmount = 2f;
-	public Camera playerCamera; 
-
 
 	// cinemachine
 	private float _cinemachineTargetPitch;
+	public Camera playerCamera; 
 
 	// player
 	private float _speed;
@@ -70,11 +62,13 @@ public class FirstPersonController : MonoBehaviour
 
 	private CharacterController _controller;
 	//private StarterAssetsInputs _input;
-	private GameObject _mainCamera;
+
 
 	private const float _threshold = 0.01f;
+	
 	private bool isRightClickPressed = false;
-
+	
+	private Camera _mainCamera;
 
 	public RawImage crosshairImage; 
 	
@@ -84,7 +78,7 @@ public class FirstPersonController : MonoBehaviour
 		// get a reference to our main camera
 		if (_mainCamera == null)
 		{
-			_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+			_mainCamera = Camera.main;
 		}
 	}
 
@@ -97,48 +91,38 @@ public class FirstPersonController : MonoBehaviour
 		_jumpTimeoutDelta = JumpTimeout;
 		_fallTimeoutDelta = FallTimeout;
 
-		if (crosshairImage != null)
-        {
-            crosshairImage.gameObject.SetActive(false);
-        }
-		 originalCameraRotation = playerCamera.transform.localEulerAngles;
- 
 
 	}
 
-	private void Update()
-	{
-		JumpAndGravity();
-		GroundedCheck();
-		Move();
+		private void Update()
+		{
+			JumpAndGravity();
+			GroundedCheck();
+			Move();
 
-		if (Input.GetMouseButtonDown(1)) 
-        {
-            isRightClickPressed = true;
+			if (Input.GetMouseButtonDown(1)) 
+			{
+				isRightClickPressed = true;
 
-            
+				
+			
+			}
+			if (Input.GetMouseButtonUp(1))
+			{
+				isRightClickPressed = false;
+
+				
+				
+			}
+
+
+
+		}
+		
            
-        }
-        if (Input.GetMouseButtonUp(1))
-        {
-            isRightClickPressed = false;
+        
 
-            
-            
-        }
-
-		 if (isRecoiling)
-        {
-            recoilTimer += Time.deltaTime * recoilRecoverySpeed;
-            playerCamera.transform.localEulerAngles = Vector3.Lerp(playerCamera.transform.localEulerAngles, originalCameraRotation, recoilTimer);
-
-            if (recoilTimer >= 1f)
-            {
-                isRecoiling = false;  
-            }
-        }
-
-	}
+	
 
 		private void LateUpdate()
 		{
@@ -174,34 +158,15 @@ public class FirstPersonController : MonoBehaviour
 				// Update Cinemachine camera target pitch
 				CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
 
-				if (isRecoiling)
-				{
-					_cinemachineTargetPitch -= recoilAmount;  
-				}
-
 				// rotate the player left and right
 				transform.Rotate(Vector3.up * _rotationVelocity);
+
+				
 			}
-
-			if (isRecoiling)
-				{
-					recoilTimer += Time.deltaTime * recoilRecoverySpeed;
-					_cinemachineTargetPitch = Mathf.Lerp(_cinemachineTargetPitch, originalCameraRotation.x, recoilTimer);
-
-					if (recoilTimer >= 1f)
-					{
-						isRecoiling = false;  
-					}
-				}
+					
 		}
-
-		public void ApplyRecoil(float recoilAmount)
-		{
 			
-			isRecoiling = true;
-			recoilTimer = 0f;
-			this.recoilAmount = recoilAmount;  
-		}
+		
 
 		private void Move()
 		{
