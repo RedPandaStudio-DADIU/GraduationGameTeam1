@@ -25,6 +25,9 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 	public float FallTimeout = 0.15f;
 
+	[Header("Wwise Event")]
+	public AK.Wwise.Event myFootstep;
+
 	[Header("Player Grounded")]
 	[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 	public bool Grounded = true;
@@ -52,6 +55,11 @@ public class FirstPersonController : MonoBehaviour
 	private float _verticalVelocity;
 	private float _terminalVelocity = 53.0f;
 
+	// Wwise
+	private bool footstepIsPlaying = false;
+	private float lastFootstepTime = 0;
+
+
 	// timeout deltatime
 	private float _jumpTimeoutDelta;
 	private float _fallTimeoutDelta;
@@ -70,6 +78,9 @@ public class FirstPersonController : MonoBehaviour
 		{
 			_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 		}
+
+		lastFootstepTime = Time.time;
+
 	}
 
 	private void Start()
@@ -153,9 +164,10 @@ public class FirstPersonController : MonoBehaviour
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
 			float speedOffset = 0.1f;
+        AkSoundEngine.SetRTPCValue("RTPC_PlayerSpeed", _speed, gameObject);
 
-			// accelerate or decelerate to target speed
-			if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
+		// accelerate or decelerate to target speed
+		if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
 			{
 				// creates curved result rather than a linear one giving a more organic speed change
 				// note T in Lerp is clamped, so we don't need to clamp our speed
@@ -186,7 +198,25 @@ public class FirstPersonController : MonoBehaviour
 
 				
 				inputDirection = forward * moveInput.z + right * moveInput.x;
+	
+
+			if (!footstepIsPlaying)
+			{
+				myFootstep.Post(gameObject);
+				lastFootstepTime = Time.time;
+				footstepIsPlaying = true;
 			}
+			else
+            {
+				if (_speed > 1)
+                {
+                    if (Time.time - lastFootstepTime > 2 / _speed)
+                    {
+                        footstepIsPlaying = false;
+					}
+				}
+            }
+		}
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);

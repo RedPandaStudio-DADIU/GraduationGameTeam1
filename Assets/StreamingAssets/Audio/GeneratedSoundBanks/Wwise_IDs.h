@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
         static const AkUniqueID PLAY_TESTBEEP_LP_3D = 161393517U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
+        static const AkUniqueID PLAYBOX = 2408190926U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
     } // namespace EVENTS

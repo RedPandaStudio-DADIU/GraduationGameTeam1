@@ -303,13 +303,17 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{07620D31-1DB8-6E59-544F-6C57357F0B64}">
+		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{BDDE39FF-592B-6D51-3CE9-1799B04071A8}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>MainSoundFXBank.bnk</Path>
 			<Media>
 				<File Id="118223763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626.wav</ShortName>
 					<CachePath>SFX/Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="133120763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1.wav</ShortName>
+					<CachePath>SFX/Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="599996232" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TestMusic\Musical, Loop, Intro, 80s Pop Music SND70455 1.wav</ShortName>
@@ -342,7 +346,11 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="903081441" Name="Play_AmbienceMain" DurationType="OneShot" DurationMin="44.181812" DurationMax="44.181812">
+					<MediaRefs>
+						<MediaRef Id="133120763"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3625855865" Name="Play_MainMusicSwitch_test" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -654,5 +662,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A3612DA5-492D-8AA0-887D-82306463F1A2}</FileHash>
+	<FileHash>{4620A993-98BB-8FDE-B7CC-A1AB6B3FFDAD}</FileHash>
 </SoundBanksInfo>
