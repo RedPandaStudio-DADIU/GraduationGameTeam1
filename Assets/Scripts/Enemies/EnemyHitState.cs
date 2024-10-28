@@ -11,7 +11,7 @@ public class EnemyHitState : IEnemyState
         } else{
             stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
-            stateController.GetEnemy().GetRagdollController().RecordBoneTransforms();
+            stateController.GetEnemy().GetRagdollController().RecordBoneTransforms(true);
 
 
         }
@@ -26,7 +26,7 @@ public class EnemyHitState : IEnemyState
         // Apply the transformation to the recorded position from the enter function (move it to where you're now) 
         
         // possible problems: Trying to stand up in the place where there is a wall or some other object
-
+        stateController.GetEnemy().GetRagdollController().RecordBoneTransforms(false);
         stateController.GetEnemy().GetRagdollController().RecoverFromRagdoll();
 
         // stateController.GetEnemy().GetRagdollController().RecordBoneTransforms();
