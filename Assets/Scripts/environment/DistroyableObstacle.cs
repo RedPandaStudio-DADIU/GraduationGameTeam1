@@ -5,8 +5,8 @@ using UnityEngine;
 public class DistroyableObstacle : MonoBehaviour
 {
     private int hitCount = 0; 
-    public int maxHits = 3;   
-    public float pushForce = 20f; 
+    public int maxHits = 7;   
+    public float pushForce = 30f; 
     public float objectMass = 10f;
     public float objectDrag = 2f; 
     void Start()
