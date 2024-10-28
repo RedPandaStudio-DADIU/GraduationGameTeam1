@@ -5,10 +5,15 @@ using UnityEngine;
 public class DistroyableObstacle : MonoBehaviour
 {
     private int hitCount = 0; 
-    public int maxHits = 3;   
-    public float pushForce = 20f; 
+    public int maxHits = 7;   
+    public float pushForce = 30f; 
     public float objectMass = 10f;
     public float objectDrag = 2f; 
+
+    public bool isExplosive = false;  
+    public float explosionRadius = 5f;  
+    public HitScanBasic hitScanBasic;
+
     void Start()
     {
         
@@ -21,6 +26,8 @@ public class DistroyableObstacle : MonoBehaviour
         rb.mass = objectMass;    
         rb.drag = objectDrag;   
         rb.useGravity = true;
+
+        hitScanBasic = FindObjectOfType<HitScanBasic>();
 
 
     }
@@ -41,9 +48,29 @@ public class DistroyableObstacle : MonoBehaviour
 
         if (hitCount >= maxHits)
         {
-           
-            Destroy(gameObject);
-            Debug.Log(gameObject.name + " has been destroyed.");
+            if (isExplosive)
+            {
+                Explode(); 
+            }
+            else
+            {
+                Destroy(gameObject); 
+                Debug.Log(gameObject.name + " has been destroyed.");
+            }
         }
     }
+
+    private void Explode()
+    {
+        Debug.Log(gameObject.name + " exploded!");
+
+        if (hitScanBasic != null)
+        {
+            hitScanBasic.PushNearbyEnemies(transform.position, pushForce, explosionRadius); 
+        }
+        
+    }
+
+
+
 }

@@ -13,6 +13,8 @@ public class EnemyStateController : MonoBehaviour
     private Transform playerBodyTransform;
 
     private bool playerInRange = false;
+    private Vector3 forceDirection;
+    private float force;
 
     void Start()
     {
@@ -27,7 +29,6 @@ public class EnemyStateController : MonoBehaviour
     void Update()
     {
         currentState.OnUpdate(this);
-        previousState = currentState;
 
         if(this.GetEnemy().GetHealth() == 0){
             ChangeState(new EnemyDieState());
@@ -35,6 +36,7 @@ public class EnemyStateController : MonoBehaviour
     }
 
     public void ChangeState(IEnemyState newState){
+        previousState = currentState;
         currentState.OnExit(this);
         currentState = newState;
         currentState.OnEnter(this);
@@ -113,17 +115,20 @@ public class EnemyStateController : MonoBehaviour
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            if (hit.collider.CompareTag("Player"))
+            // if (hit.collider.CompareTag("Player"))
+            if (hit.collider.CompareTag("PlayerBody"))
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
                 GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
 
                 playerInRange = true;
+                Debug.Log("Raycast check passed by: " + enemy.name);
+
                 return playerInRange;
             }
         }
 
-        Debug.Log("Raycast check not passed " + enemy.name);
+        // Debug.Log("Raycast check not passed " + enemy.name);
 
         playerInRange = false;
         return playerInRange;
@@ -149,5 +154,26 @@ public class EnemyStateController : MonoBehaviour
     public void SetPlayerInRange(bool flag){
         this.playerInRange = flag;
     }
+    
+    public float GetForce(){
+        return this.force;
+    }
+
+    public void SetForce(float force){
+        this.force = force;
+    }
+
+    public Vector3 GetForceDirection(){
+        return this.forceDirection;
+    }
+
+    public void SetForceDirection(Vector3 forceDirection){
+        this.forceDirection = forceDirection;
+    }
+
+    public IEnemyState GetPreviousState(){
+        return this.previousState;
+    }
+
 
 }
