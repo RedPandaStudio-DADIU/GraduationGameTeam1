@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8373369A-7B69-4C0E-971D-8604368A2E27}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{8373369A-7B69-4C0E-971D-8604368A2E27}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8373369A-7B69-4C0E-971D-8604368A2E27}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Tremolo" ID="{B3B08CB1-D3A3-4C3F-90D0-53518F41A9C7}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+					<PropertyList>
+						<Property Name="ModDepth" Type="Real32" Value="61.1"/>
+						<Property Name="ModFrequency" Type="Real32" Value="99.68"/>
+						<Property Name="ModPWM" Type="Real32" Value="48"/>
+						<Property Name="ModWaveform" Type="int32" Value="2"/>
+						<Property Name="ProcessLFE" Type="bool" Value="False"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="DistortionDrive" Type="Real32" Value="19"/>
+						<Property Name="DistortionTone" Type="Real32" Value="74"/>
+						<Property Name="DistortionType" Type="int32" Value="3"/>
+						<Property Name="PostEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand3FilterType" Type="int32" Value="1"/>
+						<Property Name="PostEQBand3Frequency" Type="Real32" Value="268"/>
+						<Property Name="PostEQBand3Gain" Type="Real32" Value="10"/>
+						<Property Name="PostEQBand3QFactor" Type="Real32" Value="6.5"/>
+						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand3FilterType" Type="int32" Value="1"/>
+						<Property Name="PreEQBand3Frequency" Type="Real32" Value="698"/>
+						<Property Name="PreEQBand3Gain" Type="Real32" Value="7"/>
+						<Property Name="PreEQBand3QFactor" Type="Real32" Value="3"/>
+						<Property Name="Rectification" Type="Real32" Value="53"/>
+						<Property Name="WetDryMix" Type="Real32" Value="24"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

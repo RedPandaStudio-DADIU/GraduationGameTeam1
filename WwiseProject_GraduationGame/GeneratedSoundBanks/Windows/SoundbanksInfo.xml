@@ -9,33 +9,171 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{989FEFE0-5F03-0A14-4274-335D4D9EDF92}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{6793942B-9779-B82D-579C-5A83250C9602}">
+			<ShortName>MainMusicBank</ShortName>
+			<Path>MainMusicBank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8EC28DA3-5F33-8776-8847-C981C3B85A7E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+					<Plugin Id="4230635974" Name="Default_Motion_Device" LibName="Wwise Motion" LibId="33226759"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="985987111" Name="Motion Factory Bus"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="1182634443" Name="AmbientBeds"/>
+				<Bus Id="1301074112" Name="3DAmbience"/>
+				<Bus Id="1399649189" Name="Master Bus"/>
+				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1681012287" Name="PlayerFootsteps"/>
+				<Bus Id="2033911932" Name="NPCMaster"/>
+				<Bus Id="2343802269" Name="PlayerLocomotion"/>
+				<Bus Id="3538689948" Name="PlayerMaster"/>
+				<Bus Id="3545700988" Name="Reverbs"/>
+				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="924856803" Name="DelaySlaps"/>
+				<AuxBus Id="1603492950" Name="RoomTunnel"/>
+				<AuxBus Id="3205342581" Name="RoomSmall"/>
+				<AuxBus Id="3553615197" Name="RoomLarge"/>
+			</AuxBusses>
 			<GameParameters>
-				<GameParameter Id="796049864" Name="RPM"/>
-				<GameParameter Id="822163944" Name="SS_Air_RPM"/>
-				<GameParameter Id="1029930033" Name="SS_Air_Fury"/>
-				<GameParameter Id="1351367891" Name="SS_Air_Fear"/>
-				<GameParameter Id="1524500807" Name="Playback_Rate"/>
-				<GameParameter Id="2648548617" Name="SS_Air_Month"/>
-				<GameParameter Id="3002758120" Name="SS_Air_Freefall"/>
-				<GameParameter Id="3074696722" Name="SS_Air_Size"/>
-				<GameParameter Id="3203397129" Name="SS_Air_TimeOfDay"/>
-				<GameParameter Id="3715662592" Name="SS_Air_Storm"/>
-				<GameParameter Id="3847924954" Name="SS_Air_Presence"/>
-				<GameParameter Id="4160247818" Name="SS_Air_Turbulence"/>
+				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
+				<GameParameter Id="262290038" Name="RTPC_Distance"/>
+				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
+				<GameParameter Id="1294084109" Name="RTPC_RainAmount"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
+				<GameParameter Id="3339859487" Name="RTPC_WeaponCharge"/>
+				<GameParameter Id="3989928153" Name="RTPC_GroundWetness_Slow"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="185713839" Name="RoomState">
+					<States>
+						<State Id="144697359" Name="Outdoor"/>
+						<State Id="340398852" Name="Indoor"/>
+						<State Id="748895195" Name="None"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1045871717" Name="GameStatus">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="984691642" Name="InGame"/>
+						<State Id="3374585465" Name="InMenu"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2064552269" Name="AreaState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2485288013" Name="FarmlandArea_01"/>
+						<State Id="2485288014" Name="FarmlandArea_02"/>
+						<State Id="2485288015" Name="FarmlandArea_03"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3285234865" Name="PlayerState">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="151362964" Name="PlayerHealth">
+					<Switches>
+						<Switch Id="898449699" Name="NearDeath"/>
+						<Switch Id="1017222595" Name="LowHealth"/>
+						<Switch Id="2429688720" Name="FullHealth"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="524731881" Name="AmbBiomeType">
+					<Switches>
+						<Switch Id="425131515" Name="SpaceStation"/>
+						<Switch Id="491961918" Name="Forest"/>
+						<Switch Id="513139656" Name="Mountain"/>
+						<Switch Id="1199171794" Name="Grassland"/>
+						<Switch Id="2514633223" Name="MainHub"/>
+						<Switch Id="2907906111" Name="Swamp"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch">
+					<Switches>
+						<Switch Id="187032587" Name="Flowers"/>
+						<Switch Id="344481046" Name="Ice"/>
+						<Switch Id="437659151" Name="Rubber"/>
+						<Switch Id="491961918" Name="Forest"/>
+						<Switch Id="582824249" Name="Leaves"/>
+						<Switch Id="787898836" Name="Snow"/>
+						<Switch Id="803837735" Name="Sand"/>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="967535525" Name="PuddleGrass"/>
+						<Switch Id="1115562054" Name="StoneFloor"/>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="1442397674" Name="Marsh"/>
+						<Switch Id="1669493947" Name="RubberTile"/>
+						<Switch Id="2144363834" Name="Rock"/>
+						<Switch Id="2185786256" Name="Gravel"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="2473969246" Name="Metal"/>
+						<Switch Id="2482365692" Name="PineForest"/>
+						<Switch Id="2612303067" Name="WaterWade"/>
+						<Switch Id="2654748154" Name="Water"/>
+						<Switch Id="2681948225" Name="TileType2"/>
+						<Switch Id="2681948226" Name="TileType1"/>
+						<Switch Id="2721243382" Name="PuddleDirt"/>
+						<Switch Id="2907906111" Name="Swamp"/>
+						<Switch Id="3111880208" Name="WoodFloor"/>
+						<Switch Id="3995207278" Name="Linoleum"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
+					<GameParameterRef Id="2653406601"/>
+					<Switches>
+						<Switch Id="712161704" Name="Run"/>
+						<Switch Id="1296465089" Name="Sprint"/>
+						<Switch Id="2108779966" Name="Walk"/>
+						<Switch Id="2884887403" Name="Sneak"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2569417515" Name="RainTypeSwitch">
+					<GameParameterRef Id="1294084109"/>
+					<Switches>
+						<Switch Id="614284249" Name="Stormy"/>
+						<Switch Id="991379416" Name="FullRain"/>
+						<Switch Id="1278453130" Name="MediumRain"/>
+						<Switch Id="2789071989" Name="LightRain"/>
+						<Switch Id="3569642402" Name="Sunny"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
+					<GameParameterRef Id="870672907"/>
+					<Switches>
+						<Switch Id="630539344" Name="Dry"/>
+						<Switch Id="1181096339" Name="Wet"/>
+						<Switch Id="1842026663" Name="Damp"/>
+						<Switch Id="1905651656" Name="Soaked"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4280509423" Name="AmbTimeOfDay">
+					<GameParameterRef Id="257272959"/>
+					<Switches>
+						<Switch Id="390531879" Name="Afternoon"/>
+						<Switch Id="1011622525" Name="Night"/>
+						<Switch Id="1211181101" Name="Midday"/>
+						<Switch Id="1844596514" Name="EarlyMorning"/>
+						<Switch Id="2009803003" Name="Dawn"/>
+						<Switch Id="2348606646" Name="Dusk"/>
+						<Switch Id="2905060079" Name="Evening"/>
+						<Switch Id="3789021730" Name="Nightfall"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -165,6 +303,356 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
+		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{07620D31-1DB8-6E59-544F-6C57357F0B64}">
+			<ShortName>MainSoundFXBank</ShortName>
+			<Path>MainSoundFXBank.bnk</Path>
+			<Media>
+				<File Id="118223763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626.wav</ShortName>
+					<CachePath>SFX/Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="599996232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TestMusic\Musical, Loop, Intro, 80s Pop Music SND70455 1.wav</ShortName>
+					<CachePath>SFX/TestMusic/Musical, Loop, Intro, 80s Pop Music SND70455 1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="911602909" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TestFiles\Beep Loop by DongKingKong Id-395901 9.wav</ShortName>
+					<CachePath>SFX/TestFiles/Beep Loop by DongKingKong Id-395901 9_1E14C19D.wem</CachePath>
+				</File>
+				<File Id="921613273" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926.wav</ShortName>
+					<CachePath>SFX/TestFiles/Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926_818F3B66.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="63893666" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="117791070" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="176643587" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="184931808" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="296736778" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="303634001" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="310803756" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="323944449" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="793404368" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="1232150908" Name="New_Tremolo" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+				</ShareSets>
+			</Plugins>
+			<Events>
+				<Event Id="903081441" Name="Play_AmbienceMain" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3625855865" Name="Play_MainMusicSwitch_test" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2064552269" Id="2485288013"/>
+							<MediaRefs>
+								<MediaRef Id="118223763"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2064552269" Id="2485288014"/>
+							<MediaRefs>
+								<MediaRef Id="599996232"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="98439365" Name="Play_Player_Footsteps" DurationType="OneShot" DurationMin="0" DurationMax="1.4394294">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2612303067"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2482365692"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2195636714" Default="true"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1905651656"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="793404368"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="630539344" Default="true"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="323944449"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1181096339"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="184931808"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1842026663"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="310803756"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2907906111"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="437659151"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="491961918"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1905651656"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="296736778"/>
+										</Custom>
+										<ShareSets>
+											<PluginRef Id="1232150908"/>
+											<PluginRef Id="3435419520"/>
+										</ShareSets>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="630539344" Default="true"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="303634001"/>
+										</Custom>
+										<ShareSets>
+											<PluginRef Id="1232150908"/>
+											<PluginRef Id="3435419520"/>
+										</ShareSets>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1181096339"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="176643587"/>
+										</Custom>
+										<ShareSets>
+											<PluginRef Id="1232150908"/>
+											<PluginRef Id="3435419520"/>
+										</ShareSets>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1842026663"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="117791070"/>
+										</Custom>
+										<ShareSets>
+											<PluginRef Id="1232150908"/>
+											<PluginRef Id="3435419520"/>
+										</ShareSets>
+									</PluginRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2681948226"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="582824249"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1216965916"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="3111880208"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="967535525"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="4248645337"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="787898836"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2185786256"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="803837735"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="3995207278"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="841620460"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="344481046"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1669493947"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="187032587"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2144363834"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2721243382"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1442397674"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1115562054"/>
+							<Children/>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1955951874" Name="Play_TestBeep" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1681067324" Name="Play_TestBeep_3D" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="858964037" Name="Play_TestBeep_lp" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="911602909"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="161393517" Name="Play_TestBeep_lp_3D" MaxAttenuation="50" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="911602909"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3106700779" Name="Stop_TestBeep_lp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1670385919" Name="Stop_TestBeep_lp_3D" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="2064552269" Name="AreaState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2485288013" Name="FarmlandArea_01"/>
+						<State Id="2485288014" Name="FarmlandArea_02"/>
+						<State Id="2485288015" Name="FarmlandArea_03"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch">
+					<Switches>
+						<Switch Id="187032587" Name="Flowers"/>
+						<Switch Id="344481046" Name="Ice"/>
+						<Switch Id="437659151" Name="Rubber"/>
+						<Switch Id="491961918" Name="Forest"/>
+						<Switch Id="582824249" Name="Leaves"/>
+						<Switch Id="787898836" Name="Snow"/>
+						<Switch Id="803837735" Name="Sand"/>
+						<Switch Id="841620460" Name="Concrete"/>
+						<Switch Id="967535525" Name="PuddleGrass"/>
+						<Switch Id="1115562054" Name="StoneFloor"/>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="1442397674" Name="Marsh"/>
+						<Switch Id="1669493947" Name="RubberTile"/>
+						<Switch Id="2144363834" Name="Rock"/>
+						<Switch Id="2185786256" Name="Gravel"/>
+						<Switch Id="2195636714" Name="Dirt"/>
+						<Switch Id="2473969246" Name="Metal"/>
+						<Switch Id="2482365692" Name="PineForest"/>
+						<Switch Id="2612303067" Name="WaterWade"/>
+						<Switch Id="2654748154" Name="Water"/>
+						<Switch Id="2681948225" Name="TileType2"/>
+						<Switch Id="2681948226" Name="TileType1"/>
+						<Switch Id="2721243382" Name="PuddleDirt"/>
+						<Switch Id="2907906111" Name="Swamp"/>
+						<Switch Id="3111880208" Name="WoodFloor"/>
+						<Switch Id="3995207278" Name="Linoleum"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
+					<GameParameterRef Id="870672907"/>
+					<Switches>
+						<Switch Id="630539344" Name="Dry"/>
+						<Switch Id="1181096339" Name="Wet"/>
+						<Switch Id="1842026663" Name="Damp"/>
+						<Switch Id="1905651656" Name="Soaked"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1845515638" Type="User" Language="SFX" Hash="{01C17068-B26B-80FB-B9CC-CEDAC66EC02B}">
+			<ShortName>MainDialogueBank</ShortName>
+			<Path>MainDialogueBank.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7A6C6938-94CD-0E81-7611-59D8E1B64E40}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Plugins>
+				<Custom>
+					<Plugin Id="63893666" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6EB05ADB-EB44-F113-3D5F-6DDC2F9928B9}</FileHash>
+	<FileHash>{A3612DA5-492D-8AA0-887D-82306463F1A2}</FileHash>
 </SoundBanksInfo>

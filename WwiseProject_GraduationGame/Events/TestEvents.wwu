@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2892190A-446E-44CD-8D50-8C2E1E150F58}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="TestEvents" ID="{2892190A-446E-44CD-8D50-8C2E1E150F58}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_TestBeep" ID="{9E1D8839-8E69-4C7C-ADCF-1DF672D74B58}">
+					<ChildrenList>
+						<Action Name="" ID="{9F56B8DC-D30A-4683-A147-595CC0388A02}" ShortID="842654289">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_test_Beep_1000hz" ID="{95D810FC-2D52-4A2D-BC27-6EFB0BB4F5C3}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TestBeep_3D" ID="{B8FEB0A2-ACEF-4C51-B71E-37507570A294}">
+					<ChildrenList>
+						<Action Name="" ID="{3B40B365-7F22-40DC-92C9-BAA1F6313D39}" ShortID="983925676">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_test_Beep_1000hz_3D" ID="{1F0DD7C7-AEA5-4EEB-9848-04D28D677B30}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TestBeep_lp" ID="{4DF5A6CE-23B0-45F4-8480-F1FCFEF72A98}">
+					<ChildrenList>
+						<Action Name="" ID="{6FF55617-BECD-41A9-9CAC-FAD0876324B3}" ShortID="924383344">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_TestSound_lp" ID="{FBF0CE47-587F-4766-98B8-DABA032ECBD6}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_TestBeep_lp" ID="{E787802F-3C82-4F06-B86E-D7AE3063ACB1}">
+					<ChildrenList>
+						<Action Name="" ID="{BFCD3820-D8A8-4C22-9BDF-EA8B4B192890}" ShortID="658079373">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_TestSound_lp" ID="{FBF0CE47-587F-4766-98B8-DABA032ECBD6}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TestBeep_lp_3D" ID="{45DD77B5-179D-418F-8CD5-9F3632312269}">
+					<ChildrenList>
+						<Action Name="" ID="{98F3AF7E-54B4-45A9-9F3D-568DE119A67B}" ShortID="211560969">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_TestSound_lp_3D" ID="{A4732938-176C-4390-9D5C-83550C9112E6}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_TestBeep_lp_3D" ID="{6913CBA5-9C82-4EE4-92E1-44E1C4725A24}">
+					<ChildrenList>
+						<Action Name="" ID="{8B54FEF1-DB3A-4B72-A0F9-D98F678C1754}" ShortID="816135365">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_TestSound_lp_3D" ID="{A4732938-176C-4390-9D5C-83550C9112E6}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
