@@ -10,6 +10,7 @@ public class GlobalEnemyStateMachine : MonoBehaviour
     private bool playerDetected = false;
     private Vector3 playerPosition;
     private bool isLost = true;
+    private float notificationDistance = 10f;
 
 
     void Awake()
@@ -62,14 +63,15 @@ public class GlobalEnemyStateMachine : MonoBehaviour
         }
     }
 
-    public void DetectPlayer(Vector3 detectedPosition){
+    //TODO pass enemy who detected the player
+    public void DetectPlayer(Vector3 detectedPosition, EnemyBaseClass enemy){
         Debug.Log("Inside DetectPlayer");
 
         if (!playerDetected)
         {
             playerDetected = true;
             playerPosition = detectedPosition;
-            NotifyEnemies(true);
+            NotifyEnemies(true, enemy);
         }
     }
 
@@ -80,29 +82,49 @@ public class GlobalEnemyStateMachine : MonoBehaviour
         {
             // Debug.Log("PLAYER IS LOST!");
             playerDetected = false;
-            NotifyEnemies(false);
+            NotifyEnemies(false, null);
         }
     }
 
-    public void NotifyEnemies(bool detected){
+    //TODO pass enemy who detected the player
+    public void NotifyEnemies(bool detected, EnemyBaseClass enemyDetecting){
 
         foreach (EnemyStateController enemy in enemies)
         {
             if (enemy != null)
             {
+                //TODO find the enemies close by to the notifier
                 if(detected){
-                    Debug.Log("Notifying: " + enemy.GetEnemy().name);
-                    enemy.SetPlayerPosition(playerPosition);
-                    enemy.ChangeState(new EnemyAttackState());
+                    if(IsEnemyCloseBy(enemyDetecting, enemy.GetEnemy())){
+                        Debug.Log("Notifying: " + enemy.GetEnemy().name);
+                        enemy.SetPlayerPosition(playerPosition);
+                        enemy.ChangeState(new EnemyAttackState());
+                    }
+                    
                 } else {
                     // Position unknown 
-                    enemy.ChangeState(new EnemyIdleState());
+                    if(enemy.GetEnemy() is not ShieldEnemy) {
+                        enemy.GetEnemy().LosePlayer(playerPosition);
+                    }
+                    // enemy.ChangeState(new EnemyIdleState());
 
                 }
 
             }
         }
 
+    }
+
+    public bool IsEnemyCloseBy(EnemyBaseClass enemyDetecting, EnemyBaseClass randomEnemy){
+        // Get the distance between enemy who detected player and other enemies
+        Vector3 direction = enemyDetecting.transform.position - randomEnemy.transform.position;
+        float distance = direction.magnitude;
+
+        if (distance > notificationDistance){
+           return false;
+        } else {
+            return true;
+        }
     }
 
 

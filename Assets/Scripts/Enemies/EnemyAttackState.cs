@@ -6,14 +6,25 @@ public class EnemyAttackState : IEnemyState
 {
     public void OnEnter(EnemyStateController stateController){
         // Debug.Log("Entering Attack State");
-        stateController.SetNavAgent();
+        if(stateController.GetEnemy().GetIsMovable()){
+            stateController.SetNavAgent();
+        }
     }
     public void OnUpdate(EnemyStateController stateController){
-        stateController.SetAgentsDestination();
+        if(stateController.GetEnemy().GetIsMovable()){
+            stateController.SetAgentsDestination();
+        }
         if (stateController.CanSeePlayer())
         {
             stateController.GetEnemy().Attack();
-        } 
+        } else {
+            // reaches destination - goes into idle state
+            if(stateController.CheckIfReachedDestination()){
+                stateController.ChangeState(new EnemyIdleState());
+            }
+        }
+
+        
     }
     public void OnExit(EnemyStateController stateController){
         // Debug.Log("Exiting Attack State");
