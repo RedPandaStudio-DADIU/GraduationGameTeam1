@@ -13,19 +13,16 @@ public class EnemyRagdollController : MonoBehaviour
     private NavMeshAgent navMeshAgent; 
 
     private bool isRagdoll = false;
-    private Rigidbody[] ragdollBodies;
     private Dictionary<Transform, BoneTransform> boneTransforms = new Dictionary<Transform, BoneTransform>();
-    private Dictionary<Transform, BoneTransform> boneTransformsAfter = new Dictionary<Transform, BoneTransform>();
-    private Dictionary<Transform, Vector3> relativePositions = new Dictionary<Transform, Vector3>();
 
     private Rigidbody torsoRigidbody;
-    private Vector3 ragdollPosition; 
-    private Quaternion ragdollRotation;
-
+    private Transform middleBodyBone; // Cached reference to the hips/pelvis bone
     private Collider mainCollider; 
     private Rigidbody mainRigidbody; 
-    public float fallThreshold = -5f;
-
+    [SerializeField] private float fallThreshold = -5f;
+    [SerializeField] private float standUpDuration = 1.5f; // Duration for stand-up transition
+    [SerializeField] private float animatorEnableDelay = 0.5f; // Delay before enabling Animator
+    [SerializeField] private LayerMask groundLayer; // Ground layer for raycast check
 
     private class BoneTransform
     {
@@ -39,41 +36,57 @@ public class EnemyRagdollController : MonoBehaviour
         }
     }
 
-
     void Awake()
     {
         ragdollRigidbodies = GetComponentsInChildren<Rigidbody>();
         ragdollColliders = GetComponentsInChildren<Collider>();
-
         hitboxColliders = GetComponents<Collider>();
 
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>(); 
 
+        middleBodyBone = FindBoneByName("middle body");
+
         SetRagdollActive(false);
     }
 
-
-    void Start(){
-        ragdollBodies = GetComponentsInChildren<Rigidbody>();
+    void Start()
+    {
         mainCollider = GetComponent<Collider>(); 
         mainRigidbody = GetComponent<Rigidbody>(); 
+
+        RecordBoneTransforms();
     }
 
-    void Update(){
-        if (torsoRigidbody != null)
+    private Transform FindBoneByName(string boneName)
+    {
+        foreach (Transform child in GetComponentsInChildren<Transform>())
         {
-            if (torsoRigidbody.position.y < fallThreshold)
+            if (child.name == boneName)
             {
-                
-                Destroy(gameObject);
-                Debug.Log("Enemy fell off the platform and was destroyed.");
+                return child;
             }
+        }
+        Debug.LogWarning($"Bone with name '{boneName}' not found!");
+        return null;
+    }
+
+    void Update()
+    {
+        if (torsoRigidbody != null && torsoRigidbody.position.y < fallThreshold)
+        {
+            Destroy(gameObject);
+            Debug.Log("Enemy fell off the platform and was destroyed.");
         }
     }
 
     public void SetRagdollActive(bool isActive)
-    {
+    {   
+        if (animator != null)
+        {
+            animator.enabled = !isActive; 
+        }
+
         foreach (Rigidbody rb in ragdollRigidbodies)
         {
             rb.isKinematic = !isActive;  
@@ -94,227 +107,107 @@ public class EnemyRagdollController : MonoBehaviour
             navMeshAgent.enabled = !isActive;  
         }
 
-        if (animator != null)
+        isRagdoll = isActive;
+
+        if (isActive)
         {
-            animator.enabled = !isActive;
+            RecordBoneTransforms(); // Record transforms when entering ragdoll state
         }
     }
 
-    public void RecordBoneTransforms(bool before){
-        foreach (Rigidbody rb in ragdollBodies)
+    private void RecordBoneTransforms()
+    {
+        boneTransforms.Clear();
+        foreach (var rb in ragdollRigidbodies)
         {
-            Transform boneRb = rb.transform;
-            if (before){
-                boneTransforms[boneRb] = new BoneTransform(boneRb.localPosition, boneRb.localRotation);
-            } else {
-                boneTransformsAfter[boneRb] = new BoneTransform(boneRb.localPosition, boneRb.localRotation);
-
-            }
-
-
+            Transform bone = rb.transform;
+            boneTransforms[bone] = new BoneTransform(bone.localPosition, bone.localRotation);
         }
-
-        // Transform torso = null;
-
-        // foreach (var entry in boneTransforms)
-        // {
-        //     if (entry.Key.name == "Torus") // Use your actual torso bone name here
-        //     {
-        //         torso = entry.Key;
-        //         break;
-        //     }
-        // }
-
-        // // Store the initial relative positions of the bones to the torso
-        // foreach (var entry in boneTransforms)
-        // {
-        //     Transform bone = entry.Key;
-        //     BoneTransform savedTransform = entry.Value;
-
-        //     // Calculate the initial relative position of each bone to the torso
-        //     Vector3 relativePosition = bone.position - torso.position; // Using global position for accuracy
-        //     relativePositions[bone] = relativePosition;
-        // }
-
-
-        Debug.Log("Recorded bone transforms.");
     }
 
-    private Vector3 ragdollFinalPosition;
-    private Quaternion ragdollFinalRotation;
-
-    public void CaptureRagdollFinalPosition(){
-        ragdollFinalPosition = transform.position;
-        ragdollFinalRotation = transform.rotation;
+    public void RecoverFromRagdoll()
+    {
+        SetRagdollActive(false);
+        StartCoroutine(StandUpCoroutine());
     }
 
-    // private IEnumerator SmoothRecoverToStanding()
-    // {
-    //     float transitionTime = 2.0f;  
-    //     float elapsedTime = 0.0f;
+    private IEnumerator StandUpCoroutine()
+    {
+        // Align the main GameObject to the hips position after ragdoll
+        AlignPositionToHips();
 
-    //     // Assume you have captured the final position and rotation of the ragdoll
-    //     Vector3 ragdollFinalPosition = transform.position; // Final position after ragdoll
-    //     Quaternion ragdollFinalRotation = transform.rotation; // Final rotation after ragdoll
-
-    //     // Find the torso transform
-    //     Transform torso = null;
-
-    //     foreach (var entry in boneTransforms)
-    //     {
-    //         if (entry.Key.name == "Torus") // Use your actual torso bone name here
-    //         {
-    //             torso = entry.Key;
-    //             break;
-    //         }
-    //     }
-
-    //     if (torso == null)
-    //     {
-    //         Debug.LogError("Torso transform not found in boneTransforms dictionary.");
-    //         yield break; // Exit if the torso is not found
-    //     }
-
-    //     // // Store the initial relative positions of the bones to the torso
-    //     // Dictionary<Transform, Vector3> relativePositions = new Dictionary<Transform, Vector3>();
-    //     // foreach (var entry in boneTransforms)
-    //     // {
-    //     //     Transform bone = entry.Key;
-    //     //     BoneTransform savedTransform = entry.Value;
-
-    //     //     // Calculate the initial relative position of each bone to the torso
-    //     //     Vector3 relativePosition = bone.position - torso.position; // Using global position for accuracy
-    //     //     relativePositions[bone] = relativePosition;
-    //     // }
-
-    //     while (elapsedTime < transitionTime)
-    //     {
-    //         elapsedTime += Time.deltaTime;
-    //         float t = elapsedTime / transitionTime;
-
-    //         // Set the torso to its final position smoothly
-    //         torso.position = Vector3.Lerp(torso.position, ragdollFinalPosition, t);
-    //         torso.rotation = Quaternion.Lerp(torso.rotation, ragdollFinalRotation, t);
-
-    //         // Update the position of each bone based on the torso's new position
-    //         foreach (var entry in boneTransforms)
-    //         {
-    //             Transform bone = entry.Key;
-    //             BoneTransform savedTransform = entry.Value;
-
-    //             // Calculate the new position based on the torso's position
-    //             Vector3 targetPosition = torso.position + relativePositions[bone];
-    //             bone.position = Vector3.Lerp(bone.position, targetPosition, t);
-
-    //             // Smoothly transition to the saved local rotation
-    //             bone.localRotation = Quaternion.Lerp(bone.localRotation, savedTransform.localRotation, t);
-    //         }
-
-    //         yield return null;  
-    //     }
-
-    //     // Final adjustments to ensure all bones are set correctly
-    //     foreach (var entry in boneTransforms)
-    //     {
-    //         Transform bone = entry.Key;
-    //         BoneTransform savedTransform = entry.Value;
-
-    //         // Position bones based on the torso's final position + their relative offset
-    //         bone.position = torso.position + relativePositions[bone];
-    //         bone.localRotation = savedTransform.localRotation; // Set final local rotation
-    //     }
-
-    //     Debug.Log("Smooth recovery to standing complete.");
-
-    //     // Enable NavMeshAgent if required
-    //     UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-    //     if (agent != null)
-    //     {
-    //         agent.enabled = true;  
-    //     }
-    // }
-
-
-
-    private IEnumerator SmoothRecoverToStanding(){
-        float transitionTime = 2.0f;  
-        float elapsedTime = 0.0f;
-
-        while (elapsedTime < transitionTime)
+        // Smooth transition of bones to initial positions
+        float elapsedTime = 0f;
+        while (elapsedTime < standUpDuration)
         {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / transitionTime;
-
-            foreach (var entry in boneTransforms)
+            foreach (var kvp in boneTransforms)
             {
-                Transform bone = entry.Key;
-                BoneTransform savedTransform = entry.Value;
+                Transform bone = kvp.Key;
+                BoneTransform originalTransform = kvp.Value;
 
-                // bone.localPosition = Vector3.Lerp(bone.localPosition, savedTransform.localPosition, t);
-                
-                Vector3 startPosition = new Vector3(bone.localPosition.x, savedTransform.localPosition.y, bone.localPosition.z);
-                bone.localPosition = Vector3.Lerp(bone.localPosition, startPosition, t);
-
-                bone.localRotation = Quaternion.Lerp(bone.localRotation, savedTransform.localRotation, t);
+                bone.localPosition = Vector3.Lerp(bone.localPosition, originalTransform.localPosition, elapsedTime / standUpDuration);
+                bone.localRotation = Quaternion.Lerp(bone.localRotation, originalTransform.localRotation, elapsedTime / standUpDuration);
             }
 
-            yield return null;  
-        }
-    
-        foreach (var entry in boneTransforms)
-        {
-            Transform bone = entry.Key;
-            BoneTransform savedTransform = entry.Value;
-            
-            Vector3 startPosition = new Vector3(bone.localPosition.x, savedTransform.localPosition.y, bone.localPosition.z);
-            bone.localPosition = startPosition;
-            // bone.localPosition = savedTransform.localPosition;
-            bone.localRotation = savedTransform.localRotation;
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
 
-        Debug.Log("Smooth recovery to standing complete.");
-
-        
-        UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        if (agent != null)
+        foreach (var kvp in boneTransforms)
         {
-            agent.enabled = true;  
+            kvp.Key.localPosition = kvp.Value.localPosition;
+            kvp.Key.localRotation = kvp.Value.localRotation;
         }
+
+        SetRagdollActive(false); // Disable ragdoll physics
+
+        yield return new WaitForSeconds(animatorEnableDelay); // Wait briefly
+
+        if (animator != null) animator.enabled = true;
+        if (navMeshAgent != null) navMeshAgent.enabled = true;
     }
 
+    private void AlignPositionToHips()
+    {
+        if (middleBodyBone == null) return; 
 
-    private Rigidbody FindTorsoRigidbody(){
-        Transform torsoTransform = transform.Find("peovis");
+        Vector3 originalBonePosition = middleBodyBone.position;
+
+        transform.position = originalBonePosition;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, Mathf.Infinity, groundLayer))
+        {
+            transform.position = new Vector3(transform.position.x, hitInfo.point.y, transform.position.z);
+        }
+        else
+        {
+            Debug.LogWarning("No ground detected below the character.");
+        }
+
+        middleBodyBone.position = originalBonePosition;
+    }
+
+    private Rigidbody FindTorsoRigidbody()
+    {
+        Transform torsoTransform = transform.Find("middle body");
         return torsoTransform?.GetComponent<Rigidbody>();
     }
 
-    public void RecoverFromRagdoll(){
-        
-        // SetRagdollMode(false);
-        SetRagdollActive(false);
-        StartCoroutine(SmoothRecoverToStanding());
-        Debug.Log("Recovering from ragdoll...");
-    }
-
-     
-    public void ApplyForce(Vector3 forceDirection, float force){
-        
+    public void ApplyForce(Vector3 forceDirection, float force)
+    {
         if (torsoRigidbody == null)
-            {
-                torsoRigidbody = FindTorsoRigidbody();
-            }
-            
-            if (torsoRigidbody != null)
-            {
-                torsoRigidbody.AddForce(forceDirection * force, ForceMode.Impulse);
-                Debug.Log("Applied force to torso.");
-            }
-            else
-            {
-                Debug.LogError("Torso Rigidbody not found!");
-            }
+        {
+            torsoRigidbody = FindTorsoRigidbody();
         }
-
-
-
+        
+        if (torsoRigidbody != null)
+        {
+            torsoRigidbody.AddForce(forceDirection * force, ForceMode.Impulse);
+            Debug.Log("Applied force to torso.");
+        }
+        else
+        {
+            Debug.LogError("Torso Rigidbody not found!");
+        }
+    }
 }

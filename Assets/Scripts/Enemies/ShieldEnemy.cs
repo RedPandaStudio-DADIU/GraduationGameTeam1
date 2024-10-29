@@ -6,7 +6,7 @@ public class ShieldEnemy : EnemyBaseClass
 {
     
     void Awake(){
-        this.SetHealth(30f);
+        this.SetHealth(150f);
         this.SetAttackDistance(10f);
         this.SetFieldOfView(120f);
         this.SetStoppingDistance(0f);

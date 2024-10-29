@@ -11,27 +11,16 @@ public class EnemyHitState : IEnemyState
         } else{
             stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
-            stateController.GetEnemy().GetRagdollController().RecordBoneTransforms(true);
-
-
+            // stateController.GetEnemy().GetRagdollController().RecordBoneTransforms();
+            // stateController.GetEnemy().GetRagdollController().GetRelativePositions();
         }
     }
     public void OnUpdate(EnemyStateController stateController){
        
     }
-    public void OnExit(EnemyStateController stateController){
-        // Get recorded position in the enter function
-        // Get the posittion now - during the exit
-        // Find the difference 
-        // Apply the transformation to the recorded position from the enter function (move it to where you're now) 
-        
-        // possible problems: Trying to stand up in the place where there is a wall or some other object
-        stateController.GetEnemy().GetRagdollController().RecordBoneTransforms(false);
+    public void OnExit(EnemyStateController stateController){       
         stateController.GetEnemy().GetRagdollController().RecoverFromRagdoll();
 
-        // stateController.GetEnemy().GetRagdollController().RecordBoneTransforms();
-
-        // Debug.Log("Exiting Hit State");
     }
 
 

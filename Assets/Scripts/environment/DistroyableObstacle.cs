@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class DistroyableObstacle : MonoBehaviour
 {
+    // Serialize Field private
     private int hitCount = 0; 
-    public int maxHits = 7;   
-    public float pushForce = 30f; 
-    public float objectMass = 10f;
-    public float objectDrag = 2f; 
+    [SerializeField] private int maxHits = 7;   
+    [SerializeField] private float pushForce = 30f; 
+    [SerializeField] private float objectMass = 10f;
+    [SerializeField] private float objectDrag = 2f; 
 
-    public bool isExplosive = false;  
-    public float explosionRadius = 5f;  
-    public HitScanBasic hitScanBasic;
+    [SerializeField] private bool isExplosive = false;  
+    [SerializeField] private float explosionRadius = 5f;  
+    [SerializeField] private HitScanBasic hitScanBasic;
 
     void Start()
     {
