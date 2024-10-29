@@ -5,8 +5,9 @@ using UnityEngine;
 public class PushEnemy : MonoBehaviour
 {
     
-    public float pushForce = 500f; 
-    public float pushRadius = 3f; 
+    [SerializeField] private float pushForce = 500f; 
+    [SerializeField] private float pushRadius = 3f; 
+    [SerializeField] private float damage = 10f;  
 
     private float ragdollDuration = 5.0f; 
  
@@ -44,7 +45,8 @@ public class PushEnemy : MonoBehaviour
 
                 if (enemy != null)
                 {
-                    
+                    enemy.GetEnemy().DecreaseHealth(damage);
+
                     Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
                     Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
                     
@@ -54,7 +56,9 @@ public class PushEnemy : MonoBehaviour
 
                     enemy.ChangeState(new EnemyHitState());
 
-                    StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+                    if(enemy.GetEnemy().GetHealth() > 0){
+                        StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+                    }
                 }
             }
         }
@@ -66,8 +70,6 @@ public class PushEnemy : MonoBehaviour
 
         if (enemy != null)
         {
-            // enemy.RecoverFromRagdoll();
-            // enemy.GetEnemy().GetRagdollController().RecoverFromRagdoll();
             Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
             IEnemyState prevState = enemy.GetPreviousState();
             enemy.ChangeState(prevState);

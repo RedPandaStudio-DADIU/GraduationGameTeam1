@@ -6,21 +6,23 @@ using UnityEngine.UI;
 public class HitScanBasic : MonoBehaviour
 {
     
-    public Camera playerCamera;  
-    public float range = 100f;   
-    public float damage = 10f;  
-    public float chargeDamage = 80f;
-    public float pushForce = 100f;
-    public float chargedPushForce = 300f;
+    [SerializeField] private Camera playerCamera;  
+    [SerializeField] private float range = 100f;   
+    [SerializeField] private float damage = 20f;  
+    [SerializeField] private float chargeDamage = 80f;
+    [SerializeField] private float pushForce = 100f;
+    [SerializeField] private float chargedPushForce = 300f;
 
-     public LayerMask pushableLayer;
+    [SerializeField] private LayerMask pushableLayer;
     
-    public Image chargeProgressBar; 
-    public float explosionRadius = 5f;
+    [SerializeField] private Image chargeProgressBar; 
+    [SerializeField] private float explosionRadius = 5f;
     private float rightClickHoldTime = 0f;  
     private bool isRightClickPressed = false;
     private bool isChargedAttack = false;
     private float chargeTime = 2f; 
+    private float ragdollDuration = 5.0f; 
+
 
    
     // Start is called before the first frame update
@@ -85,7 +87,7 @@ public class HitScanBasic : MonoBehaviour
         
     }
 
-    void Shoot()
+    private void Shoot()
     {
         
 
@@ -113,6 +115,10 @@ public class HitScanBasic : MonoBehaviour
                     enemy.SetForceDirection(pushDirection);
                     enemy.SetForce(pushForce);
                     enemy.ChangeState(new EnemyHitState());
+
+                    if(enemy.GetEnemy().GetHealth() > 0){
+                        StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+                    }
 
                 }
             }
@@ -143,7 +149,7 @@ public class HitScanBasic : MonoBehaviour
 
     }
 
-    void ChargedShoot()
+    private void ChargedShoot()
     {
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
@@ -191,6 +197,20 @@ public class HitScanBasic : MonoBehaviour
                 nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
             }
         }   
+    }
+
+
+    IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
+    {
+        
+        yield return new WaitForSeconds(delay);
+
+        if (enemy != null)
+        {
+            Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+            IEnemyState prevState = enemy.GetPreviousState();
+            enemy.ChangeState(prevState);
+        }
     }
 
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Not used anywhere - can probably be deleted
 public class AddBoxCollider : MonoBehaviour
 {
     void Start()

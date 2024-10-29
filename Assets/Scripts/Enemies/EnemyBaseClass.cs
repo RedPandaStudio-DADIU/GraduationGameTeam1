@@ -7,7 +7,7 @@ public abstract class EnemyBaseClass : MonoBehaviour
     [SerializeField] private bool isMovable = true;
 
     // Remove serialize field after proper health damage done
-    [SerializeField] private float health = 20f;
+    [SerializeField] private float health = 80f;
 
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
