@@ -78,7 +78,7 @@ public class HitScanBasic : MonoBehaviour
                 if (chargeProgressBar != null)
                 {
                     chargeProgressBar.fillAmount = 0;
-                    chargeProgressBar.gameObject.SetActive(false); // 隐藏进度条
+                    chargeProgressBar.gameObject.SetActive(false); 
                 }
                     
 			}
