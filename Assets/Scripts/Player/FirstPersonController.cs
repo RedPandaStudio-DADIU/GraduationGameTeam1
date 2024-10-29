@@ -116,7 +116,7 @@ public class FirstPersonController : MonoBehaviour
 			}
 
 
-
+			QuitGame();
 		}
 		
            
@@ -130,6 +130,12 @@ public class FirstPersonController : MonoBehaviour
 				CameraRotation();
 			
 		}
+
+		public void QuitGame(){
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
+        }
+    }
 
 		private void GroundedCheck()
 		{
