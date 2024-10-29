@@ -46,7 +46,7 @@ public class PushEnemy : MonoBehaviour
                 if (enemy != null)
                 {
                     enemy.GetEnemy().DecreaseHealth(damage);
-                    Debug.LogWarning("Enemy health: " + enemy.GetEnemy().GetHealth());
+                    // Debug.LogWarning("Enemy health: " + enemy.GetEnemy().GetHealth());
 
                     Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
                     Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
