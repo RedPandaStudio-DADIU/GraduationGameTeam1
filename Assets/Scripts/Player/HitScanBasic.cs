@@ -159,17 +159,32 @@ public class HitScanBasic : MonoBehaviour
             
             if (hit.collider.CompareTag("Enemy"))
             {
-                EnemyRagdollController enemyRagdollController = hit.transform.GetComponent<EnemyRagdollController>();
-                if (enemyRagdollController != null)
+                EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
+
+                // EnemyRagdollController enemyRagdollController = hit.transform.GetComponent<EnemyRagdollController>();
+                // if (enemyRagdollController != null)
+                if (enemy.GetEnemy().GetRagdollController() != null)
+
                 {
                     
-                    enemyRagdollController.SetRagdollActive(true);
+                    // enemyRagdollController.SetRagdollActive(true);
+                    enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
 
                     Vector3 pushDirection = hit.point - playerCamera.transform.position;
                     pushDirection = pushDirection.normalized;
 
+
+                    // // enemy.SetForceDirection(pushDirection);
+                    // // enemy.SetForce(pushForce);
+                    enemy.ChangeState(new EnemyHitState());
+
                   
-                    enemyRagdollController.ApplyForce(pushDirection, chargedPushForce);
+                    // enemyRagdollController.ApplyForce(pushDirection, chargedPushForce);
+                    enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+
+                    // // if(enemy.GetEnemy().GetHealth() > 0){
+                    // //     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+                    // // }
 
                 
                     PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
@@ -185,6 +200,9 @@ public class HitScanBasic : MonoBehaviour
         foreach (var hitCollider in hitColliders)
         {
             EnemyRagdollController nearbyEnemyRagdollController = hitCollider.GetComponent<EnemyRagdollController>();
+            EnemyStateController nearbyEnemyStateController = hitCollider.GetComponent<EnemyStateController>();
+            // EnemyRagdollController nearbyEnemyRagdollController = nearbyEnemyStateController.GetEnemy().GetRagdollController();
+
             if (nearbyEnemyRagdollController != null)
             {
                
@@ -193,8 +211,14 @@ public class HitScanBasic : MonoBehaviour
                 Vector3 pushDirection = hitCollider.transform.position - center;
                 pushDirection = pushDirection.normalized;
 
+                nearbyEnemyStateController.ChangeState(new EnemyHitState());
              
                 nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
+
+                // if(nearbyEnemyStateController.GetEnemy().GetHealth() > 0){
+                //         StartCoroutine(RecoverAfterDelay(nearbyEnemyStateController, ragdollDuration));
+                // }
+
             }
         }   
     }
