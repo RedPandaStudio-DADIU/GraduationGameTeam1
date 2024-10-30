@@ -69,9 +69,16 @@ public class DistroyableObstacle : MonoBehaviour
         {
             hitScanBasic.PushNearbyEnemies(transform.position, pushForce, explosionRadius); 
         }
+        StartCoroutine(DelayedDestroy());
         
     }
+    
+    private IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(3f);
 
+        Destroy(gameObject);
+    }
 
 
 }
