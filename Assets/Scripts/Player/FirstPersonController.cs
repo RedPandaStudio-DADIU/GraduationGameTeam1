@@ -100,20 +100,8 @@ public class FirstPersonController : MonoBehaviour
 			GroundedCheck();
 			Move();
 
-			if (Input.GetMouseButtonDown(1)) 
-			{
-				isRightClickPressed = true;
-
-				
-			
-			}
-			if (Input.GetMouseButtonUp(1))
-			{
-				isRightClickPressed = false;
-
-				
-				
-			}
+			Cursor.lockState = CursorLockMode.Locked;
+        	Cursor.visible = false;
 
 
 			QuitGame();
