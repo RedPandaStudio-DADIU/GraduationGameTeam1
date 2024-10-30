@@ -63,6 +63,8 @@ public class DistroyableObstacle : MonoBehaviour
     private void Explode()
     {
         Debug.Log(gameObject.name + " exploded!");
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject); 
 
         if (hitScanBasic != null)
         {
