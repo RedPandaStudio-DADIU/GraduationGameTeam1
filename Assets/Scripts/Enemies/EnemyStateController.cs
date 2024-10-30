@@ -13,6 +13,8 @@ public class EnemyStateController : MonoBehaviour
     private Transform playerBodyTransform;
 
     private bool playerInRange = false;
+    private Vector3 forceDirection;
+    private float force;
 
     void Start()
     {
@@ -27,10 +29,14 @@ public class EnemyStateController : MonoBehaviour
     void Update()
     {
         currentState.OnUpdate(this);
-        previousState = currentState;
+
+        if(this.GetEnemy().GetHealth() == 0){
+            ChangeState(new EnemyDieState());
+        }
     }
 
     public void ChangeState(IEnemyState newState){
+        previousState = currentState;
         currentState.OnExit(this);
         currentState = newState;
         currentState.OnEnter(this);
@@ -51,8 +57,21 @@ public class EnemyStateController : MonoBehaviour
 
     public void SetAgentsDestination(){
         NavMeshAgent navMeshAgent = enemy.GetComponent<NavMeshAgent>();
-        navMeshAgent.destination = playerTransform.position;
+        // navMeshAgent.destination = playerTransform.position;
+        navMeshAgent.destination = playerBodyTransform.position;
         navMeshAgent.stoppingDistance = enemy.GetStoppingDistance();
+        Debug.Log("Enemy: " + enemy.name + ", stopping distance: "+ enemy.GetStoppingDistance());
+        // navMeshAgent.angularSpeed = 0f;
+        Vector3 direction = navMeshAgent.velocity.normalized;
+
+
+        // Adjust 
+        if(direction != Vector3.zero){
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            // Quaternion targetRotation = Quaternion.LookRotation(playerBodyTransform.position);
+
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, targetRotation, Time.deltaTime *0f);
+        }
     }
 
 
@@ -96,21 +115,36 @@ public class EnemyStateController : MonoBehaviour
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            if (hit.collider.CompareTag("Player"))
+            // if (hit.collider.CompareTag("Player"))
+            if (hit.collider.CompareTag("PlayerBody"))
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
-                GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position);
+                GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
 
                 playerInRange = true;
+                Debug.Log("Raycast check passed by: " + enemy.name);
+
                 return playerInRange;
             }
         }
 
-        Debug.Log("Raycast check not passed " + enemy.name);
+        // Debug.Log("Raycast check not passed " + enemy.name);
 
         playerInRange = false;
         return playerInRange;
 
+    }
+
+    public bool CheckIfReachedDestination(){
+        if (!enemy.GetComponent<NavMeshAgent>().pathPending){
+            if (enemy.GetComponent<NavMeshAgent>().remainingDistance<= enemy.GetComponent<NavMeshAgent>().stoppingDistance){
+                if (!enemy.GetComponent<NavMeshAgent>().hasPath || enemy.GetComponent<NavMeshAgent>().velocity.sqrMagnitude == 0f){
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public bool GetPlayerInRange(){
@@ -120,5 +154,26 @@ public class EnemyStateController : MonoBehaviour
     public void SetPlayerInRange(bool flag){
         this.playerInRange = flag;
     }
+    
+    public float GetForce(){
+        return this.force;
+    }
+
+    public void SetForce(float force){
+        this.force = force;
+    }
+
+    public Vector3 GetForceDirection(){
+        return this.forceDirection;
+    }
+
+    public void SetForceDirection(Vector3 forceDirection){
+        this.forceDirection = forceDirection;
+    }
+
+    public IEnemyState GetPreviousState(){
+        return this.previousState;
+    }
+
 
 }

@@ -6,8 +6,8 @@ public class DiplomatEnemy : EnemyBaseClass
 {
     
     void Awake(){
-        this.SetHealth(10f);
-        this.SetAttackDistance(25f);
+        this.SetHealth(120f);
+        this.SetAttackDistance(20f);
         this.SetFieldOfView(180f);
         this.SetStoppingDistance(6f);
     }
@@ -21,6 +21,11 @@ public class DiplomatEnemy : EnemyBaseClass
     public override void Die(){
         // play dying animation
         Destroy(this.gameObject);
+    }
+
+    public override void LosePlayer(Vector3 playerPosition){
+        // Gets the last known player position and goes there - agent - destination and then IdleState()
+        GetComponent<UnityEngine.AI.NavMeshAgent>().destination = playerPosition;
     }
 
 }

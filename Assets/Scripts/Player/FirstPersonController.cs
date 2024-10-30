@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class FirstPersonController : MonoBehaviour
@@ -46,8 +47,11 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("How far in degrees can you move the camera down")]
 	public float BottomClamp = -90.0f;
 
+
+
 	// cinemachine
 	private float _cinemachineTargetPitch;
+	public Camera playerCamera; 
 
 	// player
 	private float _speed;
@@ -66,17 +70,23 @@ public class FirstPersonController : MonoBehaviour
 
 	private CharacterController _controller;
 	//private StarterAssetsInputs _input;
-	private GameObject _mainCamera;
+
 
 	private const float _threshold = 0.01f;
+	
 	private bool isRightClickPressed = false;
+	
+	private Camera _mainCamera;
+
+	public RawImage crosshairImage; 
+	
 
 	private void Awake()
 	{
 		// get a reference to our main camera
 		if (_mainCamera == null)
 		{
-			_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+			_mainCamera = Camera.main;
 		}
 
 		lastFootstepTime = Time.time;
@@ -91,31 +101,40 @@ public class FirstPersonController : MonoBehaviour
 		// reset our timeouts on start
 		_jumpTimeoutDelta = JumpTimeout;
 		_fallTimeoutDelta = FallTimeout;
+
+
 	}
 
-	private void Update()
-	{
-		JumpAndGravity();
-		GroundedCheck();
-		Move();
+		private void Update()
+		{
+			JumpAndGravity();
+			GroundedCheck();
+			Move();
 
-		if (Input.GetMouseButtonDown(1)) 
-        {
-            isRightClickPressed = true; 
-        }
-        if (Input.GetMouseButtonUp(1))
-        {
-            isRightClickPressed = false; 
-        }
-	}
+			Cursor.lockState = CursorLockMode.Locked;
+        	Cursor.visible = false;
+
+
+			QuitGame();
+		}
+		
+           
+        
+
+	
 
 		private void LateUpdate()
 		{
-			if (!isRightClickPressed)
-			{
+			
 				CameraRotation();
-			}
+			
 		}
+
+		public void QuitGame(){
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)){
+            Application.Quit();
+        }
+    }
 
 		private void GroundedCheck()
 		{
@@ -128,7 +147,7 @@ public class FirstPersonController : MonoBehaviour
 		{
 			 // if there is an input
 			float mouseX = Input.GetAxis("Mouse X");
-			float mouseY = Input.GetAxis("Mouse Y");
+			float mouseY = -Input.GetAxis("Mouse Y");
 
 			if (Mathf.Abs(mouseX) > _threshold || Mathf.Abs(mouseY) > _threshold)
 			{
@@ -146,8 +165,13 @@ public class FirstPersonController : MonoBehaviour
 
 				// rotate the player left and right
 				transform.Rotate(Vector3.up * _rotationVelocity);
+
+				
 			}
+					
 		}
+			
+		
 
 		private void Move()
 		{
