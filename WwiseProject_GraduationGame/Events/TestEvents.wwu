@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{2892190A-446E-44CD-8D50-8C2E1E150F58}" SchemaVersion="119">
 	<Events>
 		<WorkUnit Name="TestEvents" ID="{2892190A-446E-44CD-8D50-8C2E1E150F58}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<Event Name="Play_TestBeep" ID="{9E1D8839-8E69-4C7C-ADCF-1DF672D74B58}">
 					<ChildrenList>
@@ -70,6 +74,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_TestSound_lp_3D" ID="{A4732938-176C-4390-9D5C-83550C9112E6}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TestSound" ID="{596F4C8B-01CB-426E-9BB5-76B35BB72198}">
+					<ChildrenList>
+						<Action Name="" ID="{5B35D0CE-F0B7-44D8-89D8-BB95DAAB8E29}" ShortID="102275307">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TestSound" ID="{4205C742-04E1-4CF1-A3C3-43F7FF0DEE52}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

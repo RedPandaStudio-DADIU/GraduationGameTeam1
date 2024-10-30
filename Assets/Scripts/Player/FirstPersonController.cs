@@ -164,7 +164,8 @@ public class FirstPersonController : MonoBehaviour
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
 			float speedOffset = 0.1f;
-        AkSoundEngine.SetRTPCValue("RTPC_PlayerSpeed", _speed, gameObject);
+
+			AkSoundEngine.SetRTPCValue("RTPC_PlayerSpeed", _speed, gameObject);
 
 		// accelerate or decelerate to target speed
 		if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)

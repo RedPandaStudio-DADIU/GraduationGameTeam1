@@ -617,7 +617,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584715561005080880
+    m_lastTime: -8584713706798156944
     List:
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
@@ -852,7 +852,7 @@ MonoBehaviour:
     ParentPath: Events/Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584715547050889196
+    m_lastTime: -8584713960048448688
     List:
     - name: Play_AmbienceMain
       guid: 48ac2bc3cea28048b30274d66694a8be
@@ -988,7 +988,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion/PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584715561005314289
+    m_lastTime: -8584713960048447067
     List:
     - name: Play_Player_Footsteps
       guid: 7128890d283c0244ae37c5c00fa299f1
@@ -1008,8 +1008,8 @@ MonoBehaviour:
         guid: 7128890d283c0244ae37c5c00fa299f1
       Path: Events/Locomotion/PlayerLocomotion/Play_Player_Footsteps
       maxAttenuation: 0
-      maxDuration: 1.4394294
-      minDuration: 0
+      maxDuration: 0.64390624
+      minDuration: 0.30120698
   - PhysicalPath: Events/TestEvents.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1125,6 +1125,310 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+  - PhysicalPath: Events/Weapons.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Weapons
+      ObjectType: 12
+      guid: 8d065d9541c977499e66c4fe8ba4ad73
+    ParentPath: Events/Weapons
+    guid: 8d065d9541c977499e66c4fe8ba4ad73
+    GuidInternal: 
+    m_lastTime: -8584713309188355815
+    List:
+    - name: Handgun
+      guid: c01d6fccbf6a17428029b10014369636
+      id: 3623995212
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Handgun
+        ObjectType: 4
+        guid: c01d6fccbf6a17428029b10014369636
+      Path: Events/Weapons/Handgun
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Hitmarkers
+      guid: 17f1a2d6364db84f89dd19aebd27ef54
+      id: 3497243433
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Hitmarkers
+        ObjectType: 4
+        guid: 17f1a2d6364db84f89dd19aebd27ef54
+      Path: Events/Weapons/Hitmarkers
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Plat_Reload_Handgun
+      guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
+      id: 10757140
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Handgun
+        ObjectType: 4
+        guid: c01d6fccbf6a17428029b10014369636
+      - ElementName: Plat_Reload_Handgun
+        ObjectType: 3
+        guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
+      Path: Events/Weapons/Handgun/Plat_Reload_Handgun
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Alt_Charge_Fifle
+      guid: fe8978bec17c6c4eaa7d4aef64ca70f4
+      id: 2073520173
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Alt_Charge_Fifle
+        ObjectType: 3
+        guid: fe8978bec17c6c4eaa7d4aef64ca70f4
+      Path: Events/Weapons/Rifle/Play_Alt_Charge_Fifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Alt_Fire_Rifle
+      guid: 4bda268bbb8f614abbd11865ece170be
+      id: 243729645
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Alt_Fire_Rifle
+        ObjectType: 3
+        guid: 4bda268bbb8f614abbd11865ece170be
+      Path: Events/Weapons/Rifle/Play_Alt_Fire_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ChargeRdy_Rifle
+      guid: 22a84d4619c8de418ac1254051c5b41a
+      id: 3158001838
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_ChargeRdy_Rifle
+        ObjectType: 3
+        guid: 22a84d4619c8de418ac1254051c5b41a
+      Path: Events/Weapons/Rifle/Play_ChargeRdy_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FireMain_Handgun
+      guid: 1de7222c9c749d4b9e7b46004626286e
+      id: 3547089943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Handgun
+        ObjectType: 4
+        guid: c01d6fccbf6a17428029b10014369636
+      - ElementName: Play_FireMain_Handgun
+        ObjectType: 3
+        guid: 1de7222c9c749d4b9e7b46004626286e
+      Path: Events/Weapons/Handgun/Play_FireMain_Handgun
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_FireMain_Rifle
+      guid: 21155b7f2b6f2444b70d8e9997774966
+      id: 634184142
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_FireMain_Rifle
+        ObjectType: 3
+        guid: 21155b7f2b6f2444b70d8e9997774966
+      Path: Events/Weapons/Rifle/Play_FireMain_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Hitmarker_main
+      guid: e84137034ce32946b2d5dbb724670881
+      id: 941492189
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Hitmarkers
+        ObjectType: 4
+        guid: 17f1a2d6364db84f89dd19aebd27ef54
+      - ElementName: Play_Hitmarker_main
+        ObjectType: 3
+        guid: e84137034ce32946b2d5dbb724670881
+      Path: Events/Weapons/Hitmarkers/Play_Hitmarker_main
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Idle_Rifle
+      guid: 4f3692d7a9c6dc499f7866d8056ac20d
+      id: 4057284179
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Idle_Rifle
+        ObjectType: 3
+        guid: 4f3692d7a9c6dc499f7866d8056ac20d
+      Path: Events/Weapons/Rifle/Play_Idle_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Load_handgun
+      guid: 3d0558495dabc04ea8d9576484f6d709
+      id: 249020240
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Handgun
+        ObjectType: 4
+        guid: c01d6fccbf6a17428029b10014369636
+      - ElementName: Play_Load_handgun
+        ObjectType: 3
+        guid: 3d0558495dabc04ea8d9576484f6d709
+      Path: Events/Weapons/Handgun/Play_Load_handgun
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Load_Rifle
+      guid: ee808dabe4361c4aa362e95ade77c721
+      id: 3060105905
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Load_Rifle
+        ObjectType: 3
+        guid: ee808dabe4361c4aa362e95ade77c721
+      Path: Events/Weapons/Rifle/Play_Load_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Reload_Rifle
+      guid: 64244f950a8fa548a246c72dfadeea2b
+      id: 2435533942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Reload_Rifle
+        ObjectType: 3
+        guid: 64244f950a8fa548a246c72dfadeea2b
+      Path: Events/Weapons/Rifle/Play_Reload_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Unload_Rifle
+      guid: 298d9293da1fc14aa984bea16cd9154b
+      id: 1943012356
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Unload_Rifle
+        ObjectType: 3
+        guid: 298d9293da1fc14aa984bea16cd9154b
+      Path: Events/Weapons/Rifle/Play_Unload_Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Rifle
+      guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      id: 4262674733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      Path: Events/Weapons/Rifle
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -1150,7 +1454,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/GameParameters
     guid: cfb8c6b3e9988e49bdf10630114d5c83
     GuidInternal: 
-    m_lastTime: -8584715561005311406
+    m_lastTime: -8584713920143791355
     List:
     - name: RTPC_Distance
       guid: d3e197901b3e544d9b15c4d9a676128b
@@ -1855,7 +2159,7 @@ MonoBehaviour:
     ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584715561003098127
+    m_lastTime: -8584713917527237012
     List:
     - name: GroundMaterialSwitch
       guid: 3528fb3c47d79442b504b635b37aa31e
@@ -2470,22 +2774,6 @@ MonoBehaviour:
         guid: 5ed4e3af7856be4b896c93b9c1200fe6
       Path: Switches/Switches/PlayerSpeedSwitch
       values:
-      - name: Run
-        guid: e946a195d60a6b499949606a7cbadbcd
-        id: 712161704
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: PlayerSpeedSwitch
-          ObjectType: 11
-          guid: 5ed4e3af7856be4b896c93b9c1200fe6
-        - ElementName: Run
-          ObjectType: 10
-          guid: e946a195d60a6b499949606a7cbadbcd
       - name: Sneak
         guid: 9b7fde36e4be204488f7d7e82ff83a1c
         id: 2884887403
@@ -2518,9 +2806,9 @@ MonoBehaviour:
         - ElementName: Sprint
           ObjectType: 10
           guid: c238b27a933404478754fc3aadf0f3f5
-      - name: Walk
+      - name: Transition
         guid: 8015451bde82194690b26958121ba75f
-        id: 2108779966
+        id: 1865857008
         PathAndIcons:
         - ElementName: Switches
           ObjectType: 5
@@ -2531,7 +2819,7 @@ MonoBehaviour:
         - ElementName: PlayerSpeedSwitch
           ObjectType: 11
           guid: 5ed4e3af7856be4b896c93b9c1200fe6
-        - ElementName: Walk
+        - ElementName: Transition
           ObjectType: 10
           guid: 8015451bde82194690b26958121ba75f
       ValueGuids: []

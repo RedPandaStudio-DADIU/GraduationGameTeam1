@@ -4,7 +4,9 @@
 		<WorkUnit Name="Interactive Music" ID="{57D9D892-3BDC-427C-880B-6FCF0EA11320}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="MainMusicBank" ID="{A342CE8F-C2E0-4504-80E1-77AEFC4100F2}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="InteractiveMusic" ID="{99B7097A-5AF6-4BF6-BB88-1E58339C856F}" WorkUnitID="{99B7097A-5AF6-4BF6-BB88-1E58339C856F}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

@@ -6,7 +6,28 @@
 				<Bus Name="Reverbs" ID="{DFC082BE-340B-49DC-AB08-9D7E34CE02C5}">
 					<ChildrenList>
 						<AuxBus Name="RoomLarge" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}"/>
-						<AuxBus Name="RoomSmall" ID="{73967A86-8EB2-4CF2-AB9A-A4F4360C3FE7}"/>
+						<AuxBus Name="RoomSmall" ID="{73967A86-8EB2-4CF2-AB9A-A4F4360C3FE7}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{C86BEC27-7FEB-4DE2-93B7-20B80846B392}" ShortID="1063295894">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="New_RoomVerb" ID="{7B74F3D3-57E8-49A2-9C63-B3DCF7B5ACEA}" WorkUnitID="{ACFF8EFF-4CAF-4CF1-AE83-E479088CDC13}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{D00B286C-AF01-40E6-A7DD-4F6EF59B2AB8}" ShortID="582209821"/>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 						<AuxBus Name="RoomTunnel" ID="{0D6FDCD2-CD61-4089-A788-AA26499DCD89}"/>
 						<AuxBus Name="DelaySlaps" ID="{A9EFF5A0-FCBE-4478-BFCF-8F9B76C0944B}"/>
 					</ChildrenList>
