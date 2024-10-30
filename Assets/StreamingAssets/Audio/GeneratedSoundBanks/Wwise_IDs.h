@@ -14,8 +14,17 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
-        static const AkUniqueID PLAY_MAINMUSICSWITCH_TEST = 3625855865U;
+        static const AkUniqueID PLAY_HEADSHOT = 2628165376U;
+        static const AkUniqueID PLAY_HITARMOR = 1174221978U;
+        static const AkUniqueID PLAY_HITFLESH = 86438937U;
+        static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
+        static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
+        static const AkUniqueID PLAY_OBJ_AIRBOX = 3179694963U;
+        static const AkUniqueID PLAY_PLAY_JUMP = 889755407U;
         static const AkUniqueID PLAY_PLAYER_FOOTSTEPS = 98439365U;
+        static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
+        static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
+        static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
         static const AkUniqueID PLAY_TESTBEEP = 1955951874U;
         static const AkUniqueID PLAY_TESTBEEP_3D = 1681067324U;
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
@@ -179,10 +188,9 @@ namespace AK
 
             namespace SWITCH
             {
-                static const AkUniqueID RUN = 712161704U;
                 static const AkUniqueID SNEAK = 2884887403U;
                 static const AkUniqueID SPRINT = 1296465089U;
-                static const AkUniqueID WALK = 2108779966U;
+                static const AkUniqueID TRANSITION = 1865857008U;
             } // namespace SWITCH
         } // namespace PLAYERSPEEDSWITCH
 
@@ -208,8 +216,8 @@ namespace AK
         static const AkUniqueID RTPC_GROUNDWETNESS = 870672907U;
         static const AkUniqueID RTPC_GROUNDWETNESS_SLOW = 3989928153U;
         static const AkUniqueID RTPC_PLAYERSPEED = 2653406601U;
-        static const AkUniqueID RTPC_RAINAMOUNT = 1294084109U;
         static const AkUniqueID RTPC_TIMEOFDAY = 257272959U;
+        static const AkUniqueID RTPC_WATERAMOUNT = 1342605732U;
         static const AkUniqueID RTPC_WEAPONCHARGE = 3339859487U;
     } // namespace GAME_PARAMETERS
 

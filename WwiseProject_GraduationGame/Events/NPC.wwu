@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="NPC" ID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}" PersistMode="Standalone"/>
+		<WorkUnit Name="NPC" ID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="6"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Folder Name="Damage" ID="{AF8CD022-B904-4552-BA09-A77F632759C4}" ShortID="605383969">
+					<ChildrenList>
+						<Event Name="Play_HitArmor" ID="{7CF52472-69CE-49B0-8F8B-BA0AF51B30A7}">
+							<ChildrenList>
+								<Action Name="" ID="{8E3D0B86-16AB-44E2-AD64-D321B28E76FE}" ShortID="607366335">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_HitFlesh" ID="{0E2A85CC-F976-4A90-AC11-9160FDC951D8}">
+							<ChildrenList>
+								<Action Name="" ID="{4D8E47FA-35DC-4BB1-A941-E6385EC97692}" ShortID="849880523">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Headshot" ID="{225FB7C9-2D06-4B04-89D2-CD542543537B}">
+							<ChildrenList>
+								<Action Name="" ID="{7D8A7093-947F-4257-9AD5-196DDA0302D8}" ShortID="658282665">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sfx_test_Beep_1000hz_3D" ID="{1F0DD7C7-AEA5-4EEB-9848-04D28D677B30}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_KillConfirm" ID="{8D8AC61E-BFD7-476F-8356-9FEEBCBA8F75}">
+							<ChildrenList>
+								<Action Name="" ID="{37313DF8-F939-45A3-B56F-76273896B9DF}" ShortID="57941811">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TestSound" ID="{4205C742-04E1-4CF1-A3C3-43F7FF0DEE52}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

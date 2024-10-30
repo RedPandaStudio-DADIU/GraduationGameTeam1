@@ -2,13 +2,57 @@
 <WwiseDocument Type="WorkUnit" ID="{42B88A57-E40B-4377-81C9-DC30979D03C2}" SchemaVersion="119" RootDocumentID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" ParentDocumentID="{FF48C8A2-8915-4F74-939B-B3DC40287186}">
 	<Events>
 		<WorkUnit Name="PlayerLocomotion" ID="{42B88A57-E40B-4377-81C9-DC30979D03C2}" OwnerID="{FF48C8A2-8915-4F74-939B-B3DC40287186}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="6"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<Event Name="Play_Player_Footsteps" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{24F5755A-5A3D-4587-9073-6941B299EF02}" ShortID="199252164">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Player_Footsteps_MaterialSwitch" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+									<ObjectRef Name="Player_fs_Boots" ID="{7345F664-A2F5-4F7E-9137-1EB22CBFE1A9}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Play_Jump" ID="{72BCA2A1-4FDA-426D-8613-26F5B324A78F}">
+					<ChildrenList>
+						<Action Name="" ID="{ACDAFBC3-8005-47A3-8358-66A4E39D69B9}" ShortID="431340435">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boots_Jump" ID="{7844C93D-8BF9-4FB9-8266-1B97E3A8E1A3}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A3BFE246-32AE-492D-9004-7439E9105AEF}" ShortID="252289202">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Player_Land" ID="{604067FC-D82A-4AAA-BB4F-CD85DD50CF58}">
+					<ChildrenList>
+						<Action Name="" ID="{6AD519D9-E3B2-4108-9AF9-DC371D333723}" ShortID="907612199">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boots_Land" ID="{BC50D42D-C482-4681-A7E8-4178935D01AC}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{62D3E198-1861-4116-A4AB-14E18A88CAAB}" ShortID="1059193494">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

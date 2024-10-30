@@ -803,6 +803,78 @@
 						</SwitchContainer>
 					</ChildrenList>
 				</ActorMixer>
+				<Sound Name="Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1" ID="{D7962A79-B5B5-4BCB-950F-304B55494FFE}" ShortID="1024327835">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="67"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-29</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_10m" ID="{DB1DBD29-F33B-42AC-8FFB-F8373677B987}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1" ID="{A3EE1834-4F17-4960-879C-6D39A1227A7A}">
+							<Language>SFX</Language>
+							<AudioFile>Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="133120763"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1" ID="{A3EE1834-4F17-4960-879C-6D39A1227A7A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ambience_AirBox01_Lp" ID="{E549F97B-5892-4249-8BD2-8E48683240F6}" ShortID="262960954">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>60</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="85"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience_AirBox01_Lp" ID="{EC6F4240-974B-4EB2-8099-409D6CDB8CED}">
+							<Language>SFX</Language>
+							<AudioFile>Ambiences\3D\Ambience_AirBox01_Lp.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="800966659"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{9CA3572B-74D1-4405-B5C9-21F4111193AD}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience_AirBox01_Lp" ID="{EC6F4240-974B-4EB2-8099-409D6CDB8CED}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
