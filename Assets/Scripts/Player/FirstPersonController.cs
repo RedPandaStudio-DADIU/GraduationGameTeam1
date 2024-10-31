@@ -48,11 +48,15 @@ public class FirstPersonController : MonoBehaviour
 
 	[Space(10)]
 
-	[Header("Footsteps Sound")]
+	[Header("Sounds")]
     [SerializeField] private AK.Wwise.Event footstepsEvent;
 	private float footstepsTimer = 0f;	
 	[SerializeField] private float footstepsInterval = 0.5f; // Adjust interval for timing between steps
 
+	[SerializeField] private AK.Wwise.Event jumpEvent;
+    [SerializeField] private AK.Wwise.Event landEvent;
+	private bool wasGroundedLastFrame;
+	private bool hasJumped = false; 
 
 
 	// cinemachine
@@ -128,17 +132,33 @@ public class FirstPersonController : MonoBehaviour
 			
 		}
 
-		public void QuitGame(){
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)){
-            Application.Quit();
-        }
-    }
+		public void QuitGame()
+		{
+			if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape))
+			{
+				Application.Quit();
+			}
+    	}
+
+		private float landingCooldown = 0.6f;
+		private float lastLandTime; // Variable to store the last time the player landed
 
 		private void GroundedCheck()
 		{
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+			
+			 Debug.Log($"Grounded: {Grounded}, wasGroundedLastFrame: {wasGroundedLastFrame}, hasJumped: {hasJumped}");
+
+			if (Grounded && !wasGroundedLastFrame && Time.time > lastLandTime + landingCooldown)
+    		{
+				landEvent.Post(gameObject);
+				Debug.Log("Landed Sound");
+				hasJumped = false; 
+				lastLandTime = Time.time;
+			}
+			wasGroundedLastFrame = Grounded;
 		}
 
 		private void CameraRotation()
@@ -229,7 +249,9 @@ public class FirstPersonController : MonoBehaviour
 				footstepsTimer += Time.deltaTime;
 				if (footstepsTimer >= footstepsInterval)
 				{
-					footstepsEvent.Post(gameObject); // Play the footsteps sound
+					footstepsEvent.Post(gameObject); 
+					Debug.Log("Play the footsteps sound");
+					// Play the footsteps sound
 					footstepsTimer = 0f; // Reset timer
 				}
 			}
@@ -241,6 +263,8 @@ public class FirstPersonController : MonoBehaviour
 		{
 			if (Grounded)
 			{
+				
+
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
@@ -255,6 +279,10 @@ public class FirstPersonController : MonoBehaviour
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					 jumpEvent.Post(gameObject); 
+					 Debug.Log("jump Sound  " );
+					hasJumped = true; 
+				
 				}
 
 				// jump timeout
@@ -274,8 +302,7 @@ public class FirstPersonController : MonoBehaviour
 					_fallTimeoutDelta -= Time.deltaTime;
 				}
 
-				// if we are not grounded, do not jump
-				//_input.jump = false;
+				
 			}
 
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
@@ -283,6 +310,7 @@ public class FirstPersonController : MonoBehaviour
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+			//wasGroundedLastFrame = Grounded; 
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
