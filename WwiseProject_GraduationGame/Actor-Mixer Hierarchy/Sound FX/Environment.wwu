@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}" SchemaVersion="119" RootDocumentID="{F23BDBC6-437F-4699-8FF2-A34EBFBB46AD}" ParentDocumentID="{F23BDBC6-437F-4699-8FF2-A34EBFBB46AD}">
 	<AudioObjects>
-		<WorkUnit Name="Environment" ID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}" OwnerID="{F23BDBC6-437F-4699-8FF2-A34EBFBB46AD}" PersistMode="Nested"/>
+		<WorkUnit Name="Environment" ID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}" OwnerID="{F23BDBC6-437F-4699-8FF2-A34EBFBB46AD}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="Elevator" ID="{2E165460-5B1E-4689-852F-7481C0687C54}" ShortID="81312219">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
