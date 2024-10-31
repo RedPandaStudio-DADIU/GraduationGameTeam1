@@ -617,7 +617,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584714152023721512
+    m_lastTime: -8584713065690482760
     List:
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
@@ -797,7 +797,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Interactive Music
     guid: 92d8d957dc3b7c42880b6fcf0ea11320
     GuidInternal: 
-    m_lastTime: -8584714152015911130
+    m_lastTime: -8584713065690467432
     List:
     - name: MainMusicBank
       guid: 8fce42a3e0c2044580e177aefc4100f2
@@ -824,7 +824,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584714152015911130
+    m_lastTime: -8584713065690457329
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -852,7 +852,7 @@ MonoBehaviour:
     ParentPath: Events\Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584714152024372585
+    m_lastTime: -8584713065693719472
     List:
     - name: Play_AmbienceMain
       guid: 48ac2bc3cea28048b30274d66694a8be
@@ -868,9 +868,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 48ac2bc3cea28048b30274d66694a8be
       Path: Events\Ambience\Play_AmbienceMain
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 10
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -882,7 +882,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584714152024372585
+    m_lastTime: -8584713065693709020
     List:
     - name: Play_MainMusicSwitch_test
       guid: c55b02286ed61443b9513310c747826b
@@ -929,7 +929,7 @@ MonoBehaviour:
     ParentPath: Events\Locomotion
     guid: a2c848ff1589744f939bb3dc40287186
     GuidInternal: 
-    m_lastTime: -8584714152024362559
+    m_lastTime: -8584713065693709020
     List: []
   - PhysicalPath: Events\NPC.wwu
     PathAndIcons:
@@ -942,7 +942,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584714152024362559
+    m_lastTime: -8584713065693693384
     List: []
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
@@ -971,7 +971,7 @@ MonoBehaviour:
     ParentPath: Events\Locomotion\PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584714152024352581
+    m_lastTime: -8584713065693693384
     List:
     - name: Play_Player_Footsteps
       guid: 7128890d283c0244ae37c5c00fa299f1
@@ -991,8 +991,8 @@ MonoBehaviour:
         guid: 7128890d283c0244ae37c5c00fa299f1
       Path: Events\Locomotion\PlayerLocomotion\Play_Player_Footsteps
       maxAttenuation: 0
-      maxDuration: 1.4394294
-      minDuration: 0
+      maxDuration: 0.64390624
+      minDuration: 0.30120698
   - PhysicalPath: Events\TestEvents.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1004,7 +1004,7 @@ MonoBehaviour:
     ParentPath: Events\TestEvents
     guid: 0a1992286e44cd448d508c2e1e150f58
     GuidInternal: 
-    m_lastTime: -8584714152024352581
+    m_lastTime: -8584713065693677677
     List:
     - name: Play_TestBeep
       guid: 39881d9e698e7c4cadcf1df672d74b58
@@ -1133,7 +1133,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\GameParameters
     guid: cfb8c6b3e9988e49bdf10630114d5c83
     GuidInternal: 
-    m_lastTime: -8584714152024342639
+    m_lastTime: -8584713065693669949
     List:
     - name: RTPC_Distance
       guid: d3e197901b3e544d9b15c4d9a676128b
@@ -1258,7 +1258,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584714152015901147
+    m_lastTime: -8584713065690447237
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -1838,7 +1838,7 @@ MonoBehaviour:
     ParentPath: Switches\Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584714152015891139
+    m_lastTime: -8584713065690431223
     List:
     - name: GroundMaterialSwitch
       guid: 3528fb3c47d79442b504b635b37aa31e
@@ -2632,7 +2632,7 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584717647543868597
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 020000000300000005000000080000000b0000000d000000140000001500000027000000580000005a0000005b0000006c0000006d0000006f00000071000000730000008b000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1

@@ -26,6 +26,7 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 	public float FallTimeout = 0.15f;
 
+	[Space(10)]
 	[Header("Player Grounded")]
 	[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 	public bool Grounded = true;
@@ -36,6 +37,7 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("What layers the character uses as ground")]
 	public LayerMask GroundLayers;
 
+	[Space(10)]
 	[Header("Cinemachine")]
 	[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 	public GameObject CinemachineCameraTarget;
@@ -43,6 +45,13 @@ public class FirstPersonController : MonoBehaviour
 	public float TopClamp = 90.0f;
 	[Tooltip("How far in degrees can you move the camera down")]
 	public float BottomClamp = -90.0f;
+
+	[Space(10)]
+
+	[Header("Footsteps Sound")]
+    [SerializeField] private AK.Wwise.Event footstepsEvent;
+	private float footstepsTimer = 0f;	
+	[SerializeField] private float footstepsInterval = 0.5f; // Adjust interval for timing between steps
 
 
 
@@ -214,6 +223,18 @@ public class FirstPersonController : MonoBehaviour
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+			if (Grounded && currentHorizontalSpeed > 0f)
+			{
+				footstepsTimer += Time.deltaTime;
+				if (footstepsTimer >= footstepsInterval)
+				{
+					footstepsEvent.Post(gameObject); // Play the footsteps sound
+					footstepsTimer = 0f; // Reset timer
+				}
+			}
+			
+
 		}
 
 		private void JumpAndGravity()

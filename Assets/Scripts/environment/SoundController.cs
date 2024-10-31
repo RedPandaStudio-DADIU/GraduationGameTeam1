@@ -6,44 +6,37 @@ using AK.Wwise;
 
 public class SoundController : MonoBehaviour
 {
-    [Header("SoundBank and Event")]
-    [SerializeField] private string soundBank = "soundbank_MAIN";  // Name of the SoundBank to load
-    [SerializeField] private AK.Wwise.Event ambienceEvent;         // Ambient event to play (set in the Inspector)
+    [Header("SoundBanks ")]
+    [SerializeField] private string mainBank = "Main";  // Name of the SoundBank to load
+    [SerializeField] private string dialogueBank = "MainDialogueBank"; 
+    [SerializeField] private string musicBank = "MainMusicBank"; 
+    [SerializeField] private string soundFXBank = "MainSoundFXBank";        // Ambient event to play (set in the Inspector)
 
-    private uint bankID;
+    private uint mainBankID;
+    private uint dialogueBankID;
+    private uint musicBankID;
+    private uint soundFXBankID;
 
+   
     void Start()
     {
-        LoadSoundBank();
-        PostAmbienceEvent();
+        AkSoundEngine.LoadBank(mainBank, out mainBankID);
+        Debug.Log("Loaded Main Bank: " + mainBankID);
+
+        AkSoundEngine.LoadBank(dialogueBank, out dialogueBankID);
+        Debug.Log("Loaded Dialogue Bank: " + dialogueBankID);
+
+        AkSoundEngine.LoadBank(musicBank, out musicBankID);
+        Debug.Log("Loaded Music Bank: " + musicBankID);
+
+        AkSoundEngine.LoadBank(soundFXBank, out soundFXBankID);
+        Debug.Log("Loaded Sound FX Bank: " + soundFXBankID);
+
+       
+        //ambienceEvent.Post(gameObject);
+
     }
 
-    // Method to load the specified SoundBank
-    private void LoadSoundBank()
-    {
-        var result = AkSoundEngine.LoadBank(soundBank, AkSoundEngine.AK_DEFAULT_POOL_ID, out bankID);
-        if (result == AKRESULT.AK_Success)
-        {
-            Debug.Log("SoundBank loaded successfully: " + soundBank);
-        }
-        else
-        {
-            Debug.LogWarning("Failed to load SoundBank: " + soundBank);
-        }
-    }
-
-    // Method to post the ambience event
-    private void PostAmbienceEvent()
-    {
-        if (ambienceEvent != null)
-        {
-            ambienceEvent.Post(gameObject);
-            Debug.Log("Ambience event posted.");
-        }
-        else
-        {
-            Debug.LogWarning("No ambience event assigned.");
-        }
-    }
+    
 
     }
