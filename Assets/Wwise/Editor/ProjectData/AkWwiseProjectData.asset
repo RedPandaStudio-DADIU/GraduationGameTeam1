@@ -743,7 +743,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 6f15ec5307adb44d95839214506ad9b8
     GuidInternal: 
-    m_lastTime: -8584715561003119427
+    m_lastTime: -8584712352204582141
     List:
     - name: Main
       guid: 938dfbf4c8b2e64f98b3cd4e7f1ec106
@@ -797,7 +797,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Interactive Music
     guid: 92d8d957dc3b7c42880b6fcf0ea11320
     GuidInternal: 
-    m_lastTime: -8584715561003113924
+    m_lastTime: -8584713146193917420
     List:
     - name: MainMusicBank
       guid: 8fce42a3e0c2044580e177aefc4100f2
@@ -824,7 +824,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584715561003110823
+    m_lastTime: -8584713144019212003
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -852,7 +852,7 @@ MonoBehaviour:
     ParentPath: Events/Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584713960048448688
+    m_lastTime: -8584713161098048107
     List:
     - name: Play_AmbienceMain
       guid: 48ac2bc3cea28048b30274d66694a8be
@@ -869,11 +869,11 @@ MonoBehaviour:
         guid: 48ac2bc3cea28048b30274d66694a8be
       Path: Events/Ambience/Play_AmbienceMain
       maxAttenuation: 10
-      maxDuration: 44.181812
-      minDuration: 44.181812
-    - name: PlayBox
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Obj_AirBox
       guid: 227f14cafebe914dad7d2ff95174c7a6
-      id: 2408190926
+      id: 3179694963
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -881,13 +881,13 @@ MonoBehaviour:
       - ElementName: Ambience
         ObjectType: 12
         guid: eeb395ccf221bb469c4e1b139a88fa83
-      - ElementName: PlayBox
+      - ElementName: Play_Obj_AirBox
         ObjectType: 3
         guid: 227f14cafebe914dad7d2ff95174c7a6
-      Path: Events/Ambience/PlayBox
-      maxAttenuation: 10
-      maxDuration: 44.181812
-      minDuration: 44.181812
+      Path: Events/Ambience/Play_Obj_AirBox
+      maxAttenuation: 50
+      maxDuration: 10
+      minDuration: 10
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -899,42 +899,8 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584715561005319467
-    List:
-    - name: Play_MainMusicSwitch_test
-      guid: c55b02286ed61443b9513310c747826b
-      id: 3625855865
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
-      - ElementName: Play_MainMusicSwitch_test
-        ObjectType: 3
-        guid: c55b02286ed61443b9513310c747826b
-      Path: Events/Default Work Unit/Play_MainMusicSwitch_test
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_TestSound
-      guid: 8b4c6f59cb016e429bb576b35bb72198
-      id: 2752533807
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
-      - ElementName: Play_TestSound
-        ObjectType: 3
-        guid: 8b4c6f59cb016e429bb576b35bb72198
-      Path: Events/Default Work Unit/Play_TestSound
-      maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+    m_lastTime: -8584713145310421669
+    List: []
   - PhysicalPath: Events/Locomotion.wwu
     PathAndIcons:
     - ElementName: Events
@@ -946,7 +912,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion
     guid: a2c848ff1589744f939bb3dc40287186
     GuidInternal: 
-    m_lastTime: -8584715561005317735
+    m_lastTime: -8584713178556825128
     List: []
   - PhysicalPath: Events/NPC.wwu
     PathAndIcons:
@@ -959,8 +925,105 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584715561005316529
-    List: []
+    m_lastTime: -8584713154032167684
+    List:
+    - name: Damage
+      guid: 22d08caf04b95245ba09a77f632759c4
+      id: 1786804762
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Damage
+        ObjectType: 4
+        guid: 22d08caf04b95245ba09a77f632759c4
+      Path: Events/NPC/Damage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Headshot
+      guid: c9b75f22062d044b89d2cd542543537b
+      id: 2628165376
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Damage
+        ObjectType: 4
+        guid: 22d08caf04b95245ba09a77f632759c4
+      - ElementName: Play_Headshot
+        ObjectType: 3
+        guid: c9b75f22062d044b89d2cd542543537b
+      Path: Events/NPC/Damage/Play_Headshot
+      maxAttenuation: 50
+      maxDuration: 0.04
+      minDuration: 0.04
+    - name: Play_HitArmor
+      guid: 7224f57cce69b0498f8bba0af51b30a7
+      id: 1174221978
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Damage
+        ObjectType: 4
+        guid: 22d08caf04b95245ba09a77f632759c4
+      - ElementName: Play_HitArmor
+        ObjectType: 3
+        guid: 7224f57cce69b0498f8bba0af51b30a7
+      Path: Events/NPC/Damage/Play_HitArmor
+      maxAttenuation: 0
+      maxDuration: 0.17999999
+      minDuration: 0.17999999
+    - name: Play_HitFlesh
+      guid: cc852a0e76f9904aac119160fdc951d8
+      id: 86438937
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Damage
+        ObjectType: 4
+        guid: 22d08caf04b95245ba09a77f632759c4
+      - ElementName: Play_HitFlesh
+        ObjectType: 3
+        guid: cc852a0e76f9904aac119160fdc951d8
+      Path: Events/NPC/Damage/Play_HitFlesh
+      maxAttenuation: 0
+      maxDuration: 0.17999999
+      minDuration: 0.17999999
+    - name: Play_KillConfirm
+      guid: 1ec68a8dd7bf6f4783569feebcba8f75
+      id: 513454534
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Damage
+        ObjectType: 4
+        guid: 22d08caf04b95245ba09a77f632759c4
+      - ElementName: Play_KillConfirm
+        ObjectType: 3
+        guid: 1ec68a8dd7bf6f4783569feebcba8f75
+      Path: Events/NPC/Damage/Play_KillConfirm
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
   - PhysicalPath: Events/Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -988,8 +1051,28 @@ MonoBehaviour:
     ParentPath: Events/Locomotion/PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584713960048447067
+    m_lastTime: -8584713136747786660
     List:
+    - name: Play_Play_Jump
+      guid: a1a2bc72da4f6d42861326f5b324a78f
+      id: 889755407
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Locomotion
+        ObjectType: 12
+        guid: a2c848ff1589744f939bb3dc40287186
+      - ElementName: PlayerLocomotion
+        ObjectType: 12
+        guid: 578ab8420be4774381c9dc30979d03c2
+      - ElementName: Play_Play_Jump
+        ObjectType: 3
+        guid: a1a2bc72da4f6d42861326f5b324a78f
+      Path: Events/Locomotion/PlayerLocomotion/Play_Play_Jump
+      maxAttenuation: 0
+      maxDuration: 0.31066668
+      minDuration: 0.31066668
     - name: Play_Player_Footsteps
       guid: 7128890d283c0244ae37c5c00fa299f1
       id: 98439365
@@ -1010,6 +1093,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.64390624
       minDuration: 0.30120698
+    - name: Play_Player_Land
+      guid: fc6740602ad8aa4abb4fcd85dd50cf58
+      id: 4249207015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Locomotion
+        ObjectType: 12
+        guid: a2c848ff1589744f939bb3dc40287186
+      - ElementName: PlayerLocomotion
+        ObjectType: 12
+        guid: 578ab8420be4774381c9dc30979d03c2
+      - ElementName: Play_Player_Land
+        ObjectType: 3
+        guid: fc6740602ad8aa4abb4fcd85dd50cf58
+      Path: Events/Locomotion/PlayerLocomotion/Play_Player_Land
+      maxAttenuation: 0
+      maxDuration: 0.412125
+      minDuration: 0.412125
   - PhysicalPath: Events/TestEvents.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1021,7 +1124,7 @@ MonoBehaviour:
     ParentPath: Events/TestEvents
     guid: 0a1992286e44cd448d508c2e1e150f58
     GuidInternal: 
-    m_lastTime: -8584715561005312760
+    m_lastTime: -8584713184762095961
     List:
     - name: Play_TestBeep
       guid: 39881d9e698e7c4cadcf1df672d74b58
@@ -1091,6 +1194,23 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
+    - name: Play_TestSound
+      guid: 8b4c6f59cb016e429bb576b35bb72198
+      id: 2752533807
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: TestEvents
+        ObjectType: 12
+        guid: 0a1992286e44cd448d508c2e1e150f58
+      - ElementName: Play_TestSound
+        ObjectType: 3
+        guid: 8b4c6f59cb016e429bb576b35bb72198
+      Path: Events/TestEvents/Play_TestSound
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Stop_TestBeep_lp
       guid: 2f8087e7823c064fb86ed7ae3063acb1
       id: 3106700779
@@ -1136,7 +1256,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584713309188355815
+    m_lastTime: -8584713176480620282
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -1169,26 +1289,6 @@ MonoBehaviour:
         ObjectType: 4
         guid: 17f1a2d6364db84f89dd19aebd27ef54
       Path: Events/Weapons/Hitmarkers
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Plat_Reload_Handgun
-      guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
-      id: 10757140
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Weapons
-        ObjectType: 12
-        guid: 8d065d9541c977499e66c4fe8ba4ad73
-      - ElementName: Handgun
-        ObjectType: 4
-        guid: c01d6fccbf6a17428029b10014369636
-      - ElementName: Plat_Reload_Handgun
-        ObjectType: 3
-        guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
-      Path: Events/Weapons/Handgun/Plat_Reload_Handgun
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1330,8 +1430,8 @@ MonoBehaviour:
         guid: 4f3692d7a9c6dc499f7866d8056ac20d
       Path: Events/Weapons/Rifle/Play_Idle_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_Load_handgun
       guid: 3d0558495dabc04ea8d9576484f6d709
       id: 249020240
@@ -1372,6 +1472,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Reload_Handgun
+      guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
+      id: 449246991
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Handgun
+        ObjectType: 4
+        guid: c01d6fccbf6a17428029b10014369636
+      - ElementName: Play_Reload_Handgun
+        ObjectType: 3
+        guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
+      Path: Events/Weapons/Handgun/Play_Reload_Handgun
+      maxAttenuation: 0
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_Reload_Rifle
       guid: 64244f950a8fa548a246c72dfadeea2b
       id: 2435533942
@@ -1390,8 +1510,8 @@ MonoBehaviour:
         guid: 64244f950a8fa548a246c72dfadeea2b
       Path: Events/Weapons/Rifle/Play_Reload_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_Unload_Rifle
       guid: 298d9293da1fc14aa984bea16cd9154b
       id: 1943012356
@@ -1454,7 +1574,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/GameParameters
     guid: cfb8c6b3e9988e49bdf10630114d5c83
     GuidInternal: 
-    m_lastTime: -8584713920143791355
+    m_lastTime: -8584713149791905986
     List:
     - name: RTPC_Distance
       guid: d3e197901b3e544d9b15c4d9a676128b
@@ -1512,20 +1632,6 @@ MonoBehaviour:
         ObjectType: 13
         guid: dde75a5f8437fe4391844fbe90a9f930
       Path: Game Parameters/GameParameters/RTPC_PlayerSpeed
-    - name: RTPC_RainAmount
-      guid: 8fd1c1ae5952bc489f46e72bc7829d35
-      id: 1294084109
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: GameParameters
-        ObjectType: 12
-        guid: cfb8c6b3e9988e49bdf10630114d5c83
-      - ElementName: RTPC_RainAmount
-        ObjectType: 13
-        guid: 8fd1c1ae5952bc489f46e72bc7829d35
-      Path: Game Parameters/GameParameters/RTPC_RainAmount
     - name: RTPC_TimeOfDay
       guid: 00789709be719a4894642a5806272ed6
       id: 257272959
@@ -1540,6 +1646,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 00789709be719a4894642a5806272ed6
       Path: Game Parameters/GameParameters/RTPC_TimeOfDay
+    - name: RTPC_WaterAmount
+      guid: 8fd1c1ae5952bc489f46e72bc7829d35
+      id: 1342605732
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameParameters
+        ObjectType: 12
+        guid: cfb8c6b3e9988e49bdf10630114d5c83
+      - ElementName: RTPC_WaterAmount
+        ObjectType: 13
+        guid: 8fd1c1ae5952bc489f46e72bc7829d35
+      Path: Game Parameters/GameParameters/RTPC_WaterAmount
     - name: RTPC_WeaponCharge
       guid: eb7fb28cc7d5f84e9e597add1ff2860b
       id: 3339859487
@@ -1579,7 +1699,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584715561003104581
+    m_lastTime: -8584713149791959996
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2159,7 +2279,7 @@ MonoBehaviour:
     ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584713917527237012
+    m_lastTime: -8584713149309784751
     List:
     - name: GroundMaterialSwitch
       guid: 3528fb3c47d79442b504b635b37aa31e
@@ -2938,7 +3058,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000080000000d0000000e00000026000000
+  ExpandedWaapiItemIds: 06000000070000000b00000026000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
