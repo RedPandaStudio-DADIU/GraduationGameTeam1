@@ -18,7 +18,7 @@ public class SoundController : MonoBehaviour
     private uint soundFXBankID;
 
    
-    void Start()
+    void Awake()
     {
         AkSoundEngine.LoadBank(mainBank, out mainBankID);
         Debug.Log("Loaded Main Bank: " + mainBankID);
