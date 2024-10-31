@@ -13,13 +13,17 @@
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F8EBC079-C32D-BF9D-3F9E-04C8681A1268}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CBCA6CC3-9A05-770D-65DA-5C9C2D3A4110}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+					<Plugin Id="4230635974" Name="Default_Motion_Device" LibName="Wwise Motion" LibId="33226759"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
@@ -39,14 +43,20 @@
 			<AuxBusses>
 				<AuxBus Id="924856803" Name="DelaySlaps"/>
 				<AuxBus Id="1603492950" Name="RoomTunnel"/>
-				<AuxBus Id="3205342581" Name="RoomSmall"/>
+				<AuxBus Id="3205342581" Name="RoomSmall">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="3553615197" Name="RoomLarge"/>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
 				<GameParameter Id="262290038" Name="RTPC_Distance"/>
 				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
-				<GameParameter Id="1294084109" Name="RTPC_RainAmount"/>
+				<GameParameter Id="1342605732" Name="RTPC_WaterAmount"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 				<GameParameter Id="3339859487" Name="RTPC_WeaponCharge"/>
 				<GameParameter Id="3989928153" Name="RTPC_GroundWetness_Slow"/>
@@ -134,14 +144,13 @@
 				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
 					<GameParameterRef Id="2653406601"/>
 					<Switches>
-						<Switch Id="712161704" Name="Run"/>
 						<Switch Id="1296465089" Name="Sprint"/>
-						<Switch Id="2108779966" Name="Walk"/>
+						<Switch Id="1865857008" Name="Transition"/>
 						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2569417515" Name="RainTypeSwitch">
-					<GameParameterRef Id="1294084109"/>
+					<GameParameterRef Id="1342605732"/>
 					<Switches>
 						<Switch Id="614284249" Name="Stormy"/>
 						<Switch Id="991379416" Name="FullRain"/>
@@ -302,17 +311,121 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{07620D31-1DB8-6E59-544F-6C57357F0B64}">
+		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{26AF2AD1-67F1-E5A8-0303-AF8D202530CD}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>MainSoundFXBank.bnk</Path>
 			<Media>
-				<File Id="118223763" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626.wav</ShortName>
-					<CachePath>SFX/Musical, Song &amp; Phrase, Spookly, Halloween Special, Macabre Music Box I, Broken SND52626_FBC78EF0.wem</CachePath>
+				<File Id="33074131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boots_StartStop_01.wav</ShortName>
+					<CachePath>SFX/Boots_StartStop_01_818F3B66.wem</CachePath>
 				</File>
-				<File Id="599996232" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>TestMusic\Musical, Loop, Intro, 80s Pop Music SND70455 1.wav</ShortName>
-					<CachePath>SFX/TestMusic/Musical, Loop, Intro, 80s Pop Music SND70455 1_FBC78EF0.wem</CachePath>
+				<File Id="50251163" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Toe_03.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Toe_03_25B50D5A.wem</CachePath>
+				</File>
+				<File Id="61446819" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Toe_06.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Toe_06_30DCEA9F.wem</CachePath>
+				</File>
+				<File Id="108052905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Heel_05.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Heel_05_8B559579.wem</CachePath>
+				</File>
+				<File Id="133120763" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1.wav</ShortName>
+					<CachePath>SFX/Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="157072511" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_04.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="199293111" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_02.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="216218866" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_05.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="221218712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_05.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_05_818F3B66.wem</CachePath>
+				</File>
+				<File Id="243008600" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Heel_06.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Heel_06_5CB3E1E0.wem</CachePath>
+				</File>
+				<File Id="293041057" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_02.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="371279162" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_01.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="383454313" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_06.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="390256246" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Toe_05.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Toe_05_A811F49F.wem</CachePath>
+				</File>
+				<File Id="394144264" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_01.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="435089554" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_06.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="484715529" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Toe_04.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Toe_04_3A8107D8.wem</CachePath>
+				</File>
+				<File Id="511784467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_07.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_07_818F3B66.wem</CachePath>
+				</File>
+				<File Id="662185199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Toe_02.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Toe_02_2BAD6CE9.wem</CachePath>
+				</File>
+				<File Id="693450681" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_08.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_08_818F3B66.wem</CachePath>
+				</File>
+				<File Id="719082772" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Locomotion\Boots_Jump.wav</ShortName>
+					<CachePath>SFX/Locomotion/Boots_Jump_818F3B66.wem</CachePath>
+				</File>
+				<File Id="752755002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_08.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_08_818F3B66.wem</CachePath>
+				</File>
+				<File Id="769664889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Heel_04.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Heel_04_163E44F6.wem</CachePath>
+				</File>
+				<File Id="773481961" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Heel_03.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Heel_03_6C3BA84C.wem</CachePath>
+				</File>
+				<File Id="800966659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambiences\3D\Ambience_AirBox01_Lp.wav</ShortName>
+					<CachePath>SFX/Ambiences/3D/Ambience_AirBox01_Lp_818F3B66.wem</CachePath>
+				</File>
+				<File Id="825794070" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Heel_01.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Heel_01_CB362389.wem</CachePath>
+				</File>
+				<File Id="831702141" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Heel_02.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Heel_02_55F6251A.wem</CachePath>
+				</File>
+				<File Id="877196418" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Toe_03.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Toe_03_818F3B66.wem</CachePath>
 				</File>
 				<File Id="911602909" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TestFiles\Beep Loop by DongKingKong Id-395901 9.wav</ShortName>
@@ -322,227 +435,187 @@
 					<ShortName>TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926.wav</ShortName>
 					<CachePath>SFX/TestFiles/Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926_818F3B66.wem</CachePath>
 				</File>
+				<File Id="939251175" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_07.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_07_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1042406623" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Boots_StartStop_02.wav</ShortName>
+					<CachePath>SFX/Boots_StartStop_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1054467131" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Locomotion\Boots_Land.wav</ShortName>
+					<CachePath>SFX/Locomotion/Boots_Land_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1067223387" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Walk\Boots_Walk_Heel_04.wav</ShortName>
+					<CachePath>SFX/Walk/Boots_Walk_Heel_04_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1072609968" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Run\Boots_Run_Toe_01.wav</ShortName>
+					<CachePath>SFX/Run/Boots_Run_Toe_01_943E3BDE.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
 					<Plugin Id="63893666" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="117791070" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="176643587" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="184931808" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="296736778" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="303634001" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="310803756" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="323944449" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-					<Plugin Id="793404368" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="69832810" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="206109583" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="323939449" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="556812336" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="652845231" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="863753366" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="891593514" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 				<ShareSets>
-					<Plugin Id="1232150908" Name="New_Tremolo" LibName="Wwise Tremolo" LibId="8585219"/>
-					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
+					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3625855865" Name="Play_MainMusicSwitch_test" DurationType="Infinite">
+				<Event Id="903081441" Name="Play_AmbienceMain" MaxAttenuation="10" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="133120763"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2628165376" Name="Play_Headshot" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1174221978" Name="Play_HitArmor" DurationType="OneShot" DurationMin="0.17999999" DurationMax="0.17999999">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="69832810"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="86438937" Name="Play_HitFlesh" DurationType="OneShot" DurationMin="0.17999999" DurationMax="0.17999999">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="69832810"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="4057284179" Name="Play_Idle_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3179694963" Name="Play_Obj_AirBox" MaxAttenuation="50" DurationType="OneShot" DurationMin="10" DurationMax="10">
+					<MediaRefs>
+						<MediaRef Id="800966659"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="889755407" Name="Play_Play_Jump" DurationType="OneShot" DurationMin="0.31066668" DurationMax="0.31066668">
+					<MediaRefs>
+						<MediaRef Id="719082772"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="69832810"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="98439365" Name="Play_Player_Footsteps" DurationType="OneShot" DurationMin="0.30120698" DurationMax="0.64390624">
+					<AuxBusRefs>
+						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="2064552269" Id="2485288013"/>
+							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="1865857008"/>
 							<MediaRefs>
-								<MediaRef Id="118223763"/>
+								<MediaRef Id="33074131"/>
+								<MediaRef Id="1042406623"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="2064552269" Id="2485288014"/>
+							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="2884887403" Default="true"/>
 							<MediaRefs>
-								<MediaRef Id="599996232"/>
+								<MediaRef Id="157072511"/>
+								<MediaRef Id="199293111"/>
+								<MediaRef Id="216218866"/>
+								<MediaRef Id="221218712"/>
+								<MediaRef Id="293041057"/>
+								<MediaRef Id="371279162"/>
+								<MediaRef Id="383454313"/>
+								<MediaRef Id="394144264"/>
+								<MediaRef Id="435089554"/>
+								<MediaRef Id="511784467"/>
+								<MediaRef Id="693450681"/>
+								<MediaRef Id="752755002"/>
+								<MediaRef Id="877196418"/>
+								<MediaRef Id="939251175"/>
+								<MediaRef Id="1067223387"/>
 							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="206109583"/>
+									<PluginRef Id="323939449"/>
+									<PluginRef Id="652845231"/>
+									<PluginRef Id="891593514"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="1296465089"/>
+							<MediaRefs>
+								<MediaRef Id="50251163"/>
+								<MediaRef Id="61446819"/>
+								<MediaRef Id="108052905"/>
+								<MediaRef Id="243008600"/>
+								<MediaRef Id="390256246"/>
+								<MediaRef Id="484715529"/>
+								<MediaRef Id="662185199"/>
+								<MediaRef Id="769664889"/>
+								<MediaRef Id="773481961"/>
+								<MediaRef Id="825794070"/>
+								<MediaRef Id="831702141"/>
+								<MediaRef Id="1072609968"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="556812336"/>
+									<PluginRef Id="863753366"/>
+								</Custom>
+								<ShareSets>
+									<PluginRef Id="1008402193"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="98439365" Name="Play_Player_Footsteps" DurationType="OneShot" DurationMin="0" DurationMax="1.4394294">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2612303067"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2482365692"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2195636714" Default="true"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1905651656"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="793404368"/>
-										</Custom>
-									</PluginRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="630539344" Default="true"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="323944449"/>
-										</Custom>
-									</PluginRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1181096339"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="184931808"/>
-										</Custom>
-									</PluginRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1842026663"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="310803756"/>
-										</Custom>
-									</PluginRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2907906111"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="437659151"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="491961918"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1905651656"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="296736778"/>
-										</Custom>
-										<ShareSets>
-											<PluginRef Id="1232150908"/>
-											<PluginRef Id="3435419520"/>
-										</ShareSets>
-									</PluginRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="630539344" Default="true"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="303634001"/>
-										</Custom>
-										<ShareSets>
-											<PluginRef Id="1232150908"/>
-											<PluginRef Id="3435419520"/>
-										</ShareSets>
-									</PluginRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1181096339"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="176643587"/>
-										</Custom>
-										<ShareSets>
-											<PluginRef Id="1232150908"/>
-											<PluginRef Id="3435419520"/>
-										</ShareSets>
-									</PluginRefs>
-								</SwitchContainer>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1842026663"/>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="117791070"/>
-										</Custom>
-										<ShareSets>
-											<PluginRef Id="1232150908"/>
-											<PluginRef Id="3435419520"/>
-										</ShareSets>
-									</PluginRefs>
-								</SwitchContainer>
-							</Children>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2681948226"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="582824249"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1216965916"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="3111880208"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="967535525"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="4248645337"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="787898836"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2185786256"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="803837735"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="3995207278"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="841620460"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="344481046"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1669493947"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="187032587"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2144363834"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2721243382"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1442397674"/>
-							<Children/>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1115562054"/>
-							<Children/>
-						</SwitchContainer>
-					</SwitchContainers>
+				<Event Id="4249207015" Name="Play_Player_Land" DurationType="OneShot" DurationMin="0.412125" DurationMax="0.412125">
+					<MediaRefs>
+						<MediaRef Id="1054467131"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="69832810"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="449246991" Name="Play_Reload_Handgun" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="1955951874" Name="Play_TestBeep" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
@@ -571,61 +644,27 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3106700779" Name="Stop_TestBeep_lp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1670385919" Name="Stop_TestBeep_lp_3D" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3106700779" Name="Stop_TestBeep_lp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="911602909"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1670385919" Name="Stop_TestBeep_lp_3D" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="911602909"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
-				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
-			<StateGroups>
-				<StateGroup Id="2064552269" Name="AreaState">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="2485288013" Name="FarmlandArea_01"/>
-						<State Id="2485288014" Name="FarmlandArea_02"/>
-						<State Id="2485288015" Name="FarmlandArea_03"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch">
+				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
+					<GameParameterRef Id="2653406601"/>
 					<Switches>
-						<Switch Id="187032587" Name="Flowers"/>
-						<Switch Id="344481046" Name="Ice"/>
-						<Switch Id="437659151" Name="Rubber"/>
-						<Switch Id="491961918" Name="Forest"/>
-						<Switch Id="582824249" Name="Leaves"/>
-						<Switch Id="787898836" Name="Snow"/>
-						<Switch Id="803837735" Name="Sand"/>
-						<Switch Id="841620460" Name="Concrete"/>
-						<Switch Id="967535525" Name="PuddleGrass"/>
-						<Switch Id="1115562054" Name="StoneFloor"/>
-						<Switch Id="1216965916" Name="Stone"/>
-						<Switch Id="1442397674" Name="Marsh"/>
-						<Switch Id="1669493947" Name="RubberTile"/>
-						<Switch Id="2144363834" Name="Rock"/>
-						<Switch Id="2185786256" Name="Gravel"/>
-						<Switch Id="2195636714" Name="Dirt"/>
-						<Switch Id="2473969246" Name="Metal"/>
-						<Switch Id="2482365692" Name="PineForest"/>
-						<Switch Id="2612303067" Name="WaterWade"/>
-						<Switch Id="2654748154" Name="Water"/>
-						<Switch Id="2681948225" Name="TileType2"/>
-						<Switch Id="2681948226" Name="TileType1"/>
-						<Switch Id="2721243382" Name="PuddleDirt"/>
-						<Switch Id="2907906111" Name="Swamp"/>
-						<Switch Id="3111880208" Name="WoodFloor"/>
-						<Switch Id="3995207278" Name="Linoleum"/>
-						<Switch Id="4248645337" Name="Grass"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
-					<GameParameterRef Id="870672907"/>
-					<Switches>
-						<Switch Id="630539344" Name="Dry"/>
-						<Switch Id="1181096339" Name="Wet"/>
-						<Switch Id="1842026663" Name="Damp"/>
-						<Switch Id="1905651656" Name="Soaked"/>
+						<Switch Id="1296465089" Name="Sprint"/>
+						<Switch Id="1865857008" Name="Transition"/>
+						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -634,7 +673,7 @@
 			<ShortName>MainDialogueBank</ShortName>
 			<Path>MainDialogueBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7A6C6938-94CD-0E81-7611-59D8E1B64E40}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{75358B96-7125-3B95-8D8C-6C3869255968}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Plugins>
@@ -643,6 +682,34 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="4057284179" Name="Play_Idle_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="449246991" Name="Play_Reload_Handgun" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<PluginRefs>
 						<Custom>
@@ -653,5 +720,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E7748C5A-5C8C-558C-9829-953133726D09}</FileHash>
+	<FileHash>{2BD555AD-1144-E386-71C7-CAD9B09DBFE0}</FileHash>
 </SoundBanksInfo>

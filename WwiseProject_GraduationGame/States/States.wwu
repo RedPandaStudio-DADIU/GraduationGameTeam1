@@ -4,6 +4,10 @@
 		<WorkUnit Name="States" ID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="GameStatus" ID="{49474DAB-D2CF-4B9B-8C80-41A049043641}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{06E39AB6-657B-43CB-AC87-509895CB23D3}"/>
 						<State Name="InGame" ID="{A1170F4C-49EE-4DF8-82FB-54B635971568}"/>
@@ -11,6 +15,10 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{71DEAC1B-AFD2-4EF9-B68B-44EF423FA49A}"/>
 						<State Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
@@ -18,6 +26,10 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="RoomState" ID="{4B6AAE81-16A8-4384-8324-F96C379F7805}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
 						<State Name="Indoor" ID="{5F7ECEB0-1AC0-43CC-B38B-63B3385A55AE}"/>
@@ -25,6 +37,10 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="AreaState" ID="{677AD7FE-43DB-49B1-B10B-721D1E000093}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{1725FE84-7321-45EB-8265-EAA10E64B31A}"/>
 						<State Name="FarmlandArea_01" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>

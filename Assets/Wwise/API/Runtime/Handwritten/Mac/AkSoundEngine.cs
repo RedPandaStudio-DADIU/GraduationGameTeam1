@@ -15,7 +15,10 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-﻿public partial class AkSoundEngine
+using System;
+using UnityEngine;
+
+public partial class AkSoundEngine
 {
 #if UNITY_EDITOR_OSX || (UNITY_STANDALONE_OSX && !UNITY_EDITOR)
 	/// <summary>
@@ -27,5 +30,10 @@ Copyright (c) 2024 Audiokinetic Inc.
 	{
 		return StringFromIntPtrString(ptr);
 	}
+
+    public static void SetRTPCValue(string v, object value, GameObject gameObject)
+    {
+        throw new NotImplementedException();
+    }
 #endif
 }

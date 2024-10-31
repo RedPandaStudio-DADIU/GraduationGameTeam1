@@ -4,6 +4,10 @@
 		<WorkUnit Name="Switches" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="GroundMaterialSwitch" ID="{3CFB2835-D747-4294-B504-B635B37AA31E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="TileType1" ID="{691EF04D-1242-49B4-B680-9D7985011C04}"/>
 						<Switch Name="TileType2" ID="{0B463E6F-7621-4998-B770-1770F35273D1}"/>
@@ -36,11 +40,12 @@
 				</SwitchGroup>
 				<SwitchGroup Name="PlayerSpeedSwitch" ID="{AFE3D45E-5678-4BBE-896C-93B9C1200FE6}">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Switch Name="Walk" ID="{1B451580-82DE-4619-90B2-6958121BA75F}"/>
-						<Switch Name="Run" ID="{95A146E9-0AD6-496B-9949-606A7CBADBCD}"/>
+						<Switch Name="Transition" ID="{1B451580-82DE-4619-90B2-6958121BA75F}"/>
 						<Switch Name="Sprint" ID="{7AB238C2-3493-4704-8754-FC3AADF0F3F5}"/>
 						<Switch Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
 					</ChildrenList>
@@ -53,27 +58,22 @@
 							<PointList>
 								<Point>
 									<XPos>0</XPos>
-									<YPos>4</YPos>
+									<YPos>3</YPos>
 									<Flags>5</Flags>
 								</Point>
 								<Point>
-									<XPos>1.5</XPos>
+									<XPos>4.19261</XPos>
 									<YPos>1</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>3.0077</XPos>
+									<XPos>4.51813</XPos>
 									<YPos>2</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>4.00001</XPos>
-									<YPos>3</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>5</XPos>
-									<YPos>4</YPos>
+									<XPos>6</XPos>
+									<YPos>2</YPos>
 									<Flags>37</Flags>
 								</Point>
 							</PointList>
@@ -81,6 +81,10 @@
 					</SwitchOnRTPC>
 				</SwitchGroup>
 				<SwitchGroup Name="PlayerHealth" ID="{BDC210DF-FAFE-4476-8FF8-5636E437639C}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
 						<Switch Name="LowHealth" ID="{80121DAB-9764-416C-94C9-15005ADB9B83}"/>
@@ -89,6 +93,8 @@
 				</SwitchGroup>
 				<SwitchGroup Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -135,6 +141,8 @@
 				</SwitchGroup>
 				<SwitchGroup Name="RainTypeSwitch" ID="{CEBD8E46-6C65-4C62-BA8A-BA92764DADF4}">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -145,7 +153,7 @@
 						<Switch Name="Stormy" ID="{C7C5AE0E-E978-42C7-999C-945F7DC43F23}"/>
 					</ChildrenList>
 					<SwitchOnRTPC>
-						<GameParameterRef Name="RTPC_RainAmount" ID="{AEC1D18F-5259-48BC-9F46-E72BC7829D35}"/>
+						<GameParameterRef Name="RTPC_WaterAmount" ID="{AEC1D18F-5259-48BC-9F46-E72BC7829D35}"/>
 						<Curve Name="" ID="{1B3B7C23-891B-4A48-8A59-E7141EAC8C88}">
 							<PropertyList>
 								<Property Name="Flags" Type="int32" Value="65537"/>

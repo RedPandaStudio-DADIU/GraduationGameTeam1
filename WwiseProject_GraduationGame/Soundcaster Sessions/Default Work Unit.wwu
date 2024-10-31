@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{86755513-0603-472F-B1E9-A78D1D897B0F}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{86755513-0603-472F-B1E9-A78D1D897B0F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{86755513-0603-472F-B1E9-A78D1D897B0F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{12E6DD35-85F3-4075-9988-A6398C1CEA75}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Load_Rifle" ID="{AB8D80EE-36E4-4A1C-A362-E95ADE77C721}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Alt_Charge_Fifle" ID="{BE7889FE-7CC1-4E6C-AA7D-4AEF64CA70F4}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Alt_Fire_Rifle" ID="{8B26DA4B-8FBB-4A61-BBD1-1865ECE170BE}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_FireMain_Rifle" ID="{7F5B1521-6F2B-4424-B70D-8E9997774966}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Load_handgun" ID="{4958053D-AB5D-4EC0-A8D9-576484F6D709}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_FireMain_Handgun" ID="{2C22E71D-749C-4B9D-9E7B-46004626286E}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Player_Footsteps" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}" WorkUnitID="{42B88A57-E40B-4377-81C9-DC30979D03C2}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_PlayerSpeed" ID="{5F5AE7DD-3784-43FE-9184-4FBE90A9F930}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
+						<CurrentSwitchRef Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+						<CurrentSwitchRef Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<CurrentSwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
+						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

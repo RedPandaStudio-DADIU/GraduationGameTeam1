@@ -2,8 +2,41 @@
 <WwiseDocument Type="WorkUnit" ID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}" SchemaVersion="119">
 	<Events>
 		<WorkUnit Name="Ambience" ID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="6"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
-				<Event Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}"/>
+				<Event Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{DB269336-BFAF-439E-AC28-434FE85C9F77}" ShortID="917656038">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1" ID="{D7962A79-B5B5-4BCB-950F-304B55494FFE}" WorkUnitID="{071AD8B3-FCC4-4A57-8003-BA59883627C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Obj_AirBox" ID="{CA147F22-BEFE-4D91-AD7D-2FF95174C7A6}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{E0B0DD27-5E27-41EB-ABE4-E013D579B568}" ShortID="979027974">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_AirBox01_Lp" ID="{E549F97B-5892-4249-8BD2-8E48683240F6}" WorkUnitID="{071AD8B3-FCC4-4A57-8003-BA59883627C1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
