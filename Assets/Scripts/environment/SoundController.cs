@@ -12,6 +12,8 @@ public class SoundController : MonoBehaviour
    // [SerializeField] private string musicBank = "MainMusicBank"; 
     [SerializeField] private string soundFXBank = "MainSoundFXBank";        // Ambient event to play (set in the Inspector)
 
+    [SerializeField] private AK.Wwise.Event backgroundMusicEvent; // Background music event to play
+
    /* private uint mainBankID;
     private uint dialogueBankID;
     private uint musicBankID;*/
@@ -33,7 +35,8 @@ public class SoundController : MonoBehaviour
         AkSoundEngine.LoadBank(soundFXBank, out soundFXBankID);
         Debug.Log("Loaded Sound FX Bank: " + soundFXBankID);
 
-       
+        backgroundMusicEvent.Post(gameObject); // Post the music event to start playing
+        Debug.Log("Background music started.");
         //ambienceEvent.Post(gameObject);
 
     }
