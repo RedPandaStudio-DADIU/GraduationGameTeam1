@@ -224,7 +224,6 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID MAINDIALOGUEBANK = 1845515638U;
         static const AkUniqueID MAINMUSICBANK = 376630845U;
         static const AkUniqueID MAINSOUNDFXBANK = 1768418619U;
@@ -256,8 +255,6 @@ namespace AK
 
     namespace AUDIO_DEVICES
     {
-        static const AkUniqueID DEFAULT_MOTION_DEVICE = 4230635974U;
-        static const AkUniqueID NO_OUTPUT = 2317455096U;
         static const AkUniqueID SYSTEM = 3859886410U;
     } // namespace AUDIO_DEVICES
 

@@ -13,7 +13,7 @@
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CBCA6CC3-9A05-770D-65DA-5C9C2D3A4110}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0069B56D-49F6-E439-43E7-ECDA96412A5A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,9 +21,7 @@
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
-					<Plugin Id="4230635974" Name="Default_Motion_Device" LibName="Wwise Motion" LibId="33226759"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
@@ -673,52 +671,6 @@
 			<ShortName>MainDialogueBank</ShortName>
 			<Path>MainDialogueBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{75358B96-7125-3B95-8D8C-6C3869255968}">
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
-			<Plugins>
-				<Custom>
-					<Plugin Id="63893666" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
-				</Custom>
-			</Plugins>
-			<Events>
-				<Event Id="4057284179" Name="Play_Idle_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="449246991" Name="Play_Reload_Handgun" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-			</Events>
-		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2BD555AD-1144-E386-71C7-CAD9B09DBFE0}</FileHash>
+	<FileHash>{F330E274-AC09-E380-F532-CC8C26DC2F85}</FileHash>
 </SoundBanksInfo>
