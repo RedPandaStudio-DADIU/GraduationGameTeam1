@@ -30,8 +30,8 @@ public class HitScanBasic : MonoBehaviour
     [SerializeField] private AK.Wwise.Event chargeCompleteEvent;   // Charge complete sound
     [SerializeField] private AK.Wwise.Event explosionEvent;   
 
-     [SerializeField] private string rifleSoundBankName = "MainSoundFXBank";
-    private uint rifleSoundBankID;
+    // [SerializeField] private string rifleSoundBankName = "MainSoundFXBank";
+    //private uint rifleSoundBankID;
 
     // Start is called before the first frame update
     void Start()

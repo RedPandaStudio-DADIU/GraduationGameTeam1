@@ -7,20 +7,21 @@ using AK.Wwise;
 public class SoundController : MonoBehaviour
 {
     [Header("SoundBanks ")]
-    [SerializeField] private string mainBank = "Main";  // Name of the SoundBank to load
-    [SerializeField] private string dialogueBank = "MainDialogueBank"; 
-    [SerializeField] private string musicBank = "MainMusicBank"; 
+    //[SerializeField] private string mainBank = "Main";  // Name of the SoundBank to load
+    //[SerializeField] private string dialogueBank = "MainDialogueBank"; 
+   // [SerializeField] private string musicBank = "MainMusicBank"; 
     [SerializeField] private string soundFXBank = "MainSoundFXBank";        // Ambient event to play (set in the Inspector)
 
-    private uint mainBankID;
+   /* private uint mainBankID;
     private uint dialogueBankID;
-    private uint musicBankID;
+    private uint musicBankID;*/
+
     private uint soundFXBankID;
 
    
     void Awake()
     {
-        AkSoundEngine.LoadBank(mainBank, out mainBankID);
+        /*AkSoundEngine.LoadBank(mainBank, out mainBankID);
         Debug.Log("Loaded Main Bank: " + mainBankID);
 
         AkSoundEngine.LoadBank(dialogueBank, out dialogueBankID);
@@ -28,7 +29,7 @@ public class SoundController : MonoBehaviour
 
         AkSoundEngine.LoadBank(musicBank, out musicBankID);
         Debug.Log("Loaded Music Bank: " + musicBankID);
-
+*/
         AkSoundEngine.LoadBank(soundFXBank, out soundFXBankID);
         Debug.Log("Loaded Sound FX Bank: " + soundFXBankID);
 
