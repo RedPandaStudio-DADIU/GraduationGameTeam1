@@ -310,7 +310,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{26AF2AD1-67F1-E5A8-0303-AF8D202530CD}">
+		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{0DDD4722-2E03-3F1C-35CE-79EA77A5F53B}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>MainSoundFXBank.bnk</Path>
 			<Media>
@@ -412,7 +412,7 @@
 				</File>
 				<File Id="800966659" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambiences\3D\Ambience_AirBox01_Lp.wav</ShortName>
-					<CachePath>SFX/Ambiences/3D/Ambience_AirBox01_Lp_818F3B66.wem</CachePath>
+					<CachePath>SFX/Ambiences/3D/Ambience_AirBox01_Lp_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="825794070" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_01.wav</ShortName>
@@ -471,7 +471,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain" MaxAttenuation="10" DurationType="Infinite">
+				<Event Id="903081441" Name="Play_AmbienceMain" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="133120763"/>
 					</MediaRefs>
@@ -509,7 +509,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3179694963" Name="Play_Obj_AirBox" MaxAttenuation="50" DurationType="OneShot" DurationMin="10" DurationMax="10">
+				<Event Id="3179694963" Name="Play_Obj_AirBox" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="800966659"/>
 					</MediaRefs>
@@ -673,5 +673,5 @@
 			<Path>MainDialogueBank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5BA0DAE7-EE48-0917-3C35-CB64923D038D}</FileHash>
+	<FileHash>{EA6C5D7F-8EF3-7B82-801D-1D883CAFF536}</FileHash>
 </SoundBanksInfo>
