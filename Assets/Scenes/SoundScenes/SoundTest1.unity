@@ -188,7 +188,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0a8425211bc244faa8c955f8ba6da28e,
+    WwiseObjectReference: {fileID: 11400000, guid: b2f193636b5df42cabd6cb60ab04d09b,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -1235,7 +1235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbdb40e9537877e4b9f5b3deea7696fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallThreshold: -5
+  isMovable: 1
+  health: 80
   animator: {fileID: 0}
 --- !u!114 &449032379
 MonoBehaviour:
@@ -2911,7 +2912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9a7c5e5e1fd0441b5b9aa050d71c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallThreshold: -5
+  isMovable: 1
+  health: 80
   animator: {fileID: 0}
 --- !u!114 &1480669399
 MonoBehaviour:
@@ -3596,7 +3598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9a7c5e5e1fd0441b5b9aa050d71c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallThreshold: -5
+  isMovable: 1
+  health: 80
   animator: {fileID: 0}
 --- !u!1 &1836048902
 GameObject:
@@ -4026,7 +4029,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
         type: 3}
+      propertyPath: footstepsInterval
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
+      propertyPath: jumpEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 222d0c05e8bdc9c4fab702d01cfc3d86,
+        type: 2}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
+      propertyPath: landEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b1b4c8f8cfb1ba44aca4c2fb3b82679,
+        type: 2}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
       propertyPath: myFootstep.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c8cdcdfef1a98495b9ecda31ceb13785,
+        type: 2}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
+      propertyPath: footstepsEvent.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: c8cdcdfef1a98495b9ecda31ceb13785,
         type: 2}
