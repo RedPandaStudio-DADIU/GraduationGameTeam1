@@ -871,7 +871,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 227f14cafebe914dad7d2ff95174c7a6
       Path: Events/Ambience/Play_Obj_AirBox
-      maxAttenuation: 50
+      maxAttenuation: 10
       maxDuration: 10
       minDuration: 10
   - PhysicalPath: Events/Default Work Unit.wwu
@@ -887,6 +887,156 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584711365025995588
     List: []
+  - PhysicalPath: Events/GameWorld.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: GameWorld
+      ObjectType: 12
+      guid: b9dee002a444974f876d94dadf6db20c
+    ParentPath: Events/GameWorld
+    guid: b9dee002a444974f876d94dadf6db20c
+    GuidInternal: 
+    m_lastTime: -8584711191809286484
+    List:
+    - name: Elevator
+      guid: 1d22329c1617c9448172562d58e45749
+      id: 3705378287
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      Path: Events/GameWorld/Elevator
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_Buttonpress
+      guid: f94c27434d3abd41aed524b3d1b8a156
+      id: 2373651556
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_Buttonpress
+        ObjectType: 3
+        guid: f94c27434d3abd41aed524b3d1b8a156
+      Path: Events/GameWorld/Elevator/Play_Elevator_Buttonpress
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_ConfirmationBeep
+      guid: 1a121a4646fd614fbee83013523dc0fb
+      id: 2038432148
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_ConfirmationBeep
+        ObjectType: 3
+        guid: 1a121a4646fd614fbee83013523dc0fb
+      Path: Events/GameWorld/Elevator/Play_Elevator_ConfirmationBeep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_OutofOrderBeep
+      guid: 879a1d43cbe2db4498bf9e8401d4f313
+      id: 2046495730
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_OutofOrderBeep
+        ObjectType: 3
+        guid: 879a1d43cbe2db4498bf9e8401d4f313
+      Path: Events/GameWorld/Elevator/Play_Elevator_OutofOrderBeep
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_Power_lp
+      guid: 73e76949f053f44387feb35853ee2f81
+      id: 1757009721
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_Power_lp
+        ObjectType: 3
+        guid: 73e76949f053f44387feb35853ee2f81
+      Path: Events/GameWorld/Elevator/Play_Elevator_Power_lp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_Run_Startup
+      guid: 08c6a762a1c16743b099e4d84eb23a7d
+      id: 537752340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_Run_Startup
+        ObjectType: 3
+        guid: 08c6a762a1c16743b099e4d84eb23a7d
+      Path: Events/GameWorld/Elevator/Play_Elevator_Run_Startup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_Running_lp
+      guid: 23b13044f2686e4aae239962abdcf02f
+      id: 591723123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_Running_lp
+        ObjectType: 3
+        guid: 23b13044f2686e4aae239962abdcf02f
+      Path: Events/GameWorld/Elevator/Play_Elevator_Running_lp
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/Locomotion.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2265,8 +2415,163 @@ MonoBehaviour:
     ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584711345629153015
+    m_lastTime: -8584711191808159062
     List:
+    - name: ElevatorMotion
+      guid: cbd576a0f50bd84ab13f81c423ab524e
+      id: 2134337173
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Switches
+        ObjectType: 12
+        guid: bcc703895f75f24a85557f1a1fc0cc7c
+      - ElementName: GameWorldObjects
+        ObjectType: 4
+        guid: 20601029be4e6140b104cee49341b555
+      - ElementName: ElevatorMotion
+        ObjectType: 11
+        guid: cbd576a0f50bd84ab13f81c423ab524e
+      Path: Switches/Switches/GameWorldObjects/ElevatorMotion
+      values:
+      - name: False
+        guid: 8f15a1e3162db1418030c023e72f0a49
+        id: 2452206122
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GameWorldObjects
+          ObjectType: 4
+          guid: 20601029be4e6140b104cee49341b555
+        - ElementName: ElevatorMotion
+          ObjectType: 11
+          guid: cbd576a0f50bd84ab13f81c423ab524e
+        - ElementName: False
+          ObjectType: 10
+          guid: 8f15a1e3162db1418030c023e72f0a49
+      - name: Start
+        guid: 72d6d86a7e84ab43a30469ba1b8f7e16
+        id: 1281810935
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GameWorldObjects
+          ObjectType: 4
+          guid: 20601029be4e6140b104cee49341b555
+        - ElementName: ElevatorMotion
+          ObjectType: 11
+          guid: cbd576a0f50bd84ab13f81c423ab524e
+        - ElementName: Start
+          ObjectType: 10
+          guid: 72d6d86a7e84ab43a30469ba1b8f7e16
+      - name: Stop
+        guid: 8b6d783dc3223a4ca8b514ab6678b637
+        id: 788884573
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GameWorldObjects
+          ObjectType: 4
+          guid: 20601029be4e6140b104cee49341b555
+        - ElementName: ElevatorMotion
+          ObjectType: 11
+          guid: cbd576a0f50bd84ab13f81c423ab524e
+        - ElementName: Stop
+          ObjectType: 10
+          guid: 8b6d783dc3223a4ca8b514ab6678b637
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ElevatorPowerState
+      guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
+      id: 2564540785
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Switches
+        ObjectType: 12
+        guid: bcc703895f75f24a85557f1a1fc0cc7c
+      - ElementName: GameWorldObjects
+        ObjectType: 4
+        guid: 20601029be4e6140b104cee49341b555
+      - ElementName: ElevatorPowerState
+        ObjectType: 11
+        guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
+      Path: Switches/Switches/GameWorldObjects/ElevatorPowerState
+      values:
+      - name: PowerOff
+        guid: f9d8c20a24952b42ae18511f66b48e5c
+        id: 2235177879
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GameWorldObjects
+          ObjectType: 4
+          guid: 20601029be4e6140b104cee49341b555
+        - ElementName: ElevatorPowerState
+          ObjectType: 11
+          guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
+        - ElementName: PowerOff
+          ObjectType: 10
+          guid: f9d8c20a24952b42ae18511f66b48e5c
+      - name: PowerOn
+        guid: 78e6765fc261554ea00f039e3f42ee2c
+        id: 91680483
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GameWorldObjects
+          ObjectType: 4
+          guid: 20601029be4e6140b104cee49341b555
+        - ElementName: ElevatorPowerState
+          ObjectType: 11
+          guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
+        - ElementName: PowerOn
+          ObjectType: 10
+          guid: 78e6765fc261554ea00f039e3f42ee2c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: GameWorldObjects
+      guid: 20601029be4e6140b104cee49341b555
+      id: 2811594251
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Switches
+        ObjectType: 12
+        guid: bcc703895f75f24a85557f1a1fc0cc7c
+      - ElementName: GameWorldObjects
+        ObjectType: 4
+        guid: 20601029be4e6140b104cee49341b555
+      Path: Switches/Switches/GameWorldObjects
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: GroundMaterialSwitch
       guid: 3528fb3c47d79442b504b635b37aa31e
       id: 1044534455
