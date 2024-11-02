@@ -189,6 +189,7 @@ public class FirstPersonController : MonoBehaviour
 
 			float speedOffset = 0.1f;
 
+			//Sets the RTPC in Wwise, to change the sound from walking to running
 			AkSoundEngine.SetRTPCValue("RTPC_PlayerSpeed", _speed, gameObject);
 
 		// accelerate or decelerate to target speed
@@ -225,6 +226,7 @@ public class FirstPersonController : MonoBehaviour
 				inputDirection = forward * moveInput.z + right * moveInput.x;
 	
 
+			//check if footstep sound is playing
 			if (!footstepIsPlaying)
 			{
 				myFootstep.Post(gameObject);
