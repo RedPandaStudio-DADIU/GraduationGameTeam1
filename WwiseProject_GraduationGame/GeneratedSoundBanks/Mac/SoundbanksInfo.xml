@@ -13,12 +13,13 @@
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{37E98CB6-778E-3D83-6CC0-2F87C872E2D4}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7C35CE0A-1FAE-025A-CCA3-9F5D23A5421D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -49,7 +50,13 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="3553615197" Name="RoomLarge"/>
+				<AuxBus Id="3553615197" Name="RoomLarge">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2849147824"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
@@ -146,6 +153,19 @@
 						<Switch Id="1296465089" Name="Sprint"/>
 						<Switch Id="1865857008" Name="Transition"/>
 						<Switch Id="2884887403" Name="Sneak"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2134337173" Name="ElevatorMotion">
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="1281810935" Name="Start"/>
+						<Switch Id="2452206122" Name="False"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2564540785" Name="ElevatorPowerState">
+					<Switches>
+						<Switch Id="91680483" Name="PowerOn"/>
+						<Switch Id="2235177879" Name="PowerOff"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2569417515" Name="RainTypeSwitch">
@@ -310,7 +330,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{0DDD4722-2E03-3F1C-35CE-79EA77A5F53B}">
+		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{13167B56-992D-DD72-CF1E-1F516F4CEC91}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>MainSoundFXBank.bnk</Path>
 			<Media>
@@ -468,6 +488,8 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -525,9 +547,6 @@
 					</PluginRefs>
 				</Event>
 				<Event Id="98439365" Name="Play_Player_Footsteps" DurationType="OneShot" DurationMin="0.30120698" DurationMax="0.64390624">
-					<AuxBusRefs>
-						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
-					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="1865857008"/>
@@ -654,6 +673,38 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<Busses>
+				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="1182634443" Name="AmbientBeds"/>
+				<Bus Id="1301074112" Name="3DAmbience"/>
+				<Bus Id="1399649189" Name="Master Bus"/>
+				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1681012287" Name="PlayerFootsteps"/>
+				<Bus Id="2033911932" Name="NPCMaster"/>
+				<Bus Id="2343802269" Name="PlayerLocomotion"/>
+				<Bus Id="3538689948" Name="PlayerMaster"/>
+				<Bus Id="3545700988" Name="Reverbs"/>
+				<Bus Id="4152869693" Name="2DAmbientBeds"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="924856803" Name="DelaySlaps"/>
+				<AuxBus Id="1603492950" Name="RoomTunnel"/>
+				<AuxBus Id="3205342581" Name="RoomSmall">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="3553615197" Name="RoomLarge">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2849147824"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
@@ -673,5 +724,5 @@
 			<Path>MainDialogueBank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EA6C5D7F-8EF3-7B82-801D-1D883CAFF536}</FileHash>
+	<FileHash>{D4EB96DE-C7BC-4340-D078-6B572808580B}</FileHash>
 </SoundBanksInfo>

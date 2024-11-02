@@ -121,6 +121,29 @@ namespace AK
             } // namespace SWITCH
         } // namespace AMBTIMEOFDAY
 
+        namespace ELEVATORMOTION
+        {
+            static const AkUniqueID GROUP = 2134337173U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID FALSE = 2452206122U;
+                static const AkUniqueID START = 1281810935U;
+                static const AkUniqueID STOP = 788884573U;
+            } // namespace SWITCH
+        } // namespace ELEVATORMOTION
+
+        namespace ELEVATORPOWERSTATE
+        {
+            static const AkUniqueID GROUP = 2564540785U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID POWEROFF = 2235177879U;
+                static const AkUniqueID POWERON = 91680483U;
+            } // namespace SWITCH
+        } // namespace ELEVATORPOWERSTATE
+
         namespace GROUNDMATERIALSWITCH
         {
             static const AkUniqueID GROUP = 1044534455U;

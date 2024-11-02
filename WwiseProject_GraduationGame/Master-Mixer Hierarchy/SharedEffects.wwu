@@ -5,7 +5,23 @@
 			<ChildrenList>
 				<Bus Name="Reverbs" ID="{DFC082BE-340B-49DC-AB08-9D7E34CE02C5}">
 					<ChildrenList>
-						<AuxBus Name="RoomLarge" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}"/>
+						<AuxBus Name="RoomLarge" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{87553331-1BC7-4828-892D-64507E52B84D}" ShortID="86024883">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 						<AuxBus Name="RoomSmall" ID="{73967A86-8EB2-4CF2-AB9A-A4F4360C3FE7}">
 							<ObjectLists>
 								<ObjectList Name="Effects">
