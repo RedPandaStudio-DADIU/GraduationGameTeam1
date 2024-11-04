@@ -31,6 +31,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1045871717	GameStatus			\States\GameStatus	
 	2064552269	AreaState			\States\AreaState	
 	3285234865	PlayerState			\States\PlayerState	
+	3305603258	GuitarSpeaker			\States\Speakers\GuitarSpeaker	
 
 State	ID	Name	State Group			Notes
 	144697359	Outdoor	RoomState			
@@ -46,6 +47,9 @@ State	ID	Name	State Group			Notes
 	655265632	Alive	PlayerState			
 	748895195	None	PlayerState			
 	2044049779	Dead	PlayerState			
+	748895195	None	GuitarSpeaker			
+	930712164	Off	GuitarSpeaker			
+	1651971902	On	GuitarSpeaker			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
@@ -65,15 +69,15 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	309309195	2DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\2DAmbience	
-	765206498	PlayerCloth			\Audio Master\Master Bus\SFX\PlayerMaster\PlayerLocomotion\PlayerCloth	
+	765206498	PlayerCloth			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerCloth	
 	1182634443	AmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds	
 	1301074112	3DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\3DAmbience	
 	1399649189	Master Bus			\Audio Master\Master Bus	
 	1459460693	AmbientMaster			\Audio Master\Master Bus\SFX\AmbientMaster	
-	1681012287	PlayerFootsteps			\Audio Master\Master Bus\SFX\PlayerMaster\PlayerLocomotion\PlayerFootsteps	
+	1681012287	PlayerFootsteps			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerFootsteps	
 	2033911932	NPCMaster			\Audio Master\Master Bus\SFX\NPCMaster	
-	2343802269	PlayerLocomotion			\Audio Master\Master Bus\SFX\PlayerMaster\PlayerLocomotion	
-	3538689948	PlayerMaster			\Audio Master\Master Bus\SFX\PlayerMaster	
+	2343802269	PlayerLocomotion			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion	
+	3538689948	PlayerMaster			\Audio Master\Master Bus\PlayerMaster	
 	3545700988	Reverbs			\Audio Master\Master Bus\SharedEffects\Reverbs	
 	4152869693	2DAmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds\2DAmbientBeds	
 
@@ -85,6 +89,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	1259256166	New_RoomVerb	Wwise RoomVerb			
+	1588715066	Echoes_Linear	Wwise Delay			
+	1904434771	Medium_Room1	Wwise Matrix Reverb			
 	2849147824	Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

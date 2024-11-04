@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
+        static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
         static const AkUniqueID PLAY_HEADSHOT = 2628165376U;
         static const AkUniqueID PLAY_HITARMOR = 1174221978U;
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
@@ -30,6 +31,7 @@ namespace AK
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
         static const AkUniqueID PLAY_TESTBEEP_LP_3D = 161393517U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
+        static const AkUniqueID STOP_GUITARLOOP = 4128836072U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
     } // namespace EVENTS
@@ -60,6 +62,18 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace GAMESTATUS
+
+        namespace GUITARSPEAKER
+        {
+            static const AkUniqueID GROUP = 3305603258U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace STATE
+        } // namespace GUITARSPEAKER
 
         namespace PLAYERSTATE
         {
@@ -192,6 +206,17 @@ namespace AK
                 static const AkUniqueID WET = 1181096339U;
             } // namespace SWITCH
         } // namespace GROUNDWETNESSSWITCH
+
+        namespace GUITARSPEAKER
+        {
+            static const AkUniqueID GROUP = 3305603258U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace SWITCH
+        } // namespace GUITARSPEAKER
 
         namespace PLAYERHEALTH
         {

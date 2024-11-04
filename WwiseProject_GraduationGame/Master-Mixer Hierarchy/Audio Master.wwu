@@ -13,6 +13,19 @@
 						<WorkUnit Name="Music" ID="{89C77C7D-2A70-4F6E-A79C-5590C19167CB}" PersistMode="Reference"/>
 						<WorkUnit Name="SharedEffects" ID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}" PersistMode="Reference"/>
 						<WorkUnit Name="SFX" ID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}" PersistMode="Reference"/>
+						<Bus Name="PlayerMaster" ID="{5696D8FB-8716-4B36-95FF-732159C72BE0}">
+							<ChildrenList>
+								<Bus Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}">
+									<ReferenceList/>
+									<ChildrenList>
+										<Bus Name="PlayerCloth" ID="{11DAD9AD-0A3D-40C8-87B5-C2F9E27A9E94}"/>
+										<Bus Name="PlayerFootsteps" ID="{3478D556-94E1-4EAE-9E44-971E57FB6E7A}">
+											<ReferenceList/>
+										</Bus>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
