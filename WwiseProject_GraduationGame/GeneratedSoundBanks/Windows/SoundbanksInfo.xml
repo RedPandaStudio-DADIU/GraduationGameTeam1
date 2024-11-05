@@ -13,18 +13,14 @@
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4137A71B-4A69-EB73-4A3E-7E3FD1864CEC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FB2F6C1A-1492-BDEA-AAF5-CF147F612027}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
-					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
@@ -43,14 +39,7 @@
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
-				<AuxBus Id="924856803" Name="DelaySlaps">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1588715066"/>
-							<PluginRef Id="1904434771"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
+				<AuxBus Id="924856803" Name="DelaySlaps"/>
 				<AuxBus Id="1603492950" Name="RoomTunnel"/>
 				<AuxBus Id="3205342581" Name="RoomSmall">
 					<PluginRefs>
@@ -59,13 +48,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="3553615197" Name="RoomLarge">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2849147824"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
+				<AuxBus Id="3553615197" Name="RoomLarge"/>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
@@ -104,13 +87,6 @@
 						<State Id="655265632" Name="Alive"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2044049779" Name="Dead"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="3305603258" Name="GuitarSpeaker">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="930712164" Name="Off"/>
-						<State Id="1651971902" Name="On"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -171,19 +147,6 @@
 						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2134337173" Name="ElevatorMotion">
-					<Switches>
-						<Switch Id="788884573" Name="Stop"/>
-						<Switch Id="1281810935" Name="Start"/>
-						<Switch Id="2452206122" Name="False"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="2564540785" Name="ElevatorPowerState">
-					<Switches>
-						<Switch Id="91680483" Name="PowerOn"/>
-						<Switch Id="2235177879" Name="PowerOff"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="2569417515" Name="RainTypeSwitch">
 					<GameParameterRef Id="1342605732"/>
 					<Switches>
@@ -192,12 +155,6 @@
 						<Switch Id="1278453130" Name="MediumRain"/>
 						<Switch Id="2789071989" Name="LightRain"/>
 						<Switch Id="3569642402" Name="Sunny"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="3305603258" Name="GuitarSpeaker">
-					<Switches>
-						<Switch Id="930712164" Name="Off"/>
-						<Switch Id="1651971902" Name="On"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
@@ -352,7 +309,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{415B553F-8469-4C0A-8B8D-21F53EF94AA9}">
+		<SoundBank Id="1768418619" Type="User" Language="SFX" Hash="{26AF2AD1-67F1-E5A8-0303-AF8D202530CD}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>MainSoundFXBank.bnk</Path>
 			<Media>
@@ -416,10 +373,6 @@
 					<ShortName>Walk\Boots_Walk_Heel_01.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_01_818F3B66.wem</CachePath>
 				</File>
-				<File Id="396716257" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Soundly Audio\Musical, Loop, Old, Funky Jazz, Bass Guitar, Piano 03 SND84947.wav</ShortName>
-					<CachePath>SFX/Soundly Audio/Musical, Loop, Old, Funky Jazz, Bass Guitar, Piano 03 SND84947_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="435089554" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_06.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_06_818F3B66.wem</CachePath>
@@ -458,7 +411,7 @@
 				</File>
 				<File Id="800966659" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambiences\3D\Ambience_AirBox01_Lp.wav</ShortName>
-					<CachePath>SFX/Ambiences/3D/Ambience_AirBox01_Lp_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Ambiences/3D/Ambience_AirBox01_Lp_818F3B66.wem</CachePath>
 				</File>
 				<File Id="825794070" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_01.wav</ShortName>
@@ -508,42 +461,19 @@
 					<Plugin Id="206109583" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="323939449" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="556812336" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
-					<Plugin Id="567366394" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="652845231" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="863753366" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="891593514" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
-					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
-					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="903081441" Name="Play_AmbienceMain" DurationType="Infinite">
+				<Event Id="903081441" Name="Play_AmbienceMain" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="133120763"/>
 					</MediaRefs>
-				</Event>
-				<Event Id="3813858242" Name="Play_Guitarloop" DurationType="Infinite">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3305603258" Id="930712164"/>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="567366394"/>
-								</Custom>
-							</PluginRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3305603258" Id="1651971902"/>
-							<MediaRefs>
-								<MediaRef Id="396716257"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
 				</Event>
 				<Event Id="2628165376" Name="Play_Headshot" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
@@ -578,7 +508,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3179694963" Name="Play_Obj_AirBox" MaxAttenuation="10" DurationType="Infinite">
+				<Event Id="3179694963" Name="Play_Obj_AirBox" MaxAttenuation="50" DurationType="OneShot" DurationMin="10" DurationMax="10">
 					<MediaRefs>
 						<MediaRef Id="800966659"/>
 					</MediaRefs>
@@ -594,6 +524,9 @@
 					</PluginRefs>
 				</Event>
 				<Event Id="98439365" Name="Play_Player_Footsteps" DurationType="OneShot" DurationMin="0.30120698" DurationMax="0.64390624">
+					<AuxBusRefs>
+						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="1865857008"/>
@@ -709,7 +642,6 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="4128836072" Name="Stop_Guitarloop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3106700779" Name="Stop_TestBeep_lp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="911602909"/>
@@ -721,57 +653,9 @@
 					</MediaRefs>
 				</Event>
 			</Events>
-			<Busses>
-				<Bus Id="309309195" Name="2DAmbience"/>
-				<Bus Id="765206498" Name="PlayerCloth"/>
-				<Bus Id="1182634443" Name="AmbientBeds"/>
-				<Bus Id="1301074112" Name="3DAmbience"/>
-				<Bus Id="1399649189" Name="Master Bus"/>
-				<Bus Id="1459460693" Name="AmbientMaster"/>
-				<Bus Id="1681012287" Name="PlayerFootsteps"/>
-				<Bus Id="2033911932" Name="NPCMaster"/>
-				<Bus Id="2343802269" Name="PlayerLocomotion"/>
-				<Bus Id="3538689948" Name="PlayerMaster"/>
-				<Bus Id="3545700988" Name="Reverbs"/>
-				<Bus Id="4152869693" Name="2DAmbientBeds"/>
-			</Busses>
-			<AuxBusses>
-				<AuxBus Id="924856803" Name="DelaySlaps">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1588715066"/>
-							<PluginRef Id="1904434771"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
-				<AuxBus Id="1603492950" Name="RoomTunnel"/>
-				<AuxBus Id="3205342581" Name="RoomSmall">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1259256166"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
-				<AuxBus Id="3553615197" Name="RoomLarge">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2849147824"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
-			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
-			<StateGroups>
-				<StateGroup Id="3305603258" Name="GuitarSpeaker">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="930712164" Name="Off"/>
-						<State Id="1651971902" Name="On"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
 					<GameParameterRef Id="2653406601"/>
@@ -788,5 +672,5 @@
 			<Path>MainDialogueBank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3DEF63BC-432D-2438-203A-90F99C6A507A}</FileHash>
+	<FileHash>{3ACEA0D7-D618-7578-68DB-D0C947EA3802}</FileHash>
 </SoundBanksInfo>
