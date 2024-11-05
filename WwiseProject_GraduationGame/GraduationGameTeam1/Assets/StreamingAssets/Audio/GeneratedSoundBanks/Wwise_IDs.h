@@ -21,8 +21,8 @@ namespace AK
         static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
         static const AkUniqueID PLAY_OBJ_AIRBOX = 3179694963U;
-        static const AkUniqueID PLAY_PLAY_JUMP = 889755407U;
-        static const AkUniqueID PLAY_PLAYER_FOOTSTEPS = 98439365U;
+        static const AkUniqueID PLAY_PLAYER_FS = 4078825889U;
+        static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
@@ -166,30 +166,23 @@ namespace AK
             {
                 static const AkUniqueID CONCRETE = 841620460U;
                 static const AkUniqueID DIRT = 2195636714U;
-                static const AkUniqueID FLOWERS = 187032587U;
-                static const AkUniqueID FOREST = 491961918U;
                 static const AkUniqueID GRASS = 4248645337U;
-                static const AkUniqueID GRAVEL = 2185786256U;
-                static const AkUniqueID ICE = 344481046U;
                 static const AkUniqueID LEAVES = 582824249U;
                 static const AkUniqueID LINOLEUM = 3995207278U;
-                static const AkUniqueID MARSH = 1442397674U;
                 static const AkUniqueID METAL = 2473969246U;
+                static const AkUniqueID METAL2 = 2154251720U;
+                static const AkUniqueID METALLADDER = 1642143462U;
+                static const AkUniqueID NOMATERIAL = 1288026751U;
                 static const AkUniqueID PINEFOREST = 2482365692U;
                 static const AkUniqueID PUDDLEDIRT = 2721243382U;
-                static const AkUniqueID PUDDLEGRASS = 967535525U;
                 static const AkUniqueID ROCK = 2144363834U;
                 static const AkUniqueID RUBBER = 437659151U;
                 static const AkUniqueID RUBBERTILE = 1669493947U;
-                static const AkUniqueID SAND = 803837735U;
-                static const AkUniqueID SNOW = 787898836U;
                 static const AkUniqueID STONE = 1216965916U;
                 static const AkUniqueID STONEFLOOR = 1115562054U;
-                static const AkUniqueID SWAMP = 2907906111U;
                 static const AkUniqueID TILETYPE1 = 2681948226U;
                 static const AkUniqueID TILETYPE2 = 2681948225U;
                 static const AkUniqueID WATER = 2654748154U;
-                static const AkUniqueID WATERWADE = 2612303067U;
                 static const AkUniqueID WOODFLOOR = 3111880208U;
             } // namespace SWITCH
         } // namespace GROUNDMATERIALSWITCH
