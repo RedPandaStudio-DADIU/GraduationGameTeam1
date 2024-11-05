@@ -798,7 +798,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584710378846243872
+    m_lastTime: -8584708739127702627
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -1232,31 +1232,11 @@ MonoBehaviour:
     ParentPath: Events/Locomotion/PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584710377015932650
+    m_lastTime: -8584708710951134274
     List:
-    - name: Play_Play_Jump
-      guid: a1a2bc72da4f6d42861326f5b324a78f
-      id: 889755407
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Locomotion
-        ObjectType: 12
-        guid: a2c848ff1589744f939bb3dc40287186
-      - ElementName: PlayerLocomotion
-        ObjectType: 12
-        guid: 578ab8420be4774381c9dc30979d03c2
-      - ElementName: Play_Play_Jump
-        ObjectType: 3
-        guid: a1a2bc72da4f6d42861326f5b324a78f
-      Path: Events/Locomotion/PlayerLocomotion/Play_Play_Jump
-      maxAttenuation: 0
-      maxDuration: 0.31066668
-      minDuration: 0.31066668
-    - name: Play_Player_Footsteps
+    - name: Play_Player_Fs
       guid: 7128890d283c0244ae37c5c00fa299f1
-      id: 98439365
+      id: 4078825889
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1267,13 +1247,33 @@ MonoBehaviour:
       - ElementName: PlayerLocomotion
         ObjectType: 12
         guid: 578ab8420be4774381c9dc30979d03c2
-      - ElementName: Play_Player_Footsteps
+      - ElementName: Play_Player_Fs
         ObjectType: 3
         guid: 7128890d283c0244ae37c5c00fa299f1
-      Path: Events/Locomotion/PlayerLocomotion/Play_Player_Footsteps
+      Path: Events/Locomotion/PlayerLocomotion/Play_Player_Fs
       maxAttenuation: 0
-      maxDuration: 0.64390624
-      minDuration: 0.30120698
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Player_Jump
+      guid: a1a2bc72da4f6d42861326f5b324a78f
+      id: 562256996
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Locomotion
+        ObjectType: 12
+        guid: a2c848ff1589744f939bb3dc40287186
+      - ElementName: PlayerLocomotion
+        ObjectType: 12
+        guid: 578ab8420be4774381c9dc30979d03c2
+      - ElementName: Play_Player_Jump
+        ObjectType: 3
+        guid: a1a2bc72da4f6d42861326f5b324a78f
+      Path: Events/Locomotion/PlayerLocomotion/Play_Player_Jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Player_Land
       guid: fc6740602ad8aa4abb4fcd85dd50cf58
       id: 4249207015
@@ -2556,7 +2556,7 @@ MonoBehaviour:
     ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584709767959461864
+    m_lastTime: -8584708711340547752
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -2922,6 +2922,22 @@ MonoBehaviour:
         - ElementName: Metal
           ObjectType: 10
           guid: 49c71cadee99544ea6a826c348b1cefe
+      - name: NoMaterial
+        guid: d8da53812e81254bab90ffa7b29d01a0
+        id: 1288026751
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GroundMaterialSwitch
+          ObjectType: 11
+          guid: 3528fb3c47d79442b504b635b37aa31e
+        - ElementName: NoMaterial
+          ObjectType: 10
+          guid: d8da53812e81254bab90ffa7b29d01a0
       - name: PineForest
         guid: 0f2f6d250d8b6f4ebef3e39f448cae1e
         id: 2482365692
@@ -3567,7 +3583,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 020000000300000004000000050000000600000007000000080000001f0000002000000022000000270000002d0000002e00000032000000330000004d000000580000005a0000005b000000660000006c00000076000000960000009b0000009c000000a50000004302000007ef0000e5ef0000
+  ExpandedWaapiItemIds: 020000000300000004000000050000000600000007000000110000001f0000002000000022000000270000002d0000002e00000032000000330000004d000000580000005a0000005b000000660000006c00000076000000960000009b0000009c000000a50000004302000007ef0000e5ef0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
