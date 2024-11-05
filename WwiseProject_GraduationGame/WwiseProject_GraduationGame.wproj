@@ -12936,17 +12936,31 @@
 				<PhysicalFolder Path="Actor-Mixer Hierarchy">
 					<WorkUnit Name="Actor-Mixer Hierarchy" ID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" PersistMode="Standalone"/>
 				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Dialogue">
-					<WorkUnit Name="Dialogue" ID="{A513CFBA-0000-4BCC-B3F5-09A82530BFD4}" PersistMode="Standalone"/>
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\01_Sound FX">
+					<WorkUnit Name="01_Sound FX" ID="{83A5BD1C-EED1-4F34-8422-F24BAEB1A991}" PersistMode="Standalone">
+						<PropertyList>
+							<Property Name="Color" Type="int16" Value="2"/>
+							<Property Name="OverrideColor" Type="bool" Value="True"/>
+						</PropertyList>
+					</WorkUnit>
 				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Dialogue\Enemies">
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\02_Dialogue">
+					<WorkUnit Name="02_Dialogue" ID="{A513CFBA-0000-4BCC-B3F5-09A82530BFD4}" PersistMode="Standalone">
+						<PropertyList>
+							<Property Name="Color" Type="int16" Value="15"/>
+							<Property Name="OverrideColor" Type="bool" Value="True"/>
+						</PropertyList>
+					</WorkUnit>
+				</PhysicalFolder>
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\02_Dialogue\Enemies">
 					<WorkUnit Name="Enemies" ID="{4B8655D8-76A5-412E-9837-B5024689CF3A}" PersistMode="Standalone"/>
 				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Sound FX">
-					<WorkUnit Name="Sound FX" ID="{83A5BD1C-EED1-4F34-8422-F24BAEB1A991}" PersistMode="Standalone"/>
-				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Unused">
-					<WorkUnit Name="Unused" ID="{082E929C-34CE-4EC4-B38C-4B6FD19BFB35}" PersistMode="Standalone"/>
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\03_Non-Game">
+					<WorkUnit Name="03_Non-Game" ID="{082E929C-34CE-4EC4-B38C-4B6FD19BFB35}" PersistMode="Standalone">
+						<PropertyList>
+							<Property Name="OverrideColor" Type="bool" Value="True"/>
+						</PropertyList>
+					</WorkUnit>
 				</PhysicalFolder>
 				<PhysicalFolder Path="Attenuations">
 					<WorkUnit Name="Attenuations" ID="{017BDDA0-1BB1-4CE1-8077-79594EC4585C}" PersistMode="Standalone"/>

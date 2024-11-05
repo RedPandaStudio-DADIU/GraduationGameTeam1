@@ -4,9 +4,31 @@
 		<WorkUnit Name="SharedEffects" ID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
 				<Bus Name="Reverbs" ID="{DFC082BE-340B-49DC-AB08-9D7E34CE02C5}">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<AuxBus Name="RoomLarge" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}"/>
+						<AuxBus Name="RoomLarge" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}">
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{87553331-1BC7-4828-892D-64507E52B84D}" ShortID="86024883">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Medium" ID="{AEB3F175-958B-45F2-A4C2-3FBD4F456568}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 						<AuxBus Name="RoomSmall" ID="{73967A86-8EB2-4CF2-AB9A-A4F4360C3FE7}">
+							<PropertyList>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="Effects">
 									<Reference>
@@ -29,7 +51,37 @@
 							</ObjectLists>
 						</AuxBus>
 						<AuxBus Name="RoomTunnel" ID="{0D6FDCD2-CD61-4089-A788-AA26499DCD89}"/>
-						<AuxBus Name="DelaySlaps" ID="{A9EFF5A0-FCBE-4478-BFCF-8F9B76C0944B}"/>
+						<AuxBus Name="DelaySlaps" ID="{A9EFF5A0-FCBE-4478-BFCF-8F9B76C0944B}">
+							<PropertyList>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{C735EF77-5219-4FCC-A574-A81185F85636}" ShortID="462269490">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Medium_Room1" ID="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{6E4BCB37-72C8-47AD-8982-3F622FFAFB88}" ShortID="680324211">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+														<ObjectRef Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

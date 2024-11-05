@@ -37,6 +37,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Guitarloop" ID="{D8B5272D-97FC-47D6-8A87-D10AE65BCF99}" ShortID="758608576">
+					<ChildrenList>
+						<Event Name="Play_Guitarloop" ID="{5A725ECE-C54F-44CA-ACBA-9E386F3552C5}">
+							<ChildrenList>
+								<Action Name="" ID="{71CBFFAB-3626-4907-8E79-64D699CF9144}" ShortID="332459665">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Guitar_speaker" ID="{3E5AFED2-A300-4CCF-BDC7-CB49F6DFE100}" WorkUnitID="{C16AA2B0-97BB-4DD4-9F59-28C579A580B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Guitarloop" ID="{46756ACF-F95F-4084-8EA0-EE1ADA06DDEF}">
+							<ChildrenList>
+								<Action Name="" ID="{5C7E9284-6BD1-47FF-B477-0DAB236B6897}" ShortID="207655062">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Guitarloop" ID="{709C7779-9177-4F7E-8CBF-BF2BA91CFEA1}" WorkUnitID="{C16AA2B0-97BB-4DD4-9F59-28C579A580B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

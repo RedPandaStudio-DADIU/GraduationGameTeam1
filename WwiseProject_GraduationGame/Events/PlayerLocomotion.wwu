@@ -7,7 +7,7 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Event Name="Play_Player_Footsteps" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}">
+				<Event Name="Play_Player_Fs" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -16,13 +16,20 @@
 						<Action Name="" ID="{24F5755A-5A3D-4587-9073-6941B299EF02}" ShortID="199252164">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Player_fs_Boots" ID="{7345F664-A2F5-4F7E-9137-1EB22CBFE1A9}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+									<ObjectRef Name="Player_fs_Base" ID="{7345F664-A2F5-4F7E-9137-1EB22CBFE1A9}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{48F31692-048D-4BBB-934B-1BD7F36AA3C6}" ShortID="749747582">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_MaterialLayer" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Play_Jump" ID="{72BCA2A1-4FDA-426D-8613-26F5B324A78F}">
+				<Event Name="Play_Player_Jump" ID="{72BCA2A1-4FDA-426D-8613-26F5B324A78F}">
 					<ChildrenList>
 						<Action Name="" ID="{ACDAFBC3-8005-47A3-8358-66A4E39D69B9}" ShortID="431340435">
 							<ReferenceList>
@@ -32,9 +39,23 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{A3BFE246-32AE-492D-9004-7439E9105AEF}" ShortID="252289202">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F378BBCD-AB88-477F-84E1-157F6F493138}" ShortID="525022322">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_Jump_MaterialLayer" ID="{99F93661-AE3E-45F4-9A10-440DB59A41CB}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -53,6 +74,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2764C254-CBD0-48B9-B549-E8A544B5D61E}" ShortID="521699204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Land_MaterialLayer" ID="{8213C246-8003-4BC5-9D80-A8A4107A6EAC}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
