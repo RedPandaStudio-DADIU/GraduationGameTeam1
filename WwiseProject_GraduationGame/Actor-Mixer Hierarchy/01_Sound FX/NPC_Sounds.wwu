@@ -14,11 +14,27 @@
 					</ReferenceList>
 					<ChildrenList>
 						<WorkUnit Name="NPC_Locomotion" ID="{44FC7F2B-6F10-42A6-AB22-D76B707A8CF5}" PersistMode="Reference"/>
-						<Folder Name="Enemies" ID="{1660F6B4-4E1B-4BC0-9CC4-127B2F4C5182}" ShortID="847539112">
+						<Folder Name="Diplomat" ID="{EB83897B-D790-444D-8BD0-DD7651B9C5ED}" ShortID="948731895">
 							<ChildrenList>
-								<Folder Name="Diplomat" ID="{EB83897B-D790-444D-8BD0-DD7651B9C5ED}" ShortID="948731895">
+								<RandomSequenceContainer Name="DeathSounds" ID="{6A3A0CB8-BE26-43B9-A2A6-C2FE7F9B492B}" ShortID="89815355">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="DeathSounds" ID="{6A3A0CB8-BE26-43B9-A2A6-C2FE7F9B492B}" ShortID="89815355">
+										<Sound Name="Wilhelm" ID="{59A3304B-35AA-4274-9D8A-4578ED606369}" ShortID="431675090">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -27,13 +43,332 @@
 													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 												</Reference>
 											</ReferenceList>
-										</RandomSequenceContainer>
+											<ChildrenList>
+												<AudioFileSource Name="Wilhelm Scream Remastered" ID="{B43EC164-385F-4569-8082-71F7D762926E}">
+													<Language>English(US)</Language>
+													<AudioFile>Wilhelm Scream Remastered.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="173506951"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Wilhelm Scream Remastered" ID="{B43EC164-385F-4569-8082-71F7D762926E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-								</Folder>
-								<Folder Name="Brute" ID="{CC3382F3-9D5C-4DD0-8E7E-851C07A2354E}" ShortID="359589999"/>
-								<Folder Name="Soldier" ID="{501D4BF2-3928-4F0F-83F0-55BB04C5C3B1}" ShortID="606294743"/>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Brute" ID="{CC3382F3-9D5C-4DD0-8E7E-851C07A2354E}" ShortID="359589999">
+							<ChildrenList>
+								<RandomSequenceContainer Name="Brute_Footsteps" ID="{259A54E7-54FF-4B24-87FD-20599E00264B}" ShortID="820139743">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>39</Value>
+											</ValueList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Br_Fs_01" ID="{871FC243-6FFB-43CF-AE9D-D6423980A778}" ShortID="224553731">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND73240"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmprbysif63/afcache/1426367345Ff4sxqvM_wkFwGSND73240sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="9.072300027987687"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="9.994084522809963"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.3140218303946264"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.3459277917716205"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3" ID="{51CA6FC7-C993-49E0-9378-BE00500F9BF5}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0109606619104241"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.374854637336504"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND73240"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.506382580261593"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="444986285"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3" ID="{51CA6FC7-C993-49E0-9378-BE00500F9BF5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Br_Fs_03" ID="{A0BD8EAF-70E0-497A-81EB-6C1649ED1013}" ShortID="552525669">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND73240"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmprbysif63/afcache/1426367345Ff4sxqvM_wkFwGSND73240sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="8.07774307304786"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="8.975270081164288"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.2795969773299748"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.31066330814441645"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5" ID="{7AED3810-2376-436F-8824-8E6CB93FC89F}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00960486028537456"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.613643851565597"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND73240"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0608307818073721"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.797203403686088"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="892985832"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5" ID="{7AED3810-2376-436F-8824-8E6CB93FC89F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Br_Fs_04" ID="{D72CF9D4-4B8A-4E52-870F-CEDD50AF5E9C}" ShortID="163018273">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND73240"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmprbysif63/afcache/1426367345Ff4sxqvM_wkFwGSND73240sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="18.993612090680102"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="19.794109151973135"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 6.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.6574307304785895"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6851385390428212"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 6" ID="{37E02C12-6962-4081-ABA1-052AF66B3735}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0104702734839477"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.637734839476812"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND73240"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0751956004756243"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.790029726516052"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="287061307"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 6" ID="{37E02C12-6962-4081-ABA1-052AF66B3735}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Br_Fs_05" ID="{13A76113-5F69-4447-A35F-AFB41211ADDD}" ShortID="924039413">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND73240"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmprbysif63/afcache/1426367345Ff4sxqvM_wkFwGSND73240sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="13.09904282115869"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="14.04508480268682"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4534005037783375"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.48614609571788414"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7" ID="{1781C6C4-D583-4EEE-8504-44A60644509A}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0191233154974237"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.689564258818867"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND73240"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0933667756638922"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="711816622"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7" ID="{1781C6C4-D583-4EEE-8504-44A60644509A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Br_Fs_06" ID="{C7841992-FC79-4C93-847B-5B623028D69D}" ShortID="10427011">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND73240"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmprbysif63/afcache/1426367345Ff4sxqvM_wkFwGSND73240sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="25.03372628043661"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="26.028283235376435"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.8664987405541562"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.9009235936188077"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8" ID="{0AB6D68E-1ADA-43F9-BC71-54858E178677}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00946076099881094"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.866842226516053"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND73240"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00946076099881094"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1006167246"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8" ID="{0AB6D68E-1ADA-43F9-BC71-54858E178677}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Br_Fs_02" ID="{BB8C089F-B2C3-4B8D-B1D7-DE68AAEFBD80}" ShortID="424803887">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND73240"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmprbysif63/afcache/1426367345Ff4sxqvM_wkFwGSND73240sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0.16980240694094598"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="1.0673294150573749"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.005877413937867338"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.036943744752308987"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9" ID="{B111AE10-F0D2-47DE-9436-E1B64A37C73B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0245457540626239"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.43542033293698"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND73240"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.111106038530324"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.63818960562822"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="945436620"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9" ID="{B111AE10-F0D2-47DE-9436-E1B64A37C73B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Soldier" ID="{501D4BF2-3928-4F0F-83F0-55BB04C5C3B1}" ShortID="606294743"/>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

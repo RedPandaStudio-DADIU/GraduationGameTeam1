@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="PlayerFootsteps" ID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}" OwnerID="{04B51F7B-58ED-43D7-9FDF-3505548C7E75}" PersistMode="Nested">
 			<ChildrenList>
-				<SwitchContainer Name="Player_Footsteps_MaterialLayer" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" ShortID="204484632">
+				<SwitchContainer Name="Footsteps_MaterialLayer" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" ShortID="204484632">
 					<PropertyList>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
@@ -3447,26 +3447,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Metal_Land" ID="{689F86AB-DAB6-4F7E-803C-035D6E30716E}" ShortID="899085822">
-							<PropertyList>
-								<Property Name="GameAuxSendVolume" Type="Real64">
-									<ValueList>
-										<Value>12</Value>
-									</ValueList>
-								</Property>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-						</RandomSequenceContainer>
 						<Sound Name="Land_NoMaterial" ID="{13EB8E52-3343-4AB6-A7E8-E5D9869F4060}" ShortID="979502892">
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3485,14 +3465,818 @@
 								<ActiveSource Name="Silence" ID="{59020C73-F804-4C21-B032-4392A3B7C99B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Metal_Land_layer" ID="{7E8B8AA1-7E46-4ABA-8902-E9D91A3C24A5}" ShortID="398872608">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Metal_Land1" ID="{689F86AB-DAB6-4F7E-803C-035D6E30716E}" ShortID="899085822">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Metal_fs_01" ID="{EA0BFE32-CBE3-408B-9978-45B5E1E83849}" ShortID="634538877">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.0475"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.0925"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5" ID="{912EC32F-CC89-40D4-B1AE-C251FE6645D3}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.282997355769231"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.582502890625"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.09897306490385"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="601869256"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5" ID="{912EC32F-CC89-40D4-B1AE-C251FE6645D3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Metal_fs_02" ID="{9D75835F-0240-4341-914B-C9F723375124}" ShortID="1071291718">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.09083333333333334"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.13"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7" ID="{AD31C28B-054E-44E0-9978-F850F02FB620}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.247622686298077"/>
+														<Property Name="LoopBegin" Type="Real64" Value="1.11390903645833"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.11390903645833"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.5942184375"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="180730371"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7" ID="{AD31C28B-054E-44E0-9978-F850F02FB620}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Metal_fs_01" ID="{EA0BFE32-CBE3-408B-9978-45B5E1E83849}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Metal_fs_02" ID="{9D75835F-0240-4341-914B-C9F723375124}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal_Land2" ID="{6873458F-ACEA-4177-AB8B-7FE90DA8F5AD}" ShortID="185963995">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Metal_fs_02" ID="{5B0AB455-8CED-44A3-AC20-C8B4FE77D6B0}" ShortID="166667120">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.09083333333333334"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.13"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7" ID="{4A07C4D3-94E2-428E-8A8E-82C44D779C41}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.247622686298077"/>
+														<Property Name="LoopBegin" Type="Real64" Value="1.11390903645833"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.11390903645833"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.5942184375"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="180730371"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7" ID="{4A07C4D3-94E2-428E-8A8E-82C44D779C41}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Metal_fs_03" ID="{ADF86E47-EC4D-49A7-BABA-D51CA25D7C3C}" ShortID="195535991">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.13"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.175"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9" ID="{5CDF2EE8-11F6-4272-8F1E-3199E605950A}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.205430051794181"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.60563121815523"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.14606328125"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="425677546"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9" ID="{5CDF2EE8-11F6-4272-8F1E-3199E605950A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Metal_fs_02" ID="{5B0AB455-8CED-44A3-AC20-C8B4FE77D6B0}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Metal_fs_03" ID="{ADF86E47-EC4D-49A7-BABA-D51CA25D7C3C}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal_Land3" ID="{3F7CBFFF-99A4-4112-BC85-AF9B7E73E535}" ShortID="470364020">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Metal_fs_04" ID="{9A68AF05-E715-4D9B-91A5-8E6FDFE6339B}" ShortID="529386322">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.1775"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.2225"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10" ID="{14B80E39-A404-4DF1-8B01-FE4D18EBA747}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.247622686298077"/>
+														<Property Name="LoopBegin" Type="Real64" Value="2.176721328125"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.176721328125"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.728566171875"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="952443774"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10" ID="{14B80E39-A404-4DF1-8B01-FE4D18EBA747}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Metal_fs_05" ID="{CA7F8ED5-A87A-4663-974D-B4A2E5B00B90}" ShortID="156687416">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.22416666666666665"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.2675"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11" ID="{D81C365D-6C42-4614-8DEF-A53A0A6E9B5B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.294788912259615"/>
+														<Property Name="LoopBegin" Type="Real64" Value="2.74900486979167"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.74900486979167"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.280411015625"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1051943335"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11" ID="{D81C365D-6C42-4614-8DEF-A53A0A6E9B5B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Metal_fs_04" ID="{9A68AF05-E715-4D9B-91A5-8E6FDFE6339B}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Metal_fs_05" ID="{CA7F8ED5-A87A-4663-974D-B4A2E5B00B90}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Metal2_Land_Layer" ID="{A097D0BC-21D3-475C-BB91-E231B56004C3}" ShortID="223018617">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Metal2_Land1" ID="{32510035-6CEF-4A7C-B319-DCBA3B866F84}" ShortID="65825630">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Metal2_Fs_01" ID="{955FD8BE-FC22-4A28-8A1D-C8CAF54F5462}" ShortID="215224519">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND4062"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND4062sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0.025748670584942627"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="0.581388888888889"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 1.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.0033585222502099076"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.07583333333333334"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 1" ID="{DE897CE9-0099-4BD4-92EE-57F86E63110B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.143768502331002"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.15348259032634"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND4062"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.019428175990676"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="530099864"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 1" ID="{DE897CE9-0099-4BD4-92EE-57F86E63110B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Metal2_Fs_02" ID="{D45341A7-DCF5-43A8-AC4A-742942F3F32A}" ShortID="627819841">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND4062"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND4062sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="2.3302546879373076"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="3.057654631961937"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 2.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.30394626364399663"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.3988245172124265"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 2" ID="{91510E15-DF62-433F-ADF5-CC9E2CD68A1D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.144970498251748"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.529015151515151"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND4062"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="998083191"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 2" ID="{91510E15-DF62-433F-ADF5-CC9E2CD68A1D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Metal2_Fs_01" ID="{955FD8BE-FC22-4A28-8A1D-C8CAF54F5462}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Metal2_Fs_02" ID="{D45341A7-DCF5-43A8-AC4A-742942F3F32A}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal2_Land2" ID="{7267D2E6-5B3A-44D1-AC91-7EC422480BC0}" ShortID="56098953">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Metal2_Fs_03" ID="{0485E9E0-D256-4F48-A486-DEA7F9E16875}" ShortID="488878167">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND4062"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND4062sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="3.0898404701931153"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="3.4760705289672544"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.40302267002518893"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.4534005037783375"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 3" ID="{CDC8D0AF-E9A8-4D0D-9265-FCA815E53842}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0621207750582751"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.225525422494172"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND4062"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="201956695"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 3" ID="{CDC8D0AF-E9A8-4D0D-9265-FCA815E53842}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Metal2_Fs_04" ID="{DFDAD60B-21F9-4BCF-826C-64340CF55BCB}" ShortID="373612064">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND4062"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND4062sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="3.5275678701371396"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="4.171284634760706"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 4.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.46011754827875734"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.5440806045340051"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 4" ID="{B72286BD-6258-47BF-AD2C-675FA0F00148}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.153054487179487"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.213826121794872"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND4062"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0180064102564103"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="695763744"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 4" ID="{B72286BD-6258-47BF-AD2C-675FA0F00148}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Metal2_Fs_03" ID="{0485E9E0-D256-4F48-A486-DEA7F9E16875}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Metal2_Fs_04" ID="{DFDAD60B-21F9-4BCF-826C-64340CF55BCB}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal2_Land3" ID="{4A38EA03-C08A-42BE-8ECB-94864173A0EF}" ShortID="889268130">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Metal2_Fs_05" ID="{CD41D30E-5D77-4741-8C19-13D132772D00}" ShortID="958906340">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND4062"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND4062sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="4.357962496501539"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="4.898684578785335"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 5.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.5684298908480269"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6389588581024349"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 5" ID="{46D99D61-5E05-414C-BE55-0D95DA414516}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.204191433566433"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.183394157925408"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND4062"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.00756264568764568"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="64833205"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 5" ID="{46D99D61-5E05-414C-BE55-0D95DA414516}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Metal2_Fs_06" ID="{832246BE-F959-45CA-BEFC-D645F30DABEC}" ShortID="649081286">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND4062"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND4062sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.977889728519452"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="7.557234816680661"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 6.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.910159529806885"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.9857262804366079"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 6" ID="{79724E4F-DC03-4ABA-9E94-F829A37BFEF2}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.202571386946387"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND4062"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.016205710955711"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="497200545"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Footsteps, Human, Metal Ladder, Sneakers SND4062 6" ID="{79724E4F-DC03-4ABA-9E94-F829A37BFEF2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Metal2_Fs_05" ID="{CD41D30E-5D77-4741-8C19-13D132772D00}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Metal2_Fs_06" ID="{832246BE-F959-45CA-BEFC-D645F30DABEC}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="MetalLadder_Land_Layer" ID="{F6D05F1B-8E5B-4FF5-8358-23F1F32D3E0A}" ShortID="41806747">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Tile_Land_Layer" ID="{ADA3CEE8-7791-4904-A61B-486B8CBCFB6D}" ShortID="246310652">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
+								<ItemRef Name="MetalLadder_Land_Layer" ID="{F6D05F1B-8E5B-4FF5-8358-23F1F32D3E0A}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
 								<ItemRef Name="Land_NoMaterial" ID="{13EB8E52-3343-4AB6-A7E8-E5D9869F4060}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Metal_Land" ID="{689F86AB-DAB6-4F7E-803C-035D6E30716E}"/>
+								<ItemRef Name="Metal_Land_layer" ID="{7E8B8AA1-7E46-4ABA-8902-E9D91A3C24A5}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Metal2_Land_Layer" ID="{A097D0BC-21D3-475C-BB91-E231B56004C3}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Tile_Land_Layer" ID="{ADA3CEE8-7791-4904-A61B-486B8CBCFB6D}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
 					</GroupingInfo>

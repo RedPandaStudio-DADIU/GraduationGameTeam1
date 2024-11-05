@@ -1,15 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
 	86438937	Play_HitFlesh			\NPC\Damage\Play_HitFlesh	
-	98439365	Play_Player_Footsteps			\Locomotion\PlayerLocomotion\Play_Player_Footsteps	
 	161393517	Play_TestBeep_lp_3D			\TestEvents\Play_TestBeep_lp_3D	
 	449246991	Play_Reload_Handgun			\Weapons\Handgun\Play_Reload_Handgun	
 	513454534	Play_KillConfirm			\NPC\Damage\Play_KillConfirm	
+	562256996	Play_Player_Jump			\Locomotion\PlayerLocomotion\Play_Player_Jump	
 	858964037	Play_TestBeep_lp			\TestEvents\Play_TestBeep_lp	
-	889755407	Play_Play_Jump			\Locomotion\PlayerLocomotion\Play_Play_Jump	
 	903081441	Play_AmbienceMain			\Ambience\Play_AmbienceMain	
 	1174221978	Play_HitArmor			\NPC\Damage\Play_HitArmor	
 	1670385919	Stop_TestBeep_lp_3D			\TestEvents\Stop_TestBeep_lp_3D	
 	1681067324	Play_TestBeep_3D			\TestEvents\Play_TestBeep_3D	
+	1883912870	Play_Brute_Footsteps			\NPC\Brute\Play_Brute_Footsteps	
 	1955951874	Play_TestBeep			\TestEvents\Play_TestBeep	
 	2435533942	Play_Reload_Rifle			\Weapons\Rifle\Play_Reload_Rifle	
 	2628165376	Play_Headshot			\NPC\Damage\Play_Headshot	
@@ -18,16 +18,43 @@ Event	ID	Name			Wwise Object Path	Notes
 	3179694963	Play_Obj_AirBox			\Ambience\Play_Obj_AirBox	
 	3813858242	Play_Guitarloop			\Ambience\Guitarloop\Play_Guitarloop	
 	4057284179	Play_Idle_Rifle			\Weapons\Rifle\Play_Idle_Rifle	
+	4078825889	Play_Player_Fs			\Locomotion\PlayerLocomotion\Play_Player_Fs	
 	4128836072	Stop_Guitarloop			\Ambience\Guitarloop\Stop_Guitarloop	
 	4249207015	Play_Player_Land			\Locomotion\PlayerLocomotion\Play_Player_Land	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	1044534455	GroundMaterialSwitch			\Switches\GroundMaterialSwitch	
 	2051106367	PlayerSpeedSwitch			\Switches\PlayerSpeedSwitch	
+	3968804893	GroundWetnessSwitch			\Switches\GroundWetnessSwitch	
 
 Switch	ID	Name	Switch Group			Notes
+	437659151	Rubber	GroundMaterialSwitch			
+	582824249	Leaves	GroundMaterialSwitch			
+	841620460	Concrete	GroundMaterialSwitch			
+	1115562054	StoneFloor	GroundMaterialSwitch			
+	1216965916	Stone	GroundMaterialSwitch			
+	1288026751	NoMaterial	GroundMaterialSwitch			
+	1642143462	MetalLadder	GroundMaterialSwitch			
+	1669493947	RubberTile	GroundMaterialSwitch			
+	2144363834	Rock	GroundMaterialSwitch			
+	2154251720	Metal2	GroundMaterialSwitch			
+	2195636714	Dirt	GroundMaterialSwitch			
+	2473969246	Metal	GroundMaterialSwitch			
+	2482365692	PineForest	GroundMaterialSwitch			
+	2654748154	Water	GroundMaterialSwitch			
+	2681948225	TileType2	GroundMaterialSwitch			
+	2681948226	TileType1	GroundMaterialSwitch			
+	2721243382	PuddleDirt	GroundMaterialSwitch			
+	3111880208	WoodFloor	GroundMaterialSwitch			
+	3995207278	Linoleum	GroundMaterialSwitch			
+	4248645337	Grass	GroundMaterialSwitch			
 	1296465089	Sprint	PlayerSpeedSwitch			
 	1865857008	Transition	PlayerSpeedSwitch			
 	2884887403	Sneak	PlayerSpeedSwitch			
+	630539344	Dry	GroundWetnessSwitch			
+	1181096339	Wet	GroundWetnessSwitch			
+	1842026663	Damp	GroundWetnessSwitch			
+	1905651656	Soaked	GroundWetnessSwitch			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3305603258	GuitarSpeaker			\States\Speakers\GuitarSpeaker	
@@ -38,6 +65,7 @@ State	ID	Name	State Group			Notes
 	1651971902	On	GuitarSpeaker			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	870672907	RTPC_GroundWetness			\GameParameters\RTPC_GroundWetness	
 	2653406601	RTPC_PlayerSpeed			\GameParameters\RTPC_PlayerSpeed	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
@@ -63,6 +91,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	206109583	BootRunCompressor (Custom)	Wwise Compressor			
 	323939449	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
+	514808912	EQ_Tile_Fs	Wwise Parametric EQ			
 	556812336	BootRunCompressor (Custom)	Wwise Compressor			
 	652845231	BootRunCompressor (Custom)	Wwise Compressor			
 	863753366	BootRunCompressor (Custom)	Wwise Compressor			
@@ -76,43 +105,83 @@ Effect plug-ins	ID	Name	Type				Notes
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	63893666	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\TestSound\Tone Generator	
 	69832810	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\Sfx_fs_TestSound\Tone Generator	
+	184931808	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Wet\Sfx_fs_TestSound\Tone Generator	
+	310803756	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Damp\Sfx_fs_TestSound\Tone Generator	
+	323944449	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Dry\Sfx_fs_TestSound\Tone Generator	
 	567366394	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Soundly\GuitarSpkr\Guitar_speaker\SpeakerOff\Silence	
+	793404368	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Soaked\Sfx_fs_TestSound\Tone Generator	
+	810201504	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Layer_NoMaterial\Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	33074131	Boots_StartStop_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Boots_StartStop_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Transition\Boots_StartStop_01		67408
-	50251163	Boots_Run_Toe_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_03_25B50D5A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Toe\Boots_Run_Toe_03		61128
-	61446819	Boots_Run_Toe_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_06_30DCEA9F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Toe\Boots_Run_Toe_06		77164
-	108052905	Boots_Run_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_05_8B559579.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Heel\Boots_Run_Heel_05		15644
+	33074131	Boots_StartStop_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Boots_StartStop_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Transition\Boots_StartStop_01		67408
+	50251163	Boots_Run_Toe_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_03_25B50D5A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_03		61128
+	61446819	Boots_Run_Toe_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_06_30DCEA9F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_06		77164
+	64833205	Metal2_Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 5_BA7EE86E.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_05		51280
+	95896769	Tile_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1_C79660D5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_02		38900
+	108052905	Boots_Run_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_05_8B559579.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Heel\Boots_Run_Heel_05		15644
 	133120763	Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1_FBC78EF0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Ambience\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1		8483004
-	157072511	Boots_Walk_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_04_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_04		75220
-	199293111	Boots_Walk_Heel_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_02		16140
-	216218866	Boots_Walk_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_05_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_05		15860
-	221218712	Boots_Walk_Toe_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_05_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_05		68444
-	243008600	Boots_Run_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_06_5CB3E1E0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Heel\Boots_Run_Heel_06		15548
-	293041057	Boots_Walk_Toe_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_02		103192
-	371279162	Boots_Walk_Toe_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_01		69560
-	383454313	Boots_Walk_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_06_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_06		14096
-	390256246	Boots_Run_Toe_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_05_A811F49F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Toe\Boots_Run_Toe_05		54092
-	394144264	Boots_Walk_Heel_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_01		18708
+	141207199	Tile_Fs_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 6_D634B678.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_07		24464
+	157072511	Boots_Walk_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_04_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_04		75220
+	180730371	Metal_fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7_375D18CC.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_02		92316
+	185439445	MetalLadder__Fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 2_1BB066E1.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_03		112352
+	199293111	Boots_Walk_Heel_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_02		16140
+	201956695	Metal2_Fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 3_94A7572B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_03		37174
+	216218866	Boots_Walk_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_05_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_05		15860
+	221218712	Boots_Walk_Toe_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_05_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_05		68444
+	243008600	Boots_Run_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_06_5CB3E1E0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Heel\Boots_Run_Heel_06		15548
+	287061307	Br_Fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 6_275C33B6.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_04		137344
+	293041057	Boots_Walk_Toe_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_02		103192
+	341543950	Tile_Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 4_28483762.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_05		29128
+	343184591	MetalLadder__Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 1_04514761.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_02		111408
+	362820780	Tile_Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072_E0460A23.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_01		41070
+	371279162	Boots_Walk_Toe_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_01		69560
+	383454313	Boots_Walk_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_06_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_06		14096
+	390256246	Boots_Run_Toe_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_05_A811F49F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_05		54092
+	394144264	Boots_Walk_Heel_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_01		18708
 	396716257	Guitarloop	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Musical, Loop, Old, Funky Jazz, Bass Guitar, Piano 03 SND84947_FBC78EF0.wem		\Actor-Mixer Hierarchy\Soundly\GuitarSpkr\Guitar_speaker\Guitarloop		7372836
-	435089554	Boots_Walk_Toe_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_06_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_06		80028
-	484715529	Boots_Run_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_04_3A8107D8.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Toe\Boots_Run_Toe_04		68880
-	511784467	Boots_Walk_Toe_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_07_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_07		77760
-	662185199	Boots_Run_Toe_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_02_2BAD6CE9.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Toe\Boots_Run_Toe_02		63840
-	693450681	Boots_Walk_Heel_08	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_08_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_08		15524
+	425677546	Metal_fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9_6C4E94DA.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_03		103856
+	435089554	Boots_Walk_Toe_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_06_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_06		80028
+	444986285	Br_Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3_B26B7776.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_01		97320
+	453613366	Metal_fs	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2_AD62EBE1.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs		106048
+	484715529	Boots_Run_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_04_3A8107D8.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_04		68880
+	497200545	Metal2_Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 6_B5EE7E0F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_06		54158
+	511784467	Boots_Walk_Toe_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_07_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_07		77760
+	530099864	Metal2_Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 1_0915C658.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_01		51572
+	532629220	MetalLadder__Fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 3_6B8C755D.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_04		114656
+	601869256	Metal_fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5_F23F92C5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_01		99256
+	632500118	Tile_Fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 3_7F6137E5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_04		37502
+	635165068	Tile_Fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 2_4FEA05E1.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_03		38846
+	662185199	Boots_Run_Toe_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_02_2BAD6CE9.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_02		63840
+	693450681	Boots_Walk_Heel_08	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_08_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_08		15524
+	695763744	Metal2_Fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 4_2B6CCF17.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_04		60164
+	711816622	Br_Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7_260FECEB.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_05		163808
 	719082772	Boots_Jump	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Locomotion\Boots_Jump_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Boots_Jump		59744
-	752755002	Boots_Walk_Toe_08	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_08_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_08		74284
-	769664889	Boots_Run_Heel_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_04_163E44F6.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Heel\Boots_Run_Heel_04		15828
-	773481961	Boots_Run_Heel_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_03_6C3BA84C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Heel\Boots_Run_Heel_03		16668
+	747369287	Tile_Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 5_8D255C0B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_06		28600
+	752755002	Boots_Walk_Toe_08	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_08_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_08		74284
+	769664889	Boots_Run_Heel_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_04_163E44F6.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Heel\Boots_Run_Heel_04		15828
+	773481961	Boots_Run_Heel_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_03_6C3BA84C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Heel\Boots_Run_Heel_03		16668
+	798037316	MetalLadder__Fs_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 6_EC71941D.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_07		122844
 	800966659	Ambience_AirBox01_Lp	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Ambiences\3D\Ambience_AirBox01_Lp_FBC78EF0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Ambience\Ambience_AirBox01_Lp		960096
-	825794070	Boots_Run_Heel_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_01_CB362389.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Heel\Boots_Run_Heel_01		14712
-	831702141	Boots_Run_Heel_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_02_55F6251A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Heel\Boots_Run_Heel_02		15020
-	877196418	Boots_Walk_Toe_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_03_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Toe\Boots_Walk_Toe_03		71532
+	823800221	Metal_fs_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 13_49C00E5C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_07		90352
+	825794070	Boots_Run_Heel_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_01_CB362389.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Heel\Boots_Run_Heel_01		14712
+	831702141	Boots_Run_Heel_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_02_55F6251A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Heel\Boots_Run_Heel_02		15020
+	860796674	MetalLadder__Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 5_C7F176C9.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_06		120436
+	877196418	Boots_Walk_Toe_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_03_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_03		71532
+	892985832	Br_Fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5_53ECCCFF.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_03		141480
 	911602909	SFX_TestSound_lp_3D	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\TestFiles\Beep Loop by DongKingKong Id-395901 9_1E14C19D.wem		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\3D_TestFiles\SFX_TestSound_lp_3D		198606
 	921613273	sfx_test_Beep_1000hz	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926_818F3B66.wem		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\sfx_test_Beep_1000hz		3624
-	939251175	Boots_Walk_Heel_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_07_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_07		16096
-	1042406623	Boots_StartStop_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Boots_StartStop_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Transition\Boots_StartStop_02		66200
+	939251175	Boots_Walk_Heel_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_07_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_07		16096
+	945436620	Br_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9_3D7BA8CC.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_02		101296
+	952443774	Metal_fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10_BBF5FC94.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_04		106048
+	954114005	Tile_Fs_08	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 7_0501DBE8.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_08		27710
+	981283187	MetalLadder__Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 4_B48680E7.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_05		127908
+	998083191	Metal2_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 2_D3AF315A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_02		69926
+	1006167246	Br_Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8_82672B4B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_06		189236
+	1009290141	Metal_fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12_4D8041D2.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_06		155100
+	1039493257	MetalLadder__Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058_3DD649DF.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_01		93168
+	1042406623	Boots_StartStop_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Boots_StartStop_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Transition\Boots_StartStop_02		66200
+	1051943335	Metal_fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11_99919E0B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_05		102124
 	1054467131	Boots_Land	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Locomotion\Boots_Land_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Boots_Land		79224
-	1067223387	Boots_Walk_Heel_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_04_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Walk\Heel\Boots_Walk_Heel_04		15880
-	1072609968	Boots_Run_Toe_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_01_943E3BDE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_fs_Boots\Sprint\Toe\Boots_Run_Toe_01		66088
+	1067223387	Boots_Walk_Heel_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_04_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Heel\Boots_Walk_Heel_04		15880
+	1072609968	Boots_Run_Toe_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_01_943E3BDE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_01		66088
 
