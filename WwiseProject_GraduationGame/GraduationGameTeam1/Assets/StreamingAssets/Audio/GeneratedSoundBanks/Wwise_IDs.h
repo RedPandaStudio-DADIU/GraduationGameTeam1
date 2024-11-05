@@ -13,14 +13,22 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_ALT_CHARGE_FIFLE = 2073520173U;
+        static const AkUniqueID PLAY_ALT_FIRE_RIFLE = 243729645U;
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
+        static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
+        static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
         static const AkUniqueID PLAY_HEADSHOT = 2628165376U;
         static const AkUniqueID PLAY_HITARMOR = 1174221978U;
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
+        static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
+        static const AkUniqueID PLAY_LOAD_HANDGUN = 249020240U;
+        static const AkUniqueID PLAY_LOAD_RIFLE = 3060105905U;
         static const AkUniqueID PLAY_OBJ_AIRBOX = 3179694963U;
         static const AkUniqueID PLAY_PLAYER_FS = 4078825889U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
@@ -32,6 +40,7 @@ namespace AK
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
         static const AkUniqueID PLAY_TESTBEEP_LP_3D = 161393517U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
+        static const AkUniqueID PLAY_UNLOAD_RIFLE = 1943012356U;
         static const AkUniqueID STOP_GUITARLOOP = 4128836072U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
