@@ -2718,6 +2718,10 @@ MonoBehaviour:
   isMovable: 1
   health: 80
   animator: {fileID: 0}
+  hitSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &449032379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6114,6 +6118,10 @@ MonoBehaviour:
   isMovable: 1
   health: 80
   animator: {fileID: 0}
+  hitSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &1480669399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6806,6 +6814,10 @@ MonoBehaviour:
   isMovable: 1
   health: 80
   animator: {fileID: 0}
+  hitSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &1768530677
 GameObject:
   m_ObjectHideFlags: 0
@@ -7441,7 +7453,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
         type: 3}
+      propertyPath: jumpEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 222d0c05e8bdc9c4fab702d01cfc3d86,
+        type: 2}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
+      propertyPath: landEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b1b4c8f8cfb1ba44aca4c2fb3b82679,
+        type: 2}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
       propertyPath: myFootstep.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c8cdcdfef1a98495b9ecda31ceb13785,
+        type: 2}
+    - target: {fileID: 548180961564580995, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
+      propertyPath: footstepsEvent.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: c8cdcdfef1a98495b9ecda31ceb13785,
         type: 2}
@@ -7558,7 +7588,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6388424242882455740, guid: f5596a47fafb6cf4d8babba461f760b9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1915956714}
   m_SourcePrefab: {fileID: 100100000, guid: f5596a47fafb6cf4d8babba461f760b9, type: 3}
 --- !u!4 &1915956707 stripped
 Transform:
@@ -7572,6 +7606,54 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1915956706}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1915956714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915956708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214fe4f0e5a11e74aa3e99ca822d4285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  range: 100
+  damage: 20
+  chargeDamage: 80
+  pushForce: 100
+  chargedPushForce: 300
+  pushableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  chargeProgressBar: {fileID: 0}
+  explosionRadius: 5
+  gunshotEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5b4581f422dbdde4db91cf9b497dbb23,
+      type: 2}
+  chargedGunshotEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 388d3a55eae3fb648b01773a9b340197,
+      type: 2}
+  chargingEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 80595e11a70055740843ddb7ed3024d2,
+      type: 2}
+  chargeCompleteEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 889deffbcf76257488c1a3e37a266606,
+      type: 2}
+  explosionEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 388d3a55eae3fb648b01773a9b340197,
+      type: 2}
 --- !u!1 &1923010166
 GameObject:
   m_ObjectHideFlags: 0
@@ -7582,6 +7664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923010168}
   - component: {fileID: 1923010169}
+  - component: {fileID: 1923010170}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -7631,6 +7714,32 @@ MonoBehaviour:
   spatialAudioPoolSize: 0
   maxSoundPropagationDepth: 0
   engineLogging: 0
+--- !u!114 &1923010170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923010166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f5cbdbd7e48453c87978282a3e8cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0398a3f2ecc0745e48b1463ba839933c,
+      type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1929380107
 GameObject:
   m_ObjectHideFlags: 0
