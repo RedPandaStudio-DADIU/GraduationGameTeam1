@@ -21,15 +21,15 @@
 				</Property>
 				<Property Name="ExternalSourcesOutputPath" Type="string">
 					<ValueList>
-						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
-						<Value Platform="Mac">GeneratedSoundBanks\Mac\</Value>
+						<Value Platform="Windows">GeneratedSoundBanks\Windows</Value>
+						<Value Platform="Mac">GeneratedSoundBanks\Mac</Value>
 					</ValueList>
 				</Property>
 				<Property Name="LicenseKey" Type="string" Value="PHByb2plY3QgaWQ9IjE4MTY0IiBtYXNrPSJUSENOMzQ4MSIgZW5jPSIwIj48bGljZW5zZSBpZD0iMSIgbmFtZT0iV3dpc2UiIHR5cGU9IjMiIHBsYXRmb3Jtcz0iMiwzLDQsMTAsMTMsMTQiIGV4cGlyZXM9IjIwMjUtMDItMDEiICAvPjxsaWNlbnNlIGlkPSIyMiIgbmFtZT0iTGV2ZWwgQSBMaWNlbnNlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjIsMyw0LDEwLDEzLDE0IiBleHBpcmVzPSIyMDI1LTAyLTAxIiAgLz48bGljZW5zZSBpZD0iMjEiIG5hbWU9Ik1haW50ZW5hbmNlIiB0eXBlPSIzIiBwbGF0Zm9ybXM9IjIsMyw0LDEwLDEzLDE0IiBleHBpcmVzPSIyMDI1LTAyLTAxIiAgLz48bGljZW5zZSBpZD0iMjUiIG5hbWU9IkFsbCBXd2lzZSBQbHVnLUlucyIgdHlwZT0iMyIgIGV4cGlyZXM9IjIwMjUtMDItMDEiICAvPjwvcHJvamVjdD4=|DKVr6/kkJIPDMOkA6fb/VL5SxqtTOpbgaO4QTwg+gDoKku5rPA0U8lWhkiHAev4+D7i0VL6ZfNOxs7keIOfAUw3KRanEG8hsV0fJn8BRcA7qSE7ucvi8Xs0I/jB7avhH6xgpyEwrRMytj9izsWNdoKMrbg4tYIMqKD6XMWoRIdoMMSUiefAabczW1jmYywm0KxKEdX+mCisMkBVmyUv3NhhxWX32j1zmqFagqnt4HE5EsAJky3E5/1JKwdV/5RLcArtDQbKZ3KuCVz1vkaiM1dsnj00YoaWXI0pcqUmPpKts5DAkh41D3wcOEBGc5VZkpHQ/6rSFn/SRCoFUZEMJVw=="/>
 				<Property Name="SoundBankGenerateEstimatedDuration" Type="bool" Value="True"/>
 				<Property Name="SoundBankGenerateHeaderFile" Type="bool" Value="True"/>
 				<Property Name="SoundBankGenerateMaxAttenuationInfo" Type="bool" Value="True"/>
-				<Property Name="SoundBankHeaderFilePath" Type="string" Value="Z:/Users/andersnorddaljendresen/Documents/GitHub/GraduationGameTeam1/Assets/StreamingAssets/Audio/GeneratedSoundBanks"/>
+				<Property Name="SoundBankHeaderFilePath" Type="string" Value=".\GraduationGameTeam1\Assets\StreamingAssets\Audio\GeneratedSoundBanks"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>
 						<Value Platform="Windows">GeneratedSoundBanks\Windows\</Value>
@@ -62,6 +62,10 @@
 				</Property>
 				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2023.1.7|Build=8574|VersionName=v2023.1.7|Config=Release"/>
 			</PropertyList>
+			<MiscSettings>
+				<MiscSettingEntry Name="Cache"><![CDATA[.cache]]></MiscSettingEntry>
+				<MiscSettingEntry Name="Originals"><![CDATA[Originals]]></MiscSettingEntry>
+			</MiscSettings>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">
 					<PropertyList>
@@ -12932,17 +12936,31 @@
 				<PhysicalFolder Path="Actor-Mixer Hierarchy">
 					<WorkUnit Name="Actor-Mixer Hierarchy" ID="{5EA7BBF8-64C0-4A50-8821-A07E8BE21D68}" PersistMode="Standalone"/>
 				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Dialogue">
-					<WorkUnit Name="Dialogue" ID="{A513CFBA-0000-4BCC-B3F5-09A82530BFD4}" PersistMode="Standalone"/>
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\01_Sound FX">
+					<WorkUnit Name="01_Sound FX" ID="{83A5BD1C-EED1-4F34-8422-F24BAEB1A991}" PersistMode="Standalone">
+						<PropertyList>
+							<Property Name="Color" Type="int16" Value="2"/>
+							<Property Name="OverrideColor" Type="bool" Value="True"/>
+						</PropertyList>
+					</WorkUnit>
 				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Dialogue\Enemies">
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\02_Dialogue">
+					<WorkUnit Name="02_Dialogue" ID="{A513CFBA-0000-4BCC-B3F5-09A82530BFD4}" PersistMode="Standalone">
+						<PropertyList>
+							<Property Name="Color" Type="int16" Value="15"/>
+							<Property Name="OverrideColor" Type="bool" Value="True"/>
+						</PropertyList>
+					</WorkUnit>
+				</PhysicalFolder>
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\02_Dialogue\Enemies">
 					<WorkUnit Name="Enemies" ID="{4B8655D8-76A5-412E-9837-B5024689CF3A}" PersistMode="Standalone"/>
 				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Sound FX">
-					<WorkUnit Name="Sound FX" ID="{83A5BD1C-EED1-4F34-8422-F24BAEB1A991}" PersistMode="Standalone"/>
-				</PhysicalFolder>
-				<PhysicalFolder Path="Actor-Mixer Hierarchy\Unused">
-					<WorkUnit Name="Unused" ID="{082E929C-34CE-4EC4-B38C-4B6FD19BFB35}" PersistMode="Standalone"/>
+				<PhysicalFolder Path="Actor-Mixer Hierarchy\03_Non-Game">
+					<WorkUnit Name="03_Non-Game" ID="{082E929C-34CE-4EC4-B38C-4B6FD19BFB35}" PersistMode="Standalone">
+						<PropertyList>
+							<Property Name="OverrideColor" Type="bool" Value="True"/>
+						</PropertyList>
+					</WorkUnit>
 				</PhysicalFolder>
 				<PhysicalFolder Path="Attenuations">
 					<WorkUnit Name="Attenuations" ID="{017BDDA0-1BB1-4CE1-8077-79594EC4585C}" PersistMode="Standalone"/>

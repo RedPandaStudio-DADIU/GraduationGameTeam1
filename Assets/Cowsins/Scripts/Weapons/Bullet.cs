@@ -27,7 +27,6 @@ namespace cowsins
         [HideInInspector] public float criticalMultiplier;
         [HideInInspector] public float duration;
 
-
         private bool projectileHasAlreadyHit = false; // Prevent from double hitting issues
 
         private void Start()

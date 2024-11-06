@@ -186,7 +186,6 @@ namespace cowsins
         /// </summary>
         private void ManageFallDamage()
         {
-            Debug.Log("FAAAAAAAAAAALLLLL DAMAGE MANAGEMENT");
             // Grab current player height
             if (!player.grounded && transform.position.y > height || !player.grounded && height == null) height = transform.position.y;
 

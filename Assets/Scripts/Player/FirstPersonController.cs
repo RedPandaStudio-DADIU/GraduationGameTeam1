@@ -26,9 +26,7 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 	public float FallTimeout = 0.15f;
 
-	[Header("Wwise Event")]
-	public AK.Wwise.Event myFootstep;
-
+	[Space(10)]
 	[Header("Player Grounded")]
 	[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 	public bool Grounded = true;
@@ -39,6 +37,7 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("What layers the character uses as ground")]
 	public LayerMask GroundLayers;
 
+	[Space(10)]
 	[Header("Cinemachine")]
 	[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 	public GameObject CinemachineCameraTarget;
@@ -47,6 +46,17 @@ public class FirstPersonController : MonoBehaviour
 	[Tooltip("How far in degrees can you move the camera down")]
 	public float BottomClamp = -90.0f;
 
+	[Space(10)]
+
+	[Header("Sounds")]
+    [SerializeField] private AK.Wwise.Event footstepsEvent;
+	private float footstepsTimer = 0f;	
+	[SerializeField] private float footstepsInterval = 0.5f; // Adjust interval for timing between steps
+
+	[SerializeField] private AK.Wwise.Event jumpEvent;
+    [SerializeField] private AK.Wwise.Event landEvent;
+	private bool wasGroundedLastFrame;
+	private bool hasJumped = false; 
 
 
 	// cinemachine
@@ -58,11 +68,6 @@ public class FirstPersonController : MonoBehaviour
 	private float _rotationVelocity;
 	private float _verticalVelocity;
 	private float _terminalVelocity = 53.0f;
-
-	// Wwise
-	private bool footstepIsPlaying = false;
-	private float lastFootstepTime = 0;
-
 
 	// timeout deltatime
 	private float _jumpTimeoutDelta;
@@ -88,9 +93,6 @@ public class FirstPersonController : MonoBehaviour
 		{
 			_mainCamera = Camera.main;
 		}
-
-		lastFootstepTime = Time.time;
-
 	}
 
 	private void Start()
@@ -101,7 +103,7 @@ public class FirstPersonController : MonoBehaviour
 		// reset our timeouts on start
 		_jumpTimeoutDelta = JumpTimeout;
 		_fallTimeoutDelta = FallTimeout;
-
+		
 
 	}
 
@@ -130,17 +132,33 @@ public class FirstPersonController : MonoBehaviour
 			
 		}
 
-		public void QuitGame(){
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)){
-            Application.Quit();
-        }
-    }
+		public void QuitGame()
+		{
+			if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape))
+			{
+				Application.Quit();
+			}
+    	}
+
+		private float landingCooldown = 0.6f;
+		private float lastLandTime; // Variable to store the last time the player landed
 
 		private void GroundedCheck()
 		{
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+			
+			 Debug.Log($"Grounded: {Grounded}, wasGroundedLastFrame: {wasGroundedLastFrame}, hasJumped: {hasJumped}");
+
+			if (Grounded && !wasGroundedLastFrame && Time.time > lastLandTime + landingCooldown)
+    		{
+				landEvent.Post(gameObject);
+				Debug.Log("Landed Sound");
+				hasJumped = false; 
+				lastLandTime = Time.time;
+			}
+			wasGroundedLastFrame = Grounded;
 		}
 
 		private void CameraRotation()
@@ -189,10 +207,8 @@ public class FirstPersonController : MonoBehaviour
 
 			float speedOffset = 0.1f;
 
-			AkSoundEngine.SetRTPCValue("RTPC_PlayerSpeed", _speed, gameObject);
-
-		// accelerate or decelerate to target speed
-		if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
+			// accelerate or decelerate to target speed
+			if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
 			{
 				// creates curved result rather than a linear one giving a more organic speed change
 				// note T in Lerp is clamped, so we don't need to clamp our speed
@@ -223,34 +239,32 @@ public class FirstPersonController : MonoBehaviour
 
 				
 				inputDirection = forward * moveInput.z + right * moveInput.x;
-	
-
-			if (!footstepIsPlaying)
-			{
-				myFootstep.Post(gameObject);
-				lastFootstepTime = Time.time;
-				footstepIsPlaying = true;
 			}
-			else
-            {
-				if (_speed > 1)
-                {
-                    if (Time.time - lastFootstepTime > 2 / _speed)
-                    {
-                        footstepIsPlaying = false;
-					}
-				}
-            }
-		}
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+			if (Grounded && currentHorizontalSpeed > 0f)
+			{
+				footstepsTimer += Time.deltaTime;
+				if (footstepsTimer >= footstepsInterval)
+				{
+					footstepsEvent.Post(gameObject); 
+					Debug.Log("Play the footsteps sound");
+					// Play the footsteps sound
+					footstepsTimer = 0f; // Reset timer
+				}
+			}
+			
+
 		}
 
 		private void JumpAndGravity()
 		{
 			if (Grounded)
 			{
+				
+
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
@@ -265,6 +279,10 @@ public class FirstPersonController : MonoBehaviour
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					 jumpEvent.Post(gameObject); 
+					 Debug.Log("jump Sound  " );
+					hasJumped = true; 
+				
 				}
 
 				// jump timeout
@@ -284,8 +302,7 @@ public class FirstPersonController : MonoBehaviour
 					_fallTimeoutDelta -= Time.deltaTime;
 				}
 
-				// if we are not grounded, do not jump
-				//_input.jump = false;
+				
 			}
 
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
@@ -293,6 +310,7 @@ public class FirstPersonController : MonoBehaviour
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+			//wasGroundedLastFrame = Grounded; 
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

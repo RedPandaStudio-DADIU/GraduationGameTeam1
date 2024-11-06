@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 
 
@@ -189,7 +189,7 @@ namespace cowsins
                                 EditorGUI.indentLevel--;
                             }
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("jumpCooldown"));
-                            if (myScript.coyoteJumpTime == 0) EditorGUILayout.LabelField("Coyote Jump won´t be applied since the value is equal to 0", EditorStyles.helpBox);
+                            if (myScript.coyoteJumpTime == 0) EditorGUILayout.LabelField("Coyote Jump wonï¿½t be applied since the value is equal to 0", EditorStyles.helpBox);
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("coyoteJumpTime"));
                             EditorGUI.indentLevel--;
                         }
@@ -242,7 +242,7 @@ namespace cowsins
                                 if (myScript.canWallRun)
                                 {
                                     EditorGUI.indentLevel++;
-                                    EditorGUILayout.LabelField("NEW FEATURE AVAILABLE UNDER ´CAMERA´ SETTINGS", EditorStyles.helpBox);
+                                    EditorGUILayout.LabelField("NEW FEATURE AVAILABLE UNDER ï¿½CAMERAï¿½ SETTINGS", EditorStyles.helpBox);
                                     EditorGUILayout.PropertyField(serializedObject.FindProperty("whatIsWallRunWall"));
                                     EditorGUILayout.PropertyField(serializedObject.FindProperty("useGravity"));
                                     if (myScript.useGravity)
@@ -303,7 +303,7 @@ namespace cowsins
                             if (showDashing)
                             {
                                 EditorGUI.indentLevel++;
-                                if (myScript.canDash && !myScript.infiniteDashes) EditorGUILayout.LabelField("NEW FEATURE AVAILABLE UNDER ´ASSIGNABLES´ SETTINGS", EditorStyles.helpBox);
+                                if (myScript.canDash && !myScript.infiniteDashes) EditorGUILayout.LabelField("NEW FEATURE AVAILABLE UNDER ï¿½ASSIGNABLESï¿½ SETTINGS", EditorStyles.helpBox);
                                 EditorGUILayout.PropertyField(serializedObject.FindProperty("canDash"));
                                 if (myScript.canDash)
                                 {
@@ -341,7 +341,7 @@ namespace cowsins
                                 if (myScript.allowGrapple)
                                 {
                                     EditorGUI.indentLevel++;
-                                    EditorGUILayout.LabelField("NEW SOUNDS AVAILABLE UNDER ´Others´ SETTINGS", EditorStyles.helpBox);
+                                    EditorGUILayout.LabelField("NEW SOUNDS AVAILABLE UNDER ï¿½Othersï¿½ SETTINGS", EditorStyles.helpBox);
                                     EditorGUILayout.PropertyField(serializedObject.FindProperty("maxGrappleDistance"));
                                     EditorGUILayout.PropertyField(serializedObject.FindProperty("grappleCooldown"));
                                     EditorGUILayout.PropertyField(serializedObject.FindProperty("distanceToBreakGrapple"));
@@ -392,19 +392,28 @@ namespace cowsins
 
                     case "Others":
                         EditorGUILayout.LabelField("OTHERS", EditorStyles.boldLabel);
-                        EditorGUILayout.LabelField("FOOTSTEPS", EditorStyles.boldLabel);
+                        // EditorGUILayout.LabelField("FOOTSTEPS", EditorStyles.boldLabel);
+                        // GUILayout.Box("", new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(8) });
+                        // EditorGUILayout.PropertyField(serializedObject.FindProperty("sounds"));
+                        // EditorGUILayout.PropertyField(serializedObject.FindProperty("footstepVolume"));
+                        // EditorGUILayout.PropertyField(serializedObject.FindProperty("footstepSpeed"));
+                        // EditorGUILayout.PropertyField(serializedObject.FindProperty("footsteps"));
+                        // GUILayout.Space(5);
+                        // if (myScript.allowGrapple)
+                        // {
+                        //     EditorGUI.indentLevel++;
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("grappleSounds"));
+                        //     EditorGUI.indentLevel--;
+                        // }
+
+                         EditorGUILayout.LabelField("Audio Events", EditorStyles.boldLabel);
                         GUILayout.Box("", new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(8) });
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("sounds"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("footstepVolume"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("footstepSpeed"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("footsteps"));
-                        GUILayout.Space(5);
-                        if (myScript.allowGrapple)
-                        {
-                            EditorGUI.indentLevel++;
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("grappleSounds"));
-                            EditorGUI.indentLevel--;
-                        }
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("footstepEvent"), new GUIContent("Footstep Event"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("jumpEvent"), new GUIContent("Jump Event"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("landingEvent"), new GUIContent("Landing Event"));
+                    
+
+
                         GUILayout.Space(5);
                         EditorGUILayout.LabelField("EVENTS", EditorStyles.boldLabel);
                         GUILayout.Box("", new GUILayoutOption[] { GUILayout.ExpandWidth(true), GUILayout.Height(8) });

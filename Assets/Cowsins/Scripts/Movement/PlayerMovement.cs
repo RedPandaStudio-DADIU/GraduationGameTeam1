@@ -7,6 +7,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using AK.Wwise;
 
 namespace cowsins
 {
@@ -25,11 +26,24 @@ namespace cowsins
                                 OnWallBounce, OnStartDash, OnDashing, OnEndDash, OnStartClimb, OnClimbing, OnEndClimb,
                                 OnStartGrapple, OnGrappling, OnStopGrapple, OnGrappleEnabled;
         }
-        [System.Serializable]
-        public class FootStepsAudio // store your footsteps audio
-        {
-            public AudioClip[] defaultStep, grassStep, metalStep, mudStep, woodStep;
-        }
+        // [System.Serializable]
+        // public class FootStepsAudio // store your footsteps audio
+        // {
+        //    // public AudioClip[] defaultStep, grassStep, metalStep, mudStep, woodStep;
+        //      public AK.Wwise.Event footstepEvent; // Wwise event for footstep
+        //     public AK.Wwise.Event jumpEvent; // Wwise event for jump
+        //     public AK.Wwise.Event landingEvent; // Wwise event for landing
+
+        // }
+
+         //[Header("Wwise Events")]
+        public AudioClip[] defaultStep, grassStep, metalStep, mudStep, woodStep;
+        public AK.Wwise.Event footstepEvent; // Wwise event for footstep
+        public AK.Wwise.Event jumpEvent; // Wwise event for jump
+        public AK.Wwise.Event landingEvent; // Wwise event for landing
+
+
+
         [System.Serializable]
         public enum CrouchCancelMethod // Different methods to determine how crouch should stop
         {
@@ -334,7 +348,8 @@ namespace cowsins
         //Others
         [HideInInspector] public bool isCrouching;
 
-        [SerializeField] private FootStepsAudio footsteps;
+        //[SerializeField] private FootStepsAudio footsteps;
+        [SerializeField] private AK.Wwise.Event footstepsEvent;
 
 
         // Audio
@@ -732,48 +747,55 @@ namespace cowsins
                 return;
             }
 
+            // Adjust step frequency based on the player's current speed
+            float speedFactor = rb.velocity.magnitude / runSpeed;  // Normalize speed between 0 and 1
+            float adjustedStepInterval = (1 - footstepSpeed) / (speedFactor + 0.1f); // Avoid division by zero
+
+
             // Wait for the next time to play a sound
-            stepTimer -= Time.deltaTime * rb.velocity.magnitude / 15;
+            stepTimer -= Time.deltaTime * rb.velocity.magnitude / 10;
 
             // Play the sound and reset
             if (stepTimer <= 0)
             {
-                stepTimer = 1 - footstepSpeed;
-                _audio.pitch = UnityEngine.Random.Range(.7f, 1.3f); // Add variety to avoid boring and repetitive sounds while walking
-                                                                    // Remember that you can also add a few more sounds to each of the layers to add even more variety to your sfx.
-                if (Physics.Raycast(playerCam.position, Vector3.down, out RaycastHit hit, 2.5f, whatIsGround))
-                {
+                 stepTimer = adjustedStepInterval;
 
-                    int i = 0;
-                    switch (LayerMask.LayerToName(hit.transform.gameObject.layer))
-                    {
-                        case "Ground": // Ground
-                            i = UnityEngine.Random.Range(0, footsteps.defaultStep.Length);
-                            _audio.PlayOneShot(footsteps.defaultStep[i], footstepVolume);
-                            break;
-                        case "Grass": // Grass
-                            i = UnityEngine.Random.Range(0, footsteps.grassStep.Length);
-                            _audio.PlayOneShot(footsteps.grassStep[i], footstepVolume);
-                            break;
-                        case "Metal": // Metal
+                footstepEvent.Post(gameObject);
+                // _audio.pitch = UnityEngine.Random.Range(.7f, 1.3f); // Add variety to avoid boring and repetitive sounds while walking
+                //                                                     // Remember that you can also add a few more sounds to each of the layers to add even more variety to your sfx.
+                // if (Physics.Raycast(playerCam.position, Vector3.down, out RaycastHit hit, 2.5f, whatIsGround))
+                // {
 
-                            i = UnityEngine.Random.Range(0, footsteps.metalStep.Length);
-                            _audio.PlayOneShot(footsteps.metalStep[i], footstepVolume);
-                            break;
-                        case "Mud": // Mud
-                            i = UnityEngine.Random.Range(0, footsteps.mudStep.Length);
-                            _audio.PlayOneShot(footsteps.mudStep[i], footstepVolume);
-                            break;
-                        case "Wood": // Wood
-                            i = UnityEngine.Random.Range(0, footsteps.woodStep.Length);
-                            _audio.PlayOneShot(footsteps.woodStep[i], footstepVolume);
-                            break;
-                        default: // Default
-                            i = UnityEngine.Random.Range(0, footsteps.defaultStep.Length);
-                            _audio.PlayOneShot(footsteps.defaultStep[i], footstepVolume);
-                            break;
-                    }
-                }
+                //     int i = 0;
+                //     switch (LayerMask.LayerToName(hit.transform.gameObject.layer))
+                //     {
+                //         case "Ground": // Ground
+                //             i = UnityEngine.Random.Range(0, footsteps.defaultStep.Length);
+                //             _audio.PlayOneShot(footsteps.defaultStep[i], footstepVolume);
+                //             break;
+                //         case "Grass": // Grass
+                //             i = UnityEngine.Random.Range(0, footsteps.grassStep.Length);
+                //             _audio.PlayOneShot(footsteps.grassStep[i], footstepVolume);
+                //             break;
+                //         case "Metal": // Metal
+
+                //             i = UnityEngine.Random.Range(0, footsteps.metalStep.Length);
+                //             _audio.PlayOneShot(footsteps.metalStep[i], footstepVolume);
+                //             break;
+                //         case "Mud": // Mud
+                //             i = UnityEngine.Random.Range(0, footsteps.mudStep.Length);
+                //             _audio.PlayOneShot(footsteps.mudStep[i], footstepVolume);
+                //             break;
+                //         case "Wood": // Wood
+                //             i = UnityEngine.Random.Range(0, footsteps.woodStep.Length);
+                //             _audio.PlayOneShot(footsteps.woodStep[i], footstepVolume);
+                //             break;
+                //         default: // Default
+                //             i = UnityEngine.Random.Range(0, footsteps.defaultStep.Length);
+                //             _audio.PlayOneShot(footsteps.defaultStep[i], footstepVolume);
+                //             break;
+                //     }
+                // }
             }
         }
 
@@ -826,10 +848,11 @@ namespace cowsins
             }
 
             //staminaLoss
-            // if (usesStamina) stamina -= staminaLossOnJump;
+            if (usesStamina) stamina -= staminaLossOnJump;
 
+            jumpEvent.Post(gameObject);
 
-            SoundManager.Instance.PlaySound(sounds.jumpSFX, 0, 0, false, 0);
+            //SoundManager.Instance.PlaySound(sounds.jumpSFX, 0, 0, false, 0);
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 

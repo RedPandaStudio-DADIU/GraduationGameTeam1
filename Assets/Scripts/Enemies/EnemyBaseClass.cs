@@ -16,6 +16,12 @@ public abstract class EnemyBaseClass : MonoBehaviour
     public Animator animator;
 
 
+    [Header("Sound Events")]
+    [SerializeField] private AK.Wwise.Event hitSoundEvent;
+    //[SerializeField] private AK.Wwise.Event deathSoundEvent;
+
+
+
     public abstract void Attack();
     public abstract void Die();
     public abstract void LosePlayer(Vector3 playerPosition);
@@ -37,6 +43,13 @@ public abstract class EnemyBaseClass : MonoBehaviour
         if(this.health > 0){
             this.health -= damage;
         }
+
+        if (hitSoundEvent != null)
+        {
+            hitSoundEvent.Post(gameObject);
+            Debug.Log("Played hit sound for enemy.");
+        }
+
     }
 
     public float GetAttackDistance(){
