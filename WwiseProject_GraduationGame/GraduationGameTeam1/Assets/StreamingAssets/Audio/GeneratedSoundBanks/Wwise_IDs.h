@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
+        static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
         static const AkUniqueID PLAY_HEADSHOT = 2628165376U;
         static const AkUniqueID PLAY_HITARMOR = 1174221978U;
