@@ -4288,6 +4288,7 @@
 								<Value>12</Value>
 							</ValueList>
 						</Property>
+						<Property Name="OverrideEffect" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -5823,6 +5824,21 @@
 							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{C0D94AE7-A9C5-4838-B92E-1B760BDC0EB7}" ShortID="623046378">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+												<ObjectRef Name="High_Freq_Cut_3" ID="{AB43D98E-8FA5-4C12-AFA0-54483E6AF9C9}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
