@@ -349,7 +349,7 @@ namespace cowsins
         [HideInInspector] public bool isCrouching;
 
         //[SerializeField] private FootStepsAudio footsteps;
-          [SerializeField] private AK.Wwise.Event footstepsEvent;
+        [SerializeField] private AK.Wwise.Event footstepsEvent;
 
 
         // Audio
@@ -747,13 +747,18 @@ namespace cowsins
                 return;
             }
 
+            // Adjust step frequency based on the player's current speed
+            float speedFactor = rb.velocity.magnitude / runSpeed;  // Normalize speed between 0 and 1
+            float adjustedStepInterval = (1 - footstepSpeed) / (speedFactor + 0.1f); // Avoid division by zero
+
+
             // Wait for the next time to play a sound
-            stepTimer -= Time.deltaTime * rb.velocity.magnitude / 15;
+            stepTimer -= Time.deltaTime * rb.velocity.magnitude / 10;
 
             // Play the sound and reset
             if (stepTimer <= 0)
             {
-                stepTimer = 1 - footstepSpeed;
+                 stepTimer = adjustedStepInterval;
 
                 footstepEvent.Post(gameObject);
                 // _audio.pitch = UnityEngine.Random.Range(.7f, 1.3f); // Add variety to avoid boring and repetitive sounds while walking
