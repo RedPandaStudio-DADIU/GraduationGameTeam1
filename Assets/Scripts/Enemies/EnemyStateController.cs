@@ -21,7 +21,8 @@ public class EnemyStateController : MonoBehaviour
         currentState = new EnemyIdleState();
         currentState.OnEnter(this);
         playerTransform = GameObject.FindWithTag("Player").transform;
-        playerBodyTransform =  GameObject.Find("Capsule").transform;
+        // playerBodyTransform =  GameObject.Find("Capsule").transform;
+        playerBodyTransform =  GameObject.FindWithTag("Player").transform;
 
         enemy = GetComponent<EnemyBaseClass>();
     }
@@ -88,6 +89,9 @@ public class EnemyStateController : MonoBehaviour
 
     public bool CanSeePlayer(){
 
+        // Debug.Log("Inside CanSeePlayer");
+        // Debug.Log("Player Body Position: " + playerBodyTransform.position);
+
         // Check if enemy within attacking distance of the player
         float attackDistance = enemy.GetAttackDistance();
 
@@ -95,11 +99,14 @@ public class EnemyStateController : MonoBehaviour
         Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
         // Vector3 directionToPlayer = playerTransform.position - enemy.transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
+        // Debug.Log("Distance to player: " + distanceToPlayer);
 
         if (distanceToPlayer > attackDistance){
             playerInRange = false;
             return playerInRange;
         }
+        // Debug.Log("Distance check passed by: " + enemy.name);
+
 
         // Check if enemy can see the player - player in the field of view of an enemy
         float fieldOfViewAngle = enemy.GetFieldOfView();
@@ -110,19 +117,22 @@ public class EnemyStateController : MonoBehaviour
             return playerInRange;
         }  
 
+        // Debug.Log("Angle check passed by: " + enemy.name);
+
+
         Debug.DrawRay(enemy.transform.position, directionToPlayer.normalized * distanceToPlayer, Color.red);
 
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            // if (hit.collider.CompareTag("Player"))
-            if (hit.collider.CompareTag("PlayerBody"))
+            if (hit.collider.CompareTag("Player"))
+            // if (hit.collider.CompareTag("PlayerBody"))
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
                 GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
 
                 playerInRange = true;
-                Debug.Log("Raycast check passed by: " + enemy.name);
+                // Debug.Log("Raycast check passed by: " + enemy.name);
 
                 return playerInRange;
             }
@@ -173,6 +183,28 @@ public class EnemyStateController : MonoBehaviour
 
     public IEnemyState GetPreviousState(){
         return this.previousState;
+    }
+
+    public void Recovery(float ragdollDuration){
+        StartCoroutine(RecoverAfterDelay(this, ragdollDuration));
+    }
+
+    IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
+    {
+        Debug.Log("Coroutine started");
+        yield return new WaitForSeconds(delay);
+
+        if (enemy != null)
+        {
+            Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+            IEnemyState prevState = enemy.GetPreviousState();
+            if(prevState is EnemyAttackState || prevState is EnemyIdleState){
+                enemy.ChangeState(prevState);
+            }
+
+        } else {
+            Debug.Log("Enemy is null!!");
+        }
     }
 
 

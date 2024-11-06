@@ -159,9 +159,8 @@ public class EnemyRagdollController : MonoBehaviour
             kvp.Key.localRotation = kvp.Value.localRotation;
         }
 
-        SetRagdollActive(false); // Disable ragdoll physics
 
-        yield return new WaitForSeconds(animatorEnableDelay); // Wait briefly
+        yield return new WaitForSeconds(animatorEnableDelay);
 
         if (animator != null) animator.enabled = true;
         if (navMeshAgent != null) navMeshAgent.enabled = true;

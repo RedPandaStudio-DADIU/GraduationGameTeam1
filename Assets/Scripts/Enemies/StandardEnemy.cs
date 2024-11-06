@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cowsins;
 
 public class StandardEnemy : EnemyBaseClass
 {
@@ -16,6 +17,7 @@ public class StandardEnemy : EnemyBaseClass
     public override void Attack(){
         // turn towards the player and do the raycast
         Debug.Log("Attacking");
+        GetComponent<EnemyWeaponController>().HandleHitscanProjectileShot();
     }
 
     public override void Die(){
