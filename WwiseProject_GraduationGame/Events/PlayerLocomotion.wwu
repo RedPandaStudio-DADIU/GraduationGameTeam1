@@ -52,27 +52,6 @@
 				</Event>
 				<Event Name="Play_Player_Jump" ID="{72BCA2A1-4FDA-426D-8613-26F5B324A78F}">
 					<ChildrenList>
-						<Action Name="" ID="{ACDAFBC3-8005-47A3-8358-66A4E39D69B9}" ShortID="431340435">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Boots_Jump" ID="{7844C93D-8BF9-4FB9-8266-1B97E3A8E1A3}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{A3BFE246-32AE-492D-9004-7439E9105AEF}" ShortID="252289202">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{F378BBCD-AB88-477F-84E1-157F6F493138}" ShortID="525022322">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -80,28 +59,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{F0E91D91-3976-4861-B7CB-795A65A15886}" ShortID="481473487">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{CFAA0A19-258A-4E48-94F0-9DC5F5FF8CB9}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_Player_Land" ID="{604067FC-D82A-4AAA-BB4F-CD85DD50CF58}">
 					<ChildrenList>
-						<Action Name="" ID="{6AD519D9-E3B2-4108-9AF9-DC371D333723}" ShortID="907612199">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Boots_Land" ID="{BC50D42D-C482-4681-A7E8-4178935D01AC}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{62D3E198-1861-4116-A4AB-14E18A88CAAB}" ShortID="1059193494">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{2764C254-CBD0-48B9-B549-E8A544B5D61E}" ShortID="521699204">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Play_Land_MaterialLayer" ID="{8213C246-8003-4BC5-9D80-A8A4107A6EAC}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7EA88EB4-FE62-43D2-9431-53D2376C2FCA}" ShortID="211224812">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Land" ID="{789FA8AF-79F7-4274-B276-C1F0554A3A49}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
