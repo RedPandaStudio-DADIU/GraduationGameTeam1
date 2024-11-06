@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master
     guid: d2b3f9926e5be84bbd1fcd54538eb6e9
     GuidInternal: 
-    m_lastTime: -8584707923354605746
+    m_lastTime: -8584707884670766086
     List:
     - name: Master Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -451,7 +451,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX
     guid: d2201e2c39a40c4b940fb6d4f3340678
     GuidInternal: 
-    m_lastTime: -8584707923354605746
+    m_lastTime: -8584707884670760802
     List:
     - name: 2DAmbience
       guid: 078218de11fe064e80eeb58c458d4232
@@ -605,7 +605,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584707923354595751
+    m_lastTime: -8584707884670760802
     List:
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
@@ -798,7 +798,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584707923044620327
+    m_lastTime: -8584707884663609898
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -826,7 +826,7 @@ MonoBehaviour:
     ParentPath: Events\Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584707923356843067
+    m_lastTime: -8584707884671327132
     List:
     - name: Guitarloop
       guid: 2d27b5d8fc97d6478a87d10ae65bcf99
@@ -896,7 +896,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 227f14cafebe914dad7d2ff95174c7a6
       Path: Events\Ambience\Play_Obj_AirBox
-      maxAttenuation: 20
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Stop_Guitarloop
@@ -917,8 +917,8 @@ MonoBehaviour:
         guid: cf6a75465ff984408ea0ee1ada06ddef
       Path: Events\Ambience\Guitarloop\Stop_Guitarloop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -943,7 +943,7 @@ MonoBehaviour:
     ParentPath: Events\GameWorld
     guid: b9dee002a444974f876d94dadf6db20c
     GuidInternal: 
-    m_lastTime: -8584707923356843067
+    m_lastTime: -8584707884671327132
     List:
     - name: Elevator
       guid: 1d22329c1617c9448172562d58e45749
@@ -1106,8 +1106,25 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584712384672474708
+    m_lastTime: -8584707883965098119
     List:
+    - name: Brute
+      guid: b40a645e462ab04598fb93ffebcbc9ad
+      id: 591672203
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      Path: Events\NPC\Brute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Damage
       guid: 22d08caf04b95245ba09a77f632759c4
       id: 1786804762
@@ -1125,6 +1142,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Brute_Footsteps
+      guid: b989e5f174c5ce45b63f6d36555e9823
+      id: 1883912870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      - ElementName: Play_Brute_Footsteps
+        ObjectType: 3
+        guid: b989e5f174c5ce45b63f6d36555e9823
+      Path: Events\NPC\Brute\Play_Brute_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.98510176
+      minDuration: 0.5063826
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
       id: 2628165376
@@ -1232,7 +1269,7 @@ MonoBehaviour:
     ParentPath: Events\Locomotion\PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584707923356828101
+    m_lastTime: -8584707883965098119
     List:
     - name: Play_Player_Fs
       guid: 7128890d283c0244ae37c5c00fa299f1
@@ -1252,8 +1289,8 @@ MonoBehaviour:
         guid: 7128890d283c0244ae37c5c00fa299f1
       Path: Events\Locomotion\PlayerLocomotion\Play_Player_Fs
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4394294
+      minDuration: 0.30120698
     - name: Play_Player_Jump
       guid: a1a2bc72da4f6d42861326f5b324a78f
       id: 562256996
@@ -1272,8 +1309,8 @@ MonoBehaviour:
         guid: a1a2bc72da4f6d42861326f5b324a78f
       Path: Events\Locomotion\PlayerLocomotion\Play_Player_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.31066668
+      minDuration: 0.31066668
     - name: Play_Player_Land
       guid: fc6740602ad8aa4abb4fcd85dd50cf58
       id: 4249207015
@@ -1880,7 +1917,7 @@ MonoBehaviour:
     ParentPath: States\States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584707923350957188
+    m_lastTime: -8584707884663536185
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2556,7 +2593,7 @@ MonoBehaviour:
     ParentPath: Switches\Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584707923350946549
+    m_lastTime: -8584707884663530764
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -3455,7 +3492,7 @@ MonoBehaviour:
     m_lastTime: -8584718494383184653
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 060000000700000008000000090000000c0000000e0000000f000000290000002f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
