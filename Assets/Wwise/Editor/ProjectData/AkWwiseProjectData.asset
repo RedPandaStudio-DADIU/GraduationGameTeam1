@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master
     guid: d2b3f9926e5be84bbd1fcd54538eb6e9
     GuidInternal: 
-    m_lastTime: -8584710369410830190
+    m_lastTime: -8584707886703774144
     List:
     - name: Master Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -451,7 +451,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX
     guid: d2201e2c39a40c4b940fb6d4f3340678
     GuidInternal: 
-    m_lastTime: -8584710380230880576
+    m_lastTime: -8584707886703770108
     List:
     - name: 2DAmbience
       guid: 078218de11fe064e80eeb58c458d4232
@@ -605,7 +605,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584709600315012724
+    m_lastTime: -8584707886703768120
     List:
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
@@ -798,7 +798,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584708739127702627
+    m_lastTime: -8584707868128315278
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -826,7 +826,7 @@ MonoBehaviour:
     ParentPath: Events/Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584709751749651987
+    m_lastTime: -8584707886704186387
     List:
     - name: Guitarloop
       guid: 2d27b5d8fc97d6478a87d10ae65bcf99
@@ -930,7 +930,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584710353590393626
+    m_lastTime: -8584707907770120020
     List: []
   - PhysicalPath: Events/GameWorld.wwu
     PathAndIcons:
@@ -943,7 +943,7 @@ MonoBehaviour:
     ParentPath: Events/GameWorld
     guid: b9dee002a444974f876d94dadf6db20c
     GuidInternal: 
-    m_lastTime: -8584711191809286484
+    m_lastTime: -8584707886704184119
     List:
     - name: Elevator
       guid: 1d22329c1617c9448172562d58e45749
@@ -1106,8 +1106,25 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584711542416938306
+    m_lastTime: -8584707886704182478
     List:
+    - name: Brute
+      guid: b40a645e462ab04598fb93ffebcbc9ad
+      id: 591672203
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      Path: Events/NPC/Brute
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Damage
       guid: 22d08caf04b95245ba09a77f632759c4
       id: 1786804762
@@ -1125,6 +1142,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Brute_Footsteps
+      guid: b989e5f174c5ce45b63f6d36555e9823
+      id: 1883912870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      - ElementName: Play_Brute_Footsteps
+        ObjectType: 3
+        guid: b989e5f174c5ce45b63f6d36555e9823
+      Path: Events/NPC/Brute/Play_Brute_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.98510176
+      minDuration: 0.5063826
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
       id: 2628165376
@@ -1232,7 +1269,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion/PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584708710951134274
+    m_lastTime: -8584707886704180933
     List:
     - name: Play_Player_Fs
       guid: 7128890d283c0244ae37c5c00fa299f1
@@ -1252,8 +1289,8 @@ MonoBehaviour:
         guid: 7128890d283c0244ae37c5c00fa299f1
       Path: Events/Locomotion/PlayerLocomotion/Play_Player_Fs
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4394294
+      minDuration: 0.30120698
     - name: Play_Player_Jump
       guid: a1a2bc72da4f6d42861326f5b324a78f
       id: 562256996
@@ -1272,8 +1309,8 @@ MonoBehaviour:
         guid: a1a2bc72da4f6d42861326f5b324a78f
       Path: Events/Locomotion/PlayerLocomotion/Play_Player_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.31066668
+      minDuration: 0.31066668
     - name: Play_Player_Land
       guid: fc6740602ad8aa4abb4fcd85dd50cf58
       id: 4249207015
@@ -1511,8 +1548,8 @@ MonoBehaviour:
         guid: 4bda268bbb8f614abbd11865ece170be
       Path: Events/Weapons/Rifle/Play_Alt_Fire_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1701359
+      minDuration: 1.1701359
     - name: Play_ChargeRdy_Rifle
       guid: 22a84d4619c8de418ac1254051c5b41a
       id: 3158001838
@@ -1531,8 +1568,8 @@ MonoBehaviour:
         guid: 22a84d4619c8de418ac1254051c5b41a
       Path: Events/Weapons/Rifle/Play_ChargeRdy_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.21527286
+      minDuration: 0.21527286
     - name: Play_FireMain_Handgun
       guid: 1de7222c9c749d4b9e7b46004626286e
       id: 3547089943
@@ -1551,8 +1588,8 @@ MonoBehaviour:
         guid: 1de7222c9c749d4b9e7b46004626286e
       Path: Events/Weapons/Handgun/Play_FireMain_Handgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.6950881
+      minDuration: 2.914464
     - name: Play_FireMain_Rifle
       guid: 21155b7f2b6f2444b70d8e9997774966
       id: 634184142
@@ -1571,8 +1608,8 @@ MonoBehaviour:
         guid: 21155b7f2b6f2444b70d8e9997774966
       Path: Events/Weapons/Rifle/Play_FireMain_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.7125
+      minDuration: 3.5157292
     - name: Play_Hitmarker_main
       guid: e84137034ce32946b2d5dbb724670881
       id: 941492189
@@ -1591,8 +1628,8 @@ MonoBehaviour:
         guid: e84137034ce32946b2d5dbb724670881
       Path: Events/Weapons/Hitmarkers/Play_Hitmarker_main
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.14302395
+      minDuration: 0.14302395
     - name: Play_Idle_Rifle
       guid: 4f3692d7a9c6dc499f7866d8056ac20d
       id: 4057284179
@@ -1631,8 +1668,8 @@ MonoBehaviour:
         guid: 3d0558495dabc04ea8d9576484f6d709
       Path: Events/Weapons/Handgun/Play_Load_handgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8439909
+      minDuration: 1.8439909
     - name: Play_Load_Rifle
       guid: ee808dabe4361c4aa362e95ade77c721
       id: 3060105905
@@ -1651,8 +1688,8 @@ MonoBehaviour:
         guid: ee808dabe4361c4aa362e95ade77c721
       Path: Events/Weapons/Rifle/Play_Load_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4822084
+      minDuration: 1.4822084
     - name: Play_Reload_Handgun
       guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
       id: 449246991
@@ -1711,8 +1748,8 @@ MonoBehaviour:
         guid: 298d9293da1fc14aa984bea16cd9154b
       Path: Events/Weapons/Rifle/Play_Unload_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.43002084
+      minDuration: 0.43002084
     - name: Rifle
       guid: 187839cf4c717a4d81ecae0e6abdd7e9
       id: 4262674733
@@ -1880,7 +1917,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584709727057892676
+    m_lastTime: -8584707886701859102
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2556,7 +2593,7 @@ MonoBehaviour:
     ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584708711340547752
+    m_lastTime: -8584707886701854654
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -2778,38 +2815,6 @@ MonoBehaviour:
         - ElementName: Dirt
           ObjectType: 10
           guid: 2d424bc19747ec4dbc712a88b04d1a34
-      - name: Flowers
-        guid: bc55f5dea490d6469568ee6d88e03baa
-        id: 187032587
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Flowers
-          ObjectType: 10
-          guid: bc55f5dea490d6469568ee6d88e03baa
-      - name: Forest
-        guid: 4dd4e9657b87314cb54ee628dfb5100f
-        id: 491961918
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Forest
-          ObjectType: 10
-          guid: 4dd4e9657b87314cb54ee628dfb5100f
       - name: Grass
         guid: 5f46fef4b636384ca249ee10e999d216
         id: 4248645337
@@ -2826,38 +2831,6 @@ MonoBehaviour:
         - ElementName: Grass
           ObjectType: 10
           guid: 5f46fef4b636384ca249ee10e999d216
-      - name: Gravel
-        guid: 8008f14376495c4f81284b821bd50bd0
-        id: 2185786256
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Gravel
-          ObjectType: 10
-          guid: 8008f14376495c4f81284b821bd50bd0
-      - name: Ice
-        guid: b46957512577854497d6aae1df47dae8
-        id: 344481046
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Ice
-          ObjectType: 10
-          guid: b46957512577854497d6aae1df47dae8
       - name: Leaves
         guid: 4fa35132496d37428f4edd32ceb5745e
         id: 582824249
@@ -2890,22 +2863,6 @@ MonoBehaviour:
         - ElementName: Linoleum
           ObjectType: 10
           guid: 8d194637ddf1ca449b1544c6626f2019
-      - name: Marsh
-        guid: e11f7fb7c83fbd489a105d9786a5c28c
-        id: 1442397674
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Marsh
-          ObjectType: 10
-          guid: e11f7fb7c83fbd489a105d9786a5c28c
       - name: Metal
         guid: 49c71cadee99544ea6a826c348b1cefe
         id: 2473969246
@@ -2922,6 +2879,38 @@ MonoBehaviour:
         - ElementName: Metal
           ObjectType: 10
           guid: 49c71cadee99544ea6a826c348b1cefe
+      - name: Metal2
+        guid: 19c0ef6bf6212e47bae57355a0be4fae
+        id: 2154251720
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GroundMaterialSwitch
+          ObjectType: 11
+          guid: 3528fb3c47d79442b504b635b37aa31e
+        - ElementName: Metal2
+          ObjectType: 10
+          guid: 19c0ef6bf6212e47bae57355a0be4fae
+      - name: MetalLadder
+        guid: 3ca293dab354f4418263242c5362ae5c
+        id: 1642143462
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: GroundMaterialSwitch
+          ObjectType: 11
+          guid: 3528fb3c47d79442b504b635b37aa31e
+        - ElementName: MetalLadder
+          ObjectType: 10
+          guid: 3ca293dab354f4418263242c5362ae5c
       - name: NoMaterial
         guid: d8da53812e81254bab90ffa7b29d01a0
         id: 1288026751
@@ -2970,22 +2959,6 @@ MonoBehaviour:
         - ElementName: PuddleDirt
           ObjectType: 10
           guid: ded6666de8ce144d9b8171965752fb54
-      - name: PuddleGrass
-        guid: 5c85e9efbb2f39468b552c2c1c36b969
-        id: 967535525
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: PuddleGrass
-          ObjectType: 10
-          guid: 5c85e9efbb2f39468b552c2c1c36b969
       - name: Rock
         guid: d0174209729a854c94d84cc19d2fbef7
         id: 2144363834
@@ -3034,38 +3007,6 @@ MonoBehaviour:
         - ElementName: RubberTile
           ObjectType: 10
           guid: b92473b2824c3e41b2161c48e4c1ab72
-      - name: Sand
-        guid: 866798ba344fe244a0cea492de324a46
-        id: 803837735
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Sand
-          ObjectType: 10
-          guid: 866798ba344fe244a0cea492de324a46
-      - name: Snow
-        guid: 62efd91e52f7254f9dae96b34253f1bb
-        id: 787898836
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Snow
-          ObjectType: 10
-          guid: 62efd91e52f7254f9dae96b34253f1bb
       - name: Stone
         guid: 5273cb04574d8649a90d582d29064cf7
         id: 1216965916
@@ -3098,22 +3039,6 @@ MonoBehaviour:
         - ElementName: StoneFloor
           ObjectType: 10
           guid: f2e786924b87a74fa8af77f3f4fb9722
-      - name: Swamp
-        guid: 30a0cd0ddadb93438a5d26c235579e1d
-        id: 2907906111
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: Swamp
-          ObjectType: 10
-          guid: 30a0cd0ddadb93438a5d26c235579e1d
       - name: TileType1
         guid: 4df01e694212b449b6809d7985011c04
         id: 2681948226
@@ -3162,22 +3087,6 @@ MonoBehaviour:
         - ElementName: Water
           ObjectType: 10
           guid: 5cb2a76306746c4c8424832c80f32dd7
-      - name: WaterWade
-        guid: 02baa347fb589c438ad8ae7490ab5635
-        id: 2612303067
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Switches
-          ObjectType: 12
-          guid: bcc703895f75f24a85557f1a1fc0cc7c
-        - ElementName: GroundMaterialSwitch
-          ObjectType: 11
-          guid: 3528fb3c47d79442b504b635b37aa31e
-        - ElementName: WaterWade
-          ObjectType: 10
-          guid: 02baa347fb589c438ad8ae7490ab5635
       - name: WoodFloor
         guid: 59bcc4dbc1009c45a77bc8775e93748b
         id: 3111880208
@@ -3583,7 +3492,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 020000000300000004000000050000000600000007000000110000001f0000002000000022000000270000002d0000002e00000032000000330000004d000000580000005a0000005b000000660000006c00000076000000960000009b0000009c000000a50000004302000007ef0000e5ef0000
+  ExpandedWaapiItemIds: 0300000004000000050000000600000007000000110000001f0000002000000022000000270000002d0000002e00000032000000330000004d000000580000005a0000005b0000006600000076000000960000009b0000009c000000a50000004302000007ef0000e5ef0000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

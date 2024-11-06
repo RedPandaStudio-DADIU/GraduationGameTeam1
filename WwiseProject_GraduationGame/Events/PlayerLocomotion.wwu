@@ -14,6 +14,13 @@
 					</PropertyList>
 					<ChildrenList>
 						<Action Name="" ID="{24F5755A-5A3D-4587-9073-6941B299EF02}" ShortID="199252164">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Player_fs_Base" ID="{7345F664-A2F5-4F7E-9137-1EB22CBFE1A9}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
@@ -24,6 +31,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Footsteps_MaterialLayer" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4F1ABD04-0E6C-4A32-B6F1-82E6561CFBF9}" ShortID="531333176">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_ClothMovement" ID="{BEF50A8C-D7AF-4E72-9BFD-34A1E9292CD7}" WorkUnitID="{04B51F7B-58ED-43D7-9FDF-3505548C7E75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FD1D9A0-05B9-441A-83CA-4B9019E9BB28}" ShortID="10730670">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player_fs_LeatherBoots" ID="{7CC51FCA-7918-4DAC-91D5-B76E85A92D20}" WorkUnitID="{DFE88EF9-CCEA-48A5-BDF7-74CA2A7A23D7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
