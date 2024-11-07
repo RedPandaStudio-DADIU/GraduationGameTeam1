@@ -896,7 +896,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 227f14cafebe914dad7d2ff95174c7a6
       Path: Events\Ambience\Play_Obj_AirBox
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Stop_Guitarloop
@@ -917,8 +917,8 @@ MonoBehaviour:
         guid: cf6a75465ff984408ea0ee1ada06ddef
       Path: Events\Ambience\Guitarloop\Stop_Guitarloop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1160,8 +1160,8 @@ MonoBehaviour:
         guid: b989e5f174c5ce45b63f6d36555e9823
       Path: Events\NPC\Brute\Play_Brute_Footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.98510176
+      minDuration: 0.5063826
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
       id: 2628165376
@@ -1179,9 +1179,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: c9b75f22062d044b89d2cd542543537b
       Path: Events\NPC\Damage\Play_Headshot
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 50
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Play_HitArmor
       guid: 7224f57cce69b0498f8bba0af51b30a7
       id: 1174221978
@@ -1200,8 +1200,8 @@ MonoBehaviour:
         guid: 7224f57cce69b0498f8bba0af51b30a7
       Path: Events\NPC\Damage\Play_HitArmor
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.17999999
+      minDuration: 0.17999999
     - name: Play_HitFlesh
       guid: cc852a0e76f9904aac119160fdc951d8
       id: 86438937
@@ -1220,8 +1220,8 @@ MonoBehaviour:
         guid: cc852a0e76f9904aac119160fdc951d8
       Path: Events\NPC\Damage\Play_HitFlesh
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.17999999
+      minDuration: 0.17999999
     - name: Play_KillConfirm
       guid: 1ec68a8dd7bf6f4783569feebcba8f75
       id: 513454534
@@ -1240,8 +1240,8 @@ MonoBehaviour:
         guid: 1ec68a8dd7bf6f4783569feebcba8f75
       Path: Events\NPC\Damage\Play_KillConfirm
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
   - PhysicalPath: Events\Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1289,8 +1289,8 @@ MonoBehaviour:
         guid: 7128890d283c0244ae37c5c00fa299f1
       Path: Events\Locomotion\PlayerLocomotion\Play_Player_Fs
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4394294
+      minDuration: 0.30120698
     - name: Play_Player_Jump
       guid: a1a2bc72da4f6d42861326f5b324a78f
       id: 562256996
@@ -1309,8 +1309,8 @@ MonoBehaviour:
         guid: a1a2bc72da4f6d42861326f5b324a78f
       Path: Events\Locomotion\PlayerLocomotion\Play_Player_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.31066668
+      minDuration: 0.31066668
     - name: Play_Player_Land
       guid: fc6740602ad8aa4abb4fcd85dd50cf58
       id: 4249207015
@@ -1329,8 +1329,8 @@ MonoBehaviour:
         guid: fc6740602ad8aa4abb4fcd85dd50cf58
       Path: Events\Locomotion\PlayerLocomotion\Play_Player_Land
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.412125
+      minDuration: 0.412125
   - PhysicalPath: Events\TestEvents.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1359,8 +1359,8 @@ MonoBehaviour:
         guid: 39881d9e698e7c4cadcf1df672d74b58
       Path: Events\TestEvents\Play_TestBeep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Play_TestBeep_3D
       guid: a2b0feb8efac514cb71e37507570a294
       id: 1681067324
@@ -1375,9 +1375,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: a2b0feb8efac514cb71e37507570a294
       Path: Events\TestEvents\Play_TestBeep_3D
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 50
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Play_TestBeep_lp
       guid: cea6f54db023f4458480f1fcfef72a98
       id: 858964037
@@ -1409,7 +1409,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b577dd459d178f418cd59f3632312269
       Path: Events\TestEvents\Play_TestBeep_lp_3D
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
     - name: Play_TestSound
@@ -1427,8 +1427,8 @@ MonoBehaviour:
         guid: 8b4c6f59cb016e429bb576b35bb72198
       Path: Events\TestEvents\Play_TestSound
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Stop_TestBeep_lp
       guid: 2f8087e7823c064fb86ed7ae3063acb1
       id: 3106700779
@@ -1444,8 +1444,8 @@ MonoBehaviour:
         guid: 2f8087e7823c064fb86ed7ae3063acb1
       Path: Events\TestEvents\Stop_TestBeep_lp
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TestBeep_lp_3D
       guid: a5cb1369829ce44e92e144e1c4725a24
       id: 1670385919
@@ -1461,8 +1461,8 @@ MonoBehaviour:
         guid: a5cb1369829ce44e92e144e1c4725a24
       Path: Events\TestEvents\Stop_TestBeep_lp_3D
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\Weapons.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1548,8 +1548,8 @@ MonoBehaviour:
         guid: 4bda268bbb8f614abbd11865ece170be
       Path: Events\Weapons\Rifle\Play_Alt_Fire_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1701359
+      minDuration: 1.1701359
     - name: Play_ChargeRdy_Rifle
       guid: 22a84d4619c8de418ac1254051c5b41a
       id: 3158001838
@@ -1568,8 +1568,8 @@ MonoBehaviour:
         guid: 22a84d4619c8de418ac1254051c5b41a
       Path: Events\Weapons\Rifle\Play_ChargeRdy_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.21527286
+      minDuration: 0.21527286
     - name: Play_FireMain_Handgun
       guid: 1de7222c9c749d4b9e7b46004626286e
       id: 3547089943
@@ -1588,8 +1588,8 @@ MonoBehaviour:
         guid: 1de7222c9c749d4b9e7b46004626286e
       Path: Events\Weapons\Handgun\Play_FireMain_Handgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.6950881
+      minDuration: 2.914464
     - name: Play_FireMain_Rifle
       guid: 21155b7f2b6f2444b70d8e9997774966
       id: 634184142
@@ -1608,8 +1608,8 @@ MonoBehaviour:
         guid: 21155b7f2b6f2444b70d8e9997774966
       Path: Events\Weapons\Rifle\Play_FireMain_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.7125
+      minDuration: 3.5157292
     - name: Play_Hitmarker_main
       guid: e84137034ce32946b2d5dbb724670881
       id: 941492189
@@ -1628,8 +1628,8 @@ MonoBehaviour:
         guid: e84137034ce32946b2d5dbb724670881
       Path: Events\Weapons\Hitmarkers\Play_Hitmarker_main
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.14302395
+      minDuration: 0.14302395
     - name: Play_Idle_Rifle
       guid: 4f3692d7a9c6dc499f7866d8056ac20d
       id: 4057284179
@@ -1648,8 +1648,8 @@ MonoBehaviour:
         guid: 4f3692d7a9c6dc499f7866d8056ac20d
       Path: Events\Weapons\Rifle\Play_Idle_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_Load_handgun
       guid: 3d0558495dabc04ea8d9576484f6d709
       id: 249020240
@@ -1668,8 +1668,8 @@ MonoBehaviour:
         guid: 3d0558495dabc04ea8d9576484f6d709
       Path: Events\Weapons\Handgun\Play_Load_handgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8439909
+      minDuration: 1.8439909
     - name: Play_Load_Rifle
       guid: ee808dabe4361c4aa362e95ade77c721
       id: 3060105905
@@ -1688,8 +1688,8 @@ MonoBehaviour:
         guid: ee808dabe4361c4aa362e95ade77c721
       Path: Events\Weapons\Rifle\Play_Load_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4822084
+      minDuration: 1.4822084
     - name: Play_Reload_Handgun
       guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
       id: 449246991
@@ -1708,8 +1708,8 @@ MonoBehaviour:
         guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
       Path: Events\Weapons\Handgun\Play_Reload_Handgun
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_Reload_Rifle
       guid: 64244f950a8fa548a246c72dfadeea2b
       id: 2435533942
@@ -1728,8 +1728,8 @@ MonoBehaviour:
         guid: 64244f950a8fa548a246c72dfadeea2b
       Path: Events\Weapons\Rifle\Play_Reload_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Play_Unload_Rifle
       guid: 298d9293da1fc14aa984bea16cd9154b
       id: 1943012356
@@ -1748,8 +1748,8 @@ MonoBehaviour:
         guid: 298d9293da1fc14aa984bea16cd9154b
       Path: Events\Weapons\Rifle\Play_Unload_Rifle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.43002084
+      minDuration: 0.43002084
     - name: Rifle
       guid: 187839cf4c717a4d81ecae0e6abdd7e9
       id: 4262674733
