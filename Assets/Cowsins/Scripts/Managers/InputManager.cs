@@ -198,7 +198,7 @@ namespace cowsins
             interacting = inputActions.GameControls.Interacting.IsPressed();
             dropping = inputActions.GameControls.Drop.IsPressed();
 
-            inspecting = inputActions.GameControls.Inspect.IsPressed();
+            // inspecting = inputActions.GameControls.Inspect.IsPressed();
 
             if (toggleFlashLight) toggleFlashLight = false;
 
