@@ -39,7 +39,6 @@ namespace cowsins.Inspector
             "Weapons",
             "Ramp",
             "BodyShot",
-            "Ladder"
         };
             // Define a list of necessary Layers
             List<string> layers = new List<string>

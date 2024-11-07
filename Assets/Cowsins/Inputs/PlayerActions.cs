@@ -55,15 +55,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Melee"",
-                    ""type"": ""Button"",
-                    ""id"": ""830659d6-a47d-4333-b270-44974daf4e87"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Crouching"",
                     ""type"": ""Button"",
                     ""id"": ""013e6093-a830-4359-af93-a767734de8b2"",
@@ -85,15 +76,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""name"": ""Firing"",
                     ""type"": ""Button"",
                     ""id"": ""5441c1b3-966f-4a69-a2c5-27dfcbd0fe9c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Grapple"",
-                    ""type"": ""Button"",
-                    ""id"": ""8343eef6-dde5-475a-a9a0-56191f1758f0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -239,28 +221,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""276acd54-2076-42e5-8200-012158dc82b0"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Melee"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a765ab71-0ad2-475c-a6a8-44ef7d41b104"",
-                    ""path"": ""<Gamepad>/rightStickPress"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Melee"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""bb6b520c-bdba-4ad6-b728-1119faaba832"",
                     ""path"": ""<Keyboard>/leftCtrl"",
                     ""interactions"": """",
@@ -322,17 +282,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Firing"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""64442dcf-27a3-4539-8a9f-250353c47fc2"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Grapple"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1242,11 +1191,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_GameControls_Jumping = m_GameControls.FindAction("Jumping", throwIfNotFound: true);
         m_GameControls_Dashing = m_GameControls.FindAction("Dashing", throwIfNotFound: true);
         m_GameControls_Reloading = m_GameControls.FindAction("Reloading", throwIfNotFound: true);
-        m_GameControls_Melee = m_GameControls.FindAction("Melee", throwIfNotFound: true);
         m_GameControls_Crouching = m_GameControls.FindAction("Crouching", throwIfNotFound: true);
         m_GameControls_Sprinting = m_GameControls.FindAction("Sprinting", throwIfNotFound: true);
         m_GameControls_Firing = m_GameControls.FindAction("Firing", throwIfNotFound: true);
-        m_GameControls_Grapple = m_GameControls.FindAction("Grapple", throwIfNotFound: true);
         m_GameControls_Scrolling = m_GameControls.FindAction("Scrolling", throwIfNotFound: true);
         m_GameControls_Aiming = m_GameControls.FindAction("Aiming", throwIfNotFound: true);
         m_GameControls_Interacting = m_GameControls.FindAction("Interacting", throwIfNotFound: true);
@@ -1332,11 +1279,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_GameControls_Jumping;
     private readonly InputAction m_GameControls_Dashing;
     private readonly InputAction m_GameControls_Reloading;
-    private readonly InputAction m_GameControls_Melee;
     private readonly InputAction m_GameControls_Crouching;
     private readonly InputAction m_GameControls_Sprinting;
     private readonly InputAction m_GameControls_Firing;
-    private readonly InputAction m_GameControls_Grapple;
     private readonly InputAction m_GameControls_Scrolling;
     private readonly InputAction m_GameControls_Aiming;
     private readonly InputAction m_GameControls_Interacting;
@@ -1353,11 +1298,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @Jumping => m_Wrapper.m_GameControls_Jumping;
         public InputAction @Dashing => m_Wrapper.m_GameControls_Dashing;
         public InputAction @Reloading => m_Wrapper.m_GameControls_Reloading;
-        public InputAction @Melee => m_Wrapper.m_GameControls_Melee;
         public InputAction @Crouching => m_Wrapper.m_GameControls_Crouching;
         public InputAction @Sprinting => m_Wrapper.m_GameControls_Sprinting;
         public InputAction @Firing => m_Wrapper.m_GameControls_Firing;
-        public InputAction @Grapple => m_Wrapper.m_GameControls_Grapple;
         public InputAction @Scrolling => m_Wrapper.m_GameControls_Scrolling;
         public InputAction @Aiming => m_Wrapper.m_GameControls_Aiming;
         public InputAction @Interacting => m_Wrapper.m_GameControls_Interacting;
@@ -1385,9 +1328,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Reloading.started += instance.OnReloading;
             @Reloading.performed += instance.OnReloading;
             @Reloading.canceled += instance.OnReloading;
-            @Melee.started += instance.OnMelee;
-            @Melee.performed += instance.OnMelee;
-            @Melee.canceled += instance.OnMelee;
             @Crouching.started += instance.OnCrouching;
             @Crouching.performed += instance.OnCrouching;
             @Crouching.canceled += instance.OnCrouching;
@@ -1397,9 +1337,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Firing.started += instance.OnFiring;
             @Firing.performed += instance.OnFiring;
             @Firing.canceled += instance.OnFiring;
-            @Grapple.started += instance.OnGrapple;
-            @Grapple.performed += instance.OnGrapple;
-            @Grapple.canceled += instance.OnGrapple;
             @Scrolling.started += instance.OnScrolling;
             @Scrolling.performed += instance.OnScrolling;
             @Scrolling.canceled += instance.OnScrolling;
@@ -1440,9 +1377,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Reloading.started -= instance.OnReloading;
             @Reloading.performed -= instance.OnReloading;
             @Reloading.canceled -= instance.OnReloading;
-            @Melee.started -= instance.OnMelee;
-            @Melee.performed -= instance.OnMelee;
-            @Melee.canceled -= instance.OnMelee;
             @Crouching.started -= instance.OnCrouching;
             @Crouching.performed -= instance.OnCrouching;
             @Crouching.canceled -= instance.OnCrouching;
@@ -1452,9 +1386,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Firing.started -= instance.OnFiring;
             @Firing.performed -= instance.OnFiring;
             @Firing.canceled -= instance.OnFiring;
-            @Grapple.started -= instance.OnGrapple;
-            @Grapple.performed -= instance.OnGrapple;
-            @Grapple.canceled -= instance.OnGrapple;
             @Scrolling.started -= instance.OnScrolling;
             @Scrolling.performed -= instance.OnScrolling;
             @Scrolling.canceled -= instance.OnScrolling;
@@ -1640,11 +1571,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnJumping(InputAction.CallbackContext context);
         void OnDashing(InputAction.CallbackContext context);
         void OnReloading(InputAction.CallbackContext context);
-        void OnMelee(InputAction.CallbackContext context);
         void OnCrouching(InputAction.CallbackContext context);
         void OnSprinting(InputAction.CallbackContext context);
         void OnFiring(InputAction.CallbackContext context);
-        void OnGrapple(InputAction.CallbackContext context);
         void OnScrolling(InputAction.CallbackContext context);
         void OnAiming(InputAction.CallbackContext context);
         void OnInteracting(InputAction.CallbackContext context);

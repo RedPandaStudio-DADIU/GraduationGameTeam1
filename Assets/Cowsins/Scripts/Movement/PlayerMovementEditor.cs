@@ -222,7 +222,6 @@ namespace cowsins
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnJump"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnSlide"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnDash"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaSlider"));
                             EditorGUI.indentLevel--;
                         }
                         break;
@@ -365,25 +364,25 @@ namespace cowsins
                         EditorGUILayout.Space(5);
                         EditorGUILayout.BeginVertical(GUI.skin.GetStyle("HelpBox"));
                         {
-                            // Climbing foldout
-                            showClimbing = EditorGUILayout.Foldout(showClimbing, "CLIMBING LADDERS", true);
-                            if (showClimbing)
-                            {
-                                EditorGUI.indentLevel++;
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("canClimb"));
-                                if (myScript.canClimb)
-                                {
-                                    EditorGUI.indentLevel++;
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("maxLadderDetectionDistance"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("climbSpeed"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedUpperForce"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedForwardForce"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("allowVerticalLookWhileClimbing"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("hideWeaponWhileClimbing"));
-                                    EditorGUI.indentLevel--;
-                                }
-                                EditorGUI.indentLevel--;
-                            }
+                            // // Climbing foldout
+                            // showClimbing = EditorGUILayout.Foldout(showClimbing, "CLIMBING LADDERS", true);
+                            // if (showClimbing)
+                            // {
+                            //     EditorGUI.indentLevel++;
+                            //     EditorGUILayout.PropertyField(serializedObject.FindProperty("canClimb"));
+                            //     if (myScript.canClimb)
+                            //     {
+                            //         EditorGUI.indentLevel++;
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("maxLadderDetectionDistance"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("climbSpeed"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedUpperForce"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedForwardForce"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("allowVerticalLookWhileClimbing"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("hideWeaponWhileClimbing"));
+                            //         EditorGUI.indentLevel--;
+                            //     }
+                            //     EditorGUI.indentLevel--;
+                            // }
                         }
                         EditorGUILayout.EndVertical();
                         EditorGUI.indentLevel--;

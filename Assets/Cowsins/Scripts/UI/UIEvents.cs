@@ -36,8 +36,6 @@ namespace cowsins
 
         public static Action<Attachment, int> onAttachmentUIElementClickedNewAttachment;
 
-        public static Action<int> onCoinsChange;
-
         public static Action<bool> onEnemyHit;
 
         public static Action<float> onChargedShot;

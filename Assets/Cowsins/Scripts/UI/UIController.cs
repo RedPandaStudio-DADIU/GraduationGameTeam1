@@ -41,7 +41,7 @@ namespace cowsins
                 "to any you like, but note that color will be overriden by the script"), SerializeField]
         private Image healthStatesEffect;
 
-        [Tooltip(" Color of healthStatesEffect on different actions such as being hurt or healed"), SerializeField] private Color damageColor, healColor, coinCollectColor, xpCollectColor;
+        [Tooltip(" Color of healthStatesEffect on different actions such as being hurt or healed"), SerializeField] private Color damageColor, healColor, xpCollectColor;
 
         [Tooltip("Time for the healthStatesEffect to fade out"), SerializeField] private float fadeOutTime;
 
@@ -97,9 +97,6 @@ namespace cowsins
 
         [Tooltip(" Attach the CanvasGroup that contains the inventory")] public CanvasGroup inventoryContainer;
 
-        [SerializeField] private GameObject coinsUI;
-
-        [SerializeField] private TextMeshProUGUI coinsText;
 
         [SerializeField] private Hitmarker hitmarker;
 
@@ -128,7 +125,6 @@ namespace cowsins
             intManager = PlayerStates.instance.GetComponent<InteractManager>();
             WeaponStates.instance.inspectionUI = inspectionUI;
             if (ExperienceManager.instance.useExperience) UpdateXP();
-            if (!CoinManager.Instance.useCoins && coinsUI != null) coinsUI.SetActive(false);
         }
         private void Update()
         {
@@ -174,10 +170,6 @@ namespace cowsins
             healthStatesEffect.color = colorSelected;
         }
 
-        public void UpdateCoinsPanel()
-        {
-            healthStatesEffect.color = coinCollectColor;
-        }
 
         public void UpdateXPPanel()
         {
@@ -413,7 +405,6 @@ namespace cowsins
 
         public void ChangeScene(int scene) => SceneManager.LoadScene(scene);
 
-        public void UpdateCoins(int amount) => coinsText.text = CoinManager.Instance.coins.ToString();
 
         public void DrawProgressBar(float length){
             chargedShotUI.gameObject.SetActive(true);
@@ -444,7 +435,6 @@ namespace cowsins
             UIEvents.disableWeaponUI += DisableWeaponUI;
             UIEvents.setWeaponDisplay += SetWeaponDisplay;
             UIEvents.enableWeaponDisplay += EnableDisplay;
-            UIEvents.onCoinsChange += UpdateCoins;
             UIEvents.onChargedShot += DrawProgressBar;
 
             interactUI.SetActive(false);
@@ -471,7 +461,6 @@ namespace cowsins
             UIEvents.disableWeaponUI = null;
             UIEvents.setWeaponDisplay = null;
             UIEvents.enableWeaponDisplay = null;
-            UIEvents.onCoinsChange = null;
             addXP = null;
         }
 
@@ -525,7 +514,6 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("healthStatesEffect"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("damageColor"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("healColor"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("coinCollectColor"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("xpCollectColor"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fadeOutTime"));
 
@@ -587,8 +575,6 @@ namespace cowsins
 
                         break;
                     case "Others":
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("coinsUI"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("coinsText"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("hitmarker"));
                         break;
                     case "UI Events":

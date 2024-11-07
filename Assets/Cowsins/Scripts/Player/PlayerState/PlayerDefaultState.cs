@@ -30,7 +30,7 @@ namespace cowsins
         public override void CheckSwitchState()
         {
             // Check climbing
-            if (player.DetectLadders()) SwitchState(_factory.Climb());
+            // if (player.DetectLadders()) SwitchState(_factory.Climb());
 
             // Check Death
             if (stats.health <= 0) SwitchState(_factory.Die());

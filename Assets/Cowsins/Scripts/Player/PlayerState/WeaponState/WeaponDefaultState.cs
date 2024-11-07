@@ -37,7 +37,6 @@ namespace cowsins
         {
             if (!stats.controllable) return;
             HandleInventory();
-            if (InputManager.melee && controller.canMelee && controller.CanMelee && !movement.Climbing) SwitchState(_factory.Melee());
             if (controller.weapon == null || movement.Climbing) return;
             CheckSwitchState();
             CheckAim();
@@ -53,7 +52,7 @@ namespace cowsins
             if (InputManager.inspecting && _ctx.inspectionUI.alpha <= 0 && interact.canInspect) SwitchState(_factory.Inspect());
 
             if (controller.canShoot &&
-                (controller.id.bulletsLeftInMagazine > 0 || controller.weapon.shootStyle == ShootStyle.Melee) // Melee weapons dont use bullets 
+                (controller.id.bulletsLeftInMagazine > 0) // Melee weapons dont use bullets 
                 && !controller.selectingWeapon
                 && (movement.canShootWhileDashing && movement.dashing || !movement.dashing))
             {

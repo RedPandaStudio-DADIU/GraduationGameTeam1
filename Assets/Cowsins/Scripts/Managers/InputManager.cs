@@ -24,7 +24,7 @@ namespace cowsins
             nextweapon,
             previousweapon,
             inspecting,
-            melee,
+            // melee,
             pausing,
             dashing,
             invertedAxis,
@@ -94,8 +94,8 @@ namespace cowsins
             inputActions.GameControls.Aiming.started += ctx => ToggleAiming = true;
             inputActions.GameControls.Aiming.canceled += ctx => ToggleAiming = false;
 
-            inputActions.GameControls.Grapple.started += ctx => grappling = true;
-            inputActions.GameControls.Grapple.canceled += ctx => grappling = false;
+            // inputActions.GameControls.Grapple.started += ctx => grappling = true;
+            // inputActions.GameControls.Grapple.canceled += ctx => grappling = false;
 
             inputActions.GameControls.ToggleFlashLight.started += ctx => toggleFlashLight = true;
 
@@ -150,7 +150,7 @@ namespace cowsins
             yMovementActioned = y > 0;
 
             reloading = inputActions.GameControls.Reloading.IsPressed();
-            melee = inputActions.GameControls.Melee.IsPressed();
+            // melee = inputActions.GameControls.Melee.IsPressed();
 
 
             // Handle different crouching methods

@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEditor;
 using UnityEngine;
@@ -39,7 +39,7 @@ namespace cowsins
                         EditorGUILayout.Space(5);
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("initialWeapons"));
                         if (myScript.initialWeapons.Length > myScript.inventorySize) myScript.initialWeapons = new Weapon_SO[myScript.inventorySize];
-                        if (myScript.initialWeapons.Length == myScript.inventorySize) EditorGUILayout.LabelField("You can´t add more initial weapons. This array can´t be bigger than the inventory size", EditorStyles.helpBox);
+                        if (myScript.initialWeapons.Length == myScript.inventorySize) EditorGUILayout.LabelField("You canï¿½t add more initial weapons. This array canï¿½t be bigger than the inventory size", EditorStyles.helpBox);
                         break;
                     case "References":
                         EditorGUILayout.LabelField("REFERENCES", EditorStyles.boldLabel);
@@ -58,21 +58,21 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("alternateAiming"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("hitLayer"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("removeCrosshairOnAiming"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("canMelee"));
-                        if (myScript.canMelee)
-                        {
-                            EditorGUI.indentLevel++;
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeObject"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("holsterMotionObject"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeDuration"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeDelay"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeAttackDamage"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeRange"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeCamShakeAmount"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("reEnableMeleeAfterAction"));
-                            if (myScript.meleeDelay > myScript.meleeDuration) myScript.meleeDelay = 0f;
-                            EditorGUI.indentLevel--;
-                        }
+                        // EditorGUILayout.PropertyField(serializedObject.FindProperty("canMelee"));
+                        // if (myScript.canMelee)
+                        // {
+                        //     EditorGUI.indentLevel++;
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeObject"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("holsterMotionObject"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeDuration"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeDelay"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeAttackDamage"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeRange"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeCamShakeAmount"));
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("reEnableMeleeAfterAction"));
+                        //     if (myScript.meleeDelay > myScript.meleeDuration) myScript.meleeDelay = 0f;
+                        //     EditorGUI.indentLevel--;
+                        // }
                         break;
                     case "Effects":
                         EditorGUILayout.Space(2f);

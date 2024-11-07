@@ -256,9 +256,6 @@ namespace cowsins
 
         private bool enoughStaminaToRun;
 
-        [Tooltip("Our Slider UI Object. Stamina will be shown here."), SerializeField]
-        private Slider staminaSlider;
-
         // Wallrun 
         [Tooltip("When enabled, it will allow the player to wallrun on walls")] public bool canWallRun;
 
@@ -442,8 +439,8 @@ namespace cowsins
             set { isClimbing = value; }
         }
 
-        [SerializeField, Min(0)]
-        private float maxLadderDetectionDistance = 1;
+        // [SerializeField, Min(0)]
+        // private float maxLadderDetectionDistance = 1;
 
         [SerializeField, Min(0)]
         private float climbSpeed = 15;
@@ -667,21 +664,6 @@ namespace cowsins
             if (currentSpeed == runSpeed && enoughStaminaToRun && !wallRunning) stamina -= Time.deltaTime;
             if (currentSpeed < runSpeed && LoseStaminaWalking && (InputManager.x != 0 || InputManager.y != 0)) stamina -= Time.deltaTime * (walkSpeed / runSpeed);
 
-            // Stamina UI not found might be a problem, it won´t be shown but you will get notified 
-            if (staminaSlider == null)
-            {
-                Debug.LogWarning("REMEMBER: You forgot to attach your StaminaSlider UI Component, so it won´t be shown.");
-                return;
-            }
-
-            // Handle stamina UI 
-            if (oldStamina != stamina)
-                staminaSlider.gameObject.SetActive(true);
-            else
-                staminaSlider.gameObject.SetActive(false);
-
-            staminaSlider.maxValue = maxStamina;
-            staminaSlider.value = stamina;
         }
 
         public void ReduceStamina(float amount) => stamina -= amount;
@@ -1358,69 +1340,69 @@ namespace cowsins
         // CLIMBING LADDERS
 
         // Returns true only if the player is detecting a ladder and the player is allowed to climb ladders
-        public bool DetectLadders()
-        {
-            if (!canClimb) return false;
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
-            {
-                if (!hit.transform.CompareTag("Ladder") || InputManager.y <= 0) return false;
-                if (hideWeaponWhileClimbing)
-                    CowsinsUtilities.PlayAnim("hit", weaponController.HolsterMotionObject);
-                return true;
-            }
-            return false;
-        }
+        // public bool DetectLadders()
+        // {
+        //     if (!canClimb) return false;
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
+        //     {
+        //         if (!hit.transform.CompareTag("Ladder") || InputManager.y <= 0) return false;
+        //         if (hideWeaponWhileClimbing)
+        //             CowsinsUtilities.PlayAnim("hit", weaponController.HolsterMotionObject);
+        //         return true;
+        //     }
+        //     return false;
+        // }
 
-        public bool DetectTopLadder()
-        {
-            if (!canClimb) return false;
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
-            {
-                if (!hit.transform.CompareTag("Ladder")) return false;
-                return false;
-            }
-            HandleLadderFinishMotion();
-            return true;
-        }
+        // public bool DetectTopLadder()
+        // {
+        //     if (!canClimb) return false;
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
+        //     {
+        //         if (!hit.transform.CompareTag("Ladder")) return false;
+        //         return false;
+        //     }
+        //     HandleLadderFinishMotion();
+        //     return true;
+        // }
 
-        public void HandleLadderFinishMotion()
-        {
-            if (hideWeaponWhileClimbing)
-                CowsinsUtilities.PlayAnim("finished", weaponController.HolsterMotionObject);
-        }
+        // public void HandleLadderFinishMotion()
+        // {
+        //     if (hideWeaponWhileClimbing)
+        //         CowsinsUtilities.PlayAnim("finished", weaponController.HolsterMotionObject);
+        // }
 
 
-        // Handles the movement while climbing
-        public void HandleClimbMovement()
-        {
-            if (PauseMenu.isPaused)
-            {
-                return;
-            }
+        // // Handles the movement while climbing
+        // public void HandleClimbMovement()
+        // {
+        //     if (PauseMenu.isPaused)
+        //     {
+        //         return;
+        //     }
 
-            float verticalInput = InputManager.y;
+        //     float verticalInput = InputManager.y;
 
-            RaycastHit hit;
-            bool isObstacleAbove = Physics.Raycast(transform.position, transform.up, out hit, 2f, weaponController.hitLayer);
-            if (isObstacleAbove && verticalInput > 0f) verticalInput = 0; 
+        //     RaycastHit hit;
+        //     bool isObstacleAbove = Physics.Raycast(transform.position, transform.up, out hit, 2f, weaponController.hitLayer);
+        //     if (isObstacleAbove && verticalInput > 0f) verticalInput = 0; 
 
-            if (verticalInput != 0)
-            {
-                Vector3 targetPosition = transform.position + transform.up * verticalInput * climbSpeed * Time.deltaTime;
-                rb.MovePosition(Vector3.Lerp(transform.position, targetPosition, 0.5f));
-                rb.velocity = new Vector3(0, rb.velocity.y, 0);
-            }
-        }
+        //     if (verticalInput != 0)
+        //     {
+        //         Vector3 targetPosition = transform.position + transform.up * verticalInput * climbSpeed * Time.deltaTime;
+        //         rb.MovePosition(Vector3.Lerp(transform.position, targetPosition, 0.5f));
+        //         rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        //     }
+        // }
 
-        // Handles the logic when the player reaches the top of a ladder, so it does not get stuck at the top
-        public void ReachTopLadder()
-        {
-            events.OnEndClimb.Invoke();
-            rb.AddForce(transform.up * topReachedUpperForce, ForceMode.Impulse);
-            rb.AddForce(orientation.forward * topReachedForwardForce, ForceMode.Impulse);
-        }
+        // // Handles the logic when the player reaches the top of a ladder, so it does not get stuck at the top
+        // public void ReachTopLadder()
+        // {
+        //     events.OnEndClimb.Invoke();
+        //     rb.AddForce(transform.up * topReachedUpperForce, ForceMode.Impulse);
+        //     rb.AddForce(orientation.forward * topReachedForwardForce, ForceMode.Impulse);
+        // }
 
         #endregion
         /// <summary>

@@ -31,11 +31,11 @@ namespace cowsins
 
         public override void CheckSwitchState()
         {
-            if (player.DetectLadders())
-            {
-                SwitchState(_factory.Climb());
-                return;
-            }
+            // if (player.DetectLadders())
+            // {
+            //     SwitchState(_factory.Climb());
+            //     return;
+            // }
 
             // bool canJump = player.ReadyToJump && InputManager.jumping &&
             //                (player.EnoughStaminaToJump && player.grounded ||
