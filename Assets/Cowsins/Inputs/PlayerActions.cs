@@ -37,15 +37,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Dashing"",
-                    ""type"": ""Button"",
-                    ""id"": ""cc42ae66-7d05-421b-ab53-c2fca1120619"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Reloading"",
                     ""type"": ""Button"",
                     ""id"": ""55a2b128-526c-4037-9a46-07cd6bbad325"",
@@ -183,17 +174,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Jumping"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d6acc991-259c-4322-b78a-2b7b4b4998e9"",
-                    ""path"": ""<Mouse>/middleButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Dashing"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1189,7 +1169,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // GameControls
         m_GameControls = asset.FindActionMap("GameControls", throwIfNotFound: true);
         m_GameControls_Jumping = m_GameControls.FindAction("Jumping", throwIfNotFound: true);
-        m_GameControls_Dashing = m_GameControls.FindAction("Dashing", throwIfNotFound: true);
         m_GameControls_Reloading = m_GameControls.FindAction("Reloading", throwIfNotFound: true);
         m_GameControls_Crouching = m_GameControls.FindAction("Crouching", throwIfNotFound: true);
         m_GameControls_Sprinting = m_GameControls.FindAction("Sprinting", throwIfNotFound: true);
@@ -1277,7 +1256,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GameControls;
     private List<IGameControlsActions> m_GameControlsActionsCallbackInterfaces = new List<IGameControlsActions>();
     private readonly InputAction m_GameControls_Jumping;
-    private readonly InputAction m_GameControls_Dashing;
     private readonly InputAction m_GameControls_Reloading;
     private readonly InputAction m_GameControls_Crouching;
     private readonly InputAction m_GameControls_Sprinting;
@@ -1296,7 +1274,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         private @PlayerActions m_Wrapper;
         public GameControlsActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jumping => m_Wrapper.m_GameControls_Jumping;
-        public InputAction @Dashing => m_Wrapper.m_GameControls_Dashing;
         public InputAction @Reloading => m_Wrapper.m_GameControls_Reloading;
         public InputAction @Crouching => m_Wrapper.m_GameControls_Crouching;
         public InputAction @Sprinting => m_Wrapper.m_GameControls_Sprinting;
@@ -1322,9 +1299,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Jumping.started += instance.OnJumping;
             @Jumping.performed += instance.OnJumping;
             @Jumping.canceled += instance.OnJumping;
-            @Dashing.started += instance.OnDashing;
-            @Dashing.performed += instance.OnDashing;
-            @Dashing.canceled += instance.OnDashing;
             @Reloading.started += instance.OnReloading;
             @Reloading.performed += instance.OnReloading;
             @Reloading.canceled += instance.OnReloading;
@@ -1371,9 +1345,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Jumping.started -= instance.OnJumping;
             @Jumping.performed -= instance.OnJumping;
             @Jumping.canceled -= instance.OnJumping;
-            @Dashing.started -= instance.OnDashing;
-            @Dashing.performed -= instance.OnDashing;
-            @Dashing.canceled -= instance.OnDashing;
             @Reloading.started -= instance.OnReloading;
             @Reloading.performed -= instance.OnReloading;
             @Reloading.canceled -= instance.OnReloading;
@@ -1569,7 +1540,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     public interface IGameControlsActions
     {
         void OnJumping(InputAction.CallbackContext context);
-        void OnDashing(InputAction.CallbackContext context);
         void OnReloading(InputAction.CallbackContext context);
         void OnCrouching(InputAction.CallbackContext context);
         void OnSprinting(InputAction.CallbackContext context);

@@ -39,8 +39,8 @@ namespace cowsins
             if (player.ReadyToJump && InputManager.jumping && (player.EnoughStaminaToJump && (player.grounded || player.canCoyote) || player.wallRunning || player.jumpCount > 0 && player.maxJumps > 1 && player.EnoughStaminaToJump))
                 SwitchState(_factory.Jump());
 
-            // Check Dash
-            if (player.canDash && InputManager.dashing && (player.infiniteDashes || player.currentDashes > 0 && !player.infiniteDashes)) SwitchState(_factory.Dash());
+            // // Check Dash
+            // if (player.canDash && InputManager.dashing && (player.infiniteDashes || player.currentDashes > 0 && !player.infiniteDashes)) SwitchState(_factory.Dash());
 
             // Check Crouch
             if (InputManager.crouchingDown && !player.wallRunning && player.allowCrouch)

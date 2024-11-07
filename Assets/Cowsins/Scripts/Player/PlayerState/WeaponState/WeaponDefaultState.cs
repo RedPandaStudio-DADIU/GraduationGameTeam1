@@ -53,8 +53,8 @@ namespace cowsins
 
             if (controller.canShoot &&
                 (controller.id.bulletsLeftInMagazine > 0) // Melee weapons dont use bullets 
-                && !controller.selectingWeapon
-                && (movement.canShootWhileDashing && movement.dashing || !movement.dashing))
+                && !controller.selectingWeapon)
+                // && (movement.canShootWhileDashing && movement.dashing || !movement.dashing))
             {
                 switch (controller.weapon.shootMethod)
                 {

@@ -24,9 +24,8 @@ namespace cowsins
             nextweapon,
             previousweapon,
             inspecting,
-            // melee,
             pausing,
-            dashing,
+            // dashing,
             invertedAxis,
             yMovementActioned,
             toggleFlashLight, grappling;
@@ -150,7 +149,6 @@ namespace cowsins
             yMovementActioned = y > 0;
 
             reloading = inputActions.GameControls.Reloading.IsPressed();
-            // melee = inputActions.GameControls.Melee.IsPressed();
 
 
             // Handle different crouching methods
@@ -202,7 +200,7 @@ namespace cowsins
 
             if (toggleFlashLight) toggleFlashLight = false;
 
-            dashing = inputActions.GameControls.Dashing.WasPressedThisFrame();
+            // dashing = inputActions.GameControls.Dashing.WasPressedThisFrame();
             jumping = inputActions.GameControls.Jumping.WasPressedThisFrame();
         }
 
