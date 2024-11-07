@@ -179,6 +179,24 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Push"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4412bff-d3cc-45fd-8632-1b199a38910e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Heal"",
+                    ""type"": ""Button"",
+                    ""id"": ""46f6da5c-344c-44b9-8e6f-de0131c4aec6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -240,7 +258,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""276acd54-2076-42e5-8200-012158dc82b0"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/m"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -663,6 +681,28 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""ToggleFlashLight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddb13167-7234-49d5-98d4-fbca5613edd5"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Push"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fefadf41-c76b-4399-8171-7874c833a2f3"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Heal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1256,6 +1296,8 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_GameControls_Pause = m_GameControls.FindAction("Pause", throwIfNotFound: true);
         m_GameControls_Movement = m_GameControls.FindAction("Movement", throwIfNotFound: true);
         m_GameControls_ToggleFlashLight = m_GameControls.FindAction("ToggleFlashLight", throwIfNotFound: true);
+        m_GameControls_Push = m_GameControls.FindAction("Push", throwIfNotFound: true);
+        m_GameControls_Heal = m_GameControls.FindAction("Heal", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1346,6 +1388,8 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_GameControls_Pause;
     private readonly InputAction m_GameControls_Movement;
     private readonly InputAction m_GameControls_ToggleFlashLight;
+    private readonly InputAction m_GameControls_Push;
+    private readonly InputAction m_GameControls_Heal;
     public struct GameControlsActions
     {
         private @PlayerActions m_Wrapper;
@@ -1367,6 +1411,8 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_GameControls_Pause;
         public InputAction @Movement => m_Wrapper.m_GameControls_Movement;
         public InputAction @ToggleFlashLight => m_Wrapper.m_GameControls_ToggleFlashLight;
+        public InputAction @Push => m_Wrapper.m_GameControls_Push;
+        public InputAction @Heal => m_Wrapper.m_GameControls_Heal;
         public InputActionMap Get() { return m_Wrapper.m_GameControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1427,6 +1473,12 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @ToggleFlashLight.started += instance.OnToggleFlashLight;
             @ToggleFlashLight.performed += instance.OnToggleFlashLight;
             @ToggleFlashLight.canceled += instance.OnToggleFlashLight;
+            @Push.started += instance.OnPush;
+            @Push.performed += instance.OnPush;
+            @Push.canceled += instance.OnPush;
+            @Heal.started += instance.OnHeal;
+            @Heal.performed += instance.OnHeal;
+            @Heal.canceled += instance.OnHeal;
         }
 
         private void UnregisterCallbacks(IGameControlsActions instance)
@@ -1482,6 +1534,12 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @ToggleFlashLight.started -= instance.OnToggleFlashLight;
             @ToggleFlashLight.performed -= instance.OnToggleFlashLight;
             @ToggleFlashLight.canceled -= instance.OnToggleFlashLight;
+            @Push.started -= instance.OnPush;
+            @Push.performed -= instance.OnPush;
+            @Push.canceled -= instance.OnPush;
+            @Heal.started -= instance.OnHeal;
+            @Heal.performed -= instance.OnHeal;
+            @Heal.canceled -= instance.OnHeal;
         }
 
         public void RemoveCallbacks(IGameControlsActions instance)
@@ -1654,6 +1712,8 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnToggleFlashLight(InputAction.CallbackContext context);
+        void OnPush(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

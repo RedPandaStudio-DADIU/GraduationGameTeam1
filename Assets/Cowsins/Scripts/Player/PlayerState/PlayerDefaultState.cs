@@ -60,6 +60,13 @@ namespace cowsins
                 player.HandleGrapple();
                 player.UpdateGrappleRenderer();
             }
+
+             //check push
+            if (InputManager.push)
+            {
+                SwitchState(_factory.Push());
+            }
+            
         }
 
         void HandleMovement()
