@@ -54,9 +54,9 @@ public class HitScanBasic : MonoBehaviour
             if (Input.GetMouseButtonDown(1)) 
                 {
                     isRightClickPressed = true;
-            chargingEvent.Post(gameObject);
+                     chargingEvent.Post(gameObject);
 
-            rightClickHoldTime = 0f;  
+                    rightClickHoldTime = 0f;  
                     if (chargeProgressBar != null)
                     {
                         chargeProgressBar.fillAmount = 0;
@@ -68,7 +68,7 @@ public class HitScanBasic : MonoBehaviour
             if (isRightClickPressed)
             {
                 rightClickHoldTime += Time.deltaTime;
-                
+               
                 
                 if (chargeProgressBar != null)
                 {
@@ -86,9 +86,10 @@ public class HitScanBasic : MonoBehaviour
 			if (Input.GetMouseButtonUp(1))
 			{
 				isRightClickPressed = false;
-            chargingEvent.Stop(gameObject);
+                 chargingEvent.Stop(gameObject);
 
-            if (rightClickHoldTime >= chargeTime)
+
+				if (rightClickHoldTime >= chargeTime)
                 {
                     ChargedShoot();
                     

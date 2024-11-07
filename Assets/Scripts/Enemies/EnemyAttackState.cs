@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAttackState : IEnemyState
 {
+    private bool isAttacking = false;
     public void OnEnter(EnemyStateController stateController){
         // Debug.Log("Entering Attack State");
         if(stateController.GetEnemy().GetIsMovable()){
@@ -16,7 +17,11 @@ public class EnemyAttackState : IEnemyState
         }
         if (stateController.CanSeePlayer())
         {
-            stateController.GetEnemy().Attack();
+            if(!isAttacking){
+                stateController.GetEnemy().Attack();
+                isAttacking = true;
+            }
+           
         } else {
             // reaches destination - goes into idle state
             if(stateController.CheckIfReachedDestination()){
@@ -28,5 +33,6 @@ public class EnemyAttackState : IEnemyState
     }
     public void OnExit(EnemyStateController stateController){
         // Debug.Log("Exiting Attack State");
+        isAttacking = false;
     }
 }
