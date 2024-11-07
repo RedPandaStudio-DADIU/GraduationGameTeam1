@@ -31,7 +31,7 @@ public class EnemyStateController : MonoBehaviour
     {
         currentState.OnUpdate(this);
 
-        if(this.GetEnemy().GetHealth() == 0){
+        if(this.GetEnemy().GetHealth() <= 0 && currentState is not EnemyDieState){
             ChangeState(new EnemyDieState());
         }
     }
