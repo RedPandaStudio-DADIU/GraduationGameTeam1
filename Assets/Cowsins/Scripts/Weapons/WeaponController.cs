@@ -125,6 +125,9 @@ namespace cowsins
         public int currentWeapon;
 
         private AudioClips audioSFX;
+        // public Event fireSFX; // Wwise event for firing sound
+        // public Event loadSFX;
+        // public Event reloadSFX;
 
         public WeaponIdentification id;
 
@@ -152,7 +155,7 @@ namespace cowsins
 
         private ReduceAmmo reduceAmmo;
 
-        private AudioClip fireSFX;
+        //private AudioClip fireSFX;
 
         private void OnEnable()
         {
@@ -272,7 +275,12 @@ namespace cowsins
                     shellRigidbody.AddForce(shellForce, ForceMode.Impulse);
                 }
             }
-            if (weapon.timeBetweenShots == 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+            //if (weapon.timeBetweenShots == 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+            if (weapon.timeBetweenShots == 0)
+            {
+                SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
+    
+            }
             Invoke(nameof(CanShoot), fireRate);
         }
 
@@ -296,7 +304,13 @@ namespace cowsins
                     shellRigidbody2.AddForce(shellForce, ForceMode.Impulse);
                 }
             }
-            if (weapon.timeBetweenShots2 == 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+            //if (weapon.timeBetweenShots2 == 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+            if (weapon.timeBetweenShots2 == 0)
+            {
+                SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
+    
+
+            }
             Invoke(nameof(CanShoot), fireRate);
         }
 
@@ -319,7 +333,10 @@ namespace cowsins
             // Play the selected random animation
             CowsinsUtilities.ForcePlayAnim(randomAnimation, animator);
 
-            SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+            //SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+            SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
+    
+
 
             if (weapon == null) yield break;
 
@@ -389,7 +406,13 @@ namespace cowsins
                         Instantiate(muzzleVFX, p.position, mainCamera.transform.rotation, mainCamera.transform); // VFX
                 }
                 CowsinsUtilities.ForcePlayAnim("shooting", inventory[currentWeapon].GetComponentInChildren<Animator>());
-                if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+                //if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+
+                if (weapon.timeBetweenShots == 0)
+                {
+                    SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
+    
+                }
 
                 ProgressRecoil();
 
@@ -443,7 +466,12 @@ namespace cowsins
                         Instantiate(muzzleVFX, p.position, mainCamera.transform.rotation, mainCamera.transform); // VFX
                 }
                 CowsinsUtilities.ForcePlayAnim("shooting", inventory[currentWeapon].GetComponentInChildren<Animator>());
-                if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+                //if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+                if (weapon.timeBetweenShots == 0)
+                {
+                    SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
+
+                }
 
                 ProgressRecoil();
 
@@ -745,7 +773,12 @@ namespace cowsins
         {
 
             // Play reload sound
-            SoundManager.Instance.PlaySound(id.bulletsLeftInMagazine == 0 ? weapon.audioSFX.emptyMagReload : weapon.audioSFX.reload, .1f, 0, true, 0);
+            //SoundManager.Instance.PlaySound(id.bulletsLeftInMagazine == 0 ? weapon.audioSFX.emptyMagReload : weapon.audioSFX.reload, .1f, 0, true, 0);
+            if (weapon.audioSFX.reloadSFX != null)
+            {
+                SoundManager.Instance.PlaySound(weapon.audioSFX.reloadSFX);
+            }
+            
             reloading = true;
             yield return new WaitForSeconds(.001f);
 
@@ -884,7 +917,7 @@ namespace cowsins
 
             weaponObj.GetComponentInChildren<Animator>().enabled = true;
             if (playAnim) CowsinsUtilities.PlayAnim("unholster", inventory[currentWeapon].GetComponentInChildren<Animator>());
-            SoundManager.Instance.PlaySound(weapon.audioSFX.unholster, .1f, 0, true, 0);
+            //SoundManager.Instance.PlaySound(weapon.audioSFX.unholster, .1f, 0, true, 0);
             Invoke("FinishedSelection", .5f);
 
             if (weapon.shootStyle == ShootStyle.Custom) SelectCustomShotMethod();
@@ -1021,7 +1054,8 @@ namespace cowsins
         {
             // Grab references for the variables in case their respective attachments are null or not.
 
-            fireSFX = id.barrel != null ? id.barrel.GetComponent<Barrel>().supressedFireSFX : weapon.audioSFX.shooting[Random.Range(0, weapon.audioSFX.shooting.Length - 1)];
+            //fireSFX = id.barrel != null ? id.barrel.GetComponent<Barrel>().supressedFireSFX : weapon.audioSFX.shooting[Random.Range(0, weapon.audioSFX.shooting.Length - 1)];
+            SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
 
             aimRot = id.scope != null && id.scope != id.defaultAttachments.defaultScope
                 ? id.scope.GetComponent<Scope>().aimingRotation
@@ -1394,8 +1428,8 @@ namespace cowsins
             flashlightComponent.EnableFlashLight(newLightState);
             flashlightComponent.CheckIfCanTurnOn(newLightState);
 
-            AudioClip soundToPlay = newLightState ? flashlightComponent.turnOnSFX : flashlightComponent.turnOffSFX;
-            SoundManager.Instance.PlaySound(soundToPlay, 0, 0, true, 0);
+            // AudioClip soundToPlay = newLightState ? flashlightComponent.turnOnSFX : flashlightComponent.turnOffSFX;
+            // SoundManager.Instance.PlaySound(soundToPlay, 0, 0, true, 0);
         }
 
         public void InitializeInspection() => CowsinsUtilities.PlayAnim("inspect", inventory[currentWeapon].GetComponentInChildren<Animator>());
