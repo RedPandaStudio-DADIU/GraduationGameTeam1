@@ -15,9 +15,27 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Dashing",
+                    "type": "Button",
+                    "id": "cc42ae66-7d05-421b-ab53-c2fca1120619",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Reloading",
                     "type": "Button",
                     "id": "55a2b128-526c-4037-9a46-07cd6bbad325",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Melee",
+                    "type": "Button",
+                    "id": "830659d6-a47d-4333-b270-44974daf4e87",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -45,6 +63,15 @@
                     "name": "Firing",
                     "type": "Button",
                     "id": "5441c1b3-966f-4a69-a2c5-27dfcbd0fe9c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grapple",
+                    "type": "Button",
+                    "id": "8343eef6-dde5-475a-a9a0-56191f1758f0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -130,6 +157,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Push",
+                    "type": "Button",
+                    "id": "b4412bff-d3cc-45fd-8632-1b199a38910e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Heal",
+                    "type": "Button",
+                    "id": "46f6da5c-344c-44b9-8e6f-de0131c4aec6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -157,6 +202,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d6acc991-259c-4322-b78a-2b7b4b4998e9",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Dashing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4deb4fe1-c690-42ac-8d37-6d7932abbe23",
                     "path": "<Keyboard>/r",
                     "interactions": "",
@@ -174,6 +230,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Reloading",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "276acd54-2076-42e5-8200-012158dc82b0",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Melee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a765ab71-0ad2-475c-a6a8-44ef7d41b104",
+                    "path": "<Gamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Melee",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -240,6 +318,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Firing",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64442dcf-27a3-4539-8a9f-250353c47fc2",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Grapple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -570,6 +659,28 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "ToggleFlashLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ddb13167-7234-49d5-98d4-fbca5613edd5",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Push",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fefadf41-c76b-4399-8171-7874c833a2f3",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Heal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

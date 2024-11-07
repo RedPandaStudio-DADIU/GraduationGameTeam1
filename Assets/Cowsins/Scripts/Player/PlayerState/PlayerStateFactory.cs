@@ -18,5 +18,7 @@ namespace cowsins
 
         public PlayerBaseState Climb() { return new PlayerClimbState(_context, this); }
 
+        public PlayerBaseState Push() { return new PlayerPushState(_context, this); }
+
     }
 }

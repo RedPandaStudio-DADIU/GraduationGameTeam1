@@ -22,13 +22,13 @@ public class PushEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            PushEnemiesInRange();
-        }
+        // if (Input.GetKeyDown(KeyCode.F))
+        // {
+        //     PushEnemiesInRange();
+        // }
     }
 
-    void PushEnemiesInRange()
+    public void PushEnemiesInRange()
     {
         
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, pushRadius);

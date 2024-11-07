@@ -28,7 +28,9 @@ namespace cowsins
             // dashing,
             invertedAxis,
             yMovementActioned,
-            toggleFlashLight, grappling;
+            toggleFlashLight, grappling,
+            push,
+            heal;
 
         public static float x,
             y,
@@ -202,6 +204,9 @@ namespace cowsins
 
             // dashing = inputActions.GameControls.Dashing.WasPressedThisFrame();
             jumping = inputActions.GameControls.Jumping.WasPressedThisFrame();
+            push = inputActions.GameControls.Push.WasPressedThisFrame();
+            heal = inputActions.GameControls.Heal.WasPressedThisFrame();
+
         }
 
         private void FixedUpdate()
