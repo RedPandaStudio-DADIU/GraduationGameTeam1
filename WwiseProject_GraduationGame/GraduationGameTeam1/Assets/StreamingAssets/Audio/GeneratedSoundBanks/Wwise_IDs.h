@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
@@ -35,6 +36,11 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
+        static const AkUniqueID PLAY_SC1 = 3191462597U;
+        static const AkUniqueID PLAY_SC2 = 3191462598U;
+        static const AkUniqueID PLAY_SC3 = 3191462599U;
+        static const AkUniqueID PLAY_SC4 = 3191462592U;
+        static const AkUniqueID PLAY_SC5 = 3191462593U;
         static const AkUniqueID PLAY_TESTBEEP = 1955951874U;
         static const AkUniqueID PLAY_TESTBEEP_3D = 1681067324U;
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
@@ -45,6 +51,14 @@ namespace AK
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
     } // namespace EVENTS
+
+    namespace DIALOGUE_EVENTS
+    {
+        static const AkUniqueID BRUTE = 591672203U;
+        static const AkUniqueID DIPLOMAT = 1617397027U;
+        static const AkUniqueID SOLDIER = 3121013053U;
+        static const AkUniqueID XAGA = 4123380240U;
+    } // namespace DIALOGUE_EVENTS
 
     namespace STATES
     {
@@ -109,6 +123,19 @@ namespace AK
             } // namespace STATE
         } // namespace ROOMSTATE
 
+        namespace XAGA
+        {
+            static const AkUniqueID GROUP = 4123380240U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC1 = 477127956U;
+                static const AkUniqueID SC2 = 477127959U;
+                static const AkUniqueID WAITINGONTRIGGERENTER = 2239442679U;
+            } // namespace STATE
+        } // namespace XAGA
+
     } // namespace STATES
 
     namespace SWITCHES
@@ -144,6 +171,21 @@ namespace AK
                 static const AkUniqueID NIGHTFALL = 3789021730U;
             } // namespace SWITCH
         } // namespace AMBTIMEOFDAY
+
+        namespace DIALOGUETRIGGERS
+        {
+            static const AkUniqueID GROUP = 3935263896U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID AWAKE = 1151176110U;
+                static const AkUniqueID SC1_PLAY = 1292752181U;
+                static const AkUniqueID SC2_PLAY = 2811652880U;
+                static const AkUniqueID SC3_PLAY = 3561392151U;
+                static const AkUniqueID SC4_PLAY = 856363850U;
+                static const AkUniqueID SC5_PLAY = 62662553U;
+            } // namespace SWITCH
+        } // namespace DIALOGUETRIGGERS
 
         namespace ELEVATORMOTION
         {
