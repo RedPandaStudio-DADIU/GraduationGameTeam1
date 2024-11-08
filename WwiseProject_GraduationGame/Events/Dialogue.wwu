@@ -9,11 +9,11 @@
 							<ChildrenList>
 								<Action Name="" ID="{E8D7500B-36C3-4418-B848-86EF490FB322}" ShortID="953794917">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="23"/>
+										<Property Name="ActionType" Type="int16" Value="22"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Sc1_Play" ID="{690E6474-569E-403D-ADC3-445FDE16B525}" WorkUnitID="{786B9B67-AE94-402B-8CFB-C3B2FECAA991}"/>
+											<ObjectRef Name="Sc1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -26,6 +26,17 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="lvl2_Conference" ID="{3B71567B-F77B-4B7F-A906-F88B5E191254}" ShortID="815035599"/>
+				<Event Name="Play_Dia_Xaga" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}">
+					<ChildrenList>
+						<Action Name="" ID="{18EB9DD4-B13C-4A36-9060-DCAFFC959D38}" ShortID="978817850">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

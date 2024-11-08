@@ -82,6 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3fc17d1fdd83746aa0ffb567d16b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &3866752064014184287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +341,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61c6b7c4f1be80418cb3da50d529619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultStep: []
+  grassStep: []
+  metalStep: []
+  mudStep: []
+  woodStep: []
+  footstepEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c8cdcdfef1a98495b9ecda31ceb13785, type: 2}
+  jumpEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 222d0c05e8bdc9c4fab702d01cfc3d86, type: 2}
+  landingEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7b1b4c8f8cfb1ba44aca4c2fb3b82679, type: 2}
   playerCam: {fileID: 4612824603648159582}
   orientation: {fileID: 4612824604376541686}
   canRunBackwards: 0
@@ -429,21 +450,10 @@ MonoBehaviour:
   dashDuration: 0
   canShootWhileDashing: 0
   isCrouching: 0
-  footsteps:
-    defaultStep:
-    - {fileID: 8300000, guid: 3b2fd8aa823253841a84bf5e637506fa, type: 3}
-    - {fileID: 8300000, guid: 72b076623538fe64187a0ef594b7af2a, type: 3}
-    grassStep:
-    - {fileID: 8300000, guid: dbce20ed023af154cba63f1dd0d79db9, type: 3}
-    metalStep:
-    - {fileID: 8300000, guid: 15c95a9d6b592a442b81b282f779d9de, type: 3}
-    - {fileID: 8300000, guid: 71aab2bc571c17e4b8b65856ec082791, type: 3}
-    mudStep:
-    - {fileID: 8300000, guid: e0d679089d83b5c46a3ff07e89463af0, type: 3}
-    - {fileID: 8300000, guid: 6b979e9901d1aaa4494e452c6522269e, type: 3}
-    woodStep:
-    - {fileID: 8300000, guid: 3b2fd8aa823253841a84bf5e637506fa, type: 3}
-    - {fileID: 8300000, guid: 72b076623538fe64187a0ef594b7af2a, type: 3}
+  footstepsEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   footstepVolume: 0.3
   footstepSpeed: 0.7
   events:

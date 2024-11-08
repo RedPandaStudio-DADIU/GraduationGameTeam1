@@ -798,7 +798,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584707097786676337
+    m_lastTime: -8584706050457836512
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -930,7 +930,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584706207571438338
+    m_lastTime: -8584706068450692553
     List: []
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
@@ -943,7 +943,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584706189140040493
+    m_lastTime: -8584706043328431952
     List:
     - name: lvl1_Hangar
       guid: c6967c8ce05f7c4a84e56627c4e3f8d0
@@ -979,6 +979,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Dia_Xaga
+      guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
+      id: 16982058
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 200b6a6a285dcd439f28a67e0a03cef1
+      - ElementName: Play_Dia_Xaga
+        ObjectType: 3
+        guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
+      Path: Events/Dialogue/Play_Dia_Xaga
+      maxAttenuation: 20
+      maxDuration: 4.296009
+      minDuration: 1
     - name: Play_Sc1
       guid: c81671d258e82748bbf7182ed7b69352
       id: 3191462597
@@ -997,8 +1014,8 @@ MonoBehaviour:
         guid: c81671d258e82748bbf7182ed7b69352
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Sc2
       guid: 307774708db9f6419e4bb50ffd99449d
       id: 3191462598
@@ -1017,8 +1034,8 @@ MonoBehaviour:
         guid: 307774708db9f6419e4bb50ffd99449d
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Sc3
       guid: 2aa9ffea7198cf4ab4716623341ef49e
       id: 3191462599
@@ -1037,8 +1054,8 @@ MonoBehaviour:
         guid: 2aa9ffea7198cf4ab4716623341ef49e
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc3
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Sc4
       guid: 97b61cdb45bcfb40aca1b8a1d4794035
       id: 3191462592
@@ -1057,8 +1074,8 @@ MonoBehaviour:
         guid: 97b61cdb45bcfb40aca1b8a1d4794035
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc4
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Sc5
       guid: 9b80f6320049e748bb838bdad2923d66
       id: 3191462593
@@ -1077,8 +1094,8 @@ MonoBehaviour:
         guid: 9b80f6320049e748bb838bdad2923d66
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc5
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events/GameWorld.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1307,7 +1324,7 @@ MonoBehaviour:
         guid: b989e5f174c5ce45b63f6d36555e9823
       Path: Events/NPC/Brute/Play_Brute_Footsteps
       maxAttenuation: 0
-      maxDuration: 0.98510176
+      maxDuration: 1.4394294
       minDuration: 0.5063826
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
@@ -2064,7 +2081,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584707886701859102
+    m_lastTime: -8584706043098121133
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2145,6 +2162,24 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: 84fe25172173eb458265eaa10e64b31a
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Dialogue
+      guid: 9019064e3fa83a4090ce0c75b228dfd6
+      id: 3930136735
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 4d8ca50caf173545b4b3d20d71747df5
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 9019064e3fa83a4090ce0c75b228dfd6
+      Path: States/States/Dialogue
+      values: []
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -2439,6 +2474,103 @@ MonoBehaviour:
         guid: d24b9463ae59e9468a1fd3d049f8b6a2
       Path: States/States/Speakers
       values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Xaga
+      guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+      id: 4123380240
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 4d8ca50caf173545b4b3d20d71747df5
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 9019064e3fa83a4090ce0c75b228dfd6
+      - ElementName: Xaga
+        ObjectType: 9
+        guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+      Path: States/States/Dialogue/Xaga
+      values:
+      - name: None
+        guid: d2d37cb93bd0a540a4086437983095df
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Xaga
+          ObjectType: 9
+          guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+        - ElementName: None
+          ObjectType: 8
+          guid: d2d37cb93bd0a540a4086437983095df
+      - name: Sc1
+        guid: 37abf888c39265499fe89787b28915b3
+        id: 477127956
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Xaga
+          ObjectType: 9
+          guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+        - ElementName: Sc1
+          ObjectType: 8
+          guid: 37abf888c39265499fe89787b28915b3
+      - name: Sc2
+        guid: bd5df24adfdd0647a27cea29b512906a
+        id: 477127959
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Xaga
+          ObjectType: 9
+          guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+        - ElementName: Sc2
+          ObjectType: 8
+          guid: bd5df24adfdd0647a27cea29b512906a
+      - name: WaitingOnTriggerEnter
+        guid: a622613cdc7fea4a85d78326a48c4f13
+        id: 2239442679
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Xaga
+          ObjectType: 9
+          guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+        - ElementName: WaitingOnTriggerEnter
+          ObjectType: 8
+          guid: a622613cdc7fea4a85d78326a48c4f13
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -2740,7 +2872,7 @@ MonoBehaviour:
     ParentPath: Switches/Dialogue
     guid: 679b6b7894ae2b408cfbc3b2fecaa991
     GuidInternal: 
-    m_lastTime: -8584706186531254838
+    m_lastTime: -8584706043328368476
     List:
     - name: DialogueTriggers
       guid: 1d023da11f14b04f9941217698b6776a
@@ -3805,7 +3937,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000020000000300000004000000050000000600000007000000080000000c0000000d0000000f000000100000001100000012000000140000001c0000001d0000001e0000001f0000002000000021000000220000002300000024000000250000002600000027000000280000002a0000002c0000002d0000002e0000003000000031000000320000003300000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003f00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f000000760000007c0000007e0000007f0000008100000088000000960000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
+  ExpandedWaapiItemIds: 010000000400000005000000060000001100000012000000130000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e000000300000003200000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003f00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
