@@ -15,14 +15,29 @@ public class EnemyStateController : MonoBehaviour
     private bool playerInRange = false;
     private Vector3 forceDirection;
     [SerializeField] private float force = 300f;
+    [SerializeField] private List<Transform> targetList = new List<Transform>();
 
-    void Start()
+    private Queue<Transform> targetQueue;
+
+    void Awake()
     {
         currentState = new EnemyIdleState();
         currentState.OnEnter(this);
-        playerTransform = GameObject.FindWithTag("Player").transform;
-        // playerBodyTransform =  GameObject.Find("Capsule").transform;
-        playerBodyTransform =  GameObject.FindWithTag("Player").transform;
+        
+        if (targetList.Count > 0){
+            targetQueue = new Queue<Transform>(targetList); 
+        } else{
+            targetQueue = new Queue<Transform>();
+        }
+        
+        targetQueue.Enqueue(GameObject.FindWithTag("Player").transform);
+        
+        
+        // playerTransform = GameObject.FindWithTag("Player").transform;
+        // playerBodyTransform =  GameObject.FindWithTag("Player").transform;
+
+        playerTransform = playerBodyTransform = targetQueue.Dequeue();
+        Debug.Log("Player Transform (TAREGT transform) is " + playerTransform.position + " name: " + playerTransform.gameObject.name);
 
         enemy = GetComponent<EnemyBaseClass>();
     }
@@ -125,7 +140,7 @@ public class EnemyStateController : MonoBehaviour
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            if (hit.collider.CompareTag("Player"))
+            if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human") )
             // if (hit.collider.CompareTag("PlayerBody"))
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
