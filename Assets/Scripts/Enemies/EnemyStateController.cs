@@ -208,4 +208,9 @@ public class EnemyStateController : MonoBehaviour
     }
 
 
+    public void LooseLifeFight(){
+        this.GetEnemy().SetHealth(0f); // then in update it will enter DieState
+    }
+
+
 }
