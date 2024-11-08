@@ -174,7 +174,50 @@ namespace cowsins
             InitialSettings();
             CreateInventoryUI();
             GetInitialWeapons();
+
+            //StartCoroutine(DelayedInit());
         }
+
+        // private IEnumerator DelayedInit()
+        // {
+        
+        //     yield return new WaitForSeconds(0.1f);
+
+        
+        //     InitialSettings();
+        //     CreateInventoryUI();
+        //     GetInitialWeapons();
+
+        
+        //     if (weapon == null)
+        //     {
+        //         Debug.LogError("Weapon not initialized in WeaponController.");
+        //         yield break;
+        //     }
+
+        //     if (id == null)
+        //     {
+        //         Debug.LogError("WeaponIdentification not initialized in WeaponController.");
+        //         yield break;
+        //     }
+
+            
+        //     StartCoroutine(UpdateLoop());
+        // }
+
+        // private IEnumerator UpdateLoop()
+        // {
+        //     while (true)
+        //     {
+        //         HandleUI();
+        //         HandleAimingMotion();
+        //         ManageWeaponMethodsInputs();
+        //         HandleRecoil();
+        //         HandleHeatRatio();
+
+        //         yield return null; 
+        //     }
+        // }
 
         private void Update()
         {
@@ -912,7 +955,7 @@ namespace cowsins
                 case 0: performShootStyle2 = HandleSecondaryHitscanProjectileShot; break;
                 case 1: performShootStyle2 = HandleSecondaryHitscanProjectileShot; break;
                 case 2: performShootStyle2 = HandleMeleeShot; break;
-                case 3: performShootStyle2 = CustomShot; break;
+                case 3: performShootStyle2 = HandleSecondaryHitscanProjectileShot; break;
             }
 
             weaponObj.GetComponentInChildren<Animator>().enabled = true;
