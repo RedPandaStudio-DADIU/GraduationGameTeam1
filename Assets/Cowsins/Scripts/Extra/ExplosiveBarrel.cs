@@ -1,5 +1,5 @@
 /// <summary>
-/// This script belongs to cowsins� as a part of the cowsins� FPS Engine. All rights reserved. 
+/// This script belongs to cowsins� as a part of the cowsins� FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace cowsins
 
         [SerializeField] private float explosionForce;
 
-        [SerializeField] private bool hurtPlayer = true;
+       // [SerializeField] private bool hurtPlayer = true;
 
         [Tooltip("Damage dealt on explosion to any Damageable object within the radius." +
             "NOTE:Damage will be scaled depending on how far the object is from the center of the explosion "), SerializeField]
@@ -24,13 +24,35 @@ namespace cowsins
         [Tooltip("Instantiate this when the barrel explodes"), SerializeField]
         private GameObject destroyedObject, explosionVFX;
 
+        [SerializeField] private HitScanBasic hitScanBasic;
+        void Start()
+        {
+            
+            hitScanBasic = FindObjectOfType<HitScanBasic>();
+        }
+
         /// <summary>
         /// Override the method from Destructible.cs
         /// Here we are damaging IDamageables within a certain radius & also instantiating some effect on destructed.
         /// </summary>
         public override void Die()
         {
-            SoundManager.Instance.PlaySound(destroyedSFX, 0, .1f, true, 0);
+            //SoundManager.Instance.PlaySound(destroyedSFX, 0, .1f, true, 0);
+             if (explosionSFX != null)
+            {
+                explosionSFX.Post(gameObject);
+            }
+
+            if (hitScanBasic != null)
+            {
+                // 调用 PushNearbyEnemies 方法
+                hitScanBasic.PushNearbyEnemies(transform.position, explosionForce, explosionRadius);
+            }
+            else
+            {
+                Debug.LogWarning("HitScanBasic not found. Enemies will not be pushed.");
+            }
+
             Collider[] cols = Physics.OverlapSphere(transform.position, explosionRadius);
 
             Instantiate(destroyedObject, transform.position, Quaternion.identity);
@@ -38,17 +60,18 @@ namespace cowsins
 
             foreach (Collider c in cols)
             {
-                if (c.CompareTag("Player") && !hurtPlayer) return;
-                if (c.GetComponent<Rigidbody>() != null)
-                    c.GetComponent<Rigidbody>().AddExplosionForce(explosionForce / (Vector3.Distance(c.transform.position, transform.position) + .1f), transform.position, explosionRadius, 5, ForceMode.Impulse);
+               // if (c.CompareTag("Player") && !hurtPlayer) return;
+                // if (c.GetComponent<Rigidbody>() != null)
+                //     c.GetComponent<Rigidbody>().AddExplosionForce(explosionForce / (Vector3.Distance(c.transform.position, transform.position) + .1f), transform.position, explosionRadius, 5, ForceMode.Impulse);
 
                 float dmg = damage / Vector3.Distance(c.transform.position, transform.position);
-                if (c.CompareTag("BodyShot"))
-                {
-                    CowsinsUtilities.GatherDamageableParent(c.transform).Damage(dmg, false);
-                    continue;
-                }
-                else if (c.GetComponent<IDamageable>() != null)
+                // if (c.CompareTag("BodyShot"))
+                // {
+                //     CowsinsUtilities.GatherDamageableParent(c.transform).Damage(dmg, false);
+                //     continue;
+                // }
+                // else if (c.GetComponent<IDamageable>() != null)
+                if (c.GetComponent<IDamageable>() != null)
                 {
                     c.GetComponent<IDamageable>().Damage(dmg, false);
                     continue;
