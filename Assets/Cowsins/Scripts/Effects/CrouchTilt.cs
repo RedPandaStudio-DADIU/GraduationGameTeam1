@@ -2,6 +2,9 @@
 /// This script belongs to cowsins� as a part of the cowsins� FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace cowsins
 {
     /// <summary>
@@ -14,7 +17,9 @@ namespace cowsins
 
         [Tooltip("Tilting / Rotation velocity"), SerializeField] private float tiltSpeed;
 
-        [HideInInspector] public PlayerMovement player;
+        // [HideInInspector] public PlayerMovement player;
+        [SerializeField] private PlayerMovement player;
+        private GameObject playerTest;
 
         [HideInInspector] public WeaponController wp;
 
@@ -26,21 +31,74 @@ namespace cowsins
 
         void Start()
         {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-            wp = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponController>();
+            playerTest = GameObject.FindGameObjectWithTag("Player");//.GetComponent<PlayerMovement>();
+            if (playerTest == null) {
+                Debug.LogError("Player game object component not found on Player object!");
+            }
+            // player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+
+            // wp = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponController>();
+            if (!playerTest.TryGetComponent(out player))
+            {
+                Debug.LogError("1——PlayerMovement component not found on Player object!");
+            }
+
+            if (!playerTest.TryGetComponent(out wp))
+            {
+                Debug.LogError("1——WeaponController component not found on Player object!");
+            }
+                    
             origRot = transform.localRotation;
             origPos = transform.localPosition;
             if (player == null) {
-                Debug.LogError("PlayerMovement component not found on Player object!");
+                Debug.LogError("?PlayerMovement component not found on Player object!");
             }
             if (wp == null) {
-                Debug.LogError("WeaponController component not found on Player object!");
+                Debug.LogError("?WeaponController component not found on Player object!");
             }
 
         }
 
+        // IEnumerator DelayedInit()
+        // {
+        //     yield return new WaitForSeconds(0.1f);
+
+        //     playerTest = GameObject.FindGameObjectWithTag("Player");
+        //     if (playerTest == null)
+        //     {
+        //         Debug.LogError("Player game object not found with tag 'Player'!");
+        //         yield break;
+        //     }
+
+        //     if (!playerTest.TryGetComponent(out player))
+        //     {
+        //         Debug.LogError("PlayerMovement component not found on Player object!");
+        //     }
+
+        //     if (!playerTest.TryGetComponent(out wp))
+        //     {
+        //         Debug.LogError("WeaponController component not found on Player object!");
+        //     }
+
+        //     origRot = transform.localRotation;
+        //     origPos = transform.localPosition;
+        // }
+
+        // void Start()
+        // {
+        //     StartCoroutine(DelayedInit());
+        // }
+
+
         void Update()
         {
+            if (player == null || wp == null)
+            {
+                Debug.LogWarning("PlayerMovement or WeaponController still not ready, escape Update。");
+                return;
+            }
+            
+            
             // If we are crouching + not aiming Tilt
             if (player.isCrouching && !wp.isAiming)
             {

@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEditor;
 using UnityEngine;
@@ -39,7 +39,7 @@ namespace cowsins
                         EditorGUILayout.Space(5);
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("initialWeapons"));
                         if (myScript.initialWeapons.Length > myScript.inventorySize) myScript.initialWeapons = new Weapon_SO[myScript.inventorySize];
-                        if (myScript.initialWeapons.Length == myScript.inventorySize) EditorGUILayout.LabelField("You can´t add more initial weapons. This array can´t be bigger than the inventory size", EditorStyles.helpBox);
+                        if (myScript.initialWeapons.Length == myScript.inventorySize) EditorGUILayout.LabelField("You canï¿½t add more initial weapons. This array canï¿½t be bigger than the inventory size", EditorStyles.helpBox);
                         break;
                     case "References":
                         EditorGUILayout.LabelField("REFERENCES", EditorStyles.boldLabel);
@@ -80,6 +80,23 @@ namespace cowsins
                         EditorGUILayout.Space(2f);
                         break;
                     case "Events":
+                        EditorGUILayout.LabelField("AUDIO SETTINGS", EditorStyles.boldLabel);
+                        SerializedProperty weaponProperty = serializedObject.FindProperty("weapon");
+
+                        if (weaponProperty!= null)
+                        {
+                            EditorGUILayout.PropertyField(weaponProperty);
+                            SerializedProperty audioSFXProperty = weaponProperty.FindPropertyRelative("audioSFX");
+                            if (audioSFXProperty != null)
+                            {
+                                // Wwise Events
+                                EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("fireSFX"), new GUIContent("Fire SFX (Wwise Event)"));
+                                EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("loadSFX"), new GUIContent("Load SFX (Wwise Event)"));
+                                EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("reloadSFX"), new GUIContent("Reload SFX (Wwise Event)"));
+                     
+                            }
+                            
+                        }
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("events"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("customShot"));
                         break;
