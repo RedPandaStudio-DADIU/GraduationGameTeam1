@@ -68,9 +68,13 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID FARMLANDAREA_01 = 2485288013U;
-                static const AkUniqueID FARMLANDAREA_02 = 2485288014U;
-                static const AkUniqueID FARMLANDAREA_03 = 2485288015U;
+                static const AkUniqueID CONFERENCEROOM1 = 2782928031U;
+                static const AkUniqueID CONFERENCEROOM2 = 2782928028U;
+                static const AkUniqueID CONFERENCEROOM3 = 2782928029U;
+                static const AkUniqueID HANGAR1 = 1814387309U;
+                static const AkUniqueID HANGAR2 = 1814387310U;
+                static const AkUniqueID HARNGAR3 = 2130932629U;
+                static const AkUniqueID INSIDEELEVATOR = 2393120223U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace AREASTATE
@@ -98,6 +102,18 @@ namespace AK
                 static const AkUniqueID ON = 1651971902U;
             } // namespace STATE
         } // namespace GUITARSPEAKER
+
+        namespace JOHNDOE
+        {
+            static const AkUniqueID GROUP = 2802482050U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC1 = 477127956U;
+                static const AkUniqueID WAITINGONTRIGGER = 3956690975U;
+            } // namespace STATE
+        } // namespace JOHNDOE
 
         namespace PLAYERSTATE
         {
@@ -335,12 +351,14 @@ namespace AK
         static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
         static const AkUniqueID PLAYERMASTER = 3538689948U;
+        static const AkUniqueID PLAYERVOICE = 47937584U;
         static const AkUniqueID REVERBS = 3545700988U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
     {
         static const AkUniqueID DELAYSLAPS = 924856803U;
+        static const AkUniqueID HANGARVERB_JD = 350835844U;
         static const AkUniqueID ROOMLARGE = 3553615197U;
         static const AkUniqueID ROOMSMALL = 3205342581U;
         static const AkUniqueID ROOMTUNNEL = 1603492950U;

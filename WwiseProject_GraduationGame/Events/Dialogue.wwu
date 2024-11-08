@@ -5,11 +5,22 @@
 			<ChildrenList>
 				<Folder Name="lvl1_Hangar" ID="{8C7C96C6-5FE0-4A7C-84E5-6627C4E3F8D0}" ShortID="1044900835">
 					<ChildrenList>
-						<Event Name="Play_Sc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}">
+						<Event Name="Play_Sc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}"/>
+						<Event Name="Play_Sc2" ID="{70747730-B98D-41F6-9E4B-B50FFD99449D}"/>
+						<Event Name="Play_Sc3" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}"/>
+						<Event Name="Play_Sc4" ID="{DB1CB697-BC45-40FB-ACA1-B8A1D4794035}">
 							<ChildrenList>
-								<Action Name="" ID="{E8D7500B-36C3-4418-B848-86EF490FB322}" ShortID="953794917">
+								<Action Name="" ID="{857EB0B4-6CBF-4880-BA1D-4EFC1BF7936B}" ShortID="86421310">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JD_Monologue" ID="{28BB3BA3-9BB4-4281-B48C-2AF4A744DFEC}" WorkUnitID="{D2363AB2-B17F-47E0-93D3-C6D4FDCD20A0}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{06F6545C-3D38-41F5-9496-4586C582EE71}" ShortID="1038499861">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Delay" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -19,9 +30,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Sc2" ID="{70747730-B98D-41F6-9E4B-B50FFD99449D}"/>
-						<Event Name="Play_Sc3" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}"/>
-						<Event Name="Play_Sc4" ID="{DB1CB697-BC45-40FB-ACA1-B8A1D4794035}"/>
 						<Event Name="Play_Sc5" ID="{32F6809B-4900-48E7-BB83-8BDAD2923D66}"/>
 					</ChildrenList>
 				</Folder>

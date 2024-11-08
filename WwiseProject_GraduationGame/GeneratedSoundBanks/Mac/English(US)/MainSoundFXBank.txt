@@ -40,7 +40,6 @@ Event	ID	Name			Wwise Object Path	Notes
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1044534455	GroundMaterialSwitch			\GameWorld\GroundMaterialSwitch	
 	2051106367	PlayerSpeedSwitch			\GameWorld\PlayerSpeedSwitch	
-	3935263896	DialogueTriggers			\Dialogue\lvl1_Hangar\DialogueTriggers	
 	3968804893	GroundWetnessSwitch			\GameWorld\GroundWetnessSwitch	
 
 Switch	ID	Name	Switch Group			Notes
@@ -67,30 +66,43 @@ Switch	ID	Name	Switch Group			Notes
 	1296465089	Sprint	PlayerSpeedSwitch			
 	1865857008	Transition	PlayerSpeedSwitch			
 	2884887403	Sneak	PlayerSpeedSwitch			
-	62662553	Sc5_Play	DialogueTriggers			
-	856363850	Sc4_Play	DialogueTriggers			
-	1151176110	Awake	DialogueTriggers			
-	1292752181	Sc1_Play	DialogueTriggers			
-	2811652880	Sc2_Play	DialogueTriggers			
-	3561392151	Sc3_Play	DialogueTriggers			
 	630539344	Dry	GroundWetnessSwitch			
 	1181096339	Wet	GroundWetnessSwitch			
 	1842026663	Damp	GroundWetnessSwitch			
 	1905651656	Soaked	GroundWetnessSwitch			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	2064552269	AreaState			\States\AreaState	
+	2802482050	JohnDoe			\States\Dialogue\JohnDoe	
 	3305603258	GuitarSpeaker			\States\Speakers\GuitarSpeaker	
+	4123380240	Xaga			\States\Dialogue\Xaga	
 
 State	ID	Name	State Group			Notes
+	748895195	None	AreaState			
+	1814387309	Hangar1	AreaState			
+	1814387310	Hangar2	AreaState			
+	2130932629	Harngar3	AreaState			
+	2393120223	InsideElevator	AreaState			
+	2782928028	ConferenceRoom2	AreaState			
+	2782928029	ConferenceRoom3	AreaState			
+	2782928031	ConferenceRoom1	AreaState			
+	477127956	Sc1	JohnDoe			
+	748895195	None	JohnDoe			
+	3956690975	WaitingOnTrigger	JohnDoe			
 	748895195	None	GuitarSpeaker			
 	930712164	Off	GuitarSpeaker			
 	1651971902	On	GuitarSpeaker			
+	477127956	Sc1	Xaga			
+	477127959	Sc2	Xaga			
+	748895195	None	Xaga			
+	2239442679	WaitingOnTriggerEnter	Xaga			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	870672907	RTPC_GroundWetness			\GameParameters\RTPC_GroundWetness	
 	2653406601	RTPC_PlayerSpeed			\GameParameters\RTPC_PlayerSpeed	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	47937584	PlayerVoice			\Audio Master\Master Bus\PlayerMaster\PlayerVoice	
 	309309195	2DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\2DAmbience	
 	765206498	PlayerCloth			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerCloth	
 	1182634443	AmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds	
@@ -105,6 +117,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	4152869693	2DAmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds\2DAmbientBeds	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	350835844	HangarVerb_JD			\Audio Master\Master Bus\PlayerMaster\PlayerVoice\HangarVerb_JD	
 	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps	
 	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
 	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	
@@ -114,6 +127,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	292207345	BootRunCompressor (Custom)	Wwise Compressor			
 	329677106	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
 	514808912	EQ_Tile_Fs	Wwise Parametric EQ			
+	535667444	Bathroom1	Wwise Matrix Reverb			
 	646908088	BootRunCompressor (Custom)	Wwise Compressor			
 	727638997	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
 	751144099	BootRunCompressor (Custom)	Wwise Compressor			
@@ -126,9 +140,10 @@ Effect plug-ins	ID	Name	Type				Notes
 	1866712633	High_Freq_Cut_3	Wwise Parametric EQ			
 	1904434771	Medium_Room1	Wwise Matrix Reverb			
 	2849147824	Medium	Wwise RoomVerb			
+	4119703916	HelmetEQ	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	63893666	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\TestSound\Tone Generator	
+	63893666	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\02_Dialogue\JohnDoe_Dialogue\JD_WorkUnit\JohnDoeActormixer\JD_Monologue\TestSound\Tone Generator	
 	69832810	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\Sfx_fs_TestSound\Tone Generator	
 	184931808	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Wet\Sfx_fs_TestSound\Tone Generator	
 	310803756	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Damp\Sfx_fs_TestSound\Tone Generator	
@@ -152,6 +167,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	95896769	Tile_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1_C79660D5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_02		38900
 	108052905	Boots_Run_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Run\Boots_Run_Heel_05_8B559579.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel\Boots_Run_Heel_05		15644
 	108336228	Boots_Walk_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Walk\Boots_Walk_Toe_04_A5EC4D9C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Jump+Land\Jump\Boots_Walk_Toe_04		75220
+	116776916	GidAtDeVilleDo	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\GidAtDeVilleDo_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\JohnDoe_Dialogue\JD_WorkUnit\JohnDoeActormixer\JD_Monologue\GidAtDeVilleDo		572972
 	133120763	Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1_FBC78EF0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Ambience\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1		8483004
 	134389032	Cloth	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1_606D4C6D.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\Player_ClothMovement\ClothP1\Cloth		100622
 	141207199	Tile_Fs_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 6_D634B678.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_07		24464
