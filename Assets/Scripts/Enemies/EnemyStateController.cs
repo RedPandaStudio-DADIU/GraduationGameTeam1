@@ -14,7 +14,7 @@ public class EnemyStateController : MonoBehaviour
 
     private bool playerInRange = false;
     private Vector3 forceDirection;
-    private float force;
+    [SerializeField] private float force = 300f;
 
     void Start()
     {
@@ -209,6 +209,7 @@ public class EnemyStateController : MonoBehaviour
 
 
     public void LooseLifeFight(){
+        forceDirection = -transform.forward; 
         this.GetEnemy().SetHealth(0f); // then in update it will enter DieState
     }
 
