@@ -303,8 +303,31 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master
     guid: d2b3f9926e5be84bbd1fcd54538eb6e9
     GuidInternal: 
-    m_lastTime: -8584707886703774144
+    m_lastTime: -8584705434360601641
     List:
+    - name: HangarVerb_JD
+      guid: 84e87f0fe12db9458befbfa1f35c2545
+      id: 350835844
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: PlayerMaster
+        ObjectType: 2
+        guid: fbd896561687364b95ff732159c72be0
+      - ElementName: PlayerVoice
+        ObjectType: 2
+        guid: c8c9c230919d804b997850fc91cb75be
+      - ElementName: HangarVerb_JD
+        ObjectType: 1
+        guid: 84e87f0fe12db9458befbfa1f35c2545
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/PlayerMaster/PlayerVoice/HangarVerb_JD
     - name: Master Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 1399649189
@@ -402,6 +425,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: fbd896561687364b95ff732159c72be0
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/PlayerMaster
+    - name: PlayerVoice
+      guid: c8c9c230919d804b997850fc91cb75be
+      id: 47937584
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: PlayerMaster
+        ObjectType: 2
+        guid: fbd896561687364b95ff732159c72be0
+      - ElementName: PlayerVoice
+        ObjectType: 2
+        guid: c8c9c230919d804b997850fc91cb75be
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/PlayerMaster/PlayerVoice
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -798,7 +841,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584706050457836512
+    m_lastTime: -8584705496666486379
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -943,7 +986,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584706043328431952
+    m_lastTime: -8584705449637030167
     List:
     - name: lvl1_Hangar
       guid: c6967c8ce05f7c4a84e56627c4e3f8d0
@@ -994,8 +1037,8 @@ MonoBehaviour:
         guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
       Path: Events/Dialogue/Play_Dia_Xaga
       maxAttenuation: 20
-      maxDuration: 4.296009
-      minDuration: 1
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Sc1
       guid: c81671d258e82748bbf7182ed7b69352
       id: 3191462597
@@ -1074,8 +1117,8 @@ MonoBehaviour:
         guid: 97b61cdb45bcfb40aca1b8a1d4794035
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc4
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Sc5
       guid: 9b80f6320049e748bb838bdad2923d66
       id: 3191462593
@@ -1270,7 +1313,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584706365452398500
+    m_lastTime: -8584705449636979269
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -1433,7 +1476,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion/PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584706816594407321
+    m_lastTime: -8584705496666894493
     List:
     - name: Play_Player_Fs
       guid: 7128890d283c0244ae37c5c00fa299f1
@@ -1506,7 +1549,7 @@ MonoBehaviour:
     ParentPath: Events/TestEvents
     guid: 0a1992286e44cd448d508c2e1e150f58
     GuidInternal: 
-    m_lastTime: -8584711542416994386
+    m_lastTime: -8584705449636931911
     List:
     - name: Play_TestBeep
       guid: 39881d9e698e7c4cadcf1df672d74b58
@@ -1638,7 +1681,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584711542416977163
+    m_lastTime: -8584705449636891235
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -2081,7 +2124,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584706043098121133
+    m_lastTime: -8584705438007026843
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2098,9 +2141,9 @@ MonoBehaviour:
         guid: fed77a67db43b149b10b721d1e000093
       Path: States/States/AreaState
       values:
-      - name: FarmlandArea_01
-        guid: 67b168444c36754b8e871e126a38887b
-        id: 2485288013
+      - name: ConferenceRoom1
+        guid: 8882d45dbe6d8f40b2852aa35bd9e4bd
+        id: 2782928031
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2111,12 +2154,60 @@ MonoBehaviour:
         - ElementName: AreaState
           ObjectType: 9
           guid: fed77a67db43b149b10b721d1e000093
-        - ElementName: FarmlandArea_01
+        - ElementName: ConferenceRoom1
+          ObjectType: 8
+          guid: 8882d45dbe6d8f40b2852aa35bd9e4bd
+      - name: ConferenceRoom2
+        guid: 2b38379e1ba550469e6115d5aa8692fc
+        id: 2782928028
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: AreaState
+          ObjectType: 9
+          guid: fed77a67db43b149b10b721d1e000093
+        - ElementName: ConferenceRoom2
+          ObjectType: 8
+          guid: 2b38379e1ba550469e6115d5aa8692fc
+      - name: ConferenceRoom3
+        guid: a072ab4dfcb5ed42858d40eedfa26294
+        id: 2782928029
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: AreaState
+          ObjectType: 9
+          guid: fed77a67db43b149b10b721d1e000093
+        - ElementName: ConferenceRoom3
+          ObjectType: 8
+          guid: a072ab4dfcb5ed42858d40eedfa26294
+      - name: Hangar1
+        guid: 67b168444c36754b8e871e126a38887b
+        id: 1814387309
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: AreaState
+          ObjectType: 9
+          guid: fed77a67db43b149b10b721d1e000093
+        - ElementName: Hangar1
           ObjectType: 8
           guid: 67b168444c36754b8e871e126a38887b
-      - name: FarmlandArea_02
+      - name: Hangar2
         guid: 451d3c7577a42a488558d42ce93e72a1
-        id: 2485288014
+        id: 1814387310
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2127,12 +2218,12 @@ MonoBehaviour:
         - ElementName: AreaState
           ObjectType: 9
           guid: fed77a67db43b149b10b721d1e000093
-        - ElementName: FarmlandArea_02
+        - ElementName: Hangar2
           ObjectType: 8
           guid: 451d3c7577a42a488558d42ce93e72a1
-      - name: FarmlandArea_03
+      - name: Harngar3
         guid: 01704f75beff5043af177dfe9fc09b6b
-        id: 2485288015
+        id: 2130932629
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2143,9 +2234,25 @@ MonoBehaviour:
         - ElementName: AreaState
           ObjectType: 9
           guid: fed77a67db43b149b10b721d1e000093
-        - ElementName: FarmlandArea_03
+        - ElementName: Harngar3
           ObjectType: 8
           guid: 01704f75beff5043af177dfe9fc09b6b
+      - name: InsideElevator
+        guid: 71cd48bf349d874698c48856085fbd07
+        id: 2393120223
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: AreaState
+          ObjectType: 9
+          guid: fed77a67db43b149b10b721d1e000093
+        - ElementName: InsideElevator
+          ObjectType: 8
+          guid: 71cd48bf349d874698c48856085fbd07
       - name: None
         guid: 84fe25172173eb458265eaa10e64b31a
         id: 748895195
@@ -2324,6 +2431,84 @@ MonoBehaviour:
         - ElementName: On
           ObjectType: 8
           guid: a28d41388fae9e4f90bc277b67aa01f2
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: JohnDoe
+      guid: de41ef9d4f89e546928b800dba517d57
+      id: 2802482050
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 4d8ca50caf173545b4b3d20d71747df5
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 9019064e3fa83a4090ce0c75b228dfd6
+      - ElementName: JohnDoe
+        ObjectType: 9
+        guid: de41ef9d4f89e546928b800dba517d57
+      Path: States/States/Dialogue/JohnDoe
+      values:
+      - name: None
+        guid: b1dfaa5fc036954cb32dfc322f8ed4c4
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: JohnDoe
+          ObjectType: 9
+          guid: de41ef9d4f89e546928b800dba517d57
+        - ElementName: None
+          ObjectType: 8
+          guid: b1dfaa5fc036954cb32dfc322f8ed4c4
+      - name: Sc1
+        guid: 1e22f898ba9bbd4ba142e5b096921a65
+        id: 477127956
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: JohnDoe
+          ObjectType: 9
+          guid: de41ef9d4f89e546928b800dba517d57
+        - ElementName: Sc1
+          ObjectType: 8
+          guid: 1e22f898ba9bbd4ba142e5b096921a65
+      - name: WaitingOnTrigger
+        guid: 06845c4982d5104c93d8cb8d422b1607
+        id: 3956690975
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: JohnDoe
+          ObjectType: 9
+          guid: de41ef9d4f89e546928b800dba517d57
+        - ElementName: WaitingOnTrigger
+          ObjectType: 8
+          guid: 06845c4982d5104c93d8cb8d422b1607
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -2872,7 +3057,7 @@ MonoBehaviour:
     ParentPath: Switches/Dialogue
     guid: 679b6b7894ae2b408cfbc3b2fecaa991
     GuidInternal: 
-    m_lastTime: -8584706043328368476
+    m_lastTime: -8584705496666482279
     List:
     - name: DialogueTriggers
       guid: 1d023da11f14b04f9941217698b6776a
@@ -3038,7 +3223,7 @@ MonoBehaviour:
     ParentPath: Switches/GameWorld
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584706191692535143
+    m_lastTime: -8584705496666474937
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -3937,7 +4122,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000400000005000000060000001100000012000000130000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e000000300000003200000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003f00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
+  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d0000001100000012000000130000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e000000300000003200000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003f00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

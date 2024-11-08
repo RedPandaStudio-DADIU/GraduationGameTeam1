@@ -18,15 +18,17 @@
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{17E8DD12-9F8A-D072-BC54-8056E5FB9B29}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F0E96A6F-B42E-7296-0367-4C6640622ED3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
+					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="4119703916" Name="HelmetEQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -34,6 +36,13 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="47937584" Name="PlayerVoice">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4119703916"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="309309195" Name="2DAmbience"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
 				<Bus Id="1182634443" Name="AmbientBeds"/>
@@ -48,6 +57,14 @@
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
+				<AuxBus Id="350835844" Name="HangarVerb_JD">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="535667444"/>
+							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="924856803" Name="DelaySlaps">
 					<PluginRefs>
 						<ShareSets>
@@ -99,9 +116,20 @@
 				<StateGroup Id="2064552269" Name="AreaState">
 					<States>
 						<State Id="748895195" Name="None"/>
-						<State Id="2485288013" Name="FarmlandArea_01"/>
-						<State Id="2485288014" Name="FarmlandArea_02"/>
-						<State Id="2485288015" Name="FarmlandArea_03"/>
+						<State Id="1814387309" Name="Hangar1"/>
+						<State Id="1814387310" Name="Hangar2"/>
+						<State Id="2130932629" Name="Harngar3"/>
+						<State Id="2393120223" Name="InsideElevator"/>
+						<State Id="2782928028" Name="ConferenceRoom2"/>
+						<State Id="2782928029" Name="ConferenceRoom3"/>
+						<State Id="2782928031" Name="ConferenceRoom1"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2802482050" Name="JohnDoe">
+					<States>
+						<State Id="477127956" Name="Sc1"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3956690975" Name="WaitingOnTrigger"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3285234865" Name="PlayerState">
@@ -368,7 +396,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{6DDEC184-18DB-0D25-8E85-FA9E8BE4D5FB}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{3F631DBB-FB8D-1B6B-36AB-ED2050DF6CFC}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -419,6 +447,10 @@
 				<File Id="108336228" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_04.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_04_A5EC4D9C.wem</CachePath>
+				</File>
+				<File Id="116776916" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>GidAtDeVilleDo.wav</ShortName>
+					<CachePath>Voices/English(US)/GidAtDeVilleDo_818F3B66.wem</CachePath>
 				</File>
 				<File Id="133120763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1.wav</ShortName>
@@ -856,12 +888,14 @@
 				</Custom>
 				<ShareSets>
 					<Plugin Id="514808912" Name="EQ_Tile_Fs" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="1866712633" Name="High_Freq_Cut_3" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="4119703916" Name="HelmetEQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -1018,24 +1052,24 @@
 				<Event Id="16982058" Name="Play_Dia_Xaga" MaxAttenuation="20" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3935263896" Id="2811652880"/>
-							<MediaRefs>
-								<MediaRef Id="999781709"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3935263896" Id="1292752181"/>
+							<SwitchValue GroupType="State" GroupId="4123380240" Id="477127956"/>
 							<MediaRefs>
 								<MediaRef Id="153388572"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3935263896" Id="1151176110" Default="true"/>
+							<SwitchValue GroupType="State" GroupId="4123380240" Id="2239442679" Default="true"/>
 							<PluginRefs>
 								<Custom>
 									<PluginRef Id="411162420"/>
 								</Custom>
 							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4123380240" Id="477127959"/>
+							<MediaRefs>
+								<MediaRef Id="999781709"/>
+							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -1111,6 +1145,9 @@
 							<PluginRef Id="63893666"/>
 						</Custom>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<PluginRefs>
@@ -1118,6 +1155,9 @@
 							<PluginRef Id="63893666"/>
 						</Custom>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="249020240" Name="Play_Load_handgun" DurationType="OneShot" DurationMin="1.8439909" DurationMax="1.8439909">
 					<MediaRefs>
@@ -1416,6 +1456,9 @@
 							<PluginRef Id="63893666"/>
 						</Custom>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<PluginRefs>
@@ -1423,15 +1466,34 @@
 							<PluginRef Id="63893666"/>
 						</Custom>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="3191462597" Name="Play_Sc1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="3191462597" Name="Play_Sc1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3191462598" Name="Play_Sc2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3191462599" Name="Play_Sc3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3191462592" Name="Play_Sc4" DurationType="Infinite">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="63893666"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2802482050" Id="477127956"/>
+							<MediaRefs>
+								<MediaRef Id="116776916"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4123380240" Id="477127956" Name="Sc1"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3191462598" Name="Play_Sc2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3191462599" Name="Play_Sc3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3191462592" Name="Play_Sc4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3191462593" Name="Play_Sc5" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1955951874" Name="Play_TestBeep" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
@@ -1459,6 +1521,9 @@
 							<PluginRef Id="63893666"/>
 						</Custom>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1943012356" Name="Play_Unload_Rifle" DurationType="OneShot" DurationMin="0.43002084" DurationMax="0.43002084">
 					<MediaRefs>
@@ -1481,6 +1546,13 @@
 				</Event>
 			</Events>
 			<Busses>
+				<Bus Id="47937584" Name="PlayerVoice">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4119703916"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="309309195" Name="2DAmbience"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
 				<Bus Id="1182634443" Name="AmbientBeds"/>
@@ -1495,6 +1567,14 @@
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
+				<AuxBus Id="350835844" Name="HangarVerb_JD">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="535667444"/>
+							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="924856803" Name="DelaySlaps">
 					<PluginRefs>
 						<ShareSets>
@@ -1524,6 +1604,25 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="2064552269" Name="AreaState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1814387309" Name="Hangar1"/>
+						<State Id="1814387310" Name="Hangar2"/>
+						<State Id="2130932629" Name="Harngar3"/>
+						<State Id="2393120223" Name="InsideElevator"/>
+						<State Id="2782928028" Name="ConferenceRoom2"/>
+						<State Id="2782928029" Name="ConferenceRoom3"/>
+						<State Id="2782928031" Name="ConferenceRoom1"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2802482050" Name="JohnDoe">
+					<States>
+						<State Id="477127956" Name="Sc1"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3956690975" Name="WaitingOnTrigger"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="3305603258" Name="GuitarSpeaker">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -1573,16 +1672,6 @@
 						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="3935263896" Name="DialogueTriggers">
-					<Switches>
-						<Switch Id="62662553" Name="Sc5_Play"/>
-						<Switch Id="856363850" Name="Sc4_Play"/>
-						<Switch Id="1151176110" Name="Awake"/>
-						<Switch Id="1292752181" Name="Sc1_Play"/>
-						<Switch Id="2811652880" Name="Sc2_Play"/>
-						<Switch Id="3561392151" Name="Sc3_Play"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
 					<GameParameterRef Id="870672907"/>
 					<Switches>
@@ -1605,5 +1694,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{21EE5E6C-510D-6CD8-2B9C-EB8BECCBC715}</FileHash>
+	<FileHash>{5DBA74C0-5F17-960A-E699-7D0D98BA6585}</FileHash>
 </SoundBanksInfo>
