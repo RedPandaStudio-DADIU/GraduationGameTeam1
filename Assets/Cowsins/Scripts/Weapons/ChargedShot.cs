@@ -24,9 +24,17 @@ namespace cowsins
         [SerializeField] private float explosionRadius = 5f;
         [SerializeField] private WeaponController weaponController;
 
+        [SerializeField] private AK.Wwise.Event chargingEvent;
+        [SerializeField] private AK.Wwise.Event chargedShotEvent;
+        [SerializeField] private AK.Wwise.Event chargeRdEvent;
+
+
+
         private float rightClickHoldTime = 0f;  
         private bool isRightClickPressed = false;
         private bool isChargedAttack = false;
+        private bool hasStoppedCharging = false;
+        private bool hasPlayedReadySound = false;
         private float chargeTime = 2f; 
         private float ragdollDuration = 5.0f; 
 
@@ -44,8 +52,18 @@ namespace cowsins
         {
 
             
+             if (Mouse.current.rightButton.wasPressedThisFrame)
+            {
+                chargingEvent.Post(gameObject); 
+                 Debug.Log("begain to charge");
+                 hasStoppedCharging = false;
+                hasPlayedReadySound = false;
+
+            }
+
             if (Mouse.current.rightButton.IsPressed()) {
                 
+                 
                 if (chargeProgressBar != null)
                 {
                     Debug.Log("Logging inside if statement");
@@ -56,15 +74,29 @@ namespace cowsins
                     {
                         chargeProgressBar.fillAmount = Mathf.Clamp01(rightClickHoldTime / chargeTime);
                     }
-                    
+                    if (rightClickHoldTime >= chargeTime &&!hasPlayedReadySound)
+                    {
+                        hasPlayedReadySound = true;
+                        chargeRdEvent.Post(gameObject);
+                        Debug.Log("play ready sound");
+                    }
                 }
-            } else {
+
+                    
+            }
+            if (Mouse.current.rightButton.wasReleasedThisFrame)
+            {
+                chargingEvent.Stop(gameObject); 
+                Debug.Log("stop to charge");
                 if (rightClickHoldTime >= chargeTime){
                     Shoot();
+                    chargedShotEvent.Post(gameObject);
                 }
 
                 rightClickHoldTime = 0f;
                 chargeProgressBar.fillAmount = 0;
+
+
             }
 
         }
