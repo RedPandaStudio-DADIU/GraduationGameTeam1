@@ -117,13 +117,19 @@ namespace cowsins
                 if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
 
                             
-                StartCoroutine(EnemyShooting());
+                // StartCoroutine(EnemyShooting());
+                // ProjectileShot();
+
+        
+                Invoke("ProjectileShot", Random.Range(2f, 3f));
+
 
                 i++;
             }
             shooting = false;
             yield break;
         }
+        
 
 
         private IEnumerator EnemyShooting()
@@ -137,30 +143,10 @@ namespace cowsins
         // fix destination problems 
         private void ProjectileShot()
         {
-            Debug.Log("Inside Projectile Shot Enemy");
+            Debug.Log("Inside Projectile Shot Enemy: " + this.gameObject.name);
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
             Vector3 shotDirection = directionToPlayer; 
             Ray ray = new Ray(transform.position, shotDirection);
-            // Vector3 destination;
-
-            // if (Physics.Raycast(ray, out RaycastHit hit) && !hit.transform.CompareTag("Enemy"))
-            // {
-            //     destination = hit.point;
-            //     Debug.Log("Hit something at: " + hit.point);
-            // }
-            // else
-            // {
-            //     destination = ray.GetPoint(50f);
-            //     Debug.Log("No hit; using default distance: " + destination);
-            // }
-
-
-            // Get playerTransform
-            // Get game object of the player transform
-            // Get the Child object of the game object with the specific name
-            // Get the transform of that child object 
-            // Assign the transform position to the bullet.destination
-            
 
 
             Debug.Log("Projectile Enemy Shooting");
@@ -168,7 +154,11 @@ namespace cowsins
             foreach (var p in firePoint)
             {
                 Bullet bullet = Instantiate(weapon.projectile, p.position, p.rotation) as Bullet;
-                bullet.isEnemy = true;
+                if(this.gameObject.CompareTag("Human")){
+                    bullet.isHuman = true;
+                } else{
+                    bullet.isEnemy = true;
+                }
                 Debug.Log("Instantiated bullet at position: " + p.position);
 
                 bullet.hurtsPlayer = weapon.hurtsPlayer;
@@ -177,7 +167,8 @@ namespace cowsins
                 bullet.explosionForce = weapon.explosionForce;
                 bullet.criticalMultiplier = weapon.criticalDamageMultiplier;
                 // bullet.destination = destination;
-                bullet.destination = playerTransform.position;
+                // bullet.destination = playerTransform.position;
+                bullet.destination = new Vector3(playerTransform.position.x, playerTransform.position.y+0.5f, playerTransform.position.z);
                 bullet.player = this.transform;
                 bullet.speed = weapon.speed;
                 bullet.GetComponent<Rigidbody>().isKinematic = !weapon.projectileUsesGravity;
@@ -239,6 +230,10 @@ namespace cowsins
 
             firePoint = inventory[0].FirePoint;
 
+        }
+
+        public void SetPlayerTransform(Transform newPlayerTransform){
+            this.playerTransform = newPlayerTransform;
         }
 
     }

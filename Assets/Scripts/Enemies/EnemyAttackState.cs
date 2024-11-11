@@ -19,7 +19,7 @@ public class EnemyAttackState : IEnemyState
         {
             if(!isAttacking){
                 stateController.GetEnemy().Attack();
-                isAttacking = true;
+                // isAttacking = true;
             }
            
         } else {

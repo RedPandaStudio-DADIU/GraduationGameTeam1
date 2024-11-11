@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using cowsins;
 
 public class EnemyDieState : IEnemyState
 {
@@ -9,13 +10,18 @@ public class EnemyDieState : IEnemyState
     public void OnEnter(EnemyStateController stateController){
         Debug.Log("Entering Die State " + stateController.name);
         stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
-        stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
+        if(!stateController.GetIsHuman()){
+            stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
+        }
+        
+        stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
+        Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
+        Rigidbody rb = weapon.gameObject.AddComponent<Rigidbody>();
 
-        // Collider[] colliders = stateController.GetEnemy().GetComponentsInChildren<Collider>();
-        // foreach (Collider col in colliders)
-        // {
-        //     col.enabled = false;
-        // }
+        rb.mass = 1f;
+        rb.drag = 0.5f;
+        rb.angularDrag = 0.05f;
+        rb.useGravity = true;
 
 
     }
