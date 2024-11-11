@@ -31,11 +31,11 @@ namespace cowsins
 
         public override void CheckSwitchState()
         {
-            if (player.DetectLadders())
-            {
-                SwitchState(_factory.Climb());
-                return;
-            }
+            // if (player.DetectLadders())
+            // {
+            //     SwitchState(_factory.Climb());
+            //     return;
+            // }
 
             // bool canJump = player.ReadyToJump && InputManager.jumping &&
             //                (player.EnoughStaminaToJump && player.grounded ||
@@ -65,15 +65,15 @@ namespace cowsins
                 return;
             }
 
-            bool canDash = player.canDash && InputManager.dashing &&
-                           (player.infiniteDashes ||
-                            player.currentDashes > 0 && !player.infiniteDashes);
+            // bool canDash = player.canDash && InputManager.dashing &&
+            //                (player.infiniteDashes ||
+            //                 player.currentDashes > 0 && !player.infiniteDashes);
 
-            if (canDash)
-            {
-                SwitchState(_factory.Dash());
-                return;
-            }
+            // if (canDash)
+            // {
+            //     SwitchState(_factory.Dash());
+            //     return;
+            // }
 
             bool canCrouch = InputManager.crouchingDown && !player.wallRunning &&
                              player.allowCrouch && player.allowCrouchWhileJumping;

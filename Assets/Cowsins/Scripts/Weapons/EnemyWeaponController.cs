@@ -16,7 +16,8 @@ namespace cowsins
         [Tooltip("An array that includes all your initial weapons.")] public Weapon_SO[] initialWeapons;
 
         public WeaponIdentification[] inventory;
-        public Transform playerTransform;
+        // public Transform playerTransform;
+        private Transform playerTransform;
 
         public UISlot[] slots;
 
@@ -72,6 +73,9 @@ namespace cowsins
 
         void Start(){
             GetInitialWeapons();
+            playerTransform = this.gameObject.GetComponent<EnemyStateController>().GetPlayerTransform();
+            Debug.Log("Player Transform in Enemy Weapon Controller: " + playerTransform.position + " name: " + playerTransform.gameObject.name);
+
         }
 
         public void HandleHitscanProjectileShot()
@@ -90,20 +94,13 @@ namespace cowsins
 
         private IEnumerator HandleShooting()
         {
-            /// Determine wether we are sending a raycast, aka hitscan weapon, we are spawning a projectile or melee attacking
             int style = 1;
 
-            // weaponAnimator.StopWalkAndRunMotion();
-
-            //Determine weapon class / style
             int i = 0;
             while (i < bulletsPerFire)
             {
                 if (weapon == null) yield break;
                 shooting = true;
-
-                // CamShake.instance.ShootShake(camShakeAmount * aimingCamShakeMultiplier * crouchingCamShakeMultiplier);
-                // if (weapon.useProceduralShot) ProceduralShot.Instance.Shoot(weapon.proceduralShotPattern);
 
                 // Determine if we want to add an effect for FOV
                 if (weapon.applyFOVEffectOnShooting)
@@ -119,23 +116,8 @@ namespace cowsins
                 // CowsinsUtilities.ForcePlayAnim("shooting", inventory[currentWeapon].GetComponentInChildren<Animator>());
                 if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
 
-                // ProgressRecoil();
-
-                // if (style == 0) HitscanShot();
-                // else if (style == 1)
-                // {
-                // yield return new WaitForSeconds(weapon.shootDelay);
-                // yield return new WaitForSeconds(1f);
-           
                             
                 StartCoroutine(EnemyShooting());
-
-
-                // ProjectileShot();
-                // }
-
-                // yield return new WaitForSeconds(weapon.timeBetweenShots);
-                // yield return new WaitForSeconds(10f);
 
                 i++;
             }
@@ -152,58 +134,34 @@ namespace cowsins
         }
 
 
-        // private void ProjectileShot()
-        // {
-        //     Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
-        //     Vector3 shotDirection = directionToPlayer + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, Camera.main);
-        //     Ray ray = new Ray(transform.position, shotDirection);
-        //     Vector3 destination;
-        //     if (Physics.Raycast(ray, out RaycastHit hit) && !hit.transform.CompareTag("Enemy"))
-        //     {
-        //         destination = hit.point;
-        //     }
-        //     else
-        //     {
-        //         destination = ray.GetPoint(50f);
-        //     }
-        //     Debug.Log("Projectile Enemy");
-        //     foreach (var p in firePoint)
-        //     {
-        //         Bullet bullet = Instantiate(weapon.projectile, p.position, p.transform.rotation) as Bullet;
-
-        //         bullet.hurtsPlayer = weapon.hurtsPlayer;
-        //         bullet.explosionOnHit = weapon.explosionOnHit;
-        //         bullet.explosionRadius = weapon.explosionRadius;
-        //         bullet.explosionForce = weapon.explosionForce;
-
-        //         bullet.criticalMultiplier = weapon.criticalDamageMultiplier;
-        //         bullet.destination = destination;
-        //         bullet.player = this.transform;
-        //         bullet.speed = weapon.speed;
-        //         bullet.GetComponent<Rigidbody>().isKinematic = (!weapon.projectileUsesGravity) ? true : false;
-        //         bullet.damage = damagePerBullet;
-        //         bullet.duration = weapon.bulletDuration;
-        //     }
-        // }
-
+        // fix destination problems 
         private void ProjectileShot()
         {
             Debug.Log("Inside Projectile Shot Enemy");
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
             Vector3 shotDirection = directionToPlayer; 
             Ray ray = new Ray(transform.position, shotDirection);
-            Vector3 destination;
+            // Vector3 destination;
 
-            if (Physics.Raycast(ray, out RaycastHit hit) && !hit.transform.CompareTag("Enemy"))
-            {
-                destination = hit.point;
-                Debug.Log("Hit something at: " + hit.point);
-            }
-            else
-            {
-                destination = ray.GetPoint(50f);
-                Debug.Log("No hit; using default distance: " + destination);
-            }
+            // if (Physics.Raycast(ray, out RaycastHit hit) && !hit.transform.CompareTag("Enemy"))
+            // {
+            //     destination = hit.point;
+            //     Debug.Log("Hit something at: " + hit.point);
+            // }
+            // else
+            // {
+            //     destination = ray.GetPoint(50f);
+            //     Debug.Log("No hit; using default distance: " + destination);
+            // }
+
+
+            // Get playerTransform
+            // Get game object of the player transform
+            // Get the Child object of the game object with the specific name
+            // Get the transform of that child object 
+            // Assign the transform position to the bullet.destination
+            
+
 
             Debug.Log("Projectile Enemy Shooting");
 
@@ -218,7 +176,8 @@ namespace cowsins
                 bullet.explosionRadius = weapon.explosionRadius;
                 bullet.explosionForce = weapon.explosionForce;
                 bullet.criticalMultiplier = weapon.criticalDamageMultiplier;
-                bullet.destination = destination;
+                // bullet.destination = destination;
+                bullet.destination = playerTransform.position;
                 bullet.player = this.transform;
                 bullet.speed = weapon.speed;
                 bullet.GetComponent<Rigidbody>().isKinematic = !weapon.projectileUsesGravity;

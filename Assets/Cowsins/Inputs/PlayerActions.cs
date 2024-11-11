@@ -37,27 +37,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Dashing"",
-                    ""type"": ""Button"",
-                    ""id"": ""cc42ae66-7d05-421b-ab53-c2fca1120619"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Reloading"",
                     ""type"": ""Button"",
                     ""id"": ""55a2b128-526c-4037-9a46-07cd6bbad325"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Melee"",
-                    ""type"": ""Button"",
-                    ""id"": ""830659d6-a47d-4333-b270-44974daf4e87"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -91,15 +73,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Grapple"",
-                    ""type"": ""Button"",
-                    ""id"": ""8343eef6-dde5-475a-a9a0-56191f1758f0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Scrolling"",
                     ""type"": ""Value"",
                     ""id"": ""d906d97d-9e07-4725-aab7-189ad97c1a90"",
@@ -121,15 +94,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""name"": ""Interacting"",
                     ""type"": ""Button"",
                     ""id"": ""972464b8-bf5b-4681-88cc-ce762fb7218a"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Inspect"",
-                    ""type"": ""Button"",
-                    ""id"": ""69906d68-6b32-42a6-a2fa-3b64680bf0c1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -224,17 +188,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d6acc991-259c-4322-b78a-2b7b4b4998e9"",
-                    ""path"": ""<Mouse>/middleButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Dashing"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""4deb4fe1-c690-42ac-8d37-6d7932abbe23"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
@@ -252,28 +205,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Reloading"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""276acd54-2076-42e5-8200-012158dc82b0"",
-                    ""path"": ""<Keyboard>/m"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Melee"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a765ab71-0ad2-475c-a6a8-44ef7d41b104"",
-                    ""path"": ""<Gamepad>/rightStickPress"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Melee"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -345,17 +276,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""64442dcf-27a3-4539-8a9f-250353c47fc2"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Grapple"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""a2f71a14-8dc4-4fb9-80f4-a04925bfbc2f"",
                     ""path"": ""<Mouse>/scroll"",
                     ""interactions"": """",
@@ -406,28 +326,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Interacting"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6e152139-58ec-4deb-b8a6-65908f043e58"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Inspect"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a4ffcbce-e73a-41ce-aec0-a234c7a4dc3d"",
-                    ""path"": ""<Gamepad>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Inspect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1280,17 +1178,13 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // GameControls
         m_GameControls = asset.FindActionMap("GameControls", throwIfNotFound: true);
         m_GameControls_Jumping = m_GameControls.FindAction("Jumping", throwIfNotFound: true);
-        m_GameControls_Dashing = m_GameControls.FindAction("Dashing", throwIfNotFound: true);
         m_GameControls_Reloading = m_GameControls.FindAction("Reloading", throwIfNotFound: true);
-        m_GameControls_Melee = m_GameControls.FindAction("Melee", throwIfNotFound: true);
         m_GameControls_Crouching = m_GameControls.FindAction("Crouching", throwIfNotFound: true);
         m_GameControls_Sprinting = m_GameControls.FindAction("Sprinting", throwIfNotFound: true);
         m_GameControls_Firing = m_GameControls.FindAction("Firing", throwIfNotFound: true);
-        m_GameControls_Grapple = m_GameControls.FindAction("Grapple", throwIfNotFound: true);
         m_GameControls_Scrolling = m_GameControls.FindAction("Scrolling", throwIfNotFound: true);
         m_GameControls_Aiming = m_GameControls.FindAction("Aiming", throwIfNotFound: true);
         m_GameControls_Interacting = m_GameControls.FindAction("Interacting", throwIfNotFound: true);
-        m_GameControls_Inspect = m_GameControls.FindAction("Inspect", throwIfNotFound: true);
         m_GameControls_Drop = m_GameControls.FindAction("Drop", throwIfNotFound: true);
         m_GameControls_ChangeWeapons = m_GameControls.FindAction("ChangeWeapons", throwIfNotFound: true);
         m_GameControls_Pause = m_GameControls.FindAction("Pause", throwIfNotFound: true);
@@ -1372,17 +1266,13 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GameControls;
     private List<IGameControlsActions> m_GameControlsActionsCallbackInterfaces = new List<IGameControlsActions>();
     private readonly InputAction m_GameControls_Jumping;
-    private readonly InputAction m_GameControls_Dashing;
     private readonly InputAction m_GameControls_Reloading;
-    private readonly InputAction m_GameControls_Melee;
     private readonly InputAction m_GameControls_Crouching;
     private readonly InputAction m_GameControls_Sprinting;
     private readonly InputAction m_GameControls_Firing;
-    private readonly InputAction m_GameControls_Grapple;
     private readonly InputAction m_GameControls_Scrolling;
     private readonly InputAction m_GameControls_Aiming;
     private readonly InputAction m_GameControls_Interacting;
-    private readonly InputAction m_GameControls_Inspect;
     private readonly InputAction m_GameControls_Drop;
     private readonly InputAction m_GameControls_ChangeWeapons;
     private readonly InputAction m_GameControls_Pause;
@@ -1395,17 +1285,13 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         private @PlayerActions m_Wrapper;
         public GameControlsActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jumping => m_Wrapper.m_GameControls_Jumping;
-        public InputAction @Dashing => m_Wrapper.m_GameControls_Dashing;
         public InputAction @Reloading => m_Wrapper.m_GameControls_Reloading;
-        public InputAction @Melee => m_Wrapper.m_GameControls_Melee;
         public InputAction @Crouching => m_Wrapper.m_GameControls_Crouching;
         public InputAction @Sprinting => m_Wrapper.m_GameControls_Sprinting;
         public InputAction @Firing => m_Wrapper.m_GameControls_Firing;
-        public InputAction @Grapple => m_Wrapper.m_GameControls_Grapple;
         public InputAction @Scrolling => m_Wrapper.m_GameControls_Scrolling;
         public InputAction @Aiming => m_Wrapper.m_GameControls_Aiming;
         public InputAction @Interacting => m_Wrapper.m_GameControls_Interacting;
-        public InputAction @Inspect => m_Wrapper.m_GameControls_Inspect;
         public InputAction @Drop => m_Wrapper.m_GameControls_Drop;
         public InputAction @ChangeWeapons => m_Wrapper.m_GameControls_ChangeWeapons;
         public InputAction @Pause => m_Wrapper.m_GameControls_Pause;
@@ -1425,15 +1311,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Jumping.started += instance.OnJumping;
             @Jumping.performed += instance.OnJumping;
             @Jumping.canceled += instance.OnJumping;
-            @Dashing.started += instance.OnDashing;
-            @Dashing.performed += instance.OnDashing;
-            @Dashing.canceled += instance.OnDashing;
             @Reloading.started += instance.OnReloading;
             @Reloading.performed += instance.OnReloading;
             @Reloading.canceled += instance.OnReloading;
-            @Melee.started += instance.OnMelee;
-            @Melee.performed += instance.OnMelee;
-            @Melee.canceled += instance.OnMelee;
             @Crouching.started += instance.OnCrouching;
             @Crouching.performed += instance.OnCrouching;
             @Crouching.canceled += instance.OnCrouching;
@@ -1443,9 +1323,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Firing.started += instance.OnFiring;
             @Firing.performed += instance.OnFiring;
             @Firing.canceled += instance.OnFiring;
-            @Grapple.started += instance.OnGrapple;
-            @Grapple.performed += instance.OnGrapple;
-            @Grapple.canceled += instance.OnGrapple;
             @Scrolling.started += instance.OnScrolling;
             @Scrolling.performed += instance.OnScrolling;
             @Scrolling.canceled += instance.OnScrolling;
@@ -1455,9 +1332,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Interacting.started += instance.OnInteracting;
             @Interacting.performed += instance.OnInteracting;
             @Interacting.canceled += instance.OnInteracting;
-            @Inspect.started += instance.OnInspect;
-            @Inspect.performed += instance.OnInspect;
-            @Inspect.canceled += instance.OnInspect;
             @Drop.started += instance.OnDrop;
             @Drop.performed += instance.OnDrop;
             @Drop.canceled += instance.OnDrop;
@@ -1486,15 +1360,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Jumping.started -= instance.OnJumping;
             @Jumping.performed -= instance.OnJumping;
             @Jumping.canceled -= instance.OnJumping;
-            @Dashing.started -= instance.OnDashing;
-            @Dashing.performed -= instance.OnDashing;
-            @Dashing.canceled -= instance.OnDashing;
             @Reloading.started -= instance.OnReloading;
             @Reloading.performed -= instance.OnReloading;
             @Reloading.canceled -= instance.OnReloading;
-            @Melee.started -= instance.OnMelee;
-            @Melee.performed -= instance.OnMelee;
-            @Melee.canceled -= instance.OnMelee;
             @Crouching.started -= instance.OnCrouching;
             @Crouching.performed -= instance.OnCrouching;
             @Crouching.canceled -= instance.OnCrouching;
@@ -1504,9 +1372,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Firing.started -= instance.OnFiring;
             @Firing.performed -= instance.OnFiring;
             @Firing.canceled -= instance.OnFiring;
-            @Grapple.started -= instance.OnGrapple;
-            @Grapple.performed -= instance.OnGrapple;
-            @Grapple.canceled -= instance.OnGrapple;
             @Scrolling.started -= instance.OnScrolling;
             @Scrolling.performed -= instance.OnScrolling;
             @Scrolling.canceled -= instance.OnScrolling;
@@ -1516,9 +1381,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Interacting.started -= instance.OnInteracting;
             @Interacting.performed -= instance.OnInteracting;
             @Interacting.canceled -= instance.OnInteracting;
-            @Inspect.started -= instance.OnInspect;
-            @Inspect.performed -= instance.OnInspect;
-            @Inspect.canceled -= instance.OnInspect;
             @Drop.started -= instance.OnDrop;
             @Drop.performed -= instance.OnDrop;
             @Drop.canceled -= instance.OnDrop;
@@ -1696,17 +1558,13 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     public interface IGameControlsActions
     {
         void OnJumping(InputAction.CallbackContext context);
-        void OnDashing(InputAction.CallbackContext context);
         void OnReloading(InputAction.CallbackContext context);
-        void OnMelee(InputAction.CallbackContext context);
         void OnCrouching(InputAction.CallbackContext context);
         void OnSprinting(InputAction.CallbackContext context);
         void OnFiring(InputAction.CallbackContext context);
-        void OnGrapple(InputAction.CallbackContext context);
         void OnScrolling(InputAction.CallbackContext context);
         void OnAiming(InputAction.CallbackContext context);
         void OnInteracting(InputAction.CallbackContext context);
-        void OnInspect(InputAction.CallbackContext context);
         void OnDrop(InputAction.CallbackContext context);
         void OnChangeWeapons(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);

@@ -24,9 +24,8 @@ namespace cowsins
             nextweapon,
             previousweapon,
             inspecting,
-            melee,
             pausing,
-            dashing,
+            // dashing,
             invertedAxis,
             yMovementActioned,
             toggleFlashLight, grappling,
@@ -96,8 +95,8 @@ namespace cowsins
             inputActions.GameControls.Aiming.started += ctx => ToggleAiming = true;
             inputActions.GameControls.Aiming.canceled += ctx => ToggleAiming = false;
 
-            inputActions.GameControls.Grapple.started += ctx => grappling = true;
-            inputActions.GameControls.Grapple.canceled += ctx => grappling = false;
+            // inputActions.GameControls.Grapple.started += ctx => grappling = true;
+            // inputActions.GameControls.Grapple.canceled += ctx => grappling = false;
 
             inputActions.GameControls.ToggleFlashLight.started += ctx => toggleFlashLight = true;
 
@@ -152,7 +151,6 @@ namespace cowsins
             yMovementActioned = y > 0;
 
             reloading = inputActions.GameControls.Reloading.IsPressed();
-            melee = inputActions.GameControls.Melee.IsPressed();
 
 
             // Handle different crouching methods
@@ -200,11 +198,11 @@ namespace cowsins
             interacting = inputActions.GameControls.Interacting.IsPressed();
             dropping = inputActions.GameControls.Drop.IsPressed();
 
-            inspecting = inputActions.GameControls.Inspect.IsPressed();
+            // inspecting = inputActions.GameControls.Inspect.IsPressed();
 
             if (toggleFlashLight) toggleFlashLight = false;
 
-            dashing = inputActions.GameControls.Dashing.WasPressedThisFrame();
+            // dashing = inputActions.GameControls.Dashing.WasPressedThisFrame();
             jumping = inputActions.GameControls.Jumping.WasPressedThisFrame();
             push = inputActions.GameControls.Push.WasPressedThisFrame();
             heal = inputActions.GameControls.Heal.WasPressedThisFrame();

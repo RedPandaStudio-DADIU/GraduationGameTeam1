@@ -94,27 +94,29 @@ namespace cowsins
 
         private void Shoot(float damage, Collider other){
 
+
             EnemyStateController enemy = other.GetComponent<EnemyStateController>();
 
             if (enemy != null)
             {
                 enemy.GetEnemy().DecreaseHealth(damage);
-                // enemy.DecreaseHealth(damage);
                 
                 Vector3 pushDirection = this.transform.position - playerCamera.transform.position; 
                 pushDirection = pushDirection.normalized;
 
-                // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce); 
                 enemy.SetForceDirection(pushDirection);
                 enemy.SetForce(pushForce);
-                enemy.ChangeState(new EnemyHitState());
 
-                if(enemy.GetEnemy().GetHealth() > 0){
-                    Debug.Log("Inside health check");
-                    enemy.Recovery(ragdollDuration);
-                } else {
-                    Debug.Log("Health check not passed");
+                if(enemy.GetEnemy().GetHealth() == 0){
+                    enemy.ChangeState(new EnemyDieState());
                 }
+
+                // if(enemy.GetEnemy().GetHealth() > 0){
+                //     Debug.Log("Inside health check");
+                //     enemy.Recovery(ragdollDuration);
+                // } else {
+                //     Debug.Log("Health check not passed");
+                // }
 
             }
 

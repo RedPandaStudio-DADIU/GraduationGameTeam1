@@ -15,7 +15,7 @@ namespace cowsins
         private string[] tabs = { "Assignables", "Movement", "Camera", "Sliding", "Jumping", "Aim assist", "Stamina", "Advanced Movement", "Others" };
         private int currentTab = 0;
 
-        private bool showWallRun, showWallBounce, showDashing, showGrapplingHook, showClimbing;
+        private bool showWallRun, showWallBounce, showGrapplingHook, showClimbing; //showDashing
 
         override public void OnInspectorGUI()
         {
@@ -76,12 +76,12 @@ namespace cowsins
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("wallrunningFOV"));
                             EditorGUI.indentLevel--;
                         }
-                        if (myScript.canDash)
-                        {
-                            EditorGUI.indentLevel++;
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("fovToAddOnDash"));
-                            EditorGUI.indentLevel--;
-                        }
+                        // if (myScript.canDash)
+                        // {
+                        //     EditorGUI.indentLevel++;
+                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("fovToAddOnDash"));
+                        //     EditorGUI.indentLevel--;
+                        // }
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fadeInFOVAmount"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fadeOutFOVAmount"));
                         if (myScript.allowSliding)
@@ -221,8 +221,7 @@ namespace cowsins
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("LoseStaminaWalking"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnJump"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnSlide"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnDash"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaSlider"));
+                            // EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnDash"));
                             EditorGUI.indentLevel--;
                         }
                         break;
@@ -299,33 +298,33 @@ namespace cowsins
                         EditorGUILayout.BeginVertical(GUI.skin.GetStyle("HelpBox"));
                         {
                             // Dashing foldout
-                            showDashing = EditorGUILayout.Foldout(showDashing, "DASHING", true);
-                            if (showDashing)
-                            {
-                                EditorGUI.indentLevel++;
-                                if (myScript.canDash && !myScript.infiniteDashes) EditorGUILayout.LabelField("NEW FEATURE AVAILABLE UNDER �ASSIGNABLES� SETTINGS", EditorStyles.helpBox);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("canDash"));
-                                if (myScript.canDash)
-                                {
-                                    EditorGUI.indentLevel++;
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("dashMethod"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("infiniteDashes"));
-                                    if (!myScript.infiniteDashes)
-                                    {
-                                        EditorGUI.indentLevel++;
-                                        EditorGUILayout.PropertyField(serializedObject.FindProperty("amountOfDashes"));
-                                        EditorGUILayout.PropertyField(serializedObject.FindProperty("dashCooldown"));
-                                        EditorGUI.indentLevel--;
-                                    }
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("damageProtectionWhileDashing"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("dashForce"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("dashDuration"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("canShootWhileDashing"));
-                                    EditorGUI.indentLevel--;
-                                }
+                            // showDashing = EditorGUILayout.Foldout(showDashing, "DASHING", true);
+                            // if (showDashing)
+                            // {
+                            //     EditorGUI.indentLevel++;
+                            //     if (myScript.canDash && !myScript.infiniteDashes) EditorGUILayout.LabelField("NEW FEATURE AVAILABLE UNDER �ASSIGNABLES� SETTINGS", EditorStyles.helpBox);
+                            //     EditorGUILayout.PropertyField(serializedObject.FindProperty("canDash"));
+                            //     if (myScript.canDash)
+                            //     {
+                            //         EditorGUI.indentLevel++;
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("dashMethod"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("infiniteDashes"));
+                            //         if (!myScript.infiniteDashes)
+                            //         {
+                            //             EditorGUI.indentLevel++;
+                            //             EditorGUILayout.PropertyField(serializedObject.FindProperty("amountOfDashes"));
+                            //             EditorGUILayout.PropertyField(serializedObject.FindProperty("dashCooldown"));
+                            //             EditorGUI.indentLevel--;
+                            //         }
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("damageProtectionWhileDashing"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("dashForce"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("dashDuration"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("canShootWhileDashing"));
+                            //         EditorGUI.indentLevel--;
+                            //     }
 
-                                EditorGUI.indentLevel--;
-                            }
+                            //     EditorGUI.indentLevel--;
+                            // }
                         }
                         EditorGUILayout.EndVertical();
 
@@ -365,25 +364,25 @@ namespace cowsins
                         EditorGUILayout.Space(5);
                         EditorGUILayout.BeginVertical(GUI.skin.GetStyle("HelpBox"));
                         {
-                            // Climbing foldout
-                            showClimbing = EditorGUILayout.Foldout(showClimbing, "CLIMBING LADDERS", true);
-                            if (showClimbing)
-                            {
-                                EditorGUI.indentLevel++;
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("canClimb"));
-                                if (myScript.canClimb)
-                                {
-                                    EditorGUI.indentLevel++;
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("maxLadderDetectionDistance"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("climbSpeed"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedUpperForce"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedForwardForce"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("allowVerticalLookWhileClimbing"));
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("hideWeaponWhileClimbing"));
-                                    EditorGUI.indentLevel--;
-                                }
-                                EditorGUI.indentLevel--;
-                            }
+                            // // Climbing foldout
+                            // showClimbing = EditorGUILayout.Foldout(showClimbing, "CLIMBING LADDERS", true);
+                            // if (showClimbing)
+                            // {
+                            //     EditorGUI.indentLevel++;
+                            //     EditorGUILayout.PropertyField(serializedObject.FindProperty("canClimb"));
+                            //     if (myScript.canClimb)
+                            //     {
+                            //         EditorGUI.indentLevel++;
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("maxLadderDetectionDistance"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("climbSpeed"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedUpperForce"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("topReachedForwardForce"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("allowVerticalLookWhileClimbing"));
+                            //         EditorGUILayout.PropertyField(serializedObject.FindProperty("hideWeaponWhileClimbing"));
+                            //         EditorGUI.indentLevel--;
+                            //     }
+                            //     EditorGUI.indentLevel--;
+                            // }
                         }
                         EditorGUILayout.EndVertical();
                         EditorGUI.indentLevel--;

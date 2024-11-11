@@ -12,8 +12,6 @@ namespace cowsins
 
         public WeaponBaseState Shoot() { return new WeaponShootingState(_context, this); }
 
-        public WeaponBaseState Melee() { return new MeleeState(_context, this); }
-
         public WeaponBaseState Inspect() { return new WeaponInspectState(_context, this); }
     }
 }

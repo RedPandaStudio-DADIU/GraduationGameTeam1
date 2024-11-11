@@ -58,21 +58,6 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("alternateAiming"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("hitLayer"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("removeCrosshairOnAiming"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("canMelee"));
-                        if (myScript.canMelee)
-                        {
-                            EditorGUI.indentLevel++;
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeObject"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("holsterMotionObject"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeDuration"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeDelay"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeAttackDamage"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeRange"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("meleeCamShakeAmount"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("reEnableMeleeAfterAction"));
-                            if (myScript.meleeDelay > myScript.meleeDuration) myScript.meleeDelay = 0f;
-                            EditorGUI.indentLevel--;
-                        }
                         break;
                     case "Effects":
                         EditorGUILayout.Space(2f);

@@ -41,7 +41,7 @@ namespace cowsins
                 "to any you like, but note that color will be overriden by the script"), SerializeField]
         private Image healthStatesEffect;
 
-        [Tooltip(" Color of healthStatesEffect on different actions such as being hurt or healed"), SerializeField] private Color damageColor, healColor, coinCollectColor, xpCollectColor;
+        [Tooltip(" Color of healthStatesEffect on different actions such as being hurt or healed"), SerializeField] private Color damageColor, healColor, xpCollectColor;
 
         [Tooltip("Time for the healthStatesEffect to fade out"), SerializeField] private float fadeOutTime;
 
@@ -84,9 +84,9 @@ namespace cowsins
 
         [SerializeField, Tooltip("Color of an attachment UI element when it is unequipped. This is the default color.")] private Color notUsingAttachmentColor;
 
-        [SerializeField, Tooltip("Contains dashUIElements in game.")] private Transform dashUIContainer;
+        // [SerializeField, Tooltip("Contains dashUIElements in game.")] private Transform dashUIContainer;
 
-        [SerializeField, Tooltip("Displays a dash slot in-game. This keeps stored at dashUIContainer during runtime.")] private Transform dashUIElement;
+        // [SerializeField, Tooltip("Displays a dash slot in-game. This keeps stored at dashUIContainer during runtime.")] private Transform dashUIElement;
 
         [Tooltip("Attach the appropriate UI here")] public TextMeshProUGUI bulletsUI, magazineUI, reloadUI, lowAmmoUI;
 
@@ -97,9 +97,6 @@ namespace cowsins
 
         [Tooltip(" Attach the CanvasGroup that contains the inventory")] public CanvasGroup inventoryContainer;
 
-        [SerializeField] private GameObject coinsUI;
-
-        [SerializeField] private TextMeshProUGUI coinsText;
 
         [SerializeField] private Hitmarker hitmarker;
 
@@ -128,7 +125,6 @@ namespace cowsins
             intManager = PlayerStates.instance.GetComponent<InteractManager>();
             WeaponStates.instance.inspectionUI = inspectionUI;
             if (ExperienceManager.instance.useExperience) UpdateXP();
-            if (!CoinManager.Instance.useCoins && coinsUI != null) coinsUI.SetActive(false);
         }
         private void Update()
         {
@@ -174,10 +170,6 @@ namespace cowsins
             healthStatesEffect.color = colorSelected;
         }
 
-        public void UpdateCoinsPanel()
-        {
-            healthStatesEffect.color = coinCollectColor;
-        }
 
         public void UpdateXPPanel()
         {
@@ -334,37 +326,37 @@ namespace cowsins
         }
         // MOVEMENT    ////////////////////////////////////////////////////////////////////////////////////////
 
-        private List<GameObject> dashElements; // Stores the UI Elements required to display the current dashes amount
+        // private List<GameObject> dashElements; // Stores the UI Elements required to display the current dashes amount
 
         /// <summary>
         /// Draws the dash UI 
         /// </summary>
-        private void DrawDashUI(int amountOfDashes)
-        {
-            dashElements = new List<GameObject>(amountOfDashes);
-            int i = 0;
-            while (i < amountOfDashes)
-            {
-                var uiElement = Instantiate(dashUIElement, dashUIContainer);
-                dashElements.Add(uiElement.gameObject);
-                i++;
-            }
-        }
+        // private void DrawDashUI(int amountOfDashes)
+        // {
+        //     dashElements = new List<GameObject>(amountOfDashes);
+        //     int i = 0;
+        //     while (i < amountOfDashes)
+        //     {
+        //         var uiElement = Instantiate(dashUIElement, dashUIContainer);
+        //         dashElements.Add(uiElement.gameObject);
+        //         i++;
+        //     }
+        // }
 
-        private void RegainDash()
-        {
-            // Enable a new UI Element
-            var uiElement = Instantiate(dashUIElement, dashUIContainer);
-            dashElements.Add(uiElement.gameObject);
-        }
+        // private void RegainDash()
+        // {
+        //     // Enable a new UI Element
+        //     var uiElement = Instantiate(dashUIElement, dashUIContainer);
+        //     dashElements.Add(uiElement.gameObject);
+        // }
 
-        private void DashUsed(int currentDashes)
-        {
-            // Remove the UI Element
-            var element = dashElements[currentDashes];
-            dashElements.Remove(element);
-            Destroy(element);
-        }
+        // private void DashUsed(int currentDashes)
+        // {
+        //     // Remove the UI Element
+        //     var element = dashElements[currentDashes];
+        //     dashElements.Remove(element);
+        //     Destroy(element);
+        // }
 
         // WEAPON    /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -413,7 +405,6 @@ namespace cowsins
 
         public void ChangeScene(int scene) => SceneManager.LoadScene(scene);
 
-        public void UpdateCoins(int amount) => coinsText.text = CoinManager.Instance.coins.ToString();
 
         public void DrawProgressBar(float length){
             chargedShotUI.gameObject.SetActive(true);
@@ -433,9 +424,9 @@ namespace cowsins
             UIEvents.onInteractionProgressChanged += InteractioProgressUpdate;
             UIEvents.onFinishInteractionProgress += FinishInteraction;
             UIEvents.onGenerateInspectionUI += GenerateInspectionUI;
-            UIEvents.onInitializeDashUI += DrawDashUI;
-            UIEvents.onDashGained += RegainDash;
-            UIEvents.onDashUsed += DashUsed;
+            // UIEvents.onInitializeDashUI += DrawDashUI;
+            // UIEvents.onDashGained += RegainDash;
+            // UIEvents.onDashUsed += DashUsed;
             UIEvents.onEnemyHit += Hitmarker;
             UIEvents.onEnemyKilled += AddKillfeed;
             UIEvents.onDetectReloadMethod += DetectReloadMethod;
@@ -444,7 +435,6 @@ namespace cowsins
             UIEvents.disableWeaponUI += DisableWeaponUI;
             UIEvents.setWeaponDisplay += SetWeaponDisplay;
             UIEvents.enableWeaponDisplay += EnableDisplay;
-            UIEvents.onCoinsChange += UpdateCoins;
             UIEvents.onChargedShot += DrawProgressBar;
 
             interactUI.SetActive(false);
@@ -460,9 +450,9 @@ namespace cowsins
             UIEvents.onInteractionProgressChanged = null;
             UIEvents.onFinishInteractionProgress = null;
             UIEvents.onGenerateInspectionUI = null;
-            UIEvents.onInitializeDashUI = null;
-            UIEvents.onDashGained = null;
-            UIEvents.onDashUsed = null;
+            // UIEvents.onInitializeDashUI = null;
+            // UIEvents.onDashGained = null;
+            // UIEvents.onDashUsed = null;
             UIEvents.onEnemyHit = null;
             UIEvents.onEnemyKilled = null;
             UIEvents.onDetectReloadMethod = null;
@@ -471,7 +461,6 @@ namespace cowsins
             UIEvents.disableWeaponUI = null;
             UIEvents.setWeaponDisplay = null;
             UIEvents.enableWeaponDisplay = null;
-            UIEvents.onCoinsChange = null;
             addXP = null;
         }
 
@@ -481,7 +470,7 @@ namespace cowsins
     [CustomEditor(typeof(UIController))]
     public class UIControllerEditor : Editor
     {
-        private string[] tabs = { "Health", "Interaction", "Attachments", "Weapon", "Dashing", "Experience", "Others", "UI Events" };
+        private string[] tabs = { "Health", "Interaction", "Attachments", "Weapon", "Experience", "Others", "UI Events" }; //, "Dashing"
         private int currentTab = 0;
 
         override public void OnInspectorGUI()
@@ -525,7 +514,6 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("healthStatesEffect"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("damageColor"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("healColor"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("coinCollectColor"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("xpCollectColor"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fadeOutTime"));
 
@@ -567,18 +555,18 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("inventoryContainer"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("crosshair"));
                         break;
-                    case "Dashing":
+                    // case "Dashing":
 
-                        EditorGUILayout.LabelField("DASHING", EditorStyles.boldLabel);
-                        if (myScript.playerMovement != null && myScript.playerMovement.canDash && !myScript.playerMovement.infiniteDashes)
-                        {
-                            EditorGUI.indentLevel++;
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("dashUIContainer"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("dashUIElement"));
-                            EditorGUI.indentLevel--;
-                        }
+                    //     EditorGUILayout.LabelField("DASHING", EditorStyles.boldLabel);
+                    //     if (myScript.playerMovement != null && myScript.playerMovement.canDash && !myScript.playerMovement.infiniteDashes)
+                    //     {
+                    //         EditorGUI.indentLevel++;
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("dashUIContainer"));
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("dashUIElement"));
+                    //         EditorGUI.indentLevel--;
+                    //     }
 
-                        break;
+                    //     break;
                     case "Experience":
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("xpImage"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("currentLevel"));
@@ -587,8 +575,6 @@ namespace cowsins
 
                         break;
                     case "Others":
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("coinsUI"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("coinsText"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("hitmarker"));
                         break;
                     case "UI Events":

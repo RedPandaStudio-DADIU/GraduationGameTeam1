@@ -23,8 +23,12 @@ namespace cowsins
         public class Events // Store your events
         {
             public UnityEvent OnMove, OnJump, OnLand, OnCrouch, OnStopCrouch, OnSprint, OnSpawn, OnSlide, OnStartWallRun, OnStopWallRun,
-                                OnWallBounce, OnStartDash, OnDashing, OnEndDash, OnStartClimb, OnClimbing, OnEndClimb,
-                                OnStartGrapple, OnGrappling, OnStopGrapple, OnGrappleEnabled;
+                                OnWallBounce, OnStartClimb, OnClimbing, OnEndClimb;
+
+
+            //  public UnityEvent OnMove, OnJump, OnLand, OnCrouch, OnStopCrouch, OnSprint, OnSpawn, OnSlide, OnStartWallRun, OnStopWallRun,
+            //                     OnWallBounce, OnStartDash, OnDashing, OnEndDash, OnStartClimb, OnClimbing, OnEndClimb,
+            //                     OnStartGrapple, OnGrappling, OnStopGrapple, OnGrappleEnabled;
         }
         // [System.Serializable]
         // public class FootStepsAudio // store your footsteps audio
@@ -59,11 +63,11 @@ namespace cowsins
         {
             None, InputBased, ForwardMovement
         }
-        [System.Serializable]
-        public enum DashMethod // Different methods to determine the jump method to apply
-        {
-            ForwardAlways, InputBased, Free
-        }
+        // [System.Serializable]
+        // public enum DashMethod // Different methods to determine the jump method to apply
+        // {
+        //     ForwardAlways, InputBased, Free
+        // }
         #endregion
 
         #region variables
@@ -249,15 +253,12 @@ namespace cowsins
         [Tooltip("Amount of stamina lost on sliding."), SerializeField]
         private float staminaLossOnSlide;
 
-        [Tooltip("Amount of stamina lost on dashing."), SerializeField]
-        private float staminaLossOnDash;
+        // [Tooltip("Amount of stamina lost on dashing."), SerializeField]
+        // private float staminaLossOnDash;
 
-        public float StaminaLossOnDash { get { return staminaLossOnDash; } }
+        // public float StaminaLossOnDash { get { return staminaLossOnDash; } }
 
         private bool enoughStaminaToRun;
-
-        [Tooltip("Our Slider UI Object. Stamina will be shown here."), SerializeField]
-        private Slider staminaSlider;
 
         // Wallrun 
         [Tooltip("When enabled, it will allow the player to wallrun on walls")] public bool canWallRun;
@@ -309,41 +310,41 @@ namespace cowsins
         [SerializeField, Range(0.1f, 2), Tooltip("maximum Distance to detect a wall you can bounce on. This will use the same layer as wall run walls.")]
         private float oppositeWallDetectionDistance = 1;
 
-        // Dash
+        // // Dash
 
-        [Tooltip("When enabled, it will allow the player to perform dashes.")]
-        public bool canDash;
+        // [Tooltip("When enabled, it will allow the player to perform dashes.")]
+        // public bool canDash;
 
-        [Tooltip("Method to determine how the dash will work")]
-        public DashMethod dashMethod;
+        // [Tooltip("Method to determine how the dash will work")]
+        // public DashMethod dashMethod;
 
-        [Tooltip("When enabled, it will allow the player to perform dashes.")] public bool infiniteDashes;
+        // [Tooltip("When enabled, it will allow the player to perform dashes.")] public bool infiniteDashes;
 
-        [Tooltip("When enabled, it will allow the player to perform dashes.")] public bool dashing;
-
-
-        [Min(1), Tooltip("maximum ( initial ) amount of dashes. Dashes will be regenerated up to “amountOfDashes”, you won´t be able to gain more dashes than this value, check dash Cooldown.")]
-        public int amountOfDashes = 3;
-
-        [SerializeField, Min(.1f), Tooltip("Time to regenerate a dash on performing a dash motion.")]
-        private float dashCooldown;
+        // [Tooltip("When enabled, it will allow the player to perform dashes.")] public bool dashing;
 
 
-        [Tooltip("When enabled, player will not receive damage.")]
-        public bool damageProtectionWhileDashing;
+        // [Min(1), Tooltip("maximum ( initial ) amount of dashes. Dashes will be regenerated up to “amountOfDashes”, you won´t be able to gain more dashes than this value, check dash Cooldown.")]
+        // public int amountOfDashes = 3;
 
-        public int currentDashes;
-
-
-        [Tooltip("force applied when dashing. Note that this is a constant force, not an impulse, so it is being applied while the dash lasts.")]
-        public float dashForce;
+        // [SerializeField, Min(.1f), Tooltip("Time to regenerate a dash on performing a dash motion.")]
+        // private float dashCooldown;
 
 
-        [Range(.1f, .5f), Tooltip("Duration of the ability ( dash ).")]
-        public float dashDuration;
+        // [Tooltip("When enabled, player will not receive damage.")]
+        // public bool damageProtectionWhileDashing;
 
-        [Tooltip("When enabled, it will allow the player to shoot while dashing.")]
-        public bool canShootWhileDashing;
+        // public int currentDashes;
+
+
+        // [Tooltip("force applied when dashing. Note that this is a constant force, not an impulse, so it is being applied while the dash lasts.")]
+        // public float dashForce;
+
+
+        // [Range(.1f, .5f), Tooltip("Duration of the ability ( dash ).")]
+        // public float dashDuration;
+
+        // [Tooltip("When enabled, it will allow the player to shoot while dashing.")]
+        // public bool canShootWhileDashing;
 
         //Others
         [HideInInspector] public bool isCrouching;
@@ -386,7 +387,7 @@ namespace cowsins
 
         [Tooltip("Wallrunning field of view of your camera"), Range(1, 179)] public float wallrunningFOV;
 
-        [Tooltip("Amount of field of view that will be added to your camera when dashing."), Range(-179, 179)] public float fovToAddOnDash;
+        // [Tooltip("Amount of field of view that will be added to your camera when dashing."), Range(-179, 179)] public float fovToAddOnDash;
 
         [Tooltip("Fade Speed - Start Transition for the field of view")] public float fadeInFOVAmount;
 
@@ -442,8 +443,8 @@ namespace cowsins
             set { isClimbing = value; }
         }
 
-        [SerializeField, Min(0)]
-        private float maxLadderDetectionDistance = 1;
+        // [SerializeField, Min(0)]
+        // private float maxLadderDetectionDistance = 1;
 
         [SerializeField, Min(0)]
         private float climbSpeed = 15;
@@ -499,11 +500,11 @@ namespace cowsins
             enoughStaminaToJump = true;
             jumpCount = maxJumps;
 
-            if (canDash && !infiniteDashes)
-            {
-                UIEvents.onInitializeDashUI?.Invoke(amountOfDashes);
-                currentDashes = amountOfDashes;
-            }
+            // if (canDash && !infiniteDashes)
+            // {
+            //     UIEvents.onInitializeDashUI?.Invoke(amountOfDashes);
+            //     currentDashes = amountOfDashes;
+            // }
 
             ResetStamina();
             events.OnSpawn.Invoke();
@@ -667,21 +668,6 @@ namespace cowsins
             if (currentSpeed == runSpeed && enoughStaminaToRun && !wallRunning) stamina -= Time.deltaTime;
             if (currentSpeed < runSpeed && LoseStaminaWalking && (InputManager.x != 0 || InputManager.y != 0)) stamina -= Time.deltaTime * (walkSpeed / runSpeed);
 
-            // Stamina UI not found might be a problem, it won´t be shown but you will get notified 
-            if (staminaSlider == null)
-            {
-                Debug.LogWarning("REMEMBER: You forgot to attach your StaminaSlider UI Component, so it won´t be shown.");
-                return;
-            }
-
-            // Handle stamina UI 
-            if (oldStamina != stamina)
-                staminaSlider.gameObject.SetActive(true);
-            else
-                staminaSlider.gameObject.SetActive(false);
-
-            staminaSlider.maxValue = maxStamina;
-            staminaSlider.value = stamina;
         }
 
         public void ReduceStamina(float amount) => stamina -= amount;
@@ -1215,18 +1201,18 @@ namespace cowsins
         #endregion
         #region dashing
 
-        private void RegainDash()
-        {
-            // Gain a dash
-            currentDashes += 1;
-            UIEvents.onDashGained?.Invoke();
-        }
-        public void RegainDash(object s, EventArgs e)
-        {
-            // Wait to regain a new dash
-            Invoke(nameof(RegainDash), dashCooldown);
-            UIEvents.onDashUsed?.Invoke(currentDashes);
-        }
+        // private void RegainDash()
+        // {
+        //     // Gain a dash
+        //     currentDashes += 1;
+        //     UIEvents.onDashGained?.Invoke();
+        // }
+        // public void RegainDash(object s, EventArgs e)
+        // {
+        //     // Wait to regain a new dash
+        //     Invoke(nameof(RegainDash), dashCooldown);
+        //     UIEvents.onDashUsed?.Invoke(currentDashes);
+        // }
 
         public void HandleGrapple()
         {
@@ -1244,10 +1230,10 @@ namespace cowsins
             }
         }
 
-        public void ResetDashes()
-        {
-            currentDashes = amountOfDashes;
-        }
+        // public void ResetDashes()
+        // {
+        //     currentDashes = amountOfDashes;
+        // }
 
         private void StartGrapple()
         {
@@ -1273,7 +1259,7 @@ namespace cowsins
                 joint.damper = grappleDamper;
                 joint.massScale = 4.5f;
 
-                events.OnStartGrapple?.Invoke();// Perform custom methods
+                // events.OnStartGrapple?.Invoke();// Perform custom methods
                 if (grappleSounds.startGrappleSFX)
                     SoundManager.Instance.PlaySound(grappleSounds.startGrappleSFX, 0, 0, false, 0);
             }
@@ -1288,14 +1274,14 @@ namespace cowsins
             grappleRenderer.positionCount = 0; // Reset the quality/resolution of the rope
             Destroy(joint);
 
-            events.OnStopGrapple?.Invoke();// Perform custom methods
+            // events.OnStopGrapple?.Invoke();// Perform custom methods
         }
         private bool grappleImpacted = false;
         public void UpdateGrappleRenderer()
         {
             if (grappling)
             {
-                events.OnGrappling?.Invoke(); // Perform custom methods
+                // events.OnGrappling?.Invoke(); // Perform custom methods
 
 
                 if (grappleRenderer.positionCount == 0)
@@ -1353,75 +1339,75 @@ namespace cowsins
         private void EnableGrapple()
         {
             grappleEnabled = true;
-            events.OnGrappleEnabled?.Invoke(); // Perform custom methods
+            // events.OnGrappleEnabled?.Invoke(); // Perform custom methods
         }
 
         // CLIMBING LADDERS
 
         // Returns true only if the player is detecting a ladder and the player is allowed to climb ladders
-        public bool DetectLadders()
-        {
-            if (!canClimb) return false;
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
-            {
-                if (!hit.transform.CompareTag("Ladder") || InputManager.y <= 0) return false;
-                if (hideWeaponWhileClimbing)
-                    CowsinsUtilities.PlayAnim("hit", weaponController.HolsterMotionObject);
-                return true;
-            }
-            return false;
-        }
+        // public bool DetectLadders()
+        // {
+        //     if (!canClimb) return false;
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
+        //     {
+        //         if (!hit.transform.CompareTag("Ladder") || InputManager.y <= 0) return false;
+        //         if (hideWeaponWhileClimbing)
+        //             CowsinsUtilities.PlayAnim("hit", weaponController.HolsterMotionObject);
+        //         return true;
+        //     }
+        //     return false;
+        // }
 
-        public bool DetectTopLadder()
-        {
-            if (!canClimb) return false;
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
-            {
-                if (!hit.transform.CompareTag("Ladder")) return false;
-                return false;
-            }
-            HandleLadderFinishMotion();
-            return true;
-        }
+        // public bool DetectTopLadder()
+        // {
+        //     if (!canClimb) return false;
+        //     RaycastHit hit;
+        //     if (Physics.Raycast(transform.position, orientation.forward, out hit, maxLadderDetectionDistance))
+        //     {
+        //         if (!hit.transform.CompareTag("Ladder")) return false;
+        //         return false;
+        //     }
+        //     HandleLadderFinishMotion();
+        //     return true;
+        // }
 
-        public void HandleLadderFinishMotion()
-        {
-            if (hideWeaponWhileClimbing)
-                CowsinsUtilities.PlayAnim("finished", weaponController.HolsterMotionObject);
-        }
+        // public void HandleLadderFinishMotion()
+        // {
+        //     if (hideWeaponWhileClimbing)
+        //         CowsinsUtilities.PlayAnim("finished", weaponController.HolsterMotionObject);
+        // }
 
 
-        // Handles the movement while climbing
-        public void HandleClimbMovement()
-        {
-            if (PauseMenu.isPaused)
-            {
-                return;
-            }
+        // // Handles the movement while climbing
+        // public void HandleClimbMovement()
+        // {
+        //     if (PauseMenu.isPaused)
+        //     {
+        //         return;
+        //     }
 
-            float verticalInput = InputManager.y;
+        //     float verticalInput = InputManager.y;
 
-            RaycastHit hit;
-            bool isObstacleAbove = Physics.Raycast(transform.position, transform.up, out hit, 2f, weaponController.hitLayer);
-            if (isObstacleAbove && verticalInput > 0f) verticalInput = 0; 
+        //     RaycastHit hit;
+        //     bool isObstacleAbove = Physics.Raycast(transform.position, transform.up, out hit, 2f, weaponController.hitLayer);
+        //     if (isObstacleAbove && verticalInput > 0f) verticalInput = 0; 
 
-            if (verticalInput != 0)
-            {
-                Vector3 targetPosition = transform.position + transform.up * verticalInput * climbSpeed * Time.deltaTime;
-                rb.MovePosition(Vector3.Lerp(transform.position, targetPosition, 0.5f));
-                rb.velocity = new Vector3(0, rb.velocity.y, 0);
-            }
-        }
+        //     if (verticalInput != 0)
+        //     {
+        //         Vector3 targetPosition = transform.position + transform.up * verticalInput * climbSpeed * Time.deltaTime;
+        //         rb.MovePosition(Vector3.Lerp(transform.position, targetPosition, 0.5f));
+        //         rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        //     }
+        // }
 
-        // Handles the logic when the player reaches the top of a ladder, so it does not get stuck at the top
-        public void ReachTopLadder()
-        {
-            events.OnEndClimb.Invoke();
-            rb.AddForce(transform.up * topReachedUpperForce, ForceMode.Impulse);
-            rb.AddForce(orientation.forward * topReachedForwardForce, ForceMode.Impulse);
-        }
+        // // Handles the logic when the player reaches the top of a ladder, so it does not get stuck at the top
+        // public void ReachTopLadder()
+        // {
+        //     events.OnEndClimb.Invoke();
+        //     rb.AddForce(transform.up * topReachedUpperForce, ForceMode.Impulse);
+        //     rb.AddForce(orientation.forward * topReachedForwardForce, ForceMode.Impulse);
+        // }
 
         #endregion
         /// <summary>
