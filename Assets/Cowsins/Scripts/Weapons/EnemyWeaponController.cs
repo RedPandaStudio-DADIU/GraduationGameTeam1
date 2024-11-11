@@ -75,7 +75,6 @@ namespace cowsins
             GetInitialWeapons();
             playerTransform = this.gameObject.GetComponent<EnemyStateController>().GetPlayerTransform();
             Debug.Log("Player Transform in Enemy Weapon Controller: " + playerTransform.position + " name: " + playerTransform.gameObject.name);
-
         }
 
         public void HandleHitscanProjectileShot()
@@ -118,11 +117,9 @@ namespace cowsins
 
                             
                 // StartCoroutine(EnemyShooting());
-                // ProjectileShot();
+                ProjectileShot();
 
         
-                Invoke("ProjectileShot", Random.Range(2f, 3f));
-
 
                 i++;
             }
@@ -132,12 +129,12 @@ namespace cowsins
         
 
 
-        private IEnumerator EnemyShooting()
-        {
-            // Wait until the next time we should display our new distance
-            yield return new WaitForSeconds(2);
-            ProjectileShot();
-        }
+        // private IEnumerator EnemyShooting()
+        // {
+        //     // Wait until the next time we should display our new distance
+        //     yield return new WaitForSeconds(2);
+        //     ProjectileShot();
+        // }
 
 
         // fix destination problems 
@@ -184,6 +181,9 @@ namespace cowsins
 
         private void CanShoot() => canShoot = true;
 
+        public float GetFireRate(){
+            return this.fireRate;
+        }
 
         private void GetInitialWeapons()
         {
