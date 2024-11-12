@@ -577,7 +577,7 @@ namespace cowsins
         private void ProjectileShot()
         {
             events.OnShoot.Invoke();
-            if (resizeCrosshair && UIController.instance.crosshair != null) UIController.instance.crosshair.Resize(weapon.crosshairResize * 100);
+            // if (resizeCrosshair && UIController.instance.crosshair != null) UIController.instance.crosshair.Resize(weapon.crosshairResize * 100);
 
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
             Vector3 destination = (Physics.Raycast(ray, out hit) && !hit.transform.CompareTag("Player")) ? destination = hit.point + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera) : destination = ray.GetPoint(50f) + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera);

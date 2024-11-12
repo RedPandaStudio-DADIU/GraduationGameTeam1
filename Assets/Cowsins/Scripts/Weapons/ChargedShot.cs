@@ -37,6 +37,7 @@ namespace cowsins
         private bool hasPlayedReadySound = false;
         private float chargeTime = 2f; 
         private float ragdollDuration = 5.0f; 
+        private float delay = 5f;
 
 
         void Start()
@@ -130,10 +131,17 @@ namespace cowsins
 
                         Vector3 pushDirection = hit.point - playerCamera.transform.position;
                         pushDirection = pushDirection.normalized;
+                        enemy.SetForce(chargedPushForce);
+                        enemy.SetForceDirection(pushDirection);
 
+                        enemy.GetEnemy().DecreaseHealth(chargeDamage);
 
                         enemy.ChangeState(new EnemyHitState());
-                        enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                        
+                        if(enemy.GetEnemy().GetHealth() > 0){
+                            // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                            StartCoroutine(RecoverAfterDelay(enemy, delay));
+                        }
 
                         PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
                     }
@@ -159,10 +167,17 @@ namespace cowsins
 
                     Vector3 pushDirection = hitCollider.transform.position - center;
                     pushDirection = pushDirection.normalized;
+                    nearbyEnemyStateController.SetForce(chargedPushForce);
+                    nearbyEnemyStateController.SetForceDirection(pushDirection);
 
+                    nearbyEnemyStateController.GetEnemy().DecreaseHealth(chargeDamage);
                     nearbyEnemyStateController.ChangeState(new EnemyHitState());
-                
-                    nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
+
+
+                    if(nearbyEnemyStateController.GetEnemy().GetHealth() > 0){
+                        StartCoroutine(RecoverAfterDelay(nearbyEnemyStateController, delay));
+                        // nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
+                    }
 
                 }
             }   

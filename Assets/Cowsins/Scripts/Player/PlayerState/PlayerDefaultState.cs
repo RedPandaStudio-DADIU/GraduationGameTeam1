@@ -36,7 +36,7 @@ namespace cowsins
             if (stats.health <= 0) SwitchState(_factory.Die());
 
             // Check Jump
-            if (player.ReadyToJump && InputManager.jumping && (player.EnoughStaminaToJump && (player.grounded || player.canCoyote) || player.wallRunning || player.jumpCount > 0 && player.maxJumps > 1 && player.EnoughStaminaToJump))
+            if (player.ReadyToJump && InputManager.jumping && ((player.grounded || player.canCoyote) || player.wallRunning || player.jumpCount > 0 && player.maxJumps > 1 )) //player.EnoughStaminaToJump && && player.EnoughStaminaToJump
                 SwitchState(_factory.Jump());
 
             // // Check Dash

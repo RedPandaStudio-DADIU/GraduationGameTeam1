@@ -178,9 +178,9 @@ namespace cowsins
 
 
         //Jumping
-        private bool enoughStaminaToJump = true;
+        // private bool enoughStaminaToJump = true;
 
-        public bool EnoughStaminaToJump { get { return enoughStaminaToJump; } set { enoughStaminaToJump = value; } }
+        // public bool EnoughStaminaToJump { get { return enoughStaminaToJump; } set { enoughStaminaToJump = value; } }
 
         private bool readyToJump = true;
 
@@ -231,34 +231,34 @@ namespace cowsins
         private Transform target;
 
 
-        //Stamina
-        [Tooltip("You will lose stamina on performing actions when true.")]
-        public bool usesStamina;
+        // //Stamina
+        // [Tooltip("You will lose stamina on performing actions when true.")]
+        // public bool usesStamina;
 
-        [SerializeField] private float stamina;
+        // [SerializeField] private float stamina;
 
-        [Tooltip("Minimum stamina required to being able to run again."), SerializeField]
-        private float minStaminaRequiredToRun;
+        // [Tooltip("Minimum stamina required to being able to run again."), SerializeField]
+        // private float minStaminaRequiredToRun;
 
-        [Tooltip("Max amount of stamina."), SerializeField]
-        private float maxStamina;
+        // [Tooltip("Max amount of stamina."), SerializeField]
+        // private float maxStamina;
 
-        [SerializeField, Min(1), Tooltip("Stamina Regeneration Speed")] private float staminaRegenMultiplier;
+        // [SerializeField, Min(1), Tooltip("Stamina Regeneration Speed")] private float staminaRegenMultiplier;
 
-        [SerializeField] private bool LoseStaminaWalking;
+        // [SerializeField] private bool LoseStaminaWalking;
 
-        [Tooltip("Amount of stamina lost on jumping."), SerializeField]
-        private float staminaLossOnJump;
+        // [Tooltip("Amount of stamina lost on jumping."), SerializeField]
+        // private float staminaLossOnJump;
 
-        [Tooltip("Amount of stamina lost on sliding."), SerializeField]
-        private float staminaLossOnSlide;
+        // [Tooltip("Amount of stamina lost on sliding."), SerializeField]
+        // private float staminaLossOnSlide;
 
         // [Tooltip("Amount of stamina lost on dashing."), SerializeField]
         // private float staminaLossOnDash;
 
         // public float StaminaLossOnDash { get { return staminaLossOnDash; } }
 
-        private bool enoughStaminaToRun;
+        // private bool enoughStaminaToRun;
 
         // Wallrun 
         [Tooltip("When enabled, it will allow the player to wallrun on walls")] public bool canWallRun;
@@ -496,8 +496,8 @@ namespace cowsins
         {
 
             playerScale = transform.localScale;
-            enoughStaminaToRun = true;
-            enoughStaminaToJump = true;
+            // enoughStaminaToRun = true;
+            // enoughStaminaToJump = true;
             jumpCount = maxJumps;
 
             // if (canDash && !infiniteDashes)
@@ -506,7 +506,7 @@ namespace cowsins
             //     currentDashes = amountOfDashes;
             // }
 
-            ResetStamina();
+            // ResetStamina();
             events.OnSpawn.Invoke();
         }
 
@@ -519,7 +519,7 @@ namespace cowsins
 
             if (rb.velocity.magnitude > maxSpeedAllowed) rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeedAllowed);
 
-            Stamina();
+            // Stamina();
 
             if (!PlayerStats.Controllable) return;
 
@@ -535,9 +535,9 @@ namespace cowsins
         {
             CheckGroundedWithRaycast();
 
-            if (canWallBounce) CheckOppositeWall();
+            // if (canWallBounce) CheckOppositeWall();
 
-            if (InputManager.jumping && wallOpposite && canWallBounce && PlayerStats.Controllable && CheckHeight()) WallBounce();
+            // if (InputManager.jumping && wallOpposite && canWallBounce && PlayerStats.Controllable && CheckHeight()) WallBounce();
         }
         public void HandleVelocities()
         {
@@ -553,7 +553,7 @@ namespace cowsins
                 return;
             }
 
-            if ((InputManager.sprinting || autoRun) && enoughStaminaToRun)
+            if ((InputManager.sprinting || autoRun)) // && enoughStaminaToRun)
             {
                 bool shouldRun;
                 if (!canRunBackwards && InputManager.y < 0 || (!canRunWhileShooting && InputManager.shooting && weaponController.weapon != null) || !canRunSideways && InputManager.x != 0 && InputManager.y == 0)
@@ -625,7 +625,7 @@ namespace cowsins
                                          // Add the force on slide
                 rb.AddForce(orientation.transform.forward * slideForce);
                 //staminaLoss
-                if (usesStamina) stamina -= staminaLossOnSlide;
+                // if (usesStamina) stamina -= staminaLossOnSlide;
             }
         }
 
@@ -635,42 +635,42 @@ namespace cowsins
             transform.localScale = Vector3.MoveTowards(transform.localScale, playerScale, Time.deltaTime * crouchTransitionSpeed);
         }
 
-        private void Stamina()
-        {
-            // Check if we def wanna use stamina
-            if (!usesStamina || stats.isDead || !PlayerStats.Controllable) return;
+        // private void Stamina()
+        // {
+        //     // Check if we def wanna use stamina
+        //     if (!usesStamina || stats.isDead || !PlayerStats.Controllable) return;
 
-            float oldStamina = stamina; // Store stamina before we change its value
+        //     float oldStamina = stamina; // Store stamina before we change its value
 
-            // We ran out of stamina
-            if (stamina <= 0)
-            {
-                enoughStaminaToRun = false;
-                enoughStaminaToJump = false;
-                stamina = 0;
-            }
+        //     // We ran out of stamina
+        //     if (stamina <= 0)
+        //     {
+        //         enoughStaminaToRun = false;
+        //         enoughStaminaToJump = false;
+        //         stamina = 0;
+        //     }
 
-            // Wait for stamina to regenerate up to the min value allowed to start running and jumping again
-            if (stamina >= minStaminaRequiredToRun)
-            {
-                enoughStaminaToRun = true; enoughStaminaToJump = true;
-            }
+        //     // Wait for stamina to regenerate up to the min value allowed to start running and jumping again
+        //     if (stamina >= minStaminaRequiredToRun)
+        //     {
+        //         enoughStaminaToRun = true; enoughStaminaToJump = true;
+        //     }
 
-            // Regen stamina
-            if (stamina < maxStamina)
-            {
-                if (currentSpeed <= walkSpeed && !LoseStaminaWalking
-                    || currentSpeed < runSpeed && (!LoseStaminaWalking || LoseStaminaWalking && InputManager.x == 0 && InputManager.y == 0))
-                    stamina += Time.deltaTime * staminaRegenMultiplier;
-            }
+        //     // Regen stamina
+        //     if (stamina < maxStamina)
+        //     {
+        //         if (currentSpeed <= walkSpeed && !LoseStaminaWalking
+        //             || currentSpeed < runSpeed && (!LoseStaminaWalking || LoseStaminaWalking && InputManager.x == 0 && InputManager.y == 0))
+        //             stamina += Time.deltaTime * staminaRegenMultiplier;
+        //     }
 
-            // Lose stamina
-            if (currentSpeed == runSpeed && enoughStaminaToRun && !wallRunning) stamina -= Time.deltaTime;
-            if (currentSpeed < runSpeed && LoseStaminaWalking && (InputManager.x != 0 || InputManager.y != 0)) stamina -= Time.deltaTime * (walkSpeed / runSpeed);
+        //     // Lose stamina
+        //     if (currentSpeed == runSpeed && enoughStaminaToRun && !wallRunning) stamina -= Time.deltaTime;
+        //     if (currentSpeed < runSpeed && LoseStaminaWalking && (InputManager.x != 0 || InputManager.y != 0)) stamina -= Time.deltaTime * (walkSpeed / runSpeed);
 
-        }
+        // }
 
-        public void ReduceStamina(float amount) => stamina -= amount;
+        // public void ReduceStamina(float amount) => stamina -= amount;
 
         /// <summary>
         /// Handle all the basics related to the movement of the player.
@@ -834,7 +834,7 @@ namespace cowsins
             }
 
             //staminaLoss
-            if (usesStamina) stamina -= staminaLossOnJump;
+            // if (usesStamina) stamina -= staminaLossOnJump;
 
             jumpEvent.Post(gameObject);
 
@@ -1093,7 +1093,7 @@ namespace cowsins
             coyoteTimer = coyoteJumpTime;
         }
 
-        public void ResetStamina() => stamina = maxStamina;
+        // public void ResetStamina() => stamina = maxStamina;
 
         void OnCollisionEnter(Collision collision)
         {

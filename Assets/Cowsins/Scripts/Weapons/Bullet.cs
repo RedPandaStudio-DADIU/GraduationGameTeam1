@@ -129,7 +129,7 @@ namespace cowsins
 
         private bool IsGroundOrObstacleLayer(int layer)
         {
-            return layer == LayerMask.NameToLayer("Ground") || layer == LayerMask.NameToLayer("Object")
+            return layer == LayerMask.NameToLayer("Ground") || layer == LayerMask.NameToLayer("Object")  || layer == LayerMask.NameToLayer("Spaceships")
                 || layer == LayerMask.NameToLayer("Grass") || layer == LayerMask.NameToLayer("Metal") ||
                 layer == LayerMask.NameToLayer("Mud") || layer == LayerMask.NameToLayer("Wood") || layer == LayerMask.NameToLayer("Enemy");
         }

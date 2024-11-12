@@ -8,7 +8,7 @@ public class EnemyDieState : IEnemyState
 {
     private bool rigidbodyChanged = false;
     public void OnEnter(EnemyStateController stateController){
-        Debug.Log("Entering Die State " + stateController.name);
+        Debug.Log("Entering Die State " + stateController.gameObject.name);
         stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
         if(!stateController.GetIsHuman()){
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
@@ -17,12 +17,12 @@ public class EnemyDieState : IEnemyState
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
         Rigidbody rb = weapon.gameObject.AddComponent<Rigidbody>();
-
-        rb.mass = 1f;
-        rb.drag = 0.5f;
-        rb.angularDrag = 0.05f;
-        rb.useGravity = true;
-
+        if(rb!=null){
+            rb.mass = 1f;
+            rb.drag = 0.5f;
+            rb.angularDrag = 0.05f;
+            rb.useGravity = true;
+        }
 
     }
     public void OnUpdate(EnemyStateController stateController){

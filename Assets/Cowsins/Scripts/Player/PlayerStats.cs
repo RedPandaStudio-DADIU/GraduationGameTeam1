@@ -243,7 +243,7 @@ namespace cowsins
             health = maxHealth;
             shield = maxShield;
             transform.position = respawnPosition;
-            player.ResetStamina();
+            // player.ResetStamina();
             // player.ResetDashes();
         }
     }
