@@ -14,6 +14,8 @@ namespace cowsins
         [SerializeField] private float pushForce = 100f;
         [SerializeField] private float ragdollDuration = 3.0f; 
         [HideInInspector] public bool isEnemy = false; 
+        [HideInInspector] public bool isHuman = false; 
+
         [HideInInspector] public float speed;
         [HideInInspector] public float damage;
         [HideInInspector] public Vector3 destination;
@@ -60,7 +62,7 @@ namespace cowsins
             //     GameObject parentObject = other.transform.parent.gameObject;
             //     Shoot(damage, parentObject.GetComponent<Collider>());
             // } 
-            if(other.CompareTag("Enemy") && !isEnemy) {
+            if(other.CompareTag("Enemy") && !isEnemy && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
                 Debug.Log("Enemy Shot!! Damage: " + damage);
                 Shoot(damage, other);
@@ -74,6 +76,9 @@ namespace cowsins
                 Debug.Log("Enemy bullet hit the player with damage: " + damage + " player health: " + other.GetComponent<PlayerStats>().health);
                 other.GetComponent<PlayerStats>().Damage(damage, false);
                 // DamageTarget(other.transform, damage, false);
+            }
+            else if((other.CompareTag("Enemy") && isHuman) || (other.CompareTag("Human") && isEnemy)){
+                DestroyProjectile();
             }
             else if (IsGroundOrObstacleLayer(other.gameObject.layer))
             {

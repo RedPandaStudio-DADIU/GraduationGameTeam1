@@ -1057,6 +1057,7 @@ namespace cowsins
             // If we dont own a weapon yet, do not continue
             if (weapon == null)
             {
+                Debug.Log("Weapon is null!!!!!!!!!!!!!!!!!!!!!!");
                 UIEvents.disableWeaponUI?.Invoke();
                 return;
             }

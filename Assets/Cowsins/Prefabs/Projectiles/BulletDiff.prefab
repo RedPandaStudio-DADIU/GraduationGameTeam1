@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033eb68c5852cde4a8e4d89ae33dea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushForce: 100
+  ragdollDuration: 3
+  isEnemy: 0
+  isHuman: 0
   speed: 25
   damage: 0
   destination: {x: 0, y: 0, z: 0}
@@ -106,8 +110,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.3585585, y: 0.36827722, z: 0.3682772}
+  m_Center: {x: 0.000000014901161, y: 0.004859492, z: -0.0048594773}
 --- !u!96 &4048679220401053597
 TrailRenderer:
   serializedVersion: 3

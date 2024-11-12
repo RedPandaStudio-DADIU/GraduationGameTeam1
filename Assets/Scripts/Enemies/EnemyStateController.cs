@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using cowsins;
 
 public class EnemyStateController : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class EnemyStateController : MonoBehaviour
     private Vector3 forceDirection;
     [SerializeField] private float force = 300f;
     [SerializeField] private List<Transform> targetList = new List<Transform>();
-
+    [SerializeField] private bool isHuman = false;
     private Queue<Transform> targetQueue;
+
 
     void Awake()
     {
@@ -140,8 +142,9 @@ public class EnemyStateController : MonoBehaviour
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human") )
+            // if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human") )
             // if (hit.collider.CompareTag("PlayerBody"))
+            if (hit.collider.CompareTag("Player") || (hit.collider.CompareTag("Human") && !isHuman) || (hit.collider.CompareTag("Enemy")&& isHuman) )
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
                 GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
@@ -228,5 +231,26 @@ public class EnemyStateController : MonoBehaviour
         this.GetEnemy().SetHealth(0f); // then in update it will enter DieState
     }
 
+    public void SwitchTarget(){
+        Debug.LogWarning("Switch target, old player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
+        if(targetQueue.Count > 0){
+            playerTransform = playerBodyTransform = targetQueue.Dequeue();
+            Debug.LogWarning("Switch target, new player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
+            SetAgentsDestination();
+            // this.ChangeState(new EnemyAttackState());
+
+            this.gameObject.GetComponent<EnemyWeaponController>().SetPlayerTransform(playerTransform);
+
+            Vector3 direction = (playerTransform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * enemy.GetComponent<NavMeshAgent>().angularSpeed);
+
+
+        }
+    }
+
+    public bool GetIsHuman(){
+        return this.isHuman;
+    }
 
 }

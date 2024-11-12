@@ -21,7 +21,9 @@ namespace cowsins
         [SerializeField, Tooltip("Select the behaviour of the button.")] ButtonType buttonType;
         [SerializeField, Tooltip("GameObject to enable.You can add a CanvasGroup to this object to seamlessly play a fade in effect")] private GameObject gameObjectToEnable;
         [SerializeField, Tooltip("GameObjects to disable. No fade effect is played on these.")] private GameObject[] gameObjectsToDisable;
-        [SerializeField, Tooltip("")] private AudioClip clickSFX;
+        //[SerializeField, Tooltip("")] private AudioClip clickSFX;
+        [SerializeField] private AK.Wwise.Event clickEvent;
+
         [SerializeField, Tooltip("")] private int sceneIndex;
 
         // Button Type Getter
@@ -37,7 +39,8 @@ namespace cowsins
         public void ButtonClick()
         {
             // Play sound
-            MainMenuManager.Instance?.PlaySound(clickSFX);
+            //MainMenuManager.Instance?.PlaySound(clickSFX);
+            clickEvent.Post(gameObject);
 
             // Handle GameObjects Transitions
             if (buttonType == ButtonType.GameObjectTransition)
@@ -72,7 +75,9 @@ namespace cowsins
             serializedObject.Update();
             CowsinsButton myScript = target as CowsinsButton;
             EditorGUILayout.LabelField("COWSINS BUTTON", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("clickSFX"));
+            //EditorGUILayout.PropertyField(serializedObject.FindProperty("clickSFX"));
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("clickEvent"), new GUIContent("Click Event"));
+
             EditorGUILayout.PropertyField(serializedObject.FindProperty("buttonType"));
             if (myScript._ButtonType == CowsinsButton.ButtonType.GameObjectTransition)
             {
