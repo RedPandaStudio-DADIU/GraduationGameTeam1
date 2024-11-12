@@ -139,6 +139,17 @@ namespace AK
             } // namespace STATE
         } // namespace ROOMSTATE
 
+        namespace SCENES_LVL1
+        {
+            static const AkUniqueID GROUP = 4121174866U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC1_TR1 = 342028878U;
+            } // namespace STATE
+        } // namespace SCENES_LVL1
+
         namespace XAGA
         {
             static const AkUniqueID GROUP = 4123380240U;
