@@ -45,7 +45,7 @@ namespace cowsins
 
             if (hitScanBasic != null)
             {
-                // 调用 PushNearbyEnemies 方法
+                
                 hitScanBasic.PushNearbyEnemies(transform.position, explosionForce, explosionRadius);
             }
             else

@@ -25,8 +25,10 @@ namespace cowsins
             if (other.CompareTag("Player") && !used)
             {
                 
+                 Debug.Log("collide.");
                 if (InputManager.heal) 
                 {
+                    Debug.Log("heal.");
                     Interact(other.GetComponent<PlayerStats>());
                 }
             }
