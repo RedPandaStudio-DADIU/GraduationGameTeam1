@@ -95,8 +95,8 @@ namespace cowsins
         public void Damage(float _damage, bool isHeadshot)
         {
             // Early return if player is dashing with damage protection
-            if (player.canDash && player.dashing && player.damageProtectionWhileDashing)
-                return;
+            // if (player.canDash && player.dashing && player.damageProtectionWhileDashing)
+            //     return;
 
             // Ensure damage is a positive value
             float damage = Mathf.Abs(_damage);
@@ -244,7 +244,7 @@ namespace cowsins
             shield = maxShield;
             transform.position = respawnPosition;
             player.ResetStamina();
-            player.ResetDashes();
+            // player.ResetDashes();
         }
     }
 }

@@ -31,25 +31,15 @@ namespace cowsins
         {
             if (price == 0) return;
 
-            if (CoinManager.Instance.CheckIfEnoughCoins(price))
-                interactText = baseInteractText + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.green) + ">" + $" [{price}]" + "</color>";
-            else interactText = "<color=#" + ColorUtility.ToHtmlStringRGB(Color.red) + ">" + $" [{price}]" + "</color>";
-
-
         }
         public override void Interact(Transform player)
         {
-            if (price != 0 && CoinManager.Instance.useCoins && CoinManager.Instance.CheckIfEnoughCoins(price) || price == 0)
-                StartCoroutine(GetLoot(player));
+
         }
 
         private IEnumerator GetLoot(Transform player)
         {
-            if (price != 0)
-            {
-                CoinManager.Instance.RemoveCoins(price);
-                UIEvents.onCoinsChange?.Invoke(CoinManager.Instance.coins);
-            }
+
             yield return new WaitForSeconds(delayToReceiveLoot);
             GameObject lootObject = null;
 

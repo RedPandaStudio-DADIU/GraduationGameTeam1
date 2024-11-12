@@ -75,12 +75,6 @@ namespace cowsins
 
         [Tooltip("Do not draw the crosshair when aiming a weapon")] public bool removeCrosshairOnAiming;
 
-        public bool canMelee;
-
-        public bool CanMelee;
-
-        [SerializeField] private GameObject meleeObject;
-
         [SerializeField] private Animator holsterMotionObject;
 
         public Animator HolsterMotionObject
@@ -88,7 +82,6 @@ namespace cowsins
             get { return holsterMotionObject; }
         }
 
-        public float meleeDuration, meleeAttackDamage, meleeRange, meleeCamShakeAmount, meleeDelay, reEnableMeleeAfterAction;
 
         public bool shooting { get; private set; } = false;
         public bool shooting2 { get; private set; } = false;
@@ -357,38 +350,7 @@ namespace cowsins
             Invoke(nameof(CanShoot), fireRate);
         }
 
-        public void HandleMeleeShot() => StartCoroutine(HandleMeleeShotCoroutine());
-        private IEnumerator HandleMeleeShotCoroutine()
-        {
-            canShoot = false;
 
-            // Determine if we want to add an effect for FOV
-            if (weapon.applyFOVEffectOnShooting) mainCamera.fieldOfView = mainCamera.fieldOfView - weapon.FOVValueToSubtract;
-
-            int randomIndex = Random.Range(1, weapon.amountOfShootAnimations + 1);
-
-            // Generate the animation name based on the random index
-            string randomAnimation = "shooting" + (randomIndex == 1 ? "" : randomIndex.ToString());
-
-            // Get the Animator component from the current weapon
-            Animator animator = inventory[currentWeapon].GetComponentInChildren<Animator>();
-
-            // Play the selected random animation
-            CowsinsUtilities.ForcePlayAnim(randomAnimation, animator);
-
-            //SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
-            SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
-    
-
-
-            if (weapon == null) yield break;
-
-            yield return new WaitForSeconds(weapon.hitDelay);
-
-            MeleeAttack(weapon.attackRange, weapon.damagePerHit);
-            CamShake.instance.ShootShake(weapon.camShakeAmount * aimingCamShakeMultiplier * crouchingCamShakeMultiplier);
-            Invoke(nameof(CanShoot), weapon.attackRate);
-        }
 
         public void CustomShot()
         {
@@ -478,7 +440,7 @@ namespace cowsins
         {
             /// Determine wether we are sending a raycast, aka hitscan weapon, we are spawning a projectile or melee attacking
             int style = (int)weapon.shootStyle2;
-            if(style==3){
+            if(style==2){
                 style = 1;
             }
 
@@ -666,68 +628,7 @@ namespace cowsins
                 bullet.duration = weapon.bulletDuration;
             }
         }
-        /// <summary>
-        /// Moreover, cowsins´ FPS ENGINE also supports melee attacking
-        /// Use this for Swords, knives etc
-        /// </summary>
-        public void MeleeAttack(float attackRange, float damage)
-        {
-            events.OnShoot.Invoke();
-
-            Vector3 basePosition = id != null ? id.transform.position : transform.position;
-           Collider[] col = Physics.OverlapSphere(basePosition + mainCamera.transform.parent.forward * attackRange / 2, attackRange, hitLayer);
-
-            float dmg = damage * stats.damageMultiplier;
-
-            foreach (var c in col)
-            {
-                if (c.CompareTag("Critical") || c.CompareTag("BodyShot"))
-                {
-                    CowsinsUtilities.GatherDamageableParent(c.transform).Damage(dmg, false);
-                    break;
-                }
-                else if (c.GetComponent<IDamageable>() != null)
-                {
-                    c.GetComponent<IDamageable>().Damage(dmg, false);
-                    break;
-                }
-
-            }
-
-            //VISUALS
-            Ray ray = new Ray(mainCamera.transform.position, mainCamera.transform.forward);
-            if (Physics.Raycast(ray, out hit, attackRange, hitLayer))
-            {
-                Hit(hit.collider.gameObject.layer, 0f, hit, false);
-            }
-        }
-        public void SecondaryMeleeAttack()
-        {
-            CanMelee = false;
-            CowsinsUtilities.PlayAnim("hit", holsterMotionObject);
-            meleeObject.SetActive(true);
-            Invoke("Melee", meleeDelay);
-        }
-
-        private void Melee()
-        {
-            MeleeAttack(meleeRange, meleeAttackDamage);
-            CamShake.instance.ShootShake(meleeCamShakeAmount * aimingCamShakeMultiplier * crouchingCamShakeMultiplier);
-        }
-
-        public void FinishMelee()
-        {
-            CowsinsUtilities.PlayAnim("finished", holsterMotionObject);
-            meleeObject.SetActive(false);
-            Invoke("ReEnableMelee", reEnableMeleeAfterAction);
-        }
-
-        private void ReEnableMelee() => CanMelee = true;
-
-        /// <summary>
-        /// If you landed a shot onto an enemy, a hit will occur
-        /// This is where that is being handled
-        /// </summary>
+ 
         private void Hit(LayerMask layer, float damage, RaycastHit h, bool damageTarget)
         {
             events.OnHit.Invoke();
@@ -946,16 +847,14 @@ namespace cowsins
             {
                 case 0: performShootStyle = HandleHitscanProjectileShot; break;
                 case 1: performShootStyle = HandleHitscanProjectileShot; break;
-                case 2: performShootStyle = HandleMeleeShot; break;
-                case 3: performShootStyle = CustomShot; break;
+                case 2: performShootStyle = CustomShot; break;
             }
 
             switch ((int)weapon.shootStyle2)
             {
                 case 0: performShootStyle2 = HandleSecondaryHitscanProjectileShot; break;
                 case 1: performShootStyle2 = HandleSecondaryHitscanProjectileShot; break;
-                case 2: performShootStyle2 = HandleMeleeShot; break;
-                case 3: performShootStyle2 = HandleSecondaryHitscanProjectileShot; break;
+                case 2: performShootStyle2 = CustomShot; break;
             }
 
             weaponObj.GetComponentInChildren<Animator>().enabled = true;
@@ -1487,7 +1386,6 @@ namespace cowsins
             currentWeapon = 0;
             canShoot = true;
             mainCamera.fieldOfView = GetComponent<PlayerMovement>().normalFOV;
-            CanMelee = true;
         }
     }
 }

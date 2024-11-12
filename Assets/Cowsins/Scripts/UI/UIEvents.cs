@@ -12,7 +12,7 @@ namespace cowsins
 
         public static Action<float, float, float, float> basicHealthUISetUp;
 
-        public static Action forbiddenInteraction, disableInteractionUI, onFinishInteractionProgress, onDashGained, disableWeaponUI, enableWeaponDisplay;
+        public static Action forbiddenInteraction, disableInteractionUI, onFinishInteractionProgress, disableWeaponUI, enableWeaponDisplay; //onDashGained
 
         public static Action<float> onInteractionProgressChanged, onHeatRatioChanged;
 
@@ -20,7 +20,7 @@ namespace cowsins
 
         public static Action<WeaponController> onGenerateInspectionUI;
 
-        public static Action<int> onInitializeDashUI, onDashUsed;
+        // public static Action<int> onInitializeDashUI, onDashUsed;
 
         public static Action<int, int, bool, bool> onBulletsChanged;
 
@@ -35,8 +35,6 @@ namespace cowsins
         public static Action<Attachment, bool> onAttachmentUIElementClicked;
 
         public static Action<Attachment, int> onAttachmentUIElementClickedNewAttachment;
-
-        public static Action<int> onCoinsChange;
 
         public static Action<bool> onEnemyHit;
 

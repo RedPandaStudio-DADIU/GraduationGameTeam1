@@ -22,7 +22,6 @@ namespace cowsins
     {
         Hitscan,
         Projectile,
-        Melee,
         Custom
     };
 
@@ -81,8 +80,7 @@ namespace cowsins
 
 
         [Tooltip("Type of shooting. Hitscan = Instant hit on shooting." +
-            "Projectile = spawn a bullet that travels through the world." +
-            "Melee: Close range weapons such as swords or knives.")]
+            "Projectile = spawn a bullet that travels through the world.")]
         public ShootStyle shootStyle;
 
         [Tooltip("Defines how Input is processed to shoot.")]
@@ -200,8 +198,7 @@ namespace cowsins
 // Secondary Fire data
 
         [Tooltip("Type of shooting. Hitscan = Instant hit on shooting." +
-        "Projectile = spawn a bullet that travels through the world." +
-        "Melee: Close range weapons such as swords or knives.")]
+        "Projectile = spawn a bullet that travels through the world.")]
         public ShootStyle shootStyle2;
 
         [Tooltip("Defines how Input is processed to shoot.")]
@@ -365,16 +362,6 @@ namespace cowsins
 
         public TrailRenderer bulletTrail;
 
-        //Melee Exclusive
-        [Tooltip("Damage the melee weapon deals per hit")] [Range(0, 1000)] public float damagePerHit;
-
-        [Range(0, 6), Tooltip("Attacking pace. The lower, the faster.")] public float attackRate;
-
-        [Range(0, 2), Tooltip("Time to delay the melee hit")] public float hitDelay;
-
-        [Range(0, 5)]
-        [Tooltip("How far you are able to land a hit")] public float attackRange;
-
         [HideInInspector] public bool dontShowMagazine;
 
 #if UNITY_EDITOR
@@ -513,16 +500,6 @@ namespace cowsins
                                 EditorGUI.indentLevel--;
                                 break;
                             case 2:
-                                EditorGUILayout.LabelField("Melee Options", EditorStyles.boldLabel);
-                                EditorGUILayout.Space(2f);
-                                var attackRangeProperty = serializedObject.FindProperty("attackRange");
-                                EditorGUILayout.PropertyField(attackRangeProperty);
-                                var attackRateProperty = serializedObject.FindProperty("attackRate");
-                                EditorGUILayout.PropertyField(attackRateProperty);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("hitDelay"));
-
-                                break;
-                            case 3:
                                 EditorGUILayout.PropertyField(serializedObject.FindProperty("continuousFire"));
                                 if (!myScript.continuousFire)
                                 {
@@ -587,16 +564,6 @@ namespace cowsins
                                 EditorGUI.indentLevel--;
                                 break;
                             case 2:
-                                EditorGUILayout.LabelField("Melee Options", EditorStyles.boldLabel);
-                                EditorGUILayout.Space(2f);
-                                var attackRangeProperty = serializedObject.FindProperty("attackRange2");
-                                EditorGUILayout.PropertyField(attackRangeProperty);
-                                var attackRateProperty = serializedObject.FindProperty("attackRate2");
-                                EditorGUILayout.PropertyField(attackRateProperty);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("hitDelay2"));
-
-                                break;
-                            case 3:
                                 EditorGUILayout.PropertyField(serializedObject.FindProperty("continuousFire2"));
                                 if (!myScript.continuousFire2)
                                 {
@@ -642,11 +609,6 @@ namespace cowsins
                             case 1:
                                 WeaponStatsSharedVariables(myScript);
                                 break;
-                            case 2:
-                                var damagePerHitProperty = serializedObject.FindProperty("damagePerHit");
-                                EditorGUILayout.PropertyField(damagePerHitProperty);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("criticalDamageMultiplier"));
-                                break;
                         }
                         break;
                     case "Visuals":
@@ -688,25 +650,6 @@ namespace cowsins
                                     EditorGUI.indentLevel--;
                                 }
                                 break;
-                            case 2:
-                                EditorGUILayout.Space(10f);
-                                EditorGUILayout.LabelField("EFFECTS", EditorStyles.boldLabel);
-                                EditorGUILayout.Space(2f);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("camShakeAmount"));
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("applyFOVEffectOnShooting"));
-                                if (myScript.applyFOVEffectOnShooting)
-                                {
-                                    EditorGUI.indentLevel++;
-                                    EditorGUILayout.PropertyField(serializedObject.FindProperty("FOVValueToSubtract"));
-                                    EditorGUI.indentLevel--;
-                                }
-                                EditorGUILayout.Space(5f);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("amountOfShootAnimations"));
-                                EditorGUILayout.Space(5f);
-                                EditorGUILayout.PropertyField(serializedObject.FindProperty("bulletHoleImpact"));
-
-                                EditorGUILayout.Space(10f);
-                                break;
                         }
                         break;
                     case "Audio":
@@ -715,8 +658,6 @@ namespace cowsins
 
                     case "UI":
                         WeaponUISharedVariables(myScript);
-                        if (style == 2) myScript.allowAim = false;
-
                         break;
 
                 }

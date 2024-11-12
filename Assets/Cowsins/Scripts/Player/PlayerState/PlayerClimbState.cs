@@ -24,7 +24,7 @@ namespace cowsins
 
         public override void UpdateState()
         {
-            player.HandleClimbMovement();
+            // player.HandleClimbMovement();
             player.VerticalLook();
             // Prevents speedlines from showing up
             player.HandleSpeedLines();
@@ -38,19 +38,19 @@ namespace cowsins
             player.events.OnEndClimb.Invoke();
             rb.useGravity = true;
             player.Climbing = false;
-            player.HandleLadderFinishMotion();
+            // player.HandleLadderFinishMotion();
         }
 
         public override void CheckSwitchState()
         {
             if (InputManager.jumping || player.grounded && InputManager.y < 0) SwitchState(_factory.Default());
-            if (player.DetectTopLadder())
-            {
-                player.Climbing = false;
-                rb.useGravity = true;
-                player.ReachTopLadder();
-                SwitchState(_factory.Default());
-            }
+            // if (player.DetectTopLadder())
+            // {
+            //     player.Climbing = false;
+            //     rb.useGravity = true;
+            //     player.ReachTopLadder();
+            //     SwitchState(_factory.Default());
+            // }
 
         }
 
