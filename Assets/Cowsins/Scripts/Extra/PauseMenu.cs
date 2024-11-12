@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace cowsins
 {
@@ -7,15 +8,15 @@ namespace cowsins
     {
         [SerializeField] private GameObject playerUI;
         [SerializeField] private bool disablePlayerUIWhilePaused;
-        [SerializeField] private CanvasGroup menu;
-        [SerializeField] private float fadeSpeed;
+        [SerializeField] private GameObject pauseMenuUI;
+        //[SerializeField] private float fadeSpeed;
 
         public static PauseMenu Instance { get; private set; }
 
         /// <summary>
         /// Returns the Pause State of the game
         /// </summary>
-        public static bool isPaused { get; private set; }
+        public static bool isPaused= false;
 
         [HideInInspector] public PlayerStats stats;
 
@@ -33,8 +34,7 @@ namespace cowsins
 
             // Initially, the game is not paused
             isPaused = false;
-            menu.gameObject.SetActive(false);
-            menu.alpha = 0;
+            pauseMenuUI.SetActive(false);
         }
 
         private void Update()
@@ -60,42 +60,64 @@ namespace cowsins
 
         private void HandlePause()
         {
-            if (!menu.gameObject.activeSelf)
-            {
-                menu.gameObject.SetActive(true);
-                menu.alpha = 0;
-            }
+            // if (!menu.gameObject.activeSelf)
+            // {
+            //     menu.gameObject.SetActive(true);
+            //     menu.alpha = 0;
+            // }
 
-            menu.alpha = Mathf.Min(menu.alpha + Time.deltaTime * fadeSpeed, 1);
+            // menu.alpha = Mathf.Min(menu.alpha + Time.deltaTime * fadeSpeed, 1);
 
-            if (disablePlayerUIWhilePaused && !stats.isDead)
+            // if (disablePlayerUIWhilePaused && !stats.isDead)
+            // {
+            //     playerUI.SetActive(false);
+            // }
+
+            isPaused = true;
+            Time.timeScale = 0f; 
+            pauseMenuUI.SetActive(true); 
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            if (disablePlayerUIWhilePaused)
             {
-                playerUI.SetActive(false);
+                playerUI.SetActive(false); 
             }
         }
 
         private void HandleUnpause()
         {
-            menu.alpha = Mathf.Max(menu.alpha - Time.deltaTime * fadeSpeed, 0);
+            // menu.alpha = Mathf.Max(menu.alpha - Time.deltaTime * fadeSpeed, 0);
 
-            if (menu.alpha <= 0)
-            {
-                menu.gameObject.SetActive(false);
-            }
+            // if (menu.alpha <= 0)
+            // {
+            //     menu.gameObject.SetActive(false);
+            // }
 
-            playerUI.SetActive(true);
-        }
-
-        public void UnPause()
-        {
+            // playerUI.SetActive(true);
             isPaused = false;
-            stats.CheckIfCanGrantControl();
+            Time.timeScale = 1f; // 恢复全局时间
+            pauseMenuUI.SetActive(false); // 隐藏暂停菜单
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            playerUI.SetActive(true);
 
-            OnUnpause?.Invoke();
+            if (disablePlayerUIWhilePaused)
+            {
+                playerUI.SetActive(true); // 显示玩家 UI
+            }
+
         }
+
+        // public void UnPause()
+        // {
+        //     isPaused = false;
+        //     stats.CheckIfCanGrantControl();
+        //     Cursor.lockState = CursorLockMode.Locked;
+        //     Cursor.visible = false;
+        //     playerUI.SetActive(true);
+
+        //     OnUnpause?.Invoke();
+        // }
 
         public void QuitGame()
         {
