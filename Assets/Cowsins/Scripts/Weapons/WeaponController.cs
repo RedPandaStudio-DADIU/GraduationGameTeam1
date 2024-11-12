@@ -147,6 +147,7 @@ namespace cowsins
         private delegate void ReduceAmmo();
 
         private ReduceAmmo reduceAmmo;
+        private ReduceAmmo reduceAmmo2;
 
         //private AudioClip fireSFX;
 
@@ -168,6 +169,7 @@ namespace cowsins
             CreateInventoryUI();
             GetInitialWeapons();
 
+            
             //StartCoroutine(DelayedInit());
         }
 
@@ -451,7 +453,7 @@ namespace cowsins
             weaponAnimator.StopWalkAndRunMotion();
 
             // Rest the bullets that have just been shot
-            reduceAmmo?.Invoke();
+            reduceAmmo2?.Invoke();
 
             //Determine weapon class / style
             int i = 0;
@@ -814,6 +816,18 @@ namespace cowsins
             }
         }
 
+        private void ReduceDefaultAmmo2()
+        {
+            if (!weapon.infiniteBullets)
+            {
+                id.bulletsLeftInMagazine -= weapon.ammoCostPerFire2;
+                if (id.bulletsLeftInMagazine < 0)
+                {
+                    id.bulletsLeftInMagazine = 0;
+                }
+            }
+        }
+
 
         // On shooting overheat reloading weapons, increase the heat ratio.
         private void ReduceOverheatAmmo()
@@ -880,6 +894,8 @@ namespace cowsins
             {
                 reload = DefaultReload;
                 reduceAmmo = ReduceDefaultAmmo;
+                reduceAmmo2 = ReduceDefaultAmmo2;
+
             }
             else
             {
