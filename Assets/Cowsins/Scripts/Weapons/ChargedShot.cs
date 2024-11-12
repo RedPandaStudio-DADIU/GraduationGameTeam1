@@ -53,16 +53,16 @@ namespace cowsins
         {
 
             
-             if (Mouse.current.rightButton.wasPressedThisFrame)
+            if (Mouse.current.rightButton.wasPressedThisFrame && this.gameObject.GetComponent<WeaponController>().weapon != null)
             {
                 chargingEvent.Post(gameObject); 
-                 Debug.Log("begain to charge");
-                 hasStoppedCharging = false;
+                Debug.Log("begain to charge");
+                hasStoppedCharging = false;
                 hasPlayedReadySound = false;
 
             }
 
-            if (Mouse.current.rightButton.IsPressed()) {
+            if (Mouse.current.rightButton.IsPressed() && this.gameObject.GetComponent<WeaponController>().weapon != null) {
                 
                  
                 if (chargeProgressBar != null)
