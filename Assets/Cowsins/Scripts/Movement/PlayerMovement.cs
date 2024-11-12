@@ -735,7 +735,7 @@ namespace cowsins
 
             // Adjust step frequency based on the player's current speed
             float speedFactor = rb.velocity.magnitude / runSpeed;  // Normalize speed between 0 and 1
-            float adjustedStepInterval = (1 - footstepSpeed) / (speedFactor + 0.5f); // Avoid division by zero
+            float adjustedStepInterval = (1 - footstepSpeed) / (speedFactor + 0.1f); // Avoid division by zero
 
 
             // Wait for the next time to play a sound
