@@ -5,6 +5,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using AK.Wwise;
 namespace cowsins
 {
 
@@ -50,7 +51,13 @@ namespace cowsins
     {
         public AudioClip[] shooting; 
         public AudioClip holster, unholster, reload, emptyMagReload, emptyMagShoot;
+        public AK.Wwise.Event fireSFX;
+        public AK.Wwise.Event loadSFX;
+        public AK.Wwise.Event reloadSFX;
+    
     }
+   
+
     [System.Serializable]
     public class BulletHoleImpact
     {
@@ -378,6 +385,7 @@ namespace cowsins
     {
         private string[] tabs = { "Basic", "Shooting", "ShootingSecondary", "Stats", "Visuals", "Audio", "UI" };
         private int currentTab = 0;
+         public AudioClips audioClips; 
 
         override public void OnInspectorGUI()
         {
@@ -729,8 +737,13 @@ namespace cowsins
             EditorGUILayout.LabelField("Audio", EditorStyles.boldLabel);
             EditorGUILayout.Space(2f);
             var audioSFXProperty = serializedObject.FindProperty("audioSFX");
-            EditorGUILayout.PropertyField(audioSFXProperty);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("pitchVariationFiringSFX"));
+            // EditorGUILayout.PropertyField(audioSFXProperty);
+            // EditorGUILayout.PropertyField(serializedObject.FindProperty("pitchVariationFiringSFX"));
+            EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("fireSFX"), new GUIContent("Fire SFX"));
+            EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("loadSFX"), new GUIContent("Load SFX"));
+            EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("reloadSFX"), new GUIContent("Reload SFX"));
+    
+           
             EditorGUILayout.Space(10f);
         }
 
@@ -1106,12 +1119,16 @@ namespace cowsins
                 // { "projectile2 [Secondary Shooting Tab]", script.shootStyle2 == ShootStyle.Projectile && script.projectile2 == null },
                 { "proceduralShotPattern [Visuals Tab]", script.useProceduralShot && script.proceduralShotPattern == null },
                 { "bulletGraphics [Visuals Tab]", script.showBulletShells && script.bulletGraphics == null },
-                { "firingSFX [Audio Tab]", script.audioSFX.shooting?.Length <= 0},
-                { "holsterSFX [Audio Tab]", script.audioSFX.holster == null },
-                { "unholsterSFX [Audio Tab]", script.audioSFX.unholster == null },
-                { "reloadSFX [Audio Tab]", script.audioSFX.reload == null },
-                { "emptyMagReloadSFX [Audio Tab]", script.audioSFX.emptyMagReload == null },
-                { "emptyMagShootSFX [Audio Tab]", script.audioSFX.emptyMagShoot == null },
+                // { "firingSFX [Audio Tab]", script.audioSFX.shooting?.Length <= 0},
+                // { "holsterSFX [Audio Tab]", script.audioSFX.holster == null },
+                // { "unholsterSFX [Audio Tab]", script.audioSFX.unholster == null },
+                // { "reloadSFX [Audio Tab]", script.audioSFX.reload == null },
+                // { "emptyMagReloadSFX [Audio Tab]", script.audioSFX.emptyMagReload == null },
+                // { "emptyMagShootSFX [Audio Tab]", script.audioSFX.emptyMagShoot == null },
+                { "fireSFX [Audio Tab]", script.audioSFX.fireSFX == null },
+                { "loadSFX [Audio Tab]", script.audioSFX.loadSFX == null },
+                { "reloadSFX [Audio Tab]", script.audioSFX.reloadSFX == null },
+                
                 { "crosshairPreset [UI Tab]", script.crosshairPreset == null }
 
             };

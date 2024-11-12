@@ -65,6 +65,23 @@ namespace cowsins
                         EditorGUILayout.Space(2f);
                         break;
                     case "Events":
+                        EditorGUILayout.LabelField("AUDIO SETTINGS", EditorStyles.boldLabel);
+                        SerializedProperty weaponProperty = serializedObject.FindProperty("weapon");
+
+                        if (weaponProperty!= null)
+                        {
+                            EditorGUILayout.PropertyField(weaponProperty);
+                            SerializedProperty audioSFXProperty = weaponProperty.FindPropertyRelative("audioSFX");
+                            if (audioSFXProperty != null)
+                            {
+                                // Wwise Events
+                                EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("fireSFX"), new GUIContent("Fire SFX (Wwise Event)"));
+                                EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("loadSFX"), new GUIContent("Load SFX (Wwise Event)"));
+                                EditorGUILayout.PropertyField(audioSFXProperty.FindPropertyRelative("reloadSFX"), new GUIContent("Reload SFX (Wwise Event)"));
+                     
+                            }
+                            
+                        }
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("events"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("customShot"));
                         break;

@@ -1,5 +1,5 @@
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
 namespace cowsins
@@ -18,7 +18,7 @@ namespace cowsins
         public override void Die()
         {
             Instantiate(destroyedObject, transform.position, Quaternion.identity);
-            if (destroyedSFX != null) SoundManager.Instance.PlaySound(destroyedSFX, 0, .1f, true, 0);
+            //if (destroyedSFX != null) SoundManager.Instance.PlaySound(destroyedSFX, 0, .1f, true, 0);
             // base method
             base.Die();
         }

@@ -1042,7 +1042,8 @@ namespace cowsins
                     if (!wasGrounded)
                     {
                         // Trigger landing logic
-                        SoundManager.Instance.PlaySound(sounds.landSFX, 0, 0, false, 0);
+       //                 SoundManager.Instance.PlaySound(sounds.landSFX, 0, 0, false, 0);
+                        landingEvent.Post(gameObject);
                         events.OnLand.Invoke(); // We have just landed
                         jumpCount = maxJumps; // Reset jumps left
                         hasJumped = false;

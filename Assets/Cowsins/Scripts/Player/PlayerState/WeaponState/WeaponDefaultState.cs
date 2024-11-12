@@ -2,6 +2,9 @@ namespace cowsins
 {
 
     using UnityEngine;
+    using System.Collections;
+    using System.Collections.Generic;
+
     public class WeaponDefaultState : WeaponBaseState
     {
         private WeaponController controller;
@@ -17,24 +20,58 @@ namespace cowsins
         private float noBulletIndicator;
 
         private bool holdingEmpty = false;
+
+        private bool initialized = false;
+
         public WeaponDefaultState(WeaponStates currentContext, WeaponStateFactory playerStateFactory)
             : base(currentContext, playerStateFactory) { }
 
         public override void EnterState()
         {
-            controller = _ctx.GetComponent<WeaponController>();
-            stats = _ctx.GetComponent<PlayerStats>();
-            interact = _ctx.GetComponent<InteractManager>();
-            movement = _ctx.GetComponent<PlayerMovement>();
+            // controller = _ctx.GetComponent<WeaponController>();
+            // stats = _ctx.GetComponent<PlayerStats>();
+            // interact = _ctx.GetComponent<InteractManager>();
+            // movement = _ctx.GetComponent<PlayerMovement>();
 
-            holdProgress = 0;
+            // holdProgress = 0;
 
-            holdingEmpty = false;
+            // holdingEmpty = false;
+            _ctx.StartCoroutine(WaitForInitialization());
+        }
+
+        private IEnumerator WaitForInitialization()
+        {
+            while (controller == null || stats == null || interact == null || movement == null)
+            {
+                controller = _ctx.GetComponent<WeaponController>();
+                stats = _ctx.GetComponent<PlayerStats>();
+                interact = _ctx.GetComponent<InteractManager>();
+                movement = _ctx.GetComponent<PlayerMovement>();
+
+                if (controller == null)
+                    Debug.LogWarning("WeaponController component not found. Retrying...");
+
+                if (stats == null)
+                    Debug.LogWarning("PlayerStats component not found. Retrying...");
+
+                if (interact == null)
+                    Debug.LogWarning("InteractManager component not found. Retrying...");
+
+                if (movement == null)
+                    Debug.LogWarning("PlayerMovement component not found. Retrying...");
+
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            initialized = true;
+            Debug.Log("All components successfully initialized.");
         }
 
 
         public override void UpdateState()
         {
+             if (!initialized) return;
+            
             if (!stats.controllable) return;
             HandleInventory();
             if (controller.weapon == null || movement.Climbing) return;

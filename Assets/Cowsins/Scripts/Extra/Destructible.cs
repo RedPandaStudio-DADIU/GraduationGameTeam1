@@ -1,5 +1,5 @@
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
 namespace cowsins
@@ -24,7 +24,8 @@ namespace cowsins
             "whatever you want! If this is empty, no reward will be instantiated"), SerializeField]
         protected GameObject lootInside;
 
-        [SerializeField] protected AudioClip destroyedSFX;
+        //[SerializeField] protected AudioClip destroyedSFX;
+        public AK.Wwise.Event explosionSFX;
 
         // Set health
         private void Start() => health = maxHealth;

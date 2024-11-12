@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace cowsins
 {
@@ -15,12 +17,68 @@ namespace cowsins
             wc = GetComponent<WeaponController>();
             interactManager = GetComponent<InteractManager>();
             rb = GetComponent<Rigidbody>();
+
+            //StartCoroutine(DelayedInitialization());
         }
+
+        // IEnumerator DelayedInitialization()
+        // {
+        //     yield return new WaitForSeconds(0.1f);
+
+        //     player = GetComponent<PlayerMovement>();
+        //     wc = GetComponent<WeaponController>();
+        //     interactManager = GetComponent<InteractManager>();
+        //     rb = GetComponent<Rigidbody>();
+
+        //     if (wc.inventory == null || wc.inventory.Length == 0)
+        //     {
+        //         Debug.LogError("Inventory is not initialized even after delay.");
+        //     }
+        // }
+
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            if (wc.inventory[wc.currentWeapon] == null) return;
+            //if (wc.inventory[wc.currentWeapon] == null) return;
+            if (wc == null)
+            {
+                wc = GetComponent<WeaponController>();
+                if (wc == null)
+                {
+                    Debug.LogError("WeaponController is still not initialized in Update.");
+                    return;
+                }
+                else
+                {
+                    Debug.Log("WeaponController successfully initialized in Update.");
+                }
+            }
+
+            if (wc.inventory.Length == 0)
+            {
+                Debug.LogError("Inventory length is 0.");
+                return;
+            }
+
+
+            if (wc.inventory == null || wc.inventory.Length == 0)
+            {
+                Debug.LogError("Inventory is not initialized or empty.");
+                return;
+            }
+
+            if (wc.currentWeapon < 0 || wc.currentWeapon >= wc.inventory.Length)
+            {
+                Debug.LogError($"Current weapon index {wc.currentWeapon} is out of range. Inventory length: {wc.inventory.Length}");
+                return;
+            }
+             var weapon = wc.inventory[wc.currentWeapon];
+            if (weapon == null)
+            {
+                Debug.LogError($"Current weapon in inventory is null at index {wc.currentWeapon}.");
+                return;
+            }
 
             Animator currentAnimator = wc.inventory[wc.currentWeapon].GetComponentInChildren<Animator>();
 
