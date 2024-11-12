@@ -217,7 +217,7 @@ namespace cowsins
             interactUI.SetActive(true);
             interactText.text = displayText;
             interactUI.GetComponent<Animation>().Play();
-            interactUI.GetComponent<AudioSource>().Play();
+            // interactUI.GetComponent<AudioSource>().Play();
 
             // Adjust the width of the background based on the length of the displayText
             RectTransform imageRect = interactUI.GetComponentInChildren<Image>().GetComponent<RectTransform>();

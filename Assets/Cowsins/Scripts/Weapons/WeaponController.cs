@@ -317,7 +317,8 @@ namespace cowsins
                 SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
     
             }
-            Invoke(nameof(CanShoot), fireRate);
+            // Invoke(nameof(CanShoot), fireRate);
+            canShoot = true;
         }
 
         public void HandleSecondaryHitscanProjectileShot()
@@ -424,11 +425,14 @@ namespace cowsins
                 if (style == 0) HitscanShot();
                 else if (style == 1)
                 {
-                    yield return new WaitForSeconds(weapon.shootDelay);
+                    // yield return new WaitForSeconds(weapon.shootDelay);
+                    
                     ProjectileShot();
                 }
 
-                yield return new WaitForSeconds(weapon.timeBetweenShots);
+                // yield return new WaitForSeconds(weapon.timeBetweenShots);
+                yield return new WaitForSeconds(1f);
+
                 i++;
             }
             shooting = false;
@@ -1057,7 +1061,6 @@ namespace cowsins
             // If we dont own a weapon yet, do not continue
             if (weapon == null)
             {
-                Debug.Log("Weapon is null!!!!!!!!!!!!!!!!!!!!!!");
                 UIEvents.disableWeaponUI?.Invoke();
                 return;
             }
