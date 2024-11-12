@@ -40,7 +40,7 @@ namespace cowsins
         // Update is called once per frame
         void FixedUpdate()
         {
-            //if (wc.inventory[wc.currentWeapon] == null) return;
+            if (wc.inventory[wc.currentWeapon] == null) return;
             if (wc == null)
             {
                 wc = GetComponent<WeaponController>();
