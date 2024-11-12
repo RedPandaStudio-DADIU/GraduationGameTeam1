@@ -5922,6 +5922,14 @@ PrefabInstance:
       value: EnemyDiplomat
       objectReference: {fileID: 0}
     - target: {fileID: 1634313852111544931, guid: d2fea635118fbc3498850eb6aa14b422, type: 3}
+      propertyPath: m_TranslationAtRest.x
+      value: 0.0000015497208
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634313852111544931, guid: d2fea635118fbc3498850eb6aa14b422, type: 3}
+      propertyPath: m_TranslationAtRest.z
+      value: -0.0000060796738
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634313852111544931, guid: d2fea635118fbc3498850eb6aa14b422, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
       value: 0.0008087158
       objectReference: {fileID: 0}
@@ -5931,7 +5939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1634313852111544931, guid: d2fea635118fbc3498850eb6aa14b422, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].z
-      value: -0.42372513
+      value: -0.42372704
       objectReference: {fileID: 0}
     - target: {fileID: 2206412840902511055, guid: d2fea635118fbc3498850eb6aa14b422, type: 3}
       propertyPath: m_LocalScale.x
@@ -34412,7 +34420,10 @@ PrefabInstance:
     - {fileID: 8303413463543364020, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
     - {fileID: 1499535762565598337, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4328936723759506460, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1801357754}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8583264451884463879, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       insertIndex: -1
@@ -40364,6 +40375,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 466518, guid: a6a545fc6c2315b4ab024a3e6dc2ffde, type: 3}
   m_PrefabInstance: {fileID: 1800397193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1801357753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1801357754}
+  - component: {fileID: 1801357755}
+  m_Layer: 20
+  m_Name: ColliderFoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1801357754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801357753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.354, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1818026823}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1801357755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801357753}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6603823, y: 0.22858259, z: 1}
+  m_Center: {x: 0.004851818, y: -0.03153588, z: 0}
 --- !u!1001 &1802495868
 PrefabInstance:
   m_ObjectHideFlags: 0

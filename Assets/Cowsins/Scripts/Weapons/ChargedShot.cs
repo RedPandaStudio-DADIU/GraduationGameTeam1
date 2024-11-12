@@ -53,7 +53,7 @@ namespace cowsins
         {
 
             
-            if (Mouse.current.rightButton.wasPressedThisFrame && this.gameObject.GetComponent<WeaponController>().weapon != null)
+            if (Mouse.current.rightButton.wasPressedThisFrame && this.gameObject.GetComponent<WeaponController>().weapon != null && this.gameObject.GetComponent<WeaponController>().id.bulletsLeftInMagazine > this.gameObject.GetComponent<WeaponController>().weapon.ammoCostPerFire2)
             {
                 chargingEvent.Post(gameObject); 
                 Debug.Log("begain to charge");
@@ -62,7 +62,7 @@ namespace cowsins
 
             }
 
-            if (Mouse.current.rightButton.IsPressed() && this.gameObject.GetComponent<WeaponController>().weapon != null) {
+            if (Mouse.current.rightButton.IsPressed() && this.gameObject.GetComponent<WeaponController>().weapon != null && this.gameObject.GetComponent<WeaponController>().id.bulletsLeftInMagazine > this.gameObject.GetComponent<WeaponController>().weapon.ammoCostPerFire2) {
                 
                  
                 if (chargeProgressBar != null)
