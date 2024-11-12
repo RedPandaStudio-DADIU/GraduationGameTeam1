@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Humans" ID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Soldiers" ID="{9152F513-B7B0-4685-8C41-94FDC767078E}" ShortID="555814242">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="Solider1" ID="{91688055-BE84-4395-AB8C-B273FB15165B}" ShortID="920767903">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Sc1_tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Scenes_lvl1" ID="{D1681C8A-6090-43DC-8389-36963323B27F}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="1stLines" ID="{0CE82F57-8D40-470C-80B3-18A238F2FA39}" ShortID="436877563">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ITSJOHNDOE" ID="{03AC49C7-7D97-48E9-86A2-A814EB3509DA}" ShortID="478829455">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ITSJOHNDOE" ID="{F559123D-A8BF-4A7D-A8B1-2372007B66E3}">
+													<Language>English(US)</Language>
+													<AudioFile>ITSJOHNDOE.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="42718374"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ITSJOHNDOE" ID="{F559123D-A8BF-4A7D-A8B1-2372007B66E3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TheCaelariHaveBetrayedUs" ID="{EED684F5-AFB8-4FAE-BFBB-F8C4EEEE6C2C}" ShortID="905838612">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TheCaelariHaveBetrayedUs" ID="{E3436F1E-68F0-4C77-878A-1515A819FC4F}">
+													<Language>English(US)</Language>
+													<AudioFile>TheCaelariHaveBetrayedUs.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="544283314"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="TheCaelariHaveBetrayedUs" ID="{E3436F1E-68F0-4C77-878A-1515A819FC4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="ITSJOHNDOE" ID="{03AC49C7-7D97-48E9-86A2-A814EB3509DA}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="TheCaelariHaveBetrayedUs" ID="{EED684F5-AFB8-4FAE-BFBB-F8C4EEEE6C2C}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="Soldier_Wilhelm" ID="{49133EBE-6C9B-401D-86E9-ECB76CA42EB0}" ShortID="227551100">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Wilhelm Scream Remastered" ID="{47225684-DE03-4BBA-81B4-4DB1823DA2F0}">
+											<Language>English(US)</Language>
+											<AudioFile>Wilhelm Scream Remastered.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="173506951"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Wilhelm Scream Remastered" ID="{47225684-DE03-4BBA-81B4-4DB1823DA2F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="1stLines" ID="{0CE82F57-8D40-470C-80B3-18A238F2FA39}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Soldier_Wilhelm" ID="{49133EBE-6C9B-401D-86E9-ECB76CA42EB0}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Sc1_tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}"/>
+										<ItemList>
+											<ItemRef Name="1stLines" ID="{0CE82F57-8D40-470C-80B3-18A238F2FA39}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Solider1dead" ID="{5B5CF4F8-AFF0-4D43-AED6-974A693EC630}"/>
+										<ItemList>
+											<ItemRef Name="Soldier_Wilhelm" ID="{49133EBE-6C9B-401D-86E9-ECB76CA42EB0}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+						<SwitchContainer Name="Soldier2" ID="{16FE842E-4EC4-4CDC-B1DA-DA0498AF6994}" ShortID="653935189">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Solider1dead" ID="{5B5CF4F8-AFF0-4D43-AED6-974A693EC630}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Scenes_lvl1" ID="{D1681C8A-6090-43DC-8389-36963323B27F}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Sc1Lines" ID="{40B707EC-0D84-4208-816D-1B11AC8D42BC}" ShortID="825805059">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ANDY" ID="{B52A17A4-24BD-4A92-8980-A225411E0507}" ShortID="881855788">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ANDY" ID="{4B502FFB-20A6-430D-8CF9-A40D43D86FBD}">
+													<Language>English(US)</Language>
+													<AudioFile>ANDY.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="712740125"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ANDY" ID="{4B502FFB-20A6-430D-8CF9-A40D43D86FBD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="NO" ID="{373EA01A-7B8C-4B5D-9612-8E5D787EB62D}" ShortID="261398358">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="NO" ID="{96A43382-F2A0-4F1A-97E7-71C1115AFE4F}">
+													<Language>English(US)</Language>
+													<AudioFile>NO.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="566386167"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="NO" ID="{96A43382-F2A0-4F1A-97E7-71C1115AFE4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="ANDY" ID="{B52A17A4-24BD-4A92-8980-A225411E0507}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="NO" ID="{373EA01A-7B8C-4B5D-9612-8E5D787EB62D}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="DS_ARGH" ID="{A342B55D-CA56-4C83-B319-AEEC5A808D8A}" ShortID="361938586">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ARGH" ID="{78B35591-CF09-4904-BE18-2F99477B7147}">
+											<Language>English(US)</Language>
+											<AudioFile>ARGH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="36519702"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ARGH" ID="{78B35591-CF09-4904-BE18-2F99477B7147}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="DS_ARGH" ID="{A342B55D-CA56-4C83-B319-AEEC5A808D8A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Sc1Lines" ID="{40B707EC-0D84-4208-816D-1B11AC8D42BC}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Sc1_tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}"/>
+										<ItemList>
+											<ItemRef Name="Sc1Lines" ID="{40B707EC-0D84-4208-816D-1B11AC8D42BC}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
