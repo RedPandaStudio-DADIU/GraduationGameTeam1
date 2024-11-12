@@ -23,8 +23,16 @@ public class HitScanBasic : MonoBehaviour
     private float chargeTime = 2f; 
     private float ragdollDuration = 5.0f; 
 
+    [Header("Wwise Events")]
+    [SerializeField] private AK.Wwise.Event gunshotEvent;
+    [SerializeField] private AK.Wwise.Event chargedGunshotEvent;
+    [SerializeField] private AK.Wwise.Event chargingEvent;         // Charging sound
+    [SerializeField] private AK.Wwise.Event chargeCompleteEvent;   // Charge complete sound
+    [SerializeField] private AK.Wwise.Event explosionEvent;   
 
-   
+    // [SerializeField] private string rifleSoundBankName = "MainSoundFXBank";
+    //private uint rifleSoundBankID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +40,7 @@ public class HitScanBasic : MonoBehaviour
         {
             chargeProgressBar.fillAmount = 0;  
         }
+        // AkSoundEngine.LoadBank(rifleSoundBankName, out rifleSoundBankID);
      }
 
     // Update is called once per frame
@@ -45,6 +54,7 @@ public class HitScanBasic : MonoBehaviour
             if (Input.GetMouseButtonDown(1)) 
                 {
                     isRightClickPressed = true;
+                     chargingEvent.Post(gameObject);
 
                     rightClickHoldTime = 0f;  
                     if (chargeProgressBar != null)
@@ -58,10 +68,17 @@ public class HitScanBasic : MonoBehaviour
             if (isRightClickPressed)
             {
                 rightClickHoldTime += Time.deltaTime;
+               
                 
                 if (chargeProgressBar != null)
                 {
                     chargeProgressBar.fillAmount = Mathf.Clamp01(rightClickHoldTime / chargeTime);
+                }
+
+                if (rightClickHoldTime >= chargeTime && chargeCompleteEvent != null)
+                {
+                    chargeCompleteEvent.Post(gameObject); // Play charge complete sound
+                    isRightClickPressed = false; // Prevent repeated triggering
                 }
             }
 
@@ -69,10 +86,13 @@ public class HitScanBasic : MonoBehaviour
 			if (Input.GetMouseButtonUp(1))
 			{
 				isRightClickPressed = false;
+                 chargingEvent.Stop(gameObject);
+
 
 				if (rightClickHoldTime >= chargeTime)
                 {
                     ChargedShoot();
+                    
                 }
                 
                 if (chargeProgressBar != null)
@@ -90,6 +110,7 @@ public class HitScanBasic : MonoBehaviour
     private void Shoot()
     {
         
+        gunshotEvent.Post(gameObject);
 
         RaycastHit hit;
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
@@ -152,6 +173,8 @@ public class HitScanBasic : MonoBehaviour
     private void ChargedShoot()
     {
         RaycastHit hit;
+        chargedGunshotEvent.Post(gameObject);
+
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
         {
             Debug.Log("Charged Hit: " + hit.transform.name);
@@ -196,6 +219,8 @@ public class HitScanBasic : MonoBehaviour
 
     public void PushNearbyEnemies(Vector3 center, float force, float explosionRadius )
     {
+        explosionEvent.Post(gameObject);
+        
         Collider[] hitColliders = Physics.OverlapSphere(center, explosionRadius);
         foreach (var hitCollider in hitColliders)
         {

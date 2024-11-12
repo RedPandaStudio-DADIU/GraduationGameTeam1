@@ -11,8 +11,6 @@ public class EnemyHitState : IEnemyState
         } else{
             stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
-            // stateController.GetEnemy().GetRagdollController().RecordBoneTransforms();
-            // stateController.GetEnemy().GetRagdollController().GetRelativePositions();
         }
     }
     public void OnUpdate(EnemyStateController stateController){

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using cowsins;
 
 public class EnemyStateController : MonoBehaviour
 {
@@ -14,14 +15,31 @@ public class EnemyStateController : MonoBehaviour
 
     private bool playerInRange = false;
     private Vector3 forceDirection;
-    private float force;
+    [SerializeField] private float force = 300f;
+    [SerializeField] private List<Transform> targetList = new List<Transform>();
+    [SerializeField] private bool isHuman = false;
+    private Queue<Transform> targetQueue;
 
-    void Start()
+
+    void Awake()
     {
         currentState = new EnemyIdleState();
         currentState.OnEnter(this);
-        playerTransform = GameObject.FindWithTag("Player").transform;
-        playerBodyTransform =  GameObject.Find("Capsule").transform;
+        
+        if (targetList.Count > 0){
+            targetQueue = new Queue<Transform>(targetList); 
+        } else{
+            targetQueue = new Queue<Transform>();
+        }
+        
+        targetQueue.Enqueue(GameObject.FindWithTag("Player").transform);
+        
+        
+        // playerTransform = GameObject.FindWithTag("Player").transform;
+        // playerBodyTransform =  GameObject.FindWithTag("Player").transform;
+
+        playerTransform = playerBodyTransform = targetQueue.Dequeue();
+        Debug.Log("Player Transform (TAREGT transform) is " + playerTransform.position + " name: " + playerTransform.gameObject.name);
 
         enemy = GetComponent<EnemyBaseClass>();
     }
@@ -30,7 +48,7 @@ public class EnemyStateController : MonoBehaviour
     {
         currentState.OnUpdate(this);
 
-        if(this.GetEnemy().GetHealth() == 0){
+        if(this.GetEnemy().GetHealth() <= 0 && currentState is not EnemyDieState){
             ChangeState(new EnemyDieState());
         }
     }
@@ -88,6 +106,9 @@ public class EnemyStateController : MonoBehaviour
 
     public bool CanSeePlayer(){
 
+        // Debug.Log("Inside CanSeePlayer");
+        // Debug.Log("Player Body Position: " + playerBodyTransform.position);
+
         // Check if enemy within attacking distance of the player
         float attackDistance = enemy.GetAttackDistance();
 
@@ -95,11 +116,14 @@ public class EnemyStateController : MonoBehaviour
         Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
         // Vector3 directionToPlayer = playerTransform.position - enemy.transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
+        // Debug.Log("Distance to player: " + distanceToPlayer);
 
         if (distanceToPlayer > attackDistance){
             playerInRange = false;
             return playerInRange;
         }
+        // Debug.Log("Distance check passed by: " + enemy.name);
+
 
         // Check if enemy can see the player - player in the field of view of an enemy
         float fieldOfViewAngle = enemy.GetFieldOfView();
@@ -110,19 +134,23 @@ public class EnemyStateController : MonoBehaviour
             return playerInRange;
         }  
 
+        // Debug.Log("Angle check passed by: " + enemy.name);
+
+
         Debug.DrawRay(enemy.transform.position, directionToPlayer.normalized * distanceToPlayer, Color.red);
 
         // Check whether there are no obstacles on the way to the player
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
-            // if (hit.collider.CompareTag("Player"))
-            if (hit.collider.CompareTag("PlayerBody"))
+            // if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human") )
+            // if (hit.collider.CompareTag("PlayerBody"))
+            if (hit.collider.CompareTag("Player") || (hit.collider.CompareTag("Human") && !isHuman) || (hit.collider.CompareTag("Enemy")&& isHuman) )
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
                 GlobalEnemyStateMachine.Instance.DetectPlayer(playerBodyTransform.position, this.GetEnemy());
 
                 playerInRange = true;
-                Debug.Log("Raycast check passed by: " + enemy.name);
+                // Debug.Log("Raycast check passed by: " + enemy.name);
 
                 return playerInRange;
             }
@@ -175,5 +203,54 @@ public class EnemyStateController : MonoBehaviour
         return this.previousState;
     }
 
+    public void Recovery(float ragdollDuration){
+        StartCoroutine(RecoverAfterDelay(this, ragdollDuration));
+    }
+
+    IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
+    {
+        Debug.Log("Coroutine started");
+        yield return new WaitForSeconds(delay);
+
+        if (enemy != null)
+        {
+            Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+            IEnemyState prevState = enemy.GetPreviousState();
+            if(prevState is EnemyAttackState || prevState is EnemyIdleState){
+                enemy.ChangeState(prevState);
+            }
+
+        } else {
+            Debug.Log("Enemy is null!!");
+        }
+    }
+
+
+    public void LooseLifeFight(){
+        forceDirection = -transform.forward; 
+        this.GetEnemy().SetHealth(0f); // then in update it will enter DieState
+    }
+
+    public void SwitchTarget(){
+        Debug.LogWarning("Switch target, old player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
+        if(targetQueue.Count > 0){
+            playerTransform = playerBodyTransform = targetQueue.Dequeue();
+            Debug.LogWarning("Switch target, new player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
+            SetAgentsDestination();
+            // this.ChangeState(new EnemyAttackState());
+
+            this.gameObject.GetComponent<EnemyWeaponController>().SetPlayerTransform(playerTransform);
+
+            Vector3 direction = (playerTransform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * enemy.GetComponent<NavMeshAgent>().angularSpeed);
+
+
+        }
+    }
+
+    public bool GetIsHuman(){
+        return this.isHuman;
+    }
 
 }

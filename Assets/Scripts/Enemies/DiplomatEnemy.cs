@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cowsins;
 
 public class DiplomatEnemy : EnemyBaseClass
 {
@@ -16,6 +17,7 @@ public class DiplomatEnemy : EnemyBaseClass
 
     public override void Attack(){
         Debug.Log("Diplomat Attacking");
+        GetComponent<EnemyWeaponController>().HandleHitscanProjectileShot();
     }
 
     public override void Die(){

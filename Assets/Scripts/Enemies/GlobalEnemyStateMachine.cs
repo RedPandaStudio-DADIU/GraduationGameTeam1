@@ -97,7 +97,7 @@ public class GlobalEnemyStateMachine : MonoBehaviour
                 if(detected){
                     if(IsEnemyCloseBy(enemyDetecting, enemy.GetEnemy())){
                         Debug.Log("Notifying: " + enemy.GetEnemy().name);
-                        enemy.SetPlayerPosition(playerPosition);
+                        // enemy.SetPlayerPosition(playerPosition);
                         enemy.ChangeState(new EnemyAttackState());
                     }
                     
