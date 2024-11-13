@@ -82,12 +82,16 @@ namespace cowsins
          public void LoadScene(int sceneIndex)
         {
             SceneManager.LoadSceneAsync(sceneIndex);
+            DynamicGI.UpdateEnvironment();
+
         }
 
         public void LoadGameScene()
         {
             Debug.Log("LoadGameScene method called.");
             SceneManager.LoadScene("Level 1 Design 1.1");
+            DynamicGI.UpdateEnvironment();
+
         }
 
          public void QuitGame()

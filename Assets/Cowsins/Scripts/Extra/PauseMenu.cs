@@ -40,14 +40,15 @@ namespace cowsins
         private void Update()
         {
             HandlePauseInput();
-            if (isPaused)
-            {
-                HandlePause();
-            }
-            else
-            {
-                HandleUnpause();
-            }
+            // if (isPaused)
+            // {
+            //     HandlePause();
+            //     Debug.Log("pause ui 1");
+            // }
+            // else
+            // {
+            //     HandleUnpause();
+            // }
         }
 
         private void HandlePauseInput()
@@ -58,55 +59,58 @@ namespace cowsins
             }
         }
 
-        private void HandlePause()
-        {
-            // if (!menu.gameObject.activeSelf)
-            // {
-            //     menu.gameObject.SetActive(true);
-            //     menu.alpha = 0;
-            // }
+        // private void HandlePause()
+        // {
+        //     // if (!menu.gameObject.activeSelf)
+        //     // {
+        //     //     menu.gameObject.SetActive(true);
+        //     //     menu.alpha = 0;
+        //     // }
 
-            // menu.alpha = Mathf.Min(menu.alpha + Time.deltaTime * fadeSpeed, 1);
+        //     // menu.alpha = Mathf.Min(menu.alpha + Time.deltaTime * fadeSpeed, 1);
 
-            // if (disablePlayerUIWhilePaused && !stats.isDead)
-            // {
-            //     playerUI.SetActive(false);
-            // }
+        //     // if (disablePlayerUIWhilePaused && !stats.isDead)
+        //     // {
+        //     //     playerUI.SetActive(false);
+        //     // }
 
-            isPaused = true;
-            Time.timeScale = 0f; 
-            pauseMenuUI.SetActive(true); 
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+        //    // isPaused = true;
+        //     Time.timeScale = 0f; 
+        //     pauseMenuUI.SetActive(true); 
+        //     Debug.Log("pause ui ");
+       
+        //     // Cursor.lockState = CursorLockMode.None;
+        //     // Cursor.visible = true;
 
-            if (disablePlayerUIWhilePaused)
-            {
-                playerUI.SetActive(false); 
-            }
-        }
+        //     // if (disablePlayerUIWhilePaused)
+        //     // {
+        //     //     playerUI.SetActive(false); 
+        //     // }
+        // }
 
-        private void HandleUnpause()
-        {
-            // menu.alpha = Mathf.Max(menu.alpha - Time.deltaTime * fadeSpeed, 0);
+        // private void HandleUnpause()
+        // {
+        //     // menu.alpha = Mathf.Max(menu.alpha - Time.deltaTime * fadeSpeed, 0);
 
-            // if (menu.alpha <= 0)
-            // {
-            //     menu.gameObject.SetActive(false);
-            // }
+        //     // if (menu.alpha <= 0)
+        //     // {
+        //     //     menu.gameObject.SetActive(false);
+        //     // }
 
-            // playerUI.SetActive(true);
-            isPaused = false;
-            Time.timeScale = 1f; // 恢复全局时间
-            pauseMenuUI.SetActive(false); // 隐藏暂停菜单
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+        //     // playerUI.SetActive(true);
+        //    // isPaused = false;
+        //     Time.timeScale = 1f; 
+        //     pauseMenuUI.SetActive(false); 
+        //     Debug.Log("un pause ui ");
+        //     // Cursor.lockState = CursorLockMode.Locked;
+        //     // Cursor.visible = false;
 
-            if (disablePlayerUIWhilePaused)
-            {
-                playerUI.SetActive(true); // 显示玩家 UI
-            }
+        //     // if (disablePlayerUIWhilePaused)
+        //     // {
+        //     //     playerUI.SetActive(true); // 显示玩家 UI
+        //     // }
 
-        }
+        // }
 
         // public void UnPause()
         // {
@@ -132,7 +136,12 @@ namespace cowsins
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                Time.timeScale = 0f; 
+                
+                pauseMenuUI.SetActive(true); 
+                Debug.Log("pause ui ");
                 stats.LoseControl();
+
                 if (disablePlayerUIWhilePaused && !stats.isDead)
                 {
                     playerUI.SetActive(false);
@@ -143,6 +152,11 @@ namespace cowsins
             else
             {
                 stats.CheckIfCanGrantControl();
+
+                Time.timeScale = 1f; 
+                pauseMenuUI.SetActive(false); 
+                Debug.Log("un pause ui ");
+
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 playerUI.SetActive(true);
@@ -150,5 +164,20 @@ namespace cowsins
                 OnUnpause?.Invoke();
             }
         }
+
+         public void QuitToMainMenu()
+        {
+            Time.timeScale = 1f; 
+            SceneManager.LoadScene(0); 
+        }
+
+        public void RestartGame()
+        {
+            Time.timeScale = 1f; 
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 重新加载当前场景
+        }
+
+
+
     }
 }
