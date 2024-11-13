@@ -117,6 +117,7 @@ namespace cowsins
 
                             
                 // StartCoroutine(EnemyShooting());
+                // if(weapon)
                 ProjectileShot();
 
         
@@ -236,7 +237,14 @@ namespace cowsins
             this.playerTransform = newPlayerTransform;
         }
 
+        void OnDisable()
+        {
+            StopAllCoroutines(); 
+            CancelInvoke();
+        }
+
     }
+
 }
 
 

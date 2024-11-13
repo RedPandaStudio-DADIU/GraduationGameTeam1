@@ -48,6 +48,7 @@ public class EnemyRagdollController : MonoBehaviour
         middleBodyBone = FindBoneByName("middle body");
 
         SetRagdollActive(false);
+        ActivateWeakSpotsIfExist();
     }
 
     void Start()
@@ -56,6 +57,18 @@ public class EnemyRagdollController : MonoBehaviour
         mainRigidbody = GetComponent<Rigidbody>(); 
 
         RecordBoneTransforms();
+    }
+
+    private void ActivateWeakSpotsIfExist()
+    {
+
+        foreach (Collider collider in ragdollColliders)
+        {
+            if (collider.gameObject.CompareTag("WeakSpot"))
+            {
+                collider.enabled = true;
+            }
+        }
     }
 
     private Transform FindBoneByName(string boneName)

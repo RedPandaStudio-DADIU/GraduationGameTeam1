@@ -26,6 +26,7 @@ public class EnemyHitState : IEnemyState
         if(stateController.GetEnemy().GetHealth()>0){
             stateController.GetEnemy().GetRagdollController().RecoverFromRagdoll();
             stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = true;
+
             Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
             weapon.gameObject.SetActive(true);
 
