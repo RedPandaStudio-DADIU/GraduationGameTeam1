@@ -1120,7 +1120,7 @@ namespace cowsins
             }
             // Detect enemies on aiming
             RaycastHit hit_;
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Enemy") || Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Critical"))
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && (hit_.transform.CompareTag("Enemy") || hit_.transform.CompareTag("Boss")) || Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Critical"))
                 UIController.instance.crosshair.SpotEnemy(true);
             else UIController.instance.crosshair.SpotEnemy(false);
         }

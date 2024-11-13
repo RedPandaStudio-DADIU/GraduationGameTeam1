@@ -253,4 +253,8 @@ public class EnemyStateController : MonoBehaviour
         return this.isHuman;
     }
 
+
+    public IEnemyState GetCurrentState(){
+        return this.currentState;
+    }
 }

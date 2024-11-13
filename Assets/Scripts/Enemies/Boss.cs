@@ -14,19 +14,31 @@ public class Boss : DiplomatEnemy
 
     }
 
-    // public void DecreaseHealthBoss(float damage){
-    //     if (areWeakSpotsDefeated){
-    //         if(this.health > 0){
-    //             this.health -= damage;
-    //         }
+    public bool CheckIfOnTop(Transform weakspot){
+        if(queueWeakSpots.Count>0 && queueWeakSpots.Peek() == weakspot){
+            return true;
+        } else{
+            return false;
+        }
+    }
 
-    //         if (hitSoundEvent != null)
-    //         {
-    //             hitSoundEvent.Post(gameObject);
-    //             Debug.Log("Played hit sound for boss.");
-    //         }
-    //     }
+    public void SetAreWeakSpotsDefeated(bool value){
+        this.areWeakSpotsDefeated = value;
+    }
 
-    // }
+    public bool GetAreWeakSpotsDefeated(){
+        return this.areWeakSpotsDefeated;
+    }
     
+    public void RemoveFromQueue(){
+        queueWeakSpots.Dequeue();
+    }
+
+    public bool CheckIfEmpty(){
+        if(queueWeakSpots.Count == 0){
+            return true;
+        }
+        return false;
+    }
+
 }

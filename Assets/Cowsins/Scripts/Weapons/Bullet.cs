@@ -67,7 +67,16 @@ namespace cowsins
                 Debug.Log("Enemy Shot!! Damage: " + damage);
                 Shoot(damage, other);
 
-            }
+            } else if(other.CompareTag("WeakSpot")){
+                Debug.LogWarning("Hit weak spot");
+                other.gameObject.GetComponent<WeakSpot>().CheckIfCanBeDamaged();
+            } else if(other.CompareTag("Boss")){
+                Debug.LogWarning("Hit boss");
+
+                if(other.gameObject.GetComponent<Boss>().GetAreWeakSpotsDefeated()){
+                    Shoot(damage, other);
+                }
+            } 
             else if (other.GetComponent<IDamageable>() != null && !other.CompareTag("Player"))
             {
                 DamageTarget(other.transform, damage, false);
