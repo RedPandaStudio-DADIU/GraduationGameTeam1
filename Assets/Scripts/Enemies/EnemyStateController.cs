@@ -232,10 +232,10 @@ public class EnemyStateController : MonoBehaviour
     }
 
     public void SwitchTarget(){
-        Debug.LogWarning("Switch target, old player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
+        // Debug.LogWarning("Switch target, old player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
         if(targetQueue.Count > 0){
             playerTransform = playerBodyTransform = targetQueue.Dequeue();
-            Debug.LogWarning("Switch target, new player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
+            // Debug.LogWarning("Switch target, new player transform: "+ playerTransform+ ", name: " + playerTransform.gameObject.name);
             SetAgentsDestination();
             // this.ChangeState(new EnemyAttackState());
 

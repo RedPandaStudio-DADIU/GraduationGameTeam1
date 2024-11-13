@@ -64,8 +64,18 @@ namespace cowsins
             // } 
             if(other.CompareTag("Enemy") && !isEnemy && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
-                Debug.Log("Enemy Shot!! Damage: " + damage);
-                Shoot(damage, other);
+
+                if(this.CompareTag("ChargeShot")){
+                    Debug.LogWarning("Test");
+                    
+                    player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);
+                    DestroyProjectile();
+                } else {
+                    Debug.Log("Enemy Shot!! Damage: " + damage);
+                    Shoot(damage, other);
+                }
+
+               
 
             }
             else if (other.GetComponent<IDamageable>() != null && !other.CompareTag("Player"))
@@ -112,7 +122,7 @@ namespace cowsins
                 enemy.SetForceDirection(pushDirection);
                 enemy.SetForce(pushForce);
 
-                if(enemy.GetEnemy().GetHealth() == 0){
+                if(enemy.GetEnemy().GetHealth() <= 0){
                     enemy.ChangeState(new EnemyDieState());
                 }
 
@@ -129,7 +139,7 @@ namespace cowsins
 
         private bool IsGroundOrObstacleLayer(int layer)
         {
-            return layer == LayerMask.NameToLayer("Ground") || layer == LayerMask.NameToLayer("Object")
+            return layer == LayerMask.NameToLayer("Ground") || layer == LayerMask.NameToLayer("Object")  || layer == LayerMask.NameToLayer("Spaceships")
                 || layer == LayerMask.NameToLayer("Grass") || layer == LayerMask.NameToLayer("Metal") ||
                 layer == LayerMask.NameToLayer("Mud") || layer == LayerMask.NameToLayer("Wood") || layer == LayerMask.NameToLayer("Enemy");
         }

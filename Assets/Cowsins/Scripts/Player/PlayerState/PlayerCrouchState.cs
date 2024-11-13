@@ -51,7 +51,7 @@ namespace cowsins
         public override void CheckSwitchState()
         {
 
-            if (player.ReadyToJump && InputManager.jumping && player.canJumpWhileCrouching && (player.EnoughStaminaToJump && player.grounded || player.wallRunning || player.jumpCount > 0 && player.maxJumps > 1 && player.EnoughStaminaToJump))
+            if (player.ReadyToJump && InputManager.jumping && player.canJumpWhileCrouching && (player.grounded || player.wallRunning || player.jumpCount > 0 && player.maxJumps > 1)) //player.EnoughStaminaToJump &&  && player.EnoughStaminaToJump
                 SwitchState(_factory.Jump());
 
             if (_ctx.GetComponent<PlayerStats>().health <= 0) SwitchState(_factory.Die());

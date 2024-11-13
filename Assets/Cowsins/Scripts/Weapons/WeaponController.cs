@@ -147,6 +147,7 @@ namespace cowsins
         private delegate void ReduceAmmo();
 
         private ReduceAmmo reduceAmmo;
+        private ReduceAmmo reduceAmmo2;
 
         //private AudioClip fireSFX;
 
@@ -168,6 +169,7 @@ namespace cowsins
             CreateInventoryUI();
             GetInitialWeapons();
 
+            
             //StartCoroutine(DelayedInit());
         }
 
@@ -317,7 +319,8 @@ namespace cowsins
                 SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
     
             }
-            Invoke(nameof(CanShoot), fireRate);
+            // Invoke(nameof(CanShoot), fireRate);
+            canShoot = true;
         }
 
         public void HandleSecondaryHitscanProjectileShot()
@@ -424,11 +427,14 @@ namespace cowsins
                 if (style == 0) HitscanShot();
                 else if (style == 1)
                 {
-                    yield return new WaitForSeconds(weapon.shootDelay);
+                    // yield return new WaitForSeconds(weapon.shootDelay);
+                    
                     ProjectileShot();
                 }
 
-                yield return new WaitForSeconds(weapon.timeBetweenShots);
+                // yield return new WaitForSeconds(weapon.timeBetweenShots);
+                yield return new WaitForSeconds(1f);
+
                 i++;
             }
             shooting = false;
@@ -447,7 +453,7 @@ namespace cowsins
             weaponAnimator.StopWalkAndRunMotion();
 
             // Rest the bullets that have just been shot
-            reduceAmmo?.Invoke();
+            reduceAmmo2?.Invoke();
 
             //Determine weapon class / style
             int i = 0;
@@ -573,7 +579,7 @@ namespace cowsins
         private void ProjectileShot()
         {
             events.OnShoot.Invoke();
-            if (resizeCrosshair && UIController.instance.crosshair != null) UIController.instance.crosshair.Resize(weapon.crosshairResize * 100);
+            // if (resizeCrosshair && UIController.instance.crosshair != null) UIController.instance.crosshair.Resize(weapon.crosshairResize * 100);
 
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
             Vector3 destination = (Physics.Raycast(ray, out hit) && !hit.transform.CompareTag("Player")) ? destination = hit.point + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera) : destination = ray.GetPoint(50f) + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera);
@@ -810,6 +816,18 @@ namespace cowsins
             }
         }
 
+        private void ReduceDefaultAmmo2()
+        {
+            if (!weapon.infiniteBullets)
+            {
+                id.bulletsLeftInMagazine -= weapon.ammoCostPerFire2;
+                if (id.bulletsLeftInMagazine < 0)
+                {
+                    id.bulletsLeftInMagazine = 0;
+                }
+            }
+        }
+
 
         // On shooting overheat reloading weapons, increase the heat ratio.
         private void ReduceOverheatAmmo()
@@ -876,6 +894,8 @@ namespace cowsins
             {
                 reload = DefaultReload;
                 reduceAmmo = ReduceDefaultAmmo;
+                reduceAmmo2 = ReduceDefaultAmmo2;
+
             }
             else
             {
@@ -1057,7 +1077,6 @@ namespace cowsins
             // If we dont own a weapon yet, do not continue
             if (weapon == null)
             {
-                Debug.Log("Weapon is null!!!!!!!!!!!!!!!!!!!!!!");
                 UIEvents.disableWeaponUI?.Invoke();
                 return;
             }

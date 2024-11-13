@@ -161,6 +161,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2e8e2df-7f3f-4f0a-bded-4d7a2e7173e4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -601,6 +610,28 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8bfe05fa-b451-49b0-bcb2-4baddff2b8b5"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard;Gamepad"",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dad47727-7f76-42d3-bf81-05b2b4515de4"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Keyboard"",
+                    ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1192,6 +1223,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_GameControls_ToggleFlashLight = m_GameControls.FindAction("ToggleFlashLight", throwIfNotFound: true);
         m_GameControls_Push = m_GameControls.FindAction("Push", throwIfNotFound: true);
         m_GameControls_Heal = m_GameControls.FindAction("Heal", throwIfNotFound: true);
+        m_GameControls_Quit = m_GameControls.FindAction("Quit", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1280,6 +1312,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_GameControls_ToggleFlashLight;
     private readonly InputAction m_GameControls_Push;
     private readonly InputAction m_GameControls_Heal;
+    private readonly InputAction m_GameControls_Quit;
     public struct GameControlsActions
     {
         private @PlayerActions m_Wrapper;
@@ -1299,6 +1332,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @ToggleFlashLight => m_Wrapper.m_GameControls_ToggleFlashLight;
         public InputAction @Push => m_Wrapper.m_GameControls_Push;
         public InputAction @Heal => m_Wrapper.m_GameControls_Heal;
+        public InputAction @Quit => m_Wrapper.m_GameControls_Quit;
         public InputActionMap Get() { return m_Wrapper.m_GameControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1353,6 +1387,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Heal.started += instance.OnHeal;
             @Heal.performed += instance.OnHeal;
             @Heal.canceled += instance.OnHeal;
+            @Quit.started += instance.OnQuit;
+            @Quit.performed += instance.OnQuit;
+            @Quit.canceled += instance.OnQuit;
         }
 
         private void UnregisterCallbacks(IGameControlsActions instance)
@@ -1402,6 +1439,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Heal.started -= instance.OnHeal;
             @Heal.performed -= instance.OnHeal;
             @Heal.canceled -= instance.OnHeal;
+            @Quit.started -= instance.OnQuit;
+            @Quit.performed -= instance.OnQuit;
+            @Quit.canceled -= instance.OnQuit;
         }
 
         public void RemoveCallbacks(IGameControlsActions instance)
@@ -1572,6 +1612,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnToggleFlashLight(InputAction.CallbackContext context);
         void OnPush(InputAction.CallbackContext context);
         void OnHeal(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

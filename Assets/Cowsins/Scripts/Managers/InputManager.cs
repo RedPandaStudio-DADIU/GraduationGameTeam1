@@ -30,6 +30,7 @@ namespace cowsins
             yMovementActioned,
             toggleFlashLight, grappling,
             push,
+            quit,
             heal;
 
         public static float x,
@@ -206,6 +207,11 @@ namespace cowsins
             jumping = inputActions.GameControls.Jumping.WasPressedThisFrame();
             push = inputActions.GameControls.Push.WasPressedThisFrame();
             heal = inputActions.GameControls.Heal.WasPressedThisFrame();
+            quit = inputActions.GameControls.Quit.WasPressedThisFrame();
+
+            if(quit){
+                Application.Quit();
+            }
 
         }
 

@@ -12,7 +12,7 @@ namespace cowsins
     [CustomEditor(typeof(PlayerMovement))]
     public class PlayerMovementEditor : Editor
     {
-        private string[] tabs = { "Assignables", "Movement", "Camera", "Sliding", "Jumping", "Aim assist", "Stamina", "Advanced Movement", "Others" };
+        private string[] tabs = { "Assignables", "Movement", "Camera", "Sliding", "Jumping", "Aim assist", "Advanced Movement", "Others" }; //, "Stamina"
         private int currentTab = 0;
 
         private bool showWallRun, showWallBounce, showGrapplingHook, showClimbing; //showDashing
@@ -209,22 +209,22 @@ namespace cowsins
                         }
 
                         break;
-                    case "Stamina":
-                        EditorGUILayout.LabelField("STAMINA", EditorStyles.boldLabel);
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("usesStamina"));
-                        if (myScript.usesStamina)
-                        {
-                            EditorGUI.indentLevel++;
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("minStaminaRequiredToRun"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("maxStamina"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaRegenMultiplier"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("LoseStaminaWalking"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnJump"));
-                            EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnSlide"));
-                            // EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnDash"));
-                            EditorGUI.indentLevel--;
-                        }
-                        break;
+                    // case "Stamina":
+                    //     EditorGUILayout.LabelField("STAMINA", EditorStyles.boldLabel);
+                    //     EditorGUILayout.PropertyField(serializedObject.FindProperty("usesStamina"));
+                    //     if (myScript.usesStamina)
+                    //     {
+                    //         EditorGUI.indentLevel++;
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("minStaminaRequiredToRun"));
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("maxStamina"));
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaRegenMultiplier"));
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("LoseStaminaWalking"));
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnJump"));
+                    //         EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnSlide"));
+                    //         // EditorGUILayout.PropertyField(serializedObject.FindProperty("staminaLossOnDash"));
+                    //         EditorGUI.indentLevel--;
+                    //     }
+                    //     break;
                     case "Advanced Movement":
                         EditorGUILayout.LabelField("ADVANCED MOVEMENT", EditorStyles.boldLabel);
                         EditorGUILayout.Space(5);
