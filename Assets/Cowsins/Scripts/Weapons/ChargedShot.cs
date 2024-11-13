@@ -110,44 +110,39 @@ namespace cowsins
         }
 
         private void Shoot(){
+            weaponController.HandleSecondaryHitscanProjectileShot();
 
-            RaycastHit hit;
-            if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
-            {
-                // Insert the shooting logic
-                Debug.Log("Charged Hit: " + hit.transform.name);
-                weaponController.HandleSecondaryHitscanProjectileShot();
-                // weaponController.HitscanShot();
+        }
 
-                
-                if (hit.collider.CompareTag("Enemy"))
-                {
-                    EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
-
-                    if (enemy.GetEnemy().GetRagdollController() != null)
-
-                    {
-                        enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
-
-                        Vector3 pushDirection = hit.point - playerCamera.transform.position;
-                        pushDirection = pushDirection.normalized;
-                        enemy.SetForce(chargedPushForce);
-                        enemy.SetForceDirection(pushDirection);
-
-                        enemy.GetEnemy().DecreaseHealth(chargeDamage);
-
-                        enemy.ChangeState(new EnemyHitState());
-                        
-                        if(enemy.GetEnemy().GetHealth() > 0){
-                            // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
-                            StartCoroutine(RecoverAfterDelay(enemy, delay));
-                        }
-
-                        PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
-                    }
-                }
-            }
+        public void ShootCharge(GameObject enemyObject, Vector3 projectilePosition){
             
+
+            EnemyStateController enemy = enemyObject.transform.GetComponent<EnemyStateController>();
+
+
+            if (enemy.GetEnemy().GetRagdollController() != null)
+
+            {
+                enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
+
+                // Vector3 pushDirection = hit.point - playerCamera.transform.position;
+                Vector3 pushDirection = -enemy.transform.forward;
+
+                pushDirection = pushDirection.normalized;
+                enemy.SetForce(chargedPushForce);
+                enemy.SetForceDirection(pushDirection);
+
+                enemy.GetEnemy().DecreaseHealth(chargeDamage);
+
+                enemy.ChangeState(new EnemyHitState());
+                
+                if(enemy.GetEnemy().GetHealth() > 0){
+                    // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                    StartCoroutine(RecoverAfterDelay(enemy, delay));
+                }
+
+                PushNearbyEnemies(projectilePosition, chargedPushForce, explosionRadius);
+            }
             
         }
 

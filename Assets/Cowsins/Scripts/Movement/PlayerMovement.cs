@@ -613,24 +613,28 @@ namespace cowsins
 
         public void StartCrouch()
         {
+
+            Debug.LogWarning("Starting to Crouch");
             if (!allowCrouch) return;
             isCrouching = true;
 
             if (crouchCancelMethod == CrouchCancelMethod.FullStop)
                 currentSpeed = crouchSpeed;
 
-            if (rb.velocity.magnitude >= walkSpeed && grounded && allowSliding && !hasJumped)
-            { // Handle sliding
-                events.OnSlide.Invoke(); // Invoke your own method on the moment you slid NOT WHILE YOU ARE SLIDING
-                                         // Add the force on slide
-                rb.AddForce(orientation.transform.forward * slideForce);
-                //staminaLoss
-                // if (usesStamina) stamina -= staminaLossOnSlide;
-            }
+            // if (rb.velocity.magnitude >= walkSpeed && grounded && allowSliding && !hasJumped)
+            // { // Handle sliding
+            //     events.OnSlide.Invoke(); // Invoke your own method on the moment you slid NOT WHILE YOU ARE SLIDING
+            //                              // Add the force on slide
+            //     rb.AddForce(orientation.transform.forward * slideForce);
+            //     //staminaLoss
+            //     // if (usesStamina) stamina -= staminaLossOnSlide;
+            // }
         }
 
         public void StopCrouch()
         {
+            Debug.LogWarning("Stopping Crouch");
+
             isCrouching = false;
             transform.localScale = Vector3.MoveTowards(transform.localScale, playerScale, Time.deltaTime * crouchTransitionSpeed);
         }
