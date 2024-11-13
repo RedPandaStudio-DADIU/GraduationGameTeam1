@@ -187,7 +187,6 @@ public class HitScanBasic : MonoBehaviour
                 // EnemyRagdollController enemyRagdollController = hit.transform.GetComponent<EnemyRagdollController>();
                 // if (enemyRagdollController != null)
                 if (enemy.GetEnemy().GetRagdollController() != null)
-
                 {
                     
                     // enemyRagdollController.SetRagdollActive(true);
