@@ -1312,6 +1312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplosiveBarrel
       objectReference: {fileID: 0}
+    - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
+      objectReference: {fileID: 0}
     - target: {fileID: 8650041148367892599, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: maxHealth
       value: 20
@@ -1334,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.9674
+      value: -19.459929
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1366,16 +1370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1132323461}
-    - targetCorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1440170460}
-    - targetCorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1019885441}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
 --- !u!1001 &63706069
@@ -21454,11 +21449,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7548369267463070962, guid: 086eaf22fc3cc9a4c89c1bffd7e0f59c, type: 3}
   m_PrefabInstance: {fileID: 1014774385}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1019885441 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-  m_PrefabInstance: {fileID: 2063681842}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1021551718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23824,11 +23814,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!4 &1132323461 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-  m_PrefabInstance: {fileID: 1585235756}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1137192694
 GameObject:
   m_ObjectHideFlags: 0
@@ -30484,11 +30469,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 417300, guid: 8df9aa4ecfa6a644a87c4e042bb1f320, type: 3}
   m_PrefabInstance: {fileID: 1440017038}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1440170460 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-  m_PrefabInstance: {fileID: 1942947334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1440449111
 GameObject:
   m_ObjectHideFlags: 0
@@ -32001,11 +31981,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 452136, guid: dad2df1d69c55774088d69d8255b964c, type: 3}
   m_PrefabInstance: {fileID: 1491804923}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1494080744 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
-  m_PrefabInstance: {fileID: 57055810}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1496910936
 PrefabInstance:
@@ -34552,11 +34527,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1494080744}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_Name
       value: ExplosiveBarrel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 8650041148367892599, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: maxHealth
@@ -34572,15 +34551,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b3dddb156c4722142835eab2ec6a6c45, type: 2}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.060000002
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1673994
+      value: -19.627327
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43337,11 +43316,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1494080744}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_Name
       value: ExplosiveBarrel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 8650041148367892599, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: maxHealth
@@ -43357,15 +43340,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b3dddb156c4722142835eab2ec6a6c45, type: 2}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.27
+      value: 4.77
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01999998
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.24007225
+      value: -19.7
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45887,11 +45870,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1494080744}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_Name
       value: ExplosiveBarrel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415670012617411876, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
       objectReference: {fileID: 0}
     - target: {fileID: 8650041148367892599, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: hitScanBasic
@@ -45903,15 +45890,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 388d3a55eae3fb648b01773a9b340197, type: 2}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5400324
+      value: 6.12
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.036000013
+      value: 0.836
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4003992
+      value: -22.57
       objectReference: {fileID: 0}
     - target: {fileID: 9187809318048077726, guid: 20fc706c70f88d74e91edcc0479157ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48233,6 +48220,9 @@ SceneRoots:
   - {fileID: 2020279261}
   - {fileID: 1738792874}
   - {fileID: 1609033367}
+  - {fileID: 2063681842}
+  - {fileID: 1942947334}
+  - {fileID: 1585235756}
   - {fileID: 57055810}
   - {fileID: 1726918609}
   - {fileID: 84288866}

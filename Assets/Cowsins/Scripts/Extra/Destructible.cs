@@ -37,11 +37,11 @@ namespace cowsins
         private void Update()
         {
             // Handle destruction
-            if (health <= 0) Die();
+            //if (health <= 0) Die();
         }
 
         // Handle damage, have in mind that this is also IDamageable
-        public void Damage(float damage, bool isHeadshot) 
+        public virtual void Damage(float damage, bool isHeadshot) 
         {
             health -= damage;
             Debug.Log($"{gameObject.name} took {damage} damage. Remaining health: {health}/{maxHealth}");
