@@ -162,6 +162,8 @@ namespace cowsins
         {
             // Unsubscribe from the method to avoid issues
             UIEvents.onAttachmentUIElementClickedNewAttachment = null;
+            StopAllCoroutines(); 
+            CancelInvoke();
         }
         private void Start()
         {
@@ -1215,7 +1217,7 @@ namespace cowsins
 
         }
 
-        private void GetInitialWeapons()
+        public void GetInitialWeapons()
         {
             if (initialWeapons.Length == 0) return;
 
@@ -1280,6 +1282,7 @@ namespace cowsins
             if (inventoryIndex == currentWeapon) SelectWeapon();
 
         }
+        
 
         /// <summary>
         /// Grabs the attachment object and the id given an attachment identifier
@@ -1398,7 +1401,7 @@ namespace cowsins
 
         public void DisableInspection() => CowsinsUtilities.PlayAnim("finishedInspect", inventory[currentWeapon].GetComponentInChildren<Animator>());
 
-        private void InitialSettings()
+        public void InitialSettings()
         {
             stats = GetComponent<PlayerStats>();
             weaponAnimator = GetComponent<WeaponAnimator>();
@@ -1407,6 +1410,7 @@ namespace cowsins
             canShoot = true;
             mainCamera.fieldOfView = GetComponent<PlayerMovement>().normalFOV;
         }
+
     }
 }
 

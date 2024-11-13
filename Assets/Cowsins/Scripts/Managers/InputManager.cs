@@ -182,6 +182,7 @@ namespace cowsins
                 sprinting = inputActions.GameControls.Sprinting.IsPressed();
 
             shooting = inputActions.GameControls.Firing.IsPressed();
+            Debug.LogWarning("Shooting is pressed: " + shooting);
 
             scrolling = inputActions.GameControls.Scrolling.ReadValue<Vector2>().y;
             nextweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() > 0;
@@ -420,6 +421,7 @@ namespace cowsins
                 PauseMenu.Instance.TogglePause();
         }
         #endregion
+
     }
 
 }

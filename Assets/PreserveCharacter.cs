@@ -6,18 +6,18 @@ public class PreserveCharacter : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private static PreserveCharacter instance;
+    // private static PreserveCharacter instance;
 
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject); 
-            return;
-        }
+    // void Awake()
+    // {
+    //     if (instance != null)
+    //     {
+    //         Destroy(gameObject); 
+    //         return;
+    //     }
 
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    //     instance = this;
+    //     DontDestroyOnLoad(gameObject);
+    // }
 
 }
