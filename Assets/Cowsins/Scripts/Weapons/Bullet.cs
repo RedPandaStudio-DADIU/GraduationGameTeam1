@@ -122,7 +122,7 @@ namespace cowsins
                 enemy.SetForceDirection(pushDirection);
                 enemy.SetForce(pushForce);
 
-                if(enemy.GetEnemy().GetHealth() == 0){
+                if(enemy.GetEnemy().GetHealth() <= 0){
                     enemy.ChangeState(new EnemyDieState());
                 }
 
