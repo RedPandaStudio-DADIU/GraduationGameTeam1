@@ -21,8 +21,8 @@ namespace cowsins
             crouchingDown,
             interacting,
             dropping,
-            nextweapon,
-            previousweapon,
+            // nextweapon,
+            // previousweapon,
             inspecting,
             pausing,
             // dashing,
@@ -30,7 +30,9 @@ namespace cowsins
             yMovementActioned,
             toggleFlashLight, grappling,
             push,
-            heal;
+            heal,
+            weapon1,
+            weapon2;
 
         public static float x,
             y,
@@ -182,9 +184,10 @@ namespace cowsins
 
             shooting = inputActions.GameControls.Firing.IsPressed();
 
-            scrolling = inputActions.GameControls.Scrolling.ReadValue<Vector2>().y;
-            nextweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() > 0;
-            previousweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() < 0;
+            // scrolling = inputActions.GameControls.Scrolling.ReadValue<Vector2>().y;
+            // nextweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() > 0;
+            // previousweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() < 0;
+           
 
             if (player != null && player.GetComponent<WeaponController>().alternateAiming && player.GetComponent<WeaponController>().weapon != null)
             {
@@ -206,6 +209,9 @@ namespace cowsins
             jumping = inputActions.GameControls.Jumping.WasPressedThisFrame();
             push = inputActions.GameControls.Push.WasPressedThisFrame();
             heal = inputActions.GameControls.Heal.WasPressedThisFrame();
+            weapon1= inputActions.GameControls.Weapon1.WasPressedThisFrame();
+            weapon2= inputActions.GameControls.Weapon2.WasPressedThisFrame();
+          
 
         }
 

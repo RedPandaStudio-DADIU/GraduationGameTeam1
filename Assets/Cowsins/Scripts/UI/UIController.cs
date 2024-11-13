@@ -156,8 +156,9 @@ namespace cowsins
             }
 
             //Inventory
-            if ((InputManager.scrolling != 0 || InputManager.nextweapon || InputManager.previousweapon) && !InputManager.reloading) inventoryContainer.alpha = 1;
-            else if (inventoryContainer.alpha > 0) inventoryContainer.alpha -= Time.deltaTime;
+            // if ((InputManager.scrolling != 0 || InputManager.nextweapon || InputManager.previousweapon) && !InputManager.reloading) inventoryContainer.alpha = 1;
+            // else if (inventoryContainer.alpha > 0) inventoryContainer.alpha -= Time.deltaTime;
+            
         }
 
         // HEALTH SYSTEM /////////////////////////////////////////////////////////////////////////////////////////
