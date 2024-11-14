@@ -29462,6 +29462,10 @@ PrefabInstance:
       value: Alien_Soldier_Final_Rigged_t-pose
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 164bd67d490ce77438b5d52f61c3a5e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 164bd67d490ce77438b5d52f61c3a5e2, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -32302,7 +32306,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0008287584, y: 0.0015502222, z: -0.00027832983}
+  m_ConnectedAnchor: {x: -0.0026729228, y: -0.0014345773, z: -0.00206651}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -37372,10 +37376,10 @@ PrefabInstance:
       addedObject: {fileID: 1227502483}
     - targetCorrespondingSourceObject: {fileID: 104351524140862435, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1520023094}
+      addedObject: {fileID: 296337132}
     - targetCorrespondingSourceObject: {fileID: 104351524140862435, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1520023093}
+      addedObject: {fileID: 296337133}
     - targetCorrespondingSourceObject: {fileID: 2462548585995275635, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1872723775}
@@ -37383,47 +37387,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1872723774}
   m_SourcePrefab: {fileID: 100100000, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
---- !u!1 &1520023092 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 104351524140862435, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
-  m_PrefabInstance: {fileID: 1520023091}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1520023093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520023092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aea258f251b94ddd97fc4653f5050d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
---- !u!114 &1520023094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520023092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0c11218f89014db08995f084eccfb1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1001 &1523704231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53345,3 +53308,10 @@ SceneRoots:
   - {fileID: 386061404}
   - {fileID: 1520023091}
   - {fileID: 1232806826}
+  - {fileID: 57055810}
+  - {fileID: 1942947334}
+  - {fileID: 84288866}
+  - {fileID: 2063681842}
+  - {fileID: 1726918609}
+  - {fileID: 1585235756}
+  - {fileID: 1609033367}

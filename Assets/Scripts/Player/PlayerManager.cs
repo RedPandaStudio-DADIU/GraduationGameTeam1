@@ -35,7 +35,7 @@ public class PlayerManager : MonoBehaviour
         //     positionSet = true;
         //     // new Vector3(-0.32f, 0.8f, -3f);
         // }
-        if(!dataSet){
+        if(!dataSet &&  SceneManager.GetActiveScene().buildIndex==1){
             Debug.Log("Inside Player Manager: Health: "+ PlayerDataManager.Instance.playerHealth);
             if(PlayerDataManager.Instance.playerHealth > 0){
                 GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health = PlayerDataManager.Instance.playerHealth;
