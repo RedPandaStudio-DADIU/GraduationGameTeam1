@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cowsins;
 
 public class Boss : DiplomatEnemy
 {
     [SerializeField] private List<Transform> weakSpots = new List<Transform>();
+    [SerializeField] private float explosionRange = 100f;
+    [SerializeField] private float damageEpxlosion = 20f;
+    [SerializeField] private GameObject explosionEffect;
+    [SerializeField] private AK.Wwise.Event bossExplosionSoundEvent;
+    [SerializeField] private AK.Wwise.Event bossChargeSoundEvent;
+
+
     private Queue<Transform> queueWeakSpots;
     private bool areWeakSpotsDefeated = false;
+
         
     void Awake(){
         this.SetHealth(200f);
@@ -39,6 +48,41 @@ public class Boss : DiplomatEnemy
             return true;
         }
         return false;
+    }
+
+    public override void SpecialAttack(Transform player){
+        Debug.Log("Entered special attack");
+        LayerMask obstacleLayer = LayerMask.GetMask("Default");
+
+        GameObject explosion = Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
+        if (bossExplosionSoundEvent != null)
+        {
+            bossExplosionSoundEvent.Post(gameObject);
+        }
+
+    
+        float distanceToPlayer = Vector3.Distance(player.position, this.transform.position);
+        if (distanceToPlayer <= explosionRange)
+        {
+            Vector3 directionToPlayer = (player.position - this.transform.position).normalized;
+            RaycastHit hit;
+            if (Physics.Raycast(this.transform.position, directionToPlayer, out hit, explosionRange, obstacleLayer))
+            {
+                if (hit.transform.CompareTag("Player"))
+                {
+                    player.GetComponent<PlayerStats>().Damage(damageEpxlosion, false);
+                    Debug.Log("Player hit - explosion boss!");
+                }
+                else
+                {
+                    Debug.Log("Player hidden");
+                }
+            }
+        }
+    }
+
+    public override AK.Wwise.Event GetChargeSound(){
+        return this.bossChargeSoundEvent;
     }
 
 }
