@@ -145,6 +145,7 @@ namespace cowsins
                 if (disablePlayerUIWhilePaused && !stats.isDead)
                 {
                     playerUI.SetActive(false);
+                    Debug.Log("hide user ui ");
                 }
 
                 OnPause?.Invoke();
