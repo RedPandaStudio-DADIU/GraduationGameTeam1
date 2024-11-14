@@ -162,6 +162,8 @@ namespace cowsins
         {
             // Unsubscribe from the method to avoid issues
             UIEvents.onAttachmentUIElementClickedNewAttachment = null;
+            StopAllCoroutines(); 
+            CancelInvoke();
         }
         private void Start()
         {
@@ -1120,7 +1122,7 @@ namespace cowsins
             }
             // Detect enemies on aiming
             RaycastHit hit_;
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Enemy") || Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Critical"))
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && (hit_.transform.CompareTag("Enemy") || hit_.transform.CompareTag("Boss")) || Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Critical"))
                 UIController.instance.crosshair.SpotEnemy(true);
             else UIController.instance.crosshair.SpotEnemy(false);
         }
@@ -1149,24 +1151,46 @@ namespace cowsins
         {
             if (InputManager.reloading) return; // Do not change weapons while reloading
                                                 // Change slot
-            if (InputManager.scrolling > 0 || InputManager.previousweapon)
-            {
-                ForceAimReset(); // Move Weapon back to the original position
-                if (currentWeapon < inventorySize - 1)
-                {
-                    currentWeapon++;
-                    SelectWeapon();
-                }
-            }
-            if (InputManager.scrolling < 0 || InputManager.nextweapon)
-            {
-                ForceAimReset(); // Move Weapon back to the original position
+            // if (InputManager.scrolling > 0 || InputManager.previousweapon)
+            // {
+            //     ForceAimReset(); // Move Weapon back to the original position
+            //     if (currentWeapon < inventorySize - 1)
+            //     {
+            //         currentWeapon++;
+            //         SelectWeapon();
+            //     }
+            // }
+            // if (InputManager.scrolling < 0 || InputManager.nextweapon)
+            // {
+            //     ForceAimReset(); // Move Weapon back to the original position
+            //     if (currentWeapon > 0)
+            //     {
+            //         currentWeapon--;
+            //         SelectWeapon();
+            //     }
+            // }
+            if (InputManager.weapon1)
+             {
                 if (currentWeapon > 0)
                 {
-                    currentWeapon--;
+                    currentWeapon=1;
+                    Debug.Log("Weapon 1");
                     SelectWeapon();
                 }
-            }
+            
+             }
+
+             if (InputManager.weapon2)
+             {
+                if (currentWeapon > 0)
+                {
+                    currentWeapon=2;
+                    Debug.Log("Weapon 1");
+                    SelectWeapon();
+                }
+            
+             }
+
         }
 
         [HideInInspector] public bool selectingWeapon;
@@ -1215,7 +1239,7 @@ namespace cowsins
 
         }
 
-        private void GetInitialWeapons()
+        public void GetInitialWeapons()
         {
             if (initialWeapons.Length == 0) return;
 
@@ -1280,6 +1304,7 @@ namespace cowsins
             if (inventoryIndex == currentWeapon) SelectWeapon();
 
         }
+        
 
         /// <summary>
         /// Grabs the attachment object and the id given an attachment identifier
@@ -1398,7 +1423,7 @@ namespace cowsins
 
         public void DisableInspection() => CowsinsUtilities.PlayAnim("finishedInspect", inventory[currentWeapon].GetComponentInChildren<Animator>());
 
-        private void InitialSettings()
+        public void InitialSettings()
         {
             stats = GetComponent<PlayerStats>();
             weaponAnimator = GetComponent<WeaponAnimator>();
@@ -1407,6 +1432,7 @@ namespace cowsins
             canShoot = true;
             mainCamera.fieldOfView = GetComponent<PlayerMovement>().normalFOV;
         }
+
     }
 }
 

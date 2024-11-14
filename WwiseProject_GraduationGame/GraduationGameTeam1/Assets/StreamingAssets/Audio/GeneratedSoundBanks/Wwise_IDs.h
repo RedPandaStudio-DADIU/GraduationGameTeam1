@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
@@ -35,6 +36,11 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
+        static const AkUniqueID PLAY_SC1 = 3191462597U;
+        static const AkUniqueID PLAY_SC2 = 3191462598U;
+        static const AkUniqueID PLAY_SC3 = 3191462599U;
+        static const AkUniqueID PLAY_SC4 = 3191462592U;
+        static const AkUniqueID PLAY_SC5 = 3191462593U;
         static const AkUniqueID PLAY_TESTBEEP = 1955951874U;
         static const AkUniqueID PLAY_TESTBEEP_3D = 1681067324U;
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
@@ -46,6 +52,14 @@ namespace AK
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
     } // namespace EVENTS
 
+    namespace DIALOGUE_EVENTS
+    {
+        static const AkUniqueID BRUTE = 591672203U;
+        static const AkUniqueID DIPLOMAT = 1617397027U;
+        static const AkUniqueID SOLDIER = 3121013053U;
+        static const AkUniqueID XAGA = 4123380240U;
+    } // namespace DIALOGUE_EVENTS
+
     namespace STATES
     {
         namespace AREASTATE
@@ -54,9 +68,13 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID FARMLANDAREA_01 = 2485288013U;
-                static const AkUniqueID FARMLANDAREA_02 = 2485288014U;
-                static const AkUniqueID FARMLANDAREA_03 = 2485288015U;
+                static const AkUniqueID CONFERENCEROOM1 = 2782928031U;
+                static const AkUniqueID CONFERENCEROOM2 = 2782928028U;
+                static const AkUniqueID CONFERENCEROOM3 = 2782928029U;
+                static const AkUniqueID HANGAR1 = 1814387309U;
+                static const AkUniqueID HANGAR2 = 1814387310U;
+                static const AkUniqueID HARNGAR3 = 2130932629U;
+                static const AkUniqueID INSIDEELEVATOR = 2393120223U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace AREASTATE
@@ -85,6 +103,18 @@ namespace AK
             } // namespace STATE
         } // namespace GUITARSPEAKER
 
+        namespace JOHNDOE
+        {
+            static const AkUniqueID GROUP = 2802482050U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC1 = 477127956U;
+                static const AkUniqueID WAITINGONTRIGGER = 3956690975U;
+            } // namespace STATE
+        } // namespace JOHNDOE
+
         namespace PLAYERSTATE
         {
             static const AkUniqueID GROUP = 3285234865U;
@@ -108,6 +138,30 @@ namespace AK
                 static const AkUniqueID OUTDOOR = 144697359U;
             } // namespace STATE
         } // namespace ROOMSTATE
+
+        namespace SCENES_LVL1
+        {
+            static const AkUniqueID GROUP = 4121174866U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC1_TR1 = 342028878U;
+            } // namespace STATE
+        } // namespace SCENES_LVL1
+
+        namespace XAGA
+        {
+            static const AkUniqueID GROUP = 4123380240U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC1 = 477127956U;
+                static const AkUniqueID SC2 = 477127959U;
+                static const AkUniqueID WAITINGONTRIGGERENTER = 2239442679U;
+            } // namespace STATE
+        } // namespace XAGA
 
     } // namespace STATES
 
@@ -144,6 +198,21 @@ namespace AK
                 static const AkUniqueID NIGHTFALL = 3789021730U;
             } // namespace SWITCH
         } // namespace AMBTIMEOFDAY
+
+        namespace DIALOGUETRIGGERS
+        {
+            static const AkUniqueID GROUP = 3935263896U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID AWAKE = 1151176110U;
+                static const AkUniqueID SC1_PLAY = 1292752181U;
+                static const AkUniqueID SC2_PLAY = 2811652880U;
+                static const AkUniqueID SC3_PLAY = 3561392151U;
+                static const AkUniqueID SC4_PLAY = 856363850U;
+                static const AkUniqueID SC5_PLAY = 62662553U;
+            } // namespace SWITCH
+        } // namespace DIALOGUETRIGGERS
 
         namespace ELEVATORMOTION
         {
@@ -293,12 +362,14 @@ namespace AK
         static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
         static const AkUniqueID PLAYERMASTER = 3538689948U;
+        static const AkUniqueID PLAYERVOICE = 47937584U;
         static const AkUniqueID REVERBS = 3545700988U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
     {
         static const AkUniqueID DELAYSLAPS = 924856803U;
+        static const AkUniqueID HANGARVERB_JD = 350835844U;
         static const AkUniqueID ROOMLARGE = 3553615197U;
         static const AkUniqueID ROOMSMALL = 3205342581U;
         static const AkUniqueID ROOMTUNNEL = 1603492950U;

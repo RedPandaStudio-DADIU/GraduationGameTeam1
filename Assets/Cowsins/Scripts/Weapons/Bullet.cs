@@ -77,6 +77,27 @@ namespace cowsins
 
                
 
+            } else if(other.CompareTag("WeakSpot")){
+                Debug.LogWarning("Hit weak spot");
+                other.gameObject.GetComponent<WeakSpot>().CheckIfCanBeDamaged();
+            } else if(other.CompareTag("Boss")){
+                Debug.LogWarning("Hit boss");
+
+                if(other.gameObject.GetComponent<Boss>().GetAreWeakSpotsDefeated()){
+                    Shoot(damage, other);
+                }
+            } 
+            
+            else if (other.CompareTag("Barrel"))
+            {
+                Debug.Log("Bullet hit barrel!");
+                ExplosiveBarrel barrel = other.GetComponent<ExplosiveBarrel>();
+                if (barrel != null)
+                {
+                    Debug.Log("Bullet cause explosive barrel to explode");
+                    barrel.Die();
+                }
+                DestroyProjectile();
             }
             else if (other.GetComponent<IDamageable>() != null && !other.CompareTag("Player"))
             {
@@ -90,6 +111,7 @@ namespace cowsins
             else if((other.CompareTag("Enemy") && isHuman) || (other.CompareTag("Human") && isEnemy)){
                 DestroyProjectile();
             }
+            
             else if (IsGroundOrObstacleLayer(other.gameObject.layer))
             {
                 DestroyProjectile();

@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<SwitchContainer Name="Footsteps_MaterialLayer" ID="{EE47EBF5-0DB2-4795-B1F4-961287C68A64}" ShortID="204484632">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -2155,35 +2157,6 @@
 						<ActiveSource Name="Boots_Jump" ID="{17ED5314-E605-49A7-B01A-03BDF07A7A93}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Boots_Land" ID="{BC50D42D-C482-4681-A7E8-4178935D01AC}" ShortID="921311320">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-12</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Boots_Land" ID="{FD5D191D-1FD2-4D24-95EF-AC02C548332F}">
-							<Language>SFX</Language>
-							<AudioFile>Locomotion\Boots_Land.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="1054467131"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Boots_Land" ID="{FD5D191D-1FD2-4D24-95EF-AC02C548332F}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<SwitchContainer Name="Player_fs_Base" ID="{7345F664-A2F5-4F7E-9137-1EB22CBFE1A9}" ShortID="935627562">
 					<PropertyList>
 						<Property Name="GameAuxSendVolume" Type="Real64">
@@ -3388,9 +3361,25 @@
 										<Value>12</Value>
 									</ValueList>
 								</Property>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5C76D11C-0397-4AB1-BB33-06D12D0B667D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3400,6 +3389,199 @@
 									<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Metal_fs" ID="{5866EE5D-5DCA-43AB-8A5F-B4E902D86B3A}" ShortID="472860080">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.045"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2" ID="{95340B70-124B-4C86-9E88-DA327F1CC1AE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.371123725328947"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.147353123222817"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.569478408828601"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23730002"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2" ID="{95340B70-124B-4C86-9E88-DA327F1CC1AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Metal_fs_01" ID="{B5C53F4C-3EAD-4A83-84F2-2FC283CDDF43}" ShortID="806945336">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.0475"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.0925"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5" ID="{CB90E4CF-87F8-496A-84C7-49D8D563A952}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.282997355769231"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.582502890625"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.09897306490385"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="711013141"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5" ID="{CB90E4CF-87F8-496A-84C7-49D8D563A952}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Metal_fs_02" ID="{76863165-408F-44F7-80AA-6D65BD05B29F}" ShortID="868837528">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.09083333333333334"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.13"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7" ID="{93A6FD44-E93B-4368-93AE-B901B215267A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.247622686298077"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.11390903645833"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.11390903645833"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.5942184375"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="887679705"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7" ID="{93A6FD44-E93B-4368-93AE-B901B215267A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Metal_fs_03" ID="{D455FD86-49F3-42CA-9987-5178953513C8}" ShortID="468835378">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="SND85371"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/1426367345Ff4sxqvM_wkFwGSND85371sfy.sfy"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="12.26321875"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.13"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.175"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9" ID="{775B4B7C-5303-42A8-9358-29DD16281745}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.295790611004707"/>
+												<Property Name="FadeInShape" Type="int16" Value="8"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0774519078947369"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85371"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.60563121815523"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.15897193256579"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="604477528"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9" ID="{775B4B7C-5303-42A8-9358-29DD16281745}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<Sound Name="Jump_NoMaterial" ID="{567A9497-911D-45FE-8131-4BD795E6B202}" ShortID="60477922">
 							<ReferenceList>
@@ -3429,6 +3611,14 @@
 								<ItemRef Name="Jump_NoMaterial" ID="{567A9497-911D-45FE-8131-4BD795E6B202}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}"/>
+								<ItemList>
+									<ItemRef Name="Metal_Jump" ID="{0478468E-375B-47AF-81AC-33AA793F512B}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
 				<SwitchContainer Name="Play_Land_MaterialLayer" ID="{8213C246-8003-4BC5-9D80-A8A4107A6EAC}" ShortID="354728550">
@@ -4241,6 +4431,10 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="MetalLadder_Land_Layer" ID="{F6D05F1B-8E5B-4FF5-8358-23F1F32D3E0A}" ShortID="41806747">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -4251,6 +4445,10 @@
 							</ReferenceList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Tile_Land_Layer" ID="{ADA3CEE8-7791-4904-A61B-486B8CBCFB6D}" ShortID="246310652">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -4279,6 +4477,38 @@
 								<ItemRef Name="Tile_Land_Layer" ID="{ADA3CEE8-7791-4904-A61B-486B8CBCFB6D}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Metal2" ID="{6BEFC019-21F6-472E-BAE5-7355A0BE4FAE}"/>
+								<ItemList>
+									<ItemRef Name="Metal2_Land_Layer" ID="{A097D0BC-21D3-475C-BB91-E231B56004C3}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="MetalLadder" ID="{DA93A23C-54B3-41F4-8263-242C5362AE5C}"/>
+								<ItemList>
+									<ItemRef Name="MetalLadder_Land_Layer" ID="{F6D05F1B-8E5B-4FF5-8358-23F1F32D3E0A}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}"/>
+								<ItemList>
+									<ItemRef Name="Metal_Land_layer" ID="{7E8B8AA1-7E46-4ABA-8902-E9D91A3C24A5}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="TileType1" ID="{691EF04D-1242-49B4-B680-9D7985011C04}"/>
+								<ItemList>
+									<ItemRef Name="Tile_Land_Layer" ID="{ADA3CEE8-7791-4904-A61B-486B8CBCFB6D}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="NoMaterial" ID="{8153DAD8-812E-4B25-AB90-FFA7B29D01A0}"/>
+								<ItemList>
+									<ItemRef Name="Land_NoMaterial" ID="{13EB8E52-3343-4AB6-A7E8-E5D9869F4060}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
 				<SwitchContainer Name="Player_fs_LeatherBoots" ID="{7CC51FCA-7918-4DAC-91D5-B76E85A92D20}" ShortID="757356058">
@@ -5873,6 +6103,988 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<ActorMixer Name="Jump+Land" ID="{865EB001-E183-4B97-A701-AD2757B52D4D}" ShortID="5079862">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Jump" ID="{CFAA0A19-258A-4E48-94F0-9DC5F5FF8CB9}" ShortID="502319126">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Boots_Jump" ID="{6D4BE2BC-DB03-4E7A-8D6F-7E50BFE78E97}" ShortID="558501063">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>32</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Boots_Jump" ID="{CCD70B8E-565E-4377-92EF-D061B05E9F4B}">
+											<Language>SFX</Language>
+											<AudioFile>Locomotion\Boots_Jump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="719082772"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Boots_Jump" ID="{CCD70B8E-565E-4377-92EF-D061B05E9F4B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Boots_Walk_Toe_04" ID="{FC238596-53AE-4933-A52F-25EC5062B73E}" ShortID="155819048">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Boots_Walk_Toe_04" ID="{8864F9DA-4A8D-423B-81E6-99171EED0BB2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.113548626340156"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Walk\Boots_Walk_Toe_04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="108336228"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Boots_Walk_Toe_04" ID="{8864F9DA-4A8D-423B-81E6-99171EED0BB2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Leatherboots" ID="{A4FD5027-D4B5-4D54-8174-1EE58A0BE546}" ShortID="455287998">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.05</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="530588"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/EXT|FreeSoundorg530588mp3.mp3"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0.0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="0.9121288657990484"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="EXT|FreeSound.org"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="External"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="2"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.08480268681780016"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1" ID="{8101C824-E12E-4F3B-9E0B-B5703031FC36}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.269826797147322"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.113453971674877"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="530588"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00561653325123153"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="774832387"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1" ID="{8101C824-E12E-4F3B-9E0B-B5703031FC36}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="ClothP1" ID="{009CFADE-87CD-40EE-BE08-0268C6FFF87F}" ShortID="241617687">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-21</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Cloth" ID="{92E682FF-0A72-4241-B78E-ED2438BDE7CE}" ShortID="87387823">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="3.5401486146095715"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="6.330265743073047"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.09907640638119228"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.17716204869857263"/>
+												<Property Name="Weight" Type="Real64">
+													<ValueList>
+														<Value>31</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1" ID="{DF251675-A23B-45FE-A858-F9C6F53B65F3}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.110227160493827"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.64069537037037"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.137783950617284"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.18494197530864"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="134389032"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1" ID="{DF251675-A23B-45FE-A858-F9C6F53B65F3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth03" ID="{F01BECE6-A5DA-4821-BF23-F2A71553DF9D}" ShortID="462091245">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{37C710FB-DC04-4856-B0A8-B17A78471552}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.19915968992248"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.847620230924873"/>
+														<Property Name="FadeOutShape" Type="int16" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.3971354005168"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="28983933"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{37C710FB-DC04-4856-B0A8-B17A78471552}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth05" ID="{90DE2B84-A7F0-42BC-9040-0192FC5E84F8}" ShortID="106893312">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{31D8AE7E-0889-4106-BECB-91EE32F27F97}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.117736609955892"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.52695165061211"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.68213215531102"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.20908380592313"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="928274105"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{31D8AE7E-0889-4106-BECB-91EE32F27F97}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth07" ID="{38DC267F-3940-4C18-A90F-A1C9CA6DECB9}" ShortID="573942842">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{42CB15C4-8117-4969-9F9F-3D077B831221}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.765287964713296"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="7.18555748612387"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.30043100189036"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="165684999"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{42CB15C4-8117-4969-9F9F-3D077B831221}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth09" ID="{32A5F2A4-1516-4E4B-9081-052C5CAE5A6E}" ShortID="1060002988">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{C34E248F-9F1D-47E4-B508-FC1F3F0D364E}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.883024574669188"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.21651400786301"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.3902558286074"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="247373654"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{C34E248F-9F1D-47E4-B508-FC1F3F0D364E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Land" ID="{789FA8AF-79F7-4274-B276-C1F0554A3A49}" ShortID="233694661">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{57029372-8818-44C1-96AA-C0F3AD1AA745}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="30"/>
+													<Property Name="Min" Type="Real64" Value="-30"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Boots_Land" ID="{BC50D42D-C482-4681-A7E8-4178935D01AC}" ShortID="921311320">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F542C99D-6E31-4D6B-810E-6D750E2475A1}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.21"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{484778D0-820E-4216-8F52-2C2F2809EFF5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-89"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Boots_Land" ID="{FD5D191D-1FD2-4D24-95EF-AC02C548332F}">
+											<Language>SFX</Language>
+											<AudioFile>Locomotion\Boots_Land.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1054467131"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Boots_Land" ID="{FD5D191D-1FD2-4D24-95EF-AC02C548332F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Boots_Walk_Heel_05" ID="{4EF80225-5155-4390-9109-E4B1AB063BF7}" ShortID="129036771">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{7D07AD2C-7F48-44C6-B56B-FEF41CD5F74F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.05"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E5A2F5DA-AF44-48B7-A077-E1F5CAF24F65}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="51"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Boots_Walk_Heel_05" ID="{9E19A75A-8AEA-4ED0-8C4B-CFF536AC5538}">
+											<Language>SFX</Language>
+											<AudioFile>Walk\Boots_Walk_Heel_05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="216218866"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{1869E335-D16E-4343-93EA-F1E72D74B135}" ShortID="266408710">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{1F462CC6-BC19-430D-8597-6B1FD3835036}">
+																	<Effect Name="BootRunCompressor (Custom)" ID="{D15F4E36-9F29-49E7-AFB9-959408C94C38}" ShortID="963013833" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<PropertyList>
+																			<Property Name="AttackTime" Type="Real32" Value="0"/>
+																			<Property Name="Ratio" Type="Real32" Value="6.6"/>
+																			<Property Name="ReleaseTime" Type="Real32" Value="0.67"/>
+																			<Property Name="Threshold" Type="Real32" Value="-26.4"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{BC3E60E4-9D8B-4284-AFB9-040C7FE3380D}" ShortID="390620522">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{5CBE9658-E1EA-4AA7-BDD3-324598DE71EF}">
+																	<Effect Name="New_Parametric_EQ (Custom)" ID="{8BA26852-86F8-46FC-A0FD-A788D20DADB8}" ShortID="999756589" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FrequencyBand2" Type="Real32" Value="180"/>
+																			<Property Name="FrequencyBand3" Type="Real32" Value="745"/>
+																			<Property Name="GainBand2" Type="Real32" Value="9"/>
+																			<Property Name="GainBand3" Type="Real32" Value="-24"/>
+																			<Property Name="QFactorBand2" Type="Real32" Value="2.1"/>
+																			<Property Name="QFactorBand3" Type="Real32" Value="2"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="Boots_Walk_Heel_05" ID="{9E19A75A-8AEA-4ED0-8C4B-CFF536AC5538}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Leatherboots_03" ID="{9DA0C5FF-09C0-488E-8ED5-8CA52E7C050E}" ShortID="461350391">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.06</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{9A541D08-92F0-4C42-AD54-9EAE66490E01}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.05"/>
+															<Property Name="Min" Type="Real64" Value="-0.05"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A8F693E1-45DF-46AB-AD71-6404D66DD3AF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="530588"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpii2znlol/afcache/EXT|FreeSoundorg530588mp3.mp3"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="3.00731596347607"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="4.018785596837392"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="EXT|FreeSound.org"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="External"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="2"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 4.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.2795969773299748"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.37363560033585225"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 4" ID="{B9BE34EC-5363-4612-A1A0-8A20304F9525}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0274040435139573"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="530588"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1054170137"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 4" ID="{B9BE34EC-5363-4612-A1A0-8A20304F9525}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="ClothP2" ID="{4CE76689-2325-4840-BBF7-4176FC4355BE}" ShortID="853212823">
+									<PropertyList>
+										<Property Name="GameAuxSendVolume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Cloth" ID="{662D71F7-A09E-4F6A-9267-29F083AD23FD}" ShortID="1022668687">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="3.5401486146095715"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="6.330265743073047"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.09907640638119228"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.17716204869857263"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1" ID="{2195D773-131E-4874-8762-22ADBB45269D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.110227160493827"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.16427438271605"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.0196012345679"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="207959572"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1" ID="{2195D773-131E-4874-8762-22ADBB45269D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth04" ID="{F03A3DEC-F9B6-460B-9567-019A6B5B8184}" ShortID="570067259">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{9F8E9319-12D2-4018-99B0-40E9BFD89CAE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0883024574669187"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.883024574669187"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.38702944579621"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.67850787649653"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1760059"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{9F8E9319-12D2-4018-99B0-40E9BFD89CAE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth06" ID="{5A199FD4-8EBB-4C0B-892B-46B38FE31720}" ShortID="518880393">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{D8215879-0327-42EA-AF16-763DDE102C5A}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.20603906742281"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.707658061342699"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.1847963014988"/>
+														<Property Name="TrimEnd" Type="Real64" Value="7.27023566477631"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="70419568"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{D8215879-0327-42EA-AF16-763DDE102C5A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth08" ID="{EB5E67F1-DCCA-497D-92B7-DC756BA7161D}" ShortID="368360546">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{45C2846A-5CD2-49DD-B783-F18B900313AE}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.647551354757404"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="8.21575282323792"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.27175803402647"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="362004430"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{45C2846A-5CD2-49DD-B783-F18B900313AE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth10" ID="{25703A8F-44A2-4313-A821-0751E114C099}" ShortID="698979400">
+											<PropertyList>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND50986"/>
+												<Property Name="Soundly:FileName" Type="string" Value="https://2-dot-soundly-server.appspot.com/?Type=GetFile&amp;SessionID=1730815233EBAN8cbiEcy5_hE9OtY&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND50986/sfy_GjkSLUWgMNqJknCLoULNLWorBgZnVQ"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="6.420269521410579"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="21.990923173803523"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.17968094038623006"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.6154492023509656"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{9D2443C5-8503-494E-B909-196686092C5D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0588683049779455"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.883024574669188"/>
+														<Property Name="FadeOutShape" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND50986"/>
+														<Property Name="TrimBegin" Type="Real64" Value="10.335011802444"/>
+														<Property Name="TrimEnd" Type="Real64" Value="11.7442268431002"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="330453251"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3" ID="{9D2443C5-8503-494E-B909-196686092C5D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

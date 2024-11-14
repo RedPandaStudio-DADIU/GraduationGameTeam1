@@ -88,9 +88,9 @@
                 },
                 {
                     "name": "ChangeWeapons",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "223d3d3c-488b-41b3-8a8c-a655223ef323",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -144,6 +144,25 @@
                     "name": "Quit",
                     "type": "Button",
                     "id": "c2e8e2df-7f3f-4f0a-bded-4d7a2e7173e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+
+    	        {
+                    "name": "Weapon1",
+                    "type": "Button",
+                    "id": "d4d174a3-acb0-4767-a1ea-0878eebc4abc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Weapon2",
+                    "type": "Button",
+                    "id": "8b605140-399e-440e-90d7-c8c2f0e05d0b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -604,12 +623,34 @@
                 },
                 {
                     "name": "",
+                    "id": "e5c10ba8-abab-4813-be30-2083843e7739",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Weapon1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "dad47727-7f76-42d3-bf81-05b2b4515de4",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad;Keyboard",
                     "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f99845e-3979-4cfd-abdb-5437e8fb43f6",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Weapon2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -114,8 +115,22 @@ namespace cowsins
 
         }
 
+                
+                
         public void ShootCharge(GameObject enemyObject, Vector3 projectilePosition){
             
+            if (enemyObject.CompareTag("Enemy"))
+            {
+                HandleShotLogic(enemyObject, projectilePosition);
+            }
+            else if(enemyObject.CompareTag("Boss")){
+                if(enemyObject.GetComponent<Boss>().GetAreWeakSpotsDefeated()){
+                    HandleShotLogic(enemyObject, projectilePosition);
+                }
+            }
+        }
+
+        private void HandleShotLogic(GameObject enemyObject, Vector3 projectilePosition){
 
             EnemyStateController enemy = enemyObject.transform.GetComponent<EnemyStateController>();
 
@@ -144,6 +159,32 @@ namespace cowsins
                 PushNearbyEnemies(projectilePosition, chargedPushForce, explosionRadius);
             }
             
+        }
+
+        private void HandleShotLogic(RaycastHit hit){
+            EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
+
+            if (enemy.GetEnemy().GetRagdollController() != null)
+
+            {
+                enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
+
+                Vector3 pushDirection = hit.point - playerCamera.transform.position;
+                pushDirection = pushDirection.normalized;
+                enemy.SetForce(chargedPushForce);
+                enemy.SetForceDirection(pushDirection);
+
+                enemy.GetEnemy().DecreaseHealth(chargeDamage);
+
+                enemy.ChangeState(new EnemyHitState());
+                
+                if(enemy.GetEnemy().GetHealth() > 0){
+                    // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                    StartCoroutine(RecoverAfterDelay(enemy, delay));
+                }
+
+                PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
+            }
         }
 
 

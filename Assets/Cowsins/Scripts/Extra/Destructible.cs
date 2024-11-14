@@ -28,16 +28,24 @@ namespace cowsins
         public AK.Wwise.Event explosionSFX;
 
         // Set health
-        private void Start() => health = maxHealth;
+        private void Start()  
+        {
+            health = maxHealth;
+            Debug.Log($"{gameObject.name} initialized with health: {health}/{maxHealth}");
+        }
 
         private void Update()
         {
             // Handle destruction
-            if (health <= 0) Die();
+            //if (health <= 0) Die();
         }
 
         // Handle damage, have in mind that this is also IDamageable
-        public void Damage(float damage, bool isHeadshot) => health -= damage;
+        public virtual void Damage(float damage, bool isHeadshot) 
+        {
+            health -= damage;
+            Debug.Log($"{gameObject.name} took {damage} damage. Remaining health: {health}/{maxHealth}");
+        }
 
         /// <summary>
         /// Make sure to override this on your new custom class.
