@@ -147,6 +147,7 @@ namespace cowsins
         private delegate void ReduceAmmo();
 
         private ReduceAmmo reduceAmmo;
+        private ReduceAmmo reduceAmmo2;
 
         //private AudioClip fireSFX;
 
@@ -161,6 +162,8 @@ namespace cowsins
         {
             // Unsubscribe from the method to avoid issues
             UIEvents.onAttachmentUIElementClickedNewAttachment = null;
+            StopAllCoroutines(); 
+            CancelInvoke();
         }
         private void Start()
         {
@@ -168,6 +171,7 @@ namespace cowsins
             CreateInventoryUI();
             GetInitialWeapons();
 
+            
             //StartCoroutine(DelayedInit());
         }
 
@@ -317,7 +321,8 @@ namespace cowsins
                 SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
     
             }
-            Invoke(nameof(CanShoot), fireRate);
+            // Invoke(nameof(CanShoot), fireRate);
+            canShoot = true;
         }
 
         public void HandleSecondaryHitscanProjectileShot()
@@ -424,11 +429,14 @@ namespace cowsins
                 if (style == 0) HitscanShot();
                 else if (style == 1)
                 {
-                    yield return new WaitForSeconds(weapon.shootDelay);
+                    // yield return new WaitForSeconds(weapon.shootDelay);
+                    
                     ProjectileShot();
                 }
 
-                yield return new WaitForSeconds(weapon.timeBetweenShots);
+                // yield return new WaitForSeconds(weapon.timeBetweenShots);
+                yield return new WaitForSeconds(1f);
+
                 i++;
             }
             shooting = false;
@@ -447,7 +455,7 @@ namespace cowsins
             weaponAnimator.StopWalkAndRunMotion();
 
             // Rest the bullets that have just been shot
-            reduceAmmo?.Invoke();
+            reduceAmmo2?.Invoke();
 
             //Determine weapon class / style
             int i = 0;
@@ -573,7 +581,7 @@ namespace cowsins
         private void ProjectileShot()
         {
             events.OnShoot.Invoke();
-            if (resizeCrosshair && UIController.instance.crosshair != null) UIController.instance.crosshair.Resize(weapon.crosshairResize * 100);
+            // if (resizeCrosshair && UIController.instance.crosshair != null) UIController.instance.crosshair.Resize(weapon.crosshairResize * 100);
 
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
             Vector3 destination = (Physics.Raycast(ray, out hit) && !hit.transform.CompareTag("Player")) ? destination = hit.point + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera) : destination = ray.GetPoint(50f) + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera);
@@ -810,6 +818,18 @@ namespace cowsins
             }
         }
 
+        private void ReduceDefaultAmmo2()
+        {
+            if (!weapon.infiniteBullets)
+            {
+                id.bulletsLeftInMagazine -= weapon.ammoCostPerFire2;
+                if (id.bulletsLeftInMagazine < 0)
+                {
+                    id.bulletsLeftInMagazine = 0;
+                }
+            }
+        }
+
 
         // On shooting overheat reloading weapons, increase the heat ratio.
         private void ReduceOverheatAmmo()
@@ -876,6 +896,8 @@ namespace cowsins
             {
                 reload = DefaultReload;
                 reduceAmmo = ReduceDefaultAmmo;
+                reduceAmmo2 = ReduceDefaultAmmo2;
+
             }
             else
             {
@@ -1057,7 +1079,6 @@ namespace cowsins
             // If we dont own a weapon yet, do not continue
             if (weapon == null)
             {
-                Debug.Log("Weapon is null!!!!!!!!!!!!!!!!!!!!!!");
                 UIEvents.disableWeaponUI?.Invoke();
                 return;
             }
@@ -1101,7 +1122,7 @@ namespace cowsins
             }
             // Detect enemies on aiming
             RaycastHit hit_;
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Enemy") || Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Critical"))
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && (hit_.transform.CompareTag("Enemy") || hit_.transform.CompareTag("Boss")) || Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit_, weapon.bulletRange) && hit_.transform.CompareTag("Critical"))
                 UIController.instance.crosshair.SpotEnemy(true);
             else UIController.instance.crosshair.SpotEnemy(false);
         }
@@ -1130,24 +1151,46 @@ namespace cowsins
         {
             if (InputManager.reloading) return; // Do not change weapons while reloading
                                                 // Change slot
-            if (InputManager.scrolling > 0 || InputManager.previousweapon)
-            {
-                ForceAimReset(); // Move Weapon back to the original position
-                if (currentWeapon < inventorySize - 1)
-                {
-                    currentWeapon++;
-                    SelectWeapon();
-                }
-            }
-            if (InputManager.scrolling < 0 || InputManager.nextweapon)
-            {
-                ForceAimReset(); // Move Weapon back to the original position
+            // if (InputManager.scrolling > 0 || InputManager.previousweapon)
+            // {
+            //     ForceAimReset(); // Move Weapon back to the original position
+            //     if (currentWeapon < inventorySize - 1)
+            //     {
+            //         currentWeapon++;
+            //         SelectWeapon();
+            //     }
+            // }
+            // if (InputManager.scrolling < 0 || InputManager.nextweapon)
+            // {
+            //     ForceAimReset(); // Move Weapon back to the original position
+            //     if (currentWeapon > 0)
+            //     {
+            //         currentWeapon--;
+            //         SelectWeapon();
+            //     }
+            // }
+            if (InputManager.weapon1)
+             {
                 if (currentWeapon > 0)
                 {
-                    currentWeapon--;
+                    currentWeapon=1;
+                    Debug.Log("Weapon 1");
                     SelectWeapon();
                 }
-            }
+            
+             }
+
+             if (InputManager.weapon2)
+             {
+                if (currentWeapon > 0)
+                {
+                    currentWeapon=2;
+                    Debug.Log("Weapon 1");
+                    SelectWeapon();
+                }
+            
+             }
+
         }
 
         [HideInInspector] public bool selectingWeapon;
@@ -1196,7 +1239,7 @@ namespace cowsins
 
         }
 
-        private void GetInitialWeapons()
+        public void GetInitialWeapons()
         {
             if (initialWeapons.Length == 0) return;
 
@@ -1261,6 +1304,7 @@ namespace cowsins
             if (inventoryIndex == currentWeapon) SelectWeapon();
 
         }
+        
 
         /// <summary>
         /// Grabs the attachment object and the id given an attachment identifier
@@ -1379,7 +1423,7 @@ namespace cowsins
 
         public void DisableInspection() => CowsinsUtilities.PlayAnim("finishedInspect", inventory[currentWeapon].GetComponentInChildren<Animator>());
 
-        private void InitialSettings()
+        public void InitialSettings()
         {
             stats = GetComponent<PlayerStats>();
             weaponAnimator = GetComponent<WeaponAnimator>();
@@ -1388,6 +1432,7 @@ namespace cowsins
             canShoot = true;
             mainCamera.fieldOfView = GetComponent<PlayerMovement>().normalFOV;
         }
+
     }
 }
 

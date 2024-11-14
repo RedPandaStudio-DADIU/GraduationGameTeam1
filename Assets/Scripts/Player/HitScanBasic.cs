@@ -46,129 +46,129 @@ public class HitScanBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) 
-        {
-            Shoot();
-        }
+        // if (Input.GetButtonDown("Fire1")) 
+        // {
+        //     Shoot();
+        // }
 
-            if (Input.GetMouseButtonDown(1)) 
-                {
-                    isRightClickPressed = true;
-                     chargingEvent.Post(gameObject);
+        //     if (Input.GetMouseButtonDown(1)) 
+        //         {
+        //             isRightClickPressed = true;
+        //              chargingEvent.Post(gameObject);
 
-                    rightClickHoldTime = 0f;  
-                    if (chargeProgressBar != null)
-                    {
-                        chargeProgressBar.fillAmount = 0;
-                        chargeProgressBar.gameObject.SetActive(true);  
-                    }
+        //             rightClickHoldTime = 0f;  
+        //             if (chargeProgressBar != null)
+        //             {
+        //                 chargeProgressBar.fillAmount = 0;
+        //                 chargeProgressBar.gameObject.SetActive(true);  
+        //             }
                 
-                }
+        //         }
 
-            if (isRightClickPressed)
-            {
-                rightClickHoldTime += Time.deltaTime;
+        //     if (isRightClickPressed)
+        //     {
+        //         rightClickHoldTime += Time.deltaTime;
                
                 
-                if (chargeProgressBar != null)
-                {
-                    chargeProgressBar.fillAmount = Mathf.Clamp01(rightClickHoldTime / chargeTime);
-                }
+        //         if (chargeProgressBar != null)
+        //         {
+        //             chargeProgressBar.fillAmount = Mathf.Clamp01(rightClickHoldTime / chargeTime);
+        //         }
 
-                if (rightClickHoldTime >= chargeTime && chargeCompleteEvent != null)
-                {
-                    chargeCompleteEvent.Post(gameObject); // Play charge complete sound
-                    isRightClickPressed = false; // Prevent repeated triggering
-                }
-            }
-
-
-			if (Input.GetMouseButtonUp(1))
-			{
-				isRightClickPressed = false;
-                 chargingEvent.Stop(gameObject);
+        //         if (rightClickHoldTime >= chargeTime && chargeCompleteEvent != null)
+        //         {
+        //             chargeCompleteEvent.Post(gameObject); // Play charge complete sound
+        //             isRightClickPressed = false; // Prevent repeated triggering
+        //         }
+        //     }
 
 
-				if (rightClickHoldTime >= chargeTime)
-                {
-                    ChargedShoot();
+		// 	if (Input.GetMouseButtonUp(1))
+		// 	{
+		// 		isRightClickPressed = false;
+        //          chargingEvent.Stop(gameObject);
+
+
+		// 		if (rightClickHoldTime >= chargeTime)
+        //         {
+        //             ChargedShoot();
                     
-                }
+        //         }
                 
-                if (chargeProgressBar != null)
-                {
-                    chargeProgressBar.fillAmount = 0;
-                    chargeProgressBar.gameObject.SetActive(false); 
-                }
+        //         if (chargeProgressBar != null)
+        //         {
+        //             chargeProgressBar.fillAmount = 0;
+        //             chargeProgressBar.gameObject.SetActive(false); 
+        //         }
                     
-			}
+		// 	}
 
 
         
     }
 
-    private void Shoot()
-    {
+    // private void Shoot()
+    // {
         
-        gunshotEvent.Post(gameObject);
+    //     gunshotEvent.Post(gameObject);
 
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
-        {
-            Debug.Log("Hit: " + hit.transform.name);
+    //     RaycastHit hit;
+    //     if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range))
+    //     {
+    //         Debug.Log("Hit: " + hit.transform.name);
              
 
             
-            if (hit.collider.CompareTag("Enemy"))
-            {
+        //     if (hit.collider.CompareTag("Barrel"))
+        //     {
                 
-                EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
+        //         EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
 
-                if (enemy != null)
-                {
-                    enemy.GetEnemy().DecreaseHealth(damage);
-                    // enemy.DecreaseHealth(damage);
+        //         if (enemy != null)
+        //         {
+        //             enemy.GetEnemy().DecreaseHealth(damage);
+        //             // enemy.DecreaseHealth(damage);
                     
-                    Vector3 pushDirection = hit.point - playerCamera.transform.position; 
-                    pushDirection = pushDirection.normalized;
+        //             Vector3 pushDirection = hit.point - playerCamera.transform.position; 
+        //             pushDirection = pushDirection.normalized;
 
-                    // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce); 
-                    enemy.SetForceDirection(pushDirection);
-                    enemy.SetForce(pushForce);
-                    enemy.ChangeState(new EnemyHitState());
+        //             // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce); 
+        //             enemy.SetForceDirection(pushDirection);
+        //             enemy.SetForce(pushForce);
+        //             enemy.ChangeState(new EnemyHitState());
 
-                    if(enemy.GetEnemy().GetHealth() > 0){
-                        StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
-                    }
+        //             if(enemy.GetEnemy().GetHealth() > 0){
+        //                 StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+        //             }
 
-                }
-            }
-            else if (((1 << hit.collider.gameObject.layer) & pushableLayer) != 0)
-            {
-                Debug.Log("Hit destructible object: " + hit.transform.name);
+        //         }
+        //     }
+        //     else if (((1 << hit.collider.gameObject.layer) & pushableLayer) != 0)
+        //     {
+        //         Debug.Log("Hit destructible object: " + hit.transform.name);
 
-                DistroyableObstacle destructible = hit.transform.GetComponent<DistroyableObstacle>();
-                if (destructible != null)
-                {
-                    Vector3 hitDirection = hit.transform.position - playerCamera.transform.position;
-                    hitDirection = hitDirection.normalized;
+        //         DistroyableObstacle destructible = hit.transform.GetComponent<DistroyableObstacle>();
+        //         if (destructible != null)
+        //         {
+        //             Vector3 hitDirection = hit.transform.position - playerCamera.transform.position;
+        //             hitDirection = hitDirection.normalized;
 
-                    destructible.TakeHit(hitDirection);
-                }
-            } 
-            else
-            {
-                Debug.Log("Hit object is not in pushable layer.");
-            }   
+        //             destructible.TakeHit(hitDirection);
+        //         }
+        //     } 
+        //     else
+        //     {
+        //         Debug.Log("Hit object is not in pushable layer.");
+        //     }   
 
             
-        }
-        else
-        {
-            Debug.Log("No object hit.");
-        }
+        // }
+        // else
+        // {
+        //     Debug.Log("No object hit.");
+        // }
 
-    }
+    //}
 
     private void ChargedShoot()
     {
@@ -187,7 +187,6 @@ public class HitScanBasic : MonoBehaviour
                 // EnemyRagdollController enemyRagdollController = hit.transform.GetComponent<EnemyRagdollController>();
                 // if (enemyRagdollController != null)
                 if (enemy.GetEnemy().GetRagdollController() != null)
-
                 {
                     
                     // enemyRagdollController.SetRagdollActive(true);

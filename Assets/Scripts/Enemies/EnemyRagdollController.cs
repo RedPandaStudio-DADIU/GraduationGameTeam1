@@ -48,6 +48,7 @@ public class EnemyRagdollController : MonoBehaviour
         middleBodyBone = FindBoneByName("middle body");
 
         SetRagdollActive(false);
+        ActivateWeakSpotsIfExist();
     }
 
     void Start()
@@ -56,6 +57,18 @@ public class EnemyRagdollController : MonoBehaviour
         mainRigidbody = GetComponent<Rigidbody>(); 
 
         RecordBoneTransforms();
+    }
+
+    private void ActivateWeakSpotsIfExist()
+    {
+
+        foreach (Collider collider in ragdollColliders)
+        {
+            if (collider.gameObject.CompareTag("WeakSpot"))
+            {
+                collider.enabled = true;
+            }
+        }
     }
 
     private Transform FindBoneByName(string boneName)
@@ -192,11 +205,31 @@ public class EnemyRagdollController : MonoBehaviour
         return torsoTransform?.GetComponent<Rigidbody>();
     }
 
+    Transform FindChildRecursive(Transform parent, string targetName)
+    {
+        if (parent.name == targetName)
+        {
+            return parent;
+        }
+
+        foreach (Transform child in parent)
+        {
+            Transform result = FindChildRecursive(child, targetName);
+            if (result != null)
+            {
+                return result;
+            }
+        }
+
+        return null;
+    }
+
     public void ApplyForce(Vector3 forceDirection, float force)
     {
         if (torsoRigidbody == null)
         {
-            torsoRigidbody = FindTorsoRigidbody();
+            // torsoRigidbody = FindTorsoRigidbody();
+            torsoRigidbody = FindChildRecursive(transform, "middle body")?.GetComponent<Rigidbody>();
         }
         
         if (torsoRigidbody != null)

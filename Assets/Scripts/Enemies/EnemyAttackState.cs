@@ -42,6 +42,8 @@ public class EnemyAttackState : IEnemyState
         {
             stateController.StopCoroutine(shootingCoroutine);
         }
+        shootingCoroutine = null;
+
     }
 
 
@@ -49,8 +51,13 @@ public class EnemyAttackState : IEnemyState
     {
         while (isAttacking)
         {
-            stateController.gameObject.GetComponent<EnemyWeaponController>().HandleHitscanProjectileShot();
+            if (stateController.GetCurrentState() is EnemyAttackState) // Ensure enemy is still in attack state
+            {
+                stateController.gameObject.GetComponent<EnemyWeaponController>().HandleHitscanProjectileShot();
             // yield return new WaitForSeconds(stateController.gameObject.GetComponent<EnemyWeaponController>().GetFireRate()*10f);
+            } else {
+                yield break;
+            }
             float delay = Random.Range(0.5f, 2f);
             yield return new WaitForSeconds(delay);
 

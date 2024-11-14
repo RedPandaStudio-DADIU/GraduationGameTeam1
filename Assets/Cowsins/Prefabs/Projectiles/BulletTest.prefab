@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4048679220401053597}
   m_Layer: 0
   m_Name: BulletTest
-  m_TagString: Untagged
+  m_TagString: ChargeShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033eb68c5852cde4a8e4d89ae33dea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushForce: 100
+  ragdollDuration: 3
+  isEnemy: 0
+  isHuman: 0
   speed: 25
   damage: 0
   destination: {x: 0, y: 0, z: 0}
@@ -106,8 +110,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.32701927, y: 1, z: 0.32203436}
+  m_Center: {x: -0.0024925172, y: 0, z: 0.0049850345}
 --- !u!96 &4048679220401053597
 TrailRenderer:
   serializedVersion: 3

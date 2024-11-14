@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master
     guid: d2b3f9926e5be84bbd1fcd54538eb6e9
     GuidInternal: 
-    m_lastTime: -8584702904453604923
+    m_lastTime: -8584701680441411979
     List:
     - name: HangarVerb_JD
       guid: 84e87f0fe12db9458befbfa1f35c2545
@@ -841,7 +841,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584702904450560010
+    m_lastTime: -8584701857417857028
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -986,7 +986,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584702904454390477
+    m_lastTime: -8584700245621313099
     List:
     - name: lvl1_Hangar
       guid: c6967c8ce05f7c4a84e56627c4e3f8d0
@@ -1019,6 +1019,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 7b56713b7bf77f4ba906f88b5e191254
       Path: Events/Dialogue/lvl2_Conference
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Dia_JohnDoe
+      guid: efb6edb945d3ea47ba3f968f0d5fd414
+      id: 1296777492
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 200b6a6a285dcd439f28a67e0a03cef1
+      - ElementName: Play_Dia_JohnDoe
+        ObjectType: 3
+        guid: efb6edb945d3ea47ba3f968f0d5fd414
+      Path: Events/Dialogue/Play_Dia_JohnDoe
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1313,7 +1330,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584702904454384320
+    m_lastTime: -8584701858271568471
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -1476,7 +1493,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion/PlayerLocomotion
     guid: 578ab8420be4774381c9dc30979d03c2
     GuidInternal: 
-    m_lastTime: -8584702904454380636
+    m_lastTime: -8584701870697655517
     List:
     - name: Play_Player_Fs
       guid: 7128890d283c0244ae37c5c00fa299f1
@@ -1549,7 +1566,7 @@ MonoBehaviour:
     ParentPath: Events/TestEvents
     guid: 0a1992286e44cd448d508c2e1e150f58
     GuidInternal: 
-    m_lastTime: -8584702904454378956
+    m_lastTime: -8584701858271567394
     List:
     - name: Play_TestBeep
       guid: 39881d9e698e7c4cadcf1df672d74b58
@@ -1681,7 +1698,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584702904454377321
+    m_lastTime: -8584701858271566221
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -2124,7 +2141,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584702904450551069
+    m_lastTime: -8584700245621290754
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2644,6 +2661,122 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Scenes_lvl1
+      guid: 8a1c68d19060dc43838936963323b27f
+      id: 4121174866
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: States
+        ObjectType: 12
+        guid: 4d8ca50caf173545b4b3d20d71747df5
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 9019064e3fa83a4090ce0c75b228dfd6
+      - ElementName: Scenes_lvl1
+        ObjectType: 9
+        guid: 8a1c68d19060dc43838936963323b27f
+      Path: States/States/Dialogue/Scenes_lvl1
+      values:
+      - name: None
+        guid: 8ad9a7b380de704d8936ba9185719a0e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: None
+          ObjectType: 8
+          guid: 8ad9a7b380de704d8936ba9185719a0e
+      - name: Sc1_tr1
+        guid: 16062649c550dd44b3e3453af535a590
+        id: 342028878
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc1_tr1
+          ObjectType: 8
+          guid: 16062649c550dd44b3e3453af535a590
+      - name: Sc2_Tr1
+        guid: 0dc2bbb3e092ff458ac1e9617b34011c
+        id: 3079543733
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc2_Tr1
+          ObjectType: 8
+          guid: 0dc2bbb3e092ff458ac1e9617b34011c
+      - name: Sc2_Tr2
+        guid: 5d03a57882b8f849919ba0f8ff467a67
+        id: 3079543734
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc2_Tr2
+          ObjectType: 8
+          guid: 5d03a57882b8f849919ba0f8ff467a67
+      - name: Sc2_Tr3
+        guid: 16267201cf7e204ebf5700777c5bad22
+        id: 3079543735
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc2_Tr3
+          ObjectType: 8
+          guid: 16267201cf7e204ebf5700777c5bad22
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Speakers
       guid: d24b9463ae59e9468a1fd3d049f8b6a2
       id: 2888874631
@@ -3057,7 +3190,7 @@ MonoBehaviour:
     ParentPath: Switches/Dialogue
     guid: 679b6b7894ae2b408cfbc3b2fecaa991
     GuidInternal: 
-    m_lastTime: -8584702904450547673
+    m_lastTime: -8584701857417853495
     List:
     - name: DialogueTriggers
       guid: 1d023da11f14b04f9941217698b6776a
@@ -3223,7 +3356,7 @@ MonoBehaviour:
     ParentPath: Switches/GameWorld
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584702904450542983
+    m_lastTime: -8584701870696504462
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2

@@ -1766,7 +1766,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 398fe77a2b9f6fa46a3ae8218d913785, type: 2}
+  - {fileID: 2100000, guid: 6356492eb437f894396d7135ae43a839, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2151,6 +2151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 300
   targetList: []
+  isHuman: 0
 --- !u!1001 &456247252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2238,10 +2239,6 @@ PrefabInstance:
     - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_Name
       value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2471,10 +2468,6 @@ PrefabInstance:
     - target: {fileID: 8762286023885395077, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_Name
       value: PlayerFollowCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 8762286023885395077, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
       propertyPath: m_RootOrder
@@ -4790,6 +4783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 300
   targetList: []
+  isHuman: 0
 --- !u!195 &1480669400
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4941,6 +4935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 300
   targetList: []
+  isHuman: 0
 --- !u!195 &1570296215
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5659,7 +5654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6388424242882455740, guid: f5596a47fafb6cf4d8babba461f760b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6388424242882455740, guid: f5596a47fafb6cf4d8babba461f760b9, type: 3}
       propertyPath: m_TagString
@@ -6128,6 +6123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2065978189}
+  - component: {fileID: 2065978188}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -6135,6 +6131,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2065978188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065978187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caf73f83371484e08bf1f094f6971987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: ead7506c2b3a9413999ef5543ccafa57, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
 --- !u!4 &2065978189
 Transform:
   m_ObjectHideFlags: 0
@@ -6366,7 +6387,7 @@ PrefabInstance:
       objectReference: {fileID: 1915956708}
     - target: {fileID: 4406598301554246239, guid: 6ecdeb8b423a9443a9fc31084cfb5446, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.44
+      value: -12.33
       objectReference: {fileID: 0}
     - target: {fileID: 4406598301554246239, guid: 6ecdeb8b423a9443a9fc31084cfb5446, type: 3}
       propertyPath: m_LocalPosition.y

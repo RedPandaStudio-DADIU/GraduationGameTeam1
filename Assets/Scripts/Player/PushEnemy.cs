@@ -38,32 +38,40 @@ public class PushEnemy : MonoBehaviour
             
             if (hitCollider.CompareTag("Enemy"))
             {
-                
-                // EnemyBaseClass enemy = hitCollider.GetComponent<EnemyBaseClass>();
-                EnemyStateController enemy = hitCollider.GetComponent<EnemyStateController>();
-
-
-                if (enemy != null)
-                {
-                    enemy.GetEnemy().DecreaseHealth(damage);
-                    // Debug.LogWarning("Enemy health: " + enemy.GetEnemy().GetHealth());
-
-                    Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
-                    Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
-                    
-                    // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
-                    enemy.SetForceDirection(pushDirection);
-                    enemy.SetForce(pushForce);
-
-                    enemy.ChangeState(new EnemyHitState());
-
-                    if(enemy.GetEnemy().GetHealth() > 0){
-                        StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
-                    }
+                PushLogic(hitCollider);
+               
+            } else if(hitCollider.CompareTag("Boss")){
+                if(hitCollider.GetComponent<Collider>().gameObject.GetComponent<Boss>().GetAreWeakSpotsDefeated()){
+                    PushLogic(hitCollider);
                 }
             }
         }
     }
+
+
+    private void PushLogic(Collider hitCollider){
+        EnemyStateController enemy = hitCollider.GetComponent<EnemyStateController>();
+
+        if (enemy != null)
+        {
+            enemy.GetEnemy().DecreaseHealth(damage);
+            // Debug.LogWarning("Enemy health: " + enemy.GetEnemy().GetHealth());
+
+            Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
+            Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
+            
+            // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
+            enemy.SetForceDirection(pushDirection);
+            enemy.SetForce(pushForce);
+
+            enemy.ChangeState(new EnemyHitState());
+
+            if(enemy.GetEnemy().GetHealth() > 0){
+                StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+            }
+        }
+    }
+
     IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
     {
         
