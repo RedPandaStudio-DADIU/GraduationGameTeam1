@@ -1,0 +1,119 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2051106367	PlayerSpeedSwitch			\GameWorld\PlayerSpeedSwitch	
+	2569417515	RainTypeSwitch			\GameWorld\RainTypeSwitch	
+	3968804893	GroundWetnessSwitch			\GameWorld\GroundWetnessSwitch	
+	4280509423	AmbTimeOfDay			\AmbienceSwitches\AmbTimeOfDay	
+
+Switch	ID	Name	Switch Group			Notes
+	1296465089	Sprint	PlayerSpeedSwitch			
+	1865857008	Transition	PlayerSpeedSwitch			
+	2884887403	Sneak	PlayerSpeedSwitch			
+	614284249	Stormy	RainTypeSwitch			
+	991379416	FullRain	RainTypeSwitch			
+	1278453130	MediumRain	RainTypeSwitch			
+	2789071989	LightRain	RainTypeSwitch			
+	3569642402	Sunny	RainTypeSwitch			
+	630539344	Dry	GroundWetnessSwitch			
+	1181096339	Wet	GroundWetnessSwitch			
+	1842026663	Damp	GroundWetnessSwitch			
+	1905651656	Soaked	GroundWetnessSwitch			
+	390531879	Afternoon	AmbTimeOfDay			
+	1011622525	Night	AmbTimeOfDay			
+	1211181101	Midday	AmbTimeOfDay			
+	1844596514	EarlyMorning	AmbTimeOfDay			
+	2009803003	Dawn	AmbTimeOfDay			
+	2348606646	Dusk	AmbTimeOfDay			
+	2905060079	Evening	AmbTimeOfDay			
+	3789021730	Nightfall	AmbTimeOfDay			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	185713839	RoomState			\States\RoomState	
+	1045871717	GameStatus			\States\GameStatus	
+	2064552269	AreaState			\States\AreaState	
+	2802482050	JohnDoe			\States\Dialogue\JohnDoe	
+	3285234865	PlayerState			\States\PlayerState	
+	3305603258	GuitarSpeaker			\States\Speakers\GuitarSpeaker	
+	4121174866	Scenes_lvl1			\States\Dialogue\Scenes_lvl1	
+	4123380240	Xaga			\States\Dialogue\Xaga	
+
+State	ID	Name	State Group			Notes
+	144697359	Outdoor	RoomState			
+	340398852	Indoor	RoomState			
+	748895195	None	RoomState			
+	748895195	None	GameStatus			
+	984691642	InGame	GameStatus			
+	3374585465	InMenu	GameStatus			
+	748895195	None	AreaState			
+	1814387309	Hangar1	AreaState			
+	1814387310	Hangar2	AreaState			
+	2130932629	Harngar3	AreaState			
+	2393120223	InsideElevator	AreaState			
+	2782928028	ConferenceRoom2	AreaState			
+	2782928029	ConferenceRoom3	AreaState			
+	2782928031	ConferenceRoom1	AreaState			
+	477127956	Sc1	JohnDoe			
+	748895195	None	JohnDoe			
+	3956690975	WaitingOnTrigger	JohnDoe			
+	655265632	Alive	PlayerState			
+	748895195	None	PlayerState			
+	2044049779	Dead	PlayerState			
+	748895195	None	GuitarSpeaker			
+	930712164	Off	GuitarSpeaker			
+	1651971902	On	GuitarSpeaker			
+	342028878	Sc1_tr1	Scenes_lvl1			
+	748895195	None	Scenes_lvl1			
+	477127956	Sc1	Xaga			
+	477127959	Sc2	Xaga			
+	748895195	None	Xaga			
+	2239442679	WaitingOnTriggerEnter	Xaga			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	504532776	Brick			\Factory Acoustic Textures\Textures\Brick	
+	513139656	Mountain			\Factory Acoustic Textures\Textures\Mountain	
+	841620460	Concrete			\Factory Acoustic Textures\Textures\Concrete	
+	1755085759	Wood_Deep			\Factory Acoustic Textures\Textures\Wood_Deep	
+	1873957695	Anechoic			\Factory Acoustic Textures\Textures\Anechoic	
+	1970351858	Fabric			\Factory Acoustic Textures\Textures\Fabric	
+	2058049674	Wood			\Factory Acoustic Textures\Textures\Wood	
+	2412606308	Carpet			\Factory Acoustic Textures\Textures\Carpet	
+	2637588553	Tile			\Factory Acoustic Textures\Textures\Tile	
+	2928161104	Curtains			\Factory Acoustic Textures\Textures\Curtains	
+	3195498748	Cork_Tiles			\Factory Acoustic Textures\Textures\Cork_Tiles	
+	3670307564	Drywall			\Factory Acoustic Textures\Textures\Drywall	
+	4168643977	Acoustic_Banner			\Factory Acoustic Textures\Textures\Acoustic_Banner	
+	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	47937584	PlayerVoice			\Audio Master\Master Bus\PlayerMaster\PlayerVoice	
+	309309195	2DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\2DAmbience	
+	765206498	PlayerCloth			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerCloth	
+	1182634443	AmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds	
+	1301074112	3DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\3DAmbience	
+	1399649189	Master Bus			\Audio Master\Master Bus	
+	1459460693	AmbientMaster			\Audio Master\Master Bus\SFX\AmbientMaster	
+	1681012287	PlayerFootsteps			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerFootsteps	
+	2033911932	NPCMaster			\Audio Master\Master Bus\SFX\NPCMaster	
+	2343802269	PlayerLocomotion			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion	
+	3538689948	PlayerMaster			\Audio Master\Master Bus\PlayerMaster	
+	3545700988	Reverbs			\Audio Master\Master Bus\SharedEffects\Reverbs	
+	4152869693	2DAmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds\2DAmbientBeds	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	350835844	HangarVerb_JD			\Audio Master\Master Bus\PlayerMaster\PlayerVoice\HangarVerb_JD	
+	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps	
+	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
+	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	
+	3553615197	RoomLarge			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomLarge	
+
+Effect plug-ins	ID	Name	Type				Notes
+	535667444	Bathroom1	Wwise Matrix Reverb			
+	1259256166	New_RoomVerb	Wwise RoomVerb			
+	1588715066	Echoes_Linear	Wwise Delay			
+	1904434771	Medium_Room1	Wwise Matrix Reverb			
+	2849147824	Medium	Wwise RoomVerb			
+	4119703916	HelmetEQ	Wwise Parametric EQ			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
