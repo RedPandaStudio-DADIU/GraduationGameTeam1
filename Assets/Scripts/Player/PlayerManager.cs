@@ -29,7 +29,7 @@ public class PlayerManager : MonoBehaviour
         // transform.position = new Vector3(-0.32f, 0.8f, -3f);
         // Debug.Log("Position After Update: " + transform.position);
     }
-    void Start(){
+    void FixedUpdate(){
         // if(!positionSet && (PlayerStartPosition.playerSpawnPosition != Vector3.zero)){
         //     transform.position = PlayerStartPosition.playerSpawnPosition;
         //     positionSet = true;
@@ -44,39 +44,75 @@ public class PlayerManager : MonoBehaviour
 
             }
 
-            GameObject.FindWithTag("Player").GetComponent<WeaponController>().currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
-            GameObject.FindWithTag("Player").GetComponent<WeaponController>().initialWeapons = new Weapon_SO[PlayerDataManager.Instance.inventory.Length];
-            int index = 0;
+            WeaponController wc = GameObject.FindWithTag("Player").GetComponent<WeaponController>();
+            // GameObject.FindWithTag("Player").GetComponent<WeaponController>().currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
+            // // GameObject.FindWithTag("Player").GetComponent<WeaponController>().initialWeapons = new Weapon_SO[PlayerDataManager.Instance.inventory.Length];
+            if(wc != null && PlayerDataManager.Instance.inventory.Length>0){
+                // wc.inventory = new WeaponIdentification[PlayerDataManager.Instance.inventory.Length];
+                int index = 0;
 
-            foreach(WeaponIdentification id in PlayerDataManager.Instance.inventory){
-                
-                // Debug.LogError("Identification: " + id + " weapon: "+id.weapon);
+                foreach(Weapon_SO weapon in PlayerDataManager.Instance.weapons){
+                    
+                    // Debug.LogError("Identification: " + id + " weapon: "+id.weapon);
 
-                if (id.weapon == null)
-                {
-                    continue;
-                } 
-                // GameObject.FindWithTag("Player").GetComponent<WeaponController>().InstantiateWeapon(id.weapon, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], id.totalBullets);
-                GameObject.FindWithTag("Player").GetComponent<WeaponController>().initialWeapons[index] = id.weapon;
+                    if (weapon == null)
+                    {
+                        continue;
+                    } 
+                    // // GameObject.FindWithTag("Player").GetComponent<WeaponController>().InstantiateWeapon(id.weapon, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], id.totalBullets);
+                    // GameObject.FindWithTag("Player").GetComponent<WeaponController>().initialWeapons[index] = id.weapon;
 
-                index++;
+                    AddWeaponToInventory(wc, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], weapon.magazineSize, weapon);
+                    index++;
+                }
+
+                // GameObject.FindWithTag("Player").GetComponent<WeaponController>().GetInitialWeapons();
+
+                // GameObject.FindWithTag("Player").GetComponent<WeaponController>().CreateInventoryUI();
+                wc.currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
+                dataSet = true;
             }
 
-            GameObject.FindWithTag("Player").GetComponent<WeaponController>().GetInitialWeapons();
-
-            // GameObject.FindWithTag("Player").GetComponent<WeaponController>().CreateInventoryUI();
-
-            dataSet = true;
+            
         }
         
     }
 
-    void FixedUpdate() {
-        if(GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health<0){
-            GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health = 0;
-        }
-        
-    }
+    
+        private void AddWeaponToInventory(WeaponController weaponController, int slot, int currentBullets, int totalBullets, Weapon_SO weapon)
+        {
+            var weaponPicked = Instantiate(weapon.weaponObject, weaponController.weaponHolder);
+            weaponPicked.transform.localPosition = weapon.weaponObject.transform.localPosition;
 
+            weaponController.inventory[slot] = weaponPicked;
+
+            if (weaponController.currentWeapon == slot)
+            {
+                weaponController.weapon = weapon;
+                // ApplyAttachments(weaponController);
+                weaponController.UnHolster(weaponPicked.gameObject, true);
+                weaponPicked.gameObject.SetActive(true);
+            }
+            else
+            {
+                weaponPicked.gameObject.SetActive(false);
+            }
+
+            UpdateWeaponBullets(weaponController.inventory[slot].GetComponent<WeaponIdentification>(), currentBullets, totalBullets, weapon);
+
+            UpdateWeaponUI(weaponController, slot, weapon);
+        }
+
+        private void UpdateWeaponBullets(WeaponIdentification weaponIdentification, int currentBullets, int totalBullets, Weapon_SO weapon)    
+        {
+            weaponIdentification.bulletsLeftInMagazine = currentBullets;
+            weaponIdentification.totalBullets = totalBullets;
+        }
+
+        private void UpdateWeaponUI(WeaponController weaponController, int slot, Weapon_SO weapon)
+        {
+            weaponController.slots[slot].weapon = weapon;
+            weaponController.slots[slot].GetImage();
+        }
 
 }
