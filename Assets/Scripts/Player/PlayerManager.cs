@@ -35,7 +35,8 @@ public class PlayerManager : MonoBehaviour
         //     positionSet = true;
         //     // new Vector3(-0.32f, 0.8f, -3f);
         // }
-        if(!dataSet &&  SceneManager.GetActiveScene().buildIndex==1){
+        // &&  SceneManager.GetActiveScene().buildIndex==1
+        if(!dataSet ){
             Debug.Log("Inside Player Manager: Health: "+ PlayerDataManager.Instance.playerHealth);
             if(PlayerDataManager.Instance.playerHealth > 0){
                 GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health = PlayerDataManager.Instance.playerHealth;
@@ -66,6 +67,13 @@ public class PlayerManager : MonoBehaviour
             // GameObject.FindWithTag("Player").GetComponent<WeaponController>().CreateInventoryUI();
 
             dataSet = true;
+        }
+        
+    }
+
+    void FixedUpdate() {
+        if(GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health<0){
+            GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health = 0;
         }
         
     }
