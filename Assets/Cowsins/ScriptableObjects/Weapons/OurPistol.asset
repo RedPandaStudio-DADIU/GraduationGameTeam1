@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d01ed731769af95429c32ba164942b3e, type: 3}
+  m_Name: OurPistol
+  m_EditorClassIdentifier: 
+  weaponObject: {fileID: 0}
+  _name: ourspistol
+  pickUpGraphics: {fileID: 0}
+  icon: {fileID: 21300000, guid: 243d28a3ac1a4914da8cea587a10bf36, type: 3}
+  shootStyle: 0
+  shootMethod: 0
+  holdProgressSpeed: 0
+  reloadStyle: 0
+  projectile: {fileID: 0}
+  projectileUsesGravity: 0
+  shootDelay: 0
+  bulletDuration: 0
+  speed: 0
+  explosionOnHit: 0
+  hurtsPlayer: 0
+  explosionRadius: 0
+  explosionForce: 0
+  explosionVFX: {fileID: 0}
+  continuousFire: 0
+  fireRate: 0
+  reloadTime: 0
+  coolSpeed: 0
+  cooledPercentageAfterOverheat: 0
+  infiniteBullets: 0
+  magazineSize: 1
+  bulletsPerFire: 0
+  ammoCostPerFire: 0
+  bulletRange: 0
+  timeBetweenShots: 0
+  penetrationAmount: 0
+  penetrationDamageReduction: 0
+  allowAim: 0
+  allowSecondaryShot: 0
+  aimDistance: 0
+  aimingRotation: {x: 0, y: 0, z: 0}
+  aimingSpeed: 0
+  aimingFOV: 0
+  allowAimingIfReloading: 0
+  movementSpeedWhileAiming: 0
+  setMovementSpeedWhileAiming: 0
+  crosshairResize: 0
+  crosshairPreset: {fileID: 0}
+  applyBulletSpread: 0
+  applyWeight: 0
+  spreadAmount: 0
+  aimSpreadAmount: 0
+  weightMultiplier: 1
+  applyRecoil: 0
+  recoilX:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  recoilY:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  xRecoilAmount: 0
+  yRecoilAmount: 0
+  recoilRelaxSpeed: 0
+  applyDifferentRecoilOnAiming: 0
+  xRecoilAmountOnAiming: 0
+  yRecoilAmountOnAiming: 0
+  shootStyle2: 0
+  shootMethod2: 0
+  holdProgressSpeed2: 0
+  reloadStyle2: 0
+  projectile2: {fileID: 0}
+  projectileUsesGravity2: 0
+  shootDelay2: 0
+  bulletDuration2: 0
+  speed2: 0
+  explosionOnHit2: 0
+  hurtsPlayer2: 0
+  explosionRadius2: 0
+  explosionForce2: 0
+  continuousFire2: 0
+  fireRate2: 0
+  reloadTime2: 0
+  coolSpeed2: 0
+  cooledPercentageAfterOverheat2: 0
+  bulletsPerFire2: 0
+  ammoCostPerFire2: 0
+  bulletRange2: 0
+  timeBetweenShots2: 0
+  penetrationAmount2: 0
+  penetrationDamageReduction2: 0
+  allowAim2: 0
+  allowSecondaryShot2: 0
+  aimDistance2: 0
+  aimingRotation2: {x: 0, y: 0, z: 0}
+  aimingSpeed2: 0
+  aimingFOV2: 0
+  allowAimingIfReloading2: 0
+  movementSpeedWhileAiming2: 0
+  setMovementSpeedWhileAiming2: 0
+  crosshairResize2: 0
+  crosshairPreset2: {fileID: 0}
+  applyBulletSpread2: 0
+  applyWeight2: 0
+  spreadAmount2: 0
+  aimSpreadAmount2: 0
+  weightMultiplier2: 1
+  applyRecoil2: 0
+  recoilX2:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  recoilY2:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  xRecoilAmount2: 0
+  yRecoilAmount2: 0
+  recoilRelaxSpeed2: 0
+  applyDifferentRecoilOnAiming2: 0
+  xRecoilAmountOnAiming2: 0
+  yRecoilAmountOnAiming2: 0
+  damagePerBullet: 0
+  applyDamageReductionBasedOnDistance: 0
+  minimumDistanceToApplyDamageReduction: 0
+  damageReductionMultiplier: 0
+  criticalDamageMultiplier: 0
+  limitedMagazines: 0
+  totalMagazines: 0
+  showBulletShells: 0
+  bulletHoleImpact:
+    defaultImpact: {fileID: 0}
+    groundIMpact: {fileID: 0}
+    grassImpact: {fileID: 0}
+    enemyImpact: {fileID: 0}
+    metalImpact: {fileID: 0}
+    mudImpact: {fileID: 0}
+    woodImpact: {fileID: 0}
+  muzzleVFX: {fileID: 0}
+  bulletGraphics: {fileID: 0}
+  useProceduralShot: 0
+  proceduralShotPattern: {fileID: 0}
+  audioSFX:
+    shooting: []
+    holster: {fileID: 0}
+    unholster: {fileID: 0}
+    reload: {fileID: 0}
+    emptyMagReload: {fileID: 0}
+    emptyMagShoot: {fileID: 0}
+    fireSFX:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+    loadSFX:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+    reloadSFX:
+      idInternal: 0
+      valueGuidInternal: 
+      WwiseObjectReference: {fileID: 0}
+  pitchVariationFiringSFX: 0
+  grapplesFromTip: 0
+  camShakeAmount: 0
+  camShakeAimMultiplier: 0
+  camShakeCrouchMultiplier: 0
+  applyFOVEffectOnShooting: 0
+  FOVValueToSubtract: 0
+  AimingFOVValueToSubtract: 0
+  amountOfShootAnimations: 0
+  bulletTrail: {fileID: 0}
+  dontShowMagazine: 0
+  currentPreset: {fileID: 0}
+  presetName: 
