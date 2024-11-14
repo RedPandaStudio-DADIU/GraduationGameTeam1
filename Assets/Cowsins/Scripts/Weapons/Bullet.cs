@@ -73,6 +73,7 @@ namespace cowsins
                 } else {
                     Debug.Log("Enemy Shot!! Damage: " + damage);
                     Shoot(damage, other);
+                    DestroyProjectile();
                 }
 
                
