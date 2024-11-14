@@ -633,17 +633,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8bfe05fa-b451-49b0-bcb2-4baddff2b8b5"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard;Gamepad"",
-                    ""action"": ""Quit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""e5c10ba8-abab-4813-be30-2083843e7739"",
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
@@ -665,7 +654,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",    
+                    ""name"": """",
                     ""id"": ""6f99845e-3979-4cfd-abdb-5437e8fb43f6"",
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
