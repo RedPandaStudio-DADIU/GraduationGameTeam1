@@ -174,7 +174,7 @@ namespace cowsins
         public void RestartGame()
         {
             Time.timeScale = 1f; 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 重新加载当前场景
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
         }
 
 

@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5a8fd716f305147afc90c36c63c5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 588869028}
   mainMenuSections:
   - sectionName: 1
     section: {fileID: 69331246}
@@ -471,7 +472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4516282366263327538, guid: 8d7b0e580af42484385a7cebbda437b1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4516282366263327538, guid: 8d7b0e580af42484385a7cebbda437b1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -479,11 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 63667127}
     - target: {fileID: 4516282366263327538, guid: 8d7b0e580af42484385a7cebbda437b1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4516282366263327538, guid: 8d7b0e580af42484385a7cebbda437b1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: LoadGameScene
       objectReference: {fileID: 0}
     - target: {fileID: 4516282366263327538, guid: 8d7b0e580af42484385a7cebbda437b1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -608,15 +609,15 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588869027}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 1dea84f2a2c1eed44b60422e6d0cc072, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 1423562678}
   m_TargetTexture: {fileID: 0}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
@@ -1174,3 +1175,4 @@ SceneRoots:
   - {fileID: 69331244}
   - {fileID: 795372484}
   - {fileID: 1476178319}
+  - {fileID: 588869029}
