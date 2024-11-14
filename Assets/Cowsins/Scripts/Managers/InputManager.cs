@@ -21,8 +21,8 @@ namespace cowsins
             crouchingDown,
             interacting,
             dropping,
-            nextweapon,
-            previousweapon,
+            // nextweapon,
+            // previousweapon,
             inspecting,
             pausing,
             // dashing,
@@ -31,7 +31,9 @@ namespace cowsins
             toggleFlashLight, grappling,
             push,
             quit,
-            heal;
+            heal,
+            weapon1,
+            weapon2;
 
         public static float x,
             y,
@@ -184,9 +186,10 @@ namespace cowsins
             shooting = inputActions.GameControls.Firing.IsPressed();
             Debug.LogWarning("Shooting is pressed: " + shooting);
 
-            scrolling = inputActions.GameControls.Scrolling.ReadValue<Vector2>().y;
-            nextweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() > 0;
-            previousweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() < 0;
+            // scrolling = inputActions.GameControls.Scrolling.ReadValue<Vector2>().y;
+            // nextweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() > 0;
+            // previousweapon = inputActions.GameControls.ChangeWeapons.WasPressedThisFrame() && inputActions.GameControls.ChangeWeapons.ReadValue<float>() < 0;
+           
 
             if (player != null && player.GetComponent<WeaponController>().alternateAiming && player.GetComponent<WeaponController>().weapon != null)
             {
@@ -213,6 +216,9 @@ namespace cowsins
             if(quit){
                 Application.Quit();
             }
+            weapon1= inputActions.GameControls.Weapon1.WasPressedThisFrame();
+            weapon2= inputActions.GameControls.Weapon2.WasPressedThisFrame();
+          
 
         }
 

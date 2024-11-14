@@ -156,8 +156,9 @@ namespace cowsins
             }
 
             //Inventory
-            if ((InputManager.scrolling != 0 || InputManager.nextweapon || InputManager.previousweapon) && !InputManager.reloading) inventoryContainer.alpha = 1;
-            else if (inventoryContainer.alpha > 0) inventoryContainer.alpha -= Time.deltaTime;
+            // if ((InputManager.scrolling != 0 || InputManager.nextweapon || InputManager.previousweapon) && !InputManager.reloading) inventoryContainer.alpha = 1;
+            // else if (inventoryContainer.alpha > 0) inventoryContainer.alpha -= Time.deltaTime;
+            
         }
 
         // HEALTH SYSTEM /////////////////////////////////////////////////////////////////////////////////////////
@@ -216,7 +217,7 @@ namespace cowsins
             forbiddenInteractionUI.SetActive(false);
             interactUI.SetActive(true);
             interactText.text = displayText;
-            interactUI.GetComponent<Animation>().Play();
+            // interactUI.GetComponent<Animation>().Play();
             // interactUI.GetComponent<AudioSource>().Play();
 
             // Adjust the width of the background based on the length of the displayText
@@ -389,7 +390,10 @@ namespace cowsins
             lowAmmoUI.gameObject.SetActive(false);
         }
 
-        private void SetWeaponDisplay(Weapon_SO weapon) => currentWeaponDisplay.sprite = weapon.icon;
+        private void SetWeaponDisplay(Weapon_SO weapon) 
+        {
+            //currentWeaponDisplay.sprite = weapon.icon;
+        } 
 
         private void EnableDisplay() => currentWeaponDisplay.gameObject.SetActive(true);
 

@@ -87,6 +87,18 @@ namespace cowsins
                     Shoot(damage, other);
                 }
             } 
+            
+            else if (other.CompareTag("Barrel"))
+            {
+                Debug.Log("Bullet hit barrel!");
+                ExplosiveBarrel barrel = other.GetComponent<ExplosiveBarrel>();
+                if (barrel != null)
+                {
+                    Debug.Log("Bullet cause explosive barrel to explode");
+                    barrel.Die();
+                }
+                DestroyProjectile();
+            }
             else if (other.GetComponent<IDamageable>() != null && !other.CompareTag("Player"))
             {
                 DamageTarget(other.transform, damage, false);
@@ -99,6 +111,7 @@ namespace cowsins
             else if((other.CompareTag("Enemy") && isHuman) || (other.CompareTag("Human") && isEnemy)){
                 DestroyProjectile();
             }
+            
             else if (IsGroundOrObstacleLayer(other.gameObject.layer))
             {
                 DestroyProjectile();

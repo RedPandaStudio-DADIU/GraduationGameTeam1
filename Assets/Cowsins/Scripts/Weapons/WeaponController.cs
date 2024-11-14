@@ -1151,24 +1151,46 @@ namespace cowsins
         {
             if (InputManager.reloading) return; // Do not change weapons while reloading
                                                 // Change slot
-            if (InputManager.scrolling > 0 || InputManager.previousweapon)
-            {
-                ForceAimReset(); // Move Weapon back to the original position
-                if (currentWeapon < inventorySize - 1)
-                {
-                    currentWeapon++;
-                    SelectWeapon();
-                }
-            }
-            if (InputManager.scrolling < 0 || InputManager.nextweapon)
-            {
-                ForceAimReset(); // Move Weapon back to the original position
+            // if (InputManager.scrolling > 0 || InputManager.previousweapon)
+            // {
+            //     ForceAimReset(); // Move Weapon back to the original position
+            //     if (currentWeapon < inventorySize - 1)
+            //     {
+            //         currentWeapon++;
+            //         SelectWeapon();
+            //     }
+            // }
+            // if (InputManager.scrolling < 0 || InputManager.nextweapon)
+            // {
+            //     ForceAimReset(); // Move Weapon back to the original position
+            //     if (currentWeapon > 0)
+            //     {
+            //         currentWeapon--;
+            //         SelectWeapon();
+            //     }
+            // }
+            if (InputManager.weapon1)
+             {
                 if (currentWeapon > 0)
                 {
-                    currentWeapon--;
+                    currentWeapon=1;
+                    Debug.Log("Weapon 1");
                     SelectWeapon();
                 }
-            }
+            
+             }
+
+             if (InputManager.weapon2)
+             {
+                if (currentWeapon > 0)
+                {
+                    currentWeapon=2;
+                    Debug.Log("Weapon 1");
+                    SelectWeapon();
+                }
+            
+             }
+
         }
 
         [HideInInspector] public bool selectingWeapon;

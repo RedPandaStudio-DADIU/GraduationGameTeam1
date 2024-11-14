@@ -33,7 +33,8 @@ namespace cowsins
             }
             else if (movement.currentSpeed > movement.walkSpeed && player.velocity.magnitude > 0.2f)
             {
-                targetFOV = movement.runningFOV;
+                //targetFOV = movement.runningFOV;
+                targetFOV = baseFOV;
             }
             else
             {
