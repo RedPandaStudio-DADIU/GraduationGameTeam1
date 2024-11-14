@@ -22,6 +22,8 @@ public class ElevatorManager : MonoBehaviour
 
                 if(id != null){
                     PlayerDataManager.Instance.inventory[index] = id;
+                    PlayerDataManager.Instance.weapons[index] = id.weapon;
+
                     Debug.Log("Weapon identification: " + id.name);
                     PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
                     index++;
