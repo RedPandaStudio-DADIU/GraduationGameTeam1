@@ -42,6 +42,7 @@ public class EnemyStateController : MonoBehaviour
         Debug.Log("Player Transform (TAREGT transform) is " + playerTransform.position + " name: " + playerTransform.gameObject.name);
 
         enemy = GetComponent<EnemyBaseClass>();
+        Debug.LogWarning("Enemy: " + enemy + " Name: " + enemy.name);
     }
 
     void Update()
