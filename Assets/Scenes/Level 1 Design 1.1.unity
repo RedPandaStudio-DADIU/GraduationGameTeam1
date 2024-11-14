@@ -36750,6 +36750,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2512326332829695918, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+      propertyPath: maxSlopeAngle
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512326332829695918, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512326332829695918, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       propertyPath: jumpEvent.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 222d0c05e8bdc9c4fab702d01cfc3d86, type: 2}
@@ -37386,7 +37394,52 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2462548585995275635, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1872723774}
+    - targetCorrespondingSourceObject: {fileID: 4811400034590749437, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1520023093}
   m_SourcePrefab: {fileID: 100100000, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+--- !u!1 &1520023092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4811400034590749437, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+  m_PrefabInstance: {fileID: 1520023091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520023093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520023092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1bce7a4b1ea3741a53cec3be20570b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullScreen: 0
+  res: 0
+  maxFrameRate: 0
+  vsync: 0
+  graphicsQuality: 0
+  masterVolume: 0
+  playerSensX: 0
+  playerSensY: 0
+  playerControllerSensX: 0
+  playerControllerSensY: 0
+  frameRateDropdown: {fileID: 0}
+  resolutionRateDropdown: {fileID: 0}
+  graphicsDropdown: {fileID: 0}
+  fullScreenToggle: {fileID: 0}
+  vsyncToggle: {fileID: 0}
+  masterVolumeSlider: {fileID: 0}
+  playerSensXSlider: {fileID: 0}
+  playerSensYSlider: {fileID: 0}
+  playerControllerSensXSlider: {fileID: 0}
+  playerControllerSensYSlider: {fileID: 0}
+  playerSensXDisplay: {fileID: 0}
+  playerSensYDisplay: {fileID: 0}
+  playerControllerSensXDisplay: {fileID: 0}
+  playerControllerSensYDisplay: {fileID: 0}
+  masterMixer: {fileID: 0}
 --- !u!1001 &1523704231
 PrefabInstance:
   m_ObjectHideFlags: 0

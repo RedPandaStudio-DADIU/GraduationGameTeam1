@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 namespace cowsins
 {
@@ -13,6 +14,9 @@ namespace cowsins
             public CanvasGroup section;
         }
         public static MainMenuManager Instance { get; private set; }
+
+        [SerializeField] private VideoPlayer videoPlayer;
+
 
         [SerializeField, Header("Sections")] private MainMenuSection[] mainMenuSections;
 
@@ -89,9 +93,35 @@ namespace cowsins
         public void LoadGameScene()
         {
             Debug.Log("LoadGameScene method called.");
-            SceneManager.LoadScene("Level 1 Design 1.1");
-            DynamicGI.UpdateEnvironment();
 
+            if (videoPlayer != null)
+            {
+               
+                videoPlayer.loopPointReached += OnVideoEnd;
+                 mainMenuSections[1].section.gameObject.SetActive(false);
+                
+                videoPlayer.Play();
+                Debug.Log("Playing video before scene load.");
+            }
+            else
+            {
+                 Debug.Log("LoadGameScene and we dont have video.");
+
+                SceneManager.LoadScene("Level 1 Design 1.1");
+                DynamicGI.UpdateEnvironment();
+
+            }
+
+           
+        }
+        private void OnVideoEnd(VideoPlayer vp)
+        {
+            Debug.Log("Video playback finished. Loading game scene.");
+            DynamicGI.UpdateEnvironment();
+            SceneManager.LoadScene("Level 1 Design 1.1");
+
+            // 取消注册回调，避免重复调用
+            videoPlayer.loopPointReached -= OnVideoEnd;
         }
 
          public void QuitGame()
