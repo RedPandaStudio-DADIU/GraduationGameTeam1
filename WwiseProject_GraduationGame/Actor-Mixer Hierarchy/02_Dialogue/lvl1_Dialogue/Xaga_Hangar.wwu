@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}" SchemaVersion="119">
+<WwiseDocument Type="WorkUnit" ID="{67B98A39-AD6C-4B60-8005-B7BB0F22EB29}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="Xaga_Hangar" ID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}" PersistMode="Standalone">
+		<WorkUnit Name="Xaga_Hangar" ID="{67B98A39-AD6C-4B60-8005-B7BB0F22EB29}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchContainer Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" ShortID="908892079">
+				<SwitchContainer Name="Hangar_Xaga" ID="{994A44A7-205F-44DB-81D4-A36B33D6B63C}" ShortID="908892080">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
@@ -27,7 +27,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Silence" ID="{756702F6-6CA4-426E-B668-F20A54884BEA}" ShortID="67983915">
+						<Sound Name="Silence" ID="{636347CA-090E-4944-8084-CB823DE4891A}" ShortID="67983916">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -37,12 +37,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SourcePlugin Name="Silence" ID="{5C4D89E2-13A3-417C-8104-57FC02B0E80E}" ShortID="411162420" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+								<SourcePlugin Name="Silence" ID="{AFC8121D-B8BE-4623-AE10-C92131179FDE}" ShortID="411162421" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 									<Language>SFX</Language>
 								</SourcePlugin>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Silence" ID="{5C4D89E2-13A3-417C-8104-57FC02B0E80E}" Platform="Linked"/>
+								<ActiveSource Name="Silence" ID="{AFC8121D-B8BE-4623-AE10-C92131179FDE}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Pathetic_temp1" ID="{C9FDCEBF-6FA4-4A59-BD4B-3E97357B0DF3}" ShortID="955026593">
@@ -111,7 +111,7 @@
 								</PropertyList>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="Silence" ID="{756702F6-6CA4-426E-B668-F20A54884BEA}"/>
+								<ItemRef Name="Silence" ID="{636347CA-090E-4944-8084-CB823DE4891A}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
 						<GroupingList>
@@ -119,12 +119,6 @@
 								<SwitchRef Name="Sc1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
 								<ItemList>
 									<ItemRef Name="Pathetic_temp1" ID="{C9FDCEBF-6FA4-4A59-BD4B-3E97357B0DF3}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="WaitingOnTriggerEnter" ID="{3C6122A6-7FDC-4AEA-85D7-8326A48C4F13}"/>
-								<ItemList>
-									<ItemRef Name="Silence" ID="{756702F6-6CA4-426E-B668-F20A54884BEA}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
