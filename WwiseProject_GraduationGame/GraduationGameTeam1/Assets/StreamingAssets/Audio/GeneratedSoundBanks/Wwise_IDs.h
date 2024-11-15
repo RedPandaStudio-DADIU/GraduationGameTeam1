@@ -18,8 +18,16 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_DIA_AI = 4271692713U;
         static const AkUniqueID PLAY_DIA_JOHNDOE = 1296777492U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
+        static const AkUniqueID PLAY_DIA_XAGA_ = 3253445185U;
+        static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
+        static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
+        static const AkUniqueID PLAY_ELEVATOR_OUTOFORDERBEEP = 2046495730U;
+        static const AkUniqueID PLAY_ELEVATOR_POWER_LP = 1757009721U;
+        static const AkUniqueID PLAY_ELEVATOR_RUN_STARTUP = 537752340U;
+        static const AkUniqueID PLAY_ELEVATOR_RUNNING_LP = 591723123U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
@@ -27,8 +35,10 @@ namespace AK
         static const AkUniqueID PLAY_HITARMOR = 1174221978U;
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
+        static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
         static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
+        static const AkUniqueID PLAY_LEVEL_1_STATION = 3766110729U;
         static const AkUniqueID PLAY_LOAD_HANDGUN = 249020240U;
         static const AkUniqueID PLAY_LOAD_RIFLE = 3060105905U;
         static const AkUniqueID PLAY_OBJ_AIRBOX = 3179694963U;
@@ -37,9 +47,6 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
-        static const AkUniqueID PLAY_SC1 = 3191462597U;
-        static const AkUniqueID PLAY_SC2 = 3191462598U;
-        static const AkUniqueID PLAY_SC3 = 3191462599U;
         static const AkUniqueID PLAY_SC4 = 3191462592U;
         static const AkUniqueID PLAY_SC5 = 3191462593U;
         static const AkUniqueID PLAY_TESTBEEP = 1955951874U;
@@ -79,6 +86,18 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace AREASTATE
+
+        namespace COMBAT
+        {
+            static const AkUniqueID GROUP = 2764240573U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INCOMBAT = 3373579172U;
+                static const AkUniqueID NOCOMBAT = 2930212484U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace COMBAT
 
         namespace GAMESTATUS
         {
@@ -151,6 +170,9 @@ namespace AK
                 static const AkUniqueID SC2_TR1 = 3079543733U;
                 static const AkUniqueID SC2_TR2 = 3079543734U;
                 static const AkUniqueID SC2_TR3 = 3079543735U;
+                static const AkUniqueID SC3_TR1 = 569325008U;
+                static const AkUniqueID SC3_TR2 = 569325011U;
+                static const AkUniqueID SC4_TR1 = 551107239U;
                 static const AkUniqueID TRIGGERISWAITING = 2172575860U;
             } // namespace STATE
         } // namespace SCENES_LVL1

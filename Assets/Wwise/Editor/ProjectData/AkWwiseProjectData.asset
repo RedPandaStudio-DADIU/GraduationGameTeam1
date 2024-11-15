@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master
     guid: d2b3f9926e5be84bbd1fcd54538eb6e9
     GuidInternal: 
-    m_lastTime: -8584699971972884221
+    m_lastTime: -8584699392527991027
     List:
     - name: HangarVerb_JD
       guid: 84e87f0fe12db9458befbfa1f35c2545
@@ -648,7 +648,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584702904453595047
+    m_lastTime: -8584699291062147302
     List:
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
@@ -841,7 +841,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584701857417857028
+    m_lastTime: -8584699351585976957
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -973,8 +973,25 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584706068450692553
-    List: []
+    m_lastTime: -8584699388277868542
+    List:
+    - name: Play_Level_1_station
+      guid: 4d54eeb55f6fcf4382337f3a42c9aad8
+      id: 3766110729
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
+      - ElementName: Play_Level_1_station
+        ObjectType: 3
+        guid: 4d54eeb55f6fcf4382337f3a42c9aad8
+      Path: Events/Default Work Unit/Play_Level_1_station
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
     - ElementName: Events
@@ -986,7 +1003,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584699738275699607
+    m_lastTime: -8584699152576417651
     List:
     - name: lvl1_Hangar
       guid: c6967c8ce05f7c4a84e56627c4e3f8d0
@@ -1022,6 +1039,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Dia_Ai
+      guid: 2aa9ffea7198cf4ab4716623341ef49e
+      id: 4271692713
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 200b6a6a285dcd439f28a67e0a03cef1
+      - ElementName: lvl1_Hangar
+        ObjectType: 4
+        guid: c6967c8ce05f7c4a84e56627c4e3f8d0
+      - ElementName: Play_Dia_Ai
+        ObjectType: 3
+        guid: 2aa9ffea7198cf4ab4716623341ef49e
+      Path: Events/Dialogue/lvl1_Hangar/Play_Dia_Ai
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Dia_JohnDoe
       guid: efb6edb945d3ea47ba3f968f0d5fd414
       id: 1296777492
@@ -1040,7 +1077,7 @@ MonoBehaviour:
       maxDuration: 0
       minDuration: 0
     - name: Play_Dia_Xaga
-      guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
+      guid: 307774708db9f6419e4bb50ffd99449d
       id: 16982058
       PathAndIcons:
       - ElementName: Events
@@ -1049,16 +1086,36 @@ MonoBehaviour:
       - ElementName: Dialogue
         ObjectType: 12
         guid: 200b6a6a285dcd439f28a67e0a03cef1
+      - ElementName: lvl1_Hangar
+        ObjectType: 4
+        guid: c6967c8ce05f7c4a84e56627c4e3f8d0
       - ElementName: Play_Dia_Xaga
         ObjectType: 3
-        guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
-      Path: Events/Dialogue/Play_Dia_Xaga
+        guid: 307774708db9f6419e4bb50ffd99449d
+      Path: Events/Dialogue/lvl1_Hangar/Play_Dia_Xaga
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Sc1
+    - name: Play_Dia_Xaga_
+      guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
+      id: 3253445185
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 200b6a6a285dcd439f28a67e0a03cef1
+      - ElementName: Play_Dia_Xaga_
+        ObjectType: 3
+        guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
+      Path: Events/Dialogue/Play_Dia_Xaga_
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_HumansSc1
       guid: c81671d258e82748bbf7182ed7b69352
-      id: 3191462597
+      id: 3110068475
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1069,53 +1126,13 @@ MonoBehaviour:
       - ElementName: lvl1_Hangar
         ObjectType: 4
         guid: c6967c8ce05f7c4a84e56627c4e3f8d0
-      - ElementName: Play_Sc1
+      - ElementName: Play_HumansSc1
         ObjectType: 3
         guid: c81671d258e82748bbf7182ed7b69352
-      Path: Events/Dialogue/lvl1_Hangar/Play_Sc1
-      maxAttenuation: 200
+      Path: Events/Dialogue/lvl1_Hangar/Play_HumansSc1
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Sc2
-      guid: 307774708db9f6419e4bb50ffd99449d
-      id: 3191462598
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Dialogue
-        ObjectType: 12
-        guid: 200b6a6a285dcd439f28a67e0a03cef1
-      - ElementName: lvl1_Hangar
-        ObjectType: 4
-        guid: c6967c8ce05f7c4a84e56627c4e3f8d0
-      - ElementName: Play_Sc2
-        ObjectType: 3
-        guid: 307774708db9f6419e4bb50ffd99449d
-      Path: Events/Dialogue/lvl1_Hangar/Play_Sc2
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Play_Sc3
-      guid: 2aa9ffea7198cf4ab4716623341ef49e
-      id: 3191462599
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Dialogue
-        ObjectType: 12
-        guid: 200b6a6a285dcd439f28a67e0a03cef1
-      - ElementName: lvl1_Hangar
-        ObjectType: 4
-        guid: c6967c8ce05f7c4a84e56627c4e3f8d0
-      - ElementName: Play_Sc3
-        ObjectType: 3
-        guid: 2aa9ffea7198cf4ab4716623341ef49e
-      Path: Events/Dialogue/lvl1_Hangar/Play_Sc3
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_Sc4
       guid: 97b61cdb45bcfb40aca1b8a1d4794035
       id: 3191462592
@@ -1134,8 +1151,8 @@ MonoBehaviour:
         guid: 97b61cdb45bcfb40aca1b8a1d4794035
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc4
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.17999999
+      minDuration: 0.17999999
     - name: Play_Sc5
       guid: 9b80f6320049e748bb838bdad2923d66
       id: 3191462593
@@ -1204,8 +1221,8 @@ MonoBehaviour:
         guid: f94c27434d3abd41aed524b3d1b8a156
       Path: Events/GameWorld/Elevator/Play_Elevator_Buttonpress
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.6336875
+      minDuration: 1.6336875
     - name: Play_Elevator_ConfirmationBeep
       guid: 1a121a4646fd614fbee83013523dc0fb
       id: 2038432148
@@ -1224,8 +1241,8 @@ MonoBehaviour:
         guid: 1a121a4646fd614fbee83013523dc0fb
       Path: Events/GameWorld/Elevator/Play_Elevator_ConfirmationBeep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7987292
+      minDuration: 0.7987292
     - name: Play_Elevator_OutofOrderBeep
       guid: 879a1d43cbe2db4498bf9e8401d4f313
       id: 2046495730
@@ -1244,8 +1261,8 @@ MonoBehaviour:
         guid: 879a1d43cbe2db4498bf9e8401d4f313
       Path: Events/GameWorld/Elevator/Play_Elevator_OutofOrderBeep
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.8405
+      minDuration: 0.8405
     - name: Play_Elevator_Power_lp
       guid: 73e76949f053f44387feb35853ee2f81
       id: 1757009721
@@ -1319,6 +1336,36 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584713178556825128
     List: []
+  - PhysicalPath: Events/Music.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music
+      ObjectType: 12
+      guid: 65f5903cc95fd646825b551400abfe70
+    ParentPath: Events/Music
+    guid: 65f5903cc95fd646825b551400abfe70
+    GuidInternal: 
+    m_lastTime: -8584699388277867667
+    List:
+    - name: Play_music
+      guid: 2540ef75bc8550489230a487a51e8ae6
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: 65f5903cc95fd646825b551400abfe70
+      - ElementName: Play_music
+        ObjectType: 3
+        guid: 2540ef75bc8550489230a487a51e8ae6
+      Path: Events/Music/Play_music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/NPC.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1330,7 +1377,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584699971972710225
+    m_lastTime: -8584699309337207002
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -1464,8 +1511,8 @@ MonoBehaviour:
         guid: 1ec68a8dd7bf6f4783569feebcba8f75
       Path: Events/NPC/Damage/Play_KillConfirm
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.04
+      minDuration: 0.04
   - PhysicalPath: Events/Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1566,7 +1613,7 @@ MonoBehaviour:
     ParentPath: Events/TestEvents
     guid: 0a1992286e44cd448d508c2e1e150f58
     GuidInternal: 
-    m_lastTime: -8584699971972673860
+    m_lastTime: -8584699308449073919
     List:
     - name: Play_TestBeep
       guid: 39881d9e698e7c4cadcf1df672d74b58
@@ -1650,9 +1697,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8b4c6f59cb016e429bb576b35bb72198
       Path: Events/TestEvents/Play_TestSound
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 50
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Stop_TestBeep_lp
       guid: 2f8087e7823c064fb86ed7ae3063acb1
       id: 3106700779
@@ -1698,7 +1745,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584699754900870526
+    m_lastTime: -8584699304400338894
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -1931,9 +1978,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
       Path: Events/Weapons/Handgun/Play_Reload_Handgun
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 50
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Play_Reload_Rifle
       guid: 64244f950a8fa548a246c72dfadeea2b
       id: 2435533942
@@ -2130,6 +2177,85 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584720232967894948
     List: []
+  - PhysicalPath: States/Music_States.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Music_States
+      ObjectType: 12
+      guid: 35f4bf9fb693214abc9c2620bdf34d0f
+    ParentPath: States/Music_States
+    guid: 35f4bf9fb693214abc9c2620bdf34d0f
+    GuidInternal: 
+    m_lastTime: -8584699388277392863
+    List:
+    - name: Combat
+      guid: ba037285b5dc8440b845055c4269ffca
+      id: 2764240573
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music_States
+        ObjectType: 12
+        guid: 35f4bf9fb693214abc9c2620bdf34d0f
+      - ElementName: Combat
+        ObjectType: 9
+        guid: ba037285b5dc8440b845055c4269ffca
+      Path: States/Music_States/Combat
+      values:
+      - name: InCombat
+        guid: 23400ac30ea9594690833f48fbd0ad18
+        id: 3373579172
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat
+          ObjectType: 9
+          guid: ba037285b5dc8440b845055c4269ffca
+        - ElementName: InCombat
+          ObjectType: 8
+          guid: 23400ac30ea9594690833f48fbd0ad18
+      - name: Nocombat
+        guid: 015b3f05b5ccf049a56b4a4ab40acc87
+        id: 2930212484
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat
+          ObjectType: 9
+          guid: ba037285b5dc8440b845055c4269ffca
+        - ElementName: Nocombat
+          ObjectType: 8
+          guid: 015b3f05b5ccf049a56b4a4ab40acc87
+      - name: None
+        guid: b7666eb0873ea64981a9f25120b275d9
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat
+          ObjectType: 9
+          guid: ba037285b5dc8440b845055c4269ffca
+        - ElementName: None
+          ObjectType: 8
+          guid: b7666eb0873ea64981a9f25120b275d9
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   - PhysicalPath: States/States.wwu
     PathAndIcons:
     - ElementName: States
@@ -2141,7 +2267,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584699981781590681
+    m_lastTime: -8584699152576392185
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2774,6 +2900,63 @@ MonoBehaviour:
         - ElementName: Sc2_Tr3
           ObjectType: 8
           guid: 16267201cf7e204ebf5700777c5bad22
+      - name: Sc3_Tr1
+        guid: d8fc6d57aebe0744a639c77a4dedfde3
+        id: 569325008
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc3_Tr1
+          ObjectType: 8
+          guid: d8fc6d57aebe0744a639c77a4dedfde3
+      - name: Sc3_Tr2
+        guid: 4959123f584cfa45a3bc372b2c860c9e
+        id: 569325011
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc3_Tr2
+          ObjectType: 8
+          guid: 4959123f584cfa45a3bc372b2c860c9e
+      - name: Sc4_Tr1
+        guid: e2d7a09412f0714d875e2e407592c0e5
+        id: 551107239
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc4_Tr1
+          ObjectType: 8
+          guid: e2d7a09412f0714d875e2e407592c0e5
       - name: TriggerIsWaiting
         guid: b454a5f1ac98154ebb46cc51c6f276ee
         id: 2172575860
@@ -4274,7 +4457,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d000000110000001300000014000000190000001c0000001d0000001e0000001f0000002100000022000000250000002600000027000000290000002a0000002d0000002e0000003200000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
+  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d0000000e000000110000001300000014000000190000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e00000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006a0000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

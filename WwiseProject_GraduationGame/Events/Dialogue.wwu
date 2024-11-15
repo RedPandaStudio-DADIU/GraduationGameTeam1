@@ -5,32 +5,55 @@
 			<ChildrenList>
 				<Folder Name="lvl1_Hangar" ID="{8C7C96C6-5FE0-4A7C-84E5-6627C4E3F8D0}" ShortID="1044900835">
 					<ChildrenList>
-						<Event Name="Play_Sc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}">
+						<Event Name="Play_HumansSc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}">
 							<ChildrenList>
-								<Action Name="" ID="{4C7CE915-F9AF-47B8-AD08-88EC6727C0B7}" ShortID="552778466">
+								<Action Name="" ID="{5473E6FF-159C-45EA-AC63-E86A6841307A}" ShortID="1030733554">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Solider1" ID="{91688055-BE84-4395-AB8C-B273FB15165B}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											<ObjectRef Name="Trigger1Switch" ID="{91688055-BE84-4395-AB8C-B273FB15165B}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{504950EA-693C-498B-ACDF-B41CB8F8BE82}" ShortID="703717184">
+								<Action Name="" ID="{09F4B9CF-76F4-4D56-BFAF-94F8DB8E489E}" ShortID="458939418">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Soldier2" ID="{16FE842E-4EC4-4CDC-B1DA-DA0498AF6994}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											<ObjectRef Name="Play_Dia_Xaga" ID="{70747730-B98D-41F6-9E4B-B50FFD99449D}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Sc2" ID="{70747730-B98D-41F6-9E4B-B50FFD99449D}"/>
-						<Event Name="Play_Sc3" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}"/>
+						<Event Name="Play_Dia_Xaga" ID="{70747730-B98D-41F6-9E4B-B50FFD99449D}">
+							<ChildrenList>
+								<Action Name="" ID="{D7F3D33C-985E-411C-B070-FB7B5A22CAFA}" ShortID="745252938">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Dia_Ai" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}">
+							<ChildrenList>
+								<Action Name="" ID="{FB918CD2-25A3-459E-B9AD-15433305DB02}" ShortID="10642810">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dialogue_JD+Ai" ID="{621260DD-8FFF-4B58-BF25-C8080FC71676}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Play_Sc4" ID="{DB1CB697-BC45-40FB-ACA1-B8A1D4794035}">
 							<ChildrenList>
 								<Action Name="" ID="{857EB0B4-6CBF-4880-BA1D-4EFC1BF7936B}" ShortID="86421310">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="JD_Monologue" ID="{28BB3BA3-9BB4-4281-B48C-2AF4A744DFEC}" WorkUnitID="{D2363AB2-B17F-47E0-93D3-C6D4FDCD20A0}"/>
+											<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -51,7 +74,7 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="lvl2_Conference" ID="{3B71567B-F77B-4B7F-A906-F88B5E191254}" ShortID="815035599"/>
-				<Event Name="Play_Dia_Xaga" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}">
+				<Event Name="Play_Dia_Xaga_" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}">
 					<ChildrenList>
 						<Action Name="" ID="{18EB9DD4-B13C-4A36-9060-DCAFFC959D38}" ShortID="978817850">
 							<ReferenceList>

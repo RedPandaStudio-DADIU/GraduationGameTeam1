@@ -38,96 +38,7 @@
 									<ObjectRef Name="Scenes_lvl1" ID="{D1681C8A-6090-43DC-8389-36963323B27F}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
 								</Reference>
 							</ReferenceList>
-							<ChildrenList>
-								<RandomSequenceContainer Name="Sc1_Tr1" ID="{A9785483-2440-449A-A1CA-B59B55321A63}" ShortID="52875200">
-									<PropertyList>
-										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="JD_Damn" ID="{8A70B871-2BD0-450E-9566-DCDE215607AF}" ShortID="919908880">
-											<PropertyList>
-												<Property Name="IsVoice" Type="bool" Value="True"/>
-												<Property Name="UserAuxSendVolume0" Type="Real64">
-													<ValueList>
-														<Value>-25</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="JD_Damn" ID="{BA30B13A-1210-4E63-8AC0-C0C4822ADDCD}">
-													<Language>English(US)</Language>
-													<AudioFile>JD_Damn.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="319560865"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="JD_Damn" ID="{BA30B13A-1210-4E63-8AC0-C0C4822ADDCD}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="JD_ThisIsLookingGrim" ID="{8610385D-A822-4123-AE22-6FC457845967}" ShortID="852950298">
-											<PropertyList>
-												<Property Name="IsVoice" Type="bool" Value="True"/>
-												<Property Name="UserAuxSendVolume0" Type="Real64">
-													<ValueList>
-														<Value>-25</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-												</Reference>
-												<Reference Name="UserAuxSend0">
-													<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="JD_ThisIsLookingGrim" ID="{7F19F518-00CD-463B-A796-613E0AEFF071}">
-													<Language>English(US)</Language>
-													<AudioFile>JD_ThisIsLookingGrim.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="860609950"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="JD_ThisIsLookingGrim" ID="{7F19F518-00CD-463B-A796-613E0AEFF071}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-							</ChildrenList>
-							<GroupingInfo>
-								<GroupingBehaviorList>
-									<GroupingBehavior>
-										<ItemRef Name="Sc1_Tr1" ID="{A9785483-2440-449A-A1CA-B59B55321A63}"/>
-									</GroupingBehavior>
-								</GroupingBehaviorList>
-							</GroupingInfo>
+							<GroupingInfo/>
 						</SwitchContainer>
 						<Sound Name="JD_CanYouGetToThePointPlease1" ID="{05596A9E-1013-4B9D-8276-445494160414}" ShortID="743208503">
 							<PropertyList>
@@ -179,56 +90,6 @@
 								<ActiveSource Name="JD_DamnComputerDoYouSee1" ID="{E5BD5ECA-88A6-49F3-86E5-F2BA7E84D79E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="JD_DamnComputerDoYouSeeThis" ID="{A8A0A08B-C173-493B-9863-32C9718E8764}" ShortID="488856304">
-							<PropertyList>
-								<Property Name="IsVoice" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="JD_DamnComputerDoYouSeeThis" ID="{DF3A0A00-3BDF-44AF-9721-7DC4D7DAF4CB}">
-									<Language>English(US)</Language>
-									<AudioFile>JD_DamnComputerDoYouSeeThis.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1007587335"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="JD_DamnComputerDoYouSeeThis" ID="{DF3A0A00-3BDF-44AF-9721-7DC4D7DAF4CB}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="JD_FuckHagnOn" ID="{849A450B-F9F6-4B2E-B5A5-3E8478A68E84}" ShortID="1032006690">
-							<PropertyList>
-								<Property Name="IsVoice" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="JD_FuckHagnOn" ID="{110EF9EE-16F2-44B4-BCD6-B4B13282E5D8}">
-									<Language>English(US)</Language>
-									<AudioFile>JD_FuckHagnOn.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="580276444"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="JD_FuckHagnOn" ID="{110EF9EE-16F2-44B4-BCD6-B4B13282E5D8}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="JD_FuckTheseAliens" ID="{A3CDE421-B06C-4C2C-A77A-EB7B64AEE313}" ShortID="19426714">
 							<PropertyList>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
@@ -254,56 +115,6 @@
 								<ActiveSource Name="JD_FuckTheseAliens" ID="{33B452A9-A5D3-4551-8755-46FC365D00FC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="JD_GetToThePointPlease1" ID="{27E0F780-3531-468B-8D06-5F4BB4C71CBC}" ShortID="352238569">
-							<PropertyList>
-								<Property Name="IsVoice" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="JD_GetToThePointPlease1" ID="{6BF7491C-8432-4425-B749-38105621B3AF}">
-									<Language>English(US)</Language>
-									<AudioFile>JD_GetToThePointPlease1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="844964757"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="JD_GetToThePointPlease1" ID="{6BF7491C-8432-4425-B749-38105621B3AF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="JD_Hello_Annoyed" ID="{42F4DDFA-6B31-4845-8C3B-105546DBEBC4}" ShortID="553646634">
-							<PropertyList>
-								<Property Name="IsVoice" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="JD_Hello_Annoyed" ID="{BCB74A21-49E9-4A18-817A-837B0EA70227}">
-									<Language>English(US)</Language>
-									<AudioFile>JD_Hello_Annoyed.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="262623482"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="JD_Hello_Annoyed" ID="{BCB74A21-49E9-4A18-817A-837B0EA70227}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="JD_Hello_Serious" ID="{4BCDB06F-8839-4C3B-94A1-15A3922EDC80}" ShortID="110921181">
 							<PropertyList>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
@@ -318,6 +129,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="JD_Hello_Serious" ID="{D0D4E9A5-7AA2-4492-B5AC-920200588B51}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0216841688131563"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.625226867446007"/>
+									</PropertyList>
 									<Language>English(US)</Language>
 									<AudioFile>JD_Hello_Serious.wav</AudioFile>
 									<MediaIDList>
@@ -327,31 +143,6 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="JD_Hello_Serious" ID="{D0D4E9A5-7AA2-4492-B5AC-920200588B51}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="JD_Hi_deep" ID="{5DE3CD89-C720-41AB-A75F-FDA667726501}" ShortID="971065528">
-							<PropertyList>
-								<Property Name="IsVoice" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="JD_Hi_deep" ID="{D62FCD62-F654-4FA0-B47C-67E030FF1C45}">
-									<Language>English(US)</Language>
-									<AudioFile>JD_Hi_deep.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1002694858"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="JD_Hi_deep" ID="{D62FCD62-F654-4FA0-B47C-67E030FF1C45}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="JD_Hmm" ID="{7B48D548-AD3F-492C-BD47-98C3893FF2E5}" ShortID="1005826105">
@@ -618,6 +409,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="JD_Yeeah" ID="{0E2E597B-8F3D-410E-BDF0-5B2223A2B72C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.026217439703154"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.753751391465677"/>
+									</PropertyList>
 									<Language>English(US)</Language>
 									<AudioFile>JD_Yeeah.wav</AudioFile>
 									<MediaIDList>
