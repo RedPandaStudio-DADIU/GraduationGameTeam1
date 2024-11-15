@@ -25,7 +25,13 @@ public abstract class EnemyBaseClass : MonoBehaviour
     public abstract void Attack();
     public abstract void Die();
     public abstract void LosePlayer(Vector3 playerPosition);
+    public virtual void SpecialAttack(Transform playe){
+        Debug.Log("Inside Special Attack");
+    }
 
+    public virtual AK.Wwise.Event GetChargeSound(){
+        return null;
+    }
 
     public Vector3 DetectPlayer(){
         return new Vector3(0, 0, 0);
@@ -87,5 +93,6 @@ public abstract class EnemyBaseClass : MonoBehaviour
     public EnemyRagdollController GetRagdollController(){
         return this.GetComponent<EnemyRagdollController>();
     }
+
 
 }
