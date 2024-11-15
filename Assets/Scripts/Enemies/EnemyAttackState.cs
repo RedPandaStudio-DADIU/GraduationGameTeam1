@@ -16,7 +16,9 @@ public class EnemyAttackState : IEnemyState
         if(stateController.GetEnemy().GetIsMovable()){
             stateController.SetNavAgent();
         }
-        specialAttackCoroutine = stateController.StartCoroutine(SpecialAttackCoroutine(stateController));
+        if(stateController.GetEnemy().CompareTag("Boss")){
+            specialAttackCoroutine = stateController.StartCoroutine(SpecialAttackCoroutine(stateController));
+        }
 
     }
     public void OnUpdate(EnemyStateController stateController){
@@ -38,7 +40,8 @@ public class EnemyAttackState : IEnemyState
             }
         }
 
-        
+        // stateController.PrintAgentDestination();
+
     }
     public void OnExit(EnemyStateController stateController){
         // Debug.Log("Exiting Attack State");
@@ -50,11 +53,14 @@ public class EnemyAttackState : IEnemyState
         
         shootingCoroutine = null;
 
-        if (specialAttackCoroutine != null)
-        {
-            stateController.StopCoroutine(specialAttackCoroutine);
+        if(stateController.GetEnemy().CompareTag("Boss")){
+
+            if (specialAttackCoroutine != null)
+            {
+                stateController.StopCoroutine(specialAttackCoroutine);
+            }
+            specialAttackCoroutine = null;
         }
-        specialAttackCoroutine = null;
         // isSpecialStateActive = false;
 
     }
