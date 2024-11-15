@@ -7,12 +7,17 @@ public class EnemyAttackState : IEnemyState
 {
     private bool isAttacking = false;
     private Coroutine shootingCoroutine;
+    private float specialStateIntervals = 5f;
+    private bool isSpecialStateActive = false;
+    private Coroutine specialAttackCoroutine;
 
     public void OnEnter(EnemyStateController stateController){
         // Debug.Log("Entering Attack State");
         if(stateController.GetEnemy().GetIsMovable()){
             stateController.SetNavAgent();
         }
+        specialAttackCoroutine = stateController.StartCoroutine(SpecialAttackCoroutine(stateController));
+
     }
     public void OnUpdate(EnemyStateController stateController){
         if(stateController.GetEnemy().GetIsMovable()){
@@ -42,7 +47,15 @@ public class EnemyAttackState : IEnemyState
         {
             stateController.StopCoroutine(shootingCoroutine);
         }
+        
         shootingCoroutine = null;
+
+        if (specialAttackCoroutine != null)
+        {
+            stateController.StopCoroutine(specialAttackCoroutine);
+        }
+        specialAttackCoroutine = null;
+        // isSpecialStateActive = false;
 
     }
 
@@ -64,5 +77,17 @@ public class EnemyAttackState : IEnemyState
         }
     }
 
+    private IEnumerator SpecialAttackCoroutine(EnemyStateController stateController)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(specialStateIntervals);
+
+            // if (!isSpecialStateActive)
+            // {
+            stateController.ChangeState(new BossSpecialState());
+            // }
+        }
+    }
 
 }
