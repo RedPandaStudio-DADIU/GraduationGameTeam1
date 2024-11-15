@@ -49,6 +49,8 @@ public class EnemyStateController : MonoBehaviour
     {
         currentState.OnUpdate(this);
 
+        Debug.LogWarning("Current state for: " + this.GetEnemy().name + " is: " + currentState);
+
         if(this.GetEnemy().GetHealth() <= 0 && currentState is not EnemyDieState){
             ChangeState(new EnemyDieState());
         }
@@ -174,6 +176,10 @@ public class EnemyStateController : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void PrintAgentDestination(){
+        Debug.LogWarning("Destination: " +   enemy.GetComponent<NavMeshAgent>().destination  + "of AI Agent: " + this.gameObject.name);
     }
 
     public bool GetPlayerInRange(){
