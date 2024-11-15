@@ -2064,7 +2064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 166285989206622861, guid: aaa6ef31e700fff4796712eef13c15f3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1402239739183895110, guid: aaa6ef31e700fff4796712eef13c15f3, type: 3}
       propertyPath: m_PreserveAspect
@@ -19114,7 +19114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 815820618}
-  - component: {fileID: 815820617}
+  - component: {fileID: 815820619}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -19122,7 +19122,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &815820617
+--- !u!4 &815820618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815820616}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815820619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19147,21 +19162,6 @@ MonoBehaviour:
   spatialAudioPoolSize: 0
   maxSoundPropagationDepth: 0
   engineLogging: 0
---- !u!4 &815820618
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815820616}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &816695961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37351,6 +37351,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7215768009068062460, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343430181792398257, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343430181792398257, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}
+      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8583264451884463879, guid: 23374621ba0c6304f8161fce4cf15e3c, type: 3}

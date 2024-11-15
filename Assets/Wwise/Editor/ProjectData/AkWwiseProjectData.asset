@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master
     guid: d2b3f9926e5be84bbd1fcd54538eb6e9
     GuidInternal: 
-    m_lastTime: -8584701680441411979
+    m_lastTime: -8584699971972884221
     List:
     - name: HangarVerb_JD
       guid: 84e87f0fe12db9458befbfa1f35c2545
@@ -986,7 +986,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584700245621313099
+    m_lastTime: -8584699738275699607
     List:
     - name: lvl1_Hangar
       guid: c6967c8ce05f7c4a84e56627c4e3f8d0
@@ -1037,8 +1037,8 @@ MonoBehaviour:
         guid: efb6edb945d3ea47ba3f968f0d5fd414
       Path: Events/Dialogue/Play_Dia_JohnDoe
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Dia_Xaga
       guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
       id: 16982058
@@ -1053,7 +1053,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
       Path: Events/Dialogue/Play_Dia_Xaga
-      maxAttenuation: 20
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Sc1
@@ -1073,9 +1073,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: c81671d258e82748bbf7182ed7b69352
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc1
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 200
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Sc2
       guid: 307774708db9f6419e4bb50ffd99449d
       id: 3191462598
@@ -1134,8 +1134,8 @@ MonoBehaviour:
         guid: 97b61cdb45bcfb40aca1b8a1d4794035
       Path: Events/Dialogue/lvl1_Hangar/Play_Sc4
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Sc5
       guid: 9b80f6320049e748bb838bdad2923d66
       id: 3191462593
@@ -1330,7 +1330,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584701858271568471
+    m_lastTime: -8584699971972710225
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -1464,8 +1464,8 @@ MonoBehaviour:
         guid: 1ec68a8dd7bf6f4783569feebcba8f75
       Path: Events/NPC/Damage/Play_KillConfirm
       maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events/Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1566,7 +1566,7 @@ MonoBehaviour:
     ParentPath: Events/TestEvents
     guid: 0a1992286e44cd448d508c2e1e150f58
     GuidInternal: 
-    m_lastTime: -8584701858271567394
+    m_lastTime: -8584699971972673860
     List:
     - name: Play_TestBeep
       guid: 39881d9e698e7c4cadcf1df672d74b58
@@ -1651,8 +1651,8 @@ MonoBehaviour:
         guid: 8b4c6f59cb016e429bb576b35bb72198
       Path: Events/TestEvents/Play_TestSound
       maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TestBeep_lp
       guid: 2f8087e7823c064fb86ed7ae3063acb1
       id: 3106700779
@@ -1698,7 +1698,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584701858271566221
+    m_lastTime: -8584699754900870526
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -1872,8 +1872,8 @@ MonoBehaviour:
         guid: 4f3692d7a9c6dc499f7866d8056ac20d
       Path: Events/Weapons/Rifle/Play_Idle_Rifle
       maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Play_Load_handgun
       guid: 3d0558495dabc04ea8d9576484f6d709
       id: 249020240
@@ -1932,8 +1932,8 @@ MonoBehaviour:
         guid: 34cdbbdbb6624d4489ffdafeeb4ae04a
       Path: Events/Weapons/Handgun/Play_Reload_Handgun
       maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Reload_Rifle
       guid: 64244f950a8fa548a246c72dfadeea2b
       id: 2435533942
@@ -1952,8 +1952,8 @@ MonoBehaviour:
         guid: 64244f950a8fa548a246c72dfadeea2b
       Path: Events/Weapons/Rifle/Play_Reload_Rifle
       maxAttenuation: 0
-      maxDuration: 0.5
-      minDuration: 0.5
+      maxDuration: 0.04
+      minDuration: 0.04
     - name: Play_Unload_Rifle
       guid: 298d9293da1fc14aa984bea16cd9154b
       id: 1943012356
@@ -2141,7 +2141,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584700245621290754
+    m_lastTime: -8584699981781590681
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2238,9 +2238,9 @@ MonoBehaviour:
         - ElementName: Hangar2
           ObjectType: 8
           guid: 451d3c7577a42a488558d42ce93e72a1
-      - name: Harngar3
+      - name: Hangar3
         guid: 01704f75beff5043af177dfe9fc09b6b
-        id: 2130932629
+        id: 1814387311
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2251,7 +2251,7 @@ MonoBehaviour:
         - ElementName: AreaState
           ObjectType: 9
           guid: fed77a67db43b149b10b721d1e000093
-        - ElementName: Harngar3
+        - ElementName: Hangar3
           ObjectType: 8
           guid: 01704f75beff5043af177dfe9fc09b6b
       - name: InsideElevator
@@ -2774,6 +2774,25 @@ MonoBehaviour:
         - ElementName: Sc2_Tr3
           ObjectType: 8
           guid: 16267201cf7e204ebf5700777c5bad22
+      - name: TriggerIsWaiting
+        guid: b454a5f1ac98154ebb46cc51c6f276ee
+        id: 2172575860
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: TriggerIsWaiting
+          ObjectType: 8
+          guid: b454a5f1ac98154ebb46cc51c6f276ee
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -4255,7 +4274,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d0000001100000013000000140000001c0000001d0000001e0000001f0000002100000022000000250000002600000027000000290000002a0000002d0000002e0000003200000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
+  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d000000110000001300000014000000190000001c0000001d0000001e0000001f0000002100000022000000250000002600000027000000290000002a0000002d0000002e0000003200000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

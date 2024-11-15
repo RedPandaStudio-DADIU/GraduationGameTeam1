@@ -25,7 +25,7 @@
 									<PropertyList>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>-19</Value>
+												<Value>-8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -47,7 +47,7 @@
 														<CustomState Name="" ID="{6A9E33D2-501B-483F-B037-77EC08AE3B61}" ShortID="363651724"/>
 													</CustomState>
 													<CustomState>
-														<StateRef Name="Harngar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+														<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
 														<CustomState Name="" ID="{86DBEF03-A17C-45FE-BE43-9B0F878464E8}" ShortID="230334625"/>
 													</CustomState>
 													<CustomState>
@@ -92,7 +92,7 @@
 																			<CustomState Name="" ID="{0E9697AD-8F2A-4BA3-BD92-4874D7CDE5A0}" ShortID="176816600"/>
 																		</CustomState>
 																		<CustomState>
-																			<StateRef Name="Harngar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+																			<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
 																			<CustomState Name="" ID="{77958498-EA31-40F4-8B82-C3C0DE8C8086}" ShortID="552056408"/>
 																		</CustomState>
 																		<CustomState>
@@ -138,7 +138,7 @@
 																			<CustomState Name="" ID="{3A3EDDB9-5E9D-4ED5-892C-6FE8DA7AA531}" ShortID="1027268967"/>
 																		</CustomState>
 																		<CustomState>
-																			<StateRef Name="Harngar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+																			<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
 																			<CustomState Name="" ID="{32C8F111-D775-4831-9FCD-5212FB27D83E}" ShortID="224464269">
 																				<PropertyList>
 																					<Property Name="Bypass" Type="bool" Value="True"/>
@@ -194,7 +194,7 @@
 												<CustomState Name="" ID="{CE56FC8D-E004-451A-9908-9266366F2496}" ShortID="409909987"/>
 											</CustomState>
 											<CustomState>
-												<StateRef Name="Harngar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+												<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
 												<CustomState Name="" ID="{15B292C6-AEB0-46F2-A9B1-8257D0BBBBCA}" ShortID="166377914"/>
 											</CustomState>
 											<CustomState>
@@ -220,6 +220,9 @@
 											<Reference>
 												<Local>
 													<EffectSlot Name="" ID="{658AF3F3-BE1A-4489-90E4-403949407025}" ShortID="140497034">
+														<PropertyList>
+															<Property Name="Bypass" Type="bool" Value="True"/>
+														</PropertyList>
 														<ReferenceList>
 															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 																<ObjectRef Name="HelmetEQ" ID="{CD354935-84E0-46B4-B687-2395F28D157F}" WorkUnitID="{1381E90E-CEBA-4A13-AD41-8ECCD1E9FEFD}"/>
@@ -236,7 +239,7 @@
 																	<CustomState Name="" ID="{2A3E0168-ECE1-4A7D-B044-E66DBA76A44C}" ShortID="902464971"/>
 																</CustomState>
 																<CustomState>
-																	<StateRef Name="Harngar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+																	<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
 																	<CustomState Name="" ID="{A8DCBB4B-B6E0-4D22-B757-86C31816A702}" ShortID="767489298"/>
 																</CustomState>
 																<CustomState>

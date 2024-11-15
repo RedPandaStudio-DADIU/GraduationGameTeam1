@@ -77,11 +77,12 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Sc1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
-						<CurrentStateRef Name="On" ID="{38418DA2-AE8F-4F9E-90BC-277B67AA01F2}"/>
+						<CurrentStateRef Name="None" ID="{B97CD3D2-D03B-40A5-A408-6437983095DF}"/>
+						<CurrentStateRef Name="None" ID="{F5D70421-08EA-47C4-9A07-5AF1242504C0}"/>
 						<CurrentStateRef Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
+						<CurrentStateRef Name="Sc1_tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}"/>
 						<CurrentStateRef Name="None" ID="{71DEAC1B-AFD2-4EF9-B68B-44EF423FA49A}"/>
-						<CurrentStateRef Name="Sc1" ID="{98F8221E-9BBA-4BBD-A142-E5B096921A65}"/>
+						<CurrentStateRef Name="None" ID="{5FAADFB1-36C0-4C95-B32D-FC322F8ED4C4}"/>
 						<CurrentStateRef Name="None" ID="{1725FE84-7321-45EB-8265-EAA10E64B31A}"/>
 						<CurrentStateRef Name="None" ID="{06E39AB6-657B-43CB-AC87-509895CB23D3}"/>
 					</CurrentStateList>
@@ -100,9 +101,29 @@
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="DialoigueTriggers" ID="{B80B753F-76A9-4641-A955-923FECED542F}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Sc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Sc1_tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
+						<CurrentSwitchRef Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+						<CurrentSwitchRef Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<CurrentSwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
+						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
+						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
+						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
+						<CurrentSwitchRef Name="Awake" ID="{64088296-B8D5-43C1-925A-106B9C3BF6AC}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

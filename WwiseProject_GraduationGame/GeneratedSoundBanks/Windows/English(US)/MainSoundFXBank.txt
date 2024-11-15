@@ -12,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	903081441	Play_AmbienceMain			\Ambience\Play_AmbienceMain	
 	941492189	Play_Hitmarker_main			\Weapons\Hitmarkers\Play_Hitmarker_main	
 	1174221978	Play_HitArmor			\NPC\Damage\Play_HitArmor	
+	1296777492	Play_Dia_JohnDoe			\Dialogue\Play_Dia_JohnDoe	
 	1670385919	Stop_TestBeep_lp_3D			\TestEvents\Stop_TestBeep_lp_3D	
 	1681067324	Play_TestBeep_3D			\TestEvents\Play_TestBeep_3D	
 	1883912870	Play_Brute_Footsteps			\NPC\Brute\Play_Brute_Footsteps	
@@ -73,29 +74,27 @@ Switch	ID	Name	Switch Group			Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2064552269	AreaState			\States\AreaState	
-	2802482050	JohnDoe			\States\Dialogue\JohnDoe	
 	3305603258	GuitarSpeaker			\States\Speakers\GuitarSpeaker	
-	4123380240	Xaga			\States\Dialogue\Xaga	
+	4121174866	Scenes_lvl1			\States\Dialogue\Scenes_lvl1	
 
 State	ID	Name	State Group			Notes
 	748895195	None	AreaState			
 	1814387309	Hangar1	AreaState			
 	1814387310	Hangar2	AreaState			
-	2130932629	Harngar3	AreaState			
+	1814387311	Hangar3	AreaState			
 	2393120223	InsideElevator	AreaState			
 	2782928028	ConferenceRoom2	AreaState			
 	2782928029	ConferenceRoom3	AreaState			
 	2782928031	ConferenceRoom1	AreaState			
-	477127956	Sc1	JohnDoe			
-	748895195	None	JohnDoe			
-	3956690975	WaitingOnTrigger	JohnDoe			
 	748895195	None	GuitarSpeaker			
 	930712164	Off	GuitarSpeaker			
 	1651971902	On	GuitarSpeaker			
-	477127956	Sc1	Xaga			
-	477127959	Sc2	Xaga			
-	748895195	None	Xaga			
-	2239442679	WaitingOnTriggerEnter	Xaga			
+	342028878	Sc1_tr1	Scenes_lvl1			
+	748895195	None	Scenes_lvl1			
+	2172575860	TriggerIsWaiting	Scenes_lvl1			
+	3079543733	Sc2_Tr1	Scenes_lvl1			
+	3079543734	Sc2_Tr2	Scenes_lvl1			
+	3079543735	Sc2_Tr3	Scenes_lvl1			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	870672907	RTPC_GroundWetness			\GameParameters\RTPC_GroundWetness	
@@ -131,6 +130,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	646908088	BootRunCompressor (Custom)	Wwise Compressor			
 	727638997	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
 	751144099	BootRunCompressor (Custom)	Wwise Compressor			
+	819943492	Fear_no_Evil	Wwise Harmonizer			
 	963013833	BootRunCompressor (Custom)	Wwise Compressor			
 	999756589	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
 	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
@@ -140,15 +140,17 @@ Effect plug-ins	ID	Name	Type				Notes
 	1866712633	High_Freq_Cut_3	Wwise Parametric EQ			
 	1904434771	Medium_Room1	Wwise Matrix Reverb			
 	2849147824	Medium	Wwise RoomVerb			
+	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
 	4119703916	HelmetEQ	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	63893666	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_WorkUnit\JohnDoeActormixer\JD_Monologue\TestSound\Tone Generator	
+	16454064	Silence	Wwise Silence		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Solider1\Silence\Silence	
 	69832810	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\Sfx_fs_TestSound\Tone Generator	
 	184931808	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Wet\Sfx_fs_TestSound\Tone Generator	
 	310803756	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Damp\Sfx_fs_TestSound\Tone Generator	
 	323944449	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Dry\Sfx_fs_TestSound\Tone Generator	
-	411162420	Silence	Wwise Silence		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Xaga_Hangar\Hangar_Xaga\Silence\Silence	
+	411162420	Silence	Wwise Silence		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Silence\Silence	
+	499165873	Silence	Wwise Silence		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Soldier2\Silence\Silence	
 	567366394	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Soundly\GuitarSpkr\Guitar_speaker\SpeakerOff\Silence	
 	793404368	Tone Generator	Wwise Tone Generator		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Dirt_WetnessSwitch\Soaked\Sfx_fs_TestSound\Tone Generator	
 	810201504	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Layer_NoMaterial\Silence	
@@ -160,6 +162,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	28983933	Cloth03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_E67CE9E7.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Jump+Land\Jump\ClothP1\Cloth03		134220
 	33074131	Boots_StartStop_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Boots_StartStop_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Transition\Boots_StartStop_01		67408
 	34821737	Hangun_Load	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Weapons\Handgun\Hangun_Load_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Gun\Hangun_Load		325376
+	36519702	DS_ARGH	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\ARGH_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Soldier2\Sc1Lines\DS_ARGH		76128
+	42718374	ITSJOHNDOE	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\ITSJOHNDOE_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Solider1\1stLines\ITSJOHNDOE		207456
 	50251163	Boots_Run_Toe_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_03_25B50D5A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe\Boots_Run_Toe_03		61128
 	61446819	Boots_Run_Toe_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_06_30DCEA9F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe\Boots_Run_Toe_06		77164
 	64833205	Metal2_Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 5_BA7EE86E.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Play_Land_MaterialLayer\Metal2_Land_Layer\Metal2_Land3\Metal2_Fs_05		51280
@@ -167,13 +171,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	95896769	Tile_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1_C79660D5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_02		38900
 	108052905	Boots_Run_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_05_8B559579.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel\Boots_Run_Heel_05		15644
 	108336228	Boots_Walk_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_04_A5EC4D9C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Jump+Land\Jump\Boots_Walk_Toe_04		75220
-	116776916	GidAtDeVilleDo	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\GidAtDeVilleDo_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_WorkUnit\JohnDoeActormixer\JD_Monologue\GidAtDeVilleDo		572972
+	111609954	Xaga_ThisAmusesMe	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Xaga_ThisAmusesMe_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr2\Xaga_ThisAmusesMe		338784
 	133120763	Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1_FBC78EF0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Ambience\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1		8483004
 	134389032	Cloth	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1_606D4C6D.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\Player_ClothMovement\ClothP1\Cloth		100622
 	141207199	Tile_Fs_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 6_D634B678.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_07		24464
-	153388572	Pathetic_temp1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Pathetic_temp1_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Xaga_Hangar\Hangar_Xaga\Pathetic_temp1		757912
 	157072511	Boots_Walk_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_04_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_04		75220
 	165684999	Cloth07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_DEB3698B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Jump+Land\Jump\ClothP1\Cloth07		107122
+	173506951	Soldier_Wilhelm	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Wilhelm Scream Remastered_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Solider1\1stLines\Soldier_Wilhelm		499296
 	180730371	Metal_fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7_375D18CC.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Play_Land_MaterialLayer\Metal_Land_layer\Metal_Land2\Metal_fs_02		92316
 	185439445	MetalLadder__Fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 2_1BB066E1.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_03		112352
 	199293111	Boots_Walk_Heel_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_02		16140
@@ -182,6 +186,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	212365264	Leatherboots_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 5_940A26C0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Walk\Leatherboots_04		108304
 	216218866	Boots_Walk_Heel_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_05_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_05		15860
 	221218712	Boots_Walk_Toe_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_05_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_05		68444
+	222730321	Xaga_HAHAHA	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Xaga_HAHAHA_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr1\Xaga_HAHAHA		133728
 	243008600	Boots_Run_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Heel_06_5CB3E1E0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel\Boots_Run_Heel_06		15548
 	247373654	Cloth09	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_1CF36D38.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\Player_ClothMovement\ClothP1\Cloth09		112776
 	259744675	Leatherboots_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 3_3DE4B037.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Walk\Leatherboots_02		88404
@@ -191,6 +196,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	287061307	Br_Fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 6_D135E6CE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_04		137344
 	291745391	Rifle_Alt_Fire	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Weapons\Rifle\Rifle_Alt_Fire_849B477C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Alt_Fire\Rifle_Alt_Fire		224764
 	293041057	Boots_Walk_Toe_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_02_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_02		103192
+	304323509	ThefederationReallySentYou	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\ThefederationReallySentYou_B1D047C2.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr1\ThefederationReallySentYou		335256
 	330453251	Cloth10	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_DA1C4C8D.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\Player_ClothMovement\ClothP2\Cloth10		135380
 	341543950	Tile_Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 4_28483762.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_05		29128
 	343184591	MetalLadder__Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 1_04514761.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_02		111408
@@ -198,6 +204,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	362820780	Tile_Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072_E0460A23.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_01		41070
 	371279162	Boots_Walk_Toe_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_01		69560
 	380138756	Rifle_AirRelease	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Rifle_AirRelease_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_AirRelease		129744
+	381153464	ThefederationReallySentYou_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\ThefederationReallySentYou_AAE0AD09.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr1\ThefederationReallySentYou_01		179436
 	383454313	Boots_Walk_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_06_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_06		14096
 	390256246	Boots_Run_Toe_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_05_A811F49F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe\Boots_Run_Toe_05		54092
 	394144264	Boots_Walk_Heel_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_01_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_01		18708
@@ -207,12 +214,16 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	435089554	Boots_Walk_Toe_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_06_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_06		80028
 	444986285	Br_Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3_4A0FDD30.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_01		97320
 	453613366	Metal_fs	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2_AD62EBE1.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs		106048
+	455882504	Xaga_IfYouWantToAvenge	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Xaga_IfYouWantToAvenge_7B2131EC.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Xaga_IfYouWantToAvenge		487044
 	484715529	Boots_Run_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_04_3A8107D8.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe\Boots_Run_Toe_04		68880
 	497200545	Metal2_Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 6_B5EE7E0F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Play_Land_MaterialLayer\Metal2_Land_Layer\Metal2_Land3\Metal2_Fs_06		54158
 	511784467	Boots_Walk_Toe_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Toe_07_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_07		77760
+	527660718	Xaha_Haha	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Xaha_Haha_A5B0F7C8.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr2\Xaha_Haha		114036
 	530099864	Metal2_Fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 1_0915C658.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_01		51572
 	532629220	MetalLadder__Fs_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 3_6B8C755D.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_04		114656
+	544283314	TheCaelariHaveBetrayedUs	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\TheCaelariHaveBetrayedUs_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Solider1\1stLines\TheCaelariHaveBetrayedUs		195936
 	563975790	Rifle_Recharge_3	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Rifle_Recharge_3_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Recharge\Rifle_Recharge\Rifle_Recharge_3		521440
+	566386167	NO	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\NO_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Soldier2\Sc1Lines\NO		76128
 	570131319	Rifle_GutteralRelease	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Rifle_GutteralRelease_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_GutteralRelease		158016
 	601869256	Metal_fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5_F23F92C5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Play_Land_MaterialLayer\Metal_Land_layer\Metal_Land1\Metal_fs_01		99256
 	604477528	Metal_fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9_1F9F6216.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_Jump_MaterialLayer\Metal_Jump\Metal_fs_03		106336
@@ -228,6 +239,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	700561171	Hitmarker_Air_v1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Hitmarker_Air_v1_B4AC1E30.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Hitmarker_Air_v1		13826
 	711013141	Metal_fs_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5_14C2EC0A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_Jump_MaterialLayer\Metal_Jump\Metal_fs_01		99256
 	711816622	Br_Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7_3AC4BF5E.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_05		163808
+	712740125	ANDY	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\ANDY_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\Soldiers\Soldier2\Sc1Lines\ANDY		76128
 	717672186	Rifle_FireMain	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Rifle_FireMain_13F9897F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_FireMain		77316
 	719082772	Boots_Jump	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Locomotion\Boots_Jump_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Jump+Land\Jump\Boots_Jump		59744
 	726251592	Rifle_ChargeRdy	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Rifle_ChargeRdy_F521E23F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Alt_Fire\Rifle_ChargeRdy		20762
@@ -258,7 +270,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	959559467	Rifle_Alt_Chargev1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Weapons\Rifle\Rifle_Alt_Chargev1_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Alt_Fire\Charge\Rifle_Alt_Chargev1		707188
 	981283187	MetalLadder__Fs_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 4_B48680E7.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metalladder_Fs_Layer\MetalLadder__Fs_05		127908
 	998083191	Metal2_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 2_D3AF315A.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal2_Fs_Layer\Metal2_Fs_02		69926
-	999781709	Xaga_Sc2_test	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Xaga_Sc2_test_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Xaga_Hangar\Hangar_Xaga\Xaga_Sc2_test		493232
 	1006167246	Br_Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8_6B70B51C.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_06		189236
 	1009290141	Metal_fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12_4D8041D2.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Metal1_Fs_Layer\Metal_fs_06		155100
 	1033564670	Leatherboots_05	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 11_F7A39947.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Walk\Leatherboots_05		84016
@@ -269,6 +280,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1054170137	Leatherboots_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 4_FF24A0DC.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Walk\Leatherboots_03		97196
 	1054467131	Boots_Land	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Locomotion\Boots_Land_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Jump+Land\Land\Boots_Land		79224
 	1055050147	Hangun_Fire-001	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Weapons\Handgun\Hangun_Fire-001_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Gun\Fire\Hangun_Fire-001		632988
+	1059593761	Xaga_OhDear	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\Voices\English(US)\Xaga_OhDear_A310343B.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr2\Xaga_OhDear		94716
 	1067223387	Boots_Walk_Heel_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Walk\Boots_Walk_Heel_04_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_04		15880
 	1072609968	Boots_Run_Toe_01	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\Run\Boots_Run_Toe_01_943E3BDE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe\Boots_Run_Toe_01		66088
 

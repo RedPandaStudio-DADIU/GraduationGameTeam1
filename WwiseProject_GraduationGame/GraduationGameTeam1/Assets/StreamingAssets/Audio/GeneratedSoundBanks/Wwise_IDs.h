@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_DIA_JOHNDOE = 1296777492U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
@@ -73,7 +74,7 @@ namespace AK
                 static const AkUniqueID CONFERENCEROOM3 = 2782928029U;
                 static const AkUniqueID HANGAR1 = 1814387309U;
                 static const AkUniqueID HANGAR2 = 1814387310U;
-                static const AkUniqueID HARNGAR3 = 2130932629U;
+                static const AkUniqueID HANGAR3 = 1814387311U;
                 static const AkUniqueID INSIDEELEVATOR = 2393120223U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
@@ -147,6 +148,10 @@ namespace AK
             {
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID SC1_TR1 = 342028878U;
+                static const AkUniqueID SC2_TR1 = 3079543733U;
+                static const AkUniqueID SC2_TR2 = 3079543734U;
+                static const AkUniqueID SC2_TR3 = 3079543735U;
+                static const AkUniqueID TRIGGERISWAITING = 2172575860U;
             } // namespace STATE
         } // namespace SCENES_LVL1
 
