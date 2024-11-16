@@ -11,8 +11,10 @@ namespace cowsins
     public class Bullet : MonoBehaviour
     {
         private Camera playerCamera;  
-        [SerializeField] private float pushForce = 100f;
-        [SerializeField] private float ragdollDuration = 3.0f; 
+        [SerializeField] private float bigRagdollForce = 600f;
+        [SerializeField] private float smallRagdollForce = 200f;
+        [SerializeField] private float ragdollDuration = 4.0f; 
+        [SerializeField] private float smallRagdollDuration = 3.0f;
         [HideInInspector] public bool isEnemy = false; 
         [HideInInspector] public bool isHuman = false; 
 
@@ -62,16 +64,15 @@ namespace cowsins
             //     GameObject parentObject = other.transform.parent.gameObject;
             //     Shoot(damage, parentObject.GetComponent<Collider>());
             // } 
-            if(other.CompareTag("Enemy") && !isEnemy && !isHuman) {
+            if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
 
                 if(this.CompareTag("ChargeShot")){
-                    Debug.LogWarning("Test");
                     
                     player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);
                     DestroyProjectile();
                 } else {
-                    Debug.Log("Enemy Shot!! Damage: " + damage);
+                    Debug.LogWarning("Enemy Shot!! Damage: " + damage);
                     Shoot(damage, other);
                     DestroyProjectile();
                 }
@@ -143,18 +144,16 @@ namespace cowsins
                 pushDirection = pushDirection.normalized;
 
                 enemy.SetForceDirection(pushDirection);
-                enemy.SetForce(pushForce);
+                enemy.SetForce(bigRagdollForce);
+                enemy.ChangeState(new EnemyHitState());
 
-                if(enemy.GetEnemy().GetHealth() <= 0){
+                if(enemy.GetEnemy().GetHealth() > 0){
+                    Debug.Log("Inside health check");
+                    enemy.Recovery(ragdollDuration);
+                } else {
                     enemy.ChangeState(new EnemyDieState());
+                    Debug.Log("Health check not passed");
                 }
-
-                // if(enemy.GetEnemy().GetHealth() > 0){
-                //     Debug.Log("Inside health check");
-                //     enemy.Recovery(ragdollDuration);
-                // } else {
-                //     Debug.Log("Health check not passed");
-                // }
 
             }
 

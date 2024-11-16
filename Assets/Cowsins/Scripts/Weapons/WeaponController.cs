@@ -886,6 +886,7 @@ namespace cowsins
             else if (weapon.shootStyle2 == ShootStyle.Custom) SelectCustomShotMethod();
             else customMethod = null;
 
+            weapon.ammoCostPerFire2 = 10;
             // Grab the modifiers for the custom set of attachments.
             GetAttachmentsModifiers();
 
