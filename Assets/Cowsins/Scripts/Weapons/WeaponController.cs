@@ -1171,9 +1171,9 @@ namespace cowsins
             // }
             if (InputManager.weapon1)
              {
-                if (currentWeapon > 0)
+                if (currentWeapon > 0 && inventory.Length > 0 && inventory[0] != null)
                 {
-                    currentWeapon=1;
+                    currentWeapon=0;
                     Debug.Log("Weapon 1");
                     SelectWeapon();
                 }
@@ -1182,10 +1182,10 @@ namespace cowsins
 
              if (InputManager.weapon2)
              {
-                if (currentWeapon > 0)
+                if (currentWeapon != 1 && inventory.Length > 1 && inventory[1] != null)
                 {
-                    currentWeapon=2;
-                    Debug.Log("Weapon 1");
+                    currentWeapon=1;
+                    Debug.Log("Weapon 2");
                     SelectWeapon();
                 }
             
@@ -1203,19 +1203,31 @@ namespace cowsins
             weapon = null;
             // Spawn the appropriate weapon in the inventory
 
-            foreach (WeaponIdentification weapon_ in inventory)
-            {
-                if (weapon_ != null)
+            // foreach (WeaponIdentification weapon_ in inventory)
+            // {
+            //     if (weapon_ != null)
+            //     {
+            //         weapon_.gameObject.SetActive(false);
+            //         weapon_.GetComponentInChildren<Animator>().enabled = false;
+            //         if (weapon_ == inventory[currentWeapon])
+            //         {
+            //             weapon = inventory[currentWeapon].weapon;
+
+            //             weapon_.GetComponentInChildren<Animator>().enabled = true;
+            //             UnHolster(weapon_.gameObject, true);
+            for (int i = 0; i < inventory.Length; i++)
                 {
-                    weapon_.gameObject.SetActive(false);
-                    weapon_.GetComponentInChildren<Animator>().enabled = false;
-                    if (weapon_ == inventory[currentWeapon])
+                    if (inventory[i] != null)
                     {
-                        weapon = inventory[currentWeapon].weapon;
+                        inventory[i].gameObject.SetActive(false);
+                        inventory[i].GetComponentInChildren<Animator>().enabled = false;
 
-                        weapon_.GetComponentInChildren<Animator>().enabled = true;
-                        UnHolster(weapon_.gameObject, true);
-
+                        if (i == currentWeapon)
+                        {
+                            weapon = inventory[currentWeapon].weapon;
+                            inventory[i].GetComponentInChildren<Animator>().enabled = true;
+                            UnHolster(inventory[i].gameObject, true);
+                            
 #if UNITY_EDITOR
                         UIController.instance.crosshair.GetComponent<CrosshairShape>().currentPreset = weapon.crosshairPreset;
                         CowsinsUtilities.ApplyPreset(UIController.instance.crosshair.GetComponent<CrosshairShape>().currentPreset, UIController.instance.crosshair.GetComponent<CrosshairShape>());

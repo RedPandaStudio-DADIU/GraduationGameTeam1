@@ -6,6 +6,7 @@ namespace cowsins
     public class WeaponPickeable : Pickeable
     {
         [Tooltip("Which weapon are we grabbing")] public Weapon_SO weapon;
+        public int weaponSlotNumber; // 1 = rifful, 1 = pistol
 
         [HideInInspector] public int currentBullets, totalBullets;
 
@@ -60,6 +61,20 @@ namespace cowsins
             }
 
             SwapWeapons(weaponController);
+            if (weaponSlotNumber == 1)
+            {
+                PlayerDataManager.Instance.currentWeaponIndex = 0;
+                weaponController.currentWeapon = 0;
+            }
+            else if (weaponSlotNumber == 2)
+            {
+                PlayerDataManager.Instance.currentWeaponIndex = 1;
+                weaponController.currentWeapon = 1;
+            }
+
+            weaponController.weapon = weapon;
+            weaponController.UnHolster(weaponController.inventory[weaponController.currentWeapon].gameObject, true);
+
         }
 
         private bool CheckIfInventoryFull(WeaponController weaponController)
@@ -296,6 +311,9 @@ namespace cowsins
                     case "References":
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("image"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("graphics"));
+
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("weaponSlotNumber"), new GUIContent("Weapon Slot Number"));
+  
 
                         break;
                     case "Effects":
