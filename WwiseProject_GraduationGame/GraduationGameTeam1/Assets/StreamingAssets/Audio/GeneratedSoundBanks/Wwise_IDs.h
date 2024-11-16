@@ -22,12 +22,11 @@ namespace AK
         static const AkUniqueID PLAY_DIA_JOHNDOE = 1296777492U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
         static const AkUniqueID PLAY_DIA_XAGA_ = 3253445185U;
+        static const AkUniqueID PLAY_ELEVATOR_BP_OUTOFORDER = 2557748953U;
         static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
         static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
-        static const AkUniqueID PLAY_ELEVATOR_OUTOFORDERBEEP = 2046495730U;
         static const AkUniqueID PLAY_ELEVATOR_POWER_LP = 1757009721U;
-        static const AkUniqueID PLAY_ELEVATOR_RUN_STARTUP = 537752340U;
-        static const AkUniqueID PLAY_ELEVATOR_RUNNING_LP = 591723123U;
+        static const AkUniqueID PLAY_EXPLODEBARREL = 757694329U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
@@ -173,6 +172,8 @@ namespace AK
                 static const AkUniqueID SC3_TR1 = 569325008U;
                 static const AkUniqueID SC3_TR2 = 569325011U;
                 static const AkUniqueID SC4_TR1 = 551107239U;
+                static const AkUniqueID SC5_TR1 = 3690529130U;
+                static const AkUniqueID SC5_TR2 = 3690529129U;
                 static const AkUniqueID TRIGGERISWAITING = 2172575860U;
             } // namespace STATE
         } // namespace SCENES_LVL1
@@ -241,9 +242,9 @@ namespace AK
             } // namespace SWITCH
         } // namespace DIALOGUETRIGGERS
 
-        namespace ELEVATORMOTION
+        namespace ELEVATORINTRANSIT
         {
-            static const AkUniqueID GROUP = 2134337173U;
+            static const AkUniqueID GROUP = 3384327847U;
 
             namespace SWITCH
             {
@@ -251,18 +252,18 @@ namespace AK
                 static const AkUniqueID START = 1281810935U;
                 static const AkUniqueID STOP = 788884573U;
             } // namespace SWITCH
-        } // namespace ELEVATORMOTION
+        } // namespace ELEVATORINTRANSIT
 
-        namespace ELEVATORPOWERSTATE
+        namespace ELEVATORPOWER
         {
-            static const AkUniqueID GROUP = 2564540785U;
+            static const AkUniqueID GROUP = 2942882794U;
 
             namespace SWITCH
             {
                 static const AkUniqueID POWEROFF = 2235177879U;
                 static const AkUniqueID POWERON = 91680483U;
             } // namespace SWITCH
-        } // namespace ELEVATORPOWERSTATE
+        } // namespace ELEVATORPOWER
 
         namespace GROUNDMATERIALSWITCH
         {
@@ -360,7 +361,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID RTPC_DISTANCE = 262290038U;
-        static const AkUniqueID RTPC_GROUNDWETNESS = 870672907U;
+        static const AkUniqueID RTPC_ELEVATOR = 2562122989U;
         static const AkUniqueID RTPC_GROUNDWETNESS_SLOW = 3989928153U;
         static const AkUniqueID RTPC_PLAYERSPEED = 2653406601U;
         static const AkUniqueID RTPC_TIMEOFDAY = 257272959U;

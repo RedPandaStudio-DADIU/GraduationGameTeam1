@@ -1329,9 +1329,330 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Sc5_Tr1" ID="{E962CF19-E1D7-4BB3-B9F0-881F90C45DBB}" ShortID="308461852">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="JD_Hmm" ID="{7B48D548-AD3F-492C-BD47-98C3893FF2E5}" ShortID="1005826105">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Hmm" ID="{6EF60999-7304-4319-BA27-07AD71D5F4A2}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_Hmm.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="934986776"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Hmm" ID="{6EF60999-7304-4319-BA27-07AD71D5F4A2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_WhereDoIFindTheMainframe1" ID="{FCFE0027-8E4B-4894-B011-8F39FBCD321A}" ShortID="855308141">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_WhereDoIFindTheMainframe1" ID="{1151566B-D306-406C-B775-F75796650248}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_WhereDoIFindTheMainframe1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="324158094"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_WhereDoIFindTheMainframe1" ID="{1151566B-D306-406C-B775-F75796650248}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_WhereIsTheMainframeRoomn" ID="{BC8358BA-AC09-4D78-B8B9-AAB6FC172504}" ShortID="478191578">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-25</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_WhereIsTheMainframeRoomn" ID="{DC1C9C81-85D0-47E5-81BC-6FCF135CF589}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_WhereIsTheMainframeRoomn.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="869232112"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_WhereIsTheMainframeRoomn" ID="{DC1C9C81-85D0-47E5-81BC-6FCF135CF589}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_Thanks" ID="{DFF1B5AB-DA2F-48C6-A2D4-9B27165A499D}" ShortID="790262074">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Thanks" ID="{609FBEB7-031D-4928-86EC-447877474A79}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_Thanks.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="952718673"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Thanks" ID="{609FBEB7-031D-4928-86EC-447877474A79}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ai_TheMainframeNeedsToBeRebooted" ID="{AC391A52-5ADF-4B49-AFC0-ABBF94198394}" ShortID="234436630">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_TheMainframeNeedsToBeRebooted" ID="{A3276DE5-6318-4D32-9657-86818C4EB85B}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0807162319968859"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.00446866485014"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Ai_TheMainframeNeedsToBeRebooted.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="797320250"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_TheMainframeNeedsToBeRebooted" ID="{A3276DE5-6318-4D32-9657-86818C4EB85B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ai_ItsRightDownCorridor68" ID="{4E1ED79B-D2D8-4F01-8F93-62AAC11FBA70}" ShortID="281896091">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_ItsRightDownCorridor68" ID="{7BEE2B18-A0D5-44DB-AF5B-4C1E80F087A8}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.38484568759384"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Ai_ItsRightDownCorridor68.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="493237573"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_ItsRightDownCorridor68" ID="{7BEE2B18-A0D5-44DB-AF5B-4C1E80F087A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ai_InTheMainframeRoom" ID="{2AE973CF-1CFD-46D8-B1B2-CF3418AB9173}" ShortID="92083007">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_InTheMainframeRoom" ID="{6B55F437-D82D-4A55-8399-411633A069BE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0704665517433131"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.07265750987043"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Ai_InTheMainframeRoom.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="531390771"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_InTheMainframeRoom" ID="{6B55F437-D82D-4A55-8399-411633A069BE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="JD_Hmm" ID="{7B48D548-AD3F-492C-BD47-98C3893FF2E5}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Ai_TheMainframeNeedsToBeRebooted" ID="{AC391A52-5ADF-4B49-AFC0-ABBF94198394}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_WhereDoIFindTheMainframe1" ID="{FCFE0027-8E4B-4894-B011-8F39FBCD321A}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Ai_InTheMainframeRoom" ID="{2AE973CF-1CFD-46D8-B1B2-CF3418AB9173}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_WhereIsTheMainframeRoomn" ID="{BC8358BA-AC09-4D78-B8B9-AAB6FC172504}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Ai_ItsRightDownCorridor68" ID="{4E1ED79B-D2D8-4F01-8F93-62AAC11FBA70}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_Thanks" ID="{DFF1B5AB-DA2F-48C6-A2D4-9B27165A499D}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Sc5_Tr2" ID="{1065C00F-B546-4BB7-A45E-DC15E8D1F04D}" ShortID="105602943">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Ai_TheElevatorIsNowBackOnline" ID="{08ED6614-4093-4DCD-B9D7-6CC20E0FD013}" ShortID="406576142">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_TheElevatorIsNowBackOnline" ID="{C8000CB4-4712-4F6A-9FC5-7D224E7026F2}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0135240206759612"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.740539398320636"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Ai_TheElevatorIsNowBackOnline.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="374402712"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_TheElevatorIsNowBackOnline" ID="{C8000CB4-4712-4F6A-9FC5-7D224E7026F2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Ai_TheElevatorIsNowBackOnline" ID="{08ED6614-4093-4DCD-B9D7-6CC20E0FD013}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Sc5_Tr2" ID="{1065C00F-B546-4BB7-A45E-DC15E8D1F04D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Sc5_Tr1" ID="{E962CF19-E1D7-4BB3-B9F0-881F90C45DBB}"/>
+									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Sc3_Tr1" ID="{AE742D22-E92C-4DFC-BDEE-61D9ABEF889E}"/>
 									</GroupingBehavior>
@@ -1344,9 +1665,21 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
+										<SwitchRef Name="Sc5_Tr1" ID="{D9BC011E-265A-459C-85B9-A9F2235E1BE5}"/>
+										<ItemList>
+											<ItemRef Name="Sc5_Tr1" ID="{E962CF19-E1D7-4BB3-B9F0-881F90C45DBB}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
 										<SwitchRef Name="Sc3_Tr2" ID="{3F125949-4C58-45FA-A3BC-372B2C860C9E}"/>
 										<ItemList>
 											<ItemRef Name="Sc3_Tr2" ID="{43F1A8D4-EA12-4574-A046-9D45F57C8824}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Sc5_Tr2" ID="{53BD08A9-9995-4611-B0CC-FE29E967E5D5}"/>
+										<ItemList>
+											<ItemRef Name="Sc5_Tr2" ID="{1065C00F-B546-4BB7-A45E-DC15E8D1F04D}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>

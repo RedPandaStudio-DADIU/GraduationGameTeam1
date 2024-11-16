@@ -21,7 +21,7 @@
 				<Event Id="3766110729" Name="Play_Level_1_station" DurationType="Infinite"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4D20DA11-5E79-7DBF-EF93-9CF87B3B11F2}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A2B7E637-E1BB-F299-9923-098D0FAEBD81}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -95,8 +95,8 @@
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
 				<GameParameter Id="262290038" Name="RTPC_Distance"/>
-				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
 				<GameParameter Id="1342605732" Name="RTPC_WaterAmount"/>
+				<GameParameter Id="2562122989" Name="RTPC_Elevator"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 				<GameParameter Id="3339859487" Name="RTPC_WeaponCharge"/>
 				<GameParameter Id="3989928153" Name="RTPC_GroundWetness_Slow"/>
@@ -167,6 +167,8 @@
 						<State Id="3079543733" Name="Sc2_Tr1"/>
 						<State Id="3079543734" Name="Sc2_Tr2"/>
 						<State Id="3079543735" Name="Sc2_Tr3"/>
+						<State Id="3690529129" Name="Sc5_Tr2"/>
+						<State Id="3690529130" Name="Sc5_Tr1"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4123380240" Name="Xaga">
@@ -228,19 +230,6 @@
 						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2134337173" Name="ElevatorMotion">
-					<Switches>
-						<Switch Id="788884573" Name="Stop"/>
-						<Switch Id="1281810935" Name="Start"/>
-						<Switch Id="2452206122" Name="False"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="2564540785" Name="ElevatorPowerState">
-					<Switches>
-						<Switch Id="91680483" Name="PowerOn"/>
-						<Switch Id="2235177879" Name="PowerOff"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="2569417515" Name="RainTypeSwitch">
 					<GameParameterRef Id="1342605732"/>
 					<Switches>
@@ -251,10 +240,24 @@
 						<Switch Id="3569642402" Name="Sunny"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2942882794" Name="ElevatorPower">
+					<Switches>
+						<Switch Id="91680483" Name="PowerOn"/>
+						<Switch Id="2235177879" Name="PowerOff"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="3305603258" Name="GuitarSpeaker">
 					<Switches>
 						<Switch Id="930712164" Name="Off"/>
 						<Switch Id="1651971902" Name="On"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3384327847" Name="ElevatorInTransit">
+					<GameParameterRef Id="2562122989"/>
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="1281810935" Name="Start"/>
+						<Switch Id="2452206122" Name="False"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3935263896" Name="DialogueTriggers">
@@ -268,7 +271,7 @@
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
-					<GameParameterRef Id="870672907"/>
+					<GameParameterRef Id="2562122989"/>
 					<Switches>
 						<Switch Id="630539344" Name="Dry"/>
 						<Switch Id="1181096339" Name="Wet"/>
@@ -419,7 +422,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{C696E3C1-3574-98F1-68A9-66622ABBD6ED}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{F576B160-069B-2B38-C16E-06D533C390EF}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -434,10 +437,6 @@
 				<File Id="22270700" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Weapons\Handgun\Hangun_Reload.wav</ShortName>
 					<CachePath>SFX/Weapons/Handgun/Hangun_Reload_818F3B66.wem</CachePath>
-				</File>
-				<File Id="23641543" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Elevator\Elevator\Elevator_Stop.wav</ShortName>
-					<CachePath>SFX/Elevator/Elevator/Elevator_Stop_B5D57B6C.wem</CachePath>
 				</File>
 				<File Id="23730002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2.wav</ShortName>
@@ -522,10 +521,6 @@
 				<File Id="111609954" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_ThisAmusesMe.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_ThisAmusesMe_818F3B66.wem</CachePath>
-				</File>
-				<File Id="115585820" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Elevator\Elevator\Elevator_Startup.wav</ShortName>
-					<CachePath>SFX/Elevator/Elevator/Elevator_Startup_818F3B66.wem</CachePath>
 				</File>
 				<File Id="125610014" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_ImNotReallyaComputer_Happy.wav</ShortName>
@@ -715,6 +710,10 @@
 					<ShortName>Walk\Boots_Walk_Toe_01.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="374402712" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_TheElevatorIsNowBackOnline.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_TheElevatorIsNowBackOnline_D92E4CE8.wem</CachePath>
+				</File>
 				<File Id="380138756" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_AirRelease.wav</ShortName>
 					<CachePath>SFX/Rifle_AirRelease_818F3B66.wem</CachePath>
@@ -783,6 +782,10 @@
 					<ShortName>Run\Boots_Run_Toe_04.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Toe_04_3A8107D8.wem</CachePath>
 				</File>
+				<File Id="493237573" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_ItsRightDownCorridor68.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_ItsRightDownCorridor68_250EC824.wem</CachePath>
+				</File>
 				<File Id="496990606" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_ThatsForMySister.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_ThatsForMySister_818F3B66.wem</CachePath>
@@ -810,6 +813,10 @@
 				<File Id="530099864" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 1_0915C658.wem</CachePath>
+				</File>
+				<File Id="531390771" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_InTheMainframeRoom.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_InTheMainframeRoom_8B6AE72C.wem</CachePath>
 				</File>
 				<File Id="532629220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 3.wav</ShortName>
@@ -923,6 +930,10 @@
 					<ShortName>Rifle_FireMain.wav</ShortName>
 					<CachePath>SFX/Rifle_FireMain_13F9897F.wem</CachePath>
 				</File>
+				<File Id="718891495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Explosions_Designed_Explosion_No_Fragments_SND81684.wav</ShortName>
+					<CachePath>SFX/Explosions_Designed_Explosion_No_Fragments_SND81684_B193D17E.wem</CachePath>
+				</File>
 				<File Id="719082772" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Locomotion\Boots_Jump.wav</ShortName>
 					<CachePath>SFX/Locomotion/Boots_Jump_818F3B66.wem</CachePath>
@@ -975,9 +986,9 @@
 					<ShortName>Ai_SureOkay4.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_SureOkay4_818F3B66.wem</CachePath>
 				</File>
-				<File Id="788156748" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Elevator\Elevator\Elevator_Running_lp.wav</ShortName>
-					<CachePath>SFX/Elevator/Elevator/Elevator_Running_lp_FBC78EF0.wem</CachePath>
+				<File Id="797320250" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_TheMainframeNeedsToBeRebooted.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_TheMainframeNeedsToBeRebooted_46673305.wem</CachePath>
 				</File>
 				<File Id="798037316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 6.wav</ShortName>
@@ -1362,7 +1373,6 @@
 					<Plugin Id="1033593795" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1041870196" Name="BRASSY" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="1041915561" Name="RING 03" LibName="Wwise Synth One" LibId="9699330"/>
-					<Plugin Id="1045178509" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="1057443910" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1059035731" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1059488289" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1648,11 +1658,41 @@
 					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529130"/>
+							<MediaRefs>
+								<MediaRef Id="324158094"/>
+								<MediaRef Id="493237573"/>
+								<MediaRef Id="531390771"/>
+								<MediaRef Id="797320250"/>
+								<MediaRef Id="869232112"/>
+								<MediaRef Id="934986776"/>
+								<MediaRef Id="952718673"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2952825346"/>
+									<PluginRef Id="3435419520"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325011"/>
 							<MediaRefs>
 								<MediaRef Id="125610014"/>
 								<MediaRef Id="767570935"/>
 								<MediaRef Id="1007587335"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2952825346"/>
+									<PluginRef Id="3435419520"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
+							<MediaRefs>
+								<MediaRef Id="374402712"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
@@ -1701,11 +1741,41 @@
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529130"/>
+							<MediaRefs>
+								<MediaRef Id="324158094"/>
+								<MediaRef Id="493237573"/>
+								<MediaRef Id="531390771"/>
+								<MediaRef Id="797320250"/>
+								<MediaRef Id="869232112"/>
+								<MediaRef Id="934986776"/>
+								<MediaRef Id="952718673"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2952825346"/>
+									<PluginRef Id="3435419520"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325011"/>
 							<MediaRefs>
 								<MediaRef Id="125610014"/>
 								<MediaRef Id="767570935"/>
 								<MediaRef Id="1007587335"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="2952825346"/>
+									<PluginRef Id="3435419520"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
+							<MediaRefs>
+								<MediaRef Id="374402712"/>
 							</MediaRefs>
 							<PluginRefs>
 								<ShareSets>
@@ -1936,36 +2006,46 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2373651556" Name="Play_Elevator_Buttonpress" DurationType="OneShot" DurationMin="1.6336875" DurationMax="1.6336875">
+				<Event Id="2557748953" Name="Play_Elevator_BP_OutofOrder" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.6336875" DurationMax="1.6336875">
 					<MediaRefs>
 						<MediaRef Id="277098265"/>
+						<MediaRef Id="323262943"/>
 						<MediaRef Id="1048784781"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2038432148" Name="Play_Elevator_ConfirmationBeep" DurationType="OneShot" DurationMin="0.7987292" DurationMax="0.7987292">
+				<Event Id="2373651556" Name="Play_Elevator_Buttonpress" MaxAttenuation="10" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2942882794" Id="91680483" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="277098265"/>
+								<MediaRef Id="950647488"/>
+								<MediaRef Id="1048784781"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2942882794" Id="2235177879"/>
+							<MediaRefs>
+								<MediaRef Id="277098265"/>
+								<MediaRef Id="323262943"/>
+								<MediaRef Id="1048784781"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2038432148" Name="Play_Elevator_ConfirmationBeep" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.7987292" DurationMax="0.7987292">
 					<MediaRefs>
 						<MediaRef Id="950647488"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2046495730" Name="Play_Elevator_OutofOrderBeep" DurationType="OneShot" DurationMin="0.8405" DurationMax="0.8405">
-					<MediaRefs>
-						<MediaRef Id="323262943"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1757009721" Name="Play_Elevator_Power_lp" DurationType="Infinite">
+				<Event Id="1757009721" Name="Play_Elevator_Power_lp" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="651678197"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="537752340" Name="Play_Elevator_Run_Startup" DurationType="Infinite">
+				<Event Id="757694329" Name="Play_ExplodeBarrel" DurationType="OneShot" DurationMin="2.5245209" DurationMax="2.5245209">
 					<MediaRefs>
-						<MediaRef Id="115585820"/>
-						<MediaRef Id="788156748"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="591723123" Name="Play_Elevator_Running_lp" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="788156748"/>
+						<MediaRef Id="718891495"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3547089943" Name="Play_FireMain_Handgun" DurationType="OneShot" DurationMin="2.914464" DurationMax="3.6950881">
@@ -2711,7 +2791,7 @@
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
-				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
+				<GameParameter Id="2562122989" Name="RTPC_Elevator"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
 			<StateGroups>
@@ -2745,6 +2825,8 @@
 						<State Id="3079543733" Name="Sc2_Tr1"/>
 						<State Id="3079543734" Name="Sc2_Tr2"/>
 						<State Id="3079543735" Name="Sc2_Tr3"/>
+						<State Id="3690529129" Name="Sc5_Tr2"/>
+						<State Id="3690529130" Name="Sc5_Tr1"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4123380240" Name="Xaga">
@@ -2799,21 +2881,22 @@
 						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2134337173" Name="ElevatorMotion">
+				<SwitchGroup Id="2942882794" Name="ElevatorPower">
+					<Switches>
+						<Switch Id="91680483" Name="PowerOn"/>
+						<Switch Id="2235177879" Name="PowerOff"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3384327847" Name="ElevatorInTransit">
+					<GameParameterRef Id="2562122989"/>
 					<Switches>
 						<Switch Id="788884573" Name="Stop"/>
 						<Switch Id="1281810935" Name="Start"/>
 						<Switch Id="2452206122" Name="False"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="2564540785" Name="ElevatorPowerState">
-					<Switches>
-						<Switch Id="91680483" Name="PowerOn"/>
-						<Switch Id="2235177879" Name="PowerOff"/>
-					</Switches>
-				</SwitchGroup>
 				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
-					<GameParameterRef Id="870672907"/>
+					<GameParameterRef Id="2562122989"/>
 					<Switches>
 						<Switch Id="630539344" Name="Dry"/>
 						<Switch Id="1181096339" Name="Wet"/>
@@ -2847,5 +2930,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FE3573B8-FF21-0B98-5DE0-BE0F631D4BBC}</FileHash>
+	<FileHash>{1A630E81-1CB1-BC2D-3B5E-4A0AF2BA0A6D}</FileHash>
 </SoundBanksInfo>

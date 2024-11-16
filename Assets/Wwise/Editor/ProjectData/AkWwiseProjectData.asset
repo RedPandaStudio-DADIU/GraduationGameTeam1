@@ -1184,7 +1184,7 @@ MonoBehaviour:
     ParentPath: Events/GameWorld
     guid: b9dee002a444974f876d94dadf6db20c
     GuidInternal: 
-    m_lastTime: -8584702904454385814
+    m_lastTime: -8584698996208391121
     List:
     - name: Elevator
       guid: 1d22329c1617c9448172562d58e45749
@@ -1203,6 +1203,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: ExplodingStuff
+      guid: 6f9b0cc360088245bf20dd3cd449c36a
+      id: 1490834761
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: ExplodingStuff
+        ObjectType: 4
+        guid: 6f9b0cc360088245bf20dd3cd449c36a
+      Path: Events/GameWorld/ExplodingStuff
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Elevator_BP_OutofOrder
+      guid: 879a1d43cbe2db4498bf9e8401d4f313
+      id: 2557748953
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_Elevator_BP_OutofOrder
+        ObjectType: 3
+        guid: 879a1d43cbe2db4498bf9e8401d4f313
+      Path: Events/GameWorld/Elevator/Play_Elevator_BP_OutofOrder
+      maxAttenuation: 10
+      maxDuration: 1.6336875
+      minDuration: 1.6336875
     - name: Play_Elevator_Buttonpress
       guid: f94c27434d3abd41aed524b3d1b8a156
       id: 2373651556
@@ -1220,9 +1257,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: f94c27434d3abd41aed524b3d1b8a156
       Path: Events/GameWorld/Elevator/Play_Elevator_Buttonpress
-      maxAttenuation: 0
-      maxDuration: 1.6336875
-      minDuration: 1.6336875
+      maxAttenuation: 10
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Elevator_ConfirmationBeep
       guid: 1a121a4646fd614fbee83013523dc0fb
       id: 2038432148
@@ -1240,29 +1277,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1a121a4646fd614fbee83013523dc0fb
       Path: Events/GameWorld/Elevator/Play_Elevator_ConfirmationBeep
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0.7987292
       minDuration: 0.7987292
-    - name: Play_Elevator_OutofOrderBeep
-      guid: 879a1d43cbe2db4498bf9e8401d4f313
-      id: 2046495730
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
-        ObjectType: 12
-        guid: b9dee002a444974f876d94dadf6db20c
-      - ElementName: Elevator
-        ObjectType: 4
-        guid: 1d22329c1617c9448172562d58e45749
-      - ElementName: Play_Elevator_OutofOrderBeep
-        ObjectType: 3
-        guid: 879a1d43cbe2db4498bf9e8401d4f313
-      Path: Events/GameWorld/Elevator/Play_Elevator_OutofOrderBeep
-      maxAttenuation: 0
-      maxDuration: 0.8405
-      minDuration: 0.8405
     - name: Play_Elevator_Power_lp
       guid: 73e76949f053f44387feb35853ee2f81
       id: 1757009721
@@ -1280,7 +1297,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 73e76949f053f44387feb35853ee2f81
       Path: Events/GameWorld/Elevator/Play_Elevator_Power_lp
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
     - name: Play_Elevator_Run_Startup
@@ -1323,6 +1340,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_ExplodeBarrel
+      guid: f83be7e2d1514e47af5bffda733a7cdb
+      id: 757694329
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: ExplodingStuff
+        ObjectType: 4
+        guid: 6f9b0cc360088245bf20dd3cd449c36a
+      - ElementName: Play_ExplodeBarrel
+        ObjectType: 3
+        guid: f83be7e2d1514e47af5bffda733a7cdb
+      Path: Events/GameWorld/ExplodingStuff/Play_ExplodeBarrel
+      maxAttenuation: 0
+      maxDuration: 2.5245209
+      minDuration: 2.5245209
   - PhysicalPath: Events/Locomotion.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2063,7 +2100,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/GameParameters
     guid: cfb8c6b3e9988e49bdf10630114d5c83
     GuidInternal: 
-    m_lastTime: -8584713149791905986
+    m_lastTime: -8584699014570847987
     List:
     - name: RTPC_Distance
       guid: d3e197901b3e544d9b15c4d9a676128b
@@ -2079,9 +2116,9 @@ MonoBehaviour:
         ObjectType: 13
         guid: d3e197901b3e544d9b15c4d9a676128b
       Path: Game Parameters/GameParameters/RTPC_Distance
-    - name: RTPC_GroundWetness
+    - name: RTPC_Elevator
       guid: d82b9ea0af891146a276b746794c67d6
-      id: 870672907
+      id: 2562122989
       PathAndIcons:
       - ElementName: Game Parameters
         ObjectType: 5
@@ -2089,10 +2126,10 @@ MonoBehaviour:
       - ElementName: GameParameters
         ObjectType: 12
         guid: cfb8c6b3e9988e49bdf10630114d5c83
-      - ElementName: RTPC_GroundWetness
+      - ElementName: RTPC_Elevator
         ObjectType: 13
         guid: d82b9ea0af891146a276b746794c67d6
-      Path: Game Parameters/GameParameters/RTPC_GroundWetness
+      Path: Game Parameters/GameParameters/RTPC_Elevator
     - name: RTPC_GroundWetness_Slow
       guid: 7bdb771dcc074b48b051d20acaec0367
       id: 3989928153
@@ -2267,7 +2304,7 @@ MonoBehaviour:
     ParentPath: States/States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584699152576392185
+    m_lastTime: -8584698963334819562
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2957,6 +2994,44 @@ MonoBehaviour:
         - ElementName: Sc4_Tr1
           ObjectType: 8
           guid: e2d7a09412f0714d875e2e407592c0e5
+      - name: Sc5_Tr1
+        guid: 1e01bcd95a269c4585b9a9f2235e1be5
+        id: 3690529130
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc5_Tr1
+          ObjectType: 8
+          guid: 1e01bcd95a269c4585b9a9f2235e1be5
+      - name: Sc5_Tr2
+        guid: a908bd5395991146b0ccfe29e967e5d5
+        id: 3690529129
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc5_Tr2
+          ObjectType: 8
+          guid: a908bd5395991146b0ccfe29e967e5d5
       - name: TriggerIsWaiting
         guid: b454a5f1ac98154ebb46cc51c6f276ee
         id: 2172575860
@@ -3558,7 +3633,7 @@ MonoBehaviour:
     ParentPath: Switches/GameWorld
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584701870696504462
+    m_lastTime: -8584699014570885309
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -3578,9 +3653,9 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: ElevatorMotion
+    - name: ElevatorInTransit
       guid: cbd576a0f50bd84ab13f81c423ab524e
-      id: 2134337173
+      id: 3384327847
       PathAndIcons:
       - ElementName: Switches
         ObjectType: 5
@@ -3591,10 +3666,10 @@ MonoBehaviour:
       - ElementName: GameWorldObjects
         ObjectType: 4
         guid: 20601029be4e6140b104cee49341b555
-      - ElementName: ElevatorMotion
+      - ElementName: ElevatorInTransit
         ObjectType: 11
         guid: cbd576a0f50bd84ab13f81c423ab524e
-      Path: Switches/GameWorld/GameWorldObjects/ElevatorMotion
+      Path: Switches/GameWorld/GameWorldObjects/ElevatorInTransit
       values:
       - name: False
         guid: 8f15a1e3162db1418030c023e72f0a49
@@ -3609,7 +3684,7 @@ MonoBehaviour:
         - ElementName: GameWorldObjects
           ObjectType: 4
           guid: 20601029be4e6140b104cee49341b555
-        - ElementName: ElevatorMotion
+        - ElementName: ElevatorInTransit
           ObjectType: 11
           guid: cbd576a0f50bd84ab13f81c423ab524e
         - ElementName: False
@@ -3628,7 +3703,7 @@ MonoBehaviour:
         - ElementName: GameWorldObjects
           ObjectType: 4
           guid: 20601029be4e6140b104cee49341b555
-        - ElementName: ElevatorMotion
+        - ElementName: ElevatorInTransit
           ObjectType: 11
           guid: cbd576a0f50bd84ab13f81c423ab524e
         - ElementName: Start
@@ -3647,7 +3722,7 @@ MonoBehaviour:
         - ElementName: GameWorldObjects
           ObjectType: 4
           guid: 20601029be4e6140b104cee49341b555
-        - ElementName: ElevatorMotion
+        - ElementName: ElevatorInTransit
           ObjectType: 11
           guid: cbd576a0f50bd84ab13f81c423ab524e
         - ElementName: Stop
@@ -3656,9 +3731,9 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: ElevatorPowerState
+    - name: ElevatorPower
       guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
-      id: 2564540785
+      id: 2942882794
       PathAndIcons:
       - ElementName: Switches
         ObjectType: 5
@@ -3669,10 +3744,10 @@ MonoBehaviour:
       - ElementName: GameWorldObjects
         ObjectType: 4
         guid: 20601029be4e6140b104cee49341b555
-      - ElementName: ElevatorPowerState
+      - ElementName: ElevatorPower
         ObjectType: 11
         guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
-      Path: Switches/GameWorld/GameWorldObjects/ElevatorPowerState
+      Path: Switches/GameWorld/GameWorldObjects/ElevatorPower
       values:
       - name: PowerOff
         guid: f9d8c20a24952b42ae18511f66b48e5c
@@ -3687,7 +3762,7 @@ MonoBehaviour:
         - ElementName: GameWorldObjects
           ObjectType: 4
           guid: 20601029be4e6140b104cee49341b555
-        - ElementName: ElevatorPowerState
+        - ElementName: ElevatorPower
           ObjectType: 11
           guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
         - ElementName: PowerOff
@@ -3706,7 +3781,7 @@ MonoBehaviour:
         - ElementName: GameWorldObjects
           ObjectType: 4
           guid: 20601029be4e6140b104cee49341b555
-        - ElementName: ElevatorPowerState
+        - ElementName: ElevatorPower
           ObjectType: 11
           guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
         - ElementName: PowerOn
@@ -4457,7 +4532,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d0000000e000000110000001300000014000000190000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e00000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006a0000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
+  ExpandedWaapiItemIds: 01000000040000000500000006000000070000000c0000000d0000000e00000011000000120000001300000014000000190000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e00000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b000000660000006a0000006c0000006d0000006e0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
