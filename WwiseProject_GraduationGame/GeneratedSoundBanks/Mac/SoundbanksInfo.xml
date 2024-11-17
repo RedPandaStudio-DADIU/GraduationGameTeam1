@@ -21,7 +21,7 @@
 				<Event Id="3766110729" Name="Play_Level_1_station" DurationType="Infinite"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A2B7E637-E1BB-F299-9923-098D0FAEBD81}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D9217F05-A1B0-2874-6891-2A0551082E43}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -39,6 +39,7 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1153792" Name="03_Xaga"/>
 				<Bus Id="47937584" Name="PlayerVoice">
 					<PluginRefs>
 						<ShareSets>
@@ -46,17 +47,21 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="223128778" Name="NPC Aliens"/>
 				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="344209961" Name="01_Ai"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1182634443" Name="AmbientBeds"/>
 				<Bus Id="1301074112" Name="3DAmbience"/>
 				<Bus Id="1399649189" Name="Master Bus"/>
 				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1574467858" Name="VoicesMaster"/>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="2033911932" Name="NPCMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
-				<Bus Id="3538689948" Name="PlayerMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
+				<Bus Id="3570874681" Name="02_John Doe"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
@@ -422,7 +427,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{F576B160-069B-2B38-C16E-06D533C390EF}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{B7BA4CAA-0EFE-E2E3-AD5F-6252C69CEF73}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -610,6 +615,10 @@
 					<ShortName>JD_HoleInOne_BigVoice.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_HoleInOne_BigVoice_818F3B66.wem</CachePath>
 				</File>
+				<File Id="245350830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Machines_Elevator_Door_Open_Close_Angle_01_SND11637.wav</ShortName>
+					<CachePath>SFX/Machines_Elevator_Door_Open_Close_Angle_01_SND11637_818F3B66.wem</CachePath>
+				</File>
 				<File Id="247373654" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_1CF36D38.wem</CachePath>
@@ -786,6 +795,10 @@
 					<ShortName>Ai_ItsRightDownCorridor68.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_ItsRightDownCorridor68_250EC824.wem</CachePath>
 				</File>
+				<File Id="493325606" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074.wav</ShortName>
+					<CachePath>SFX/Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074_818F3B66.wem</CachePath>
+				</File>
 				<File Id="496990606" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_ThatsForMySister.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_ThatsForMySister_818F3B66.wem</CachePath>
@@ -873,6 +886,10 @@
 				<File Id="651678197" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Elevator\Elevator\Elevator_PowerON_lp.wav</ShortName>
 					<CachePath>SFX/Elevator/Elevator/Elevator_PowerON_lp_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="655758477" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rifle_FireMainv2.wav</ShortName>
+					<CachePath>SFX/Rifle_FireMainv2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="662185199" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_02.wav</ShortName>
@@ -1076,7 +1093,7 @@
 				</File>
 				<File Id="902368461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Slime.wav</ShortName>
-					<CachePath>SFX/Rifle_Slime_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Slime_5FBFDED4.wem</CachePath>
 				</File>
 				<File Id="906528720" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_SureOkay1.wav</ShortName>
@@ -1105,6 +1122,10 @@
 				<File Id="939251175" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_07.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_07_818F3B66.wem</CachePath>
+				</File>
+				<File Id="942527291" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104.wav</ShortName>
+					<CachePath>SFX/Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="944226106" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_hi.wav</ShortName>
@@ -1415,7 +1436,7 @@
 				</Event>
 				<Event Id="903081441" Name="Play_AmbienceMain" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="133120763"/>
+						<MediaRef Id="942527291"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1883912870" Name="Play_Brute_Footsteps" DurationType="OneShot" DurationMin="0.5063826" DurationMax="1.4394294">
@@ -1830,6 +1851,7 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="819943492"/>
+							<PluginRef Id="2952825346"/>
 							<PluginRef Id="3435419520"/>
 						</ShareSets>
 					</PluginRefs>
@@ -1844,6 +1866,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1858,6 +1881,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1870,6 +1894,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1884,6 +1909,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1898,6 +1924,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1910,6 +1937,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1920,6 +1948,7 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="819943492"/>
+							<PluginRef Id="2952825346"/>
 							<PluginRef Id="3435419520"/>
 						</ShareSets>
 					</PluginRefs>
@@ -1934,6 +1963,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1948,6 +1978,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1960,6 +1991,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1974,6 +2006,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -1988,6 +2021,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -2000,6 +2034,7 @@
 							<PluginRefs>
 								<ShareSets>
 									<PluginRef Id="819943492"/>
+									<PluginRef Id="2952825346"/>
 									<PluginRef Id="3435419520"/>
 								</ShareSets>
 							</PluginRefs>
@@ -2043,6 +2078,12 @@
 						<MediaRef Id="651678197"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="750231532" Name="Play_ElevatorDoorOpen" MaxAttenuation="10" DurationType="OneShot" DurationMin="3.854854" DurationMax="3.854854">
+					<MediaRefs>
+						<MediaRef Id="245350830"/>
+						<MediaRef Id="493325606"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="757694329" Name="Play_ExplodeBarrel" DurationType="OneShot" DurationMin="2.5245209" DurationMax="2.5245209">
 					<MediaRefs>
 						<MediaRef Id="718891495"/>
@@ -2064,6 +2105,7 @@
 						<MediaRef Id="380138756"/>
 						<MediaRef Id="563975790"/>
 						<MediaRef Id="570131319"/>
+						<MediaRef Id="655758477"/>
 						<MediaRef Id="717672186"/>
 						<MediaRef Id="854687943"/>
 						<MediaRef Id="902368461"/>
@@ -2143,9 +2185,6 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
-					<ActionPostEvent>
-						<ActionPostEventEntry Id="16982058" Name="Play_Dia_Xaga"/>
-					</ActionPostEvent>
 				</Event>
 				<Event Id="4057284179" Name="Play_Idle_Rifle" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
@@ -2736,6 +2775,7 @@
 				</Event>
 			</Events>
 			<Busses>
+				<Bus Id="1153792" Name="03_Xaga"/>
 				<Bus Id="47937584" Name="PlayerVoice">
 					<PluginRefs>
 						<ShareSets>
@@ -2743,17 +2783,21 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="223128778" Name="NPC Aliens"/>
 				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="344209961" Name="01_Ai"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1182634443" Name="AmbientBeds"/>
 				<Bus Id="1301074112" Name="3DAmbience"/>
 				<Bus Id="1399649189" Name="Master Bus"/>
 				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1574467858" Name="VoicesMaster"/>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="2033911932" Name="NPCMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
-				<Bus Id="3538689948" Name="PlayerMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
+				<Bus Id="3570874681" Name="02_John Doe"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
@@ -2930,5 +2974,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1A630E81-1CB1-BC2D-3B5E-4A0AF2BA0A6D}</FileHash>
+	<FileHash>{EE40A5E1-A601-064C-E626-8681A561913B}</FileHash>
 </SoundBanksInfo>

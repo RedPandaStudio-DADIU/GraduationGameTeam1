@@ -77,6 +77,8 @@ State	ID	Name	State Group			Notes
 	3079543733	Sc2_Tr1	Scenes_lvl1			
 	3079543734	Sc2_Tr2	Scenes_lvl1			
 	3079543735	Sc2_Tr3	Scenes_lvl1			
+	3690529129	Sc5_Tr2	Scenes_lvl1			
+	3690529130	Sc5_Tr1	Scenes_lvl1			
 	477127956	Sc1	Xaga			
 	477127959	Sc2	Xaga			
 	748895195	None	Xaga			
@@ -99,22 +101,27 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4262522749	Wood_Bright			\Factory Acoustic Textures\Textures\Wood_Bright	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	47937584	PlayerVoice			\Audio Master\Master Bus\PlayerMaster\PlayerVoice	
-	309309195	2DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\2DAmbience	
-	765206498	PlayerCloth			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerCloth	
-	1182634443	AmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds	
-	1301074112	3DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\3DAmbience	
+	1153792	03_Xaga			\Audio Master\Master Bus\Voicelines\VoicesMaster\03_Xaga	
+	47937584	PlayerVoice			\Audio Master\Master Bus\Voicelines\VoicesMaster\02_John Doe\PlayerVoice	
+	223128778	NPC Aliens			\Audio Master\Master Bus\Voicelines\VoicesMaster\NPC Aliens	
+	309309195	2DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\2DAmbience	
+	344209961	01_Ai			\Audio Master\Master Bus\Voicelines\VoicesMaster\01_Ai	
+	765206498	PlayerCloth			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerCloth	
+	840484792	NPC Humans			\Audio Master\Master Bus\Voicelines\VoicesMaster\NPC Humans	
+	1182634443	AmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds	
+	1301074112	3DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\3DAmbience	
 	1399649189	Master Bus			\Audio Master\Master Bus	
-	1459460693	AmbientMaster			\Audio Master\Master Bus\SFX\AmbientMaster	
-	1681012287	PlayerFootsteps			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerFootsteps	
+	1459460693	AmbientMaster			\Audio Master\Master Bus\Ambience\AmbientMaster	
+	1574467858	VoicesMaster			\Audio Master\Master Bus\Voicelines\VoicesMaster	
+	1681012287	PlayerFootsteps			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerFootsteps	
 	2033911932	NPCMaster			\Audio Master\Master Bus\SFX\NPCMaster	
-	2343802269	PlayerLocomotion			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion	
-	3538689948	PlayerMaster			\Audio Master\Master Bus\PlayerMaster	
+	2343802269	PlayerLocomotion			\Audio Master\Master Bus\SFX\PlayerLocomotion	
 	3545700988	Reverbs			\Audio Master\Master Bus\SharedEffects\Reverbs	
-	4152869693	2DAmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds\2DAmbientBeds	
+	3570874681	02_John Doe			\Audio Master\Master Bus\Voicelines\VoicesMaster\02_John Doe	
+	4152869693	2DAmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds\2DAmbientBeds	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	350835844	HangarVerb_JD			\Audio Master\Master Bus\PlayerMaster\PlayerVoice\HangarVerb_JD	
+	350835844	HangarVerb_JD			\Audio Master\Master Bus\Voicelines\VoicesMaster\02_John Doe\PlayerVoice\HangarVerb_JD	
 	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps	
 	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
 	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	

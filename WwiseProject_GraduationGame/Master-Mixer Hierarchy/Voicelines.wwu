@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}" SchemaVersion="119" RootDocumentID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}" ParentDocumentID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}">
+	<Busses>
+		<WorkUnit Name="Voicelines" ID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
+			<ChildrenList>
+				<Bus Name="VoicesMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>-18</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ChildrenList>
+						<Bus Name="02_John Doe" ID="{5696D8FB-8716-4B36-95FF-732159C72BE0}">
+							<ChildrenList>
+								<Bus Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ChildrenList>
+										<AuxBus Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}">
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo>
+														<StateGroupRef Name="AreaState" ID="{677AD7FE-43DB-49B1-B10B-721D1E000093}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
+														<CustomState Name="" ID="{DD12F0AF-A682-406D-86C8-3BBBC5E09A7B}" ShortID="879071018"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
+														<CustomState Name="" ID="{6A9E33D2-501B-483F-B037-77EC08AE3B61}" ShortID="363651724"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+														<CustomState Name="" ID="{86DBEF03-A17C-45FE-BE43-9B0F878464E8}" ShortID="230334625"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
+														<CustomState Name="" ID="{D80D5DAE-9ECC-4489-82BE-0C77131EF179}" ShortID="576508313"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
+														<CustomState Name="" ID="{038F4FB7-51A6-4777-822D-B29C4BB7322D}" ShortID="842582362"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
+														<CustomState Name="" ID="{0B3E119E-526A-4BD0-8646-8CE16670633E}" ShortID="662490190"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
+														<CustomState Name="" ID="{D8266BB2-1189-4ACE-A2AE-B6AF60F57912}" ShortID="146783913"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{7E8C71CC-B0C3-4712-8E28-E99BDD0A7E5D}" ShortID="137265468">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																		<ObjectRef Name="New_RoomVerb" ID="{7B74F3D3-57E8-49A2-9C63-B3DCF7B5ACEA}" WorkUnitID="{ACFF8EFF-4CAF-4CF1-AE83-E479088CDC13}"/>
+																	</Reference>
+																</ReferenceList>
+																<StateInfo>
+																	<StatePropertyList>
+																		<Property Name="Bypass"/>
+																	</StatePropertyList>
+																	<CustomStateList>
+																		<CustomState>
+																			<StateRef Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
+																			<CustomState Name="" ID="{1EE8AB16-B2F0-4B57-B105-EEE016F79297}" ShortID="382441698"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
+																			<CustomState Name="" ID="{0E9697AD-8F2A-4BA3-BD92-4874D7CDE5A0}" ShortID="176816600"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+																			<CustomState Name="" ID="{77958498-EA31-40F4-8B82-C3C0DE8C8086}" ShortID="552056408"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
+																			<CustomState Name="" ID="{C16DBA0F-13D8-45BD-A3BB-6777EA700013}" ShortID="235356142"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
+																			<CustomState Name="" ID="{2C676EA8-9E4C-4F66-8266-6C9E4CFA484D}" ShortID="520308103"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
+																			<CustomState Name="" ID="{A6FE1D30-DA99-45F9-9672-853B5B6A237F}" ShortID="418746700"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
+																			<CustomState Name="" ID="{A5AB1359-1B9D-4614-A643-C8E12D63F044}" ShortID="426280867"/>
+																		</CustomState>
+																	</CustomStateList>
+																</StateInfo>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{88CC18C2-3D29-4622-AE84-EB7B68A375B1}" ShortID="1010204607">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																		<ObjectRef Name="Bathroom1" ID="{1969D30F-C165-45C0-B290-DE3ED07A7AA3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+																<StateInfo>
+																	<StatePropertyList>
+																		<Property Name="Bypass"/>
+																	</StatePropertyList>
+																	<CustomStateList>
+																		<CustomState>
+																			<StateRef Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
+																			<CustomState Name="" ID="{000CE068-857C-4F8C-B710-6A19D3C6BA3E}" ShortID="698286498"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
+																			<CustomState Name="" ID="{3A3EDDB9-5E9D-4ED5-892C-6FE8DA7AA531}" ShortID="1027268967"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+																			<CustomState Name="" ID="{32C8F111-D775-4831-9FCD-5212FB27D83E}" ShortID="224464269">
+																				<PropertyList>
+																					<Property Name="Bypass" Type="bool" Value="True"/>
+																				</PropertyList>
+																			</CustomState>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
+																			<CustomState Name="" ID="{2A7711AD-0AB4-4C5F-9761-093D6660A279}" ShortID="983711604"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
+																			<CustomState Name="" ID="{F289D1D4-EA92-4056-8239-0DB38765723A}" ShortID="1007655533"/>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
+																			<CustomState Name="" ID="{C9B3DA30-E838-4418-AA1E-A7C381203D82}" ShortID="430349956">
+																				<PropertyList>
+																					<Property Name="Bypass" Type="bool" Value="True"/>
+																				</PropertyList>
+																			</CustomState>
+																		</CustomState>
+																		<CustomState>
+																			<StateRef Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
+																			<CustomState Name="" ID="{F5313CA1-BAFA-4B7E-9AD1-A160470DE348}" ShortID="629998980">
+																				<PropertyList>
+																					<Property Name="Bypass" Type="bool" Value="True"/>
+																				</PropertyList>
+																			</CustomState>
+																		</CustomState>
+																	</CustomStateList>
+																</StateInfo>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</AuxBus>
+									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="AreaState" ID="{677AD7FE-43DB-49B1-B10B-721D1E000093}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
+												<CustomState Name="" ID="{BCF7DEE2-647F-4741-8D6F-FC2EBD72C18E}" ShortID="266168306"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
+												<CustomState Name="" ID="{CE56FC8D-E004-451A-9908-9266366F2496}" ShortID="409909987"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+												<CustomState Name="" ID="{15B292C6-AEB0-46F2-A9B1-8257D0BBBBCA}" ShortID="166377914"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
+												<CustomState Name="" ID="{CE06962B-7E57-4234-9AAD-4DF85AAA5562}" ShortID="229042747"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
+												<CustomState Name="" ID="{1ABF2F28-9BB4-4B1E-BD28-986CFF4D4573}" ShortID="238094689"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
+												<CustomState Name="" ID="{D0228E83-1273-4BA1-828C-0DA25CC107B5}" ShortID="728712711"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
+												<CustomState Name="" ID="{AD57BC6C-0BED-4ABE-B163-A85A7ECCF5BF}" ShortID="941113443"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{658AF3F3-BE1A-4489-90E4-403949407025}" ShortID="140497034">
+														<PropertyList>
+															<Property Name="Bypass" Type="bool" Value="True"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<ObjectRef Name="HelmetEQ" ID="{CD354935-84E0-46B4-B687-2395F28D157F}" WorkUnitID="{1381E90E-CEBA-4A13-AD41-8ECCD1E9FEFD}"/>
+															</Reference>
+														</ReferenceList>
+														<StateInfo>
+															<CustomStateList>
+																<CustomState>
+																	<StateRef Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
+																	<CustomState Name="" ID="{D72008DF-6A08-483B-8383-FD82B7C3EB96}" ShortID="1057774603"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
+																	<CustomState Name="" ID="{2A3E0168-ECE1-4A7D-B044-E66DBA76A44C}" ShortID="902464971"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+																	<CustomState Name="" ID="{A8DCBB4B-B6E0-4D22-B757-86C31816A702}" ShortID="767489298"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
+																	<CustomState Name="" ID="{B79676D2-B323-48DC-AFB4-A463DB2876BA}" ShortID="839568763"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
+																	<CustomState Name="" ID="{AB4D82D5-2724-4D80-81A5-8FF122C0E6C9}" ShortID="383508431"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
+																	<CustomState Name="" ID="{19F01B3A-67AC-4C11-8130-60AE8C02D5CD}" ShortID="82629478"/>
+																</CustomState>
+																<CustomState>
+																	<StateRef Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
+																	<CustomState Name="" ID="{C0E12C35-B93E-4CF0-A7CC-A19003D46D9F}" ShortID="412274331"/>
+																</CustomState>
+															</CustomStateList>
+														</StateInfo>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}"/>
+						<Bus Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="NPC Humans" ID="{D368196C-31BD-4063-A8C0-8BB470A59A5B}"/>
+						<Bus Name="NPC Aliens" ID="{90B7454E-E22B-4E84-83B9-9740C406C3E3}"/>
+					</ChildrenList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

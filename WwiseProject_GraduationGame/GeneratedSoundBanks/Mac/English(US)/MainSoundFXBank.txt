@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	513454534	Play_KillConfirm			\NPC\Damage\Play_KillConfirm	
 	562256996	Play_Player_Jump			\Locomotion\PlayerLocomotion\Play_Player_Jump	
 	634184142	Play_FireMain_Rifle			\Weapons\Rifle\Play_FireMain_Rifle	
+	750231532	Play_ElevatorDoorOpen			\GameWorld\Elevator\Play_ElevatorDoorOpen	
 	757694329	Play_ExplodeBarrel			\GameWorld\ExplodingStuff\Play_ExplodeBarrel	
 	858964037	Play_TestBeep_lp			\TestEvents\Play_TestBeep_lp	
 	903081441	Play_AmbienceMain			\Ambience\Play_AmbienceMain	
@@ -338,22 +339,27 @@ Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	1069259374	Modulator Envelope (Custom)				
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	47937584	PlayerVoice			\Audio Master\Master Bus\PlayerMaster\PlayerVoice	
-	309309195	2DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\2DAmbience	
-	765206498	PlayerCloth			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerCloth	
-	1182634443	AmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds	
-	1301074112	3DAmbience			\Audio Master\Master Bus\SFX\AmbientMaster\3DAmbience	
+	1153792	03_Xaga			\Audio Master\Master Bus\Voicelines\VoicesMaster\03_Xaga	
+	47937584	PlayerVoice			\Audio Master\Master Bus\Voicelines\VoicesMaster\02_John Doe\PlayerVoice	
+	223128778	NPC Aliens			\Audio Master\Master Bus\Voicelines\VoicesMaster\NPC Aliens	
+	309309195	2DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\2DAmbience	
+	344209961	01_Ai			\Audio Master\Master Bus\Voicelines\VoicesMaster\01_Ai	
+	765206498	PlayerCloth			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerCloth	
+	840484792	NPC Humans			\Audio Master\Master Bus\Voicelines\VoicesMaster\NPC Humans	
+	1182634443	AmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds	
+	1301074112	3DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\3DAmbience	
 	1399649189	Master Bus			\Audio Master\Master Bus	
-	1459460693	AmbientMaster			\Audio Master\Master Bus\SFX\AmbientMaster	
-	1681012287	PlayerFootsteps			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion\PlayerFootsteps	
+	1459460693	AmbientMaster			\Audio Master\Master Bus\Ambience\AmbientMaster	
+	1574467858	VoicesMaster			\Audio Master\Master Bus\Voicelines\VoicesMaster	
+	1681012287	PlayerFootsteps			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerFootsteps	
 	2033911932	NPCMaster			\Audio Master\Master Bus\SFX\NPCMaster	
-	2343802269	PlayerLocomotion			\Audio Master\Master Bus\PlayerMaster\PlayerLocomotion	
-	3538689948	PlayerMaster			\Audio Master\Master Bus\PlayerMaster	
+	2343802269	PlayerLocomotion			\Audio Master\Master Bus\SFX\PlayerLocomotion	
 	3545700988	Reverbs			\Audio Master\Master Bus\SharedEffects\Reverbs	
-	4152869693	2DAmbientBeds			\Audio Master\Master Bus\SFX\AmbientMaster\AmbientBeds\2DAmbientBeds	
+	3570874681	02_John Doe			\Audio Master\Master Bus\Voicelines\VoicesMaster\02_John Doe	
+	4152869693	2DAmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds\2DAmbientBeds	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	350835844	HangarVerb_JD			\Audio Master\Master Bus\PlayerMaster\PlayerVoice\HangarVerb_JD	
+	350835844	HangarVerb_JD			\Audio Master\Master Bus\Voicelines\VoicesMaster\02_John Doe\PlayerVoice\HangarVerb_JD	
 	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps	
 	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
 	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	
@@ -563,6 +569,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	222730321	Xaga_HAHAHA	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga_HAHAHA_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc2_Tr1\Xaga_HAHAHA		133728
 	243008600	Boots_Run_Heel_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Run\Boots_Run_Heel_06_5CB3E1E0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel\Boots_Run_Heel_06		15548
 	243396653	JD_HoleInOne_BigVoice	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_HoleInOne_BigVoice_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_Dialogue\lvl1_JohnDoe\JD_HoleInOne_BigVoice		112992
+	245350830	Machines_Elevator_Door_Open_Close_Angle_01_SND11637	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Machines_Elevator_Door_Open_Close_Angle_01_SND11637_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Environment\Elevator\ElevatorDoorOpen\Machines_Elevator_Door_Open_Close_Angle_01_SND11637		529028
 	247373654	Cloth09	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_1CF36D38.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\Player_ClothMovement\ClothP1\Cloth09		112776
 	259744675	Leatherboots_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 3_3DE4B037.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Walk\Leatherboots_02		88404
 	260010361	Rifle_Recharge_1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_Recharge_1_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Recharge\Rifle_Recharge\Rifle_Recharge_1		611388
@@ -607,6 +614,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	455882504	Xaga_IfYouWantToAvenge	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga_IfYouWantToAvenge_7B2131EC.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Xaga\Xaga_Dia_effects\Hangar_Xaga\Sc4_Tr1\Xaga_IfYouWantToAvenge		487044
 	484715529	Boots_Run_Toe_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Run\Boots_Run_Toe_04_3A8107D8.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_04		68880
 	493237573	Ai_ItsRightDownCorridor68	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Ai_ItsRightDownCorridor68_250EC824.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc5_Tr1\Ai_ItsRightDownCorridor68		578368
+	493325606	Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Environment\Elevator\ElevatorDoorOpen\Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074		199952
 	496990606	JD_ThatsForMySister	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_ThatsForMySister_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_Dialogue\lvl1_JohnDoe\JD_ThatsForMySister		142944
 	497200545	Metal2_Fs_06	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 6_B5EE7E0F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Play_Land_MaterialLayer\Metal2_Land_Layer\Metal2_Land3\Metal2_Fs_06		54158
 	507060247	JD_YouShouldHaveKnownBetter	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_YouShouldHaveKnownBetter_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_Dialogue\lvl1_JohnDoe\JD_YouShouldHaveKnownBetter		147552
@@ -629,6 +637,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	641471652	Rifle_Unload	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_Unload_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Unload		41378
 	646430669	JD_DamnThatHurt	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_DamnThatHurt_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_Dialogue\JohnDoeBarks\JD_DamnThatHurt		122208
 	651678197	Elevator_PowerON_lp	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Elevator\Elevator\Elevator_PowerON_lp_FBC78EF0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Environment\Elevator\Elevator_PowerState\Elevator_PowerON\Elevator_PowerON_lp		1920096
+	655758477	Rifle_FireMainv2	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_FireMainv2_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_FireMainv2		107724
 	662185199	Boots_Run_Toe_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Run\Boots_Run_Toe_02_2BAD6CE9.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_02		63840
 	664780185	Rifle_Load	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_Load_EFB673FF.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Load		284680
 	670922056	Ai_iNormallyControlTheMainframe	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Ai_iNormallyControlTheMainframe_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc3_Tr1\Ai_iNormallyControlTheMainframe		465504
@@ -679,7 +688,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	877196418	Boots_Walk_Toe_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Walk\Boots_Walk_Toe_03_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Toe_01\Boots_Walk_Toe_03		71532
 	887679705	Metal_fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7_3E13155F.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_Jump_MaterialLayer\Metal_Jump\Metal_fs_02		92316
 	892985832	Br_Fs_03	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5_6B4CCDD6.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_03		141480
-	902368461	Rifle_Slime	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_Slime_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_Slime		132796
+	902368461	Rifle_Slime	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_Slime_5FBFDED4.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_Slime		30932
 	906528720	Ai_SureOkay1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Ai_SureOkay1_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Ai\Ai\Ai_SureOkay1		101472
 	911602909	SFX_TestSound_lp_3D	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\TestFiles\Beep Loop by DongKingKong Id-395901 9_1E14C19D.wem		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\3D_TestFiles\SFX_TestSound_lp_3D		198606
 	921613273	sfx_test_Beep_1000hz	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926_818F3B66.wem		\Actor-Mixer Hierarchy\03_Non-Game\TestFiles\sfx_test_Beep_1000hz		3624
@@ -687,6 +696,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	928811321	Elevator_PowerUP	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Elevator\Elevator\Elevator_PowerUP_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Environment\Elevator\Elevator_PowerState\Elevator_PowerON\Elevator_PowerUP		576096
 	934986776	JD_Hmm	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_Hmm_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc5_Tr1\JD_Hmm		89952
 	939251175	Boots_Walk_Heel_07	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Walk\Boots_Walk_Heel_07_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_07		16096
+	942527291	Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104_FBC78EF0.wem		\Actor-Mixer Hierarchy\01_Sound FX\Ambience\Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104		7718604
 	944226106	Ai_hi	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Ai_hi_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc3_Tr1\Ai_hi		57696
 	945175796	Ai_Okay1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Ai_Okay1_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\lvl1_Ai\Ai\Ai_Okay1		85344
 	945436620	Br_Fs_02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9_57716B7B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\Brute_Footsteps\Br_Fs_02		101296

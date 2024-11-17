@@ -26,6 +26,7 @@ namespace AK
         static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
         static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
         static const AkUniqueID PLAY_ELEVATOR_POWER_LP = 1757009721U;
+        static const AkUniqueID PLAY_ELEVATORDOOROPEN = 750231532U;
         static const AkUniqueID PLAY_EXPLODEBARREL = 757694329U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
@@ -379,19 +380,24 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID _01_AI = 344209961U;
+        static const AkUniqueID _02_JOHN_DOE = 3570874681U;
         static const AkUniqueID _2DAMBIENCE = 309309195U;
         static const AkUniqueID _2DAMBIENTBEDS = 4152869693U;
+        static const AkUniqueID _03_XAGA = 1153792U;
         static const AkUniqueID _3DAMBIENCE = 1301074112U;
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID MASTER_BUS = 1399649189U;
+        static const AkUniqueID NPC_ALIENS = 223128778U;
+        static const AkUniqueID NPC_HUMANS = 840484792U;
         static const AkUniqueID NPCMASTER = 2033911932U;
         static const AkUniqueID PLAYERCLOTH = 765206498U;
         static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
-        static const AkUniqueID PLAYERMASTER = 3538689948U;
         static const AkUniqueID PLAYERVOICE = 47937584U;
         static const AkUniqueID REVERBS = 3545700988U;
+        static const AkUniqueID VOICESMASTER = 1574467858U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

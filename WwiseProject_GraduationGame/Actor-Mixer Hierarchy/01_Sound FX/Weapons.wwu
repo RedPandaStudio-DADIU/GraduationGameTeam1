@@ -12,6 +12,11 @@
 								<Value>-14</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -98,6 +103,11 @@
 												<Property Name="UseMaxSoundPerInstance" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-12</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -190,6 +200,11 @@
 														<Value>47</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-16</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -231,6 +246,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -242,6 +262,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Rifle_Slime" ID="{963A5B00-37DA-4876-8499-1EB5252F1409}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0258104253112033"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.160598201936376"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Rifle_Slime.wav</AudioFile>
 													<MediaIDList>
@@ -458,11 +483,53 @@
 												</ObjectList>
 											</ObjectLists>
 										</RandomSequenceContainer>
+										<Sound Name="Rifle_FireMainv2" ID="{3B21566D-45EA-4309-8C96-40D414F26C71}" ShortID="969267406">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7861C497-9016-4542-AEAD-2D603B460D02}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="76"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Rifle_FireMainv2" ID="{9DDB9E29-5BB9-4E95-9228-AD8862229C88}">
+													<Language>SFX</Language>
+													<AudioFile>Rifle_FireMainv2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="655758477"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Rifle_FireMainv2" ID="{9DDB9E29-5BB9-4E95-9228-AD8862229C88}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
 											<Reference>
-												<ObjectRef Name="Rifle_FireMain" ID="{3487B195-629B-404C-AC7F-E2F9ACEB54A4}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
+												<ObjectRef Name="Rifle_FireMainv2" ID="{3B21566D-45EA-4309-8C96-40D414F26C71}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
 											</Reference>
 											<Reference>
 												<ObjectRef Name="Rifle_Slime" ID="{4816DCDA-DA40-4100-9256-A937D3E57BAD}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
