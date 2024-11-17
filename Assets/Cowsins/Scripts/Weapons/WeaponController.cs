@@ -77,6 +77,8 @@ namespace cowsins
 
         [SerializeField] private Animator holsterMotionObject;
 
+        private WeaponController weaponController;
+
         public Animator HolsterMotionObject
         {
             get { return holsterMotionObject; }
@@ -156,6 +158,8 @@ namespace cowsins
             // Subscribe to the method.
             // Each time we click on the attachment UI, we should perform the assignment.
             UIEvents.onAttachmentUIElementClickedNewAttachment += AssignNewAttachment;
+            //UIController uiController = player.GetComponent<UIController>();
+
         }
 
         private void OnDisable()
@@ -170,6 +174,7 @@ namespace cowsins
             InitialSettings();
             CreateInventoryUI();
             GetInitialWeapons();
+            weaponController = GetComponent<WeaponController>();
 
             
             //StartCoroutine(DelayedInit());
@@ -1171,23 +1176,35 @@ namespace cowsins
             // }
             if (InputManager.weapon1)
              {
-                if (currentWeapon > 0 && inventory.Length > 0 && inventory[0] != null)
-                {
-                    currentWeapon=0;
-                    Debug.Log("Weapon 1");
-                    SelectWeapon();
-                }
+                // if (currentWeapon > 0 && inventory.Length > 0 && inventory[0] != null)
+                // {
+                //     currentWeapon=0;
+                //     Debug.Log("Weapon 1");
+                //     SelectWeapon();
+                // }
+                currentWeapon = 0;
+                //UpdateWeaponUI(weaponController);
+                UIController.instance.UpdateWeaponUI(weaponController);
+
+                SelectWeapon();
+                Debug.Log("Switched to Weapon 1");
             
              }
 
              if (InputManager.weapon2)
              {
-                if (currentWeapon != 1 && inventory.Length > 1 && inventory[1] != null)
-                {
-                    currentWeapon=1;
-                    Debug.Log("Weapon 2");
-                    SelectWeapon();
-                }
+                // if (currentWeapon != 1 && inventory.Length > 1 && inventory[1] != null)
+                // {
+                //     currentWeapon=1;
+                //     Debug.Log("Weapon 2");
+                //     SelectWeapon();
+                // }
+                weaponController.currentWeapon = 1;
+               // UpdateWeaponUI(weaponController);
+               UIController.instance.UpdateWeaponUI(weaponController);
+
+                SelectWeapon();
+                Debug.Log("Switched to Weapon 2");
             
              }
 

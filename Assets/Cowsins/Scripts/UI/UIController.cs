@@ -151,7 +151,7 @@ namespace cowsins
 
             playerDataManager = PlayerDataManager.Instance;
             weaponController = FindObjectOfType<WeaponController>();
-            UpdateWeaponUI();
+            UpdateWeaponUI(weaponController);
         }
         private void Update()
         {
@@ -188,25 +188,43 @@ namespace cowsins
             
         }
 
-        public void UpdateWeaponUI()
+        public void UpdateWeaponUI(WeaponController weaponController)
         {
-            int currentIndex = playerDataManager.currentWeaponIndex;
+            //int currentIndex = playerDataManager.currentWeaponIndex;
+             int slotNumber = weaponController.currentWeapon;
 
-            
-            if (currentIndex == 0)
+            if (slotNumber == 0)
             {
                 currentWeaponImage.sprite = weapon1Image;
-                secondaryWeaponImage.sprite = weapon2Image;
-                secondaryWeaponImage.gameObject.SetActive(weaponController.inventory.Length > 1); // 如果有第二把武器则显示
+                currentWeaponImage.gameObject.SetActive(true);
+
+                // 检查是否存在第二把武器
+                if (weaponController.inventory.Length > 1 && weaponController.inventory[1] != null)
+                {
+                    secondaryWeaponImage.sprite = weapon2Image;
+                    secondaryWeaponImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    secondaryWeaponImage.gameObject.SetActive(false);
+                }
             }
-            else if (currentIndex == 1)
+            else if (slotNumber == 1)
             {
                 currentWeaponImage.sprite = weapon2Image;
-                secondaryWeaponImage.sprite = weapon1Image;
-                secondaryWeaponImage.gameObject.SetActive(weaponController.inventory.Length > 1);
-            }
+                currentWeaponImage.gameObject.SetActive(true);
 
-            currentWeaponImage.gameObject.SetActive(true);
+                // 检查是否存在第一把武器
+                if (weaponController.inventory.Length > 0 && weaponController.inventory[0] != null)
+                {
+                    secondaryWeaponImage.sprite = weapon1Image;
+                    secondaryWeaponImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    secondaryWeaponImage.gameObject.SetActive(false);
+                }
+            }
         }
 
         // HEALTH SYSTEM /////////////////////////////////////////////////////////////////////////////////////////
