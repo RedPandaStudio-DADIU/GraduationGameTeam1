@@ -108,6 +108,7 @@ namespace cowsins
             else if (other.CompareTag("Player") && isEnemy){
                 Debug.Log("Enemy bullet hit the player with damage: " + damage + " player health: " + other.GetComponent<PlayerStats>().health);
                 other.GetComponent<PlayerStats>().Damage(damage, false);
+                DestroyProjectile();
                 // DamageTarget(other.transform, damage, false);
             }
             else if((other.CompareTag("Enemy") && isHuman) || (other.CompareTag("Human") && isEnemy)){
