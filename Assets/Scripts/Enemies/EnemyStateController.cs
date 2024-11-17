@@ -18,7 +18,10 @@ public class EnemyStateController : MonoBehaviour
     [SerializeField] private float force = 300f;
     [SerializeField] private List<Transform> targetList = new List<Transform>();
     [SerializeField] private bool isHuman = false;
+    [SerializeField] private Animator animator;
+
     private Queue<Transform> targetQueue;
+
 
 
     void Awake()
@@ -166,6 +169,19 @@ public class EnemyStateController : MonoBehaviour
 
     }
 
+    public bool ReachedStoppingDistance(){
+        float stopDistance = enemy.GetStoppingDistance();
+
+
+        Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
+        float distanceToPlayer = directionToPlayer.magnitude;
+        Debug.Log("Distance to player: " + distanceToPlayer + " enemy: " + this.GetEnemy().name);
+        if (distanceToPlayer <= stopDistance){
+            return true;
+        } 
+        return false;
+    }
+
     public bool CheckIfReachedDestination(){
         if (!enemy.GetComponent<NavMeshAgent>().pathPending){
             if (enemy.GetComponent<NavMeshAgent>().remainingDistance<= enemy.GetComponent<NavMeshAgent>().stoppingDistance){
@@ -263,5 +279,9 @@ public class EnemyStateController : MonoBehaviour
 
     public IEnemyState GetCurrentState(){
         return this.currentState;
+    }
+
+    public Animator GetAnimator(){
+        return this.animator;
     }
 }
