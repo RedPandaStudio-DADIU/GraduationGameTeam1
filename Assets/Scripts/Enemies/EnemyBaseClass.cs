@@ -46,7 +46,12 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     public void DecreaseHealth(float damage){
         if(this.health > 0){
-            this.health -= damage;
+            if(damage > this.health){
+                SetHealth(0f);
+            } else {
+                this.health -= damage;
+            }
+            
         }
 
         if (hitSoundEvent != null)
