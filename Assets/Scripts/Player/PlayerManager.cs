@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
         // }
         // &&  SceneManager.GetActiveScene().buildIndex==1
         if(!dataSet ){
-            Debug.Log("Inside Player Manager: Health: "+ PlayerDataManager.Instance.playerHealth);
+           // Debug.Log("Inside Player Manager: Health: "+ PlayerDataManager.Instance.playerHealth);
             if(PlayerDataManager.Instance.playerHealth > 0){
                 GameObject.FindWithTag("Player").GetComponent<PlayerStats>().health = PlayerDataManager.Instance.playerHealth;
                 UIEvents.basicHealthUISetUp?.Invoke(PlayerDataManager.Instance.playerHealth, GameObject.FindWithTag("Player").GetComponent<PlayerStats>().shield, GameObject.FindWithTag("Player").GetComponent<PlayerStats>().maxHealth, GameObject.FindWithTag("Player").GetComponent<PlayerStats>().maxShield);

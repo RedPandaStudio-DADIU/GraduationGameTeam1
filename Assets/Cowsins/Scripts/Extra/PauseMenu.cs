@@ -35,11 +35,17 @@ namespace cowsins
             // Initially, the game is not paused
             isPaused = false;
             pauseMenuUI.SetActive(false);
+            // DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(playerUI);
+            // DontDestroyOnLoad(pauseMenuUI);
+
+
         }
 
         private void Update()
         {
             HandlePauseInput();
+             Debug.Log("UPDATE OF PAUSEMENU ");
             // if (isPaused)
             // {
             //     HandlePause();
@@ -53,8 +59,10 @@ namespace cowsins
 
         private void HandlePauseInput()
         {
+            Debug.Log("HandlePauseInput() ");
             if (InputManager.pausing)
             {
+                 Debug.Log("HandlePauseInput() InputManager.pausing");
                 TogglePause();
             }
         }
@@ -131,6 +139,7 @@ namespace cowsins
         public void TogglePause()
         {
             isPaused = !isPaused;
+             Debug.Log("in togglepause");
 
             if (isPaused)
             {
@@ -168,6 +177,7 @@ namespace cowsins
 
          public void QuitToMainMenu()
         {
+            isPaused = false;
             Time.timeScale = 1f; 
             SceneManager.LoadScene(0); 
         }
@@ -175,7 +185,9 @@ namespace cowsins
         public void RestartGame()
         {
             Time.timeScale = 1f; 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+            isPaused = false;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
 
 

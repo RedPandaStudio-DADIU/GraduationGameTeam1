@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using cowsins;
+using UnityEngine.UI;
+
 
 public class ElevatorManager : MonoBehaviour
 {
+    [SerializeField] private  Image blackScreenImage;
+    [SerializeField] private  GameObject blackScreen;
+    [SerializeField] private float fadeDuration = 1.5f; 
+    // private bool isFading = false;
+    
     void OnTriggerEnter(Collider other){
         if(other.gameObject.CompareTag("Player")){
             PlayerStartPosition.playerSpawnPosition = new Vector3(-0.32f,0.8f, -3f);
@@ -30,9 +37,41 @@ public class ElevatorManager : MonoBehaviour
                 }
 
             }
+            StartCoroutine(FadeOutAndLoadScene());
 
-            SceneManager.LoadScene("Level 2.1 Design");
+            //SceneManager.LoadScene("Level 2.1 Design");
+            //Time.timeScale = 1;
 
         }
+
+
     }
+     public IEnumerator FadeOutAndLoadScene()
+        {
+            // isFading = true;
+             Debug.Log("call IEnumerator FadeOutAndLoadScene()");
+             blackScreen.SetActive(true);
+             GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
+            playerRigidbody.isKinematic = true;
+
+            // Time.timeScale = 0;
+            float elapsedTime = 0f;
+            Color color = blackScreenImage.color;
+
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.unscaledDeltaTime;
+                float alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
+                //blackScreenImage.color = new Color(imageColor.r, imageColor.g, imageColor.b, alpha);
+                color.a = alpha; 
+                 Debug.Log("change color alpha");
+            
+                blackScreenImage.color = color;
+                yield return null;
+            }
+             blackScreen.SetActive(false);
+             SceneManager.LoadScene("Level 2.1 Design");
+            
+        }
 }
