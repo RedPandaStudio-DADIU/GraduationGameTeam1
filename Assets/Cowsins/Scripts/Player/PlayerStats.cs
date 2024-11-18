@@ -116,7 +116,9 @@ namespace cowsins
             //     shield = 0;
             //     health -= damage;
             // }
-            health -= damage;
+            if(health > 0){
+                health -= damage;
+            }
 
             // Notify UI about the health change
             UIEvents.onHealthChanged?.Invoke(health, shield, true);
