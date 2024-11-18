@@ -3,7 +3,7 @@
 	<Busses>
 		<WorkUnit Name="Voicelines" ID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
-				<Bus Name="VoicesMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}">
+				<Bus Name="DialogueMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}">
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
 							<ValueList>
@@ -271,6 +271,10 @@
 								</Property>
 							</PropertyList>
 						</Bus>
+					</ChildrenList>
+				</Bus>
+				<Bus Name="NPCBarks" ID="{057AB715-157F-4D2F-B8A3-345BBE895021}">
+					<ChildrenList>
 						<Bus Name="NPC Humans" ID="{D368196C-31BD-4063-A8C0-8BB470A59A5B}"/>
 						<Bus Name="NPC Aliens" ID="{90B7454E-E22B-4E84-83B9-9740C406C3E3}"/>
 					</ChildrenList>

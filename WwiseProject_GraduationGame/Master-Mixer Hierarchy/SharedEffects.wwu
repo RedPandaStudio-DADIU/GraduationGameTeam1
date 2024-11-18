@@ -8,7 +8,15 @@
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<AuxBus Name="RoomLarge" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}">
+						<AuxBus Name="RoomHangarMain" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="Effects">
 									<Reference>
@@ -29,7 +37,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-14</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -55,7 +63,31 @@
 								</ObjectList>
 							</ObjectLists>
 						</AuxBus>
-						<AuxBus Name="RoomTunnel" ID="{0D6FDCD2-CD61-4089-A788-AA26499DCD89}"/>
+						<AuxBus Name="RoomTunnel" ID="{0D6FDCD2-CD61-4089-A788-AA26499DCD89}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{7020E0AC-9ACC-4B8E-BE9E-AAA497D0B608}" ShortID="112716662">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+														<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
 						<AuxBus Name="DelaySlaps" ID="{A9EFF5A0-FCBE-4478-BFCF-8F9B76C0944B}">
 							<PropertyList>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>

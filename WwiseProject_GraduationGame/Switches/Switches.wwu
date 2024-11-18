@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" SchemaVersion="119">
 	<Switches>
-		<WorkUnit Name="GameWorld" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" PersistMode="Standalone">
+		<WorkUnit Name="Switches" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="GroundMaterialSwitch" ID="{3CFB2835-D747-4294-B504-B635B37AA31E}">
 					<PropertyList>
@@ -246,6 +246,13 @@
 						</SwitchGroup>
 					</ChildrenList>
 				</Folder>
+				<SwitchGroup Name="XagaHealth" ID="{9BBAB994-4181-45E4-B250-E82318BBE8EA}">
+					<ChildrenList>
+						<Switch Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}"/>
+						<Switch Name="LowHealth" ID="{CEC481A2-4871-4578-A194-E328BBDEC1D8}"/>
+						<Switch Name="NearDeath" ID="{9CC6B738-2673-47B7-BBBF-CE1AF5A42363}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
