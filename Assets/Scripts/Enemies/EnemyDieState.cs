@@ -24,6 +24,10 @@ public class EnemyDieState : IEnemyState
             rb.useGravity = true;
         }
 
+        if(stateController.GetEnemy().gameObject.GetComponent<Animator>() != null){
+            stateController.GetEnemy().gameObject.GetComponent<Animator>().enabled = false;
+        }
+
     }
     public void OnUpdate(EnemyStateController stateController){
         // Activate Ragdoll + deactivate navmesh agent + shooting collider

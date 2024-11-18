@@ -20,8 +20,12 @@ public class EnemyAttackState : IEnemyState
             specialAttackCoroutine = stateController.StartCoroutine(SpecialAttackCoroutine(stateController));
         }
 
+        stateController.GetAnimator().SetBool("IsAttacking", true);
+
+
     }
     public void OnUpdate(EnemyStateController stateController){
+        Debug.Log("Inside Attack State: " + stateController.GetEnemy().name);
         if(stateController.GetEnemy().GetIsMovable()){
             stateController.SetAgentsDestination();
         }
@@ -29,16 +33,27 @@ public class EnemyAttackState : IEnemyState
         {
             if(!isAttacking){
                 // stateController.GetEnemy().Attack();
+                // stateController.GetAnimator().SetBool("IsAttacking", false);
+
                 isAttacking = true;
                 shootingCoroutine = stateController.StartCoroutine(ContinuousShooting(stateController));
             }
-           
-        } else {
-            // reaches destination - goes into idle state
-            if(stateController.CheckIfReachedDestination()){
-                stateController.ChangeState(new EnemyIdleState());
+            if (stateController.ReachedStoppingDistance()){
+                stateController.GetAnimator().SetBool("IsShooting", true);
+                stateController.GetAnimator().SetBool("IsAttacking", false);
+
+            } else {
+                stateController.GetAnimator().SetBool("IsAttacking", true);
+
             }
-        }
+           
+        } 
+        // else {
+        //     // reaches destination - goes into idle state
+        //     if(stateController.CheckIfReachedDestination()){
+        //         stateController.ChangeState(new EnemyIdleState());
+        //     }
+        // }
 
         // stateController.PrintAgentDestination();
 
@@ -61,6 +76,9 @@ public class EnemyAttackState : IEnemyState
             }
             specialAttackCoroutine = null;
         }
+        // stateController.GetAnimator().SetBool("IsAttacking", false);
+        stateController.GetAnimator().SetBool("IsShooting", false);
+
         // isSpecialStateActive = false;
 
     }

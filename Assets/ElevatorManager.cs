@@ -9,25 +9,31 @@ public class ElevatorManager : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.gameObject.CompareTag("Player")){
             PlayerStartPosition.playerSpawnPosition = new Vector3(-0.32f,0.8f, -3f);
-            // other.gameObject.transform.position = new Vector3(-0.32f, 0.8f, -3f);
-            // other.gameObject.GetComponent<WeaponController>().enabled = false;
             PlayerDataManager.Instance.ResetData(other.gameObject.GetComponent<WeaponController>().inventory.Length);
             PlayerDataManager.Instance.playerHealth = other.gameObject.GetComponent<PlayerStats>().health;
             Debug.Log("Health: " + PlayerDataManager.Instance.playerHealth);
-            // PlayerDataManager.Instance.inventory = other.gameObject.GetComponent<WeaponController>().inventory;
             PlayerDataManager.Instance.currentWeaponIndex = other.gameObject.GetComponent<WeaponController>().currentWeapon;
             int index = 0;
             foreach (WeaponIdentification id in other.gameObject.GetComponent<WeaponController>().inventory){
                 // Debug.Log("ELEVATOR: ""Weapon identification: " + id.name);
 
-                if(id != null){
-                    PlayerDataManager.Instance.inventory[index] = id;
-                    PlayerDataManager.Instance.weapons[index] = id.weapon;
+                // if(id != null){
+                //     PlayerDataManager.Instance.inventory[index] = id;
+                //     PlayerDataManager.Instance.weapons[index] = id.weapon;
 
-                    Debug.Log("Weapon identification: " + id.name);
-                    PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
-                    index++;
-                }
+                //     Debug.Log("Weapon identification: " + id.name);
+                //     PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
+                //     index++;
+                // }
+
+                PlayerDataManager.Instance.inventory[index] = id;
+                PlayerDataManager.Instance.weapons[index] = id.weapon;
+
+                Debug.Log("Weapon identification: " + id.name);
+                PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
+                index++;
+            
+
 
             }
 
