@@ -21,7 +21,7 @@
 				<Event Id="3766110729" Name="Play_Level_1_station" DurationType="Infinite"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B18CACFC-A247-C3F5-1C8A-C4F5B098A554}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FECCD2A9-0060-3EA8-01AA-9EFB4158815F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -60,6 +60,7 @@
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="2033911932" Name="NPCMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
+				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
@@ -427,7 +428,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{B7BA4CAA-0EFE-E2E3-AD5F-6252C69CEF73}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{F3D9A565-1F59-1B06-3B96-36D14B45C853}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -629,7 +630,7 @@
 				</File>
 				<File Id="260010361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Recharge_1.wav</ShortName>
-					<CachePath>SFX/Rifle_Recharge_1_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Recharge_1_29E2320A.wem</CachePath>
 				</File>
 				<File Id="262623482" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_Hello_Annoyed.wav</ShortName>
@@ -841,7 +842,7 @@
 				</File>
 				<File Id="563975790" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Recharge_3.wav</ShortName>
-					<CachePath>SFX/Rifle_Recharge_3_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Recharge_3_CBEBA42B.wem</CachePath>
 				</File>
 				<File Id="566386167" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>NO.wav</ShortName>
@@ -1053,7 +1054,7 @@
 				</File>
 				<File Id="854687943" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Recharge_2.wav</ShortName>
-					<CachePath>SFX/Rifle_Recharge_2_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Recharge_2_1E5E93CB.wem</CachePath>
 				</File>
 				<File Id="855706314" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_DamnThatsGotToHurt.wav</ShortName>
@@ -1093,7 +1094,7 @@
 				</File>
 				<File Id="902368461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Slime.wav</ShortName>
-					<CachePath>SFX/Rifle_Slime_5FBFDED4.wem</CachePath>
+					<CachePath>SFX/Rifle_Slime_9B6EE11A.wem</CachePath>
 				</File>
 				<File Id="906528720" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_SureOkay1.wav</ShortName>
@@ -1280,6 +1281,7 @@
 					<Plugin Id="139549955" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="145985174" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="147930550" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="148861226" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="166165081" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="172843745" Name="OPEN CHEST" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="175138566" Name="HARPSY" LibName="Wwise Synth One" LibId="9699330"/>
@@ -1439,7 +1441,7 @@
 						<MediaRef Id="942527291"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1883912870" Name="Play_Brute_Footsteps" DurationType="OneShot" DurationMin="0.5063826" DurationMax="1.4394294">
+				<Event Id="989866120" Name="Play_Brute_Fs" DurationType="OneShot" DurationMin="0.5063826" DurationMax="1.4394294">
 					<MediaRefs>
 						<MediaRef Id="287061307"/>
 						<MediaRef Id="444986285"/>
@@ -2098,7 +2100,7 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="634184142" Name="Play_FireMain_Rifle" DurationType="OneShot" DurationMin="3.5157292" DurationMax="3.7125">
+				<Event Id="634184142" Name="Play_FireMain_Rifle" DurationType="OneShot" DurationMin="3.6498318" DurationMax="4.130412">
 					<MediaRefs>
 						<MediaRef Id="260010361"/>
 						<MediaRef Id="272504973"/>
@@ -2110,6 +2112,11 @@
 						<MediaRef Id="854687943"/>
 						<MediaRef Id="902368461"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="148861226"/>
+						</Custom>
+					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
@@ -2190,6 +2197,16 @@
 					<MediaRefs>
 						<MediaRef Id="921613273"/>
 					</MediaRefs>
+				</Event>
+				<Event Id="1298310256" Name="Play_JD_Spawn" DurationType="OneShot" DurationMin="1.28" DurationMax="1.7502041">
+					<MediaRefs>
+						<MediaRef Id="9995095"/>
+						<MediaRef Id="243396653"/>
+						<MediaRef Id="507060247"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
@@ -2796,6 +2813,7 @@
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="2033911932" Name="NPCMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
+				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
@@ -2974,5 +2992,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F738CEE0-5976-6842-D39A-17595B7C71C8}</FileHash>
+	<FileHash>{B649D7C9-2D0D-23A1-26B5-53B6914B6A6A}</FileHash>
 </SoundBanksInfo>

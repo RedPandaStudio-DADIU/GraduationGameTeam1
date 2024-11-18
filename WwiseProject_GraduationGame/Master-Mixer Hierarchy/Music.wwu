@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{89C77C7D-2A70-4F6E-A79C-5590C19167CB}" SchemaVersion="119" RootDocumentID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}" ParentDocumentID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}">
 	<Busses>
-		<WorkUnit Name="Music" ID="{89C77C7D-2A70-4F6E-A79C-5590C19167CB}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested"/>
+		<WorkUnit Name="Music" ID="{89C77C7D-2A70-4F6E-A79C-5590C19167CB}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
+			<ChildrenList>
+				<Bus Name="MusicMaster" ID="{C74263FF-AB7D-4F64-8A51-85EE597FE1BE}">
+					<DuckingList>
+						<DuckItem>
+							<BusRef Name="VoicesMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}"/>
+							<DuckingParam>
+								<Volume>-6</Volume>
+								<FadeInTime>1</FadeInTime>
+								<FadeOutTime>1</FadeOutTime>
+								<FadeCurve>FadeLinear</FadeCurve>
+							</DuckingParam>
+						</DuckItem>
+					</DuckingList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
 	</Busses>
 </WwiseDocument>

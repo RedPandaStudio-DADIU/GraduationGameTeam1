@@ -16,7 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_ALT_CHARGE_FIFLE = 2073520173U;
         static const AkUniqueID PLAY_ALT_FIRE_RIFLE = 243729645U;
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
-        static const AkUniqueID PLAY_BRUTE_FOOTSTEPS = 1883912870U;
+        static const AkUniqueID PLAY_BRUTE_FS = 989866120U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
         static const AkUniqueID PLAY_DIA_AI = 4271692713U;
         static const AkUniqueID PLAY_DIA_JOHNDOE = 1296777492U;
@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
         static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
+        static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
         static const AkUniqueID PLAY_LEVEL_1_STATION = 3766110729U;
         static const AkUniqueID PLAY_LOAD_HANDGUN = 249020240U;
@@ -389,6 +390,7 @@ namespace AK
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID MASTER_BUS = 1399649189U;
+        static const AkUniqueID MUSICMASTER = 3199789248U;
         static const AkUniqueID NPC_ALIENS = 223128778U;
         static const AkUniqueID NPC_HUMANS = 840484792U;
         static const AkUniqueID NPCMASTER = 2033911932U;

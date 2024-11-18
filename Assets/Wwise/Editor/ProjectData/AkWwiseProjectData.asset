@@ -483,8 +483,28 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Music
     guid: 7d7cc789702a6e4fa79c5590c19167cb
     GuidInternal: 
-    m_lastTime: -8584715561005083381
-    List: []
+    m_lastTime: -8584697508861410353
+    List:
+    - name: MusicMaster
+      guid: ff6342c77dab644f8a5185ee597fe1be
+      id: 3199789248
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 12
+        guid: 7d7cc789702a6e4fa79c5590c19167cb
+      - ElementName: MusicMaster
+        ObjectType: 2
+        guid: ff6342c77dab644f8a5185ee597fe1be
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Music/MusicMaster
   - PhysicalPath: Master-Mixer Hierarchy/SFX.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -1042,7 +1062,7 @@ MonoBehaviour:
     ParentPath: Events/Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584702904454394638
+    m_lastTime: -8584697725199041308
     List:
     - name: Guitarloop
       guid: 2d27b5d8fc97d6478a87d10ae65bcf99
@@ -1146,7 +1166,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584698356273568076
+    m_lastTime: -8584697367323537770
     List:
     - name: Play_Level_1_station
       guid: 4d54eeb55f6fcf4382337f3a42c9aad8
@@ -1357,7 +1377,7 @@ MonoBehaviour:
     ParentPath: Events/GameWorld
     guid: b9dee002a444974f876d94dadf6db20c
     GuidInternal: 
-    m_lastTime: -8584698355668415258
+    m_lastTime: -8584697736996990181
     List:
     - name: Elevator
       guid: 1d22329c1617c9448172562d58e45749
@@ -1513,6 +1533,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_ElevatorDoorOpen
+      guid: aad8cade18e14a4091f060cdadd9b457
+      id: 750231532
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: GameWorld
+        ObjectType: 12
+        guid: b9dee002a444974f876d94dadf6db20c
+      - ElementName: Elevator
+        ObjectType: 4
+        guid: 1d22329c1617c9448172562d58e45749
+      - ElementName: Play_ElevatorDoorOpen
+        ObjectType: 3
+        guid: aad8cade18e14a4091f060cdadd9b457
+      Path: Events/GameWorld/Elevator/Play_ElevatorDoorOpen
+      maxAttenuation: 10
+      maxDuration: 3.854854
+      minDuration: 3.854854
     - name: Play_ExplodeBarrel
       guid: f83be7e2d1514e47af5bffda733a7cdb
       id: 757694329
@@ -1544,8 +1584,25 @@ MonoBehaviour:
     ParentPath: Events/Locomotion
     guid: a2c848ff1589744f939bb3dc40287186
     GuidInternal: 
-    m_lastTime: -8584713178556825128
-    List: []
+    m_lastTime: -8584697508861342010
+    List:
+    - name: Play_Brute_Fs
+      guid: b989e5f174c5ce45b63f6d36555e9823
+      id: 989866120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Locomotion
+        ObjectType: 12
+        guid: a2c848ff1589744f939bb3dc40287186
+      - ElementName: Play_Brute_Fs
+        ObjectType: 3
+        guid: b989e5f174c5ce45b63f6d36555e9823
+      Path: Events/Locomotion/Play_Brute_Fs
+      maxAttenuation: 0
+      maxDuration: 1.4394294
+      minDuration: 0.5063826
   - PhysicalPath: Events/Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1587,7 +1644,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584698356207333656
+    m_lastTime: -8584697508861289274
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -1623,26 +1680,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Brute_Footsteps
-      guid: b989e5f174c5ce45b63f6d36555e9823
-      id: 1883912870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: NPC
-        ObjectType: 12
-        guid: b80379d52c10a44581b347f021ebb1af
-      - ElementName: Brute
-        ObjectType: 4
-        guid: b40a645e462ab04598fb93ffebcbc9ad
-      - ElementName: Play_Brute_Footsteps
-        ObjectType: 3
-        guid: b989e5f174c5ce45b63f6d36555e9823
-      Path: Events/NPC/Brute/Play_Brute_Footsteps
-      maxAttenuation: 0
-      maxDuration: 1.4394294
-      minDuration: 0.5063826
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
       id: 2628165376
@@ -1734,8 +1771,25 @@ MonoBehaviour:
     ParentPath: Events/Player
     guid: 8207cda29fb9e2459b243d8e7eaae86e
     GuidInternal: 
-    m_lastTime: -8584715561005315434
-    List: []
+    m_lastTime: -8584697367323607377
+    List:
+    - name: Play_JD_Spawn
+      guid: b1edeffb9dcfc04a92ed53c9e0b982bb
+      id: 1298310256
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: 8207cda29fb9e2459b243d8e7eaae86e
+      - ElementName: Play_JD_Spawn
+        ObjectType: 3
+        guid: b1edeffb9dcfc04a92ed53c9e0b982bb
+      Path: Events/Player/Play_JD_Spawn
+      maxAttenuation: 0
+      maxDuration: 1.7502041
+      minDuration: 1.28
   - PhysicalPath: Events/PlayerLocomotion.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2089,8 +2143,8 @@ MonoBehaviour:
         guid: 21155b7f2b6f2444b70d8e9997774966
       Path: Events/Weapons/Rifle/Play_FireMain_Rifle
       maxAttenuation: 0
-      maxDuration: 3.7125
-      minDuration: 3.5157292
+      maxDuration: 4.130412
+      minDuration: 3.6498318
     - name: Play_Hitmarker_main
       guid: e84137034ce32946b2d5dbb724670881
       id: 941492189
