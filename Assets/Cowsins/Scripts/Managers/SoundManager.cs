@@ -27,19 +27,19 @@ namespace cowsins
         public void PlaySound(AudioClip clip, float delay, float pitchAdded, bool randomPitch, float spatialBlend)
         {
             if (clip == null) return;
-            StartCoroutine(Play(clip, delay, pitchAdded, randomPitch, spatialBlend));
+            //StartCoroutine(Play(clip, delay, pitchAdded, randomPitch, spatialBlend));
         }
 
-        private IEnumerator Play(AudioClip clip, float delay, float pitch, bool randomPitch, float spatialBlend)
-        {
-            if (!clip) yield return null;
-            yield return new WaitForSeconds(delay);
-            src.spatialBlend = spatialBlend;
-            float pitchAdded = randomPitch ? Random.Range(-pitch, pitch) : pitch;
-            src.pitch = 1 + pitchAdded;
-            src.PlayOneShot(clip);
-            yield return null;
-        }
+        // private IEnumerator Play(AudioClip clip, float delay, float pitch, bool randomPitch, float spatialBlend)
+        // {
+        //     // if (!clip) yield return null;
+        //     // yield return new WaitForSeconds(delay);
+        //     // src.spatialBlend = spatialBlend;
+        //     // float pitchAdded = randomPitch ? Random.Range(-pitch, pitch) : pitch;
+        //     // src.pitch = 1 + pitchAdded;
+        //     // src.PlayOneShot(clip);
+        //     // yield return null;
+        // }
 
 
         public void PlaySound(AK.Wwise.Event eventToPlay, float delay = 0f)

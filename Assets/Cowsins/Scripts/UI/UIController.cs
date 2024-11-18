@@ -23,6 +23,9 @@ namespace cowsins
 
         public PlayerMovement playerMovement;
 
+        private PlayerDataManager playerDataManager;
+        private WeaponController weaponController;
+
         [Tooltip("Use image bars to display player statistics.")] public bool barHealthDisplay;
 
         [Tooltip("Use text to display player statistics.")] public bool numericHealthDisplay;
@@ -68,6 +71,13 @@ namespace cowsins
 
         [SerializeField, Tooltip("Text that displays the name of the current weapon when inspecting.")] private TextMeshProUGUI weaponDisplayText_AttachmentsUI;
 
+
+        
+        // private bool weapon1PickedUp = false;
+        // private bool weapon2PickedUp = false;
+        // private int currentWeaponIndex = 1;
+
+
         [SerializeField, Tooltip("Prefab of the UI element that represents an attachment on-screen when inspecting")] private GameObject attachmentDisplay_UIElement;
 
         [SerializeField, Tooltip("Group of attachments. Attachment UI elements are wrapped inside these.")]
@@ -91,6 +101,19 @@ namespace cowsins
         [Tooltip("Attach the appropriate UI here")] public TextMeshProUGUI bulletsUI, magazineUI, reloadUI, lowAmmoUI;
 
         [Tooltip("Display an icon of your current weapon")] public Image currentWeaponDisplay;
+
+        [SerializeField, Tooltip("Image for displaying current weapon.")]
+        private Image currentWeaponImage;
+
+        [SerializeField, Tooltip("Image for displaying secondary weapon.")]
+        private Image secondaryWeaponImage;
+
+        [SerializeField, Tooltip("Sprite for weapon 1 icon.")]
+        private Sprite weapon1Image;
+
+        [SerializeField, Tooltip("Sprite for weapon 2 icon.")]
+        private Sprite weapon2Image;
+
         [Tooltip("Image for charged shot loading")] public Image chargedShotUI;
         [Tooltip("Icon for displaying the loading bar")] public Sprite chargedShotIcon;
         [Tooltip("Image that represents heat levels of your overheating weapon"), SerializeField] private Image overheatUI;
@@ -125,6 +148,10 @@ namespace cowsins
             intManager = PlayerStates.instance.GetComponent<InteractManager>();
             WeaponStates.instance.inspectionUI = inspectionUI;
             if (ExperienceManager.instance.useExperience) UpdateXP();
+
+            playerDataManager = PlayerDataManager.Instance;
+            weaponController = FindObjectOfType<WeaponController>();
+            UpdateWeaponUI(weaponController);
         }
         private void Update()
         {
@@ -159,6 +186,45 @@ namespace cowsins
             // if ((InputManager.scrolling != 0 || InputManager.nextweapon || InputManager.previousweapon) && !InputManager.reloading) inventoryContainer.alpha = 1;
             // else if (inventoryContainer.alpha > 0) inventoryContainer.alpha -= Time.deltaTime;
             
+        }
+
+        public void UpdateWeaponUI(WeaponController weaponController)
+        {
+            //int currentIndex = playerDataManager.currentWeaponIndex;
+             int slotNumber = weaponController.currentWeapon;
+
+            if (slotNumber == 0)
+            {
+                currentWeaponImage.sprite = weapon1Image;
+                currentWeaponImage.gameObject.SetActive(true);
+
+                // 检查是否存在第二把武器
+                if (weaponController.inventory.Length > 1 && weaponController.inventory[1] != null)
+                {
+                    secondaryWeaponImage.sprite = weapon2Image;
+                    secondaryWeaponImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    secondaryWeaponImage.gameObject.SetActive(false);
+                }
+            }
+            else if (slotNumber == 1)
+            {
+                currentWeaponImage.sprite = weapon2Image;
+                currentWeaponImage.gameObject.SetActive(true);
+
+                // 检查是否存在第一把武器
+                if (weaponController.inventory.Length > 0 && weaponController.inventory[0] != null)
+                {
+                    secondaryWeaponImage.sprite = weapon1Image;
+                    secondaryWeaponImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    secondaryWeaponImage.gameObject.SetActive(false);
+                }
+            }
         }
 
         // HEALTH SYSTEM /////////////////////////////////////////////////////////////////////////////////////////
@@ -384,7 +450,7 @@ namespace cowsins
             overheatUI.transform.parent.gameObject.SetActive(false);
             bulletsUI.gameObject.SetActive(false);
             magazineUI.gameObject.SetActive(false);
-            currentWeaponDisplay.gameObject.SetActive(false);
+           currentWeaponDisplay.gameObject.SetActive(false);
             // chargedShotUI.gameObject.SetActive(false);
             reloadUI.gameObject.SetActive(false);
             lowAmmoUI.gameObject.SetActive(false);
@@ -558,6 +624,13 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("chargedShotUI"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("inventoryContainer"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("crosshair"));
+
+                        EditorGUILayout.Space(10f);
+                        EditorGUILayout.LabelField("Weapon Images", EditorStyles.boldLabel);
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("weapon1Image"), new GUIContent("Weapon 1 Image"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("weapon2Image"), new GUIContent("Weapon 2 Image"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("currentWeaponImage"), new GUIContent("Current Weapon Image UI"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("secondaryWeaponImage"), new GUIContent("Secondary Weapon Image UI"));
                         break;
                     // case "Dashing":
 

@@ -7397,7 +7397,7 @@ GameObject:
   - component: {fileID: 506139166110692363}
   m_Layer: 0
   m_Name: Projectile_ConcoctionGreen
-  m_TagString: Untagged
+  m_TagString: ChargeShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12329,8 +12329,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033eb68c5852cde4a8e4d89ae33dea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 100
+  bigRagdollForce: 100
+  smallRagdollForce: 40
   ragdollDuration: 3
+  smallRagdollDuration: 3
   isEnemy: 0
   isHuman: 0
   speed: 0

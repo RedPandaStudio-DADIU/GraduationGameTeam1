@@ -11,10 +11,9 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
-    private float stoppingDistance = 4f;
-
+    [SerializeField] private float stoppingDistance = 4f;
+    
     public Animator animator;
-
 
     [Header("Sound Events")]
     [SerializeField] private AK.Wwise.Event hitSoundEvent;
