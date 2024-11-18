@@ -6,21 +6,6 @@
 				<ActorMixer Name="Xaga_Dia_effects" ID="{511EAA1F-D6BD-4FB4-A124-585866D3A475}" ShortID="391644081">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Highpass" Type="int16">
-							<ValueList>
-								<Value>31</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>23</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>-170</Value>
-							</ValueList>
-						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -465,43 +450,6 @@
 							</GroupingInfo>
 						</SwitchContainer>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="Effects">
-							<Reference>
-								<Local>
-									<EffectSlot Name="" ID="{5E6D17F0-46FF-41D2-8248-45FA81BA67E8}" ShortID="239941130">
-										<ReferenceList>
-											<Reference Name="Effect" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
-												<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-											</Reference>
-										</ReferenceList>
-									</EffectSlot>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<EffectSlot Name="" ID="{B10708A7-0BCE-460C-9258-E7ACEA9F7AAA}" ShortID="324267140">
-										<ReferenceList>
-											<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
-												<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
-											</Reference>
-										</ReferenceList>
-									</EffectSlot>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<EffectSlot Name="" ID="{3342CEBB-86A1-4854-B2EC-6B8867057391}" ShortID="6524950">
-										<ReferenceList>
-											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-												<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-											</Reference>
-										</ReferenceList>
-									</EffectSlot>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

@@ -4,15 +4,16 @@
 		<WorkUnit Name="Voicelines" ID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
 				<Bus Name="DialogueMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}">
-					<PropertyList>
-						<Property Name="BusVolume" Type="Real64">
-							<ValueList>
-								<Value>-18</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ChildrenList>
 						<Bus Name="02_John Doe" ID="{5696D8FB-8716-4B36-95FF-732159C72BE0}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList/>
 							<ChildrenList>
 								<Bus Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}">
 									<PropertyList>
@@ -21,7 +22,17 @@
 												<Value>-8</Value>
 											</ValueList>
 										</Property>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
 									<ChildrenList>
 										<AuxBus Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}">
 											<StateInfo>
@@ -261,15 +272,131 @@
 								</Bus>
 							</ChildrenList>
 						</Bus>
-						<Bus Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}"/>
-						<Bus Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}">
+						<Bus Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>0</Value>
+									</ValueList>
+								</Property>
+								<Property Name="GameAuxSendVolume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{DC8C5BA1-8BEB-4ECE-92B5-A31EFA8942DC}" ShortID="369090768">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+														<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{BAF6164C-7696-42DF-A90B-F87EB63A8BB6}" ShortID="365908959">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>0</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>31</Value>
+									</ValueList>
+								</Property>
+								<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>23</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-170</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{4760A4F5-9907-47EE-A2DC-C7E3D09D20D3}" ShortID="307707221">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+														<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{E1A6CF50-F126-4C3F-8D75-91D6DF20F98B}" ShortID="234013289">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+														<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{946DDEBD-ED3A-48BC-A941-03874B636EFB}" ShortID="436474529">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 					</ChildrenList>
 				</Bus>

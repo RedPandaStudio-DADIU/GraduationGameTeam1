@@ -494,28 +494,12 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="AiConversation_lvl1" ID="{7ABAFCE0-6E57-4BF7-93ED-B0AE0C66FE6B}" ShortID="179497099">
-					<PropertyList>
-						<Property Name="GameAuxSendVolume" Type="Real64">
-							<ValueList>
-								<Value>-7</Value>
-							</ValueList>
-						</Property>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-						<Property Name="UserAuxSendVolume0" Type="Real64">
-							<ValueList>
-								<Value>-13</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1724,32 +1708,6 @@
 							</GroupingInfo>
 						</SwitchContainer>
 					</ChildrenList>
-					<ObjectLists>
-						<ObjectList Name="Effects">
-							<Reference>
-								<Local>
-									<EffectSlot Name="" ID="{060A851B-D7FC-4264-8ACC-E73590C03A55}" ShortID="202222693">
-										<ReferenceList>
-											<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
-												<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
-											</Reference>
-										</ReferenceList>
-									</EffectSlot>
-								</Local>
-							</Reference>
-							<Reference>
-								<Local>
-									<EffectSlot Name="" ID="{494314E1-B9B5-411D-939A-F8D5697A7E99}" ShortID="1030437296">
-										<ReferenceList>
-											<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-												<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-											</Reference>
-										</ReferenceList>
-									</EffectSlot>
-								</Local>
-							</Reference>
-						</ObjectList>
-					</ObjectLists>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

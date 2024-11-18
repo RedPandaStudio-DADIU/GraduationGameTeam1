@@ -483,7 +483,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Music
     guid: 7d7cc789702a6e4fa79c5590c19167cb
     GuidInternal: 
-    m_lastTime: -8584697508861410353
+    m_lastTime: -8584696800834678493
     List:
     - name: MusicMaster
       guid: ff6342c77dab644f8a5185ee597fe1be
@@ -522,11 +522,11 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX
     guid: d2201e2c39a40c4b940fb6d4f3340678
     GuidInternal: 
-    m_lastTime: -8584698163977127736
+    m_lastTime: -8584696799110087769
     List:
-    - name: NPCMaster
+    - name: NPC_SFX
       guid: d133aa54d4d02a428820498561de2572
-      id: 2033911932
+      id: 2997659434
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -540,10 +540,10 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: d2201e2c39a40c4b940fb6d4f3340678
-      - ElementName: NPCMaster
+      - ElementName: NPC_SFX
         ObjectType: 2
         guid: d133aa54d4d02a428820498561de2572
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX/NPCMaster
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX/NPC_SFX
     - name: PlayerCloth
       guid: add9da113d0ac84087b5c2f9e27a9e94
       id: 765206498
@@ -627,7 +627,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584698356205479952
+    m_lastTime: -8584696795755176784
     List:
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
@@ -672,9 +672,9 @@ MonoBehaviour:
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs
-    - name: RoomLarge
+    - name: RoomHangarMain
       guid: 6da22c007253064b92de6be6553f130d
-      id: 3553615197
+      id: 986249158
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -691,10 +691,10 @@ MonoBehaviour:
       - ElementName: Reverbs
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
-      - ElementName: RoomLarge
+      - ElementName: RoomHangarMain
         ObjectType: 1
         guid: 6da22c007253064b92de6be6553f130d
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/RoomLarge
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/RoomHangarMain
     - name: RoomSmall
       guid: 867a9673b28ef24cab9aa4f4360c3fe7
       id: 3205342581
@@ -758,7 +758,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584698164475385389
+    m_lastTime: -8584696595118886022
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -776,13 +776,13 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
       - ElementName: 01_Ai
         ObjectType: 2
         guid: 9750bf7b455dc14f8626ca7ed402a240
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/01_Ai
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/01_Ai
     - name: 02_John Doe
       guid: fbd896561687364b95ff732159c72be0
       id: 3570874681
@@ -799,13 +799,13 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
       - ElementName: 02_John Doe
         ObjectType: 2
         guid: fbd896561687364b95ff732159c72be0
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/02_John
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe
     - name: 03_Xaga
       guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
@@ -823,13 +823,33 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
       - ElementName: 03_Xaga
         ObjectType: 2
         guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/03_Xaga
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga
+    - name: DialogueMaster
+      guid: 9f67d9ffcfacf94ba6db2632b64af791
+      id: 2645497833
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster
     - name: HangarVerb_JD
       guid: 84e87f0fe12db9458befbfa1f35c2545
       id: 350835844
@@ -846,7 +866,7 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
       - ElementName: 02_John Doe
@@ -858,7 +878,7 @@ MonoBehaviour:
       - ElementName: HangarVerb_JD
         ObjectType: 1
         guid: 84e87f0fe12db9458befbfa1f35c2545
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/02_John
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe/PlayerVoice/HangarVerb_JD
     - name: NPC Aliens
       guid: 4e45b7902be2844e83b99740c406c3e3
@@ -876,13 +896,13 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: NPCBarks
         ObjectType: 2
-        guid: 9f67d9ffcfacf94ba6db2632b64af791
+        guid: 15b77a057f152f4db8a3345bbe895021
       - ElementName: NPC Aliens
         ObjectType: 2
         guid: 4e45b7902be2844e83b99740c406c3e3
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/NPC
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/NPCBarks/NPC
         Aliens
     - name: NPC Humans
       guid: 6c1968d3bd316340a8c08bb470a59a5b
@@ -900,14 +920,34 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: NPCBarks
         ObjectType: 2
-        guid: 9f67d9ffcfacf94ba6db2632b64af791
+        guid: 15b77a057f152f4db8a3345bbe895021
       - ElementName: NPC Humans
         ObjectType: 2
         guid: 6c1968d3bd316340a8c08bb470a59a5b
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/NPC
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/NPCBarks/NPC
         Humans
+    - name: NPCBarks
+      guid: 15b77a057f152f4db8a3345bbe895021
+      id: 196922711
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: NPCBarks
+        ObjectType: 2
+        guid: 15b77a057f152f4db8a3345bbe895021
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/NPCBarks
     - name: PlayerVoice
       guid: c8c9c230919d804b997850fc91cb75be
       id: 47937584
@@ -924,7 +964,7 @@ MonoBehaviour:
       - ElementName: Voicelines
         ObjectType: 12
         guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
+      - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
       - ElementName: 02_John Doe
@@ -933,28 +973,8 @@ MonoBehaviour:
       - ElementName: PlayerVoice
         ObjectType: 2
         guid: c8c9c230919d804b997850fc91cb75be
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster/02_John
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe/PlayerVoice
-    - name: VoicesMaster
-      guid: 9f67d9ffcfacf94ba6db2632b64af791
-      id: 1574467858
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Audio Master
-        ObjectType: 12
-        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
-      - ElementName: Master Bus
-        ObjectType: 2
-        guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: Voicelines
-        ObjectType: 12
-        guid: f4aed3b74e0ebb4e86c116581226443f
-      - ElementName: VoicesMaster
-        ObjectType: 2
-        guid: 9f67d9ffcfacf94ba6db2632b64af791
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/VoicesMaster
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -1166,25 +1186,8 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584697367323537770
-    List:
-    - name: Play_Level_1_station
-      guid: 4d54eeb55f6fcf4382337f3a42c9aad8
-      id: 3766110729
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
-      - ElementName: Play_Level_1_station
-        ObjectType: 3
-        guid: 4d54eeb55f6fcf4382337f3a42c9aad8
-      Path: Events/Default Work Unit/Play_Level_1_station
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+    m_lastTime: -8584696641525556392
+    List: []
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1196,7 +1199,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584698195561756164
+    m_lastTime: -8584696613048661179
     List:
     - name: lvl1_Hangar
       guid: c6967c8ce05f7c4a84e56627c4e3f8d0
@@ -1286,7 +1289,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 307774708db9f6419e4bb50ffd99449d
       Path: Events/Dialogue/lvl1_Hangar/Play_Dia_Xaga
-      maxAttenuation: 200
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_Dia_Xaga_
@@ -1303,7 +1306,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
       Path: Events/Dialogue/Play_Dia_Xaga_
-      maxAttenuation: 200
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
     - name: Play_HumansSc1
@@ -1571,8 +1574,8 @@ MonoBehaviour:
         guid: f83be7e2d1514e47af5bffda733a7cdb
       Path: Events/GameWorld/ExplodingStuff/Play_ExplodeBarrel
       maxAttenuation: 0
-      maxDuration: 2.5245209
-      minDuration: 2.5245209
+      maxDuration: 3.0021782
+      minDuration: 2.4526527
   - PhysicalPath: Events/Locomotion.wwu
     PathAndIcons:
     - ElementName: Events
@@ -1610,26 +1613,26 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Music
       ObjectType: 12
-      guid: 65f5903cc95fd646825b551400abfe70
+      guid: 28ce05da65ef804fade37c84ff921a5c
     ParentPath: Events/Music
-    guid: 65f5903cc95fd646825b551400abfe70
+    guid: 28ce05da65ef804fade37c84ff921a5c
     GuidInternal: 
-    m_lastTime: -8584698356273567055
+    m_lastTime: -8584696877002960115
     List:
-    - name: Play_music
-      guid: 2540ef75bc8550489230a487a51e8ae6
-      id: 2932040671
+    - name: Play_MainMusicSW
+      guid: 6b3bfd44e2cc97458c5bea949a1b6d10
+      id: 3861538420
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
       - ElementName: Music
         ObjectType: 12
-        guid: 65f5903cc95fd646825b551400abfe70
-      - ElementName: Play_music
+        guid: 28ce05da65ef804fade37c84ff921a5c
+      - ElementName: Play_MainMusicSW
         ObjectType: 3
-        guid: 2540ef75bc8550489230a487a51e8ae6
-      Path: Events/Music/Play_music
+        guid: 6b3bfd44e2cc97458c5bea949a1b6d10
+      Path: Events/Music/Play_MainMusicSW
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2009,7 +2012,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584698356207330942
+    m_lastTime: -8584696641525532426
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -2162,7 +2165,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e84137034ce32946b2d5dbb724670881
       Path: Events/Weapons/Hitmarkers/Play_Hitmarker_main
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 0.14302395
       minDuration: 0.14302395
     - name: Play_Idle_Rifle
@@ -2265,6 +2268,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.04
       minDuration: 0.04
+    - name: Play_Rifle_EmptyMag
+      guid: f6845d9521f81c4f94695178e477e7ec
+      id: 3334099943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Rifle_EmptyMag
+        ObjectType: 3
+        guid: f6845d9521f81c4f94695178e477e7ec
+      Path: Events/Weapons/Rifle/Play_Rifle_EmptyMag
+      maxAttenuation: 0
+      maxDuration: 0.341125
+      minDuration: 0.341125
     - name: Play_Unload_Rifle
       guid: 298d9293da1fc14aa984bea16cd9154b
       id: 1943012356
@@ -2452,10 +2475,10 @@ MonoBehaviour:
     ParentPath: States/Music_States
     guid: 35f4bf9fb693214abc9c2620bdf34d0f
     GuidInternal: 
-    m_lastTime: -8584698356273213706
+    m_lastTime: -8584696877002534963
     List:
     - name: Combat
-      guid: ba037285b5dc8440b845055c4269ffca
+      guid: dbcb0b1ab83c4344a3a8dad991ce1030
       id: 2764240573
       PathAndIcons:
       - ElementName: States
@@ -2466,12 +2489,12 @@ MonoBehaviour:
         guid: 35f4bf9fb693214abc9c2620bdf34d0f
       - ElementName: Combat
         ObjectType: 9
-        guid: ba037285b5dc8440b845055c4269ffca
+        guid: dbcb0b1ab83c4344a3a8dad991ce1030
       Path: States/Music_States/Combat
       values:
-      - name: InCombat
-        guid: 23400ac30ea9594690833f48fbd0ad18
-        id: 3373579172
+      - name: Elevator
+        guid: abdea2d0624dca43aba2ee4c60479d9b
+        id: 3705378287
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2481,13 +2504,13 @@ MonoBehaviour:
           guid: 35f4bf9fb693214abc9c2620bdf34d0f
         - ElementName: Combat
           ObjectType: 9
-          guid: ba037285b5dc8440b845055c4269ffca
-        - ElementName: InCombat
+          guid: dbcb0b1ab83c4344a3a8dad991ce1030
+        - ElementName: Elevator
           ObjectType: 8
-          guid: 23400ac30ea9594690833f48fbd0ad18
-      - name: Nocombat
-        guid: 015b3f05b5ccf049a56b4a4ab40acc87
-        id: 2930212484
+          guid: abdea2d0624dca43aba2ee4c60479d9b
+      - name: In_combat
+        guid: 6d1d9b788b0e6a4a87ae2c1f3b387078
+        id: 2116791127
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -2497,8 +2520,90 @@ MonoBehaviour:
           guid: 35f4bf9fb693214abc9c2620bdf34d0f
         - ElementName: Combat
           ObjectType: 9
+          guid: dbcb0b1ab83c4344a3a8dad991ce1030
+        - ElementName: In_combat
+          ObjectType: 8
+          guid: 6d1d9b788b0e6a4a87ae2c1f3b387078
+      - name: No_combat
+        guid: 0ed5a5cef421454688ace1ee79145f5f
+        id: 5260279
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat
+          ObjectType: 9
+          guid: dbcb0b1ab83c4344a3a8dad991ce1030
+        - ElementName: No_combat
+          ObjectType: 8
+          guid: 0ed5a5cef421454688ace1ee79145f5f
+      - name: None
+        guid: bc252f5f38efb34d8df452e7ba412df8
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat
+          ObjectType: 9
+          guid: dbcb0b1ab83c4344a3a8dad991ce1030
+        - ElementName: None
+          ObjectType: 8
+          guid: bc252f5f38efb34d8df452e7ba412df8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Combat_intensity_Lv1
+      guid: ba037285b5dc8440b845055c4269ffca
+      id: 1358435973
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music_States
+        ObjectType: 12
+        guid: 35f4bf9fb693214abc9c2620bdf34d0f
+      - ElementName: Combat_intensity_Lv1
+        ObjectType: 9
+        guid: ba037285b5dc8440b845055c4269ffca
+      Path: States/Music_States/Combat_intensity_Lv1
+      values:
+      - name: Combat_high_Lv1
+        guid: 945ce3391ead9a4e81f2848c10cbfb05
+        id: 2317668770
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat_intensity_Lv1
+          ObjectType: 9
           guid: ba037285b5dc8440b845055c4269ffca
-        - ElementName: Nocombat
+        - ElementName: Combat_high_Lv1
+          ObjectType: 8
+          guid: 945ce3391ead9a4e81f2848c10cbfb05
+      - name: Combat_low_Lv1
+        guid: 015b3f05b5ccf049a56b4a4ab40acc87
+        id: 3712483660
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat_intensity_Lv1
+          ObjectType: 9
+          guid: ba037285b5dc8440b845055c4269ffca
+        - ElementName: Combat_low_Lv1
           ObjectType: 8
           guid: 015b3f05b5ccf049a56b4a4ab40acc87
       - name: None
@@ -2511,7 +2616,7 @@ MonoBehaviour:
         - ElementName: Music_States
           ObjectType: 12
           guid: 35f4bf9fb693214abc9c2620bdf34d0f
-        - ElementName: Combat
+        - ElementName: Combat_intensity_Lv1
           ObjectType: 9
           guid: ba037285b5dc8440b845055c4269ffca
         - ElementName: None
@@ -2520,18 +2625,216 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-  - PhysicalPath: States/States.wwu
+    - name: Combat_intensity_Lv2
+      guid: 7a186dd094f78e4584b032848a952069
+      id: 1358435974
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music_States
+        ObjectType: 12
+        guid: 35f4bf9fb693214abc9c2620bdf34d0f
+      - ElementName: Combat_intensity_Lv2
+        ObjectType: 9
+        guid: 7a186dd094f78e4584b032848a952069
+      Path: States/Music_States/Combat_intensity_Lv2
+      values:
+      - name: Combat_base_lv2
+        guid: 7514025d839bc04fb022ce6776e7795a
+        id: 2939361434
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat_intensity_Lv2
+          ObjectType: 9
+          guid: 7a186dd094f78e4584b032848a952069
+        - ElementName: Combat_base_lv2
+          ObjectType: 8
+          guid: 7514025d839bc04fb022ce6776e7795a
+      - name: Combat_high_Lv2
+        guid: 526e36ad44c9274697ca6e3db937c575
+        id: 2317668769
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat_intensity_Lv2
+          ObjectType: 9
+          guid: 7a186dd094f78e4584b032848a952069
+        - ElementName: Combat_high_Lv2
+          ObjectType: 8
+          guid: 526e36ad44c9274697ca6e3db937c575
+      - name: None
+        guid: 1fa9b48866dccd43892e3d1d26ed9126
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Combat_intensity_Lv2
+          ObjectType: 9
+          guid: 7a186dd094f78e4584b032848a952069
+        - ElementName: None
+          ObjectType: 8
+          guid: 1fa9b48866dccd43892e3d1d26ed9126
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Player_Level
+      guid: e6521b7b3748ff4ea630033c7ec35697
+      id: 1314730481
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music_States
+        ObjectType: 12
+        guid: 35f4bf9fb693214abc9c2620bdf34d0f
+      - ElementName: Player_Level
+        ObjectType: 9
+        guid: e6521b7b3748ff4ea630033c7ec35697
+      Path: States/Music_States/Player_Level
+      values:
+      - name: Lv1
+        guid: 230fd190ef69524b87e3e7005c978dd9
+        id: 964811740
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Player_Level
+          ObjectType: 9
+          guid: e6521b7b3748ff4ea630033c7ec35697
+        - ElementName: Lv1
+          ObjectType: 8
+          guid: 230fd190ef69524b87e3e7005c978dd9
+      - name: Lv2
+        guid: 527d8a5d0a04e648abf8d56ace6a036b
+        id: 964811743
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Player_Level
+          ObjectType: 9
+          guid: e6521b7b3748ff4ea630033c7ec35697
+        - ElementName: Lv2
+          ObjectType: 8
+          guid: 527d8a5d0a04e648abf8d56ace6a036b
+      - name: None
+        guid: a9ca2965ecdfd843928a82884ce0d255
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Player_Level
+          ObjectType: 9
+          guid: e6521b7b3748ff4ea630033c7ec35697
+        - ElementName: None
+          ObjectType: 8
+          guid: a9ca2965ecdfd843928a82884ce0d255
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Player_State_health
+      guid: 9a65444920fa8349bbfb9f0f617a2b7e
+      id: 3626020801
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music_States
+        ObjectType: 12
+        guid: 35f4bf9fb693214abc9c2620bdf34d0f
+      - ElementName: Player_State_health
+        ObjectType: 9
+        guid: 9a65444920fa8349bbfb9f0f617a2b7e
+      Path: States/Music_States/Player_State_health
+      values:
+      - name: Low_health
+        guid: 344482e97ed80d4bb8f58a39325f8351
+        id: 72790338
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Player_State_health
+          ObjectType: 9
+          guid: 9a65444920fa8349bbfb9f0f617a2b7e
+        - ElementName: Low_health
+          ObjectType: 8
+          guid: 344482e97ed80d4bb8f58a39325f8351
+      - name: None
+        guid: 7112468673d0c744bfd3ab9ef9b30f7c
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Player_State_health
+          ObjectType: 9
+          guid: 9a65444920fa8349bbfb9f0f617a2b7e
+        - ElementName: None
+          ObjectType: 8
+          guid: 7112468673d0c744bfd3ab9ef9b30f7c
+      - name: Normal_health
+        guid: 9c21838c3b97ae458967ca7c8745af30
+        id: 3268324997
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Music_States
+          ObjectType: 12
+          guid: 35f4bf9fb693214abc9c2620bdf34d0f
+        - ElementName: Player_State_health
+          ObjectType: 9
+          guid: 9a65444920fa8349bbfb9f0f617a2b7e
+        - ElementName: Normal_health
+          ObjectType: 8
+          guid: 9c21838c3b97ae458967ca7c8745af30
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  - PhysicalPath: States/Sound_States.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: States
+    - ElementName: Sound_States
       ObjectType: 12
       guid: 4d8ca50caf173545b4b3d20d71747df5
-    ParentPath: States/States
+    ParentPath: States/Sound_States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584698355666736354
+    m_lastTime: -8584696542923168517
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -2540,13 +2843,13 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: AreaState
         ObjectType: 9
         guid: fed77a67db43b149b10b721d1e000093
-      Path: States/States/AreaState
+      Path: States/Sound_States/AreaState
       values:
       - name: ConferenceRoom1
         guid: 8882d45dbe6d8f40b2852aa35bd9e4bd
@@ -2555,7 +2858,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2571,7 +2874,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2587,7 +2890,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2603,7 +2906,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2619,7 +2922,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2635,7 +2938,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2651,7 +2954,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2667,7 +2970,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: AreaState
@@ -2686,13 +2989,13 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: Dialogue
         ObjectType: 4
         guid: 9019064e3fa83a4090ce0c75b228dfd6
-      Path: States/States/Dialogue
+      Path: States/Sound_States/Dialogue
       values: []
       ValueGuids: []
       ValueIcons: []
@@ -2704,13 +3007,13 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: GameStatus
         ObjectType: 9
         guid: ab4d4749cfd29b4b8c8041a049043641
-      Path: States/States/GameStatus
+      Path: States/Sound_States/GameStatus
       values:
       - name: InGame
         guid: 4c0f17a1ee49f84d82fb54b635971568
@@ -2719,7 +3022,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: GameStatus
@@ -2735,7 +3038,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: GameStatus
@@ -2751,7 +3054,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: GameStatus
@@ -2770,7 +3073,7 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: Speakers
@@ -2779,7 +3082,7 @@ MonoBehaviour:
       - ElementName: GuitarSpeaker
         ObjectType: 9
         guid: a5e9ca09d185084389ed8dc288be16ed
-      Path: States/States/Speakers/GuitarSpeaker
+      Path: States/Sound_States/Speakers/GuitarSpeaker
       values:
       - name: None
         guid: 2104d7f5ea08c4479a075af1242504c0
@@ -2788,7 +3091,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Speakers
@@ -2807,7 +3110,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Speakers
@@ -2826,7 +3129,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Speakers
@@ -2841,84 +3144,6 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: JohnDoe
-      guid: de41ef9d4f89e546928b800dba517d57
-      id: 2802482050
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: States
-        ObjectType: 12
-        guid: 4d8ca50caf173545b4b3d20d71747df5
-      - ElementName: Dialogue
-        ObjectType: 4
-        guid: 9019064e3fa83a4090ce0c75b228dfd6
-      - ElementName: JohnDoe
-        ObjectType: 9
-        guid: de41ef9d4f89e546928b800dba517d57
-      Path: States/States/Dialogue/JohnDoe
-      values:
-      - name: None
-        guid: b1dfaa5fc036954cb32dfc322f8ed4c4
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 4d8ca50caf173545b4b3d20d71747df5
-        - ElementName: Dialogue
-          ObjectType: 4
-          guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: JohnDoe
-          ObjectType: 9
-          guid: de41ef9d4f89e546928b800dba517d57
-        - ElementName: None
-          ObjectType: 8
-          guid: b1dfaa5fc036954cb32dfc322f8ed4c4
-      - name: Sc1
-        guid: 1e22f898ba9bbd4ba142e5b096921a65
-        id: 477127956
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 4d8ca50caf173545b4b3d20d71747df5
-        - ElementName: Dialogue
-          ObjectType: 4
-          guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: JohnDoe
-          ObjectType: 9
-          guid: de41ef9d4f89e546928b800dba517d57
-        - ElementName: Sc1
-          ObjectType: 8
-          guid: 1e22f898ba9bbd4ba142e5b096921a65
-      - name: WaitingOnTrigger
-        guid: 06845c4982d5104c93d8cb8d422b1607
-        id: 3956690975
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: States
-          ObjectType: 12
-          guid: 4d8ca50caf173545b4b3d20d71747df5
-        - ElementName: Dialogue
-          ObjectType: 4
-          guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: JohnDoe
-          ObjectType: 9
-          guid: de41ef9d4f89e546928b800dba517d57
-        - ElementName: WaitingOnTrigger
-          ObjectType: 8
-          guid: 06845c4982d5104c93d8cb8d422b1607
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
     - name: PlayerState
       guid: e84d8834df1abf468ce057b5fa8144ff
       id: 3285234865
@@ -2926,13 +3151,13 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: PlayerState
         ObjectType: 9
         guid: e84d8834df1abf468ce057b5fa8144ff
-      Path: States/States/PlayerState
+      Path: States/Sound_States/PlayerState
       values:
       - name: Alive
         guid: 066699c675570840af3616ee011ed2cc
@@ -2941,7 +3166,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: PlayerState
@@ -2957,7 +3182,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: PlayerState
@@ -2973,7 +3198,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: PlayerState
@@ -2992,13 +3217,13 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: RoomState
         ObjectType: 9
         guid: 81ae6a4ba81684438324f96c379f7805
-      Path: States/States/RoomState
+      Path: States/Sound_States/RoomState
       values:
       - name: Indoor
         guid: b0ce7e5fc01acc43b38b63b3385a55ae
@@ -3007,7 +3232,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: RoomState
@@ -3023,7 +3248,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: RoomState
@@ -3039,7 +3264,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: RoomState
@@ -3058,7 +3283,7 @@ MonoBehaviour:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: Dialogue
@@ -3067,7 +3292,7 @@ MonoBehaviour:
       - ElementName: Scenes_lvl1
         ObjectType: 9
         guid: 8a1c68d19060dc43838936963323b27f
-      Path: States/States/Dialogue/Scenes_lvl1
+      Path: States/Sound_States/Dialogue/Scenes_lvl1
       values:
       - name: None
         guid: 8ad9a7b380de704d8936ba9185719a0e
@@ -3076,7 +3301,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3095,7 +3320,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3114,7 +3339,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3133,7 +3358,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3152,7 +3377,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3171,7 +3396,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3190,7 +3415,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3209,7 +3434,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3228,7 +3453,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3247,7 +3472,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3266,7 +3491,7 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
@@ -3281,41 +3506,23 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-    - name: Speakers
-      guid: d24b9463ae59e9468a1fd3d049f8b6a2
-      id: 2888874631
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: States
-        ObjectType: 12
-        guid: 4d8ca50caf173545b4b3d20d71747df5
-      - ElementName: Speakers
-        ObjectType: 4
-        guid: d24b9463ae59e9468a1fd3d049f8b6a2
-      Path: States/States/Speakers
-      values: []
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-    - name: Xaga
+    - name: Scenes_lvl2
       guid: f15bcd04ffb00842b7cd73bad0d1bdd3
-      id: 4123380240
+      id: 4121174865
       PathAndIcons:
       - ElementName: States
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: States
+      - ElementName: Sound_States
         ObjectType: 12
         guid: 4d8ca50caf173545b4b3d20d71747df5
       - ElementName: Dialogue
         ObjectType: 4
         guid: 9019064e3fa83a4090ce0c75b228dfd6
-      - ElementName: Xaga
+      - ElementName: Scenes_lvl2
         ObjectType: 9
         guid: f15bcd04ffb00842b7cd73bad0d1bdd3
-      Path: States/States/Dialogue/Xaga
+      Path: States/Sound_States/Dialogue/Scenes_lvl2
       values:
       - name: None
         guid: d2d37cb93bd0a540a4086437983095df
@@ -3324,56 +3531,75 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
           ObjectType: 4
           guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: Xaga
+        - ElementName: Scenes_lvl2
           ObjectType: 9
           guid: f15bcd04ffb00842b7cd73bad0d1bdd3
         - ElementName: None
           ObjectType: 8
           guid: d2d37cb93bd0a540a4086437983095df
-      - name: Sc1
+      - name: Sc6_Tr1
         guid: 37abf888c39265499fe89787b28915b3
-        id: 477127956
+        id: 2059667105
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
           ObjectType: 4
           guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: Xaga
+        - ElementName: Scenes_lvl2
           ObjectType: 9
           guid: f15bcd04ffb00842b7cd73bad0d1bdd3
-        - ElementName: Sc1
+        - ElementName: Sc6_Tr1
           ObjectType: 8
           guid: 37abf888c39265499fe89787b28915b3
-      - name: Sc2
+      - name: Sc7_Tr1
         guid: bd5df24adfdd0647a27cea29b512906a
-        id: 477127959
+        id: 3398158172
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
           ObjectType: 4
           guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: Xaga
+        - ElementName: Scenes_lvl2
           ObjectType: 9
           guid: f15bcd04ffb00842b7cd73bad0d1bdd3
-        - ElementName: Sc2
+        - ElementName: Sc7_Tr1
           ObjectType: 8
           guid: bd5df24adfdd0647a27cea29b512906a
+      - name: Sc8_Tr1
+        guid: efbf3c6d7856f14a802f1ea256addbff
+        id: 3986144931
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl2
+          ObjectType: 9
+          guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+        - ElementName: Sc8_Tr1
+          ObjectType: 8
+          guid: efbf3c6d7856f14a802f1ea256addbff
       - name: WaitingOnTriggerEnter
         guid: a622613cdc7fea4a85d78326a48c4f13
         id: 2239442679
@@ -3381,18 +3607,171 @@ MonoBehaviour:
         - ElementName: States
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: States
+        - ElementName: Sound_States
           ObjectType: 12
           guid: 4d8ca50caf173545b4b3d20d71747df5
         - ElementName: Dialogue
           ObjectType: 4
           guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: Xaga
+        - ElementName: Scenes_lvl2
           ObjectType: 9
           guid: f15bcd04ffb00842b7cd73bad0d1bdd3
         - ElementName: WaitingOnTriggerEnter
           ObjectType: 8
           guid: a622613cdc7fea4a85d78326a48c4f13
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: Speakers
+      guid: d24b9463ae59e9468a1fd3d049f8b6a2
+      id: 2888874631
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sound_States
+        ObjectType: 12
+        guid: 4d8ca50caf173545b4b3d20d71747df5
+      - ElementName: Speakers
+        ObjectType: 4
+        guid: d24b9463ae59e9468a1fd3d049f8b6a2
+      Path: States/Sound_States/Speakers
+      values: []
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: XagaBossfightStates
+      guid: 567716067009734b87349fb15bd0cafc
+      id: 3568468165
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Sound_States
+        ObjectType: 12
+        guid: 4d8ca50caf173545b4b3d20d71747df5
+      - ElementName: Dialogue
+        ObjectType: 4
+        guid: 9019064e3fa83a4090ce0c75b228dfd6
+      - ElementName: XagaBossfightStates
+        ObjectType: 9
+        guid: 567716067009734b87349fb15bd0cafc
+      Path: States/Sound_States/Dialogue/XagaBossfightStates
+      values:
+      - name: DeathScream
+        guid: 138fd20cd4ca81458ed6b1ab105fcbe8
+        id: 4103826714
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: XagaBossfightStates
+          ObjectType: 9
+          guid: 567716067009734b87349fb15bd0cafc
+        - ElementName: DeathScream
+          ObjectType: 8
+          guid: 138fd20cd4ca81458ed6b1ab105fcbe8
+      - name: LostArm
+        guid: c330caf78f8fff439b0ae02dc51e7f55
+        id: 2961238679
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: XagaBossfightStates
+          ObjectType: 9
+          guid: 567716067009734b87349fb15bd0cafc
+        - ElementName: LostArm
+          ObjectType: 8
+          guid: c330caf78f8fff439b0ae02dc51e7f55
+      - name: LostLeg
+        guid: 37e684e44e62024c82c46c2b20da28f5
+        id: 2676857933
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: XagaBossfightStates
+          ObjectType: 9
+          guid: 567716067009734b87349fb15bd0cafc
+        - ElementName: LostLeg
+          ObjectType: 8
+          guid: 37e684e44e62024c82c46c2b20da28f5
+      - name: LostStomach
+        guid: ad9e3fa9616e0a4380e14d0c2ed30fb8
+        id: 1031154770
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: XagaBossfightStates
+          ObjectType: 9
+          guid: 567716067009734b87349fb15bd0cafc
+        - ElementName: LostStomach
+          ObjectType: 8
+          guid: ad9e3fa9616e0a4380e14d0c2ed30fb8
+      - name: NearlyDead
+        guid: e3c3317209cc9a448d08f1e737da3e5a
+        id: 841236080
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: XagaBossfightStates
+          ObjectType: 9
+          guid: 567716067009734b87349fb15bd0cafc
+        - ElementName: NearlyDead
+          ObjectType: 8
+          guid: e3c3317209cc9a448d08f1e737da3e5a
+      - name: None
+        guid: 3bdde4cfddcaa24db984776397838671
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: XagaBossfightStates
+          ObjectType: 9
+          guid: 567716067009734b87349fb15bd0cafc
+        - ElementName: None
+          ObjectType: 8
+          guid: 3bdde4cfddcaa24db984776397838671
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -3683,184 +4062,18 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584720232967892671
     List: []
-  - PhysicalPath: Switches/Dialogue.wwu
+  - PhysicalPath: Switches/Switches.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
       guid: 00000000000000000000000000000000
-    - ElementName: Dialogue
-      ObjectType: 12
-      guid: 679b6b7894ae2b408cfbc3b2fecaa991
-    ParentPath: Switches/Dialogue
-    guid: 679b6b7894ae2b408cfbc3b2fecaa991
-    GuidInternal: 
-    m_lastTime: -8584701857417853495
-    List:
-    - name: DialogueTriggers
-      guid: 1d023da11f14b04f9941217698b6776a
-      id: 3935263896
-      PathAndIcons:
-      - ElementName: Switches
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Dialogue
-        ObjectType: 12
-        guid: 679b6b7894ae2b408cfbc3b2fecaa991
-      - ElementName: lvl1_Hangar
-        ObjectType: 4
-        guid: 666d406f79045244856c53d2de7c5bac
-      - ElementName: DialogueTriggers
-        ObjectType: 11
-        guid: 1d023da11f14b04f9941217698b6776a
-      Path: Switches/Dialogue/lvl1_Hangar/DialogueTriggers
-      values:
-      - name: Awake
-        guid: 96820864d5b8c143925a106b9c3bf6ac
-        id: 1151176110
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Dialogue
-          ObjectType: 12
-          guid: 679b6b7894ae2b408cfbc3b2fecaa991
-        - ElementName: lvl1_Hangar
-          ObjectType: 4
-          guid: 666d406f79045244856c53d2de7c5bac
-        - ElementName: DialogueTriggers
-          ObjectType: 11
-          guid: 1d023da11f14b04f9941217698b6776a
-        - ElementName: Awake
-          ObjectType: 10
-          guid: 96820864d5b8c143925a106b9c3bf6ac
-      - name: Sc1_Play
-        guid: 74640e699e563d40adc3445fde16b525
-        id: 1292752181
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Dialogue
-          ObjectType: 12
-          guid: 679b6b7894ae2b408cfbc3b2fecaa991
-        - ElementName: lvl1_Hangar
-          ObjectType: 4
-          guid: 666d406f79045244856c53d2de7c5bac
-        - ElementName: DialogueTriggers
-          ObjectType: 11
-          guid: 1d023da11f14b04f9941217698b6776a
-        - ElementName: Sc1_Play
-          ObjectType: 10
-          guid: 74640e699e563d40adc3445fde16b525
-      - name: Sc2_Play
-        guid: 1d7960a900966e41a36d17ca2895d735
-        id: 2811652880
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Dialogue
-          ObjectType: 12
-          guid: 679b6b7894ae2b408cfbc3b2fecaa991
-        - ElementName: lvl1_Hangar
-          ObjectType: 4
-          guid: 666d406f79045244856c53d2de7c5bac
-        - ElementName: DialogueTriggers
-          ObjectType: 11
-          guid: 1d023da11f14b04f9941217698b6776a
-        - ElementName: Sc2_Play
-          ObjectType: 10
-          guid: 1d7960a900966e41a36d17ca2895d735
-      - name: Sc3_Play
-        guid: 47f90519d81fa1469b84203a3bbf8e40
-        id: 3561392151
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Dialogue
-          ObjectType: 12
-          guid: 679b6b7894ae2b408cfbc3b2fecaa991
-        - ElementName: lvl1_Hangar
-          ObjectType: 4
-          guid: 666d406f79045244856c53d2de7c5bac
-        - ElementName: DialogueTriggers
-          ObjectType: 11
-          guid: 1d023da11f14b04f9941217698b6776a
-        - ElementName: Sc3_Play
-          ObjectType: 10
-          guid: 47f90519d81fa1469b84203a3bbf8e40
-      - name: Sc4_Play
-        guid: 2b348c028bc28a4e86b3d70503c62db4
-        id: 856363850
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Dialogue
-          ObjectType: 12
-          guid: 679b6b7894ae2b408cfbc3b2fecaa991
-        - ElementName: lvl1_Hangar
-          ObjectType: 4
-          guid: 666d406f79045244856c53d2de7c5bac
-        - ElementName: DialogueTriggers
-          ObjectType: 11
-          guid: 1d023da11f14b04f9941217698b6776a
-        - ElementName: Sc4_Play
-          ObjectType: 10
-          guid: 2b348c028bc28a4e86b3d70503c62db4
-      - name: Sc5_Play
-        guid: 114947bfa83d3d479ad97c2027c71749
-        id: 62662553
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Dialogue
-          ObjectType: 12
-          guid: 679b6b7894ae2b408cfbc3b2fecaa991
-        - ElementName: lvl1_Hangar
-          ObjectType: 4
-          guid: 666d406f79045244856c53d2de7c5bac
-        - ElementName: DialogueTriggers
-          ObjectType: 11
-          guid: 1d023da11f14b04f9941217698b6776a
-        - ElementName: Sc5_Play
-          ObjectType: 10
-          guid: 114947bfa83d3d479ad97c2027c71749
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-    - name: lvl1_Hangar
-      guid: 666d406f79045244856c53d2de7c5bac
-      id: 4244728936
-      PathAndIcons:
-      - ElementName: Switches
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Dialogue
-        ObjectType: 12
-        guid: 679b6b7894ae2b408cfbc3b2fecaa991
-      - ElementName: lvl1_Hangar
-        ObjectType: 4
-        guid: 666d406f79045244856c53d2de7c5bac
-      Path: Switches/Dialogue/lvl1_Hangar
-      values: []
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-  - PhysicalPath: Switches/GameWorld.wwu
-    PathAndIcons:
     - ElementName: Switches
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: GameWorld
       ObjectType: 12
       guid: bcc703895f75f24a85557f1a1fc0cc7c
-    ParentPath: Switches/GameWorld
+    ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584698355666734246
+    m_lastTime: -8584696705422748787
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -3869,13 +4082,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: DiegeticMusicRadioSpeakers
         ObjectType: 4
         guid: 14f84359d368434688fe43c22bd8a2e2
-      Path: Switches/GameWorld/DiegeticMusicRadioSpeakers
+      Path: Switches/Switches/DiegeticMusicRadioSpeakers
       values: []
       ValueGuids: []
       ValueIcons: []
@@ -3887,7 +4100,7 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: GameWorldObjects
@@ -3896,7 +4109,7 @@ MonoBehaviour:
       - ElementName: ElevatorInTransit
         ObjectType: 11
         guid: cbd576a0f50bd84ab13f81c423ab524e
-      Path: Switches/GameWorld/GameWorldObjects/ElevatorInTransit
+      Path: Switches/Switches/GameWorldObjects/ElevatorInTransit
       values:
       - name: False
         guid: 8f15a1e3162db1418030c023e72f0a49
@@ -3905,7 +4118,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GameWorldObjects
@@ -3924,7 +4137,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GameWorldObjects
@@ -3943,7 +4156,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GameWorldObjects
@@ -3965,7 +4178,7 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: GameWorldObjects
@@ -3974,7 +4187,7 @@ MonoBehaviour:
       - ElementName: ElevatorPower
         ObjectType: 11
         guid: 2191a02bba2ffc4ca173b7b38b5f1d5e
-      Path: Switches/GameWorld/GameWorldObjects/ElevatorPower
+      Path: Switches/Switches/GameWorldObjects/ElevatorPower
       values:
       - name: PowerOff
         guid: f9d8c20a24952b42ae18511f66b48e5c
@@ -3983,7 +4196,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GameWorldObjects
@@ -4002,7 +4215,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GameWorldObjects
@@ -4024,13 +4237,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: GameWorldObjects
         ObjectType: 4
         guid: 20601029be4e6140b104cee49341b555
-      Path: Switches/GameWorld/GameWorldObjects
+      Path: Switches/Switches/GameWorldObjects
       values: []
       ValueGuids: []
       ValueIcons: []
@@ -4042,13 +4255,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: GroundMaterialSwitch
         ObjectType: 11
         guid: 3528fb3c47d79442b504b635b37aa31e
-      Path: Switches/GameWorld/GroundMaterialSwitch
+      Path: Switches/Switches/GroundMaterialSwitch
       values:
       - name: Concrete
         guid: 9118267ed1c667409ef01e85ba06dd20
@@ -4057,7 +4270,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4073,7 +4286,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4089,7 +4302,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4105,7 +4318,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4121,7 +4334,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4137,7 +4350,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4153,7 +4366,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4169,7 +4382,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4185,7 +4398,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4201,7 +4414,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4217,7 +4430,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4233,7 +4446,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4249,7 +4462,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4265,7 +4478,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4281,7 +4494,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4297,7 +4510,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4313,7 +4526,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4329,7 +4542,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4345,7 +4558,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4361,7 +4574,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundMaterialSwitch
@@ -4380,13 +4593,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: GroundWetnessSwitch
         ObjectType: 11
         guid: e291cdf0dfe68447a1aa62e7e57b19cd
-      Path: Switches/GameWorld/GroundWetnessSwitch
+      Path: Switches/Switches/GroundWetnessSwitch
       values:
       - name: Damp
         guid: c748d567433ec54c9f30e3f325d0a88a
@@ -4395,7 +4608,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundWetnessSwitch
@@ -4411,7 +4624,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundWetnessSwitch
@@ -4427,7 +4640,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundWetnessSwitch
@@ -4443,7 +4656,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: GroundWetnessSwitch
@@ -4462,7 +4675,7 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: DiegeticMusicRadioSpeakers
@@ -4471,7 +4684,7 @@ MonoBehaviour:
       - ElementName: GuitarSpeaker
         ObjectType: 11
         guid: 5138accb966a2a4e96a53e68b2137dee
-      Path: Switches/GameWorld/DiegeticMusicRadioSpeakers/GuitarSpeaker
+      Path: Switches/Switches/DiegeticMusicRadioSpeakers/GuitarSpeaker
       values:
       - name: Off
         guid: 3d568d2879194d4d9c0765738cca8392
@@ -4480,7 +4693,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: DiegeticMusicRadioSpeakers
@@ -4499,7 +4712,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: DiegeticMusicRadioSpeakers
@@ -4521,13 +4734,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: PlayerHealth
         ObjectType: 11
         guid: df10c2bdfefa76448ff85636e437639c
-      Path: Switches/GameWorld/PlayerHealth
+      Path: Switches/Switches/PlayerHealth
       values:
       - name: FullHealth
         guid: 7a1b3ab764a8ce4a9b795f2d918221ef
@@ -4536,7 +4749,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: PlayerHealth
@@ -4552,7 +4765,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: PlayerHealth
@@ -4568,7 +4781,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: PlayerHealth
@@ -4587,13 +4800,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: PlayerSpeedSwitch
         ObjectType: 11
         guid: 5ed4e3af7856be4b896c93b9c1200fe6
-      Path: Switches/GameWorld/PlayerSpeedSwitch
+      Path: Switches/Switches/PlayerSpeedSwitch
       values:
       - name: Sneak
         guid: 9b7fde36e4be204488f7d7e82ff83a1c
@@ -4602,7 +4815,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: PlayerSpeedSwitch
@@ -4618,7 +4831,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: PlayerSpeedSwitch
@@ -4634,7 +4847,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: PlayerSpeedSwitch
@@ -4653,13 +4866,13 @@ MonoBehaviour:
       - ElementName: Switches
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: GameWorld
+      - ElementName: Switches
         ObjectType: 12
         guid: bcc703895f75f24a85557f1a1fc0cc7c
       - ElementName: RainTypeSwitch
         ObjectType: 11
         guid: 468ebdce656c624cba8aba92764dadf4
-      Path: Switches/GameWorld/RainTypeSwitch
+      Path: Switches/Switches/RainTypeSwitch
       values:
       - name: FullRain
         guid: b54285554047414abb8602e6010621d2
@@ -4668,7 +4881,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: RainTypeSwitch
@@ -4684,7 +4897,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: RainTypeSwitch
@@ -4700,7 +4913,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: RainTypeSwitch
@@ -4716,7 +4929,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: RainTypeSwitch
@@ -4732,7 +4945,7 @@ MonoBehaviour:
         - ElementName: Switches
           ObjectType: 5
           guid: 00000000000000000000000000000000
-        - ElementName: GameWorld
+        - ElementName: Switches
           ObjectType: 12
           guid: bcc703895f75f24a85557f1a1fc0cc7c
         - ElementName: RainTypeSwitch
@@ -4741,6 +4954,72 @@ MonoBehaviour:
         - ElementName: Sunny
           ObjectType: 10
           guid: 945f663e9acc04468677cbf9550eb813
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: XagaHealth
+      guid: 94b9ba9b8141e445b250e82318bbe8ea
+      id: 2041156306
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Switches
+        ObjectType: 12
+        guid: bcc703895f75f24a85557f1a1fc0cc7c
+      - ElementName: XagaHealth
+        ObjectType: 11
+        guid: 94b9ba9b8141e445b250e82318bbe8ea
+      Path: Switches/Switches/XagaHealth
+      values:
+      - name: FullHealth
+        guid: 38ab2336b7b4d94fb9f583bb96328708
+        id: 2429688720
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: XagaHealth
+          ObjectType: 11
+          guid: 94b9ba9b8141e445b250e82318bbe8ea
+        - ElementName: FullHealth
+          ObjectType: 10
+          guid: 38ab2336b7b4d94fb9f583bb96328708
+      - name: LowHealth
+        guid: a281c4ce71487845a194e328bbdec1d8
+        id: 1017222595
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: XagaHealth
+          ObjectType: 11
+          guid: 94b9ba9b8141e445b250e82318bbe8ea
+        - ElementName: LowHealth
+          ObjectType: 10
+          guid: a281c4ce71487845a194e328bbdec1d8
+      - name: NearDeath
+        guid: 38b7c69c7326b747bbbfce1af5a42363
+        id: 898449699
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: XagaHealth
+          ObjectType: 11
+          guid: 94b9ba9b8141e445b250e82318bbe8ea
+        - ElementName: NearDeath
+          ObjectType: 10
+          guid: 38b7c69c7326b747bbbfce1af5a42363
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -4759,9 +5038,8 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000200000003000000040000000500000006000000070000000c0000000d0000000e00000011000000120000001300000014000000190000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002c0000002d0000002e00000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b0000006600000068000000690000006a0000006c0000006d0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a50000004302000007ef0000e5ef000049c10100f7c201005ec30100
+  ExpandedWaapiItemIds: 010000000200000003000000040000000500000006000000070000000c0000000d0000000e00000011000000120000001300000014000000190000001c0000001d0000001e0000001f000000210000002200000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000003300000035000000360000003700000038000000390000003a0000003b0000003c0000003d00000040000000410000004200000043000000450000004d000000580000005a0000005b0000006600000068000000690000006a0000006c0000006d0000006f00000076000000770000007c0000007e0000007f00000084000000880000009000000096000000980000009b0000009c000000a0000000a1000000a2000000a5000000130100004302000007ef0000e5ef000049c10100f7c201005ec30100
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
   currentDataSource: 0
   CurrentPluginConfig: 

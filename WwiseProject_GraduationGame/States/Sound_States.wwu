@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="States" ID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}" PersistMode="Standalone">
+		<WorkUnit Name="Sound_States" ID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="GameStatus" ID="{49474DAB-D2CF-4B9B-8C80-41A049043641}">
 					<PropertyList>
@@ -65,19 +65,13 @@
 				</Folder>
 				<Folder Name="Dialogue" ID="{4E061990-A83F-403A-90CE-0C75B228DFD6}" ShortID="687627048">
 					<ChildrenList>
-						<StateGroup Name="Xaga" ID="{04CD5BF1-B0FF-4208-B7CD-73BAD0D1BDD3}">
+						<StateGroup Name="Scenes_lvl2" ID="{04CD5BF1-B0FF-4208-B7CD-73BAD0D1BDD3}">
 							<ChildrenList>
 								<State Name="None" ID="{B97CD3D2-D03B-40A5-A408-6437983095DF}"/>
-								<State Name="Sc1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
+								<State Name="Sc6_Tr1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
 								<State Name="WaitingOnTriggerEnter" ID="{3C6122A6-7FDC-4AEA-85D7-8326A48C4F13}"/>
-								<State Name="Sc2" ID="{4AF25DBD-DDDF-4706-A27C-EA29B512906A}"/>
-							</ChildrenList>
-						</StateGroup>
-						<StateGroup Name="JohnDoe" ID="{9DEF41DE-894F-46E5-928B-800DBA517D57}">
-							<ChildrenList>
-								<State Name="None" ID="{5FAADFB1-36C0-4C95-B32D-FC322F8ED4C4}"/>
-								<State Name="Sc1" ID="{98F8221E-9BBA-4BBD-A142-E5B096921A65}"/>
-								<State Name="WaitingOnTrigger" ID="{495C8406-D582-4C10-93D8-CB8D422B1607}"/>
+								<State Name="Sc7_Tr1" ID="{4AF25DBD-DDDF-4706-A27C-EA29B512906A}"/>
+								<State Name="Sc8_Tr1" ID="{6D3CBFEF-5678-4AF1-802F-1EA256ADDBFF}"/>
 							</ChildrenList>
 						</StateGroup>
 						<StateGroup Name="Scenes_lvl1" ID="{D1681C8A-6090-43DC-8389-36963323B27F}">
@@ -93,6 +87,16 @@
 								<State Name="Sc4_Tr1" ID="{94A0D7E2-F012-4D71-875E-2E407592C0E5}"/>
 								<State Name="Sc5_Tr1" ID="{D9BC011E-265A-459C-85B9-A9F2235E1BE5}"/>
 								<State Name="Sc5_Tr2" ID="{53BD08A9-9995-4611-B0CC-FE29E967E5D5}"/>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="XagaBossfightStates" ID="{06167756-0970-4B73-8734-9FB15BD0CAFC}">
+							<ChildrenList>
+								<State Name="None" ID="{CFE4DD3B-CADD-4DA2-B984-776397838671}"/>
+								<State Name="LostLeg" ID="{E484E637-624E-4C02-82C4-6C2B20DA28F5}"/>
+								<State Name="LostArm" ID="{F7CA30C3-8F8F-43FF-9B0A-E02DC51E7F55}"/>
+								<State Name="LostStomach" ID="{A93F9EAD-6E61-430A-80E1-4D0C2ED30FB8}"/>
+								<State Name="DeathScream" ID="{0CD28F13-CAD4-4581-8ED6-B1AB105FCBE8}"/>
+								<State Name="NearlyDead" ID="{7231C3E3-CC09-449A-8D08-F1E737DA3E5A}"/>
 							</ChildrenList>
 						</StateGroup>
 					</ChildrenList>
