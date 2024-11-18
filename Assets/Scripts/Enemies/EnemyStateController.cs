@@ -47,6 +47,7 @@ public class EnemyStateController : MonoBehaviour
 
         enemy = GetComponent<EnemyBaseClass>();
         Debug.LogWarning("Enemy: " + enemy + " Name: " + enemy.name);
+
     }
 
     void Update()
@@ -58,6 +59,8 @@ public class EnemyStateController : MonoBehaviour
         if(this.GetEnemy().GetHealth() <= 0 && currentState is not EnemyDieState){
             ChangeState(new EnemyDieState());
         }
+
+
     }
 
     public void ChangeState(IEnemyState newState){
@@ -147,10 +150,14 @@ public class EnemyStateController : MonoBehaviour
         Debug.DrawRay(enemy.transform.position, directionToPlayer.normalized * distanceToPlayer, Color.red);
 
         // Check whether there are no obstacles on the way to the player
+        
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
             // if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human") )
             // if (hit.collider.CompareTag("PlayerBody"))
+            if(isHuman){
+                Debug.LogWarning("Raycast hit: " + hit.collider.tag + "object: " + hit.collider.gameObject.name + " for human: " + this.GetEnemy().name);
+            }
             if (hit.collider.CompareTag("Player") || (hit.collider.CompareTag("Human") && !isHuman) || (hit.collider.CompareTag("Enemy")&& isHuman) )
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
