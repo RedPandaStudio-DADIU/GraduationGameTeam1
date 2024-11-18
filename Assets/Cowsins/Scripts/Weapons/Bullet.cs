@@ -72,9 +72,12 @@ namespace cowsins
                     player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);
                     DestroyProjectile();
                 } else {
-                    Debug.LogWarning("Enemy Shot!! Damage: " + damage);
-                    Shoot(damage, other);
+                    if(!other.GetComponent<EnemyStateController>().GetInAFight()){
+                        Debug.LogWarning("Enemy Shot!! Damage: " + damage);
+                        Shoot(damage, other);
+                    }
                     DestroyProjectile();
+
                 }
 
                

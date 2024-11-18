@@ -19,6 +19,7 @@ public class EnemyStateController : MonoBehaviour
     [SerializeField] private List<Transform> targetList = new List<Transform>();
     [SerializeField] private bool isHuman = false;
     [SerializeField] private Animator animator;
+    [SerializeField] private bool inAFight = false;
 
     private Queue<Transform> targetQueue;
 
@@ -268,6 +269,9 @@ public class EnemyStateController : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * enemy.GetComponent<NavMeshAgent>().angularSpeed);
 
+            if(playerTransform == GameObject.FindWithTag("Player").transform){
+                this.inAFight = false;
+            }
 
         }
     }
@@ -283,5 +287,9 @@ public class EnemyStateController : MonoBehaviour
 
     public Animator GetAnimator(){
         return this.animator;
+    }
+
+    public bool GetInAFight(){
+        return this.inAFight;
     }
 }
