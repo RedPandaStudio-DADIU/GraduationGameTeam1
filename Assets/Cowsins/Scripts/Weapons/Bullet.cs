@@ -11,8 +11,10 @@ namespace cowsins
     public class Bullet : MonoBehaviour
     {
         private Camera playerCamera;  
-        [SerializeField] private float pushForce = 100f;
-        [SerializeField] private float ragdollDuration = 3.0f; 
+        [SerializeField] private float bigRagdollForce = 600f;
+        [SerializeField] private float smallRagdollForce = 200f;
+        [SerializeField] private float ragdollDuration = 4.0f; 
+        [SerializeField] private float smallRagdollDuration = 3.0f;
         [HideInInspector] public bool isEnemy = false; 
         [HideInInspector] public bool isHuman = false; 
 
@@ -62,23 +64,28 @@ namespace cowsins
             //     GameObject parentObject = other.transform.parent.gameObject;
             //     Shoot(damage, parentObject.GetComponent<Collider>());
             // } 
-            if(other.CompareTag("Enemy") && !isEnemy && !isHuman) {
+            if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
 
                 if(this.CompareTag("ChargeShot")){
-                    Debug.LogWarning("Test");
                     
                     player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);
                     DestroyProjectile();
                 } else {
-                    Debug.Log("Enemy Shot!! Damage: " + damage);
-                    Shoot(damage, other);
+                    if(!other.GetComponent<EnemyStateController>().GetInAFight()){
+                        Debug.LogWarning("Enemy Shot!! Damage: " + damage);
+                        Shoot(damage, other);
+                    }
                     DestroyProjectile();
+
                 }
 
                
 
-            } else if(other.CompareTag("WeakSpot")){
+            } else if(other.CompareTag("Window")){
+                DestroyProjectile();
+            } 
+            else if(other.CompareTag("WeakSpot")){
                 Debug.LogWarning("Hit weak spot");
                 other.gameObject.GetComponent<WeakSpot>().CheckIfCanBeDamaged();
             } else if(other.CompareTag("Boss")){
@@ -107,6 +114,7 @@ namespace cowsins
             else if (other.CompareTag("Player") && isEnemy){
                 Debug.Log("Enemy bullet hit the player with damage: " + damage + " player health: " + other.GetComponent<PlayerStats>().health);
                 other.GetComponent<PlayerStats>().Damage(damage, false);
+                DestroyProjectile();
                 // DamageTarget(other.transform, damage, false);
             }
             else if((other.CompareTag("Enemy") && isHuman) || (other.CompareTag("Human") && isEnemy)){
@@ -143,18 +151,16 @@ namespace cowsins
                 pushDirection = pushDirection.normalized;
 
                 enemy.SetForceDirection(pushDirection);
-                enemy.SetForce(pushForce);
+                enemy.SetForce(bigRagdollForce);
+                enemy.ChangeState(new EnemyHitState());
 
-                if(enemy.GetEnemy().GetHealth() <= 0){
+                if(enemy.GetEnemy().GetHealth() > 0){
+                    Debug.Log("Inside health check");
+                    enemy.Recovery(ragdollDuration);
+                } else {
                     enemy.ChangeState(new EnemyDieState());
+                    Debug.Log("Health check not passed");
                 }
-
-                // if(enemy.GetEnemy().GetHealth() > 0){
-                //     Debug.Log("Inside health check");
-                //     enemy.Recovery(ragdollDuration);
-                // } else {
-                //     Debug.Log("Health check not passed");
-                // }
 
             }
 

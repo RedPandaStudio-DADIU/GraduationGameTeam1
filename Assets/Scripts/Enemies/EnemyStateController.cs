@@ -18,7 +18,11 @@ public class EnemyStateController : MonoBehaviour
     [SerializeField] private float force = 300f;
     [SerializeField] private List<Transform> targetList = new List<Transform>();
     [SerializeField] private bool isHuman = false;
+    [SerializeField] private Animator animator;
+    [SerializeField] private bool inAFight = false;
+
     private Queue<Transform> targetQueue;
+
 
 
     void Awake()
@@ -43,15 +47,20 @@ public class EnemyStateController : MonoBehaviour
 
         enemy = GetComponent<EnemyBaseClass>();
         Debug.LogWarning("Enemy: " + enemy + " Name: " + enemy.name);
+
     }
 
     void Update()
     {
         currentState.OnUpdate(this);
 
+        Debug.LogWarning("Current state for: " + this.GetEnemy().name + " is: " + currentState);
+
         if(this.GetEnemy().GetHealth() <= 0 && currentState is not EnemyDieState){
             ChangeState(new EnemyDieState());
         }
+
+
     }
 
     public void ChangeState(IEnemyState newState){
@@ -141,10 +150,14 @@ public class EnemyStateController : MonoBehaviour
         Debug.DrawRay(enemy.transform.position, directionToPlayer.normalized * distanceToPlayer, Color.red);
 
         // Check whether there are no obstacles on the way to the player
+        
         if (Physics.Raycast(enemy.transform.position, directionToPlayer, out RaycastHit hit, attackDistance))
         {
             // if (hit.collider.CompareTag("Player") || hit.collider.CompareTag("Human") )
             // if (hit.collider.CompareTag("PlayerBody"))
+            if(isHuman){
+                Debug.LogWarning("Raycast hit: " + hit.collider.tag + "object: " + hit.collider.gameObject.name + " for human: " + this.GetEnemy().name);
+            }
             if (hit.collider.CompareTag("Player") || (hit.collider.CompareTag("Human") && !isHuman) || (hit.collider.CompareTag("Enemy")&& isHuman) )
             {
                 // GlobalEnemyStateMachine.Instance.DetectPlayer(playerTransform.position);
@@ -164,6 +177,19 @@ public class EnemyStateController : MonoBehaviour
 
     }
 
+    public bool ReachedStoppingDistance(){
+        float stopDistance = enemy.GetStoppingDistance();
+
+
+        Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
+        float distanceToPlayer = directionToPlayer.magnitude;
+        Debug.Log("Distance to player: " + distanceToPlayer + " enemy: " + this.GetEnemy().name);
+        if (distanceToPlayer <= stopDistance){
+            return true;
+        } 
+        return false;
+    }
+
     public bool CheckIfReachedDestination(){
         if (!enemy.GetComponent<NavMeshAgent>().pathPending){
             if (enemy.GetComponent<NavMeshAgent>().remainingDistance<= enemy.GetComponent<NavMeshAgent>().stoppingDistance){
@@ -174,6 +200,10 @@ public class EnemyStateController : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void PrintAgentDestination(){
+        Debug.LogWarning("Destination: " +   enemy.GetComponent<NavMeshAgent>().destination  + "of AI Agent: " + this.gameObject.name);
     }
 
     public bool GetPlayerInRange(){
@@ -246,6 +276,9 @@ public class EnemyStateController : MonoBehaviour
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * enemy.GetComponent<NavMeshAgent>().angularSpeed);
 
+            if(playerTransform == GameObject.FindWithTag("Player").transform){
+                this.inAFight = false;
+            }
 
         }
     }
@@ -257,5 +290,13 @@ public class EnemyStateController : MonoBehaviour
 
     public IEnemyState GetCurrentState(){
         return this.currentState;
+    }
+
+    public Animator GetAnimator(){
+        return this.animator;
+    }
+
+    public bool GetInAFight(){
+        return this.inAFight;
     }
 }
