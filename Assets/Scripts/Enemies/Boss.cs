@@ -6,7 +6,7 @@ using cowsins;
 public class Boss : DiplomatEnemy
 {
     [SerializeField] private List<Transform> weakSpots = new List<Transform>();
-    [SerializeField] private float explosionRange = 100f;
+    [SerializeField] private float explosionRange = 200f;
     [SerializeField] private float damageEpxlosion = 20f;
     [SerializeField] private GameObject explosionEffect;
     [SerializeField] private AK.Wwise.Event bossExplosionSoundEvent;
@@ -19,6 +19,7 @@ public class Boss : DiplomatEnemy
         
     void Awake(){
         this.SetHealth(200f);
+        this.SetStoppingDistance(8f);
         queueWeakSpots = new Queue<Transform>(weakSpots);
 
     }
@@ -52,7 +53,8 @@ public class Boss : DiplomatEnemy
 
     public override void SpecialAttack(Transform player){
         Debug.Log("Entered special attack");
-        LayerMask obstacleLayer = LayerMask.GetMask("Default");
+        // LayerMask obstacleLayer = LayerMask.GetMask("Player");
+        LayerMask obstacleLayer = LayerMask.GetMask("Default", "Player", "Obstacle");
 
         GameObject explosion = Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
         if (bossExplosionSoundEvent != null)
@@ -64,6 +66,8 @@ public class Boss : DiplomatEnemy
         float distanceToPlayer = Vector3.Distance(player.position, this.transform.position);
         if (distanceToPlayer <= explosionRange)
         {
+            Debug.Log("Player hit - distance check!");
+
             Vector3 directionToPlayer = (player.position - this.transform.position).normalized;
             RaycastHit hit;
             if (Physics.Raycast(this.transform.position, directionToPlayer, out hit, explosionRange, obstacleLayer))

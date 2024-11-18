@@ -72,14 +72,20 @@ namespace cowsins
                     player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);
                     DestroyProjectile();
                 } else {
-                    Debug.LogWarning("Enemy Shot!! Damage: " + damage);
-                    Shoot(damage, other);
+                    if(!other.GetComponent<EnemyStateController>().GetInAFight()){
+                        Debug.LogWarning("Enemy Shot!! Damage: " + damage);
+                        Shoot(damage, other);
+                    }
                     DestroyProjectile();
+
                 }
 
                
 
-            } else if(other.CompareTag("WeakSpot")){
+            } else if(other.CompareTag("Window")){
+                DestroyProjectile();
+            } 
+            else if(other.CompareTag("WeakSpot")){
                 Debug.LogWarning("Hit weak spot");
                 other.gameObject.GetComponent<WeakSpot>().CheckIfCanBeDamaged();
             } else if(other.CompareTag("Boss")){
