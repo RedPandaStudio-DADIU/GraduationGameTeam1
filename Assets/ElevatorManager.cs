@@ -8,7 +8,7 @@ public class ElevatorManager : MonoBehaviour
 {
     void OnTriggerEnter(Collider other){
         if(other.gameObject.CompareTag("Player")){
-            PlayerStartPosition.playerSpawnPosition = new Vector3(-0.32f,0.8f, -3f);
+            // PlayerStartPosition.playerSpawnPosition = new Vector3(-0.32f,0.8f, -3f);
             PlayerDataManager.Instance.ResetData(other.gameObject.GetComponent<WeaponController>().inventory.Length);
             PlayerDataManager.Instance.playerHealth = other.gameObject.GetComponent<PlayerStats>().health;
             Debug.Log("Health: " + PlayerDataManager.Instance.playerHealth);
