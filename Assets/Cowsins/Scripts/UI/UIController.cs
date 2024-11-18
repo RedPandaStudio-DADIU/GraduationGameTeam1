@@ -198,7 +198,6 @@ namespace cowsins
                 currentWeaponImage.sprite = weapon1Image;
                 currentWeaponImage.gameObject.SetActive(true);
 
-                // 检查是否存在第二把武器
                 if (weaponController.inventory.Length > 1 && weaponController.inventory[1] != null)
                 {
                     secondaryWeaponImage.sprite = weapon2Image;
@@ -214,7 +213,6 @@ namespace cowsins
                 currentWeaponImage.sprite = weapon2Image;
                 currentWeaponImage.gameObject.SetActive(true);
 
-                // 检查是否存在第一把武器
                 if (weaponController.inventory.Length > 0 && weaponController.inventory[0] != null)
                 {
                     secondaryWeaponImage.sprite = weapon1Image;
