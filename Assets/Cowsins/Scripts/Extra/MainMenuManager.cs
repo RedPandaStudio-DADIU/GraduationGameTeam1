@@ -238,10 +238,11 @@ namespace cowsins
 
             if (videoPlayer != null)
             {
-                videoPlayer.Play();
+               
                 videoPlayer.loopPointReached += OnVideoEnd;
-                mainMenuSections[1].section.gameObject.SetActive(false);
+                 mainMenuSections[1].section.gameObject.SetActive(false);
                 
+                videoPlayer.Play();
                 Debug.Log("Playing video before scene load.");
             }
             else

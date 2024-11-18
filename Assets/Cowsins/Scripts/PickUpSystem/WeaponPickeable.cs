@@ -6,6 +6,7 @@ namespace cowsins
     public class WeaponPickeable : Pickeable
     {
         [Tooltip("Which weapon are we grabbing")] public Weapon_SO weapon;
+        public int weaponSlotNumber; // 1 = rifful, 1 = pistol
 
         [HideInInspector] public int currentBullets, totalBullets;
 
@@ -39,6 +40,7 @@ namespace cowsins
             base.Interact(player);
             WeaponController weaponController = player.GetComponent<WeaponController>();
             InteractManager interactManager = player.GetComponent<InteractManager>();
+            UIController uiController = player.GetComponent<UIController>();
 
             if (interactManager.DuplicateWeaponAddsBullets)
             {
@@ -60,6 +62,24 @@ namespace cowsins
             }
 
             SwapWeapons(weaponController);
+            if (weaponSlotNumber == 1)
+            {
+                PlayerDataManager.Instance.currentWeaponIndex = 0;
+                weaponController.currentWeapon = 0;
+                
+            }
+            else if (weaponSlotNumber == 2)
+            {
+                PlayerDataManager.Instance.currentWeaponIndex = 1;
+                weaponController.currentWeapon = 1;
+            }
+
+            weaponController.weapon = weapon;
+            weaponController.UnHolster(weaponController.inventory[weaponController.currentWeapon].gameObject, true);
+            UIController.instance.UpdateWeaponUI(weaponController);
+
+            //UIController.UpdateWeaponUI(weaponController);
+
         }
 
         private bool CheckIfInventoryFull(WeaponController weaponController)
@@ -97,7 +117,11 @@ namespace cowsins
 
             UpdateWeaponBullets(weaponController.inventory[slot].GetComponent<WeaponIdentification>());
 
-            UpdateWeaponUI(weaponController, slot);
+            //UpdateWeaponUI(weaponController, slot);
+            //uiController.UpdateWeaponUI(weaponController);
+            UIController.instance.UpdateWeaponUI(weaponController);
+
+
 
 #if UNITY_EDITOR
             UpdateCrosshair(weaponController);
@@ -117,7 +141,11 @@ namespace cowsins
 
             UpdateWeaponBullets(weaponController.inventory[weaponController.currentWeapon].GetComponent<WeaponIdentification>());
 
-            UpdateWeaponUI(weaponController, weaponController.currentWeapon);
+            //uiController.UpdateWeaponUI(weaponController, weaponController.currentWeapon);
+            //uiController.UpdateWeaponUI(weaponController);
+            UIController.instance.UpdateWeaponUI(weaponController);
+
+
 
             currentBullets = savedBulletsLeftInMagazine;
             totalBullets = savedTotalBullets;
@@ -133,11 +161,11 @@ namespace cowsins
             weaponIdentification.totalBullets = totalBullets;
         }
 
-        private void UpdateWeaponUI(WeaponController weaponController, int slot)
-        {
-            weaponController.slots[slot].weapon = weapon;
-            weaponController.slots[slot].GetImage();
-        }
+        // private void UpdateWeaponUI(WeaponController weaponController, int slot)
+        // {
+        //     weaponController.slots[slot].weapon = weapon;
+        //     weaponController.slots[slot].GetImage();
+        // }
 
 #if UNITY_EDITOR
         private void UpdateCrosshair(WeaponController weaponController)
@@ -296,6 +324,9 @@ namespace cowsins
                     case "References":
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("image"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("graphics"));
+
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("weaponSlotNumber"), new GUIContent("Weapon Slot Number"));
+  
 
                         break;
                     case "Effects":
