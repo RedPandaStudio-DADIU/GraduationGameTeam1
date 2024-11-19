@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class EnemyRagdollController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class EnemyRagdollController : MonoBehaviour
     private Transform middleBodyBone; // Cached reference to the hips/pelvis bone
     private Collider mainCollider; 
     private Rigidbody mainRigidbody; 
+    // private Rigidbody weaponRigidbody; 
     [SerializeField] private float fallThreshold = -5f;
     [SerializeField] private float standUpDuration = 1.5f; // Duration for stand-up transition
     [SerializeField] private float animatorEnableDelay = 0.5f; // Delay before enabling Animator
@@ -38,7 +40,7 @@ public class EnemyRagdollController : MonoBehaviour
 
     void Awake()
     {
-        ragdollRigidbodies = GetComponentsInChildren<Rigidbody>();
+        ragdollRigidbodies = GetComponentsInChildren<Rigidbody>().Where(c => c.gameObject.CompareTag("Weapon") == false).ToArray();
         ragdollColliders = GetComponentsInChildren<Collider>();
         hitboxColliders = GetComponents<Collider>();
 
@@ -47,6 +49,7 @@ public class EnemyRagdollController : MonoBehaviour
 
         // middleBodyBone = FindBoneByName("middle body");
         middleBodyBone = FindBoneByName("spine_02.x");
+        // weaponRigidbody = FindChildWithTag(this.gameObject.transform, "Weapon");
 
         SetRagdollActive(false);
         ActivateWeakSpotsIfExist();
@@ -59,6 +62,18 @@ public class EnemyRagdollController : MonoBehaviour
 
         RecordBoneTransforms();
     }
+
+    // private Rigidbody FindChildWithTag(Transform parent, string tag)
+    // {
+    //     foreach (Transform child in parent)
+    //     {
+    //         if (child.CompareTag(tag))
+    //         {
+    //             return child.gameObject.GetComponent<Rigidbody>();
+    //         }
+    //     }
+    //     return null; 
+    // }
 
     private void ActivateWeakSpotsIfExist()
     {
@@ -101,9 +116,12 @@ public class EnemyRagdollController : MonoBehaviour
             animator.enabled = !isActive; 
         }
 
+
         foreach (Rigidbody rb in ragdollRigidbodies)
         {
-            rb.isKinematic = !isActive;  
+            if(rb != null){
+                rb.isKinematic = !isActive;  
+            }
         }
 
         foreach (Collider col in ragdollColliders)

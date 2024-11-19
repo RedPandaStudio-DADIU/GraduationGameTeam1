@@ -99,6 +99,11 @@ namespace cowsins
         // [SerializeField, Tooltip("Displays a dash slot in-game. This keeps stored at dashUIContainer during runtime.")] private Transform dashUIElement;
 
         [Tooltip("Attach the appropriate UI here")] public TextMeshProUGUI bulletsUI, magazineUI, reloadUI, lowAmmoUI;
+         
+        
+        [Tooltip("Attach the low ammo sound")]
+        [SerializeField] private AK.Wwise.Event lowAmmoSoundEvent;
+
 
         [Tooltip("Display an icon of your current weapon")] public Image currentWeaponDisplay;
 
@@ -442,7 +447,16 @@ namespace cowsins
             magazineUI.text = mag.ToString();
             reloadUI.gameObject.SetActive(activeReloadUI);
             lowAmmoUI.gameObject.SetActive(activeLowAmmoUI);
+            
         }
+
+        private void EmptyMagazine(int bullets){
+            if (lowAmmoSoundEvent != null)
+            {
+                lowAmmoSoundEvent.Post(gameObject);
+            }
+        }
+
         private void DisableWeaponUI()
         {
             overheatUI.transform.parent.gameObject.SetActive(false);
@@ -500,6 +514,7 @@ namespace cowsins
             UIEvents.onDetectReloadMethod += DetectReloadMethod;
             UIEvents.onHeatRatioChanged += UpdateHeatRatio;
             UIEvents.onBulletsChanged += UpdateBullets;
+            UIEvents.onEmptyMagazine += EmptyMagazine;
             UIEvents.disableWeaponUI += DisableWeaponUI;
             UIEvents.setWeaponDisplay += SetWeaponDisplay;
             UIEvents.enableWeaponDisplay += EnableDisplay;
@@ -618,6 +633,7 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("overheatUI"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("reloadUI"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("lowAmmoUI"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("lowAmmoSoundEvent"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("currentWeaponDisplay"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("chargedShotUI"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("inventoryContainer"));

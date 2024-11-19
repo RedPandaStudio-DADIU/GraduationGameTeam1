@@ -86,7 +86,7 @@ namespace cowsins
                 DestroyProjectile();
             } 
             else if(other.CompareTag("WeakSpot")){
-                Debug.LogWarning("Hit weak spot");
+                Debug.LogWarning("Hit weak spot" + other.gameObject.name);
                 other.gameObject.GetComponent<WeakSpot>().CheckIfCanBeDamaged();
             } else if(other.CompareTag("Boss")){
                 Debug.LogWarning("Hit boss");
