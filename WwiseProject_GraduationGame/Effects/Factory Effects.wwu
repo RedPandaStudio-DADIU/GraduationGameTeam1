@@ -670,7 +670,7 @@
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="800"/>
-										<Property Name="FrequencyBand2" Type="Real32" Value="3000"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="684"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="4660"/>
 										<Property Name="GainBand2" Type="Real32" Value="18"/>
 										<Property Name="OutputLevel" Type="Real32" Value="-12"/>
@@ -751,8 +751,8 @@
 						<Effect Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
 							<PropertyList>
 								<Property Name="HFRatio" Type="Real32" Value="9.5"/>
-								<Property Name="NumberOfDelays" Type="int32" Value="12"/>
-								<Property Name="ReverbTime" Type="Real32" Value="5"/>
+								<Property Name="NumberOfDelays" Type="int32" Value="16"/>
+								<Property Name="ReverbTime" Type="Real32" Value="2.9"/>
 								<Property Name="WetLevel" Type="Real32" Value="-30"/>
 							</PropertyList>
 						</Effect>
@@ -1682,10 +1682,13 @@
 					<ChildrenList>
 						<Effect Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 							<PropertyList>
-								<Property Name="DryLevel" Type="Real32" Value="-3"/>
-								<Property Name="Voice1Pitch" Type="Real32" Value="-100"/>
+								<Property Name="Voice1FilterFrequency" Type="Real32" Value="569"/>
+								<Property Name="Voice1FilterType" Type="int32" Value="4"/>
+								<Property Name="Voice1Gain" Type="Real32" Value="3"/>
+								<Property Name="Voice1Pitch" Type="Real32" Value="-400"/>
 								<Property Name="Voice2Enable" Type="bool" Value="True"/>
 								<Property Name="Voice2Pitch" Type="Real32" Value="100"/>
+								<Property Name="WetLevel" Type="Real32" Value="-4"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Secret_message" ID="{2F5DE612-1AAD-4A84-8FB4-3E66521C920E}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
