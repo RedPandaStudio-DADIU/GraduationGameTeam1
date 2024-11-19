@@ -2,26 +2,36 @@ Event	ID	Name			Wwise Object Path	Notes
 	3861538420	Play_MainMusicSW			\Music\Play_MainMusicSW	
 
 State Group	ID	Name			Wwise Object Path	Notes
-	392812252	Player_Progression_Lv1			\Music_States\Player_Progression_Lv1	
-	392812255	Player_Progression_Lv2			\Music_States\Player_Progression_Lv2	
-	4071417932	Player_State			\Music_States\Player_State	
+	1314730481	Player_Level			\Music_States\Player_Level	
+	1358435973	Combat_intensity_Lv1			\Music_States\Combat_intensity_Lv1	
+	1358435974	Combat_intensity_Lv2			\Music_States\Combat_intensity_Lv2	
+	1972315911	Lv2_ending			\Music_States\Lv2_ending	
+	2764240573	Combat			\Music_States\Combat	
+	3626020801	Player_State_health			\Music_States\Player_State_health	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Player_Progression_Lv1			
-	1654767753	Elevator_lv1	Player_Progression_Lv1			
-	2317668770	Combat_high_Lv1	Player_Progression_Lv1			
-	3511441860	Combat_mid_lv1	Player_Progression_Lv1			
-	3712483660	Combat_low_Lv1	Player_Progression_Lv1			
-	4022957044	Base_Lv1	Player_Progression_Lv1			
-	748895195	None	Player_Progression_Lv2			
-	2317668769	Combat_high_Lv2	Player_Progression_Lv2			
-	3511441863	Combat_mid_Lv2	Player_Progression_Lv2			
-	3712483663	Combat_low_Lv2	Player_Progression_Lv2			
-	4022957047	Base_lv2	Player_Progression_Lv2			
-	72790338	Low_health	Player_State			
-	748895195	None	Player_State			
-	3268324997	Normal_health	Player_State			
+	748895195	None	Player_Level			
+	964811740	Lv1	Player_Level			
+	964811743	Lv2	Player_Level			
+	2607556080	Menu	Player_Level			
+	748895195	None	Combat_intensity_Lv1			
+	2317668770	Combat_high_Lv1	Combat_intensity_Lv1			
+	3712483660	Combat_low_Lv1	Combat_intensity_Lv1			
+	748895195	None	Combat_intensity_Lv2			
+	2317668769	Combat_high_Lv2	Combat_intensity_Lv2			
+	2939361434	Combat_base_lv2	Combat_intensity_Lv2			
+	174960569	Loose	Lv2_ending			
+	748895195	None	Lv2_ending			
+	979765101	Win	Lv2_ending			
+	5260279	No_combat	Combat			
+	748895195	None	Combat			
+	2116791127	In_combat	Combat			
+	3705378287	Elevator	Combat			
+	72790338	Low_health	Player_State_health			
+	748895195	None	Player_State_health			
+	3268324997	Normal_health	Player_State_health			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	140627958	Lv_1_base_loopA	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\DADIU_GRADUATE GAME_VER2_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\MusicLevel1_playlist\Lv1_Base_Loop\Lv_1_base_loopA		19269916
+	622069210	DG_Loop_combatlow1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\DG_Loop_combatlow1_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Lv1_Combat\Lv1_combat_intensity\Lv1_combat_low\DG_Loop_Combatlow1\DG_Loop_combatlow1		7121552
+	690146370	DG_Loop_1A	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Windows\SFX\DG_Loop_1A_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Lv1_base_theme\DG_Loop1A\DG_Loop_1A		10891736
 

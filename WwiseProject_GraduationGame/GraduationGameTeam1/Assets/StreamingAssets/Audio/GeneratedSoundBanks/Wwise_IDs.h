@@ -81,6 +81,43 @@ namespace AK
             } // namespace STATE
         } // namespace AREASTATE
 
+        namespace COMBAT
+        {
+            static const AkUniqueID GROUP = 2764240573U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ELEVATOR = 3705378287U;
+                static const AkUniqueID IN_COMBAT = 2116791127U;
+                static const AkUniqueID NO_COMBAT = 5260279U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace COMBAT
+
+        namespace COMBAT_INTENSITY_LV1
+        {
+            static const AkUniqueID GROUP = 1358435973U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COMBAT_HIGH_LV1 = 2317668770U;
+                static const AkUniqueID COMBAT_LOW_LV1 = 3712483660U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace COMBAT_INTENSITY_LV1
+
+        namespace COMBAT_INTENSITY_LV2
+        {
+            static const AkUniqueID GROUP = 1358435974U;
+
+            namespace STATE
+            {
+                static const AkUniqueID COMBAT_BASE_LV2 = 2939361434U;
+                static const AkUniqueID COMBAT_HIGH_LV2 = 2317668769U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace COMBAT_INTENSITY_LV2
+
         namespace GAMESTATUS
         {
             static const AkUniqueID GROUP = 1045871717U;
@@ -117,38 +154,34 @@ namespace AK
             } // namespace STATE
         } // namespace JOHNDOE
 
-        namespace PLAYER_PROGRESSION_LV1
+        namespace LV2_ENDING
         {
-            static const AkUniqueID GROUP = 392812252U;
+            static const AkUniqueID GROUP = 1972315911U;
 
             namespace STATE
             {
-                static const AkUniqueID BASE_LV1 = 4022957044U;
-                static const AkUniqueID COMBAT_HIGH_LV1 = 2317668770U;
-                static const AkUniqueID COMBAT_LOW_LV1 = 3712483660U;
-                static const AkUniqueID COMBAT_MID_LV1 = 3511441860U;
-                static const AkUniqueID ELEVATOR_LV1 = 1654767753U;
+                static const AkUniqueID LOOSE = 174960569U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID WIN = 979765101U;
             } // namespace STATE
-        } // namespace PLAYER_PROGRESSION_LV1
+        } // namespace LV2_ENDING
 
-        namespace PLAYER_PROGRESSION_LV2
+        namespace PLAYER_LEVEL
         {
-            static const AkUniqueID GROUP = 392812255U;
+            static const AkUniqueID GROUP = 1314730481U;
 
             namespace STATE
             {
-                static const AkUniqueID BASE_LV2 = 4022957047U;
-                static const AkUniqueID COMBAT_HIGH_LV2 = 2317668769U;
-                static const AkUniqueID COMBAT_LOW_LV2 = 3712483663U;
-                static const AkUniqueID COMBAT_MID_LV2 = 3511441863U;
+                static const AkUniqueID LV1 = 964811740U;
+                static const AkUniqueID LV2 = 964811743U;
+                static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
-        } // namespace PLAYER_PROGRESSION_LV2
+        } // namespace PLAYER_LEVEL
 
-        namespace PLAYER_STATE
+        namespace PLAYER_STATE_HEALTH
         {
-            static const AkUniqueID GROUP = 4071417932U;
+            static const AkUniqueID GROUP = 3626020801U;
 
             namespace STATE
             {
@@ -156,7 +189,7 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID NORMAL_HEALTH = 3268324997U;
             } // namespace STATE
-        } // namespace PLAYER_STATE
+        } // namespace PLAYER_STATE_HEALTH
 
         namespace PLAYERSTATE
         {
@@ -403,6 +436,7 @@ namespace AK
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID MASTER_BUS = 1399649189U;
+        static const AkUniqueID MUSIC_MASTER = 3595451983U;
         static const AkUniqueID NPCMASTER = 2033911932U;
         static const AkUniqueID PLAYERCLOTH = 765206498U;
         static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
