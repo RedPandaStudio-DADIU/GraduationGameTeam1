@@ -31,19 +31,19 @@ Switch	ID	Name	Switch Group			Notes
 	3789021730	Nightfall	AmbTimeOfDay			
 
 State Group	ID	Name			Wwise Object Path	Notes
-	185713839	RoomState			\States\RoomState	
-	1045871717	GameStatus			\States\GameStatus	
+	185713839	RoomState			\Sound_States\RoomState	
+	1045871717	GameStatus			\Sound_States\GameStatus	
 	1314730481	Player_Level			\Music_States\Player_Level	
 	1358435973	Combat_intensity_Lv1			\Music_States\Combat_intensity_Lv1	
 	1358435974	Combat_intensity_Lv2			\Music_States\Combat_intensity_Lv2	
-	2064552269	AreaState			\States\AreaState	
+	2064552269	AreaState			\Sound_States\AreaState	
 	2764240573	Combat			\Music_States\Combat	
-	3285234865	PlayerState			\States\PlayerState	
-	3305603258	GuitarSpeaker			\States\Speakers\GuitarSpeaker	
-	3568468165	XagaBossfightStates			\States\Dialogue\XagaBossfightStates	
+	3285234865	PlayerState			\Sound_States\PlayerState	
+	3305603258	GuitarSpeaker			\Sound_States\Speakers\GuitarSpeaker	
+	3568468165	XagaBossfightStates			\Sound_States\Dialogue\XagaBossfightStates	
 	3626020801	Player_State_health			\Music_States\Player_State_health	
-	4121174865	Scenes_lvl2			\States\Dialogue\Scenes_lvl2	
-	4121174866	Scenes_lvl1			\States\Dialogue\Scenes_lvl1	
+	4121174865	Scenes_lvl2			\Sound_States\Dialogue\Scenes_lvl2	
+	4121174866	Scenes_lvl1			\Sound_States\Dialogue\Scenes_lvl1	
 
 State	ID	Name	State Group			Notes
 	144697359	Outdoor	RoomState			
@@ -145,18 +145,22 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	350835844	HangarVerb_JD			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice\HangarVerb_JD	
+	425081994	DelaySlaps_HangarSpeaker			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps_HangarSpeaker	
 	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps	
 	986249158	RoomHangarMain			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomHangarMain	
 	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
 	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	
 
 Effect plug-ins	ID	Name	Type				Notes
+	51356967	Medium_Room1 (Custom)	Wwise Matrix Reverb			
+	104816223	Echoes_Linear (Custom)	Wwise Delay			
+	260922761	Echoes_Linear (Custom)	Wwise Delay			
 	535667444	Bathroom1	Wwise Matrix Reverb			
+	695490779	Echoes_Linear (Custom)	Wwise Delay			
 	702543456	Tunnel1	Wwise Matrix Reverb			
 	819943492	Fear_no_Evil	Wwise Harmonizer			
+	911411724	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	1259256166	New_RoomVerb	Wwise RoomVerb			
-	1588715066	Echoes_Linear	Wwise Delay			
-	1904434771	Medium_Room1	Wwise Matrix Reverb			
 	2849147824	Medium	Wwise RoomVerb			
 	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
 	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			

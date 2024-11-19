@@ -457,6 +457,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID DELAYSLAPS = 924856803U;
+        static const AkUniqueID DELAYSLAPS_HANGARSPEAKER = 425081994U;
         static const AkUniqueID HANGARVERB_JD = 350835844U;
         static const AkUniqueID ROOMHANGARMAIN = 986249158U;
         static const AkUniqueID ROOMSMALL = 3205342581U;

@@ -63,17 +63,22 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{97EA9F42-A49D-26D3-1A7F-F00A245C6AA6}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{05CDFDE9-0DC5-461C-625A-5C37E1D2085F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="51356967" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="104816223" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="260922761" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="695490779" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="911411724" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+				</Custom>
 				<ShareSets>
 					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
-					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2952825346" Name="Dual_Filters_Radio_Comm" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
@@ -142,12 +147,21 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="425081994" Name="DelaySlaps_HangarSpeaker">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="104816223"/>
+							<PluginRef Id="695490779"/>
+							<PluginRef Id="911411724"/>
+						</Custom>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="924856803" Name="DelaySlaps">
 					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1588715066"/>
-							<PluginRef Id="1904434771"/>
-						</ShareSets>
+						<Custom>
+							<PluginRef Id="51356967"/>
+							<PluginRef Id="260922761"/>
+						</Custom>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="986249158" Name="RoomHangarMain">
@@ -532,7 +546,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{238E9D8C-82C3-6B7F-15B2-18ED5E2B539A}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{6380E44C-04D0-AD79-340D-0EF49748B93A}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1256,6 +1270,10 @@
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 5_C7F176C9.wem</CachePath>
 				</File>
+				<File Id="864764768" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Wilhelm Scream Remastered.wav</ShortName>
+					<CachePath>Voices/English(US)/Wilhelm Scream Remastered_E48E47A9.wem</CachePath>
+				</File>
 				<File Id="869232112" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_WhereIsTheMainframeRoomn.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_WhereIsTheMainframeRoomn_818F3B66.wem</CachePath>
@@ -1474,6 +1492,7 @@
 					<Plugin Id="18080721" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="26154250" Name="PAD 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="28380969" Name="FLUTISH" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="51356967" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="53494169" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="61122311" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="64983808" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1482,6 +1501,7 @@
 					<Plugin Id="85231025" Name="DENIED 03" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="91834686" Name="NOISE" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="97705685" Name="RING 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="104816223" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="111393647" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="121596329" Name="BASS 04" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="125311153" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
@@ -1503,6 +1523,7 @@
 					<Plugin Id="209227866" Name="COMM 01" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="216132251" Name="WOOSH 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="232030741" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="260922761" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="280114799" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="283904056" Name="PWM" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="292207345" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
@@ -1558,6 +1579,7 @@
 					<Plugin Id="667002179" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="684844176" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="695307032" Name="SQUARE" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="695490779" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="700247792" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="703895722" Name="BEEP 03" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="727638997" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1584,6 +1606,7 @@
 					<Plugin Id="877434874" Name="COSMIC WIND" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="887496620" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="891593514" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="911411724" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="913085549" Name="BASS 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="917880623" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="923032550" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1617,9 +1640,7 @@
 					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="1866712633" Name="High_Freq_Cut_3" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2568359573" Name="Secret_message" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2952825346" Name="Dual_Filters_Radio_Comm" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1996,7 +2017,7 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="1296777492" Name="Play_Dia_JohnDoe" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="16982058" Name="Play_Dia_Xaga" DurationType="Infinite">
+				<Event Id="16982058" Name="Play_Dia_Xaga" MaxAttenuation="100" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543733"/>
@@ -2044,7 +2065,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3253445185" Name="Play_Dia_Xaga_" DurationType="Infinite">
+				<Event Id="3253445185" Name="Play_Dia_Xaga_" MaxAttenuation="100" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543733"/>
@@ -2213,18 +2234,21 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3110068475" Name="Play_HumansSc1" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="924856803" Name="DelaySlaps"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028878"/>
 							<MediaRefs>
 								<MediaRef Id="36519702"/>
 								<MediaRef Id="42718374"/>
-								<MediaRef Id="173506951"/>
 								<MediaRef Id="319560865"/>
 								<MediaRef Id="544283314"/>
 								<MediaRef Id="566386167"/>
 								<MediaRef Id="712740125"/>
 								<MediaRef Id="860609950"/>
+								<MediaRef Id="864764768"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -2232,12 +2256,12 @@
 							<MediaRefs>
 								<MediaRef Id="36519702"/>
 								<MediaRef Id="42718374"/>
-								<MediaRef Id="173506951"/>
 								<MediaRef Id="319560865"/>
 								<MediaRef Id="544283314"/>
 								<MediaRef Id="566386167"/>
 								<MediaRef Id="712740125"/>
 								<MediaRef Id="860609950"/>
+								<MediaRef Id="864764768"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -2905,12 +2929,21 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="425081994" Name="DelaySlaps_HangarSpeaker">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="104816223"/>
+							<PluginRef Id="695490779"/>
+							<PluginRef Id="911411724"/>
+						</Custom>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="924856803" Name="DelaySlaps">
 					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1588715066"/>
-							<PluginRef Id="1904434771"/>
-						</ShareSets>
+						<Custom>
+							<PluginRef Id="51356967"/>
+							<PluginRef Id="260922761"/>
+						</Custom>
 					</PluginRefs>
 				</AuxBus>
 				<AuxBus Id="986249158" Name="RoomHangarMain">
@@ -3087,5 +3120,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3641B87F-1560-9538-454E-3EEEB76DE2EF}</FileHash>
+	<FileHash>{0BFF9444-38B3-C142-CD82-F815EAE859DB}</FileHash>
 </SoundBanksInfo>

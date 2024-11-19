@@ -23,6 +23,9 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 						</Reference>
+						<Reference Name="ReflectionsAuxSend">
+							<ObjectRef Name="DelaySlaps" ID="{A9EFF5A0-FCBE-4478-BFCF-8F9B76C0944B}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="Sc1_Tr1" ID="{A9785483-2440-449A-A1CA-B59B55321A63}" ShortID="52875200">
@@ -168,10 +171,14 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Wilhelm Scream Remastered" ID="{47225684-DE03-4BBA-81B4-4DB1823DA2F0}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.87058823529412"/>
+															</PropertyList>
 															<Language>English(US)</Language>
 															<AudioFile>Wilhelm Scream Remastered.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="173506951"/>
+																<MediaID ID="864764768"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -244,7 +251,7 @@
 														<Property Name="3DSpatialization" Type="int16" Value="1"/>
 														<Property Name="InitialDelay" Type="Real64">
 															<ValueList>
-																<Value>1</Value>
+																<Value>0.3</Value>
 															</ValueList>
 														</Property>
 														<Property Name="IsVoice" Type="bool" Value="True"/>
@@ -280,7 +287,7 @@
 														<Property Name="Color" Type="int16" Value="4"/>
 														<Property Name="InitialDelay" Type="Real64">
 															<ValueList>
-																<Value>3</Value>
+																<Value>1.5</Value>
 															</ValueList>
 														</Property>
 														<Property Name="IsVoice" Type="bool" Value="True"/>
@@ -360,19 +367,7 @@
 														<ObjectRef Name="ITSJOHNDOE" ID="{03AC49C7-7D97-48E9-86A2-A814EB3509DA}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 													</Reference>
 													<Reference>
-														<ObjectRef Name="TheCaelariHaveBetrayedUs" ID="{EED684F5-AFB8-4FAE-BFBB-F8C4EEEE6C2C}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
-													</Reference>
-													<Reference>
 														<ObjectRef Name="Soldier_Wilhelm" ID="{49133EBE-6C9B-401D-86E9-ECB76CA42EB0}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
-													</Reference>
-													<Reference>
-														<ObjectRef Name="ANDY" ID="{B52A17A4-24BD-4A92-8980-A225411E0507}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
-													</Reference>
-													<Reference>
-														<ObjectRef Name="NO" ID="{373EA01A-7B8C-4B5D-9612-8E5D787EB62D}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
-													</Reference>
-													<Reference>
-														<ObjectRef Name="DS_ARGH" ID="{A342B55D-CA56-4C83-B319-AEEC5A808D8A}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 													</Reference>
 													<Reference>
 														<ObjectRef Name="JD_Damn" ID="{8A70B871-2BD0-450E-9566-DCDE215607AF}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
@@ -526,7 +521,7 @@
 									<PropertyList>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
