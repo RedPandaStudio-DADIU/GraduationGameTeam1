@@ -63,7 +63,69 @@
 						<Event Name="Play_Sc5" ID="{32F6809B-4900-48E7-BB83-8BDAD2923D66}"/>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="lvl2_Conference" ID="{3B71567B-F77B-4B7F-A906-F88B5E191254}" ShortID="815035599"/>
+				<Folder Name="lvl2_Conference" ID="{3B71567B-F77B-4B7F-A906-F88B5E191254}" ShortID="815035599">
+					<ChildrenList>
+						<Event Name="Play_Xaga_Dia_lvl2" ID="{30265F51-EC00-4F4D-8E63-AF7B8FCFC2E4}">
+							<ChildrenList>
+								<Action Name="" ID="{0F39A291-7B17-45B1-BB1C-A477E1A1B304}" ShortID="1054166476">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Xaga_Dia_lvl2" ID="{4C934206-40F2-4949-859E-A15FC6453F00}" WorkUnitID="{4525D387-513E-4AD3-8F63-63E8A8B0C74D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="BossFight" ID="{A60E7743-3524-42FF-863E-C4B8587EEA89}" ShortID="596929864">
+							<ChildrenList>
+								<Event Name="Play_XagaDeathScream" ID="{970E61A1-C9D0-4917-86CD-262C10B26F2C}">
+									<ChildrenList>
+										<Action Name="" ID="{EFD3F82B-4F46-47D6-B038-4B09EDCC6661}" ShortID="480304074">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Xaga_HurtSounds_DamageTaken" ID="{4B8AB641-897F-42E1-A417-634B5CD9382B}">
+									<ChildrenList>
+										<Action Name="" ID="{133C8E95-7FD8-423C-B466-3D17F4D48EF9}" ShortID="344438284">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Xaga_HurtSounds_DamageTaken" ID="{348FD35E-4E70-4D7A-A01C-1FC1727BA174}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Xaga_StateDialogue" ID="{9A963916-977E-4926-B92B-9A45AC5DD16A}">
+									<ChildrenList>
+										<Action Name="" ID="{B9410CD0-A3F9-406E-BD4D-690F5D7FBAAA}" ShortID="675178625">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Xaga_StateDialogue" ID="{85081F6E-95D9-449B-828A-0FC4E995CBEB}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="Play_JD_AI_lvl2" ID="{1EEF6B52-15AD-498C-9CE6-2C5CB1C04F3D}">
+							<ChildrenList>
+								<Action Name="" ID="{01B7F21F-7C77-4B4D-A810-F5128D5E7D0B}" ShortID="690278300">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JD+AI_lvl2" ID="{37EC6237-BFA1-4323-8ECB-0AEEB6E93BF3}" WorkUnitID="{4525D387-513E-4AD3-8F63-63E8A8B0C74D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 				<Event Name="Play_Dia_Xaga_" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}">
 					<ChildrenList>
 						<Action Name="" ID="{18EB9DD4-B13C-4A36-9060-DCAFFC959D38}" ShortID="978817850">
