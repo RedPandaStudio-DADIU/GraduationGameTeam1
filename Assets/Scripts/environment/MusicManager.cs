@@ -26,7 +26,7 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
-        
+        Debug.LogWarning("Player posiiton: " + GameObject.FindWithTag("Player").transform.position);
     }
 
     public void CheckIfSameState(int level){
