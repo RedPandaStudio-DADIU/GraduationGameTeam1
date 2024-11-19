@@ -6,13 +6,18 @@
 				<ActorMixer Name="Amb_MainMixer" ID="{5FB36AA4-6865-487B-B071-468ADFCFF388}" ShortID="225228746">
 					<PropertyList>
 						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+							<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -47,7 +52,7 @@
 											<ObjectRef Name="Midday" ID="{CF51DAE9-61CD-417F-9AA8-CF4105780921}" WorkUnitID="{1F92430F-23A8-449A-90DF-D556FB11667D}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+											<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 										</Reference>
 										<Reference Name="SwitchGroupOrStateGroup">
 											<ObjectRef Name="AmbTimeOfDay" ID="{9F65AA38-863C-41DC-90A6-99A1A2323A11}" WorkUnitID="{1F92430F-23A8-449A-90DF-D556FB11667D}"/>
@@ -64,7 +69,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -77,7 +82,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -113,7 +118,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -174,7 +179,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -206,7 +211,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -237,7 +242,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -247,7 +252,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -405,7 +410,7 @@
 											<ObjectRef Name="Midday" ID="{CF51DAE9-61CD-417F-9AA8-CF4105780921}" WorkUnitID="{1F92430F-23A8-449A-90DF-D556FB11667D}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+											<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 										</Reference>
 										<Reference Name="SwitchGroupOrStateGroup">
 											<ObjectRef Name="AmbTimeOfDay" ID="{9F65AA38-863C-41DC-90A6-99A1A2323A11}" WorkUnitID="{1F92430F-23A8-449A-90DF-D556FB11667D}"/>
@@ -422,7 +427,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -435,7 +440,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -471,7 +476,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -547,7 +552,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -564,7 +569,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -592,7 +597,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+													<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -614,7 +619,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+															<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -814,7 +819,7 @@
 						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="67"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-29</Value>
+								<Value>-26</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -826,7 +831,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+							<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -861,7 +866,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="3DAmbience" ID="{C7BEB8B8-16C0-4B5E-8617-F61906DE0057}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+							<ObjectRef Name="3DAmbience" ID="{C7BEB8B8-16C0-4B5E-8617-F61906DE0057}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -878,6 +883,37 @@
 					</PositioningInfo>
 					<ActiveSourceList>
 						<ActiveSource Name="Ambience_AirBox01_Lp" ID="{EC6F4240-974B-4EB2-8099-409D6CDB8CED}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104" ID="{964B2258-2FF2-4F32-B3E1-F69C4D1F2E67}" ShortID="16844701">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-21</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="2DAmbientBeds" ID="{D74E37B0-2B81-47C5-B16E-2047902882F5}" WorkUnitID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104" ID="{FD99CD1B-E8C7-44B3-8ECA-0E376F127586}">
+							<Language>SFX</Language>
+							<AudioFile>Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="942527291"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104" ID="{FD99CD1B-E8C7-44B3-8ECA-0E376F127586}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

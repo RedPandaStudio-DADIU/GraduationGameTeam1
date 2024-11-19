@@ -14,20 +14,69 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{6793942B-9779-B82D-579C-5A83250C9602}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{9E56428B-ABA0-4A73-0285-25D6B18FEB89}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
+			<Events>
+				<Event Id="3861538420" Name="Play_MainMusicSW" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811740"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811743"/>
+							<Children/>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="1314730481" Name="Player_Level">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="964811740" Name="Lv1"/>
+						<State Id="964811743" Name="Lv2"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1358435973" Name="Combat_intensity_Lv1">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2317668770" Name="Combat_high_Lv1"/>
+						<State Id="3712483660" Name="Combat_low_Lv1"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1358435974" Name="Combat_intensity_Lv2">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2317668769" Name="Combat_high_Lv2"/>
+						<State Id="2939361434" Name="Combat_base_lv2"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2764240573" Name="Combat">
+					<States>
+						<State Id="5260279" Name="No_combat"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2116791127" Name="In_combat"/>
+						<State Id="3705378287" Name="Elevator"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0BDECB59-3C04-B5B0-3BBE-501F22036D47}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{96B17B3C-E3E5-CCBE-3708-2D14C9ABE4D2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2952825346" Name="Dual_Filters_Radio_Comm" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
 					<Plugin Id="4119703916" Name="HelmetEQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
@@ -36,24 +85,52 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="1153792" Name="03_Xaga">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="819943492"/>
+							<PluginRef Id="2952825346"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="47937584" Name="PlayerVoice">
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="4119703916"/>
 						</ShareSets>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Bus>
+				<Bus Id="196922711" Name="NPCBarks"/>
+				<Bus Id="223128778" Name="NPC Aliens"/>
 				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="344209961" Name="01_Ai">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2952825346"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1182634443" Name="AmbientBeds"/>
 				<Bus Id="1301074112" Name="3DAmbience"/>
 				<Bus Id="1399649189" Name="Master Bus"/>
 				<Bus Id="1459460693" Name="AmbientMaster"/>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
-				<Bus Id="2033911932" Name="NPCMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
-				<Bus Id="3538689948" Name="PlayerMaster"/>
+				<Bus Id="2645497833" Name="DialogueMaster"/>
+				<Bus Id="2997659434" Name="NPC_SFX"/>
+				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
+				<Bus Id="3570874681" Name="02_John Doe"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
@@ -73,7 +150,20 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="1603492950" Name="RoomTunnel"/>
+				<AuxBus Id="986249158" Name="RoomHangarMain">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2849147824"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="1603492950" Name="RoomTunnel">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="702543456"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="3205342581" Name="RoomSmall">
 					<PluginRefs>
 						<ShareSets>
@@ -81,19 +171,12 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="3553615197" Name="RoomLarge">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2849147824"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
 				<GameParameter Id="262290038" Name="RTPC_Distance"/>
-				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
 				<GameParameter Id="1342605732" Name="RTPC_WaterAmount"/>
+				<GameParameter Id="2562122989" Name="RTPC_Elevator"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 				<GameParameter Id="3339859487" Name="RTPC_WeaponCharge"/>
 				<GameParameter Id="3989928153" Name="RTPC_GroundWetness_Slow"/>
@@ -113,23 +196,45 @@
 						<State Id="3374585465" Name="InMenu"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="1314730481" Name="Player_Level">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="964811740" Name="Lv1"/>
+						<State Id="964811743" Name="Lv2"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1358435973" Name="Combat_intensity_Lv1">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2317668770" Name="Combat_high_Lv1"/>
+						<State Id="3712483660" Name="Combat_low_Lv1"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1358435974" Name="Combat_intensity_Lv2">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2317668769" Name="Combat_high_Lv2"/>
+						<State Id="2939361434" Name="Combat_base_lv2"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2064552269" Name="AreaState">
 					<States>
 						<State Id="748895195" Name="None"/>
 						<State Id="1814387309" Name="Hangar1"/>
 						<State Id="1814387310" Name="Hangar2"/>
-						<State Id="2130932629" Name="Harngar3"/>
+						<State Id="1814387311" Name="Hangar3"/>
 						<State Id="2393120223" Name="InsideElevator"/>
 						<State Id="2782928028" Name="ConferenceRoom2"/>
 						<State Id="2782928029" Name="ConferenceRoom3"/>
 						<State Id="2782928031" Name="ConferenceRoom1"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="2802482050" Name="JohnDoe">
+				<StateGroup Id="2764240573" Name="Combat">
 					<States>
-						<State Id="477127956" Name="Sc1"/>
+						<State Id="5260279" Name="No_combat"/>
 						<State Id="748895195" Name="None"/>
-						<State Id="3956690975" Name="WaitingOnTrigger"/>
+						<State Id="2116791127" Name="In_combat"/>
+						<State Id="3705378287" Name="Elevator"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3285234865" Name="PlayerState">
@@ -146,18 +251,45 @@
 						<State Id="1651971902" Name="On"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3568468165" Name="XagaBossfightStates">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="841236080" Name="NearlyDead"/>
+						<State Id="1031154770" Name="LostStomach"/>
+						<State Id="2676857933" Name="LostLeg"/>
+						<State Id="2961238679" Name="LostArm"/>
+						<State Id="4103826714" Name="DeathScream"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3626020801" Name="Player_State_health">
+					<States>
+						<State Id="72790338" Name="Low_health"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3268324997" Name="Normal_health"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4121174865" Name="Scenes_lvl2">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2059667105" Name="Sc6_Tr1"/>
+						<State Id="2239442679" Name="WaitingOnTriggerEnter"/>
+						<State Id="3398158172" Name="Sc7_Tr1"/>
+						<State Id="3986144931" Name="Sc8_Tr1"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="4121174866" Name="Scenes_lvl1">
 					<States>
 						<State Id="342028878" Name="Sc1_tr1"/>
+						<State Id="551107239" Name="Sc4_Tr1"/>
+						<State Id="569325008" Name="Sc3_Tr1"/>
+						<State Id="569325011" Name="Sc3_Tr2"/>
 						<State Id="748895195" Name="None"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="4123380240" Name="Xaga">
-					<States>
-						<State Id="477127956" Name="Sc1"/>
-						<State Id="477127959" Name="Sc2"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="2239442679" Name="WaitingOnTriggerEnter"/>
+						<State Id="2172575860" Name="TriggerIsWaiting"/>
+						<State Id="3079543733" Name="Sc2_Tr1"/>
+						<State Id="3079543734" Name="Sc2_Tr2"/>
+						<State Id="3079543735" Name="Sc2_Tr3"/>
+						<State Id="3690529129" Name="Sc5_Tr2"/>
+						<State Id="3690529130" Name="Sc5_Tr1"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -203,25 +335,19 @@
 						<Switch Id="4248645337" Name="Grass"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2041156306" Name="XagaHealth">
+					<Switches>
+						<Switch Id="898449699" Name="NearDeath"/>
+						<Switch Id="1017222595" Name="LowHealth"/>
+						<Switch Id="2429688720" Name="FullHealth"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
 					<GameParameterRef Id="2653406601"/>
 					<Switches>
 						<Switch Id="1296465089" Name="Sprint"/>
 						<Switch Id="1865857008" Name="Transition"/>
 						<Switch Id="2884887403" Name="Sneak"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="2134337173" Name="ElevatorMotion">
-					<Switches>
-						<Switch Id="788884573" Name="Stop"/>
-						<Switch Id="1281810935" Name="Start"/>
-						<Switch Id="2452206122" Name="False"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="2564540785" Name="ElevatorPowerState">
-					<Switches>
-						<Switch Id="91680483" Name="PowerOn"/>
-						<Switch Id="2235177879" Name="PowerOff"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2569417515" Name="RainTypeSwitch">
@@ -234,24 +360,28 @@
 						<Switch Id="3569642402" Name="Sunny"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2942882794" Name="ElevatorPower">
+					<Switches>
+						<Switch Id="91680483" Name="PowerOn"/>
+						<Switch Id="2235177879" Name="PowerOff"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="3305603258" Name="GuitarSpeaker">
 					<Switches>
 						<Switch Id="930712164" Name="Off"/>
 						<Switch Id="1651971902" Name="On"/>
 					</Switches>
 				</SwitchGroup>
-				<SwitchGroup Id="3935263896" Name="DialogueTriggers">
+				<SwitchGroup Id="3384327847" Name="ElevatorInTransit">
+					<GameParameterRef Id="2562122989"/>
 					<Switches>
-						<Switch Id="62662553" Name="Sc5_Play"/>
-						<Switch Id="856363850" Name="Sc4_Play"/>
-						<Switch Id="1151176110" Name="Awake"/>
-						<Switch Id="1292752181" Name="Sc1_Play"/>
-						<Switch Id="2811652880" Name="Sc2_Play"/>
-						<Switch Id="3561392151" Name="Sc3_Play"/>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="1281810935" Name="Start"/>
+						<Switch Id="2452206122" Name="False"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
-					<GameParameterRef Id="870672907"/>
+					<GameParameterRef Id="2562122989"/>
 					<Switches>
 						<Switch Id="630539344" Name="Dry"/>
 						<Switch Id="1181096339" Name="Wet"/>
@@ -402,7 +532,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{BEAB1A49-7849-F93F-3F2F-DDE15138ECEE}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{238E9D8C-82C3-6B7F-15B2-18ED5E2B539A}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -410,9 +540,29 @@
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_443FEF4C.wem</CachePath>
 				</File>
+				<File Id="9995095" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_FuckTheseAliens.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_FuckTheseAliens_818F3B66.wem</CachePath>
+				</File>
+				<File Id="10599150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_1C1CCB54.wem</CachePath>
+				</File>
+				<File Id="15644422" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rifle_Mag_Empty.wav</ShortName>
+					<CachePath>SFX/Rifle_Mag_Empty_818F3B66.wem</CachePath>
+				</File>
+				<File Id="22270700" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Weapons\Handgun\Hangun_Reload.wav</ShortName>
+					<CachePath>SFX/Weapons/Handgun/Hangun_Reload_818F3B66.wem</CachePath>
+				</File>
 				<File Id="23730002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2_4B398887.wem</CachePath>
+				</File>
+				<File Id="24500900" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThis_.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThis__818F3B66.wem</CachePath>
 				</File>
 				<File Id="28983933" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
@@ -426,9 +576,29 @@
 					<ShortName>Weapons\Handgun\Hangun_Load.wav</ShortName>
 					<CachePath>SFX/Weapons/Handgun/Hangun_Load_818F3B66.wem</CachePath>
 				</File>
+				<File Id="36456877" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DAMNThatsGotToHURT1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DAMNThatsGotToHURT1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="36519702" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ARGH.wav</ShortName>
+					<CachePath>Voices/English(US)/ARGH_818F3B66.wem</CachePath>
+				</File>
+				<File Id="42718374" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ITSJOHNDOE.wav</ShortName>
+					<CachePath>Voices/English(US)/ITSJOHNDOE_818F3B66.wem</CachePath>
+				</File>
+				<File Id="46803577" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_PowerDOWN.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_PowerDOWN_818F3B66.wem</CachePath>
+				</File>
 				<File Id="50251163" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_03.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Toe_03_25B50D5A.wem</CachePath>
+				</File>
+				<File Id="52927242" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Damn4.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Damn4_818F3B66.wem</CachePath>
 				</File>
 				<File Id="61446819" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_06.wav</ShortName>
@@ -438,13 +608,37 @@
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 5_BA7EE86E.wem</CachePath>
 				</File>
+				<File Id="65439675" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>NooMystomach.wav</ShortName>
+					<CachePath>Voices/English(US)/NooMystomach_818F3B66.wem</CachePath>
+				</File>
 				<File Id="70419568" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_214329C7.wem</CachePath>
 				</File>
+				<File Id="70651197" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Damn2.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Damn2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="73697646" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_DC847164.wem</CachePath>
+				</File>
+				<File Id="85731172" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_FE311192.wem</CachePath>
+				</File>
+				<File Id="87501857" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soundly Audio\Scifi, Spaceship, Ambience, Airy Tone, Drone 04 SND28345 1.wav</ShortName>
+					<CachePath>SFX/Soundly Audio/Scifi, Spaceship, Ambience, Airy Tone, Drone 04 SND28345 1_7A5B5D3D.wem</CachePath>
+				</File>
 				<File Id="95896769" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1_C79660D5.wem</CachePath>
+				</File>
+				<File Id="100377375" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ItWasAMistake.wav</ShortName>
+					<CachePath>Voices/English(US)/ItWasAMistake_4DC8B021.wem</CachePath>
 				</File>
 				<File Id="108052905" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_05.wav</ShortName>
@@ -454,9 +648,21 @@
 					<ShortName>Walk\Boots_Walk_Toe_04.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_04_A5EC4D9C.wem</CachePath>
 				</File>
-				<File Id="116776916" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>GidAtDeVilleDo.wav</ShortName>
-					<CachePath>Voices/English(US)/GidAtDeVilleDo_818F3B66.wem</CachePath>
+				<File Id="111408999" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_HearMe1.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_HearMe1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="111609954" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaga_ThisAmusesMe.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaga_ThisAmusesMe_818F3B66.wem</CachePath>
+				</File>
+				<File Id="125610014" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_ImNotReallyaComputer_Happy.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_ImNotReallyaComputer_Happy_7881C442.wem</CachePath>
+				</File>
+				<File Id="127885864" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_LetsGetHer_Angry.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_LetsGetHer_Angry_DC9538B2.wem</CachePath>
 				</File>
 				<File Id="133120763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528 1.wav</ShortName>
@@ -470,6 +676,10 @@
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 6.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 6_D634B678.wem</CachePath>
 				</File>
+				<File Id="149323924" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_67FEECBC.wem</CachePath>
+				</File>
 				<File Id="153388572" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Pathetic_temp1.wav</ShortName>
 					<CachePath>Voices/English(US)/Pathetic_temp1_818F3B66.wem</CachePath>
@@ -482,6 +692,14 @@
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_DEB3698B.wem</CachePath>
 				</File>
+				<File Id="173506951" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Wilhelm Scream Remastered.wav</ShortName>
+					<CachePath>Voices/English(US)/Wilhelm Scream Remastered_818F3B66.wem</CachePath>
+				</File>
+				<File Id="180308403" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_Okay3.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_Okay3_EA0A4900.wem</CachePath>
+				</File>
 				<File Id="180730371" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7_375D18CC.wem</CachePath>
@@ -490,6 +708,14 @@
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 2_1BB066E1.wem</CachePath>
 				</File>
+				<File Id="187414715" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Daaamn.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Daaamn_818F3B66.wem</CachePath>
+				</File>
+				<File Id="189766252" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_E9A36B89.wem</CachePath>
+				</File>
 				<File Id="199293111" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_02.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_02_818F3B66.wem</CachePath>
@@ -497,6 +723,10 @@
 				<File Id="201956695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 3_94A7572B.wem</CachePath>
+				</File>
+				<File Id="205653644" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Temp_TestAmbiences\Ambience, Designed, Drone, Room Tone, Airy, Dark, Loop, (50) (LRC Ls Rs) SND105603.wav</ShortName>
+					<CachePath>SFX/Temp_TestAmbiences/Ambience, Designed, Drone, Room Tone, Airy, Dark, Loop, (50) (LRC Ls Rs) SND105603_818F3B66.wem</CachePath>
 				</File>
 				<File Id="207959572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 1.wav</ShortName>
@@ -514,13 +744,29 @@
 					<ShortName>Walk\Boots_Walk_Toe_05.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_05_818F3B66.wem</CachePath>
 				</File>
+				<File Id="222730321" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaga_HAHAHA.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaga_HAHAHA_818F3B66.wem</CachePath>
+				</File>
 				<File Id="243008600" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_06.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_06_5CB3E1E0.wem</CachePath>
 				</File>
+				<File Id="243396653" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_HoleInOne_BigVoice.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_HoleInOne_BigVoice_818F3B66.wem</CachePath>
+				</File>
+				<File Id="245350830" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Machines_Elevator_Door_Open_Close_Angle_01_SND11637.wav</ShortName>
+					<CachePath>SFX/Machines_Elevator_Door_Open_Close_Angle_01_SND11637_818F3B66.wem</CachePath>
+				</File>
 				<File Id="247373654" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_1CF36D38.wem</CachePath>
+				</File>
+				<File Id="257021756" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>IDidntMeanToKill.wav</ShortName>
+					<CachePath>Voices/English(US)/IDidntMeanToKill_90564052.wem</CachePath>
 				</File>
 				<File Id="259744675" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 3.wav</ShortName>
@@ -528,11 +774,19 @@
 				</File>
 				<File Id="260010361" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Recharge_1.wav</ShortName>
-					<CachePath>SFX/Rifle_Recharge_1_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Recharge_1_29E2320A.wem</CachePath>
+				</File>
+				<File Id="262623482" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Hello_Annoyed.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Hello_Annoyed_BBCFEF9E.wem</CachePath>
 				</File>
 				<File Id="272504973" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_NuclearCooldown.wav</ShortName>
 					<CachePath>SFX/Rifle_NuclearCooldown_818F3B66.wem</CachePath>
+				</File>
+				<File Id="277098265" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_Bottonpress.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_Bottonpress_818F3B66.wem</CachePath>
 				</File>
 				<File Id="280360391" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 10.wav</ShortName>
@@ -550,9 +804,49 @@
 					<ShortName>Walk\Boots_Walk_Toe_02.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_02_818F3B66.wem</CachePath>
 				</File>
+				<File Id="296686986" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_WhereIsIt1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_WhereIsIt1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="304323509" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ThefederationReallySentYou.wav</ShortName>
+					<CachePath>Voices/English(US)/ThefederationReallySentYou_B1D047C2.wem</CachePath>
+				</File>
+				<File Id="314643732" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThatHurt3.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThatHurt3_818F3B66.wem</CachePath>
+				</File>
+				<File Id="318436866" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_2A969D28.wem</CachePath>
+				</File>
+				<File Id="319560865" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Damn.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Damn_818F3B66.wem</CachePath>
+				</File>
+				<File Id="323262943" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_OutofOrderBeep.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_OutofOrderBeep_818F3B66.wem</CachePath>
+				</File>
+				<File Id="324158094" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_WhereDoIFindTheMainframe1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_WhereDoIFindTheMainframe1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="330453251" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_DA1C4C8D.wem</CachePath>
+				</File>
+				<File Id="331836683" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_6B15B904.wem</CachePath>
+				</File>
+				<File Id="338036065" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Yeeah.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Yeeah_AFFC24BB.wem</CachePath>
+				</File>
+				<File Id="340515145" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_HiThere.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_HiThere_818F3B66.wem</CachePath>
 				</File>
 				<File Id="341543950" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 4.wav</ShortName>
@@ -562,6 +856,10 @@
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 1_04514761.wem</CachePath>
 				</File>
+				<File Id="352015233" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_3050B82B.wem</CachePath>
+				</File>
 				<File Id="362004430" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_80A53FEE.wem</CachePath>
@@ -570,13 +868,33 @@
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072_E0460A23.wem</CachePath>
 				</File>
+				<File Id="365131947" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_SureOkay3.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_SureOkay3_818F3B66.wem</CachePath>
+				</File>
 				<File Id="371279162" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_01.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="374402712" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_TheElevatorIsNowBackOnline.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_TheElevatorIsNowBackOnline_D92E4CE8.wem</CachePath>
+				</File>
+				<File Id="376863824" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_A603FA23.wem</CachePath>
+				</File>
 				<File Id="380138756" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_AirRelease.wav</ShortName>
 					<CachePath>SFX/Rifle_AirRelease_818F3B66.wem</CachePath>
+				</File>
+				<File Id="380369711" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_SureOkay4.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_SureOkay4_4BE3520F.wem</CachePath>
+				</File>
+				<File Id="381153464" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ThefederationReallySentYou.wav</ShortName>
+					<CachePath>Voices/English(US)/ThefederationReallySentYou_AAE0AD09.wem</CachePath>
 				</File>
 				<File Id="383454313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_06.wav</ShortName>
@@ -598,9 +916,21 @@
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 2_97D08F4B.wem</CachePath>
 				</File>
+				<File Id="425120084" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_Excellent_Short.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_Excellent_Short_D7808A27.wem</CachePath>
+				</File>
+				<File Id="425179418" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_HearMe2.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_HearMe2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="425677546" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9_6C4E94DA.wem</CachePath>
+				</File>
+				<File Id="435070253" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Temp_TestAmbiences\Ambience, Scifi, Brooding Ambience Space SND67469 2.wav</ShortName>
+					<CachePath>SFX/Temp_TestAmbiences/Ambience, Scifi, Brooding Ambience Space SND67469 2_7146F35C.wem</CachePath>
 				</File>
 				<File Id="435089554" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_06.wav</ShortName>
@@ -614,33 +944,81 @@
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2_AD62EBE1.wem</CachePath>
 				</File>
+				<File Id="455882504" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaga_IfYouWantToAvenge.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaga_IfYouWantToAvenge_7B2131EC.wem</CachePath>
+				</File>
 				<File Id="484715529" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_04.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Toe_04_3A8107D8.wem</CachePath>
+				</File>
+				<File Id="493237573" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_ItsRightDownCorridor68.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_ItsRightDownCorridor68_250EC824.wem</CachePath>
+				</File>
+				<File Id="493325606" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074.wav</ShortName>
+					<CachePath>SFX/Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074_818F3B66.wem</CachePath>
+				</File>
+				<File Id="496990606" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_ThatsForMySister.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_ThatsForMySister_818F3B66.wem</CachePath>
 				</File>
 				<File Id="497200545" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 6.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 6_B5EE7E0F.wem</CachePath>
 				</File>
+				<File Id="507060247" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_YouShouldHaveKnownBetter.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_YouShouldHaveKnownBetter_818F3B66.wem</CachePath>
+				</File>
+				<File Id="508446791" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_Hello.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_Hello_818F3B66.wem</CachePath>
+				</File>
 				<File Id="511784467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_07.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_07_818F3B66.wem</CachePath>
+				</File>
+				<File Id="527660718" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaha_Haha.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaha_Haha_A5B0F7C8.wem</CachePath>
 				</File>
 				<File Id="530099864" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 1_0915C658.wem</CachePath>
 				</File>
+				<File Id="531390771" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_InTheMainframeRoom.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_InTheMainframeRoom_8B6AE72C.wem</CachePath>
+				</File>
 				<File Id="532629220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 3_6B8C755D.wem</CachePath>
 				</File>
+				<File Id="544073228" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="544283314" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>TheCaelariHaveBetrayedUs.wav</ShortName>
+					<CachePath>Voices/English(US)/TheCaelariHaveBetrayedUs_818F3B66.wem</CachePath>
+				</File>
 				<File Id="563975790" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Recharge_3.wav</ShortName>
-					<CachePath>SFX/Rifle_Recharge_3_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Recharge_3_CBEBA42B.wem</CachePath>
+				</File>
+				<File Id="566386167" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>NO.wav</ShortName>
+					<CachePath>Voices/English(US)/NO_818F3B66.wem</CachePath>
 				</File>
 				<File Id="570131319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_GutteralRelease.wav</ShortName>
 					<CachePath>SFX/Rifle_GutteralRelease_818F3B66.wem</CachePath>
+				</File>
+				<File Id="580276444" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_FuckHagnOn.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_FuckHagnOn_AC0714B8.wem</CachePath>
 				</File>
 				<File Id="601869256" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav</ShortName>
@@ -649,6 +1027,14 @@
 				<File Id="604477528" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 9_1F9F6216.wem</CachePath>
+				</File>
+				<File Id="606303027" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThisShit.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThisShit_818F3B66.wem</CachePath>
+				</File>
+				<File Id="611996543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_7B8FFC4E.wem</CachePath>
 				</File>
 				<File Id="632500118" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 3.wav</ShortName>
@@ -662,6 +1048,18 @@
 					<ShortName>Rifle_Unload.wav</ShortName>
 					<CachePath>SFX/Rifle_Unload_818F3B66.wem</CachePath>
 				</File>
+				<File Id="646430669" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThatHurt.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThatHurt_818F3B66.wem</CachePath>
+				</File>
+				<File Id="651678197" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_PowerON_lp.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_PowerON_lp_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="655758477" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rifle_FireMainv2.wav</ShortName>
+					<CachePath>SFX/Rifle_FireMainv2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="662185199" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_02.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Toe_02_2BAD6CE9.wem</CachePath>
@@ -669,6 +1067,10 @@
 				<File Id="664780185" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Load.wav</ShortName>
 					<CachePath>SFX/Rifle_Load_EFB673FF.wem</CachePath>
+				</File>
+				<File Id="670922056" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_iNormallyControlTheMainframe.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_iNormallyControlTheMainframe_818F3B66.wem</CachePath>
 				</File>
 				<File Id="685074737" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 9.wav</ShortName>
@@ -682,6 +1084,10 @@
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 4.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 4_2B6CCF17.wem</CachePath>
 				</File>
+				<File Id="700230305" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_EFAB9BF8.wem</CachePath>
+				</File>
 				<File Id="700308761" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1_C2C81541.wem</CachePath>
@@ -689,6 +1095,18 @@
 				<File Id="700561171" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Hitmarker_Air_v1.wav</ShortName>
 					<CachePath>SFX/Hitmarker_Air_v1_B4AC1E30.wem</CachePath>
+				</File>
+				<File Id="705500713" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>NooooMyArm.wav</ShortName>
+					<CachePath>Voices/English(US)/NooooMyArm_818F3B66.wem</CachePath>
+				</File>
+				<File Id="710699219" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DAMNThis.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DAMNThis_818F3B66.wem</CachePath>
+				</File>
+				<File Id="711008697" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_SureOkay2.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_SureOkay2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="711013141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav</ShortName>
@@ -698,9 +1116,17 @@
 					<ShortName>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 7_3AC4BF5E.wem</CachePath>
 				</File>
+				<File Id="712740125" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ANDY.wav</ShortName>
+					<CachePath>Voices/English(US)/ANDY_818F3B66.wem</CachePath>
+				</File>
 				<File Id="717672186" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_FireMain.wav</ShortName>
 					<CachePath>SFX/Rifle_FireMain_13F9897F.wem</CachePath>
+				</File>
+				<File Id="718891495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Explosions_Designed_Explosion_No_Fragments_SND81684.wav</ShortName>
+					<CachePath>SFX/Explosions_Designed_Explosion_No_Fragments_SND81684_B193D17E.wem</CachePath>
 				</File>
 				<File Id="719082772" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Locomotion\Boots_Jump.wav</ShortName>
@@ -714,6 +1140,10 @@
 					<ShortName>Weapons\Rifle\Rifle_ChargeRdyLoop.wav</ShortName>
 					<CachePath>SFX/Weapons/Rifle/Rifle_ChargeRdyLoop_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="741539551" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_C8D88DE7.wem</CachePath>
+				</File>
 				<File Id="747369287" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 5_8D255C0B.wem</CachePath>
@@ -722,9 +1152,25 @@
 					<ShortName>Walk\Boots_Walk_Toe_08.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_08_818F3B66.wem</CachePath>
 				</File>
+				<File Id="756722618" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_iNeedToTurnOnTheMainframe.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_iNeedToTurnOnTheMainframe_818F3B66.wem</CachePath>
+				</File>
+				<File Id="767570935" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_AndYesISeeIt2.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_AndYesISeeIt2_E7ACFDD7.wem</CachePath>
+				</File>
 				<File Id="769664889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_04.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_04_163E44F6.wem</CachePath>
+				</File>
+				<File Id="771861190" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_CanYouGetToThePointPlease1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_CanYouGetToThePointPlease1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="772915345" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThatHurt5.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThatHurt5_818F3B66.wem</CachePath>
 				</File>
 				<File Id="773481961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_03.wav</ShortName>
@@ -734,13 +1180,37 @@
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 1_EDA300AE.wem</CachePath>
 				</File>
+				<File Id="777393195" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_SureOkay4.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_SureOkay4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="797320250" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_TheMainframeNeedsToBeRebooted.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_TheMainframeNeedsToBeRebooted_46673305.wem</CachePath>
+				</File>
 				<File Id="798037316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 6.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 6_EC71941D.wem</CachePath>
 				</File>
+				<File Id="799590032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Temp_TestAmbiences\Ambience, Scifi, Brooding Ambience Space SND67469 2.wav</ShortName>
+					<CachePath>SFX/Temp_TestAmbiences/Ambience, Scifi, Brooding Ambience Space SND67469 2_8FF93199.wem</CachePath>
+				</File>
+				<File Id="799930274" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_TheConferencehall2floor.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_TheConferencehall2floor_818F3B66.wem</CachePath>
+				</File>
 				<File Id="800966659" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambiences\3D\Ambience_AirBox01_Lp.wav</ShortName>
 					<CachePath>SFX/Ambiences/3D/Ambience_AirBox01_Lp_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="811742737" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_Okay2.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_Okay2_49771B57.wem</CachePath>
+				</File>
+				<File Id="817687389" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_6EEB87AB.wem</CachePath>
 				</File>
 				<File Id="823800221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 13.wav</ShortName>
@@ -750,17 +1220,49 @@
 					<ShortName>Run\Boots_Run_Heel_01.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_01_CB362389.wem</CachePath>
 				</File>
+				<File Id="827815878" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThatHurt2.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThatHurt2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="831702141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_02.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_02_55F6251A.wem</CachePath>
 				</File>
+				<File Id="838699214" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_iNeedTheRadio.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_iNeedTheRadio_818F3B66.wem</CachePath>
+				</File>
+				<File Id="844964757" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_GetToThePointPlease1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_GetToThePointPlease1_B7E0F8CF.wem</CachePath>
+				</File>
 				<File Id="854687943" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Recharge_2.wav</ShortName>
-					<CachePath>SFX/Rifle_Recharge_2_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Recharge_2_1E5E93CB.wem</CachePath>
+				</File>
+				<File Id="855706314" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThatsGotToHurt.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThatsGotToHurt_818F3B66.wem</CachePath>
+				</File>
+				<File Id="860242067" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_HoleInOne.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_HoleInOne_818F3B66.wem</CachePath>
+				</File>
+				<File Id="860609950" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_ThisIsLookingGrim.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_ThisIsLookingGrim_818F3B66.wem</CachePath>
 				</File>
 				<File Id="860796674" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 5_C7F176C9.wem</CachePath>
+				</File>
+				<File Id="869232112" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_WhereIsTheMainframeRoomn.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_WhereIsTheMainframeRoomn_818F3B66.wem</CachePath>
+				</File>
+				<File Id="870822448" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnComputerDoYouSee1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnComputerDoYouSee1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="877196418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_03.wav</ShortName>
@@ -770,49 +1272,113 @@
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7_3E13155F.wem</CachePath>
 				</File>
+				<File Id="888631416" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_FE2569C9.wem</CachePath>
+				</File>
+				<File Id="891167601" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_DCDF2D57.wem</CachePath>
+				</File>
 				<File Id="892985832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5_6B4CCDD6.wem</CachePath>
 				</File>
 				<File Id="902368461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Slime.wav</ShortName>
-					<CachePath>SFX/Rifle_Slime_818F3B66.wem</CachePath>
+					<CachePath>SFX/Rifle_Slime_9B6EE11A.wem</CachePath>
+				</File>
+				<File Id="906528720" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_SureOkay1.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_SureOkay1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="911602909" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TestFiles\Beep Loop by DongKingKong Id-395901 9.wav</ShortName>
 					<CachePath>SFX/TestFiles/Beep Loop by DongKingKong Id-395901 9_1E14C19D.wem</CachePath>
 				</File>
+				<File Id="914001236" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
+					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_8AD8B40D.wem</CachePath>
+				</File>
 				<File Id="921613273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926.wav</ShortName>
 					<CachePath>SFX/TestFiles/Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926_818F3B66.wem</CachePath>
+				</File>
+				<File Id="925045279" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_Somebodyisnothappy.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_Somebodyisnothappy_2019F184.wem</CachePath>
 				</File>
 				<File Id="928274105" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_53397113.wem</CachePath>
 				</File>
+				<File Id="928811321" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_PowerUP.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_PowerUP_818F3B66.wem</CachePath>
+				</File>
+				<File Id="934986776" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Hmm.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Hmm_818F3B66.wem</CachePath>
+				</File>
 				<File Id="939251175" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_07.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_07_818F3B66.wem</CachePath>
+				</File>
+				<File Id="942527291" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104.wav</ShortName>
+					<CachePath>SFX/Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="944226106" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_hi.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_hi_818F3B66.wem</CachePath>
+				</File>
+				<File Id="945175796" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Ai_Okay1.wav</ShortName>
+					<CachePath>Voices/English(US)/Ai_Okay1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="945436620" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 9_57716B7B.wem</CachePath>
 				</File>
+				<File Id="950647488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_ConfirmationBeep.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_ConfirmationBeep_818F3B66.wem</CachePath>
+				</File>
 				<File Id="952443774" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 10_BBF5FC94.wem</CachePath>
+				</File>
+				<File Id="952718673" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Thanks.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Thanks_818F3B66.wem</CachePath>
 				</File>
 				<File Id="954114005" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 7.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 7_0501DBE8.wem</CachePath>
 				</File>
+				<File Id="955860884" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Temp_TestAmbiences\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528.wav</ShortName>
+					<CachePath>SFX/Temp_TestAmbiences/Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528_EF24AC07.wem</CachePath>
+				</File>
 				<File Id="959559467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Weapons\Rifle\Rifle_Alt_Chargev1.wav</ShortName>
 					<CachePath>SFX/Weapons/Rifle/Rifle_Alt_Chargev1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="963954882" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>NoooMyleg.wav</ShortName>
+					<CachePath>Voices/English(US)/NoooMyleg_818F3B66.wem</CachePath>
+				</File>
+				<File Id="974513169" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Hello_Serious.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Hello_Serious_C7D7D659.wem</CachePath>
+				</File>
 				<File Id="981283187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 4.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 4_B48680E7.wem</CachePath>
+				</File>
+				<File Id="981611525" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DAMNthatsGottaHurt.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DAMNthatsGottaHurt_818F3B66.wem</CachePath>
 				</File>
 				<File Id="998083191" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 2.wav</ShortName>
@@ -822,13 +1388,29 @@
 					<ShortName>Xaga_Sc2_test.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_Sc2_test_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1002694858" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Hi_deep.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Hi_deep_B942BFFA.wem</CachePath>
+				</File>
+				<File Id="1004420237" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Yes1.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Yes1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1006167246" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 8_6B70B51C.wem</CachePath>
 				</File>
+				<File Id="1007587335" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnComputerDoYouSeeThis.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnComputerDoYouSeeThis_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1009290141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12_4D8041D2.wem</CachePath>
+				</File>
+				<File Id="1025072598" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_Damn3.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_Damn3_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1033564670" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 11.wav</ShortName>
@@ -846,6 +1428,10 @@
 					<ShortName>Boots_StartStop_02.wav</ShortName>
 					<CachePath>SFX/Boots_StartStop_02_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1048784781" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_BottonRelease.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_BottonRelease_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1051943335" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11_99919E0B.wem</CachePath>
@@ -862,6 +1448,14 @@
 					<ShortName>Weapons\Handgun\Hangun_Fire-001.wav</ShortName>
 					<CachePath>SFX/Weapons/Handgun/Hangun_Fire-001_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1059593761" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaga_OhDear.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaga_OhDear_A310343B.wem</CachePath>
+				</File>
+				<File Id="1059635452" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_DamnThatHurt4.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_DamnThatHurt4_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1067223387" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_04.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_04_818F3B66.wem</CachePath>
@@ -873,34 +1467,163 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="63893666" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="292198" Name="FM 04" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="292199" Name="FM 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="8145371" Name="CONFIRM 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="16454064" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="18080721" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="26154250" Name="PAD 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="28380969" Name="FLUTISH" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="53494169" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="61122311" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="64983808" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="69832810" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="81762835" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="85231025" Name="DENIED 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="91834686" Name="NOISE" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="97705685" Name="RING 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="111393647" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="121596329" Name="BASS 04" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="125311153" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="134695890" Name="DOWNLOAD 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="139549955" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="145985174" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="147930550" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="148861226" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="166165081" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="172843745" Name="OPEN CHEST" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="175138566" Name="HARPSY" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="180835918" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="184931808" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="188638094" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="192993247" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="205245498" Name="Wwise Stereo Delay (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="206109583" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="208450960" Name="PANEL 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="209227866" Name="COMM 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="216132251" Name="WOOSH 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="232030741" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="280114799" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="283904056" Name="PWM" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="292207345" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="293028856" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="310803756" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="310835311" Name="DRONE 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="314911702" Name="PAD 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="323939449" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="323944449" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="328078722" Name="PERC 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="328078723" Name="PERC 03" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="329677106" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
-					<Plugin Id="411162420" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="339952054" Name="FM 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="345343286" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="355881059" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="365032581" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="386254885" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="412472127" Name="MAGIC 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="416705626" Name="RING 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="452779266" Name="BEEP 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="454388511" Name="BASS 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="457116020" Name="BEEP 04" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="472655015" Name="PANEL 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="485329190" Name="PERC 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="490166798" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="492715124" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="493947499" Name="PANEL 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="497150206" Name="MAGIC 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="503852030" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="506964284" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="507728361" Name="DENIED 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="511021499" Name="ALARM 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="513100109" Name="DRONE 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="524791432" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="539993087" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="546019284" Name="FM 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="546627739" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="553983327" Name="BEEP 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="556812336" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="567366394" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="576328449" Name="SAW FIFTH" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="600450823" Name="OCTAVE DANCE" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="611651787" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="620125035" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="629061771" Name="COMM 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="632445509" Name="DRONE 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="638945112" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="642953192" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="646908088" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="651614644" Name="SPELL 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="652537077" Name="SPELL 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="652845231" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="667002179" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="684844176" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="695307032" Name="SQUARE" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="700247792" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="703895722" Name="BEEP 03" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="727638997" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="729263766" Name="REVERSE 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="731159820" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="745085744" Name="BASS 05" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="749689301" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="750600072" Name="WHA" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="751144099" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="753303888" Name="MAGIC 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="755913846" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="762230594" Name="SQUARE 8va" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="767856838" Name="ALARM 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="776490616" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="787697476" Name="REVERSE 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="793404368" Name="Tone Generator" LibName="Wwise Tone Generator" LibId="6684674"/>
+					<Plugin Id="796249169" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="810201504" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="830079984" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="847109173" Name="DOWNLOAD 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="858776439" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="862727378" Name="MINI LEAD" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="863753366" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="877434874" Name="COSMIC WIND" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="887496620" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="891593514" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="913085549" Name="BASS 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="917880623" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="923032550" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="931078222" Name="OPENING" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="936540635" Name="FIFTH DANCE" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="963013833" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="963081078" Name="WOOSH 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="970241952" Name="CONFIRM 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="972709751" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="976512786" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="977681632" Name="BASS 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="982955812" Name="ALARM 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="986046449" Name="DENIED 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="999756589" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1007256781" Name="NOISE RND" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="1011994727" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1012283269" Name="BootRunCompressor (Custom)" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="1033593795" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1041870196" Name="BRASSY" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="1041915561" Name="RING 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="1057443910" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1059035731" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1059488289" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1063992787" Name="SPELL 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="1066203827" Name="SAW" LibName="Wwise Synth One" LibId="9699330"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="514808912" Name="EQ_Tile_Fs" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="1866712633" Name="High_Freq_Cut_3" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2568359573" Name="Secret_message" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2952825346" Name="Dual_Filters_Radio_Comm" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
 					<Plugin Id="4119703916" Name="HelmetEQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 			</Plugins>
@@ -925,10 +1648,10 @@
 				</Event>
 				<Event Id="903081441" Name="Play_AmbienceMain" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="133120763"/>
+						<MediaRef Id="942527291"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1883912870" Name="Play_Brute_Footsteps" DurationType="OneShot" DurationMin="0.5063826" DurationMax="1.4394294">
+				<Event Id="989866120" Name="Play_Brute_Fs" DurationType="OneShot" DurationMin="0.5063826" DurationMax="1.4394294">
 					<MediaRefs>
 						<MediaRef Id="287061307"/>
 						<MediaRef Id="444986285"/>
@@ -938,6 +1661,113 @@
 						<MediaRef Id="1006167246"/>
 					</MediaRefs>
 					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2154251720"/>
+							<MediaRefs>
+								<MediaRef Id="64833205"/>
+								<MediaRef Id="201956695"/>
+								<MediaRef Id="497200545"/>
+								<MediaRef Id="530099864"/>
+								<MediaRef Id="695763744"/>
+								<MediaRef Id="998083191"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2195636714"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1905651656"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="793404368"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="630539344" Default="true"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="323944449"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1181096339"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="184931808"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1842026663"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="310803756"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1642143462"/>
+							<MediaRefs>
+								<MediaRef Id="185439445"/>
+								<MediaRef Id="343184591"/>
+								<MediaRef Id="532629220"/>
+								<MediaRef Id="798037316"/>
+								<MediaRef Id="860796674"/>
+								<MediaRef Id="981283187"/>
+								<MediaRef Id="1039493257"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="180730371"/>
+								<MediaRef Id="425677546"/>
+								<MediaRef Id="453613366"/>
+								<MediaRef Id="601869256"/>
+								<MediaRef Id="823800221"/>
+								<MediaRef Id="952443774"/>
+								<MediaRef Id="1009290141"/>
+								<MediaRef Id="1051943335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2681948226"/>
+							<MediaRefs>
+								<MediaRef Id="95896769"/>
+								<MediaRef Id="141207199"/>
+								<MediaRef Id="341543950"/>
+								<MediaRef Id="362820780"/>
+								<MediaRef Id="632500118"/>
+								<MediaRef Id="635165068"/>
+								<MediaRef Id="747369287"/>
+								<MediaRef Id="954114005"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="514808912"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="582824249"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="841620460"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1288026751" Default="true"/>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="810201504"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2154251720"/>
 							<MediaRefs>
@@ -1055,29 +1885,260 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="16982058" Name="Play_Dia_Xaga" MaxAttenuation="20" DurationType="Infinite">
+				<Event Id="4271692713" Name="Play_Dia_Ai" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4123380240" Id="477127956"/>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529130"/>
 							<MediaRefs>
-								<MediaRef Id="153388572"/>
+								<MediaRef Id="324158094"/>
+								<MediaRef Id="493237573"/>
+								<MediaRef Id="531390771"/>
+								<MediaRef Id="797320250"/>
+								<MediaRef Id="869232112"/>
+								<MediaRef Id="934986776"/>
+								<MediaRef Id="952718673"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4123380240" Id="2239442679" Default="true"/>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="411162420"/>
-								</Custom>
-							</PluginRefs>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325011"/>
+							<MediaRefs>
+								<MediaRef Id="125610014"/>
+								<MediaRef Id="767570935"/>
+								<MediaRef Id="1007587335"/>
+							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4123380240" Id="477127959"/>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
 							<MediaRefs>
-								<MediaRef Id="999781709"/>
+								<MediaRef Id="374402712"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325008"/>
+							<MediaRefs>
+								<MediaRef Id="111408999"/>
+								<MediaRef Id="262623482"/>
+								<MediaRef Id="340515145"/>
+								<MediaRef Id="380369711"/>
+								<MediaRef Id="425120084"/>
+								<MediaRef Id="425179418"/>
+								<MediaRef Id="508446791"/>
+								<MediaRef Id="580276444"/>
+								<MediaRef Id="670922056"/>
+								<MediaRef Id="844964757"/>
+								<MediaRef Id="944226106"/>
+								<MediaRef Id="1002694858"/>
+								<MediaRef Id="1004420237"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="127885864"/>
+								<MediaRef Id="338036065"/>
+								<MediaRef Id="799930274"/>
+								<MediaRef Id="952718673"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529130"/>
+							<MediaRefs>
+								<MediaRef Id="324158094"/>
+								<MediaRef Id="493237573"/>
+								<MediaRef Id="531390771"/>
+								<MediaRef Id="797320250"/>
+								<MediaRef Id="869232112"/>
+								<MediaRef Id="934986776"/>
+								<MediaRef Id="952718673"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325011"/>
+							<MediaRefs>
+								<MediaRef Id="125610014"/>
+								<MediaRef Id="767570935"/>
+								<MediaRef Id="1007587335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
+							<MediaRefs>
+								<MediaRef Id="374402712"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325008"/>
+							<MediaRefs>
+								<MediaRef Id="111408999"/>
+								<MediaRef Id="262623482"/>
+								<MediaRef Id="340515145"/>
+								<MediaRef Id="380369711"/>
+								<MediaRef Id="425120084"/>
+								<MediaRef Id="425179418"/>
+								<MediaRef Id="508446791"/>
+								<MediaRef Id="580276444"/>
+								<MediaRef Id="670922056"/>
+								<MediaRef Id="844964757"/>
+								<MediaRef Id="944226106"/>
+								<MediaRef Id="1002694858"/>
+								<MediaRef Id="1004420237"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="127885864"/>
+								<MediaRef Id="338036065"/>
+								<MediaRef Id="799930274"/>
+								<MediaRef Id="952718673"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="1296777492" Name="Play_Dia_JohnDoe" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="16982058" Name="Play_Dia_Xaga" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543733"/>
+							<MediaRefs>
+								<MediaRef Id="222730321"/>
+								<MediaRef Id="304323509"/>
+								<MediaRef Id="381153464"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543734"/>
+							<MediaRefs>
+								<MediaRef Id="111609954"/>
+								<MediaRef Id="527660718"/>
+								<MediaRef Id="1059593761"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="455882504"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543733"/>
+							<MediaRefs>
+								<MediaRef Id="222730321"/>
+								<MediaRef Id="304323509"/>
+								<MediaRef Id="381153464"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543734"/>
+							<MediaRefs>
+								<MediaRef Id="111609954"/>
+								<MediaRef Id="527660718"/>
+								<MediaRef Id="1059593761"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="455882504"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3253445185" Name="Play_Dia_Xaga_" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543733"/>
+							<MediaRefs>
+								<MediaRef Id="222730321"/>
+								<MediaRef Id="304323509"/>
+								<MediaRef Id="381153464"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543734"/>
+							<MediaRefs>
+								<MediaRef Id="111609954"/>
+								<MediaRef Id="527660718"/>
+								<MediaRef Id="1059593761"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="455882504"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543733"/>
+							<MediaRefs>
+								<MediaRef Id="222730321"/>
+								<MediaRef Id="304323509"/>
+								<MediaRef Id="381153464"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3079543734"/>
+							<MediaRefs>
+								<MediaRef Id="111609954"/>
+								<MediaRef Id="527660718"/>
+								<MediaRef Id="1059593761"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="455882504"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2557748953" Name="Play_Elevator_BP_OutofOrder" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.6336875" DurationMax="1.6336875">
+					<MediaRefs>
+						<MediaRef Id="277098265"/>
+						<MediaRef Id="323262943"/>
+						<MediaRef Id="1048784781"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2373651556" Name="Play_Elevator_Buttonpress" MaxAttenuation="10" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2942882794" Id="91680483" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="277098265"/>
+								<MediaRef Id="950647488"/>
+								<MediaRef Id="1048784781"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2942882794" Id="2235177879"/>
+							<MediaRefs>
+								<MediaRef Id="277098265"/>
+								<MediaRef Id="323262943"/>
+								<MediaRef Id="1048784781"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2038432148" Name="Play_Elevator_ConfirmationBeep" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.7987292" DurationMax="0.7987292">
+					<MediaRefs>
+						<MediaRef Id="950647488"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1757009721" Name="Play_Elevator_Power_lp" MaxAttenuation="10" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="651678197"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="750231532" Name="Play_ElevatorDoorOpen" MaxAttenuation="10" DurationType="OneShot" DurationMin="3.854854" DurationMax="3.854854">
+					<MediaRefs>
+						<MediaRef Id="245350830"/>
+						<MediaRef Id="493325606"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="757694329" Name="Play_ExplodeBarrel" DurationType="OneShot" DurationMin="2.4526527" DurationMax="3.0021782">
+					<MediaRefs>
+						<MediaRef Id="718891495"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="3547089943" Name="Play_FireMain_Handgun" DurationType="OneShot" DurationMin="2.914464" DurationMax="3.6950881">
 					<MediaRefs>
@@ -1088,17 +2149,23 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="634184142" Name="Play_FireMain_Rifle" DurationType="OneShot" DurationMin="3.5157292" DurationMax="3.7125">
+				<Event Id="634184142" Name="Play_FireMain_Rifle" DurationType="OneShot" DurationMin="3.6498318" DurationMax="4.130412">
 					<MediaRefs>
 						<MediaRef Id="260010361"/>
 						<MediaRef Id="272504973"/>
 						<MediaRef Id="380138756"/>
 						<MediaRef Id="563975790"/>
 						<MediaRef Id="570131319"/>
+						<MediaRef Id="655758477"/>
 						<MediaRef Id="717672186"/>
 						<MediaRef Id="854687943"/>
 						<MediaRef Id="902368461"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="148861226"/>
+						</Custom>
+					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
@@ -1140,30 +2207,60 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="941492189" Name="Play_Hitmarker_main" DurationType="OneShot" DurationMin="0.14302395" DurationMax="0.14302395">
+				<Event Id="941492189" Name="Play_Hitmarker_main" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.14302395" DurationMax="0.14302395">
 					<MediaRefs>
 						<MediaRef Id="700561171"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4057284179" Name="Play_Idle_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
+				<Event Id="3110068475" Name="Play_HumansSc1" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028878"/>
+							<MediaRefs>
+								<MediaRef Id="36519702"/>
+								<MediaRef Id="42718374"/>
+								<MediaRef Id="173506951"/>
+								<MediaRef Id="319560865"/>
+								<MediaRef Id="544283314"/>
+								<MediaRef Id="566386167"/>
+								<MediaRef Id="712740125"/>
+								<MediaRef Id="860609950"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028878"/>
+							<MediaRefs>
+								<MediaRef Id="36519702"/>
+								<MediaRef Id="42718374"/>
+								<MediaRef Id="173506951"/>
+								<MediaRef Id="319560865"/>
+								<MediaRef Id="544283314"/>
+								<MediaRef Id="566386167"/>
+								<MediaRef Id="712740125"/>
+								<MediaRef Id="860609950"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="4057284179" Name="Play_Idle_Rifle" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1298310256" Name="Play_JD_Spawn" DurationType="OneShot" DurationMin="1.28" DurationMax="1.7502041">
+					<MediaRefs>
+						<MediaRef Id="9995095"/>
+						<MediaRef Id="243396653"/>
+						<MediaRef Id="507060247"/>
+					</MediaRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
-					</AuxBusRefs>
+				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="249020240" Name="Play_Load_handgun" DurationType="OneShot" DurationMin="1.8439909" DurationMax="1.8439909">
 					<MediaRefs>
@@ -1382,6 +2479,188 @@
 								</ShareSets>
 							</PluginRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2154251720"/>
+							<MediaRefs>
+								<MediaRef Id="64833205"/>
+								<MediaRef Id="201956695"/>
+								<MediaRef Id="497200545"/>
+								<MediaRef Id="530099864"/>
+								<MediaRef Id="695763744"/>
+								<MediaRef Id="998083191"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2195636714"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1905651656"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="793404368"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="630539344" Default="true"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="323944449"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1181096339"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="184931808"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3968804893" Id="1842026663"/>
+									<PluginRefs>
+										<Custom>
+											<PluginRef Id="310803756"/>
+										</Custom>
+									</PluginRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1642143462"/>
+							<MediaRefs>
+								<MediaRef Id="185439445"/>
+								<MediaRef Id="343184591"/>
+								<MediaRef Id="532629220"/>
+								<MediaRef Id="798037316"/>
+								<MediaRef Id="860796674"/>
+								<MediaRef Id="981283187"/>
+								<MediaRef Id="1039493257"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="180730371"/>
+								<MediaRef Id="425677546"/>
+								<MediaRef Id="453613366"/>
+								<MediaRef Id="601869256"/>
+								<MediaRef Id="823800221"/>
+								<MediaRef Id="952443774"/>
+								<MediaRef Id="1009290141"/>
+								<MediaRef Id="1051943335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2681948226"/>
+							<MediaRefs>
+								<MediaRef Id="95896769"/>
+								<MediaRef Id="141207199"/>
+								<MediaRef Id="341543950"/>
+								<MediaRef Id="362820780"/>
+								<MediaRef Id="632500118"/>
+								<MediaRef Id="635165068"/>
+								<MediaRef Id="747369287"/>
+								<MediaRef Id="954114005"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="514808912"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="582824249"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="841620460"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1288026751" Default="true"/>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="810201504"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="1865857008"/>
+							<MediaRefs>
+								<MediaRef Id="33074131"/>
+								<MediaRef Id="1042406623"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1866712633"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="2884887403" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="212365264"/>
+								<MediaRef Id="259744675"/>
+								<MediaRef Id="280360391"/>
+								<MediaRef Id="399371986"/>
+								<MediaRef Id="685074737"/>
+								<MediaRef Id="700308761"/>
+								<MediaRef Id="1033564670"/>
+								<MediaRef Id="1054170137"/>
+							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="1866712633"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2051106367" Id="1296465089"/>
+							<MediaRefs>
+								<MediaRef Id="50251163"/>
+								<MediaRef Id="61446819"/>
+								<MediaRef Id="108052905"/>
+								<MediaRef Id="157072511"/>
+								<MediaRef Id="199293111"/>
+								<MediaRef Id="216218866"/>
+								<MediaRef Id="221218712"/>
+								<MediaRef Id="243008600"/>
+								<MediaRef Id="293041057"/>
+								<MediaRef Id="371279162"/>
+								<MediaRef Id="383454313"/>
+								<MediaRef Id="390256246"/>
+								<MediaRef Id="394144264"/>
+								<MediaRef Id="435089554"/>
+								<MediaRef Id="484715529"/>
+								<MediaRef Id="511784467"/>
+								<MediaRef Id="662185199"/>
+								<MediaRef Id="693450681"/>
+								<MediaRef Id="752755002"/>
+								<MediaRef Id="769664889"/>
+								<MediaRef Id="773481961"/>
+								<MediaRef Id="825794070"/>
+								<MediaRef Id="831702141"/>
+								<MediaRef Id="877196418"/>
+								<MediaRef Id="939251175"/>
+								<MediaRef Id="1067223387"/>
+								<MediaRef Id="1072609968"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="292207345"/>
+									<PluginRef Id="329677106"/>
+									<PluginRef Id="646908088"/>
+									<PluginRef Id="727638997"/>
+									<PluginRef Id="751144099"/>
+									<PluginRef Id="1012283269"/>
+								</Custom>
+								<ShareSets>
+									<PluginRef Id="1008402193"/>
+								</ShareSets>
+							</PluginRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="562256996" Name="Play_Player_Jump" DurationType="OneShot" DurationMin="1.047158" DurationMax="1.5269517">
@@ -1396,6 +2675,15 @@
 						<MediaRef Id="928274105"/>
 					</MediaRefs>
 					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="23730002"/>
+								<MediaRef Id="604477528"/>
+								<MediaRef Id="711013141"/>
+								<MediaRef Id="887679705"/>
+							</MediaRefs>
+						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
 							<MediaRefs>
@@ -1454,50 +2742,63 @@
 								</Custom>
 							</PluginRefs>
 						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-				<Event Id="449246991" Name="Play_Reload_Handgun" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
-					</AuxBusRefs>
-				</Event>
-				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
-					</AuxBusRefs>
-				</Event>
-				<Event Id="3191462597" Name="Play_Sc1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3191462598" Name="Play_Sc2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3191462599" Name="Play_Sc3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3191462592" Name="Play_Sc4" DurationType="Infinite">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
-					</AuxBusRefs>
-					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="2802482050" Id="477127956"/>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2154251720"/>
 							<MediaRefs>
-								<MediaRef Id="116776916"/>
+								<MediaRef Id="64833205"/>
+								<MediaRef Id="201956695"/>
+								<MediaRef Id="497200545"/>
+								<MediaRef Id="530099864"/>
+								<MediaRef Id="695763744"/>
+								<MediaRef Id="998083191"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="2473969246"/>
+							<MediaRefs>
+								<MediaRef Id="180730371"/>
+								<MediaRef Id="425677546"/>
+								<MediaRef Id="601869256"/>
+								<MediaRef Id="952443774"/>
+								<MediaRef Id="1051943335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1044534455" Id="1288026751" Default="true"/>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="858776439"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
 					</SwitchContainers>
+				</Event>
+				<Event Id="449246991" Name="Play_Reload_Handgun" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3334099943" Name="Play_Rifle_EmptyMag" DurationType="OneShot" DurationMin="0.341125" DurationMax="0.341125">
+					<MediaRefs>
+						<MediaRef Id="15644422"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3191462592" Name="Play_Sc4" DurationType="OneShot" DurationMin="0.17999999" DurationMax="0.17999999">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="69832810"/>
+						</Custom>
+					</PluginRefs>
 					<ActionSetState>
-						<ActionSetStateEntry GroupId="4123380240" Id="477127956" Name="Sc1"/>
+						<ActionSetStateEntry GroupId="4121174865" Id="2059667105" Name="Sc6_Tr1"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="3191462593" Name="Play_Sc5" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -1521,15 +2822,10 @@
 						<MediaRef Id="911602909"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2752533807" Name="Play_TestSound" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="63893666"/>
-						</Custom>
-					</PluginRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
-					</AuxBusRefs>
+				<Event Id="2752533807" Name="Play_TestSound" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+					<MediaRefs>
+						<MediaRef Id="921613273"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="1943012356" Name="Play_Unload_Rifle" DurationType="OneShot" DurationMin="0.43002084" DurationMax="0.43002084">
 					<MediaRefs>
@@ -1552,24 +2848,52 @@
 				</Event>
 			</Events>
 			<Busses>
+				<Bus Id="1153792" Name="03_Xaga">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="819943492"/>
+							<PluginRef Id="2952825346"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="47937584" Name="PlayerVoice">
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="4119703916"/>
 						</ShareSets>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
 				</Bus>
+				<Bus Id="196922711" Name="NPCBarks"/>
+				<Bus Id="223128778" Name="NPC Aliens"/>
 				<Bus Id="309309195" Name="2DAmbience"/>
+				<Bus Id="344209961" Name="01_Ai">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2952825346"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="765206498" Name="PlayerCloth"/>
+				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1182634443" Name="AmbientBeds"/>
 				<Bus Id="1301074112" Name="3DAmbience"/>
 				<Bus Id="1399649189" Name="Master Bus"/>
 				<Bus Id="1459460693" Name="AmbientMaster"/>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
-				<Bus Id="2033911932" Name="NPCMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
-				<Bus Id="3538689948" Name="PlayerMaster"/>
+				<Bus Id="2645497833" Name="DialogueMaster"/>
+				<Bus Id="2997659434" Name="NPC_SFX"/>
+				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
+				<Bus Id="3570874681" Name="02_John Doe"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
@@ -1589,7 +2913,20 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="1603492950" Name="RoomTunnel"/>
+				<AuxBus Id="986249158" Name="RoomHangarMain">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2849147824"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="1603492950" Name="RoomTunnel">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="702543456"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="3205342581" Name="RoomSmall">
 					<PluginRefs>
 						<ShareSets>
@@ -1597,16 +2934,10 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="3553615197" Name="RoomLarge">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2849147824"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
-				<GameParameter Id="870672907" Name="RTPC_GroundWetness"/>
+				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
+				<GameParameter Id="2562122989" Name="RTPC_Elevator"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
 			<StateGroups>
@@ -1615,18 +2946,11 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="1814387309" Name="Hangar1"/>
 						<State Id="1814387310" Name="Hangar2"/>
-						<State Id="2130932629" Name="Harngar3"/>
+						<State Id="1814387311" Name="Hangar3"/>
 						<State Id="2393120223" Name="InsideElevator"/>
 						<State Id="2782928028" Name="ConferenceRoom2"/>
 						<State Id="2782928029" Name="ConferenceRoom3"/>
 						<State Id="2782928031" Name="ConferenceRoom1"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="2802482050" Name="JohnDoe">
-					<States>
-						<State Id="477127956" Name="Sc1"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="3956690975" Name="WaitingOnTrigger"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3305603258" Name="GuitarSpeaker">
@@ -1636,16 +2960,52 @@
 						<State Id="1651971902" Name="On"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="4123380240" Name="Xaga">
+				<StateGroup Id="3568468165" Name="XagaBossfightStates">
 					<States>
-						<State Id="477127956" Name="Sc1"/>
-						<State Id="477127959" Name="Sc2"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="841236080" Name="NearlyDead"/>
+						<State Id="1031154770" Name="LostStomach"/>
+						<State Id="2676857933" Name="LostLeg"/>
+						<State Id="2961238679" Name="LostArm"/>
+						<State Id="4103826714" Name="DeathScream"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4121174865" Name="Scenes_lvl2">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2059667105" Name="Sc6_Tr1"/>
 						<State Id="2239442679" Name="WaitingOnTriggerEnter"/>
+						<State Id="3398158172" Name="Sc7_Tr1"/>
+						<State Id="3986144931" Name="Sc8_Tr1"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4121174866" Name="Scenes_lvl1">
+					<States>
+						<State Id="342028878" Name="Sc1_tr1"/>
+						<State Id="551107239" Name="Sc4_Tr1"/>
+						<State Id="569325008" Name="Sc3_Tr1"/>
+						<State Id="569325011" Name="Sc3_Tr2"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2172575860" Name="TriggerIsWaiting"/>
+						<State Id="3079543733" Name="Sc2_Tr1"/>
+						<State Id="3079543734" Name="Sc2_Tr2"/>
+						<State Id="3079543735" Name="Sc2_Tr3"/>
+						<State Id="3690529129" Name="Sc5_Tr2"/>
+						<State Id="3690529130" Name="Sc5_Tr1"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="524731881" Name="AmbBiomeType">
+					<Switches>
+						<Switch Id="425131515" Name="SpaceStation"/>
+						<Switch Id="491961918" Name="Forest"/>
+						<Switch Id="513139656" Name="Mountain"/>
+						<Switch Id="1199171794" Name="Grassland"/>
+						<Switch Id="2514633223" Name="MainHub"/>
+						<Switch Id="2907906111" Name="Swamp"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="1044534455" Name="GroundMaterialSwitch">
 					<Switches>
 						<Switch Id="437659151" Name="Rubber"/>
@@ -1678,13 +3038,40 @@
 						<Switch Id="2884887403" Name="Sneak"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2942882794" Name="ElevatorPower">
+					<Switches>
+						<Switch Id="91680483" Name="PowerOn"/>
+						<Switch Id="2235177879" Name="PowerOff"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3384327847" Name="ElevatorInTransit">
+					<GameParameterRef Id="2562122989"/>
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="1281810935" Name="Start"/>
+						<Switch Id="2452206122" Name="False"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="3968804893" Name="GroundWetnessSwitch">
-					<GameParameterRef Id="870672907"/>
+					<GameParameterRef Id="2562122989"/>
 					<Switches>
 						<Switch Id="630539344" Name="Dry"/>
 						<Switch Id="1181096339" Name="Wet"/>
 						<Switch Id="1842026663" Name="Damp"/>
 						<Switch Id="1905651656" Name="Soaked"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4280509423" Name="AmbTimeOfDay">
+					<GameParameterRef Id="257272959"/>
+					<Switches>
+						<Switch Id="390531879" Name="Afternoon"/>
+						<Switch Id="1011622525" Name="Night"/>
+						<Switch Id="1211181101" Name="Midday"/>
+						<Switch Id="1844596514" Name="EarlyMorning"/>
+						<Switch Id="2009803003" Name="Dawn"/>
+						<Switch Id="2348606646" Name="Dusk"/>
+						<Switch Id="2905060079" Name="Evening"/>
+						<Switch Id="3789021730" Name="Nightfall"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
@@ -1700,5 +3087,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{73E6E4C3-AEF2-7F52-9C92-6E9EE471ABEE}</FileHash>
+	<FileHash>{9185B13C-5AD7-09CC-74DA-F5A0A4B64F7F}</FileHash>
 </SoundBanksInfo>

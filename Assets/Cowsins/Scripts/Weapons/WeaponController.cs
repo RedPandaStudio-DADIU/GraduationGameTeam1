@@ -398,6 +398,7 @@ namespace cowsins
 
             // Rest the bullets that have just been shot
             reduceAmmo?.Invoke();
+            
 
             //Determine weapon class / style
             int i = 0;
@@ -820,6 +821,10 @@ namespace cowsins
                 {
                     id.bulletsLeftInMagazine = 0;
                 }
+
+                if (id.bulletsLeftInMagazine == 0){
+                    UIEvents.onEmptyMagazine?.Invoke(id.bulletsLeftInMagazine);
+                }
             }
         }
 
@@ -831,6 +836,10 @@ namespace cowsins
                 if (id.bulletsLeftInMagazine < 0)
                 {
                     id.bulletsLeftInMagazine = 0;
+                }
+
+                if (id.bulletsLeftInMagazine == 0){
+                    UIEvents.onEmptyMagazine?.Invoke(id.bulletsLeftInMagazine);
                 }
             }
         }

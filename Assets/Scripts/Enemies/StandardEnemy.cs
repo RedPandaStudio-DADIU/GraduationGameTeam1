@@ -17,7 +17,7 @@ public class StandardEnemy : EnemyBaseClass
     public override void Attack(){
         // turn towards the player and do the raycast
         Debug.Log("Attacking");
-        GetComponent<EnemyWeaponController>().HandleHitscanProjectileShot();
+        //GetComponent<EnemyWeaponController>().HandleHitscanProjectileShot();
     }
 
     public override void Die(){
