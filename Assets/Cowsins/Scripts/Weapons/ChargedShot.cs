@@ -134,6 +134,7 @@ namespace cowsins
 
             EnemyStateController enemy = enemyObject.transform.GetComponent<EnemyStateController>();
 
+
             if (enemy.GetEnemy().GetRagdollController() != null)
 
             {
@@ -147,10 +148,11 @@ namespace cowsins
                 enemy.SetForceDirection(pushDirection);
 
                 enemy.GetEnemy().DecreaseHealth(chargeDamage);
+
                 enemy.ChangeState(new EnemyHitState());
                 
                 if(enemy.GetEnemy().GetHealth() > 0){
-                    enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                    // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
                     StartCoroutine(RecoverAfterDelay(enemy, delay));
                 }
 
@@ -159,31 +161,31 @@ namespace cowsins
             
         }
 
-        // private void HandleShotLogic(RaycastHit hit){
-        //     EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
+        private void HandleShotLogic(RaycastHit hit){
+            EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
 
-        //     if (enemy.GetEnemy().GetRagdollController() != null)
+            if (enemy.GetEnemy().GetRagdollController() != null)
 
-        //     {
-        //         enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
+            {
+                enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
 
-        //         Vector3 pushDirection = hit.point - playerCamera.transform.position;
-        //         pushDirection = pushDirection.normalized;
-        //         enemy.SetForce(chargedPushForce);
-        //         enemy.SetForceDirection(pushDirection);
+                Vector3 pushDirection = hit.point - playerCamera.transform.position;
+                pushDirection = pushDirection.normalized;
+                enemy.SetForce(chargedPushForce);
+                enemy.SetForceDirection(pushDirection);
 
-        //         enemy.GetEnemy().DecreaseHealth(chargeDamage);
+                enemy.GetEnemy().DecreaseHealth(chargeDamage);
 
-        //         enemy.ChangeState(new EnemyHitState());
+                enemy.ChangeState(new EnemyHitState());
                 
-        //         if(enemy.GetEnemy().GetHealth() > 0){
-        //             // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
-        //             StartCoroutine(RecoverAfterDelay(enemy, delay));
-        //         }
+                if(enemy.GetEnemy().GetHealth() > 0){
+                    // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                    StartCoroutine(RecoverAfterDelay(enemy, delay));
+                }
 
-        //         PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
-        //     }
-        // }
+                PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
+            }
+        }
 
 
         public void PushNearbyEnemies(Vector3 center, float force, float explosionRadius )

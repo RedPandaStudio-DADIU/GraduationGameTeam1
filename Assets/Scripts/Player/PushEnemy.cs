@@ -82,7 +82,6 @@ public class PushEnemy : MonoBehaviour
             Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
             IEnemyState prevState = enemy.GetPreviousState();
             enemy.ChangeState(prevState);
-
         }
     }
 

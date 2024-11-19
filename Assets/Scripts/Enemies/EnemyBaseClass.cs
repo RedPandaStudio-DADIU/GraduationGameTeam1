@@ -11,9 +11,10 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     private float attackDistance = 10f;
     private float fieldOfView = 180f;
-    [SerializeField] private float stoppingDistance = 4f;
-    
+    private float stoppingDistance = 4f;
+
     public Animator animator;
+
 
     [Header("Sound Events")]
     [SerializeField] private AK.Wwise.Event hitSoundEvent;
@@ -46,12 +47,7 @@ public abstract class EnemyBaseClass : MonoBehaviour
 
     public void DecreaseHealth(float damage){
         if(this.health > 0){
-            if(damage > this.health){
-                SetHealth(0f);
-            } else {
-                this.health -= damage;
-            }
-            
+            this.health -= damage;
         }
 
         if (hitSoundEvent != null)

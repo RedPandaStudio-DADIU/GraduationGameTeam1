@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" SchemaVersion="119">
+	<Switches>
+		<WorkUnit Name="GameWorld" ID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GroundMaterialSwitch" ID="{3CFB2835-D747-4294-B504-B635B37AA31E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="TileType1" ID="{691EF04D-1242-49B4-B680-9D7985011C04}"/>
+						<Switch Name="TileType2" ID="{0B463E6F-7621-4998-B770-1770F35273D1}"/>
+						<Switch Name="Rubber" ID="{8C140E43-EBD6-4712-ACED-A7024942D684}"/>
+						<Switch Name="Linoleum" ID="{3746198D-F1DD-44CA-9B15-44C6626F2019}"/>
+						<Switch Name="WoodFloor" ID="{DBC4BC59-00C1-459C-A77B-C8775E93748B}"/>
+						<Switch Name="Water" ID="{63A7B25C-7406-4C6C-8424-832C80F32DD7}"/>
+						<Switch Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}"/>
+						<Switch Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+						<Switch Name="Dirt" ID="{C14B422D-4797-4DEC-BC71-2A88B04D1A34}"/>
+						<Switch Name="Grass" ID="{F4FE465F-36B6-4C38-A249-EE10E999D216}"/>
+						<Switch Name="PineForest" ID="{256D2F0F-8B0D-4E6F-BEF3-E39F448CAE1E}"/>
+						<Switch Name="Leaves" ID="{3251A34F-6D49-4237-8F4E-DD32CEB5745E}"/>
+						<Switch Name="PuddleDirt" ID="{6D66D6DE-CEE8-4D14-9B81-71965752FB54}"/>
+						<Switch Name="Rock" ID="{094217D0-9A72-4C85-94D8-4CC19D2FBEF7}"/>
+						<Switch Name="Stone" ID="{04CB7352-4D57-4986-A90D-582D29064CF7}"/>
+						<Switch Name="StoneFloor" ID="{9286E7F2-874B-4FA7-A8AF-77F3F4FB9722}"/>
+						<Switch Name="RubberTile" ID="{B27324B9-4C82-413E-B216-1C48E4C1AB72}"/>
+						<Switch Name="NoMaterial" ID="{8153DAD8-812E-4B25-AB90-FFA7B29D01A0}"/>
+						<Switch Name="Metal2" ID="{6BEFC019-21F6-472E-BAE5-7355A0BE4FAE}"/>
+						<Switch Name="MetalLadder" ID="{DA93A23C-54B3-41F4-8263-242C5362AE5C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerSpeedSwitch" ID="{AFE3D45E-5678-4BBE-896C-93B9C1200FE6}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Transition" ID="{1B451580-82DE-4619-90B2-6958121BA75F}"/>
+						<Switch Name="Sprint" ID="{7AB238C2-3493-4704-8754-FC3AADF0F3F5}"/>
+						<Switch Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_PlayerSpeed" ID="{5F5AE7DD-3784-43FE-9184-4FBE90A9F930}"/>
+						<Curve Name="" ID="{4C4E3154-6896-45DD-B06A-DBE3DEF5560E}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>3</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>4.19261</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4.51813</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6</XPos>
+									<YPos>2</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerHealth" ID="{BDC210DF-FAFE-4476-8FF8-5636E437639C}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<Switch Name="LowHealth" ID="{80121DAB-9764-416C-94C9-15005ADB9B83}"/>
+						<Switch Name="NearDeath" ID="{1C22D404-D8B6-4B82-84F8-7055C035381A}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="GroundWetnessSwitch" ID="{F0CD91E2-E6DF-4784-A1AA-62E7E57B19CD}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Dry" ID="{9CEEBF53-989B-4FF8-8C4E-773BDF30278E}"/>
+						<Switch Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+						<Switch Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
+						<Switch Name="Soaked" ID="{E829180D-CA61-443E-9B43-0950B16F841D}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_GroundWetness" ID="{A09E2BD8-89AF-4611-A276-B746794C67D6}"/>
+						<Curve Name="" ID="{100EB1EA-1FCF-4B45-B5F1-7417AC2AF8A0}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.1</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.4</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.8</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>4</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="RainTypeSwitch" ID="{CEBD8E46-6C65-4C62-BA8A-BA92764DADF4}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Sunny" ID="{3E665F94-CC9A-4604-8677-CBF9550EB813}"/>
+						<Switch Name="LightRain" ID="{CA328C9D-2523-4C1E-965F-567116205F3D}"/>
+						<Switch Name="MediumRain" ID="{151D6EC5-493C-4A33-A4A1-E1B4100CADA1}"/>
+						<Switch Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+						<Switch Name="Stormy" ID="{C7C5AE0E-E978-42C7-999C-945F7DC43F23}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_WaterAmount" ID="{AEC1D18F-5259-48BC-9F46-E72BC7829D35}"/>
+						<Curve Name="" ID="{1B3B7C23-891B-4A48-8A59-E7141EAC8C88}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.17</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.35</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.65</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>0.9</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>5</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<Folder Name="GameWorldObjects" ID="{29106020-4EBE-4061-B104-CEE49341B555}" ShortID="132225651">
+					<ChildrenList>
+						<SwitchGroup Name="ElevatorPowerState" ID="{2BA09121-2FBA-4CFC-A173-B7B38B5F1D5E}">
+							<ChildrenList>
+								<Switch Name="PowerOn" ID="{5F76E678-61C2-4E55-A00F-039E3F42EE2C}"/>
+								<Switch Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
+							</ChildrenList>
+						</SwitchGroup>
+						<SwitchGroup Name="ElevatorMotion" ID="{A076D5CB-0BF5-4AD8-B13F-81C423AB524E}">
+							<ChildrenList>
+								<Switch Name="Start" ID="{6AD8D672-847E-43AB-A304-69BA1B8F7E16}"/>
+								<Switch Name="Stop" ID="{3D786D8B-22C3-4C3A-A8B5-14AB6678B637}"/>
+								<Switch Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
+							</ChildrenList>
+						</SwitchGroup>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="DiegeticMusicRadioSpeakers" ID="{5943F814-68D3-4643-88FE-43C22BD8A2E2}" ShortID="284625796">
+					<ChildrenList>
+						<SwitchGroup Name="GuitarSpeaker" ID="{CBAC3851-6A96-4E2A-96A5-3E68B2137DEE}">
+							<ChildrenList>
+								<Switch Name="On" ID="{76984A6E-32E7-4CDB-AE0F-284D34607E43}"/>
+								<Switch Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
+							</ChildrenList>
+						</SwitchGroup>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

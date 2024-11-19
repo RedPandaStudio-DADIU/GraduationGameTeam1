@@ -23,9 +23,19 @@ public class PlayerManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-
+        // Debug.LogWarning("On Scene Loaded for: " + scene.name);
+        // Debug.Log("Current Position Before Update: " + transform.position);
+        
+        // transform.position = new Vector3(-0.32f, 0.8f, -3f);
+        // Debug.Log("Position After Update: " + transform.position);
     }
     void FixedUpdate(){
+        // if(!positionSet && (PlayerStartPosition.playerSpawnPosition != Vector3.zero)){
+        //     transform.position = PlayerStartPosition.playerSpawnPosition;
+        //     positionSet = true;
+        //     // new Vector3(-0.32f, 0.8f, -3f);
+        // }
+        // &&  SceneManager.GetActiveScene().buildIndex==1
         if(!dataSet ){
             Debug.Log("Inside Player Manager: Health: "+ PlayerDataManager.Instance.playerHealth);
             if(PlayerDataManager.Instance.playerHealth > 0){
@@ -35,22 +45,30 @@ public class PlayerManager : MonoBehaviour
             }
 
             WeaponController wc = GameObject.FindWithTag("Player").GetComponent<WeaponController>();
+            // GameObject.FindWithTag("Player").GetComponent<WeaponController>().currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
+            // // GameObject.FindWithTag("Player").GetComponent<WeaponController>().initialWeapons = new Weapon_SO[PlayerDataManager.Instance.inventory.Length];
             if(wc != null && PlayerDataManager.Instance.inventory.Length>0){
+                // wc.inventory = new WeaponIdentification[PlayerDataManager.Instance.inventory.Length];
                 int index = 0;
 
                 foreach(Weapon_SO weapon in PlayerDataManager.Instance.weapons){
                     
-                    Debug.LogError("Identification weapon player manager: " + weapon);
+                    // Debug.LogError("Identification: " + id + " weapon: "+id.weapon);
 
                     if (weapon == null)
                     {
                         continue;
                     } 
+                    // // GameObject.FindWithTag("Player").GetComponent<WeaponController>().InstantiateWeapon(id.weapon, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], id.totalBullets);
+                    // GameObject.FindWithTag("Player").GetComponent<WeaponController>().initialWeapons[index] = id.weapon;
 
                     AddWeaponToInventory(wc, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], weapon.magazineSize, weapon);
                     index++;
                 }
 
+                // GameObject.FindWithTag("Player").GetComponent<WeaponController>().GetInitialWeapons();
+
+                // GameObject.FindWithTag("Player").GetComponent<WeaponController>().CreateInventoryUI();
                 wc.currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
                 dataSet = true;
             }

@@ -23,7 +23,6 @@ namespace cowsins
         // public static Action<int> onInitializeDashUI, onDashUsed;
 
         public static Action<int, int, bool, bool> onBulletsChanged;
-        public static Action<int> onEmptyMagazine;
 
         public static Action<int> onUnholsteringWeapon;
 

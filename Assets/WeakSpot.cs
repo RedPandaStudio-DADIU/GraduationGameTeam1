@@ -29,13 +29,13 @@ public class WeakSpot : MonoBehaviour
 
     public void FallOff(){
         boss.RemoveFromQueue();
-        // Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
-        // if(rb!=null){
-        //     rb.mass = 1f;
-        //     rb.drag = 0.5f;
-        //     rb.angularDrag = 0.05f;
-        //     rb.useGravity = true;
-        // }
+        Rigidbody rb = this.gameObject.AddComponent<Rigidbody>();
+        if(rb!=null){
+            rb.mass = 1f;
+            rb.drag = 0.5f;
+            rb.angularDrag = 0.05f;
+            rb.useGravity = true;
+        }
 
         if(boss.CheckIfEmpty()){
             boss.SetAreWeakSpotsDefeated(true);

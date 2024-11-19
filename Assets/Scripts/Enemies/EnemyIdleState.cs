@@ -8,8 +8,6 @@ public class EnemyIdleState : IEnemyState
         Debug.Log("Entering Idle State " + stateController.name);
     }
     public void OnUpdate(EnemyStateController stateController){
-        Debug.Log("Inside Idle State: " + stateController.GetEnemy().name);
-
         if (stateController.CanSeePlayer())
         {
             // Debug.Log("Can See Player");

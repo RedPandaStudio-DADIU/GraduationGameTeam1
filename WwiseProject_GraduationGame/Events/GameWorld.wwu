@@ -7,10 +7,10 @@
 					<ChildrenList>
 						<Event Name="Play_Elevator_Buttonpress" ID="{43274CF9-3A4D-41BD-AED5-24B3D1B8A156}">
 							<ChildrenList>
-								<Action Name="" ID="{5847ED93-5BF4-41BE-AC7C-0E78BBFFE4FA}" ShortID="346738296">
+								<Action Name="" ID="{C986C858-F2B9-4ED4-9522-D48D076E180C}" ShortID="112958242">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Beeps" ID="{B0240988-4BE8-4C79-B9CA-C88D562B9437}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+											<ObjectRef Name="Elevator_Button" ID="{BA906DCA-547C-4DAF-9AAF-78E1FDFE5B2F}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -27,19 +27,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Elevator_BP_OutofOrder" ID="{431D9A87-E2CB-44DB-98BF-9E8401D4F313}">
+						<Event Name="Play_Elevator_OutofOrderBeep" ID="{431D9A87-E2CB-44DB-98BF-9E8401D4F313}">
 							<ChildrenList>
 								<Action Name="" ID="{A237873F-8A70-4A4A-BC83-481ED2294517}" ShortID="727006841">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Elevator_OutofOrderBeep" ID="{FBCF4321-2E85-41C7-879A-A7EDD8080D71}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{5F70C1B7-8E6A-4909-B69C-4A4A2C1C20EE}" ShortID="422303861">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Elevator_Button" ID="{BA906DCA-547C-4DAF-9AAF-78E1FDFE5B2F}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -73,32 +66,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Elevator_PowerON_lp" ID="{30504C88-90AF-49D4-BA34-F0ED7248A69E}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_ElevatorDoorOpen" ID="{DECAD8AA-E118-404A-91F0-60CDADD9B457}">
-							<ChildrenList>
-								<Action Name="" ID="{B2C00709-F352-4E39-BD2B-100797FC1A2A}" ShortID="601692918">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ElevatorDoorOpen" ID="{DE8360EC-4768-45C6-A2B5-686ABAF18A71}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="ExplodingStuff" ID="{C30C9B6F-0860-4582-BF20-DD3CD449C36A}" ShortID="859190948">
-					<ChildrenList>
-						<Event Name="Play_ExplodeBarrel" ID="{E2E73BF8-51D1-474E-AF5B-FFDA733A7CDB}">
-							<ChildrenList>
-								<Action Name="" ID="{053A67DC-07D7-4388-B898-C13E94879FA7}" ShortID="1046341005">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="BarrelExplosion" ID="{256D62D3-472A-4C78-BE01-FC0DA940571E}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

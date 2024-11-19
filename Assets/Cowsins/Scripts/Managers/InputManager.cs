@@ -104,7 +104,7 @@ namespace cowsins
             inputActions.GameControls.ToggleFlashLight.started += ctx => toggleFlashLight = true;
 
 
-            //inputActions.GameControls.Pause.started += ctx => TogglePause();
+            inputActions.GameControls.Pause.started += ctx => TogglePause();
 
             SceneManager.activeSceneChanged += OnSceneChange;
         }
@@ -212,7 +212,6 @@ namespace cowsins
             push = inputActions.GameControls.Push.WasPressedThisFrame();
             heal = inputActions.GameControls.Heal.WasPressedThisFrame();
             quit = inputActions.GameControls.Quit.WasPressedThisFrame();
-            pausing = inputActions.GameControls.Pause.WasPressedThisFrame();
 
             if(quit){
                 Application.Quit();

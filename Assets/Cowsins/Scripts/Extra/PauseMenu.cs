@@ -145,7 +145,6 @@ namespace cowsins
                 if (disablePlayerUIWhilePaused && !stats.isDead)
                 {
                     playerUI.SetActive(false);
-                    Debug.Log("hide user ui ");
                 }
 
                 OnPause?.Invoke();
@@ -175,7 +174,7 @@ namespace cowsins
         public void RestartGame()
         {
             Time.timeScale = 1f; 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 重新加载当前场景
         }
 
 

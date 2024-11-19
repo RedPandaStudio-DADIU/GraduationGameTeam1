@@ -77,8 +77,6 @@ namespace cowsins
 
         [SerializeField] private Animator holsterMotionObject;
 
-        private WeaponController weaponController;
-
         public Animator HolsterMotionObject
         {
             get { return holsterMotionObject; }
@@ -158,8 +156,6 @@ namespace cowsins
             // Subscribe to the method.
             // Each time we click on the attachment UI, we should perform the assignment.
             UIEvents.onAttachmentUIElementClickedNewAttachment += AssignNewAttachment;
-            //UIController uiController = player.GetComponent<UIController>();
-
         }
 
         private void OnDisable()
@@ -174,7 +170,6 @@ namespace cowsins
             InitialSettings();
             CreateInventoryUI();
             GetInitialWeapons();
-            weaponController = GetComponent<WeaponController>();
 
             
             //StartCoroutine(DelayedInit());
@@ -398,7 +393,6 @@ namespace cowsins
 
             // Rest the bullets that have just been shot
             reduceAmmo?.Invoke();
-            
 
             //Determine weapon class / style
             int i = 0;
@@ -821,10 +815,6 @@ namespace cowsins
                 {
                     id.bulletsLeftInMagazine = 0;
                 }
-
-                if (id.bulletsLeftInMagazine == 0){
-                    UIEvents.onEmptyMagazine?.Invoke(id.bulletsLeftInMagazine);
-                }
             }
         }
 
@@ -836,10 +826,6 @@ namespace cowsins
                 if (id.bulletsLeftInMagazine < 0)
                 {
                     id.bulletsLeftInMagazine = 0;
-                }
-
-                if (id.bulletsLeftInMagazine == 0){
-                    UIEvents.onEmptyMagazine?.Invoke(id.bulletsLeftInMagazine);
                 }
             }
         }
@@ -900,7 +886,6 @@ namespace cowsins
             else if (weapon.shootStyle2 == ShootStyle.Custom) SelectCustomShotMethod();
             else customMethod = null;
 
-            weapon.ammoCostPerFire2 = 10;
             // Grab the modifiers for the custom set of attachments.
             GetAttachmentsModifiers();
 
@@ -1186,35 +1171,23 @@ namespace cowsins
             // }
             if (InputManager.weapon1)
              {
-                // if (currentWeapon > 0 && inventory.Length > 0 && inventory[0] != null)
-                // {
-                //     currentWeapon=0;
-                //     Debug.Log("Weapon 1");
-                //     SelectWeapon();
-                // }
-                currentWeapon = 0;
-                //UpdateWeaponUI(weaponController);
-                UIController.instance.UpdateWeaponUI(weaponController);
-
-                SelectWeapon();
-                Debug.Log("Switched to Weapon 1");
+                if (currentWeapon > 0)
+                {
+                    currentWeapon=1;
+                    Debug.Log("Weapon 1");
+                    SelectWeapon();
+                }
             
              }
 
              if (InputManager.weapon2)
              {
-                // if (currentWeapon != 1 && inventory.Length > 1 && inventory[1] != null)
-                // {
-                //     currentWeapon=1;
-                //     Debug.Log("Weapon 2");
-                //     SelectWeapon();
-                // }
-                weaponController.currentWeapon = 1;
-               // UpdateWeaponUI(weaponController);
-               UIController.instance.UpdateWeaponUI(weaponController);
-
-                SelectWeapon();
-                Debug.Log("Switched to Weapon 2");
+                if (currentWeapon > 0)
+                {
+                    currentWeapon=2;
+                    Debug.Log("Weapon 1");
+                    SelectWeapon();
+                }
             
              }
 
@@ -1230,31 +1203,19 @@ namespace cowsins
             weapon = null;
             // Spawn the appropriate weapon in the inventory
 
-            // foreach (WeaponIdentification weapon_ in inventory)
-            // {
-            //     if (weapon_ != null)
-            //     {
-            //         weapon_.gameObject.SetActive(false);
-            //         weapon_.GetComponentInChildren<Animator>().enabled = false;
-            //         if (weapon_ == inventory[currentWeapon])
-            //         {
-            //             weapon = inventory[currentWeapon].weapon;
-
-            //             weapon_.GetComponentInChildren<Animator>().enabled = true;
-            //             UnHolster(weapon_.gameObject, true);
-            for (int i = 0; i < inventory.Length; i++)
+            foreach (WeaponIdentification weapon_ in inventory)
+            {
+                if (weapon_ != null)
                 {
-                    if (inventory[i] != null)
+                    weapon_.gameObject.SetActive(false);
+                    weapon_.GetComponentInChildren<Animator>().enabled = false;
+                    if (weapon_ == inventory[currentWeapon])
                     {
-                        inventory[i].gameObject.SetActive(false);
-                        inventory[i].GetComponentInChildren<Animator>().enabled = false;
+                        weapon = inventory[currentWeapon].weapon;
 
-                        if (i == currentWeapon)
-                        {
-                            weapon = inventory[currentWeapon].weapon;
-                            inventory[i].GetComponentInChildren<Animator>().enabled = true;
-                            UnHolster(inventory[i].gameObject, true);
-                            
+                        weapon_.GetComponentInChildren<Animator>().enabled = true;
+                        UnHolster(weapon_.gameObject, true);
+
 #if UNITY_EDITOR
                         UIController.instance.crosshair.GetComponent<CrosshairShape>().currentPreset = weapon.crosshairPreset;
                         CowsinsUtilities.ApplyPreset(UIController.instance.crosshair.GetComponent<CrosshairShape>().currentPreset, UIController.instance.crosshair.GetComponent<CrosshairShape>());

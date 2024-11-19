@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="States" ID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameStatus" ID="{49474DAB-D2CF-4B9B-8C80-41A049043641}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{06E39AB6-657B-43CB-AC87-509895CB23D3}"/>
+						<State Name="InGame" ID="{A1170F4C-49EE-4DF8-82FB-54B635971568}"/>
+						<State Name="InMenu" ID="{474FEFE3-8726-4CAE-9DB1-8F60CE69D181}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="6"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{71DEAC1B-AFD2-4EF9-B68B-44EF423FA49A}"/>
+						<State Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
+						<State Name="Dead" ID="{96FF9BB9-8FCC-463B-A6A6-BB664FDFCC1F}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="RoomState" ID="{4B6AAE81-16A8-4384-8324-F96C379F7805}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
+						<State Name="Indoor" ID="{5F7ECEB0-1AC0-43CC-B38B-63B3385A55AE}"/>
+						<State Name="Outdoor" ID="{6E0976F0-5721-4210-9914-858C7BC55131}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="AreaState" ID="{677AD7FE-43DB-49B1-B10B-721D1E000093}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{1725FE84-7321-45EB-8265-EAA10E64B31A}"/>
+						<State Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
+						<State Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
+						<State Name="Harngar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
+						<State Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
+						<State Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
+						<State Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
+						<State Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
+					</ChildrenList>
+				</StateGroup>
+				<Folder Name="Speakers" ID="{63944BD2-59AE-46E9-8A1F-D3D049F8B6A2}" ShortID="51716784">
+					<ChildrenList>
+						<StateGroup Name="GuitarSpeaker" ID="{09CAE9A5-85D1-4308-89ED-8DC288BE16ED}">
+							<ChildrenList>
+								<State Name="None" ID="{F5D70421-08EA-47C4-9A07-5AF1242504C0}"/>
+								<State Name="On" ID="{38418DA2-AE8F-4F9E-90BC-277B67AA01F2}"/>
+								<State Name="Off" ID="{1173DA6E-BC26-466A-AE9F-4B387E566ED5}"/>
+							</ChildrenList>
+						</StateGroup>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Dialogue" ID="{4E061990-A83F-403A-90CE-0C75B228DFD6}" ShortID="687627048">
+					<ChildrenList>
+						<StateGroup Name="Xaga" ID="{04CD5BF1-B0FF-4208-B7CD-73BAD0D1BDD3}">
+							<ChildrenList>
+								<State Name="None" ID="{B97CD3D2-D03B-40A5-A408-6437983095DF}"/>
+								<State Name="Sc1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
+								<State Name="WaitingOnTriggerEnter" ID="{3C6122A6-7FDC-4AEA-85D7-8326A48C4F13}"/>
+								<State Name="Sc2" ID="{4AF25DBD-DDDF-4706-A27C-EA29B512906A}"/>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="JohnDoe" ID="{9DEF41DE-894F-46E5-928B-800DBA517D57}">
+							<ChildrenList>
+								<State Name="None" ID="{5FAADFB1-36C0-4C95-B32D-FC322F8ED4C4}"/>
+								<State Name="Sc1" ID="{98F8221E-9BBA-4BBD-A142-E5B096921A65}"/>
+								<State Name="WaitingOnTrigger" ID="{495C8406-D582-4C10-93D8-CB8D422B1607}"/>
+							</ChildrenList>
+						</StateGroup>
+						<StateGroup Name="Scenes_lvl1" ID="{D1681C8A-6090-43DC-8389-36963323B27F}">
+							<ChildrenList>
+								<State Name="None" ID="{B3A7D98A-DE80-4D70-8936-BA9185719A0E}"/>
+								<State Name="Sc1_tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}"/>
+								<State Name="Sc2_Tr1" ID="{B3BBC20D-92E0-45FF-8AC1-E9617B34011C}"/>
+								<State Name="Sc2_Tr2" ID="{78A5035D-B882-49F8-919B-A0F8FF467A67}"/>
+								<State Name="Sc2_Tr3" ID="{01722616-7ECF-4E20-BF57-00777C5BAD22}"/>
+							</ChildrenList>
+						</StateGroup>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

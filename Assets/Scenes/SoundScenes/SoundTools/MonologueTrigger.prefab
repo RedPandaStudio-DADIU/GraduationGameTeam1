@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 611335864055407568}
   - component: {fileID: 250929491625590637}
   - component: {fileID: 6600665589404670689}
-  - component: {fileID: 8707890402413560647}
+  - component: {fileID: 7018734653264248556}
   m_Layer: 0
   m_Name: MonologueTrigger
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 6670853188865776387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -12.44, y: 1, z: -27.54}
+  m_LocalPosition: {x: -12.44, y: 18.566858, z: -27.54}
   m_LocalScale: {x: 1.5000006, y: 0.1, z: 1.5000006}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -152,14 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f97bcff31fe04934b5abedcc2bccf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7f422d6
-  useOtherObject: 1
+  triggerList: 
+  useOtherObject: 0
   data:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6f16726dbe44a4bee949ad8c19db7233, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: ce34b00d3022d40fa90210ea5ce77eeb, type: 2}
   valueIdInternal: 0
   groupIdInternal: 0
   valueGuidInternal: 
@@ -201,7 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
-    initialListenerList: []
+    initialListenerList:
+    - {fileID: 0}
     useDefaultListeners: 1
   isEnvironmentAware: 1
   isStaticObject: 1
@@ -230,7 +231,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0acae90fe0524433c8fd088d9f2ae688, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 7a2fd0fcb1fb84f5bb77cf40ec97a40f, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -266,7 +267,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8707890402413560647
+--- !u!114 &7018734653264248556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,10 +276,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6670853188865776387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51dfc06f1f1e2410c83c84cd3687187c, type: 3}
+  m_Script: {fileID: 11500000, guid: d2f1f36e33a568d4f84f698fa198d442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 5
+  timeToDestroy: 5
 --- !u!1 &9019240361519251716
 GameObject:
   m_ObjectHideFlags: 0
