@@ -17,19 +17,19 @@ public class Boss : DiplomatEnemy
     [SerializeField] private AK.Wwise.Event bossExplosionSoundEvent;
     [SerializeField] private AK.Wwise.Event bossChargeSoundEvent;
 
-    // [SerializeField] private AK.Wwise.Event dialogueXaga;
+    [SerializeField] private AK.Wwise.Event dialogueXaga;
 
-    // [SerializeField] private AK.Wwise.State lostArm;
-    // [SerializeField] private AK.Wwise.State lostLeg;
-    // [SerializeField] private AK.Wwise.State lostStomach;
+    [SerializeField] private AK.Wwise.State lostArm;
+    [SerializeField] private AK.Wwise.State lostLeg;
+    [SerializeField] private AK.Wwise.State lostStomach;
 
-    // [SerializeField] private AK.Wwise.State nearDeath;
-    // [SerializeField] private AK.Wwise.State Dead;
+    [SerializeField] private AK.Wwise.State nearDeath;
+    [SerializeField] private AK.Wwise.State Dead;
 
     private Queue<Transform> queueWeakSpots;
     private Queue<Material> queueMaterials;
 
-    // private Queue<AK.Wwise.State> xagaStates = new Queue<AK.Wwise.State>();
+    private Queue<AK.Wwise.State> xagaStates = new Queue<AK.Wwise.State>();
 
     private bool areWeakSpotsDefeated = false;
     private Renderer renderer;
@@ -41,12 +41,15 @@ public class Boss : DiplomatEnemy
         this.SetStoppingDistance(8f);
         queueWeakSpots = new Queue<Transform>(weakSpots);
         queueMaterials = new Queue<Material>(materials);
-        // xagaStates.Enqueue(lostArm);
-        // xagaStates.Enqueue(lostLeg);
-        // xagaStates.Enqueue(lostStomach);
-        // dialogueXaga.Post(gameObject);
         renderer = transform.Find("Xaga").GetComponent<Renderer>();
 
+    }
+
+    void Start(){
+        xagaStates.Enqueue(lostArm);
+        xagaStates.Enqueue(lostLeg);
+        xagaStates.Enqueue(lostStomach);
+        dialogueXaga.Post(gameObject);
     }
 
     public bool CheckIfOnTop(Transform weakspot)
@@ -74,13 +77,22 @@ public class Boss : DiplomatEnemy
     public void RemoveFromQueue()
     {
         Transform weakspot = queueWeakSpots.Dequeue();
-        // AK.Wwise.State state = xagaStates.Dequeue();
-        // state.SetValue();
+        AK.Wwise.State state = xagaStates.Dequeue();
+        state.SetValue();
         Material material = queueMaterials.Dequeue();
         this.renderer.material = material;
         GameObject weakspotDefeatedVFX = Instantiate(weakSpotDefeatedEffect, weakspot.position, Quaternion.identity);
+        StartCoroutine(PlayAndStop(weakspotDefeatedVFX));
+    }
+
+    private IEnumerator PlayAndStop(GameObject effect)
+    {
+       
+        yield return new WaitForSeconds(2f);
+        Destroy(effect);
 
     }
+    
 
     public bool CheckIfEmpty()
     {
@@ -150,6 +162,14 @@ public class Boss : DiplomatEnemy
         attackPreparationEffect.SetActive(false);
         attackPreparationEffect.GetComponent<VisualEffect>().Stop();
 
+    }
+
+    public void PlayHitOrDeadSound(bool isDead){
+        if (isDead){
+            Dead.SetValue();
+        } else{
+            nearDeath.SetValue();
+        }
     }
 
 }
