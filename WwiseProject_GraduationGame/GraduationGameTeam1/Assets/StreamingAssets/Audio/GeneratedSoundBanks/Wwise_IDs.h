@@ -150,6 +150,18 @@ namespace AK
             } // namespace STATE
         } // namespace GUITARSPEAKER
 
+        namespace LV2_ENDING
+        {
+            static const AkUniqueID GROUP = 1972315911U;
+
+            namespace STATE
+            {
+                static const AkUniqueID LOOSE = 174960569U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID WIN = 979765101U;
+            } // namespace STATE
+        } // namespace LV2_ENDING
+
         namespace PLAYER_LEVEL
         {
             static const AkUniqueID GROUP = 1314730481U;
@@ -158,6 +170,7 @@ namespace AK
             {
                 static const AkUniqueID LV1 = 964811740U;
                 static const AkUniqueID LV2 = 964811743U;
+                static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace PLAYER_LEVEL
@@ -442,7 +455,7 @@ namespace AK
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID DIALOGUEMASTER = 2645497833U;
         static const AkUniqueID MASTER_BUS = 1399649189U;
-        static const AkUniqueID MUSICMASTER = 3199789248U;
+        static const AkUniqueID MUSIC_MASTER = 3595451983U;
         static const AkUniqueID NPC_ALIENS = 223128778U;
         static const AkUniqueID NPC_HUMANS = 840484792U;
         static const AkUniqueID NPC_SFX = 2997659434U;
@@ -452,11 +465,13 @@ namespace AK
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
         static const AkUniqueID PLAYERVOICE = 47937584U;
         static const AkUniqueID REVERBS = 3545700988U;
+        static const AkUniqueID WEAPONS = 1467963052U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
     {
         static const AkUniqueID DELAYSLAPS = 924856803U;
+        static const AkUniqueID DELAYSLAPS_HANGARSPEAKER = 425081994U;
         static const AkUniqueID HANGARVERB_JD = 350835844U;
         static const AkUniqueID ROOMHANGARMAIN = 986249158U;
         static const AkUniqueID ROOMSMALL = 3205342581U;
