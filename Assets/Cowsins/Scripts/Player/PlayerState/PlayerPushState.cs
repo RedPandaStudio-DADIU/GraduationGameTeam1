@@ -16,6 +16,9 @@ namespace cowsins
         private Transform playerTransform;
         private global::PushEnemy pushEnemyComponent;
 
+        private Animator animator; 
+        private readonly string pushAnimationName = "Push"; 
+
         public PlayerPushState(PlayerStates currentContext, PlayerStateFactory playerStateFactory)
             : base(currentContext, playerStateFactory) { 
             //     this.playerTransform =  playerTransform;
@@ -35,11 +38,21 @@ namespace cowsins
 
             if (pushEnemyComponent != null)
             {
-                pushEnemyComponent.PushEnemiesInRange(); // 调用 PushEnemiesInRange 方法
+                pushEnemyComponent.PushEnemiesInRange(); 
             }
             else
             {
                 Debug.LogWarning("PushEnemy component not found on player.");
+            }
+
+            if (animator != null)
+            {
+                
+                animator.Play(pushAnimationName);
+            }
+            else
+            {
+                Debug.LogWarning("Animator not found on player.");
             }
 
 
@@ -48,7 +61,10 @@ namespace cowsins
         public override void UpdateState()
         {
             
-            CheckSwitchState();
+           if (IsAnimationFinished())
+            {
+                CheckSwitchState();
+            } 
         }
 
         public override void FixedUpdateState() { }
@@ -66,6 +82,14 @@ namespace cowsins
             {
                 SwitchState(_factory.Default());
             }
+        }
+
+        private bool IsAnimationFinished()
+        {
+            if (animator == null) return true;
+
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            return stateInfo.IsName(pushAnimationName) && stateInfo.normalizedTime >= 1f;
         }
 
         // private void PushEnemiesInRange()
