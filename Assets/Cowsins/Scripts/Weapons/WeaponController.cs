@@ -175,7 +175,7 @@ namespace cowsins
             CreateInventoryUI();
             GetInitialWeapons();
             weaponController = GetComponent<WeaponController>();
-
+            autoReload = false;
             
             //StartCoroutine(DelayedInit());
         }
@@ -1104,7 +1104,7 @@ namespace cowsins
             {
                 if (!weapon.infiniteBullets)
                 {
-
+                    Debug.LogError("ID: " + id + ", weapon" + weapon);
                     bool activeReloadUI = id.bulletsLeftInMagazine == 0 && !autoReload && !weapon.infiniteBullets;
                     bool activeLowAmmoUI = id.bulletsLeftInMagazine < id.magazineSize / 3.5f && id.bulletsLeftInMagazine > 0;
                     // Set different display settings for each shoot style 
