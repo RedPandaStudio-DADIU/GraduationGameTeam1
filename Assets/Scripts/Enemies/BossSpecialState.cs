@@ -10,6 +10,7 @@ public class BossSpecialState : IEnemyState
     private float backToAttackDelay = 3f;
 
     public void OnEnter(EnemyStateController stateController){
+        stateController.GetAnimator().SetBool("IsSpecialAttack", true);
         chargeBeforeShotCoroutine = stateController.StartCoroutine(ChargeBeforeShotCoroutine(stateController));
 
     }
@@ -23,6 +24,8 @@ public class BossSpecialState : IEnemyState
             stateController.StopCoroutine(chargeBeforeShotCoroutine);
         }
         chargeBeforeShotCoroutine = null;
+        stateController.GetAnimator().SetBool("IsSpecialAttack", false);
+
 
     }
 
