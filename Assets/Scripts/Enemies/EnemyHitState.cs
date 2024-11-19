@@ -7,6 +7,7 @@ public class EnemyHitState : IEnemyState
 {
     public void OnEnter(EnemyStateController stateController){
         Debug.Log("Entering Hit State " + stateController.name);
+
         if(stateController.GetEnemy().GetHealth()<=0){
             Debug.Log("0 HEALTH - into death");
             stateController.ChangeState(new EnemyDieState());
@@ -31,6 +32,7 @@ public class EnemyHitState : IEnemyState
             weapon.gameObject.SetActive(true);
 
         }
+
     }
 
 

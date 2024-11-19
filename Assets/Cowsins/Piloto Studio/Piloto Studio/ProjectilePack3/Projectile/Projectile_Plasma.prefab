@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8249115689253894401
 Transform:
   m_ObjectHideFlags: 0
@@ -4855,7 +4855,7 @@ GameObject:
   - component: {fileID: 8249115690037596308}
   - component: {fileID: -9030219361790644124}
   - component: {fileID: -268303651438659312}
-  - component: {fileID: 3476387250897432799}
+  - component: {fileID: 3376536274974333263}
   m_Layer: 0
   m_Name: Projectile_Plasma
   m_TagString: Untagged
@@ -5071,7 +5071,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0, b: 0, a: 1}
+      maxColor: {r: 1, g: 0, b: 0.12838984, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9760,8 +9760,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033eb68c5852cde4a8e4d89ae33dea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 100
+  bigRagdollForce: 100
+  smallRagdollForce: 40
   ragdollDuration: 3
+  smallRagdollDuration: 3
   isEnemy: 0
   isHuman: 0
   speed: 0
@@ -9803,7 +9805,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &3476387250897432799
+--- !u!65 &3376536274974333263
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9822,8 +9824,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.00002, y: 0.00002, z: 0.00002}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5, y: 0.5, z: 0.4}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &8249115690404021241
 GameObject:
   m_ObjectHideFlags: 0
@@ -15109,7 +15111,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.024130138, g: 0.6117647, b: 0, a: 1}
+      maxColor: {r: 0.0018689969, g: 0.3034877, b: 0.3962264, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
