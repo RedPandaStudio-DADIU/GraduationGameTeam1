@@ -14,19 +14,103 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{9E56428B-ABA0-4A73-0285-25D6B18FEB89}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{BD169B42-6D36-47D0-C2D2-E9E0629636F2}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
+			<Media>
+				<File Id="622069210" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_Loop_combatlow1.wav</ShortName>
+					<CachePath>SFX/DG_Loop_combatlow1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="690146370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_Loop_1A.wav</ShortName>
+					<CachePath>SFX/DG_Loop_1A_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
 				<Event Id="3861538420" Name="Play_MainMusicSW" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811740"/>
-							<Children/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="2764240573" Id="2116791127"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="3712483660"/>
+											<MediaRefs>
+												<MediaRef Id="622069210"/>
+											</MediaRefs>
+										</SwitchContainer>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
+											<MediaRefs>
+												<MediaRef Id="690146370"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="2764240573" Id="5260279"/>
+									<MediaRefs>
+										<MediaRef Id="690146370"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811743"/>
-							<Children/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1358435974" Id="2939361434"/>
+									<Children/>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1358435974" Id="2317668769"/>
+									<Children/>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811740"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="2764240573" Id="2116791127"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="3712483660"/>
+											<MediaRefs>
+												<MediaRef Id="622069210"/>
+											</MediaRefs>
+										</SwitchContainer>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
+											<MediaRefs>
+												<MediaRef Id="690146370"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="2764240573" Id="5260279"/>
+									<MediaRefs>
+										<MediaRef Id="690146370"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811743"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1358435974" Id="2939361434"/>
+									<Children/>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1358435974" Id="2317668769"/>
+									<Children/>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -37,6 +121,7 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="964811740" Name="Lv1"/>
 						<State Id="964811743" Name="Lv2"/>
+						<State Id="2607556080" Name="Menu"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1358435973" Name="Combat_intensity_Lv1">
@@ -53,6 +138,13 @@
 						<State Id="2939361434" Name="Combat_base_lv2"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="1972315911" Name="Lv2_ending">
+					<States>
+						<State Id="174960569" Name="Loose"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="979765101" Name="Win"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2764240573" Name="Combat">
 					<States>
 						<State Id="5260279" Name="No_combat"/>
@@ -63,7 +155,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{86BA2FDC-D7E9-801F-EAF4-9052313481BD}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{385E6A04-D615-107A-8CD4-907861D1E340}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -134,9 +226,9 @@
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
 				<Bus Id="2645497833" Name="DialogueMaster"/>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
-				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
+				<Bus Id="3595451983" Name="Music_Master"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
@@ -216,6 +308,7 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="964811740" Name="Lv1"/>
 						<State Id="964811743" Name="Lv2"/>
+						<State Id="2607556080" Name="Menu"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1358435973" Name="Combat_intensity_Lv1">
@@ -230,6 +323,13 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="2317668769" Name="Combat_high_Lv2"/>
 						<State Id="2939361434" Name="Combat_base_lv2"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1972315911" Name="Lv2_ending">
+					<States>
+						<State Id="174960569" Name="Loose"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="979765101" Name="Win"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2064552269" Name="AreaState">
@@ -547,7 +647,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{CAFADD13-643D-2ECF-F907-EB6EE0EA8950}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{AD5FBC73-6985-6967-E2C6-D22083E2F400}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -2924,9 +3024,9 @@
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
 				<Bus Id="2645497833" Name="DialogueMaster"/>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
-				<Bus Id="3199789248" Name="MusicMaster"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
+				<Bus Id="3595451983" Name="Music_Master"/>
 				<Bus Id="4152869693" Name="2DAmbientBeds"/>
 			</Busses>
 			<AuxBusses>
@@ -3129,5 +3229,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{01DDE600-BDFF-248F-116E-C8072C61B001}</FileHash>
+	<FileHash>{089630BA-7E56-D45A-061C-824C3507AA26}</FileHash>
 </SoundBanksInfo>
