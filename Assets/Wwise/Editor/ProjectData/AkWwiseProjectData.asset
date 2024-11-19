@@ -522,7 +522,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX
     guid: d2201e2c39a40c4b940fb6d4f3340678
     GuidInternal: 
-    m_lastTime: -8584696019237676055
+    m_lastTime: -8584695875686003942
     List:
     - name: NPC_SFX
       guid: d133aa54d4d02a428820498561de2572
@@ -610,6 +610,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: 001728eff519904eb0ecccfee0fd38e3
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX/PlayerLocomotion
+    - name: Weapons
+      guid: 2fdd3fe48411b443bbf2688f7fc66e13
+      id: 1467963052
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 12
+        guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: Weapons
+        ObjectType: 2
+        guid: 2fdd3fe48411b443bbf2688f7fc66e13
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX/Weapons
   - PhysicalPath: Master-Mixer Hierarchy/SharedEffects.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -2035,7 +2055,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584696019241093559
+    m_lastTime: -8584695884109131498
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -2088,7 +2108,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: fe8978bec17c6c4eaa7d4aef64ca70f4
       Path: Events/Weapons/Rifle/Play_Alt_Charge_Fifle
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_Alt_Fire_Rifle
@@ -2108,7 +2128,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4bda268bbb8f614abbd11865ece170be
       Path: Events/Weapons/Rifle/Play_Alt_Fire_Rifle
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.1701359
       minDuration: 1.1701359
     - name: Play_ChargeRdy_Rifle
@@ -2128,7 +2148,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 22a84d4619c8de418ac1254051c5b41a
       Path: Events/Weapons/Rifle/Play_ChargeRdy_Rifle
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.21527286
       minDuration: 0.21527286
     - name: Play_FireMain_Handgun
@@ -2148,7 +2168,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1de7222c9c749d4b9e7b46004626286e
       Path: Events/Weapons/Handgun/Play_FireMain_Handgun
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 3.6950881
       minDuration: 2.914464
     - name: Play_FireMain_Rifle
@@ -2168,7 +2188,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 21155b7f2b6f2444b70d8e9997774966
       Path: Events/Weapons/Rifle/Play_FireMain_Rifle
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 4.130412
       minDuration: 3.6498318
     - name: Play_Hitmarker_main
@@ -2228,7 +2248,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 3d0558495dabc04ea8d9576484f6d709
       Path: Events/Weapons/Handgun/Play_Load_handgun
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.8439909
       minDuration: 1.8439909
     - name: Play_Load_Rifle
@@ -2248,7 +2268,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: ee808dabe4361c4aa362e95ade77c721
       Path: Events/Weapons/Rifle/Play_Load_Rifle
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.4822084
       minDuration: 1.4822084
     - name: Play_Reload_Handgun
@@ -2288,9 +2308,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 64244f950a8fa548a246c72dfadeea2b
       Path: Events/Weapons/Rifle/Play_Reload_Rifle
-      maxAttenuation: 0
-      maxDuration: 0.04
-      minDuration: 0.04
+      maxAttenuation: 100
+      maxDuration: 0.99796873
+      minDuration: 0.99796873
     - name: Play_Rifle_EmptyMag
       guid: f6845d9521f81c4f94695178e477e7ec
       id: 3334099943
@@ -2308,7 +2328,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f6845d9521f81c4f94695178e477e7ec
       Path: Events/Weapons/Rifle/Play_Rifle_EmptyMag
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.341125
       minDuration: 0.341125
     - name: Play_Unload_Rifle
@@ -2328,7 +2348,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 298d9293da1fc14aa984bea16cd9154b
       Path: Events/Weapons/Rifle/Play_Unload_Rifle
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.43002084
       minDuration: 0.43002084
     - name: Rifle

@@ -452,6 +452,7 @@ namespace AK
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
         static const AkUniqueID PLAYERVOICE = 47937584U;
         static const AkUniqueID REVERBS = 3545700988U;
+        static const AkUniqueID WEAPONS = 1467963052U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

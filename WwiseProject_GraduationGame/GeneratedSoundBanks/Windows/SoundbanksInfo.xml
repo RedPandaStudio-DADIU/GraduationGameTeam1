@@ -63,7 +63,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{776AC997-C9D2-178C-7362-9529F481E411}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E6E538DA-B300-B7E7-352F-03B99C4B8880}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -129,6 +129,7 @@
 				<Bus Id="1301074112" Name="3DAmbience"/>
 				<Bus Id="1399649189" Name="Master Bus"/>
 				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1467963052" Name="Weapons"/>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
 				<Bus Id="2645497833" Name="DialogueMaster"/>
@@ -546,7 +547,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{6380E44C-04D0-AD79-340D-0EF49748B93A}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{CAFADD13-643D-2ECF-F907-EB6EE0EA8950}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1062,6 +1063,10 @@
 					<ShortName>Rifle_Unload.wav</ShortName>
 					<CachePath>SFX/Rifle_Unload_818F3B66.wem</CachePath>
 				</File>
+				<File Id="642111871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Guns_Handle_Gun_Handle_Single_Laser_Reload_SciFi_01_SND108404.wav</ShortName>
+					<CachePath>SFX/Guns_Handle_Gun_Handle_Single_Laser_Reload_SciFi_01_SND108404_818F3B66.wem</CachePath>
+				</File>
 				<File Id="646430669" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_DamnThatHurt.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_DamnThatHurt_818F3B66.wem</CachePath>
@@ -1272,7 +1277,7 @@
 				</File>
 				<File Id="864764768" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Wilhelm Scream Remastered.wav</ShortName>
-					<CachePath>Voices/English(US)/Wilhelm Scream Remastered_E48E47A9.wem</CachePath>
+					<CachePath>Voices/English(US)/Wilhelm Scream Remastered_4A48443A.wem</CachePath>
 				</File>
 				<File Id="869232112" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_WhereIsTheMainframeRoomn.wav</ShortName>
@@ -1649,7 +1654,7 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="2073520173" Name="Play_Alt_Charge_Fifle" DurationType="Infinite">
+				<Event Id="2073520173" Name="Play_Alt_Charge_Fifle" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="726251592"/>
 						<MediaRef Id="733394148"/>
@@ -1659,7 +1664,7 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="243729645" Name="Play_Alt_Fire_Rifle" DurationType="OneShot" DurationMin="1.1701359" DurationMax="1.1701359">
+				<Event Id="243729645" Name="Play_Alt_Fire_Rifle" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1701359" DurationMax="1.1701359">
 					<MediaRefs>
 						<MediaRef Id="291745391"/>
 					</MediaRefs>
@@ -1898,7 +1903,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3158001838" Name="Play_ChargeRdy_Rifle" DurationType="OneShot" DurationMin="0.21527286" DurationMax="0.21527286">
+				<Event Id="3158001838" Name="Play_ChargeRdy_Rifle" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.21527286" DurationMax="0.21527286">
 					<MediaRefs>
 						<MediaRef Id="726251592"/>
 					</MediaRefs>
@@ -2161,7 +2166,7 @@
 						<MediaRef Id="718891495"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3547089943" Name="Play_FireMain_Handgun" DurationType="OneShot" DurationMin="2.914464" DurationMax="3.6950881">
+				<Event Id="3547089943" Name="Play_FireMain_Handgun" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.914464" DurationMax="3.6950881">
 					<MediaRefs>
 						<MediaRef Id="1041080371"/>
 						<MediaRef Id="1055050147"/>
@@ -2170,7 +2175,7 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="634184142" Name="Play_FireMain_Rifle" DurationType="OneShot" DurationMin="3.6498318" DurationMax="4.130412">
+				<Event Id="634184142" Name="Play_FireMain_Rifle" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.6498318" DurationMax="4.130412">
 					<MediaRefs>
 						<MediaRef Id="260010361"/>
 						<MediaRef Id="272504973"/>
@@ -2286,7 +2291,7 @@
 						<MediaRef Id="921613273"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="249020240" Name="Play_Load_handgun" DurationType="OneShot" DurationMin="1.8439909" DurationMax="1.8439909">
+				<Event Id="249020240" Name="Play_Load_handgun" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.8439909" DurationMax="1.8439909">
 					<MediaRefs>
 						<MediaRef Id="34821737"/>
 					</MediaRefs>
@@ -2294,7 +2299,7 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3060105905" Name="Play_Load_Rifle" DurationType="OneShot" DurationMin="1.4822084" DurationMax="1.4822084">
+				<Event Id="3060105905" Name="Play_Load_Rifle" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.4822084" DurationMax="1.4822084">
 					<MediaRefs>
 						<MediaRef Id="664780185"/>
 					</MediaRefs>
@@ -2802,12 +2807,15 @@
 						<MediaRef Id="921613273"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2435533942" Name="Play_Reload_Rifle" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
+				<Event Id="2435533942" Name="Play_Reload_Rifle" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.99796873" DurationMax="0.99796873">
 					<MediaRefs>
-						<MediaRef Id="921613273"/>
+						<MediaRef Id="642111871"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="3334099943" Name="Play_Rifle_EmptyMag" DurationType="OneShot" DurationMin="0.341125" DurationMax="0.341125">
+				<Event Id="3334099943" Name="Play_Rifle_EmptyMag" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.341125" DurationMax="0.341125">
 					<MediaRefs>
 						<MediaRef Id="15644422"/>
 					</MediaRefs>
@@ -2851,7 +2859,7 @@
 						<MediaRef Id="921613273"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1943012356" Name="Play_Unload_Rifle" DurationType="OneShot" DurationMin="0.43002084" DurationMax="0.43002084">
+				<Event Id="1943012356" Name="Play_Unload_Rifle" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.43002084" DurationMax="0.43002084">
 					<MediaRefs>
 						<MediaRef Id="641471652"/>
 					</MediaRefs>
@@ -2911,6 +2919,7 @@
 				<Bus Id="1301074112" Name="3DAmbience"/>
 				<Bus Id="1399649189" Name="Master Bus"/>
 				<Bus Id="1459460693" Name="AmbientMaster"/>
+				<Bus Id="1467963052" Name="Weapons"/>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
 				<Bus Id="2645497833" Name="DialogueMaster"/>
@@ -3120,5 +3129,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AAD01F81-8153-97E1-A241-41F24DFE6234}</FileHash>
+	<FileHash>{02BB6001-6B48-A119-5897-8C8905EF234E}</FileHash>
 </SoundBanksInfo>
