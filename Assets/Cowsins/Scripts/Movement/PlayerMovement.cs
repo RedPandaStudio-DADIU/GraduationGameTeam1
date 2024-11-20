@@ -508,6 +508,7 @@ namespace cowsins
 
             // ResetStamina();
             events.OnSpawn.Invoke();
+            // maxSlopeAngle = 90f;
         }
 
 
