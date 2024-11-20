@@ -139,7 +139,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{385E6A04-D615-107A-8CD4-907861D1E340}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{080124FF-0594-FFDD-C572-CC7D29DD6588}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -147,6 +147,7 @@
 					<Plugin Id="51356967" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="104816223" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="260922761" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="438276821" Name="Caught_in_a_loop (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="695490779" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="911411724" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 				</Custom>
@@ -155,6 +156,7 @@
 					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1711423976" Name="Many_Odd_Harm_Notches" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2952825346" Name="Dual_Filters_Radio_Comm" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="3435419520" Name="New_Guitar_Distortion" LibName="Wwise Guitar Distortion" LibId="8257539"/>
@@ -259,6 +261,16 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="1259256166"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="3670417488" Name="JD_DEAD">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="438276821"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1711423976"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -632,7 +644,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{2E739F3A-5B39-7211-BBA7-AFE0617F689D}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{2BA02EBC-F7BD-800D-417B-F8AE68611465}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -704,6 +716,14 @@
 					<ShortName>JD_Damn4.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_Damn4_818F3B66.wem</CachePath>
 				</File>
+				<File Id="54736883" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Death\JD_Death4.wav</ShortName>
+					<CachePath>Voices/English(US)/Death/JD_Death4_818F3B66.wem</CachePath>
+				</File>
+				<File Id="59686008" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_AUDAMN.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_AUDAMN_E4EAE96E.wem</CachePath>
+				</File>
 				<File Id="61446819" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_06.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Toe_06_30DCEA9F.wem</CachePath>
@@ -727,6 +747,10 @@
 				<File Id="73697646" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
 					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_DC847164.wem</CachePath>
+				</File>
+				<File Id="76136184" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_D13C6370.wem</CachePath>
 				</File>
 				<File Id="85731172" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
@@ -760,6 +784,10 @@
 					<ShortName>Xaga_ThisAmusesMe.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_ThisAmusesMe_818F3B66.wem</CachePath>
 				</File>
+				<File Id="121526837" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_URH_UH.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_URH_UH_441A0319.wem</CachePath>
+				</File>
 				<File Id="125610014" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_ImNotReallyaComputer_Happy.wav</ShortName>
 					<CachePath>Voices/English(US)/AI_ImNotReallyaComputer_Happy_7881C442.wem</CachePath>
@@ -788,6 +816,10 @@
 					<ShortName>Pathetic_temp1.wav</ShortName>
 					<CachePath>Voices/English(US)/Pathetic_temp1_818F3B66.wem</CachePath>
 				</File>
+				<File Id="155894028" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Death\JD_Death6.wav</ShortName>
+					<CachePath>Voices/English(US)/Death/JD_Death6_6517069B.wem</CachePath>
+				</File>
 				<File Id="157072511" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_04.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_04_818F3B66.wem</CachePath>
@@ -795,6 +827,10 @@
 				<File Id="165684999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_DEB3698B.wem</CachePath>
+				</File>
+				<File Id="166637973" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_DAMN24.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_DAMN24_27A26990.wem</CachePath>
 				</File>
 				<File Id="167253598" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
@@ -824,6 +860,10 @@
 					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
 					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_E9A36B89.wem</CachePath>
 				</File>
+				<File Id="195405486" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_UF3.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_UF3_398EC86F.wem</CachePath>
+				</File>
 				<File Id="199293111" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_02.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_02_818F3B66.wem</CachePath>
@@ -831,6 +871,10 @@
 				<File Id="201956695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 3_94A7572B.wem</CachePath>
+				</File>
+				<File Id="204172700" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_DAMN25.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_DAMN25_4255B05A.wem</CachePath>
 				</File>
 				<File Id="205653644" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Temp_TestAmbiences\Ambience, Designed, Drone, Room Tone, Airy, Dark, Loop, (50) (LRC Ls Rs) SND105603.wav</ShortName>
@@ -856,6 +900,10 @@
 					<ShortName>Xaga_HAHAHA.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_HAHAHA_818F3B66.wem</CachePath>
 				</File>
+				<File Id="240776954" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Death\JD_Death3.wav</ShortName>
+					<CachePath>Voices/English(US)/Death/JD_Death3_D065D208.wem</CachePath>
+				</File>
 				<File Id="243008600" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_06.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_06_5CB3E1E0.wem</CachePath>
@@ -871,6 +919,10 @@
 				<File Id="247373654" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_1CF36D38.wem</CachePath>
+				</File>
+				<File Id="249952242" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_DAMN23.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_DAMN23_818F3B66.wem</CachePath>
 				</File>
 				<File Id="257021756" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>IDidntMeanToKill.wav</ShortName>
@@ -924,6 +976,10 @@
 					<ShortName>JD_DamnThatHurt3.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_DamnThatHurt3_818F3B66.wem</CachePath>
 				</File>
+				<File Id="315064986" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_77C0E322.wem</CachePath>
+				</File>
 				<File Id="318436866" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Creatures_Monster_Alien_Scream_02_SND32354.wav</ShortName>
 					<CachePath>SFX/Creatures_Monster_Alien_Scream_02_SND32354_2A969D28.wem</CachePath>
@@ -939,6 +995,10 @@
 				<File Id="324158094" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_WhereDoIFindTheMainframe1.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_WhereDoIFindTheMainframe1_818F3B66.wem</CachePath>
+				</File>
+				<File Id="328638876" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Death\JD_Death7.wav</ShortName>
+					<CachePath>Voices/English(US)/Death/JD_Death7_72AD8B44.wem</CachePath>
 				</File>
 				<File Id="330453251" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
@@ -1032,6 +1092,10 @@
 					<ShortName>ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
 					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
+				<File Id="423647551" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_AARGH1.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_AARGH1_C6452F76.wem</CachePath>
+				</File>
 				<File Id="425120084" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_Excellent_Short.wav</ShortName>
 					<CachePath>Voices/English(US)/AI_Excellent_Short_D7808A27.wem</CachePath>
@@ -1067,6 +1131,18 @@
 				<File Id="455882504" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_IfYouWantToAvenge.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_IfYouWantToAvenge_7B2131EC.wem</CachePath>
+				</File>
+				<File Id="467935248" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_60FD6F02.wem</CachePath>
+				</File>
+				<File Id="472632658" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_84B48CD1.wem</CachePath>
+				</File>
+				<File Id="479560020" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_URH_UH.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_URH_UH_46C6CEDA.wem</CachePath>
 				</File>
 				<File Id="484715529" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Toe_04.wav</ShortName>
@@ -1200,6 +1276,10 @@
 					<ShortName>Rifle_Load.wav</ShortName>
 					<CachePath>SFX/Rifle_Load_EFB673FF.wem</CachePath>
 				</File>
+				<File Id="666359023" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Hitmarker_Sound_Effect_by_User391915396_Id_570335.wav</ShortName>
+					<CachePath>SFX/Hitmarker_Sound_Effect_by_User391915396_Id_570335_818F3B66.wem</CachePath>
+				</File>
 				<File Id="670922056" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_iNormallyControlTheMainframe.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_iNormallyControlTheMainframe_818F3B66.wem</CachePath>
@@ -1231,6 +1311,10 @@
 				<File Id="705500713" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>NooooMyArm.wav</ShortName>
 					<CachePath>Voices/English(US)/NooooMyArm_818F3B66.wem</CachePath>
+				</File>
+				<File Id="706104011" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_489C41D1.wem</CachePath>
 				</File>
 				<File Id="710699219" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_DAMNThis.wav</ShortName>
@@ -1320,6 +1404,10 @@
 					<ShortName>Ai_SureOkay4.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_SureOkay4_818F3B66.wem</CachePath>
 				</File>
+				<File Id="783890936" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Death\JD_Death2.wav</ShortName>
+					<CachePath>Voices/English(US)/Death/JD_Death2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="797320250" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_TheMainframeNeedsToBeRebooted.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_TheMainframeNeedsToBeRebooted_46673305.wem</CachePath>
@@ -1395,6 +1483,10 @@
 				<File Id="860796674" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 5_C7F176C9.wem</CachePath>
+				</File>
+				<File Id="864022316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_4E552DE0.wem</CachePath>
 				</File>
 				<File Id="864764768" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Wilhelm Scream Remastered.wav</ShortName>
@@ -1480,6 +1572,10 @@
 					<ShortName>Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104.wav</ShortName>
 					<CachePath>SFX/Ambience_Scifi_Starship_Repair_Area_Heavy_Mechanisms_Reverberant_Space_SND74104_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="944135865" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_UF2.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_UF2_7603F301.wem</CachePath>
+				</File>
 				<File Id="944226106" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_hi.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_hi_818F3B66.wem</CachePath>
@@ -1524,6 +1620,10 @@
 					<ShortName>NoooMyleg.wav</ShortName>
 					<CachePath>Voices/English(US)/NoooMyleg_818F3B66.wem</CachePath>
 				</File>
+				<File Id="964017005" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_UF1.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_UF1_818F3B66.wem</CachePath>
+				</File>
 				<File Id="974513169" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_Hello_Serious.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_Hello_Serious_C7D7D659.wem</CachePath>
@@ -1543,6 +1643,10 @@
 				<File Id="987801719" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
 					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="994086495" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
+					<CachePath>SFX/Bullets_Impact_Body_Flesh_SND6368 1_66574066.wem</CachePath>
 				</File>
 				<File Id="994855751" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_31_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
@@ -1576,9 +1680,17 @@
 					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
 					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1008862672" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Death\JD_Death5.wav</ShortName>
+					<CachePath>Voices/English(US)/Death/JD_Death5_D78C1770.wem</CachePath>
+				</File>
 				<File Id="1009290141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12_4D8041D2.wem</CachePath>
+				</File>
+				<File Id="1021400988" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Damage\JD_URH1.wav</ShortName>
+					<CachePath>Voices/English(US)/Damage/JD_URH1_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1025072598" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_Damn3.wav</ShortName>
@@ -1684,6 +1796,7 @@
 					<Plugin Id="208450960" Name="PANEL 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="209227866" Name="COMM 01" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="216132251" Name="WOOSH 02" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="218996696" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="232030741" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="260922761" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="280114799" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1705,6 +1818,7 @@
 					<Plugin Id="386254885" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="412472127" Name="MAGIC 03" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="416705626" Name="RING 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="438276821" Name="Caught_in_a_loop (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="452779266" Name="BEEP 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="454388511" Name="BASS 03" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="457116020" Name="BEEP 04" LibName="Wwise Synth One" LibId="9699330"/>
@@ -1789,6 +1903,7 @@
 					<Plugin Id="1033593795" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1041870196" Name="BRASSY" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="1041915561" Name="RING 03" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="1052405697" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="1057443910" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1059035731" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1059488289" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -1802,6 +1917,7 @@
 					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="1259256166" Name="New_RoomVerb" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1711423976" Name="Many_Odd_Harm_Notches" LibName="Wwise Flanger" LibId="8192003"/>
 					<Plugin Id="1866712633" Name="High_Freq_Cut_3" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="2568359573" Name="Secret_message" LibName="Wwise Harmonizer" LibId="9043971"/>
 					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -2067,6 +2183,30 @@
 					<AuxBusRefs>
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
+				</Event>
+				<Event Id="1423098094" Name="Play_DamageTaken" DurationType="OneShot" DurationMin="0.5698259" DurationMax="1.515102">
+					<MediaRefs>
+						<MediaRef Id="59686008"/>
+						<MediaRef Id="76136184"/>
+						<MediaRef Id="121526837"/>
+						<MediaRef Id="166637973"/>
+						<MediaRef Id="195405486"/>
+						<MediaRef Id="204172700"/>
+						<MediaRef Id="249952242"/>
+						<MediaRef Id="315064986"/>
+						<MediaRef Id="423647551"/>
+						<MediaRef Id="467935248"/>
+						<MediaRef Id="472632658"/>
+						<MediaRef Id="479560020"/>
+						<MediaRef Id="666359023"/>
+						<MediaRef Id="706104011"/>
+						<MediaRef Id="864022316"/>
+						<MediaRef Id="944135865"/>
+						<MediaRef Id="964017005"/>
+						<MediaRef Id="994086495"/>
+						<MediaRef Id="1008862672"/>
+						<MediaRef Id="1021400988"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="4271692713" Name="Play_Dia_Ai" DurationType="Infinite">
 					<SwitchContainers>
@@ -2458,6 +2598,31 @@
 					<AuxBusRefs>
 						<AuxBusRef Id="350835844" Name="HangarVerb_JD"/>
 					</AuxBusRefs>
+				</Event>
+				<Event Id="4112292984" Name="Play_JohnDoeBarks" DurationType="OneShot" DurationMin="0.2" DurationMax="1.8546939">
+					<MediaRefs>
+						<MediaRef Id="24500900"/>
+						<MediaRef Id="36456877"/>
+						<MediaRef Id="52927242"/>
+						<MediaRef Id="70651197"/>
+						<MediaRef Id="187414715"/>
+						<MediaRef Id="314643732"/>
+						<MediaRef Id="606303027"/>
+						<MediaRef Id="646430669"/>
+						<MediaRef Id="710699219"/>
+						<MediaRef Id="772915345"/>
+						<MediaRef Id="827815878"/>
+						<MediaRef Id="855706314"/>
+						<MediaRef Id="981611525"/>
+						<MediaRef Id="1025072598"/>
+						<MediaRef Id="1059635452"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="218996696"/>
+							<PluginRef Id="1052405697"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="513454534" Name="Play_KillConfirm" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
@@ -2975,6 +3140,18 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="910581297" Name="Play_PlayerDeath" DurationType="OneShot" DurationMin="1.2417576" DurationMax="2.2266">
+					<MediaRefs>
+						<MediaRef Id="54736883"/>
+						<MediaRef Id="155894028"/>
+						<MediaRef Id="240776954"/>
+						<MediaRef Id="328638876"/>
+						<MediaRef Id="783890936"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="3670417488" Name="JD_DEAD"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="449246991" Name="Play_Reload_Handgun" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.04" DurationMax="0.04">
 					<MediaRefs>
 						<MediaRef Id="921613273"/>
@@ -3319,6 +3496,16 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
+				<AuxBus Id="3670417488" Name="JD_DEAD">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="438276821"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1711423976"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="257272959" Name="RTPC_TimeOfDay"/>
@@ -3480,5 +3667,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3D84DABC-F092-F66E-60B9-2B11335F6CE1}</FileHash>
+	<FileHash>{90D505CD-6571-02C9-50E7-A40D654254EB}</FileHash>
 </SoundBanksInfo>

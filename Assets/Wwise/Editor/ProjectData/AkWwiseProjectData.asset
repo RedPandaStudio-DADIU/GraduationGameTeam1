@@ -483,7 +483,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Music
     guid: 7d7cc789702a6e4fa79c5590c19167cb
     GuidInternal: 
-    m_lastTime: -8584695850815935318
+    m_lastTime: -8584695545220824765
     List:
     - name: Music_Master
       guid: d553135554687b4c8cc5b6f4363a4826
@@ -801,7 +801,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584695856308191714
+    m_lastTime: -8584695043433926276
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -923,6 +923,36 @@ MonoBehaviour:
         guid: 84e87f0fe12db9458befbfa1f35c2545
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe/PlayerVoice/HangarVerb_JD
+    - name: JD_DEAD
+      guid: 622c4217859b3c4fa41c4cff0c0660ec
+      id: 3670417488
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 02_John Doe
+        ObjectType: 2
+        guid: fbd896561687364b95ff732159c72be0
+      - ElementName: PlayerVoice
+        ObjectType: 2
+        guid: c8c9c230919d804b997850fc91cb75be
+      - ElementName: JD_DEAD
+        ObjectType: 1
+        guid: 622c4217859b3c4fa41c4cff0c0660ec
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
+        Doe/PlayerVoice/JD_DEAD
     - name: NPC Aliens
       guid: 4e45b7902be2844e83b99740c406c3e3
       id: 223128778
@@ -1229,7 +1259,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584695784492436834
+    m_lastTime: -8584695596494337433
     List: []
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
@@ -1963,8 +1993,25 @@ MonoBehaviour:
     ParentPath: Events/Player
     guid: 8207cda29fb9e2459b243d8e7eaae86e
     GuidInternal: 
-    m_lastTime: -8584695856310482503
+    m_lastTime: -8584695043434002211
     List:
+    - name: Play_DamageTaken
+      guid: de15bb4f3c279345b20d713673af28a0
+      id: 1423098094
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: 8207cda29fb9e2459b243d8e7eaae86e
+      - ElementName: Play_DamageTaken
+        ObjectType: 3
+        guid: de15bb4f3c279345b20d713673af28a0
+      Path: Events/Player/Play_DamageTaken
+      maxAttenuation: 0
+      maxDuration: 1.515102
+      minDuration: 0.5698259
     - name: Play_JD_Spawn
       guid: b1edeffb9dcfc04a92ed53c9e0b982bb
       id: 1298310256
@@ -1982,6 +2029,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.7502041
       minDuration: 1.28
+    - name: Play_JohnDoeBarks
+      guid: ed6796f8f3361e4f90791078ddf40552
+      id: 4112292984
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: 8207cda29fb9e2459b243d8e7eaae86e
+      - ElementName: Play_JohnDoeBarks
+        ObjectType: 3
+        guid: ed6796f8f3361e4f90791078ddf40552
+      Path: Events/Player/Play_JohnDoeBarks
+      maxAttenuation: 0
+      maxDuration: 1.8546939
+      minDuration: 0.2
+    - name: Play_PlayerDeath
+      guid: 4c5ccdca7be765488069468a1343c905
+      id: 910581297
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Player
+        ObjectType: 12
+        guid: 8207cda29fb9e2459b243d8e7eaae86e
+      - ElementName: Play_PlayerDeath
+        ObjectType: 3
+        guid: 4c5ccdca7be765488069468a1343c905
+      Path: Events/Player/Play_PlayerDeath
+      maxAttenuation: 0
+      maxDuration: 2.2266
+      minDuration: 1.2417576
   - PhysicalPath: Events/PlayerLocomotion.wwu
     PathAndIcons:
     - ElementName: Events
