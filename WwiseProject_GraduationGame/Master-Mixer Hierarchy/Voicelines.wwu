@@ -6,14 +6,6 @@
 				<Bus Name="DialogueMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}">
 					<ChildrenList>
 						<Bus Name="02_John Doe" ID="{5696D8FB-8716-4B36-95FF-732159C72BE0}">
-							<PropertyList>
-								<Property Name="BusVolume" Type="Real64">
-									<ValueList>
-										<Value>-7</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList/>
 							<ChildrenList>
 								<Bus Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}">
 									<PropertyList>
@@ -181,6 +173,50 @@
 												</ObjectList>
 											</ObjectLists>
 										</AuxBus>
+										<AuxBus Name="JD_DEAD" ID="{17422C62-9B85-4F3C-A41C-4CFF0C0660EC}">
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{E0AC098D-9927-401A-8BA2-47BA0999F816}" ShortID="1027504440">
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom CreatedFrom="{8FC64215-9A75-4BE3-A33A-584C8CA49963}">
+																			<Effect Name="Caught_in_a_loop (Custom)" ID="{A1E13508-32BA-456A-A0D8-B2A221EC6B65}" ShortID="438276821" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+																				<PropertyList>
+																					<Property Name="DryLevel" Type="Real32" Value="-96"/>
+																					<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+																					<Property Name="EnableFeedback" Type="bool" Value="True"/>
+																					<Property Name="FilterFrequency" Type="Real32" Value="2364"/>
+																					<Property Name="FilterGain" Type="Real32" Value="-24"/>
+																					<Property Name="LeftCrossfeed" Type="Real32" Value="-15"/>
+																					<Property Name="LeftDelayTime" Type="Real32" Value="0.47"/>
+																					<Property Name="LeftFeedback" Type="Real32" Value="-18.5"/>
+																					<Property Name="RightCrossfeed" Type="Real32" Value="-6"/>
+																					<Property Name="RightDelayTime" Type="Real32" Value="0.39"/>
+																					<Property Name="RightFeedback" Type="Real32" Value="-6"/>
+																				</PropertyList>
+																			</Effect>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{343CA0A3-1E4D-4984-922F-AEE900746A33}" ShortID="349121508">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+																		<ObjectRef Name="Many_Odd_Harm_Notches" ID="{773FA234-F683-4788-B7C1-4D272A8CDE69}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</AuxBus>
 									</ChildrenList>
 									<StateInfo>
 										<StateGroupList>
@@ -276,7 +312,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 								<Property Name="CenterPercentage" Type="int32">
@@ -399,6 +435,18 @@
 							</ObjectLists>
 						</Bus>
 					</ChildrenList>
+					<DuckingList>
+						<DuckItem>
+							<BusRef Name="Music_Master" ID="{551353D5-6854-4C7B-8CC5-B6F4363A4826}"/>
+							<DuckingParam>
+								<Volume>-3</Volume>
+								<FadeInTime>1</FadeInTime>
+								<FadeOutTime>1</FadeOutTime>
+								<FadeCurve>FadeLinear</FadeCurve>
+								<TargetProp>BusVolume</TargetProp>
+							</DuckingParam>
+						</DuckItem>
+					</DuckingList>
 				</Bus>
 				<Bus Name="NPCBarks" ID="{057AB715-157F-4D2F-B8A3-345BBE895021}">
 					<ChildrenList>

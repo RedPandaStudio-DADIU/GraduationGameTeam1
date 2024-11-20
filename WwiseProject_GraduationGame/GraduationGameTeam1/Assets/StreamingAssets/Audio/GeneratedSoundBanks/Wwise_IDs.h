@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FS = 989866120U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_DAMAGETAKEN = 1423098094U;
         static const AkUniqueID PLAY_DIA_AI = 4271692713U;
         static const AkUniqueID PLAY_DIA_JOHNDOE = 1296777492U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
@@ -39,6 +40,7 @@ namespace AK
         static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
         static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
+        static const AkUniqueID PLAY_JOHNDOEBARKS = 4112292984U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
         static const AkUniqueID PLAY_LOAD_HANDGUN = 249020240U;
         static const AkUniqueID PLAY_LOAD_RIFLE = 3060105905U;
@@ -47,6 +49,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_FS = 4078825889U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
+        static const AkUniqueID PLAY_PLAYERDEATH = 910581297U;
         static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
         static const AkUniqueID PLAY_RIFLE_EMPTYMAG = 3334099943U;
@@ -479,6 +482,7 @@ namespace AK
         static const AkUniqueID DELAYSLAPS = 924856803U;
         static const AkUniqueID DELAYSLAPS_HANGARSPEAKER = 425081994U;
         static const AkUniqueID HANGARVERB_JD = 350835844U;
+        static const AkUniqueID JD_DEAD = 3670417488U;
         static const AkUniqueID ROOMHANGARMAIN = 986249158U;
         static const AkUniqueID ROOMSMALL = 3205342581U;
         static const AkUniqueID ROOMTUNNEL = 1603492950U;

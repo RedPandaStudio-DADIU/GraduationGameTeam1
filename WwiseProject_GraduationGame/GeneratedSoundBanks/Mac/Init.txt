@@ -85,11 +85,12 @@ State	ID	Name	State Group			Notes
 	930712164	Off	GuitarSpeaker			
 	1651971902	On	GuitarSpeaker			
 	748895195	None	XagaBossfightStates			
-	841236080	NearlyDead	XagaBossfightStates			
+	863260099	NearDead_LastSentence	XagaBossfightStates			
 	1031154770	LostStomach	XagaBossfightStates			
+	1062602090	XagaDead	XagaBossfightStates			
 	2676857933	LostLeg	XagaBossfightStates			
 	2961238679	LostArm	XagaBossfightStates			
-	4103826714	DeathScream	XagaBossfightStates			
+	3887839274	InitiateFight	XagaBossfightStates			
 	72790338	Low_health	Player_State_health			
 	748895195	None	Player_State_health			
 	3268324997	Normal_health	Player_State_health			
@@ -156,17 +157,20 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	986249158	RoomHangarMain			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomHangarMain	
 	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
 	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	
+	3670417488	JD_DEAD			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice\JD_DEAD	
 
 Effect plug-ins	ID	Name	Type				Notes
 	51356967	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	104816223	Echoes_Linear (Custom)	Wwise Delay			
 	260922761	Echoes_Linear (Custom)	Wwise Delay			
+	438276821	Caught_in_a_loop (Custom)	Wwise Stereo Delay			
 	535667444	Bathroom1	Wwise Matrix Reverb			
 	695490779	Echoes_Linear (Custom)	Wwise Delay			
 	702543456	Tunnel1	Wwise Matrix Reverb			
 	819943492	Fear_no_Evil	Wwise Harmonizer			
 	911411724	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	1259256166	New_RoomVerb	Wwise RoomVerb			
+	1711423976	Many_Odd_Harm_Notches	Wwise Flanger			
 	2849147824	Medium	Wwise RoomVerb			
 	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
 	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			

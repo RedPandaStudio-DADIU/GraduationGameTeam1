@@ -14,6 +14,46 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_DamageTaken" ID="{4FBB15DE-273C-4593-B20D-713673AF28A0}">
+					<ChildrenList>
+						<Action Name="" ID="{F0097FDD-C719-4D34-823D-E4A4D6838595}" ShortID="577290764">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage" ID="{0B8024C8-A710-4D46-993D-A4AEC0DE73B0}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{71DF30B2-81ED-491A-B293-18D8EC0DA4E6}" ShortID="353136836">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JD_Hitmarker" ID="{F895F81A-16F5-4D29-ACAE-EB4D030263D1}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PlayerDeath" ID="{CACD5C4C-E77B-4865-8069-468A1343C905}">
+					<ChildrenList>
+						<Action Name="" ID="{62A16BBB-A6C2-4AE3-95BD-E27F06EF27B2}" ShortID="933796124">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Death" ID="{7626E9AC-9E11-4767-93F8-ED9B608D8160}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_JohnDoeBarks" ID="{F89667ED-36F3-4F1E-9079-1078DDF40552}">
+					<ChildrenList>
+						<Action Name="" ID="{B98B7BE8-8C37-430A-AD3E-54C55322E844}" ShortID="981708177">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="JohnDoeBarks" ID="{1ACD4E79-57B4-4349-A821-2CB2D956C92A}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
