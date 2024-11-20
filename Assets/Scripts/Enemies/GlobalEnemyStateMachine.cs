@@ -77,6 +77,7 @@ public class GlobalEnemyStateMachine : MonoBehaviour
 
     public void LosePlayer(){
         Debug.Log("PLAYER IS LOST!");
+        this.enemies[0].GetMusicManager().CheckIfSameState(0);
 
         if (playerDetected)
         {

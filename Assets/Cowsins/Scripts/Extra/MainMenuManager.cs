@@ -250,17 +250,31 @@ namespace cowsins
                 // videoPlayer.Play();
                 mainMenuSections[2].section.gameObject.SetActive(true);
            
-                string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName).Replace("\\", "/");
-                videoPlayer.url = videoPath;
+                // string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName).Replace("\\", "/");
+                // string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
+                
+                #if UNITY_EDITOR || UNITY_STANDALONE
+                    // Correct the file path for VideoPlayer
+                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    videoPlayer.url = videoPath;
+                #elif UNITY_ANDROID
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov"; // Android handles StreamingAssets differently
+                    videoPlayer.url = videoPath;
+                #elif UNITY_IOS
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    videoPlayer.url = videoPath;
+                #endif
+                
+                
                 Debug.Log("Video path set to: " + videoPlayer.url);
-                if (System.IO.File.Exists(videoPlayer.url))
-                {
-                    Debug.Log("Video file found.");
-                }
-                else
-                {
-                    Debug.LogError("Video file not found: " + videoPlayer.url);
-                }
+                // if (System.IO.File.Exists(videoPlayer.url))
+                // {
+                //     Debug.Log("Video file found.");
+                // }
+                // else
+                // {
+                //     Debug.LogError("Video file not found: " + videoPlayer.url);
+                // }
                  videoPlayer.loopPointReached += OnVideoEnd;
                  mainMenuSections[1].section.gameObject.SetActive(false);
                 

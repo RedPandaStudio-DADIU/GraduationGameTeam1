@@ -21,7 +21,12 @@ public class EnemyAttackState : IEnemyState
         }
 
         stateController.GetAnimator().SetBool("IsAttacking", true);
+        if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
+            stateController.GetMusicManager().CheckIfSameState(2);
+        } else {
+            stateController.GetMusicManager().CheckIfSameState(1);
 
+        }
 
     }
     public void OnUpdate(EnemyStateController stateController){
@@ -38,6 +43,14 @@ public class EnemyAttackState : IEnemyState
                 isAttacking = true;
                 shootingCoroutine = stateController.StartCoroutine(ContinuousShooting(stateController));
             }
+            // not optimal
+            if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
+                stateController.GetMusicManager().CheckIfSameState(2);
+            } else {
+                stateController.GetMusicManager().CheckIfSameState(1);
+
+            }
+
             if (stateController.ReachedStoppingDistance()){
                 stateController.GetAnimator().SetBool("IsShooting", true);
                 stateController.GetAnimator().SetBool("IsAttacking", false);
