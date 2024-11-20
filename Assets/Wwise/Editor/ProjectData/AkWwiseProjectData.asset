@@ -801,7 +801,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584695043433926276
+    m_lastTime: -8584694967871831006
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -1259,7 +1259,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584695596494337433
+    m_lastTime: -8584695004921658496
     List: []
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
@@ -1272,7 +1272,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584695781158114650
+    m_lastTime: -8584695008657926445
     List:
     - name: BossFight
       guid: 43770ea62435ff42863ec4b8587eea89
@@ -1548,6 +1548,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_XagaCharge
+      guid: 9872439fcce15648ba80e20e5aa922e2
+      id: 2105779959
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Dialogue
+        ObjectType: 12
+        guid: 200b6a6a285dcd439f28a67e0a03cef1
+      - ElementName: lvl2_Conference
+        ObjectType: 4
+        guid: 7b56713b7bf77f4ba906f88b5e191254
+      - ElementName: BossFight
+        ObjectType: 4
+        guid: 43770ea62435ff42863ec4b8587eea89
+      - ElementName: Play_XagaCharge
+        ObjectType: 3
+        guid: 9872439fcce15648ba80e20e5aa922e2
+      Path: Events/Dialogue/lvl2_Conference/BossFight/Play_XagaCharge
+      maxAttenuation: 0
+      maxDuration: 5.002333
+      minDuration: 5.002333
     - name: Play_XagaDeathScream
       guid: a1610e97d0c9174986cd262c10b26f2c
       id: 655800824
@@ -1806,7 +1829,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion
     guid: a2c848ff1589744f939bb3dc40287186
     GuidInternal: 
-    m_lastTime: -8584695856310484891
+    m_lastTime: -8584695004921643349
     List:
     - name: Play_Brute_Fs
       guid: b989e5f174c5ce45b63f6d36555e9823
@@ -1825,6 +1848,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.4394294
       minDuration: 0.5063826
+    - name: Play_Xaga_Fs
+      guid: a8bc1b1b0e57bc41b9fa1a95b8bdb678
+      id: 958734511
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Locomotion
+        ObjectType: 12
+        guid: a2c848ff1589744f939bb3dc40287186
+      - ElementName: Play_Xaga_Fs
+        ObjectType: 3
+        guid: a8bc1b1b0e57bc41b9fa1a95b8bdb678
+      Path: Events/Locomotion/Play_Xaga_Fs
+      maxAttenuation: 20
+      maxDuration: 0.98510176
+      minDuration: 0.5231017
   - PhysicalPath: Events/Music.wwu
     PathAndIcons:
     - ElementName: Events

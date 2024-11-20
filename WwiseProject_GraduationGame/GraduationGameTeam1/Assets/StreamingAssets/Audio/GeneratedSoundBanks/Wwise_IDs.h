@@ -62,8 +62,10 @@ namespace AK
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAY_UNLOAD_RIFLE = 1943012356U;
         static const AkUniqueID PLAY_XAGA_DIA_LVL2 = 2842468683U;
+        static const AkUniqueID PLAY_XAGA_FS = 958734511U;
         static const AkUniqueID PLAY_XAGA_HURTSOUNDS_DAMAGETAKEN = 920126564U;
         static const AkUniqueID PLAY_XAGA_STATEDIALOGUE = 3452699959U;
+        static const AkUniqueID PLAY_XAGACHARGE = 2105779959U;
         static const AkUniqueID PLAY_XAGADEATHSCREAM = 655800824U;
         static const AkUniqueID STOP_GUITARLOOP = 4128836072U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
