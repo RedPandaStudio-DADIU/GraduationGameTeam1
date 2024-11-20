@@ -35,7 +35,9 @@ public class BossSpecialState : IEnemyState
         {
             if (stateController.GetEnemy().CompareTag("Boss") && stateController.GetEnemy().GetChargeSound() != null)
             {
+                stateController.GetEnemy().GetComponent<Boss>().InstantiateAttackPrepVFX();
                 stateController.GetEnemy().GetChargeSound().Post(stateController.GetEnemy().gameObject);
+                // add the instantiation of the vfx
             }
             yield return new WaitForSeconds(chargeTime);
 
@@ -46,6 +48,8 @@ public class BossSpecialState : IEnemyState
 
                 stateController.ChangeState(stateController.GetPreviousState());
             }
+
+            stateController.GetEnemy().GetComponent<Boss>().StopAttackPrepVFX();
         }
     }
 

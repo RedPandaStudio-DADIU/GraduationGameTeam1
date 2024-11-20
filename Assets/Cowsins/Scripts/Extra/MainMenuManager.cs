@@ -158,6 +158,9 @@ namespace cowsins
         public static MainMenuManager Instance { get; private set; }
 
         [SerializeField] private VideoPlayer videoPlayer;
+        [SerializeField] private string videoFileName ; 
+        
+   
 
 
         [SerializeField, Header("Sections")] private MainMenuSection[] mainMenuSections;
@@ -183,6 +186,8 @@ namespace cowsins
         {
             mainMenuSections[0].section.gameObject.SetActive(true);
             //mainMenuSections[0].section.alpha = 1;
+            mainMenuSections[2].section.gameObject.SetActive(false);
+           
 
             // We want to skip the first item
             for (int i = 1; i < mainMenuSections.Length; i++)
@@ -239,10 +244,44 @@ namespace cowsins
             if (videoPlayer != null)
             {
                
-                videoPlayer.loopPointReached += OnVideoEnd;
+                // videoPlayer.loopPointReached += OnVideoEnd;
+                //  mainMenuSections[1].section.gameObject.SetActive(false);
+                
+                // videoPlayer.Play();
+                mainMenuSections[2].section.gameObject.SetActive(true);
+           
+                // string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName).Replace("\\", "/");
+                // string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
+                
+                #if UNITY_EDITOR || UNITY_STANDALONE
+                    // Correct the file path for VideoPlayer
+                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    videoPlayer.url = videoPath;
+                #elif UNITY_ANDROID
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov"; // Android handles StreamingAssets differently
+                    videoPlayer.url = videoPath;
+                #elif UNITY_IOS
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    videoPlayer.url = videoPath;
+                #endif
+                
+                
+                Debug.Log("Video path set to: " + videoPlayer.url);
+                // if (System.IO.File.Exists(videoPlayer.url))
+                // {
+                //     Debug.Log("Video file found.");
+                // }
+                // else
+                // {
+                //     Debug.LogError("Video file not found: " + videoPlayer.url);
+                // }
+                 videoPlayer.loopPointReached += OnVideoEnd;
                  mainMenuSections[1].section.gameObject.SetActive(false);
                 
                 videoPlayer.Play();
+                Debug.Log("Is playing: " + videoPlayer.isPlaying);
+
+
                 Debug.Log("Playing video before scene load.");
             }
             else

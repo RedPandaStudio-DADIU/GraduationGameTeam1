@@ -4,7 +4,13 @@
 		<WorkUnit Name="Environment" ID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}" OwnerID="{F23BDBC6-437F-4699-8FF2-A34EBFBB46AD}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="Elevator" ID="{2E165460-5B1E-4689-852F-7481C0687C54}" ShortID="81312219">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_10m" ID="{DB1DBD29-F33B-42AC-8FFB-F8373677B987}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
@@ -91,6 +97,9 @@
 							</ChildrenList>
 						</ActorMixer>
 						<SwitchContainer Name="Elevator_Motion" ID="{72E9AE7F-77DE-4729-A57A-6413D04DDFC6}" ShortID="62170283">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -102,15 +111,13 @@
 									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="ElevatorMotion" ID="{A076D5CB-0BF5-4AD8-B13F-81C423AB524E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+									<ObjectRef Name="ElevatorInTransit" ID="{A076D5CB-0BF5-4AD8-B13F-81C423AB524E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}" ShortID="926299933">
+								<BlendContainer Name="New Blend Container" ID="{429B5FB6-81B4-4F82-A882-D074FEFB4535}" ShortID="1015722936">
 									<PropertyList>
-										<Property Name="PlayMechanismResetPlaylistEachPlay" Type="bool" Value="False"/>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+										<Property Name="BlendBehavior" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -121,7 +128,110 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Elevator_Running_lp" ID="{D4AEBE4F-7E6A-41FE-8586-052ED3302DAA}" ShortID="1026117483">
+										<RandomSequenceContainer Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}" ShortID="926299933">
+											<PropertyList>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Elevator_Running_lp" ID="{D4AEBE4F-7E6A-41FE-8586-052ED3302DAA}" ShortID="1026117483">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Elevator_Running_lp" ID="{8BD86099-8D99-43CB-BBF0-22CD4FA5A7C6}">
+															<Language>SFX</Language>
+															<AudioFile>Elevator\Elevator\Elevator_Running_lp.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="788156748"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Elevator_Running_lp" ID="{8BD86099-8D99-43CB-BBF0-22CD4FA5A7C6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Elevator_Startup" ID="{009F2A3E-D1B9-4331-8022-3DC591452276}" ShortID="594872264">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Elevator_Startup" ID="{45E3031B-1919-436B-9B37-8AE99F4C2255}">
+															<Language>SFX</Language>
+															<AudioFile>Elevator\Elevator\Elevator_Startup.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="115585820"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Elevator_Startup" ID="{45E3031B-1919-436B-9B37-8AE99F4C2255}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="Elevator_Startup" ID="{009F2A3E-D1B9-4331-8022-3DC591452276}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="Elevator_Running_lp" ID="{D4AEBE4F-7E6A-41FE-8586-052ED3302DAA}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<Sound Name="Elevator_Stop" ID="{D4C14495-5797-4C16-87D7-42629EEBB037}" ShortID="531863666">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Elevator_Stop" ID="{4A2B6622-3D20-4A42-9D1F-0583C23ABFAC}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0321203615903096"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.74872955607477"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.04040307539703"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Elevator\Elevator\Elevator_Stop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="23641543"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Elevator_Stop" ID="{4A2B6622-3D20-4A42-9D1F-0583C23ABFAC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Elevator_Silence" ID="{59FC11D6-7857-4111-BBE1-99EAAFCEA9C2}" ShortID="875748495">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 											</PropertyList>
@@ -134,139 +244,67 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Elevator_Running_lp" ID="{8BD86099-8D99-43CB-BBF0-22CD4FA5A7C6}">
+												<SourcePlugin Name="Silence" ID="{DAAD7BE4-9033-4488-8C93-E1581DDFFA05}" ShortID="1045178509" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 													<Language>SFX</Language>
-													<AudioFile>Elevator\Elevator\Elevator_Running_lp.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="788156748"/>
-													</MediaIDList>
-												</AudioFileSource>
+												</SourcePlugin>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Elevator_Running_lp" ID="{8BD86099-8D99-43CB-BBF0-22CD4FA5A7C6}" Platform="Linked"/>
+												<ActiveSource Name="Silence" ID="{DAAD7BE4-9033-4488-8C93-E1581DDFFA05}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Elevator_Startup" ID="{009F2A3E-D1B9-4331-8022-3DC591452276}" ShortID="594872264">
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="IsRunning" ID="{058F27ED-9D3C-4E1A-BFA0-384A9A5CC4D6}" ShortID="555351586">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="RTPC_Elevator" ID="{A09E2BD8-89AF-4611-A276-B746794C67D6}" WorkUnitID="{B3C6B8CF-98E9-498E-BDF1-0630114D5C83}"/>
 												</Reference>
 											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Elevator_Startup" ID="{45E3031B-1919-436B-9B37-8AE99F4C2255}">
-													<Language>SFX</Language>
-													<AudioFile>Elevator\Elevator\Elevator_Startup.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="115585820"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Elevator_Startup" ID="{45E3031B-1919-436B-9B37-8AE99F4C2255}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Playlist">
-											<Reference>
-												<ObjectRef Name="Elevator_Startup" ID="{009F2A3E-D1B9-4331-8022-3DC591452276}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-											</Reference>
-											<Reference>
-												<ObjectRef Name="Elevator_Running_lp" ID="{D4AEBE4F-7E6A-41FE-8586-052ED3302DAA}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
-								<Sound Name="Elevator_Stop" ID="{D4C14495-5797-4C16-87D7-42629EEBB037}" ShortID="531863666">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Elevator_Stop" ID="{4A2B6622-3D20-4A42-9D1F-0583C23ABFAC}">
-											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0321203615903096"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="4.04040307539703"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Elevator\Elevator\Elevator_Stop.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="23641543"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Elevator_Stop" ID="{4A2B6622-3D20-4A42-9D1F-0583C23ABFAC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Elevator_Silence" ID="{59FC11D6-7857-4111-BBE1-99EAAFCEA9C2}" ShortID="875748495">
-									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{DAAD7BE4-9033-4488-8C93-E1581DDFFA05}" ShortID="1045178509" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{DAAD7BE4-9033-4488-8C93-E1581DDFFA05}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="Elevator_Silence" ID="{59FC11D6-7857-4111-BBE1-99EAAFCEA9C2}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>0.256819283186957</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0.164755570269159</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>0.869126716726357</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="Elevator_Stop" ID="{D4C14495-5797-4C16-87D7-42629EEBB037}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0.674208348857633</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>1</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Elevator_Stop" ID="{D4C14495-5797-4C16-87D7-42629EEBB037}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Elevator_Silence" ID="{59FC11D6-7857-4111-BBE1-99EAAFCEA9C2}"/>
-										<PropertyList>
-											<Property Name="FirstOccurenceOnly" Type="bool" Value="True"/>
-										</PropertyList>
+										<ItemRef Name="New Blend Container" ID="{429B5FB6-81B4-4F82-A882-D074FEFB4535}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
-								<GroupingList>
-									<Grouping>
-										<SwitchRef Name="Start" ID="{6AD8D672-847E-43AB-A304-69BA1B8F7E16}"/>
-										<ItemList>
-											<ItemRef Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Stop" ID="{3D786D8B-22C3-4C3A-A8B5-14AB6678B637}"/>
-										<ItemList>
-											<ItemRef Name="Elevator_Stop" ID="{D4C14495-5797-4C16-87D7-42629EEBB037}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
-										<ItemList>
-											<ItemRef Name="Elevator_Silence" ID="{59FC11D6-7857-4111-BBE1-99EAAFCEA9C2}"/>
-										</ItemList>
-									</Grouping>
-								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
-						<SwitchContainer Name="Beeps" ID="{B0240988-4BE8-4C79-B9CA-C88D562B9437}" ShortID="793344040">
+						<SwitchContainer Name="ButtonPress" ID="{B0240988-4BE8-4C79-B9CA-C88D562B9437}" ShortID="793344040">
 							<PropertyList>
 								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 							</PropertyList>
@@ -281,7 +319,7 @@
 									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="ElevatorPowerState" ID="{2BA09121-2FBA-4CFC-A173-B7B38B5F1D5E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+									<ObjectRef Name="ElevatorPower" ID="{2BA09121-2FBA-4CFC-A173-B7B38B5F1D5E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -462,18 +500,21 @@
 							</GroupingInfo>
 						</SwitchContainer>
 						<SwitchContainer Name="Elevator_PowerState" ID="{2BA7C6D2-3CF9-4337-BB99-3E6D1ECA48B5}" ShortID="240094612">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 								</Reference>
 								<Reference Name="DefaultSwitchOrState">
-									<ObjectRef Name="PowerOn" ID="{5F76E678-61C2-4E55-A00F-039E3F42EE2C}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+									<ObjectRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="ElevatorPowerState" ID="{2BA09121-2FBA-4CFC-A173-B7B38B5F1D5E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+									<ObjectRef Name="ElevatorPower" ID="{2BA09121-2FBA-4CFC-A173-B7B38B5F1D5E}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -598,8 +639,172 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<RandomSequenceContainer Name="ElevatorDoorOpen" ID="{DE8360EC-4768-45C6-A2B5-686ABAF18A71}" ShortID="1010254934">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074" ID="{8766D5A5-9AFC-4D91-85B1-E5ED16C52BC3}" ShortID="1003323101">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074" ID="{25B341BC-789C-46E0-8B05-386A500FD48B}">
+											<Language>SFX</Language>
+											<AudioFile>Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="493325606"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074" ID="{25B341BC-789C-46E0-8B05-386A500FD48B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Machines_Elevator_Door_Open_Close_Angle_01_SND11637" ID="{9349BBDC-214C-42BF-B6C3-856AEB1A480C}" ShortID="999125245">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Machines_Elevator_Door_Open_Close_Angle_01_SND11637" ID="{F9B03A5B-0D37-45D3-B96C-1A8E26CA1B52}">
+											<Language>SFX</Language>
+											<AudioFile>Machines_Elevator_Door_Open_Close_Angle_01_SND11637.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="245350830"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Machines_Elevator_Door_Open_Close_Angle_01_SND11637" ID="{F9B03A5B-0D37-45D3-B96C-1A8E26CA1B52}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Bells_Doorbell_Elevator_Bell_Ding_Small_Close_Variations_SND107074" ID="{8766D5A5-9AFC-4D91-85B1-E5ED16C52BC3}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Machines_Elevator_Door_Open_Close_Angle_01_SND11637" ID="{9349BBDC-214C-42BF-B6C3-856AEB1A480C}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
+				<RandomSequenceContainer Name="BarrelExplosion" ID="{256D62D3-472A-4C78-BE01-FC0DA940571E}" ShortID="938273665">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{77F10B0E-F292-4DA3-8919-FF06D001C6E7}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-300"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FD697A92-B8B2-4D32-8455-004D042A954A}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Explosions_Designed_Explosion_No_Fragments_SND81684" ID="{5E99E5CD-CD0B-4227-A391-2E8E1BD47C97}" ShortID="402790512">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{24CFA94D-D60B-43D4-9A3C-64CBC9E15B6D}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{68F53C37-475E-4791-8A32-8795D66A149C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosions_Designed_Explosion_No_Fragments_SND81684" ID="{6EAF3F42-2DA4-4ED9-A616-1BF0F8CA6A2D}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.21596481070284"/>
+										<Property Name="FadeOutShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Explosions_Designed_Explosion_No_Fragments_SND81684.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="718891495"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosions_Designed_Explosion_No_Fragments_SND81684" ID="{6EAF3F42-2DA4-4ED9-A616-1BF0F8CA6A2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

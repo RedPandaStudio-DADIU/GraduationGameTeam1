@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9FBFF435-93B6-4A21-BC9C-2620BDF34D0F}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="Music_States" ID="{9FBFF435-93B6-4A21-BC9C-2620BDF34D0F}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Combat_intensity_Lv1" ID="{857203BA-DCB5-4084-B845-055C4269FFCA}">
+					<ChildrenList>
+						<State Name="None" ID="{B06E66B7-3E87-49A6-81A9-F25120B275D9}"/>
+						<State Name="Combat_low_Lv1" ID="{053F5B01-CCB5-49F0-A56B-4A4AB40ACC87}"/>
+						<State Name="Combat_high_Lv1" ID="{39E35C94-AD1E-4E9A-81F2-848C10CBFB05}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Combat_intensity_Lv2" ID="{D06D187A-F794-458E-84B0-32848A952069}">
+					<ChildrenList>
+						<State Name="None" ID="{88B4A91F-DC66-43CD-892E-3D1D26ED9126}"/>
+						<State Name="Combat_high_Lv2" ID="{AD366E52-C944-4627-97CA-6E3DB937C575}"/>
+						<State Name="Combat_base_lv2" ID="{5D021475-9B83-4FC0-B022-CE6776E7795A}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Player_State_health" ID="{4944659A-FA20-4983-BBFB-9F0F617A2B7E}">
+					<ChildrenList>
+						<State Name="None" ID="{86461271-D073-44C7-BFD3-AB9EF9B30F7C}"/>
+						<State Name="Low_health" ID="{E9824434-D87E-4B0D-B8F5-8A39325F8351}"/>
+						<State Name="Normal_health" ID="{8C83219C-973B-45AE-8967-CA7C8745AF30}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Combat" ID="{1A0BCBDB-3CB8-4443-A3A8-DAD991CE1030}">
+					<ChildrenList>
+						<State Name="None" ID="{5F2F25BC-EF38-4DB3-8DF4-52E7BA412DF8}"/>
+						<State Name="In_combat" ID="{789B1D6D-0E8B-4A6A-87AE-2C1F3B387078}"/>
+						<State Name="No_combat" ID="{CEA5D50E-21F4-4645-88AC-E1EE79145F5F}"/>
+						<State Name="Elevator" ID="{D0A2DEAB-4D62-43CA-ABA2-EE4C60479D9B}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Player_Level" ID="{7B1B52E6-4837-4EFF-A630-033C7EC35697}">
+					<ChildrenList>
+						<State Name="None" ID="{6529CAA9-DFEC-43D8-928A-82884CE0D255}"/>
+						<State Name="Lv1" ID="{90D10F23-69EF-4B52-87E3-E7005C978DD9}"/>
+						<State Name="Lv2" ID="{5D8A7D52-040A-48E6-ABF8-D56ACE6A036B}"/>
+						<State Name="Menu" ID="{286DE460-EC2C-45CB-A3B4-3E781ABA8282}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="Lv2_ending" ID="{25662F38-735D-4B8A-A64F-921300740EB5}">
+					<ChildrenList>
+						<State Name="None" ID="{DA74BF0D-A590-4C8D-912C-990697B0C03F}"/>
+						<State Name="Win" ID="{71B81B41-18D2-4F8A-A601-716048A6E731}"/>
+						<State Name="Loose" ID="{AF8C80B9-D2F8-4B95-B6D0-7BD426379E23}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

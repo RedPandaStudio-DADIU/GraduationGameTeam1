@@ -5,9 +5,14 @@
 			<ChildrenList>
 				<ActorMixer Name="Weapons" ID="{497C62F9-BB98-4681-BDD1-5CB2520D90DA}" ShortID="222765867">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-14</Value>
 							</ValueList>
@@ -15,13 +20,13 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="att_Generic_500m" ID="{B973D85E-9EEA-400D-BE56-E2BF14F86750}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+							<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+							<ObjectRef Name="Weapons" ID="{E43FDD2F-1184-43B4-BBF2-688F7FC66E13}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
 						</Reference>
 						<Reference Name="UserAuxSend0">
 							<ObjectRef Name="RoomSmall" ID="{73967A86-8EB2-4CF2-AB9A-A4F4360C3FE7}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
@@ -98,6 +103,11 @@
 												<Property Name="UseMaxSoundPerInstance" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-12</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -190,6 +200,11 @@
 														<Value>47</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-16</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -231,6 +246,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -242,6 +262,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Rifle_Slime" ID="{963A5B00-37DA-4876-8499-1EB5252F1409}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0258104253112033"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.160598201936376"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Rifle_Slime.wav</AudioFile>
 													<MediaIDList>
@@ -255,10 +280,16 @@
 										</Sound>
 										<RandomSequenceContainer Name="Recharge" ID="{9847390C-29FC-41A0-9811-B074FAB31B6D}" ShortID="25198364">
 											<PropertyList>
+												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 												<Property Name="OverridePriority" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2.5"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Priority" Type="int16">
 													<ValueList>
@@ -266,6 +297,12 @@
 													</ValueList>
 												</Property>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -279,11 +316,6 @@
 												<RandomSequenceContainer Name="Rifle_Recharge" ID="{D4324987-0BC1-49F8-AC3B-57C6AD24073A}" ShortID="493632912">
 													<PropertyList>
 														<Property Name="3DSpatialization" Type="int16" Value="2"/>
-														<Property Name="InitialDelay" Type="Real64">
-															<ValueList>
-																<Value>0.5</Value>
-															</ValueList>
-														</Property>
 														<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 														<Property Name="MaxSoundPerInstance" Type="int16">
 															<ValueList>
@@ -327,6 +359,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rifle_Recharge_1" ID="{59D40569-03EC-4704-B91A-12CE8163B877}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0542339993792332"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.101688748836062"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rifle_Recharge_1.wav</AudioFile>
 																	<MediaIDList>
@@ -349,6 +386,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rifle_Recharge_2" ID="{80C1B0B5-FCBC-4656-BF51-169D7F660DB6}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0376218361057627"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0978167738749829"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rifle_Recharge_2.wav</AudioFile>
 																	<MediaIDList>
@@ -371,6 +413,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rifle_Recharge_3" ID="{7EC0934E-BEEC-4527-B647-2D90D9F99193}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.090787392511733"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.081230824878919"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rifle_Recharge_3.wav</AudioFile>
 																	<MediaIDList>
@@ -446,9 +493,50 @@
 														<ActiveSource Name="Rifle_NuclearCooldown" ID="{42328F6F-9F54-4F10-8A86-FAA395F834CE}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<Sound Name="Silence" ID="{43276061-4473-4F17-8125-B1EAFBEC58EB}" ShortID="489940273">
+													<PropertyList>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
+														<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+														<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-14</Value>
+															</ValueList>
+														</Property>
+														<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="att_Generic_500m" ID="{B973D85E-9EEA-400D-BE56-E2BF14F86750}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+														</Reference>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="RoomSmall" ID="{73967A86-8EB2-4CF2-AB9A-A4F4360C3FE7}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<SourcePlugin Name="Silence" ID="{E4EE0BB5-DF06-4007-8C21-828CD50BCB7D}" ShortID="148861226" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+															<Language>SFX</Language>
+														</SourcePlugin>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{F0702C71-7120-49E1-AA9F-800A8C63616B}"/>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="Silence" ID="{E4EE0BB5-DF06-4007-8C21-828CD50BCB7D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="Silence" ID="{43276061-4473-4F17-8125-B1EAFBEC58EB}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
+													</Reference>
 													<Reference>
 														<ObjectRef Name="Rifle_Recharge" ID="{D4324987-0BC1-49F8-AC3B-57C6AD24073A}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
 													</Reference>
@@ -458,11 +546,53 @@
 												</ObjectList>
 											</ObjectLists>
 										</RandomSequenceContainer>
+										<Sound Name="Rifle_FireMainv2" ID="{3B21566D-45EA-4309-8C96-40D414F26C71}" ShortID="969267406">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7861C497-9016-4542-AEAD-2D603B460D02}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="76"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Rifle_FireMainv2" ID="{9DDB9E29-5BB9-4E95-9228-AD8862229C88}">
+													<Language>SFX</Language>
+													<AudioFile>Rifle_FireMainv2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="655758477"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Rifle_FireMainv2" ID="{9DDB9E29-5BB9-4E95-9228-AD8862229C88}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
 											<Reference>
-												<ObjectRef Name="Rifle_FireMain" ID="{3487B195-629B-404C-AC7F-E2F9ACEB54A4}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
+												<ObjectRef Name="Rifle_FireMainv2" ID="{3B21566D-45EA-4309-8C96-40D414F26C71}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
 											</Reference>
 											<Reference>
 												<ObjectRef Name="Rifle_Slime" ID="{4816DCDA-DA40-4100-9256-A937D3E57BAD}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
@@ -480,6 +610,13 @@
 									</ObjectLists>
 								</RandomSequenceContainer>
 								<Sound Name="Rifle_Load" ID="{5F9EE5C3-2E4D-43FC-A0A1-3C55F55C380C}" ShortID="969904519">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -763,6 +900,50 @@
 										</GroupingBehaviorList>
 									</GroupingInfo>
 								</SwitchContainer>
+								<Sound Name="Rifle_Mag_Empty" ID="{5D37285F-0571-4F84-A52B-CF4E49FA8186}" ShortID="407688149">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Rifle_Mag_Empty" ID="{68A0BC75-FC07-4BCA-AD18-394EEE95C7A5}">
+											<Language>SFX</Language>
+											<AudioFile>Rifle_Mag_Empty.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="15644422"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Rifle_Mag_Empty" ID="{68A0BC75-FC07-4BCA-AD18-394EEE95C7A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Rife_Reload" ID="{8DCF7C2C-8652-401F-8FB4-7F4C59D7CEB1}" ShortID="238518027">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Guns_Handle_Gun_Handle_Single_Laser_Reload_SciFi_01_SND108404" ID="{13351419-9760-42C9-97CE-1173BFB6CD8B}">
+											<Language>SFX</Language>
+											<AudioFile>Guns_Handle_Gun_Handle_Single_Laser_Reload_SciFi_01_SND108404.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="642111871"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Guns_Handle_Gun_Handle_Single_Laser_Reload_SciFi_01_SND108404" ID="{13351419-9760-42C9-97CE-1173BFB6CD8B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Gun" ID="{5E8BEE07-FBF6-4750-983F-15CCD40F5397}" ShortID="879474732">
@@ -951,7 +1132,13 @@
 					</PositioningInfo>
 				</ActorMixer>
 				<Sound Name="Hitmarker_Air_v1" ID="{6E9DC5F0-472A-4E64-8129-F5EAC6F2181B}" ShortID="376378571">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>

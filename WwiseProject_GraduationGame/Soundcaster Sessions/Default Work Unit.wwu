@@ -3,7 +3,7 @@
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{86755513-0603-472F-B1E9-A78D1D897B0F}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="New Soundcaster Session" ID="{12E6DD35-85F3-4075-9988-A6398C1CEA75}">
+				<SoundcasterSession Name="New Soundcaster Session" ID="{69F5846C-A989-48AA-80C3-AC0F14AD87F7}">
 					<ModuleList>
 						<Module>
 							<ObjectRef Name="Play_Load_Rifle" ID="{AB8D80EE-36E4-4A1C-A362-E95ADE77C721}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
@@ -30,10 +30,6 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Player_Fs" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}" WorkUnitID="{42B88A57-E40B-4377-81C9-DC30979D03C2}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -46,28 +42,16 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Brute_Footsteps" ID="{F1E589B9-C574-45CE-B63F-6D36555E9823}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}"/>
+							<ObjectRef Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
+							<ObjectRef Name="Play_Guitarloop" ID="{5A725ECE-C54F-44CA-ACBA-9E386F3552C5}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Guitarloop" ID="{5A725ECE-C54F-44CA-ACBA-9E386F3552C5}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
+							<ObjectRef Name="Play_Brute_Fs" ID="{F1E589B9-C574-45CE-B63F-6D36555E9823}" WorkUnitID="{FF48C8A2-8915-4F74-939B-B3DC40287186}"/>
 							<Position X="3" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Sc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="4" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Dia_Xaga" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="4" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Sc4" ID="{DB1CB697-BC45-40FB-ACA1-B8A1D4794035}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="4" Y="2"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -77,11 +61,10 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Sc1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
+						<CurrentStateRef Name="Combat_low_Lv1" ID="{053F5B01-CCB5-49F0-A56B-4A4AB40ACC87}"/>
 						<CurrentStateRef Name="On" ID="{38418DA2-AE8F-4F9E-90BC-277B67AA01F2}"/>
 						<CurrentStateRef Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
 						<CurrentStateRef Name="None" ID="{71DEAC1B-AFD2-4EF9-B68B-44EF423FA49A}"/>
-						<CurrentStateRef Name="Sc1" ID="{98F8221E-9BBA-4BBD-A142-E5B096921A65}"/>
 						<CurrentStateRef Name="None" ID="{1725FE84-7321-45EB-8265-EAA10E64B31A}"/>
 						<CurrentStateRef Name="None" ID="{06E39AB6-657B-43CB-AC87-509895CB23D3}"/>
 					</CurrentStateList>
@@ -96,7 +79,48 @@
 						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
-						<CurrentSwitchRef Name="Awake" ID="{64088296-B8D5-43C1-925A-106B9C3BF6AC}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_01" ID="{F05BFBCA-4DF0-464C-A74C-95FC10CDB2EE}">
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
+						<CurrentSwitchRef Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+						<CurrentSwitchRef Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<CurrentSwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
+						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
+						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
+						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Kristina" ID="{AD70261A-D15F-4851-AE2E-4EE64492D37A}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_MainMusicSW" ID="{44FD3B6B-CCE2-4597-8C5B-EA949A1B6D10}" WorkUnitID="{DA05CE28-EF65-4F80-ADE3-7C84FF921A5C}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Combat_low_Lv1" ID="{053F5B01-CCB5-49F0-A56B-4A4AB40ACC87}"/>
+						<CurrentStateRef Name="In_combat" ID="{789B1D6D-0E8B-4A6A-87AE-2C1F3B387078}"/>
+						<CurrentStateRef Name="Lv1" ID="{90D10F23-69EF-4B52-87E3-E7005C978DD9}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
+						<CurrentSwitchRef Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
+						<CurrentSwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
+						<CurrentSwitchRef Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<CurrentSwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
+						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
+						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
+						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

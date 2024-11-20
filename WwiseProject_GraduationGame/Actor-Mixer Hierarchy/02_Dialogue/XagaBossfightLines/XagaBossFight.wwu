@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="XagaBossFight" ID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchContainer Name="Xaga_StateDialogue" ID="{85081F6E-95D9-449B-828A-0FC4E995CBEB}" ShortID="908892081">
+					<PropertyList>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="None" ID="{CFE4DD3B-CADD-4DA2-B984-776397838671}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="XagaBossfightStates" ID="{06167756-0970-4B73-8734-9FB15BD0CAFC}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="NooMystomach" ID="{286A5BCD-27E4-4E19-BAB0-DCD07E89C16B}" ShortID="947243145">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="NooMystomach" ID="{83EA951E-346A-411E-9629-1ED3D7E91A94}">
+									<Language>English(US)</Language>
+									<AudioFile>NooMystomach.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="65439675"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="NooMystomach" ID="{83EA951E-346A-411E-9629-1ED3D7E91A94}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}" ShortID="464480542">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="NoooMyleg" ID="{BFE91028-0643-4050-92C4-AD116EF3AF1F}">
+									<Language>English(US)</Language>
+									<AudioFile>NoooMyleg.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="963954882"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="NoooMyleg" ID="{BFE91028-0643-4050-92C4-AD116EF3AF1F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}" ShortID="966999466">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="NooooMyArm" ID="{837A311E-B50E-4648-8E2F-1767B99D9F31}">
+									<Language>English(US)</Language>
+									<AudioFile>NooooMyArm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="705500713"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="NooooMyArm" ID="{837A311E-B50E-4648-8E2F-1767B99D9F31}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}" ShortID="245159429">
+							<PropertyList>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="IDidntMeanToKill" ID="{EA01E875-2670-4424-B8B8-F518398CA096}" ShortID="523321664">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="IDidntMeanToKill" ID="{7BE34355-7884-4CCC-BA0F-5A211A7618A2}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.15424684159378"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.48462585034014"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>IDidntMeanToKill.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="257021756"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="IDidntMeanToKill" ID="{7BE34355-7884-4CCC-BA0F-5A211A7618A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ItWasAMistake" ID="{1A71FBFB-209C-408A-833A-737C7E5D2FD2}" ShortID="545251662">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ItWasAMistake" ID="{76A59249-075D-4F78-A41B-6652D9A2E159}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0670831597945301"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0402498958767179"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.54291267527419"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>ItWasAMistake.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="100377375"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ItWasAMistake" ID="{76A59249-075D-4F78-A41B-6652D9A2E159}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="IDidntMeanToKill" ID="{EA01E875-2670-4424-B8B8-F518398CA096}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="ItWasAMistake" ID="{1A71FBFB-209C-408A-833A-737C7E5D2FD2}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<Sound Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}" ShortID="1040995155">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}">
+									<Language>English(US)</Language>
+									<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="544073228"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}" ShortID="161393741">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_LetsDoThis" ID="{676CC4D7-4C00-4263-B6B5-5CBC62848538}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.723611626468769"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.723611626468769"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_LetsDoThis.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="450005902"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_LetsDoThis" ID="{676CC4D7-4C00-4263-B6B5-5CBC62848538}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="NooMystomach" ID="{286A5BCD-27E4-4E19-BAB0-DCD07E89C16B}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="XagaDead" ID="{0CD28F13-CAD4-4581-8ED6-B1AB105FCBE8}"/>
+								<ItemList>
+									<ItemRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LostLeg" ID="{E484E637-624E-4C02-82C4-6C2B20DA28F5}"/>
+								<ItemList>
+									<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="InitiateFight" ID="{E6A1FE71-2DBC-4E32-BAB3-7687C460A4A5}"/>
+								<ItemList>
+									<ItemRef Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LostStomach" ID="{A93F9EAD-6E61-430A-80E1-4D0C2ED30FB8}"/>
+								<ItemList>
+									<ItemRef Name="NooMystomach" ID="{286A5BCD-27E4-4E19-BAB0-DCD07E89C16B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LostArm" ID="{F7CA30C3-8F8F-43FF-9B0A-E02DC51E7F55}"/>
+								<ItemList>
+									<ItemRef Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="NearDead_LastSentence" ID="{7231C3E3-CC09-449A-8D08-F1E737DA3E5A}"/>
+								<ItemList>
+									<ItemRef Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<SwitchContainer Name="Xaga_HurtSounds_DamageTaken" ID="{348FD35E-4E70-4D7A-A01C-1FC1727BA174}" ShortID="349368412">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="XagaHealth" ID="{9BBAB994-4181-45E4-B250-E82318BBE8EA}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}" ShortID="564078664">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Hd1" ID="{306F9E64-48A1-48A9-98D6-FC501306DCC7}" ShortID="990806538">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_31_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D0B46639-C3B5-4028-9E72-FE5632665462}">
+											<Language>English(US)</Language>
+											<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_31_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="994855751"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_00_31_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D0B46639-C3B5-4028-9E72-FE5632665462}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hd2" ID="{53736744-2CDD-4606-8DAE-538C7C04D9B7}" ShortID="839251423">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{4D48B895-8C13-4DC5-A6C7-FDCC699CAF53}">
+											<Language>English(US)</Language>
+											<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1008319792"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{4D48B895-8C13-4DC5-A6C7-FDCC699CAF53}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hd3" ID="{D09E2521-F843-46A1-A24B-036E4F3D3176}" ShortID="727869320">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{F4886EB6-4FFF-498E-B9B3-48BE7343F2DE}">
+											<Language>English(US)</Language>
+											<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="987801719"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{F4886EB6-4FFF-498E-B9B3-48BE7343F2DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hd5" ID="{A7C738D1-9612-4D9B-B38B-451FE34869EE}" ShortID="256109637">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_01_03_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A7C9ED2B-8648-4439-B36D-527DAD0BB9AD}">
+											<Language>English(US)</Language>
+											<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_01_03_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="601630630"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_01_03_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A7C9ED2B-8648-4439-B36D-527DAD0BB9AD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hd6" ID="{3E9FC2E1-0C55-4DA0-9FCF-026BDC0D9E23}" ShortID="430070440">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_01_17_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{603B7E85-6765-4907-A396-5BBA21F60040}">
+											<Language>English(US)</Language>
+											<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_01_17_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="868187555"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_01_17_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{603B7E85-6765-4907-A396-5BBA21F60040}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hd7" ID="{7E17A911-453D-4635-BD41-83C2509A5DDD}" ShortID="182147791">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_01_19_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D3FAB495-1D6A-4FC5-A92C-740D1B31FB42}">
+											<Language>English(US)</Language>
+											<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_01_19_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="814745917"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_01_19_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D3FAB495-1D6A-4FC5-A92C-740D1B31FB42}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Urgh1" ID="{BFAB5B0A-383E-4542-9061-6ACE5AD8D1E7}" ShortID="155679825">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_11_39_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{9D2AB273-51E9-4673-BB45-C87EAFA042C3}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_11_39_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="16537571"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_11_39_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{9D2AB273-51E9-4673-BB45-C87EAFA042C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Urgh2" ID="{4E418FC7-F8A9-47F7-80C1-C7F0031A815A}" ShortID="113096842">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A5A9B1D0-A329-4B48-A2FC-180B08BB719A}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="417351480"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A5A9B1D0-A329-4B48-A2FC-180B08BB719A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Urgh3" ID="{1B8CD89F-921F-47C7-8CD4-253C77D6A9EC}" ShortID="294205091">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_11_56_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D8C9524D-792D-4188-8FA1-71AB5EC4DAC5}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_11_56_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="390669841"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_11_56_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D8C9524D-792D-4188-8FA1-71AB5EC4DAC5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Urgh1" ID="{BFAB5B0A-383E-4542-9061-6ACE5AD8D1E7}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Urgh2" ID="{4E418FC7-F8A9-47F7-80C1-C7F0031A815A}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Urgh3" ID="{1B8CD89F-921F-47C7-8CD4-253C77D6A9EC}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hd1" ID="{306F9E64-48A1-48A9-98D6-FC501306DCC7}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hd2" ID="{53736744-2CDD-4606-8DAE-538C7C04D9B7}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hd3" ID="{D09E2521-F843-46A1-A24B-036E4F3D3176}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hd5" ID="{A7C738D1-9612-4D9B-B38B-451FE34869EE}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hd6" ID="{3E9FC2E1-0C55-4DA0-9FCF-026BDC0D9E23}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Hd7" ID="{7E17A911-453D-4635-BD41-83C2509A5DDD}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="FullHealth" ID="{1FFE14A1-E9B0-4534-AEFB-055B36345F80}" ShortID="436618693">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{0A28CFB5-3B30-45A7-A4D6-F46BE4F10B32}" ShortID="843626345">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{0C0D090E-6AD3-46F6-BAC3-3EF55E26B30B}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1051484675"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{0C0D090E-6AD3-46F6-BAC3-3EF55E26B30B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{DEB50F62-4711-4302-BAF1-47475C9A3699}" ShortID="1049481696">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{62ADC629-9F6C-4B23-817F-E7E77B07601A}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1046563186"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{62ADC629-9F6C-4B23-817F-E7E77B07601A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{62377ABD-3A9B-40BC-9EB5-5C89DD964B8B}" ShortID="271400056">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A57A26AB-2C37-4C73-BA57-D21FAAEE34FE}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="956433349"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A57A26AB-2C37-4C73-BA57-D21FAAEE34FE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D7C274CE-154F-4652-81B0-CA226CBD68A5}" ShortID="197669604">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CA36D741-690F-44C6-93FA-FA804CC79D91}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="979542133"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CA36D741-690F-44C6-93FA-FA804CC79D91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A50DC926-5DDA-4A3B-A9D0-C57C0E0157F3}" ShortID="533722472">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{9568B11A-971C-481B-A285-F9DFAA93FF24}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="881801895"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{9568B11A-971C-481B-A285-F9DFAA93FF24}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{DF29304E-56FA-4508-99A6-187DFFE4E47B}" ShortID="655660089">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CE839239-F762-49CD-AD62-2887CDD7CB8E}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167253598"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CE839239-F762-49CD-AD62-2887CDD7CB8E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{BFEB71EE-945D-44F9-8889-2657B005E6D4}" ShortID="658490651">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{5407AEC8-D771-42E4-8285-8CFFB3DD3BF8}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="529957158"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{5407AEC8-D771-42E4-8285-8CFFB3DD3BF8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{1EFB6BB8-8DC7-4051-8A03-A180A894FD98}" ShortID="722023964">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{59B4E05C-2029-4F81-AE74-316D204AAAC2}">
+											<Language>English(US)</Language>
+											<AudioFile>ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="721212282"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{59B4E05C-2029-4F81-AE74-316D204AAAC2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="FullHealth" ID="{1FFE14A1-E9B0-4534-AEFB-055B36345F80}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}"/>
+								<ItemList>
+									<ItemRef Name="FullHealth" ID="{1FFE14A1-E9B0-4534-AEFB-055B36345F80}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="NearDeath" ID="{9CC6B738-2673-47B7-BBBF-CE1AF5A42363}"/>
+								<ItemList>
+									<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LowHealth" ID="{CEC481A2-4871-4578-A194-E328BBDEC1D8}"/>
+								<ItemList>
+									<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

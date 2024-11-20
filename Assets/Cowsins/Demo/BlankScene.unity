@@ -721,6 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827148838}
   - component: {fileID: 827148837}
+  - component: {fileID: 827148839}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -805,6 +806,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 787219992}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &827148839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827148836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1051157623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,8 +1631,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
+      propertyPath: runSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: normalFOV
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
+      propertyPath: walkSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: canWallRun
@@ -1741,15 +1773,15 @@ PrefabInstance:
     - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: jumpEvent.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 80595e11a70055740843ddb7ed3024d2, type: 2}
+      objectReference: {fileID: 11400000, guid: 7a765238c61f7c44fb9044708c0bdfb0, type: 2}
     - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: landingEvent.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 76546b486a5270c418b17515ba166619, type: 2}
+      objectReference: {fileID: 11400000, guid: d9345c69a8f264eba98eb9c4bffeb268, type: 2}
     - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: footstepEvent.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: c8cdcdfef1a98495b9ecda31ceb13785, type: 2}
+      objectReference: {fileID: 11400000, guid: d9345c69a8f264eba98eb9c4bffeb268, type: 2}
     - target: {fileID: 4612824603642630891, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: events.OnJump.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -2916,6 +2948,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9197107224061336226, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
       propertyPath: freezeTimeOnPaused
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218112862655758215, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9218112862655758215, guid: fa4cc848e07107e459dce4ea99d04302, type: 3}
