@@ -48,7 +48,7 @@ namespace cowsins
             if (animator != null)
             {
                 
-                animator.Play(pushAnimationName);
+                animator.SetTrigger("kickT");
             }
             else
             {
