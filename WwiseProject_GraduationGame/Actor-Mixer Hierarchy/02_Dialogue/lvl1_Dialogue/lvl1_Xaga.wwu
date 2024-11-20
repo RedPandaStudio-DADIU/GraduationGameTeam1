@@ -17,6 +17,11 @@
 								<Value>17</Value>
 							</ValueList>
 						</Property>
+						<Property Name="ReflectionsVolume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
@@ -38,6 +43,9 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="ReflectionsAuxSend">
+							<ObjectRef Name="DelaySlaps_HangarSpeaker" ID="{E88CBE0B-42F0-4BD5-BEF2-06004587CEEE}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
 						</Reference>
 						<Reference Name="UserAuxSend0">
 							<ObjectRef Name="RoomHangarMain" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
@@ -373,11 +381,6 @@
 									<PropertyList>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-1</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

@@ -139,7 +139,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{39892699-F985-9C34-E89E-B198E8A7EB80}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{87C10849-6884-6677-65A5-D23998113CE3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -644,7 +644,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{6BE3AD96-0608-9EC7-CD73-314FC5D13D31}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{88E5F28F-A46B-B940-9882-AB19B3E88910}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -898,7 +898,7 @@
 				</File>
 				<File Id="222174012" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916.wav</ShortName>
-					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_317DB167.wem</CachePath>
+					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_F28F4D55.wem</CachePath>
 				</File>
 				<File Id="222730321" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_HAHAHA.wav</ShortName>
@@ -1446,7 +1446,7 @@
 				</File>
 				<File Id="823086419" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916.wav</ShortName>
-					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_92CDE60C.wem</CachePath>
+					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_72C3E8E2.wem</CachePath>
 				</File>
 				<File Id="823800221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 13.wav</ShortName>
@@ -1634,7 +1634,7 @@
 				</File>
 				<File Id="966105362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916.wav</ShortName>
-					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_92F63A99.wem</CachePath>
+					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_B0A66FF5.wem</CachePath>
 				</File>
 				<File Id="974513169" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_Hello_Serious.wav</ShortName>
@@ -1654,7 +1654,7 @@
 				</File>
 				<File Id="984603461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916.wav</ShortName>
-					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_F77D5B06.wem</CachePath>
+					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_85DFA3A9.wem</CachePath>
 				</File>
 				<File Id="987801719" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
@@ -1742,7 +1742,7 @@
 				</File>
 				<File Id="1052320021" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916.wav</ShortName>
-					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_07BAD2BA.wem</CachePath>
+					<CachePath>SFX/Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_C2F19BCC.wem</CachePath>
 				</File>
 				<File Id="1054170137" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 4.wav</ShortName>
@@ -2337,6 +2337,7 @@
 				<Event Id="1296777492" Name="Play_Dia_JohnDoe" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="16982058" Name="Play_Dia_Xaga" DurationType="Infinite">
 					<AuxBusRefs>
+						<AuxBusRef Id="425081994" Name="DelaySlaps_HangarSpeaker"/>
 						<AuxBusRef Id="986249158" Name="RoomHangarMain"/>
 					</AuxBusRefs>
 					<SwitchContainers>
@@ -2388,6 +2389,7 @@
 				</Event>
 				<Event Id="3253445185" Name="Play_Dia_Xaga_" DurationType="Infinite">
 					<AuxBusRefs>
+						<AuxBusRef Id="425081994" Name="DelaySlaps_HangarSpeaker"/>
 						<AuxBusRef Id="986249158" Name="RoomHangarMain"/>
 					</AuxBusRefs>
 					<SwitchContainers>
@@ -3709,5 +3711,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6362DF65-E8F0-09D6-3851-1321814E9FEA}</FileHash>
+	<FileHash>{9EEAFF6C-74A6-FBCD-B4E3-4104CD3BE388}</FileHash>
 </SoundBanksInfo>
