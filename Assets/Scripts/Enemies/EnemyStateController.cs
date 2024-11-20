@@ -20,9 +20,10 @@ public class EnemyStateController : MonoBehaviour
     [SerializeField] private bool isHuman = false;
     [SerializeField] private Animator animator;
     [SerializeField] private bool inAFight = false;
+    private MusicManager musicManager;
 
     private Queue<Transform> targetQueue;
-
+    private GameObject player;
 
 
     void Awake()
@@ -36,7 +37,8 @@ public class EnemyStateController : MonoBehaviour
             targetQueue = new Queue<Transform>();
         }
         
-        targetQueue.Enqueue(GameObject.FindWithTag("Player").transform);
+        player = GameObject.FindWithTag("Player");
+        targetQueue.Enqueue(player.transform);
         
         
         // playerTransform = GameObject.FindWithTag("Player").transform;
@@ -47,6 +49,7 @@ public class EnemyStateController : MonoBehaviour
 
         enemy = GetComponent<EnemyBaseClass>();
         Debug.LogWarning("Enemy: " + enemy + " Name: " + enemy.name);
+        musicManager = GameObject.Find("GeneralSoundAmbience").GetComponent<MusicManager>();
 
     }
 
@@ -287,6 +290,9 @@ public class EnemyStateController : MonoBehaviour
         return this.isHuman;
     }
 
+    public MusicManager GetMusicManager(){
+        return this.musicManager;
+    }
 
     public IEnemyState GetCurrentState(){
         return this.currentState;
@@ -299,4 +305,9 @@ public class EnemyStateController : MonoBehaviour
     public bool GetInAFight(){
         return this.inAFight;
     }
+
+    public GameObject GetPlayer(){
+        return this.player;
+    }
 }
+

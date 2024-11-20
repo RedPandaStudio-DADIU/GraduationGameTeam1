@@ -16,6 +16,10 @@ public class EnemyHitState : IEnemyState
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
         }
 
+        if(stateController.GetEnemy().CompareTag("Boss") && stateController.GetEnemy().GetHealth() == 40f){
+            stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
+        }
+
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
         weapon.gameObject.SetActive(false);

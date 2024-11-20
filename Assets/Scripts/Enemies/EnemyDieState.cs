@@ -13,6 +13,10 @@ public class EnemyDieState : IEnemyState
         if(!stateController.GetIsHuman()){
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
         }
+
+        if(stateController.GetEnemy().CompareTag("Boss")){
+            stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(true);
+        }
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");

@@ -3,8 +3,9 @@
 	<AudioObjects>
 		<WorkUnit Name="XagaBossFight" ID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchContainer Name="StateDialogue" ID="{85081F6E-95D9-449B-828A-0FC4E995CBEB}" ShortID="908892081">
+				<SwitchContainer Name="Xaga_StateDialogue" ID="{85081F6E-95D9-449B-828A-0FC4E995CBEB}" ShortID="908892081">
 					<PropertyList>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -196,6 +197,66 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<Sound Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}" ShortID="1040995155">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}">
+									<Language>English(US)</Language>
+									<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="544073228"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}" ShortID="161393741">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_LetsDoThis" ID="{676CC4D7-4C00-4263-B6B5-5CBC62848538}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.723611626468769"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.723611626468769"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_LetsDoThis.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="450005902"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_LetsDoThis" ID="{676CC4D7-4C00-4263-B6B5-5CBC62848538}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
@@ -203,7 +264,13 @@
 								<ItemRef Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
+								<ItemRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
 								<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="NooMystomach" ID="{286A5BCD-27E4-4E19-BAB0-DCD07E89C16B}"/>
@@ -214,9 +281,21 @@
 						</GroupingBehaviorList>
 						<GroupingList>
 							<Grouping>
+								<SwitchRef Name="XagaDead" ID="{0CD28F13-CAD4-4581-8ED6-B1AB105FCBE8}"/>
+								<ItemList>
+									<ItemRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
 								<SwitchRef Name="LostLeg" ID="{E484E637-624E-4C02-82C4-6C2B20DA28F5}"/>
 								<ItemList>
 									<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="InitiateFight" ID="{E6A1FE71-2DBC-4E32-BAB3-7687C460A4A5}"/>
+								<ItemList>
+									<ItemRef Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -232,7 +311,7 @@
 								</ItemList>
 							</Grouping>
 							<Grouping>
-								<SwitchRef Name="NearlyDead" ID="{7231C3E3-CC09-449A-8D08-F1E737DA3E5A}"/>
+								<SwitchRef Name="NearDead_LastSentence" ID="{7231C3E3-CC09-449A-8D08-F1E737DA3E5A}"/>
 								<ItemList>
 									<ItemRef Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}"/>
 								</ItemList>
@@ -240,13 +319,19 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
-				<SwitchContainer Name="HurtSounds_DamageTaken" ID="{348FD35E-4E70-4D7A-A01C-1FC1727BA174}" ShortID="349368412">
+				<SwitchContainer Name="Xaga_HurtSounds_DamageTaken" ID="{348FD35E-4E70-4D7A-A01C-1FC1727BA174}" ShortID="349368412">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="XagaHealth" ID="{9BBAB994-4181-45E4-B250-E82318BBE8EA}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -763,38 +848,28 @@
 								<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
 							</GroupingBehavior>
 						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}"/>
+								<ItemList>
+									<ItemRef Name="FullHealth" ID="{1FFE14A1-E9B0-4534-AEFB-055B36345F80}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="NearDeath" ID="{9CC6B738-2673-47B7-BBBF-CE1AF5A42363}"/>
+								<ItemList>
+									<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LowHealth" ID="{CEC481A2-4871-4578-A194-E328BBDEC1D8}"/>
+								<ItemList>
+									<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
-				<Sound Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}" ShortID="1040995155">
-					<PropertyList>
-						<Property Name="IsVoice" Type="bool" Value="True"/>
-						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>20</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}">
-							<Language>English(US)</Language>
-							<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="544073228"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

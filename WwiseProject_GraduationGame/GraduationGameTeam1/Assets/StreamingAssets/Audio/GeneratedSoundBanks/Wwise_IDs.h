@@ -37,6 +37,7 @@ namespace AK
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
         static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
+        static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
         static const AkUniqueID PLAY_LOAD_HANDGUN = 249020240U;
@@ -57,6 +58,10 @@ namespace AK
         static const AkUniqueID PLAY_TESTBEEP_LP_3D = 161393517U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAY_UNLOAD_RIFLE = 1943012356U;
+        static const AkUniqueID PLAY_XAGA_DIA_LVL2 = 2842468683U;
+        static const AkUniqueID PLAY_XAGA_HURTSOUNDS_DAMAGETAKEN = 920126564U;
+        static const AkUniqueID PLAY_XAGA_STATEDIALOGUE = 3452699959U;
+        static const AkUniqueID PLAY_XAGADEATHSCREAM = 655800824U;
         static const AkUniqueID STOP_GUITARLOOP = 4128836072U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
@@ -251,12 +256,13 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID DEATHSCREAM = 4103826714U;
+                static const AkUniqueID INITIATEFIGHT = 3887839274U;
                 static const AkUniqueID LOSTARM = 2961238679U;
                 static const AkUniqueID LOSTLEG = 2676857933U;
                 static const AkUniqueID LOSTSTOMACH = 1031154770U;
-                static const AkUniqueID NEARLYDEAD = 841236080U;
+                static const AkUniqueID NEARDEAD_LASTSENTENCE = 863260099U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID XAGADEAD = 1062602090U;
             } // namespace STATE
         } // namespace XAGABOSSFIGHTSTATES
 

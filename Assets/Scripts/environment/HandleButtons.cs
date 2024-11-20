@@ -9,16 +9,16 @@ public class HandleButtons : Interactable
 {
     private bool interactionOccured = false;
     private GameObject elevatorDoor;
-    [SerializeField] private AK.Wwise.Event disabledButtonEvent;
-    [SerializeField] private AK.Wwise.Event goodButtonEvent;
 
-    // Start is called before the first frame update
+    [SerializeField] private AK.Wwise.Event elevatorDoorOpen;
+    [SerializeField] private AK.Wwise.Event elevatorButtonPress;
+
     void Start()
     {
         elevatorDoor = GameObject.FindWithTag("Door");
+        AkSoundEngine.SetSwitch("ElevatorPower", "PowerOff", gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -34,22 +34,25 @@ public class HandleButtons : Interactable
         if (this.gameObject.CompareTag("ElevatorButton")){
 
             if (GameObject.FindWithTag("MainframeButton").GetComponent<HandleButtons>().GetInteractionOccured()){
-                goodButtonEvent.Post(elevatorDoor);
+                AkSoundEngine.SetSwitch("ElevatorPower", "PowerOn", gameObject);
+                elevatorButtonPress.Post(gameObject);
                 DestroyDoor();
             } else {
-                disabledButtonEvent.Post(elevatorDoor);
+                elevatorButtonPress.Post(gameObject);
 
             }
 
 
         }else if (this.gameObject.CompareTag("MainframeButton")){
             interactionOccured = true;
-            goodButtonEvent.Post(elevatorDoor);
+            AkSoundEngine.SetSwitch("ElevatorPower", "PowerOn", gameObject);
+            elevatorButtonPress.Post(gameObject);
 
         }
     }
 
     public void DestroyDoor(){
+        elevatorDoorOpen.Post(elevatorDoor);
         Destroy(elevatorDoor);
     }
 

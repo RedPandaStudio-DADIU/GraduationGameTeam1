@@ -157,6 +157,8 @@ namespace cowsins
                     Debug.Log("hide user ui ");
                 }
 
+                AkSoundEngine.Suspend();
+
                 OnPause?.Invoke();
             }
             else
@@ -171,6 +173,7 @@ namespace cowsins
                 Cursor.visible = false;
                 playerUI.SetActive(true);
 
+                AkSoundEngine.WakeupFromSuspend();
                 OnUnpause?.Invoke();
             }
         }
