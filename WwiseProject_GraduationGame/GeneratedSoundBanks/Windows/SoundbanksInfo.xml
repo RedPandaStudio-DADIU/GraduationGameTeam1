@@ -14,14 +14,10 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{BD169B42-6D36-47D0-C2D2-E9E0629636F2}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{284B1BED-BFDB-8904-5E9F-ABFF270A16A9}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 			<Media>
-				<File Id="622069210" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DG_Loop_combatlow1.wav</ShortName>
-					<CachePath>SFX/DG_Loop_combatlow1_FBC78EF0.wem</CachePath>
-				</File>
 				<File Id="690146370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DG_Loop_1A.wav</ShortName>
 					<CachePath>SFX/DG_Loop_1A_FBC78EF0.wem</CachePath>
@@ -36,12 +32,6 @@
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="2764240573" Id="2116791127"/>
 									<Children>
-										<SwitchContainer>
-											<SwitchValue GroupType="State" GroupId="1358435973" Id="3712483660"/>
-											<MediaRefs>
-												<MediaRef Id="622069210"/>
-											</MediaRefs>
-										</SwitchContainer>
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
 											<MediaRefs>
@@ -77,12 +67,6 @@
 								<SwitchContainer>
 									<SwitchValue GroupType="State" GroupId="2764240573" Id="2116791127"/>
 									<Children>
-										<SwitchContainer>
-											<SwitchValue GroupType="State" GroupId="1358435973" Id="3712483660"/>
-											<MediaRefs>
-												<MediaRef Id="622069210"/>
-											</MediaRefs>
-										</SwitchContainer>
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
 											<MediaRefs>
@@ -369,11 +353,12 @@
 				<StateGroup Id="3568468165" Name="XagaBossfightStates">
 					<States>
 						<State Id="748895195" Name="None"/>
-						<State Id="841236080" Name="NearlyDead"/>
+						<State Id="863260099" Name="NearDead_LastSentence"/>
 						<State Id="1031154770" Name="LostStomach"/>
+						<State Id="1062602090" Name="XagaDead"/>
 						<State Id="2676857933" Name="LostLeg"/>
 						<State Id="2961238679" Name="LostArm"/>
-						<State Id="4103826714" Name="DeathScream"/>
+						<State Id="3887839274" Name="InitiateFight"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3626020801" Name="Player_State_health">
@@ -647,7 +632,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{AD5FBC73-6985-6967-E2C6-D22083E2F400}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{2E739F3A-5B39-7211-BBA7-AFE0617F689D}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -666,6 +651,10 @@
 				<File Id="15644422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Mag_Empty.wav</ShortName>
 					<CachePath>SFX/Rifle_Mag_Empty_818F3B66.wem</CachePath>
+				</File>
+				<File Id="16537571" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_11_39_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_11_39_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="22270700" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Weapons\Handgun\Hangun_Reload.wav</ShortName>
@@ -806,6 +795,10 @@
 				<File Id="165684999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_DEB3698B.wem</CachePath>
+				</File>
+				<File Id="167253598" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="173506951" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Wilhelm Scream Remastered.wav</ShortName>
@@ -1019,6 +1012,10 @@
 					<ShortName>Run\Boots_Run_Toe_05.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Toe_05_A811F49F.wem</CachePath>
 				</File>
+				<File Id="390669841" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_11_56_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_11_56_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="394144264" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_01.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_01_818F3B66.wem</CachePath>
@@ -1030,6 +1027,10 @@
 				<File Id="399371986" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 2.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 2_97D08F4B.wem</CachePath>
+				</File>
+				<File Id="417351480" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_11_50_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="425120084" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_Excellent_Short.wav</ShortName>
@@ -1054,6 +1055,10 @@
 				<File Id="444986285" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 3_4A0FDD30.wem</CachePath>
+				</File>
+				<File Id="450005902" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaga_LetsDoThis.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaga_LetsDoThis_56FFC28A.wem</CachePath>
 				</File>
 				<File Id="453613366" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 2.wav</ShortName>
@@ -1099,6 +1104,10 @@
 					<ShortName>Xaha_Haha.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaha_Haha_A5B0F7C8.wem</CachePath>
 				</File>
+				<File Id="529957158" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="530099864" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Metal Ladder, Sneakers SND4062 1_0915C658.wem</CachePath>
@@ -1134,6 +1143,10 @@
 				<File Id="580276444" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_FuckHagnOn.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_FuckHagnOn_AC0714B8.wem</CachePath>
+				</File>
+				<File Id="601630630" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_01_03_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_01_03_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="601869256" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav</ShortName>
@@ -1251,6 +1264,10 @@
 					<ShortName>Locomotion\Boots_Jump.wav</ShortName>
 					<CachePath>SFX/Locomotion/Boots_Jump_818F3B66.wem</CachePath>
 				</File>
+				<File Id="721212282" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="726251592" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_ChargeRdy.wav</ShortName>
 					<CachePath>SFX/Rifle_ChargeRdy_F521E23F.wem</CachePath>
@@ -1327,6 +1344,10 @@
 					<ShortName>Ai_Okay2.wav</ShortName>
 					<CachePath>Voices/English(US)/Ai_Okay2_49771B57.wem</CachePath>
 				</File>
+				<File Id="814745917" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_01_19_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_01_19_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="817687389" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
 					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_6EEB87AB.wem</CachePath>
@@ -1379,6 +1400,10 @@
 					<ShortName>Wilhelm Scream Remastered.wav</ShortName>
 					<CachePath>Voices/English(US)/Wilhelm Scream Remastered_4A48443A.wem</CachePath>
 				</File>
+				<File Id="868187555" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_01_17_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_01_17_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="869232112" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_WhereIsTheMainframeRoomn.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_WhereIsTheMainframeRoomn_818F3B66.wem</CachePath>
@@ -1390,6 +1415,10 @@
 				<File Id="877196418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Toe_03.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Toe_03_818F3B66.wem</CachePath>
+				</File>
+				<File Id="881801895" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="887679705" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 7.wav</ShortName>
@@ -1483,6 +1512,10 @@
 					<ShortName>Temp_TestAmbiences\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528.wav</ShortName>
 					<CachePath>SFX/Temp_TestAmbiences/Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528_EF24AC07.wem</CachePath>
 				</File>
+				<File Id="956433349" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="959559467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Weapons\Rifle\Rifle_Alt_Chargev1.wav</ShortName>
 					<CachePath>SFX/Weapons/Rifle/Rifle_Alt_Chargev1_818F3B66.wem</CachePath>
@@ -1495,6 +1528,10 @@
 					<ShortName>JD_Hello_Serious.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_Hello_Serious_C7D7D659.wem</CachePath>
 				</File>
+				<File Id="979542133" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="981283187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Metal, Movement, Metal Ladder, Feet SND82058 4.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Metal, Movement, Metal Ladder, Feet SND82058 4_B48680E7.wem</CachePath>
@@ -1502,6 +1539,14 @@
 				<File Id="981611525" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_DAMNthatsGottaHurt.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_DAMNthatsGottaHurt_818F3B66.wem</CachePath>
+				</File>
+				<File Id="987801719" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="994855751" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_31_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_31_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="998083191" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 2.wav</ShortName>
@@ -1527,6 +1572,10 @@
 					<ShortName>JD_DamnComputerDoYouSeeThis.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_DamnComputerDoYouSeeThis_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1008319792" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_43_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1009290141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 12_4D8041D2.wem</CachePath>
@@ -1551,9 +1600,17 @@
 					<ShortName>Boots_StartStop_02.wav</ShortName>
 					<CachePath>SFX/Boots_StartStop_02_818F3B66.wem</CachePath>
 				</File>
+				<File Id="1046563186" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1048784781" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Elevator\Elevator\Elevator_BottonRelease.wav</ShortName>
 					<CachePath>SFX/Elevator/Elevator/Elevator_BottonRelease_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1051484675" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
+					<CachePath>Voices/English(US)/ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1051943335" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 11.wav</ShortName>
@@ -2376,6 +2433,22 @@
 						<MediaRef Id="921613273"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1584853492" Name="Play_JD_AI_lvl2" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174865" Id="2059667105"/>
+							<MediaRefs>
+								<MediaRef Id="925045279"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174865" Id="2059667105"/>
+							<MediaRefs>
+								<MediaRef Id="925045279"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="1298310256" Name="Play_JD_Spawn" DurationType="OneShot" DurationMin="1.28" DurationMax="1.7502041">
 					<MediaRefs>
 						<MediaRef Id="9995095"/>
@@ -2967,6 +3040,176 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="2842468683" Name="Play_Xaga_Dia_lvl2" DurationType="Infinite"/>
+				<Event Id="920126564" Name="Play_Xaga_HurtSounds_DamageTaken" DurationType="OneShot" DurationMin="0.78367347" DurationMax="1.4367347">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2041156306" Id="2429688720" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="167253598"/>
+								<MediaRef Id="529957158"/>
+								<MediaRef Id="721212282"/>
+								<MediaRef Id="881801895"/>
+								<MediaRef Id="956433349"/>
+								<MediaRef Id="979542133"/>
+								<MediaRef Id="1046563186"/>
+								<MediaRef Id="1051484675"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2041156306" Id="898449699"/>
+							<MediaRefs>
+								<MediaRef Id="16537571"/>
+								<MediaRef Id="390669841"/>
+								<MediaRef Id="417351480"/>
+								<MediaRef Id="601630630"/>
+								<MediaRef Id="814745917"/>
+								<MediaRef Id="868187555"/>
+								<MediaRef Id="987801719"/>
+								<MediaRef Id="994855751"/>
+								<MediaRef Id="1008319792"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2041156306" Id="1017222595"/>
+							<MediaRefs>
+								<MediaRef Id="16537571"/>
+								<MediaRef Id="390669841"/>
+								<MediaRef Id="417351480"/>
+								<MediaRef Id="601630630"/>
+								<MediaRef Id="814745917"/>
+								<MediaRef Id="868187555"/>
+								<MediaRef Id="987801719"/>
+								<MediaRef Id="994855751"/>
+								<MediaRef Id="1008319792"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2041156306" Id="2429688720" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="167253598"/>
+								<MediaRef Id="529957158"/>
+								<MediaRef Id="721212282"/>
+								<MediaRef Id="881801895"/>
+								<MediaRef Id="956433349"/>
+								<MediaRef Id="979542133"/>
+								<MediaRef Id="1046563186"/>
+								<MediaRef Id="1051484675"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2041156306" Id="898449699"/>
+							<MediaRefs>
+								<MediaRef Id="16537571"/>
+								<MediaRef Id="390669841"/>
+								<MediaRef Id="417351480"/>
+								<MediaRef Id="601630630"/>
+								<MediaRef Id="814745917"/>
+								<MediaRef Id="868187555"/>
+								<MediaRef Id="987801719"/>
+								<MediaRef Id="994855751"/>
+								<MediaRef Id="1008319792"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2041156306" Id="1017222595"/>
+							<MediaRefs>
+								<MediaRef Id="16537571"/>
+								<MediaRef Id="390669841"/>
+								<MediaRef Id="417351480"/>
+								<MediaRef Id="601630630"/>
+								<MediaRef Id="814745917"/>
+								<MediaRef Id="868187555"/>
+								<MediaRef Id="987801719"/>
+								<MediaRef Id="994855751"/>
+								<MediaRef Id="1008319792"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3452699959" Name="Play_Xaga_StateDialogue" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="1062602090"/>
+							<MediaRefs>
+								<MediaRef Id="544073228"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="2676857933"/>
+							<MediaRefs>
+								<MediaRef Id="963954882"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="3887839274"/>
+							<MediaRefs>
+								<MediaRef Id="450005902"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="1031154770"/>
+							<MediaRefs>
+								<MediaRef Id="65439675"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="2961238679"/>
+							<MediaRefs>
+								<MediaRef Id="705500713"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="863260099"/>
+							<MediaRefs>
+								<MediaRef Id="100377375"/>
+								<MediaRef Id="257021756"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="1062602090"/>
+							<MediaRefs>
+								<MediaRef Id="544073228"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="2676857933"/>
+							<MediaRefs>
+								<MediaRef Id="963954882"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="3887839274"/>
+							<MediaRefs>
+								<MediaRef Id="450005902"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="1031154770"/>
+							<MediaRefs>
+								<MediaRef Id="65439675"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="2961238679"/>
+							<MediaRefs>
+								<MediaRef Id="705500713"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="863260099"/>
+							<MediaRefs>
+								<MediaRef Id="100377375"/>
+								<MediaRef Id="257021756"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="655800824" Name="Play_XagaDeathScream" DurationType="OneShot" DurationMin="1.2394755" DurationMax="1.2394755">
+					<MediaRefs>
+						<MediaRef Id="544073228"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4128836072" Name="Stop_Guitarloop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3106700779" Name="Stop_TestBeep_lp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
@@ -3105,11 +3348,12 @@
 				<StateGroup Id="3568468165" Name="XagaBossfightStates">
 					<States>
 						<State Id="748895195" Name="None"/>
-						<State Id="841236080" Name="NearlyDead"/>
+						<State Id="863260099" Name="NearDead_LastSentence"/>
 						<State Id="1031154770" Name="LostStomach"/>
+						<State Id="1062602090" Name="XagaDead"/>
 						<State Id="2676857933" Name="LostLeg"/>
 						<State Id="2961238679" Name="LostArm"/>
-						<State Id="4103826714" Name="DeathScream"/>
+						<State Id="3887839274" Name="InitiateFight"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4121174865" Name="Scenes_lvl2">
@@ -3172,6 +3416,13 @@
 						<Switch Id="4248645337" Name="Grass"/>
 					</Switches>
 				</SwitchGroup>
+				<SwitchGroup Id="2041156306" Name="XagaHealth">
+					<Switches>
+						<Switch Id="898449699" Name="NearDeath"/>
+						<Switch Id="1017222595" Name="LowHealth"/>
+						<Switch Id="2429688720" Name="FullHealth"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2051106367" Name="PlayerSpeedSwitch">
 					<GameParameterRef Id="2653406601"/>
 					<Switches>
@@ -3229,5 +3480,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7D52FCC9-F0A6-3AD7-C9C9-171F5C97A5E3}</FileHash>
+	<FileHash>{AC41AD6C-DF23-F0E8-034F-9B263E13ED79}</FileHash>
 </SoundBanksInfo>
