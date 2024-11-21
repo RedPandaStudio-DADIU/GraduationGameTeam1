@@ -3,7 +3,7 @@
 	<SoundcasterSessions>
 		<WorkUnit Name="Anders" ID="{9D95E6D3-26A5-45BF-86AC-408FAF21DECC}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundcasterSession Name="New Soundcaster Session" ID="{12E6DD35-85F3-4075-9988-A6398C1CEA75}">
+				<SoundcasterSession Name="AndersBigSCSeesion" ID="{12E6DD35-85F3-4075-9988-A6398C1CEA75}">
 					<ModuleList>
 						<Module>
 							<ObjectRef Name="Play_Load_Rifle" ID="{AB8D80EE-36E4-4A1C-A362-E95ADE77C721}" WorkUnitID="{955D068D-C941-4977-9E66-C4FE8BA4AD73}"/>
@@ -54,24 +54,12 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Guitarloop" ID="{5A725ECE-C54F-44CA-ACBA-9E386F3552C5}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
-							<Position X="3" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_HumansSc1" ID="{D27116C8-E858-4827-BBF7-182ED7B69352}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
+							<ObjectRef Name="Play_Dia_Xaga_" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Dia_Xaga_" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="4" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Sc4" ID="{DB1CB697-BC45-40FB-ACA1-B8A1D4794035}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="4" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Dia_Ai" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="4" Y="3"/>
+							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="MainMusicSW" ID="{8A7DDC65-0397-4977-9732-7BEBC4C7C9DA}" WorkUnitID="{99B7097A-5AF6-4BF6-BB88-1E58339C856F}"/>
@@ -98,7 +86,7 @@
 						<CurrentStateRef Name="None" ID="{F5D70421-08EA-47C4-9A07-5AF1242504C0}"/>
 						<CurrentStateRef Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
 						<CurrentStateRef Name="Sc3_Tr1" ID="{576DFCD8-BEAE-4407-A639-C77A4DEDFDE3}"/>
-						<CurrentStateRef Name="No_combat" ID="{CEA5D50E-21F4-4645-88AC-E1EE79145F5F}"/>
+						<CurrentStateRef Name="None" ID="{5F2F25BC-EF38-4DB3-8DF4-52E7BA412DF8}"/>
 						<CurrentStateRef Name="None" ID="{88B4A91F-DC66-43CD-892E-3D1D26ED9126}"/>
 						<CurrentStateRef Name="None" ID="{71DEAC1B-AFD2-4EF9-B68B-44EF423FA49A}"/>
 						<CurrentStateRef Name="None" ID="{86461271-D073-44C7-BFD3-AB9EF9B30F7C}"/>
@@ -110,14 +98,15 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
-						<CurrentSwitchRef Name="Dusk" ID="{22024FB0-F367-4750-BFFC-DDED31F711D5}"/>
+						<CurrentSwitchRef Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
 						<CurrentSwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
 						<CurrentSwitchRef Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
 						<CurrentSwitchRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}"/>
-						<CurrentSwitchRef Name="Wet" ID="{39823782-804A-4777-8BE0-99E9F56F90A6}"/>
-						<CurrentSwitchRef Name="Start" ID="{6AD8D672-847E-43AB-A304-69BA1B8F7E16}"/>
+						<CurrentSwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
+						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
 						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
 						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+						<CurrentSwitchRef Name="Dying" ID="{033196D2-5350-4807-AA81-FB1D8AE84DD9}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
 					</CurrentSwitchList>

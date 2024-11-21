@@ -55,7 +55,171 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Brute" ID="{5E640AB4-2A46-45B0-98FB-93FFEBCBC9AD}" ShortID="386197429"/>
+				<Folder Name="Brute" ID="{5E640AB4-2A46-45B0-98FB-93FFEBCBC9AD}" ShortID="386197429">
+					<ChildrenList>
+						<Event Name="Play_BruteBarks" ID="{6B7F7A0F-63B1-4E90-A8BF-75D594E37C40}">
+							<ChildrenList>
+								<Action Name="" ID="{B21FE9C8-9D37-49A1-8B2B-08A7142E855D}" ShortID="660292325">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BruteAttackBarks" ID="{B7F83A0B-6353-4709-A8A2-9F7F41520774}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B61833AA-22E0-4D67-A63D-C32889EEC128}" ShortID="252450297">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BruteIdle" ID="{633A1A63-E3D4-4455-905A-30F457D36886}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{73E18A2C-2878-4AD7-86A2-BEACFFF1EC60}" ShortID="568639690">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BruteAttackBarks" ID="{B7F83A0B-6353-4709-A8A2-9F7F41520774}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9ECB5E3A-EA05-46AA-B17D-8C4B3286CA12}" ShortID="177156622">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BruteIdle" ID="{633A1A63-E3D4-4455-905A-30F457D36886}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DCC95E58-8119-4245-ACF9-8FE6C8E69C35}" ShortID="10563739">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BruteBarks" ID="{EF4F03D3-56D8-462D-9150-F18D4B44932E}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Soldier" ID="{1393E9D5-8CE5-4457-96DE-742D174C1234}" ShortID="934237553">
+					<ChildrenList>
+						<Event Name="Play_SoldierBarks" ID="{1A0C2DE5-937C-43CA-B52E-7C51E5281DA8}">
+							<ChildrenList>
+								<Action Name="" ID="{63AE70C5-7741-49E9-B622-20FF81C11A69}" ShortID="864241240">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoldierAttackBarks" ID="{CD57B89A-E118-49D3-9527-FDEB07ACD122}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EC4E9471-B6D4-433A-BBFA-CC7CB6F9476D}" ShortID="16969391">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoldierIdle" ID="{2740FC85-A70C-4222-A891-72F8E7CFE870}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5F289DBA-704B-4545-A0B7-6AFDEEBEC353}" ShortID="213092439">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoldierAttackBarks" ID="{CD57B89A-E118-49D3-9527-FDEB07ACD122}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AD8C9D10-7029-46E5-A100-178B118A7AA1}" ShortID="36053977">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoldierIdle" ID="{2740FC85-A70C-4222-A891-72F8E7CFE870}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{463E3281-958C-4F56-AD08-59D5B5F3E34E}" ShortID="915548891">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoldierBarks" ID="{F1BEB712-AC3A-4E55-89A8-D7469AAF3D81}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Diplomat" ID="{239F10AF-C2BB-471C-B919-2791AF17581E}" ShortID="51536644">
+					<ChildrenList>
+						<Event Name="Play_DiplomatBarks" ID="{0EFFA64D-9311-4F03-BC54-1F493C1031F3}">
+							<ChildrenList>
+								<Action Name="" ID="{95E0857F-2CB3-4F8B-A95C-74F472268BCA}" ShortID="991386430">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TestDiplomatAttackBarks" ID="{CB9186B1-02D4-498C-AD23-BE76F32A1813}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{65F711DF-05AD-4424-80F8-BD5D82626FF9}" ShortID="244585707">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="34"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DiplomatIdle" ID="{49781C61-C138-4C63-AF71-38428D931F58}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B4167BD8-39E6-4210-A44B-3FE765A322D7}" ShortID="106844909">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TestDiplomatAttackBarks" ID="{CB9186B1-02D4-498C-AD23-BE76F32A1813}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E9022283-DCF7-4E7C-B50A-3BA9C16A0108}" ShortID="370560168">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DiplomatIdle" ID="{49781C61-C138-4C63-AF71-38428D931F58}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F81701CB-6018-4DC1-B4FC-AFB41A26E4E1}" ShortID="840537803">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DiplomatBarks" ID="{0604FB3F-C155-47E9-B4EE-F06769B5C02A}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
