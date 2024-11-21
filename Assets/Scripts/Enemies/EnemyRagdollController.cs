@@ -111,7 +111,7 @@ public class EnemyRagdollController : MonoBehaviour
 
     public void SetRagdollActive(bool isActive)
     {   
-        if (animator != null)
+        if (animator != null && animator.enabled != !isActive)
         {
             animator.enabled = !isActive; 
         }
@@ -163,15 +163,53 @@ public class EnemyRagdollController : MonoBehaviour
         StartCoroutine(StandUpCoroutine());
     }
 
+    // private IEnumerator StandUpCoroutine()
+    // {
+    //     // Align the main GameObject to the hips position after ragdoll
+    //     AlignPositionToHips();
+
+    //     // Smooth transition of bones to initial positions
+    //     float elapsedTime = 0f;
+    //     while (elapsedTime < standUpDuration)
+    //     {
+    //         foreach (var kvp in boneTransforms)
+    //         {
+    //             Transform bone = kvp.Key;
+    //             BoneTransform originalTransform = kvp.Value;
+
+    //             bone.localPosition = Vector3.Lerp(bone.localPosition, originalTransform.localPosition, elapsedTime / standUpDuration);
+    //             bone.localRotation = Quaternion.Lerp(bone.localRotation, originalTransform.localRotation, elapsedTime / standUpDuration);
+    //         }
+
+    //         elapsedTime += Time.deltaTime;
+    //         yield return null;
+    //     }
+
+    //     foreach (var kvp in boneTransforms)
+    //     {
+    //         kvp.Key.localPosition = kvp.Value.localPosition;
+    //         kvp.Key.localRotation = kvp.Value.localRotation;
+    //     }
+
+
+    //     yield return new WaitForSeconds(animatorEnableDelay);
+
+    //     if (animator != null) animator.enabled = true;
+    //     if (navMeshAgent != null) navMeshAgent.enabled = true;
+    // }
+
     private IEnumerator StandUpCoroutine()
     {
-        // Align the main GameObject to the hips position after ragdoll
         AlignPositionToHips();
 
-        // Smooth transition of bones to initial positions
         float elapsedTime = 0f;
+        const float tolerance = 0.01f; // Adjust based on acceptable precision
+        const float rotationTolerance = 1f; // Acceptable rotation angle in degrees
+
         while (elapsedTime < standUpDuration)
         {
+            bool bonesAligned = true;
+
             foreach (var kvp in boneTransforms)
             {
                 Transform bone = kvp.Key;
@@ -179,7 +217,15 @@ public class EnemyRagdollController : MonoBehaviour
 
                 bone.localPosition = Vector3.Lerp(bone.localPosition, originalTransform.localPosition, elapsedTime / standUpDuration);
                 bone.localRotation = Quaternion.Lerp(bone.localRotation, originalTransform.localRotation, elapsedTime / standUpDuration);
+
+                if (Vector3.Distance(bone.localPosition, originalTransform.localPosition) > tolerance ||
+                    Quaternion.Angle(bone.localRotation, originalTransform.localRotation) > rotationTolerance)
+                {
+                    bonesAligned = false;
+                }
             }
+
+            if (bonesAligned) break;
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -191,12 +237,22 @@ public class EnemyRagdollController : MonoBehaviour
             kvp.Key.localRotation = kvp.Value.localRotation;
         }
 
-
         yield return new WaitForSeconds(animatorEnableDelay);
 
-        if (animator != null) animator.enabled = true;
-        if (navMeshAgent != null) navMeshAgent.enabled = true;
+        if (animator != null)
+        {
+            animator.Update(0); 
+            animator.enabled = true;
+        }
+
+        if (navMeshAgent != null)
+        {
+            navMeshAgent.enabled = true;
+        }
+
+
     }
+
 
     private void AlignPositionToHips()
     {

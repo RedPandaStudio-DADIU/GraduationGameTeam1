@@ -21,9 +21,9 @@ public class EnemyStateController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private bool inAFight = false;
     private MusicManager musicManager;
-
     private Queue<Transform> targetQueue;
     private GameObject player;
+    // [SerializeField] private bool isInRagdoll = false;
 
 
     void Awake()
@@ -183,7 +183,6 @@ public class EnemyStateController : MonoBehaviour
     public bool ReachedStoppingDistance(){
         float stopDistance = enemy.GetStoppingDistance();
 
-
         Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         Debug.Log("Distance to player: " + distanceToPlayer + " enemy: " + this.GetEnemy().name);
@@ -252,6 +251,7 @@ public class EnemyStateController : MonoBehaviour
             IEnemyState prevState = enemy.GetPreviousState();
             if(prevState is EnemyAttackState || prevState is EnemyIdleState){
                 enemy.ChangeState(prevState);
+                
             }
 
         } else {
@@ -309,5 +309,14 @@ public class EnemyStateController : MonoBehaviour
     public GameObject GetPlayer(){
         return this.player;
     }
+
+    // public bool GetisInRagdoll(){
+    //     return this.isInRagdoll;
+    // }
+
+    // public void SetisInRagdoll(bool ragdollValue){
+    //     this.isInRagdoll = ragdollValue;
+    // }
+
 }
 
