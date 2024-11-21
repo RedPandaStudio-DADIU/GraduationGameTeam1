@@ -56,6 +56,24 @@ public class PushEnemy : MonoBehaviour
         // {
         //     PushEnemiesInRange();
         // }
+        if (InputManager.weapon1||InputManager.weapon2)
+        {
+            GameObject legRig = GameObject.FindWithTag("kick");
+            if (legRig != null)
+            {
+                animator = legRig.GetComponent<Animator>();
+                if (animator == null)
+                {
+                    Debug.LogWarning("Animator component not found on the object with tag 'kick'.");
+                }
+                else
+                {
+                    Debug.Log("change weapon and Animator successfully found and assigned via Tag.");
+                    isLegRigInitialized = true; 
+                }
+            }
+
+        }
         if (isLegRigInitialized) return;
 
         if (weaponController != null && weaponController.weapon != null)
@@ -150,15 +168,15 @@ public class PushEnemy : MonoBehaviour
 
     private bool PlayPushAnimation()
     {
-        // 检查 animator 是否已初始化
+        
         if (animator == null)
         {
             Debug.LogWarning("Animator not yet initialized. Cannot play animation.");
             return false;
         }
 
-        // 播放动画
-        animator.SetTrigger("kickT");
+       animator.ResetTrigger("kickT"); // 确保没有遗留的触发器
+        animator.SetTrigger("kickT");  
         Debug.Log("Push animation triggered.");
         return true;
     }
