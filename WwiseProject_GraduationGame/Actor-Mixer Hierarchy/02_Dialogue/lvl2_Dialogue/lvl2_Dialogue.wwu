@@ -40,6 +40,11 @@
 							<ChildrenList>
 								<Sound Name="Ai_Somebodyisnothappy" ID="{D2612765-75F9-4C45-B619-95497C623DF1}" ShortID="316559852">
 									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 									</PropertyList>
@@ -106,7 +111,7 @@
 							<ObjectRef Name="WaitingOnTriggerEnter" ID="{3C6122A6-7FDC-4AEA-85D7-8326A48C4F13}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+							<ObjectRef Name="03_XagaHangar" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="Scenes_lvl2" ID="{04CD5BF1-B0FF-4208-B7CD-73BAD0D1BDD3}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
@@ -139,14 +144,16 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+											<ObjectRef Name="03_XagaHangar" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Xaga_YouUselessFucks" ID="{0FF5AA8C-AA61-44CB-85EA-EB15F575ED93}">
 											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0667791928801595"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.106846708608255"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="1.56194229415904"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.76227987279952"/>
 												<Property Name="TrimEnd" Type="Real64" Value="5.12225193525686"/>
 											</PropertyList>
 											<Language>English(US)</Language>
@@ -193,7 +200,7 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+											<ObjectRef Name="03_XagaHangar" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -222,6 +229,36 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<Sound Name="Xaga_LetsDoThis" ID="{AD8AFEE8-6B2C-4EE7-9D7D-3B0F80876079}" ShortID="40328361">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_LetsDoThis" ID="{3758111B-32F0-4422-A382-7E23AD087FC6}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.138691352829792"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.84601725226173"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_LetsDoThis.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="200692930"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_LetsDoThis" ID="{3758111B-32F0-4422-A382-7E23AD087FC6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
@@ -231,7 +268,30 @@
 							<GroupingBehavior>
 								<ItemRef Name="Sc6_Tr1" ID="{07CE2DC0-5C9A-4E22-A7BF-CFDEF89CF9E4}"/>
 							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Xaga_LetsDoThis" ID="{AD8AFEE8-6B2C-4EE7-9D7D-3B0F80876079}"/>
+							</GroupingBehavior>
 						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Sc6_Tr1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
+								<ItemList>
+									<ItemRef Name="Sc6_Tr1" ID="{07CE2DC0-5C9A-4E22-A7BF-CFDEF89CF9E4}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Sc7_Tr1" ID="{4AF25DBD-DDDF-4706-A27C-EA29B512906A}"/>
+								<ItemList>
+									<ItemRef Name="Sc7_Tr1" ID="{3496651B-E420-4210-B368-F50021768D2C}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Sc7_Tr2" ID="{86F1A3E3-C667-49FF-98C6-E1ED8DA124FE}"/>
+								<ItemList>
+									<ItemRef Name="Xaga_LetsDoThis" ID="{AD8AFEE8-6B2C-4EE7-9D7D-3B0F80876079}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
 			</ChildrenList>

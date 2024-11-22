@@ -801,7 +801,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584694891590480313
+    m_lastTime: -8584694010423510804
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -1155,7 +1155,7 @@ MonoBehaviour:
     ParentPath: Events/Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584695856310489101
+    m_lastTime: -8584694010428267472
     List:
     - name: Guitarloop
       guid: 2d27b5d8fc97d6478a87d10ae65bcf99
@@ -1259,7 +1259,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584695004921658496
+    m_lastTime: -8584694176474021170
     List: []
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
@@ -1272,7 +1272,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584694891592512778
+    m_lastTime: -8584694010428263387
     List:
     - name: BossFight
       guid: 43770ea62435ff42863ec4b8587eea89
@@ -1829,7 +1829,7 @@ MonoBehaviour:
     ParentPath: Events/Locomotion
     guid: a2c848ff1589744f939bb3dc40287186
     GuidInternal: 
-    m_lastTime: -8584694891592511326
+    m_lastTime: -8584694010428258308
     List:
     - name: Play_Brute_Fs
       guid: b989e5f174c5ce45b63f6d36555e9823
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584695856310483406
+    m_lastTime: -8584694010428252828
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -1939,6 +1939,63 @@ MonoBehaviour:
         ObjectType: 4
         guid: 22d08caf04b95245ba09a77f632759c4
       Path: Events/NPC/Damage
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Diplomat
+      guid: af109f23bbc21c47b9192791af17581e
+      id: 1617397027
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Diplomat
+        ObjectType: 4
+        guid: af109f23bbc21c47b9192791af17581e
+      Path: Events/NPC/Diplomat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_BruteBarks
+      guid: 0f7a7f6bb163904ea8bf75d594e37c40
+      id: 2283401379
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      - ElementName: Play_BruteBarks
+        ObjectType: 3
+        guid: 0f7a7f6bb163904ea8bf75d594e37c40
+      Path: Events/NPC/Brute/Play_BruteBarks
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_DiplomatBarks
+      guid: 4da6ff0e1193034fbc541f493c1031f3
+      id: 4152854033
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Diplomat
+        ObjectType: 4
+        guid: af109f23bbc21c47b9192791af17581e
+      - ElementName: Play_DiplomatBarks
+        ObjectType: 3
+        guid: 4da6ff0e1193034fbc541f493c1031f3
+      Path: Events/NPC/Diplomat/Play_DiplomatBarks
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2022,6 +2079,43 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.04
       minDuration: 0.04
+    - name: Play_SoldierBarks
+      guid: e52d0c1a7c93ca43b52e7c51e5281da8
+      id: 3340746321
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Soldier
+        ObjectType: 4
+        guid: d5e99313e58c574496de742d174c1234
+      - ElementName: Play_SoldierBarks
+        ObjectType: 3
+        guid: e52d0c1a7c93ca43b52e7c51e5281da8
+      Path: Events/NPC/Soldier/Play_SoldierBarks
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Soldier
+      guid: d5e99313e58c574496de742d174c1234
+      id: 3121013053
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Soldier
+        ObjectType: 4
+        guid: d5e99313e58c574496de742d174c1234
+      Path: Events/NPC/Soldier
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events/Player.wwu
     PathAndIcons:
     - ElementName: Events
@@ -2033,7 +2127,7 @@ MonoBehaviour:
     ParentPath: Events/Player
     guid: 8207cda29fb9e2459b243d8e7eaae86e
     GuidInternal: 
-    m_lastTime: -8584694891592506707
+    m_lastTime: -8584694010428243226
     List:
     - name: Play_DamageTaken
       guid: de15bb4f3c279345b20d713673af28a0
@@ -2322,7 +2416,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584695856310479966
+    m_lastTime: -8584694010428241312
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -2478,26 +2572,6 @@ MonoBehaviour:
       maxAttenuation: 50
       maxDuration: 0.14302395
       minDuration: 0.14302395
-    - name: Play_Idle_Rifle
-      guid: 4f3692d7a9c6dc499f7866d8056ac20d
-      id: 4057284179
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Weapons
-        ObjectType: 12
-        guid: 8d065d9541c977499e66c4fe8ba4ad73
-      - ElementName: Rifle
-        ObjectType: 4
-        guid: 187839cf4c717a4d81ecae0e6abdd7e9
-      - ElementName: Play_Idle_Rifle
-        ObjectType: 3
-        guid: 4f3692d7a9c6dc499f7866d8056ac20d
-      Path: Events/Weapons/Rifle/Play_Idle_Rifle
-      maxAttenuation: 0
-      maxDuration: 0.04
-      minDuration: 0.04
     - name: Play_Load_handgun
       guid: 3d0558495dabc04ea8d9576484f6d709
       id: 249020240
@@ -2598,6 +2672,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.341125
       minDuration: 0.341125
+    - name: Play_Rifle_NoAmmo
+      guid: 998f9ceb4ba7704a94441caa029302f3
+      id: 2572917948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Weapons
+        ObjectType: 12
+        guid: 8d065d9541c977499e66c4fe8ba4ad73
+      - ElementName: Rifle
+        ObjectType: 4
+        guid: 187839cf4c717a4d81ecae0e6abdd7e9
+      - ElementName: Play_Rifle_NoAmmo
+        ObjectType: 3
+        guid: 998f9ceb4ba7704a94441caa029302f3
+      Path: Events/Weapons/Rifle/Play_Rifle_NoAmmo
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Unload_Rifle
       guid: 298d9293da1fc14aa984bea16cd9154b
       id: 1943012356
@@ -4484,7 +4578,7 @@ MonoBehaviour:
     ParentPath: Switches/Switches
     guid: bcc703895f75f24a85557f1a1fc0cc7c
     GuidInternal: 
-    m_lastTime: -8584695856306707877
+    m_lastTime: -8584694010422331012
     List:
     - name: DiegeticMusicRadioSpeakers
       guid: 14f84359d368434688fe43c22bd8a2e2
@@ -4638,6 +4732,88 @@ MonoBehaviour:
         - ElementName: PowerOn
           ObjectType: 10
           guid: 78e6765fc261554ea00f039e3f42ee2c
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: EnemyStatusSwitch
+      guid: 0221034ab1c8c04c98dc7b36d0f0c59e
+      id: 2418780925
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Switches
+        ObjectType: 12
+        guid: bcc703895f75f24a85557f1a1fc0cc7c
+      - ElementName: EnemyStatusSwitch
+        ObjectType: 11
+        guid: 0221034ab1c8c04c98dc7b36d0f0c59e
+      Path: Switches/Switches/EnemyStatusSwitch
+      values:
+      - name: Attacking
+        guid: 66b7a313eb971e4a88d7b95208b16d18
+        id: 1641806523
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: EnemyStatusSwitch
+          ObjectType: 11
+          guid: 0221034ab1c8c04c98dc7b36d0f0c59e
+        - ElementName: Attacking
+          ObjectType: 10
+          guid: 66b7a313eb971e4a88d7b95208b16d18
+      - name: Dying
+        guid: d296310350530748aa81fb1d8ae84dd9
+        id: 3328495488
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: EnemyStatusSwitch
+          ObjectType: 11
+          guid: 0221034ab1c8c04c98dc7b36d0f0c59e
+        - ElementName: Dying
+          ObjectType: 10
+          guid: d296310350530748aa81fb1d8ae84dd9
+      - name: Idleling
+        guid: f2c7984353a5ef45a2557884fb34d042
+        id: 4220276679
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: EnemyStatusSwitch
+          ObjectType: 11
+          guid: 0221034ab1c8c04c98dc7b36d0f0c59e
+        - ElementName: Idleling
+          ObjectType: 10
+          guid: f2c7984353a5ef45a2557884fb34d042
+      - name: TakingDamage
+        guid: e6787a397502cc4eacc80923dc2435da
+        id: 2921811866
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Switches
+          ObjectType: 12
+          guid: bcc703895f75f24a85557f1a1fc0cc7c
+        - ElementName: EnemyStatusSwitch
+          ObjectType: 11
+          guid: 0221034ab1c8c04c98dc7b36d0f0c59e
+        - ElementName: TakingDamage
+          ObjectType: 10
+          guid: e6787a397502cc4eacc80923dc2435da
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

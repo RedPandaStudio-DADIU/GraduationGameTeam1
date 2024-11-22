@@ -85,7 +85,7 @@
 						<CurrentStateRef Name="Sc6_Tr1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
 						<CurrentStateRef Name="None" ID="{F5D70421-08EA-47C4-9A07-5AF1242504C0}"/>
 						<CurrentStateRef Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
-						<CurrentStateRef Name="Sc3_Tr1" ID="{576DFCD8-BEAE-4407-A639-C77A4DEDFDE3}"/>
+						<CurrentStateRef Name="Sc1_Tr0" ID="{576DFCD8-BEAE-4407-A639-C77A4DEDFDE3}"/>
 						<CurrentStateRef Name="None" ID="{5F2F25BC-EF38-4DB3-8DF4-52E7BA412DF8}"/>
 						<CurrentStateRef Name="None" ID="{88B4A91F-DC66-43CD-892E-3D1D26ED9126}"/>
 						<CurrentStateRef Name="None" ID="{71DEAC1B-AFD2-4EF9-B68B-44EF423FA49A}"/>
@@ -106,7 +106,7 @@
 						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
 						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
 						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
-						<CurrentSwitchRef Name="Dying" ID="{033196D2-5350-4807-AA81-FB1D8AE84DD9}"/>
+						<CurrentSwitchRef Name="Attacking" ID="{13A3B766-97EB-4A1E-88D7-B95208B16D18}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
 					</CurrentSwitchList>
@@ -119,24 +119,39 @@
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_Dia_Ai" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
-							<Position X="1" Y="0"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_JD_AI_lvl2" ID="{1EEF6B52-15AD-498C-9CE6-2C5CB1C04F3D}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Xaga_Dia_lvl2" ID="{30265F51-EC00-4F4D-8E63-AF7B8FCFC2E4}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Xaga_StateDialogue" ID="{9A963916-977E-4926-B92B-9A45AC5DD16A}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
+							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{B97CD3D2-D03B-40A5-A408-6437983095DF}"/>
+						<CurrentStateRef Name="Sc6_Tr1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}"/>
 						<CurrentStateRef Name="Sc5_Tr2" ID="{53BD08A9-9995-4611-B0CC-FE29E967E5D5}"/>
 						<CurrentStateRef Name="None" ID="{1725FE84-7321-45EB-8265-EAA10E64B31A}"/>
+						<CurrentStateRef Name="InitiateFight" ID="{E6A1FE71-2DBC-4E32-BAB3-7687C460A4A5}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Forest" ID="{6A4005B7-D568-4A42-831B-59EE54D73075}"/>
 						<CurrentSwitchRef Name="Afternoon" ID="{6E8783B1-A92C-4E64-8B81-F80E4775065F}"/>
 						<CurrentSwitchRef Name="Concrete" ID="{7E261891-C6D1-4067-9EF0-1E85BA06DD20}"/>
 						<CurrentSwitchRef Name="FullHealth" ID="{B73A1B7A-A864-4ACE-9B79-5F2D918221EF}"/>
+						<CurrentSwitchRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}"/>
 						<CurrentSwitchRef Name="Damp" ID="{67D548C7-3E43-4CC5-9F30-E3F325D0A88A}"/>
 						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
 						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
 						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
+						<CurrentSwitchRef Name="Attacking" ID="{13A3B766-97EB-4A1E-88D7-B95208B16D18}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
 					</CurrentSwitchList>
