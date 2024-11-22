@@ -14,17 +14,33 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{BD169B42-6D36-47D0-C2D2-E9E0629636F2}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{CAEF0905-DF7B-CF28-3FE0-FC316282D507}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 			<Media>
-				<File Id="622069210" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DG_Loop_combatlow1.wav</ShortName>
-					<CachePath>SFX/DG_Loop_combatlow1_FBC78EF0.wem</CachePath>
+				<File Id="114635776" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_nocombat_loop.wav</ShortName>
+					<CachePath>SFX/DG_nocombat_loop_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="139893103" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_transition2.wav</ShortName>
+					<CachePath>SFX/DG_transition2_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="146090391" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_transition_high-normal_lv1.wav</ShortName>
+					<CachePath>SFX/DG_transition_high-normal_lv1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="593644892" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_combat_high.wav</ShortName>
+					<CachePath>SFX/DG_combat_high_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="690146370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DG_Loop_1A.wav</ShortName>
 					<CachePath>SFX/DG_Loop_1A_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="806270842" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DG_trans-nocombat-combat02.wav</ShortName>
+					<CachePath>SFX/DG_trans-nocombat-combat02_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -32,18 +48,21 @@
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811740"/>
+							<MediaRefs>
+								<MediaRef Id="139893103"/>
+								<MediaRef Id="146090391"/>
+								<MediaRef Id="806270842"/>
+							</MediaRefs>
 							<Children>
 								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="2764240573" Id="2116791127"/>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="3705378287"/>
+									<Children/>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="2116791127"/>
 									<Children>
 										<SwitchContainer>
-											<SwitchValue GroupType="State" GroupId="1358435973" Id="3712483660"/>
-											<MediaRefs>
-												<MediaRef Id="622069210"/>
-											</MediaRefs>
-										</SwitchContainer>
-										<SwitchContainer>
-											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="0"/>
 											<MediaRefs>
 												<MediaRef Id="690146370"/>
 											</MediaRefs>
@@ -51,10 +70,26 @@
 									</Children>
 								</SwitchContainer>
 								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="2764240573" Id="5260279"/>
-									<MediaRefs>
-										<MediaRef Id="690146370"/>
-									</MediaRefs>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="2116791127"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="2317668770"/>
+											<MediaRefs>
+												<MediaRef Id="593644892"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="5260279"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
+											<MediaRefs>
+												<MediaRef Id="114635776"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
@@ -73,18 +108,21 @@
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1314730481" Id="964811740"/>
+							<MediaRefs>
+								<MediaRef Id="139893103"/>
+								<MediaRef Id="146090391"/>
+								<MediaRef Id="806270842"/>
+							</MediaRefs>
 							<Children>
 								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="2764240573" Id="2116791127"/>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="3705378287"/>
+									<Children/>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="2116791127"/>
 									<Children>
 										<SwitchContainer>
-											<SwitchValue GroupType="State" GroupId="1358435973" Id="3712483660"/>
-											<MediaRefs>
-												<MediaRef Id="622069210"/>
-											</MediaRefs>
-										</SwitchContainer>
-										<SwitchContainer>
-											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="0"/>
 											<MediaRefs>
 												<MediaRef Id="690146370"/>
 											</MediaRefs>
@@ -92,10 +130,26 @@
 									</Children>
 								</SwitchContainer>
 								<SwitchContainer>
-									<SwitchValue GroupType="State" GroupId="2764240573" Id="5260279"/>
-									<MediaRefs>
-										<MediaRef Id="690146370"/>
-									</MediaRefs>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="2116791127"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="2317668770"/>
+											<MediaRefs>
+												<MediaRef Id="593644892"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="4071417932" Id="5260279"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="1358435973" Id="748895195"/>
+											<MediaRefs>
+												<MediaRef Id="114635776"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
@@ -128,7 +182,6 @@
 					<States>
 						<State Id="748895195" Name="None"/>
 						<State Id="2317668770" Name="Combat_high_Lv1"/>
-						<State Id="3712483660" Name="Combat_low_Lv1"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1358435974" Name="Combat_intensity_Lv2">
@@ -145,17 +198,18 @@
 						<State Id="979765101" Name="Win"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="2764240573" Name="Combat">
+				<StateGroup Id="4071417932" Name="Player_state">
 					<States>
 						<State Id="5260279" Name="No_combat"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="1960863454" Name="Control_tower"/>
 						<State Id="2116791127" Name="In_combat"/>
 						<State Id="3705378287" Name="Elevator"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6FF63C7C-3571-7D10-3214-8BA13154567C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{E5C15AEC-E796-8B43-812A-9D4E44521BC2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -315,7 +369,6 @@
 					<States>
 						<State Id="748895195" Name="None"/>
 						<State Id="2317668770" Name="Combat_high_Lv1"/>
-						<State Id="3712483660" Name="Combat_low_Lv1"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="1358435974" Name="Combat_intensity_Lv2">
@@ -342,14 +395,6 @@
 						<State Id="2782928028" Name="ConferenceRoom2"/>
 						<State Id="2782928029" Name="ConferenceRoom3"/>
 						<State Id="2782928031" Name="ConferenceRoom1"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="2764240573" Name="Combat">
-					<States>
-						<State Id="5260279" Name="No_combat"/>
-						<State Id="748895195" Name="None"/>
-						<State Id="2116791127" Name="In_combat"/>
-						<State Id="3705378287" Name="Elevator"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3285234865" Name="PlayerState">
@@ -381,6 +426,15 @@
 						<State Id="72790338" Name="Low_health"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="3268324997" Name="Normal_health"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4071417932" Name="Player_state">
+					<States>
+						<State Id="5260279" Name="No_combat"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1960863454" Name="Control_tower"/>
+						<State Id="2116791127" Name="In_combat"/>
+						<State Id="3705378287" Name="Elevator"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="4121174865" Name="Scenes_lvl2">
@@ -647,7 +701,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{AD5FBC73-6985-6967-E2C6-D22083E2F400}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{945B136B-53EF-12F9-C159-B43265A84B6F}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -3229,5 +3283,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7D52FCC9-F0A6-3AD7-C9C9-171F5C97A5E3}</FileHash>
+	<FileHash>{5A70688F-FEA5-418E-F71B-73CEB792EAA6}</FileHash>
 </SoundBanksInfo>

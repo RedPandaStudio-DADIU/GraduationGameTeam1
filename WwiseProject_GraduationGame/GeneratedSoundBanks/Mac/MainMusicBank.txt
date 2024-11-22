@@ -6,8 +6,8 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1358435973	Combat_intensity_Lv1			\Music_States\Combat_intensity_Lv1	
 	1358435974	Combat_intensity_Lv2			\Music_States\Combat_intensity_Lv2	
 	1972315911	Lv2_ending			\Music_States\Lv2_ending	
-	2764240573	Combat			\Music_States\Combat	
 	3626020801	Player_State_health			\Music_States\Player_State_health	
+	4071417932	Player_state			\Music_States\Player_state	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Player_Level			
@@ -16,22 +16,26 @@ State	ID	Name	State Group			Notes
 	2607556080	Menu	Player_Level			
 	748895195	None	Combat_intensity_Lv1			
 	2317668770	Combat_high_Lv1	Combat_intensity_Lv1			
-	3712483660	Combat_low_Lv1	Combat_intensity_Lv1			
 	748895195	None	Combat_intensity_Lv2			
 	2317668769	Combat_high_Lv2	Combat_intensity_Lv2			
 	2939361434	Combat_base_lv2	Combat_intensity_Lv2			
 	174960569	Loose	Lv2_ending			
 	748895195	None	Lv2_ending			
 	979765101	Win	Lv2_ending			
-	5260279	No_combat	Combat			
-	748895195	None	Combat			
-	2116791127	In_combat	Combat			
-	3705378287	Elevator	Combat			
 	72790338	Low_health	Player_State_health			
 	748895195	None	Player_State_health			
 	3268324997	Normal_health	Player_State_health			
+	5260279	No_combat	Player_state			
+	748895195	None	Player_state			
+	1960863454	Control_tower	Player_state			
+	2116791127	In_combat	Player_state			
+	3705378287	Elevator	Player_state			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	622069210	DG_Loop_combatlow1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_Loop_combatlow1_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Lv1_Combat\Lv1_combat_intensity\Lv1_combat_low\DG_Loop_Combatlow1\DG_Loop_combatlow1		7121552
-	690146370	DG_Loop_1A	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_Loop_1A_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Lv1_base_theme\DG_Loop1A\DG_Loop_1A		10891736
+	114635776	DG_nocombat_loop	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_nocombat_loop_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Lv1_No_Combat\DG_nocombat_loop\DG_nocombat_loop		20107736
+	139893103	DG_transition2	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_transition2_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Transitions_LV1\DG_transition2\DG_transition2		1256824
+	146090391	DG_transition_high-normal_lv1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_transition_high-normal_lv1_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Transitions_LV1\DG_transition_high-normal_lv1\DG_transition_high-normal_lv1		1256824
+	593644892	DG_combat_high	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_combat_high_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Player_state\Lv1_combat_intensity\Lv1_combat_high\DG_combat_high\DG_combat_high		5864824
+	690146370	DG_Loop_1A	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_Loop_1A_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Lv1_incombat\DG_Loop1A\DG_Loop_1A		10891736
+	806270842	DG_trans-nocombat-combat02	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\DG_trans-nocombat-combat02_FBC78EF0.wem		\Interactive Music Hierarchy\InteractiveMusic\MainMusicSW\Lv1_hangard\Transitions_LV1\DG_trans-nocombat-combat02\DG_trans-nocombat-combat02		1675736
 
