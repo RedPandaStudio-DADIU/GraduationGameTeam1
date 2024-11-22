@@ -522,7 +522,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SFX
     guid: d2201e2c39a40c4b940fb6d4f3340678
     GuidInternal: 
-    m_lastTime: -8584695856308198654
+    m_lastTime: -8584693244434163763
     List:
     - name: NPC_SFX
       guid: d133aa54d4d02a428820498561de2572
@@ -647,8 +647,34 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584695856308195489
+    m_lastTime: -8584693223070340594
     List:
+    - name: ConferenceHall
+      guid: ab2a4aacd30f714dbf118d68ac308fbc
+      id: 3574333866
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SharedEffects
+        ObjectType: 12
+        guid: 8076f1e943eefc438b8dbb683da5f64b
+      - ElementName: ReverbEnvironments
+        ObjectType: 2
+        guid: be82c0df0b34dc49ab089d7e34ce02c5
+      - ElementName: Level2
+        ObjectType: 2
+        guid: 6db6ec6f9385ad43bd0f1b0d1a6908c3
+      - ElementName: ConferenceHall
+        ObjectType: 1
+        guid: ab2a4aacd30f714dbf118d68ac308fbc
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/Level2/ConferenceHall
     - name: DelaySlaps
       guid: a0f5efa9befc7844bfcf8f9b76c0944b
       id: 924856803
@@ -665,13 +691,13 @@ MonoBehaviour:
       - ElementName: SharedEffects
         ObjectType: 12
         guid: 8076f1e943eefc438b8dbb683da5f64b
-      - ElementName: Reverbs
+      - ElementName: ReverbEnvironments
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
       - ElementName: DelaySlaps
         ObjectType: 1
         guid: a0f5efa9befc7844bfcf8f9b76c0944b
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/DelaySlaps
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/DelaySlaps
     - name: DelaySlaps_HangarSpeaker
       guid: 0bbe8ce8f042d54bbef206004587ceee
       id: 425081994
@@ -688,16 +714,16 @@ MonoBehaviour:
       - ElementName: SharedEffects
         ObjectType: 12
         guid: 8076f1e943eefc438b8dbb683da5f64b
-      - ElementName: Reverbs
+      - ElementName: ReverbEnvironments
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
       - ElementName: DelaySlaps_HangarSpeaker
         ObjectType: 1
         guid: 0bbe8ce8f042d54bbef206004587ceee
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/DelaySlaps_HangarSpeaker
-    - name: Reverbs
-      guid: be82c0df0b34dc49ab089d7e34ce02c5
-      id: 3545700988
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/DelaySlaps_HangarSpeaker
+    - name: ElevatorRoom
+      guid: fdb28d29f51b8b42b200dc219e517022
+      id: 1448937718
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -711,10 +737,85 @@ MonoBehaviour:
       - ElementName: SharedEffects
         ObjectType: 12
         guid: 8076f1e943eefc438b8dbb683da5f64b
-      - ElementName: Reverbs
+      - ElementName: ReverbEnvironments
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs
+      - ElementName: Level2
+        ObjectType: 2
+        guid: 6db6ec6f9385ad43bd0f1b0d1a6908c3
+      - ElementName: ElevatorRoom
+        ObjectType: 1
+        guid: fdb28d29f51b8b42b200dc219e517022
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/Level2/ElevatorRoom
+    - name: Level2
+      guid: 6db6ec6f9385ad43bd0f1b0d1a6908c3
+      id: 2678230381
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SharedEffects
+        ObjectType: 12
+        guid: 8076f1e943eefc438b8dbb683da5f64b
+      - ElementName: ReverbEnvironments
+        ObjectType: 2
+        guid: be82c0df0b34dc49ab089d7e34ce02c5
+      - ElementName: Level2
+        ObjectType: 2
+        guid: 6db6ec6f9385ad43bd0f1b0d1a6908c3
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/Level2
+    - name: PreHall
+      guid: 3988269136cb4a45b8fbd7916ad9ae30
+      id: 2042191905
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SharedEffects
+        ObjectType: 12
+        guid: 8076f1e943eefc438b8dbb683da5f64b
+      - ElementName: ReverbEnvironments
+        ObjectType: 2
+        guid: be82c0df0b34dc49ab089d7e34ce02c5
+      - ElementName: Level2
+        ObjectType: 2
+        guid: 6db6ec6f9385ad43bd0f1b0d1a6908c3
+      - ElementName: PreHall
+        ObjectType: 1
+        guid: 3988269136cb4a45b8fbd7916ad9ae30
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/Level2/PreHall
+    - name: ReverbEnvironments
+      guid: be82c0df0b34dc49ab089d7e34ce02c5
+      id: 346451691
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SharedEffects
+        ObjectType: 12
+        guid: 8076f1e943eefc438b8dbb683da5f64b
+      - ElementName: ReverbEnvironments
+        ObjectType: 2
+        guid: be82c0df0b34dc49ab089d7e34ce02c5
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments
     - name: RoomHangarMain
       guid: 6da22c007253064b92de6be6553f130d
       id: 986249158
@@ -731,13 +832,13 @@ MonoBehaviour:
       - ElementName: SharedEffects
         ObjectType: 12
         guid: 8076f1e943eefc438b8dbb683da5f64b
-      - ElementName: Reverbs
+      - ElementName: ReverbEnvironments
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
       - ElementName: RoomHangarMain
         ObjectType: 1
         guid: 6da22c007253064b92de6be6553f130d
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/RoomHangarMain
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/RoomHangarMain
     - name: RoomSmall
       guid: 867a9673b28ef24cab9aa4f4360c3fe7
       id: 3205342581
@@ -754,13 +855,13 @@ MonoBehaviour:
       - ElementName: SharedEffects
         ObjectType: 12
         guid: 8076f1e943eefc438b8dbb683da5f64b
-      - ElementName: Reverbs
+      - ElementName: ReverbEnvironments
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
       - ElementName: RoomSmall
         ObjectType: 1
         guid: 867a9673b28ef24cab9aa4f4360c3fe7
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/RoomSmall
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/RoomSmall
     - name: RoomTunnel
       guid: d2dc6f0d61cd8940a788aa26499dcd89
       id: 1603492950
@@ -777,13 +878,39 @@ MonoBehaviour:
       - ElementName: SharedEffects
         ObjectType: 12
         guid: 8076f1e943eefc438b8dbb683da5f64b
-      - ElementName: Reverbs
+      - ElementName: ReverbEnvironments
         ObjectType: 2
         guid: be82c0df0b34dc49ab089d7e34ce02c5
       - ElementName: RoomTunnel
         ObjectType: 1
         guid: d2dc6f0d61cd8940a788aa26499dcd89
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/Reverbs/RoomTunnel
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/RoomTunnel
+    - name: Stairs
+      guid: 83678b32418b55469c76e7962d47327b
+      id: 1289942167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SharedEffects
+        ObjectType: 12
+        guid: 8076f1e943eefc438b8dbb683da5f64b
+      - ElementName: ReverbEnvironments
+        ObjectType: 2
+        guid: be82c0df0b34dc49ab089d7e34ce02c5
+      - ElementName: Level2
+        ObjectType: 2
+        guid: 6db6ec6f9385ad43bd0f1b0d1a6908c3
+      - ElementName: Stairs
+        ObjectType: 1
+        guid: 83678b32418b55469c76e7962d47327b
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects/ReverbEnvironments/Level2/Stairs
   - PhysicalPath: Master-Mixer Hierarchy/Voicelines.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -801,7 +928,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584694010423510804
+    m_lastTime: -8584693226419502736
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -851,7 +978,7 @@ MonoBehaviour:
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe
     - name: 03_Xaga
-      guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
+      guid: 8900e9a781efe44bbea14a840739efaf
       id: 1153792
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
@@ -871,7 +998,7 @@ MonoBehaviour:
         guid: 9f67d9ffcfacf94ba6db2632b64af791
       - ElementName: 03_Xaga
         ObjectType: 2
-        guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
+        guid: 8900e9a781efe44bbea14a840739efaf
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga
     - name: DialogueMaster
       guid: 9f67d9ffcfacf94ba6db2632b64af791
@@ -1048,6 +1175,116 @@ MonoBehaviour:
         guid: c8c9c230919d804b997850fc91cb75be
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe/PlayerVoice
+    - name: Xaga_Conference
+      guid: bdeff93d90de884ba6b259d4918c76f3
+      id: 385642153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_Xaga
+        ObjectType: 2
+        guid: 8900e9a781efe44bbea14a840739efaf
+      - ElementName: Xaga_ConferenceRoom
+        ObjectType: 2
+        guid: f8277a6573aa4d459d79b59abf99aa24
+      - ElementName: Xaga_Conference
+        ObjectType: 2
+        guid: bdeff93d90de884ba6b259d4918c76f3
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/Xaga_ConferenceRoom/Xaga_Conference
+    - name: Xaga_ConferenceRoom
+      guid: f8277a6573aa4d459d79b59abf99aa24
+      id: 3458995332
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_Xaga
+        ObjectType: 2
+        guid: 8900e9a781efe44bbea14a840739efaf
+      - ElementName: Xaga_ConferenceRoom
+        ObjectType: 2
+        guid: f8277a6573aa4d459d79b59abf99aa24
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/Xaga_ConferenceRoom
+    - name: Xaga_FarAway
+      guid: 0643cfdb5ea82a4d9695672f0f3e65db
+      id: 274948124
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_Xaga
+        ObjectType: 2
+        guid: 8900e9a781efe44bbea14a840739efaf
+      - ElementName: Xaga_ConferenceRoom
+        ObjectType: 2
+        guid: f8277a6573aa4d459d79b59abf99aa24
+      - ElementName: Xaga_FarAway
+        ObjectType: 2
+        guid: 0643cfdb5ea82a4d9695672f0f3e65db
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/Xaga_ConferenceRoom/Xaga_FarAway
+    - name: XagaHangar
+      guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
+      id: 3868067129
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_Xaga
+        ObjectType: 2
+        guid: 8900e9a781efe44bbea14a840739efaf
+      - ElementName: XagaHangar
+        ObjectType: 2
+        guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/XagaHangar
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -1127,7 +1364,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584695856306726513
+    m_lastTime: -8584693290834975928
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -1155,8 +1392,25 @@ MonoBehaviour:
     ParentPath: Events/Ambience
     guid: eeb395ccf221bb469c4e1b139a88fa83
     GuidInternal: 
-    m_lastTime: -8584694010428267472
+    m_lastTime: -8584693202010886355
     List:
+    - name: EnvironmentEmitters
+      guid: 5166b4737d82eb4294c8ba372ae0b330
+      id: 2301458517
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: eeb395ccf221bb469c4e1b139a88fa83
+      - ElementName: EnvironmentEmitters
+        ObjectType: 4
+        guid: 5166b4737d82eb4294c8ba372ae0b330
+      Path: Events/Ambience/EnvironmentEmitters
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Guitarloop
       guid: 2d27b5d8fc97d6478a87d10ae65bcf99
       id: 3776193501
@@ -1191,6 +1445,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_FireAlarm
+      guid: eb1e4dddc7aac8439269fe6aa197d62e
+      id: 3888840653
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: eeb395ccf221bb469c4e1b139a88fa83
+      - ElementName: EnvironmentEmitters
+        ObjectType: 4
+        guid: 5166b4737d82eb4294c8ba372ae0b330
+      - ElementName: Play_FireAlarm
+        ObjectType: 3
+        guid: eb1e4dddc7aac8439269fe6aa197d62e
+      Path: Events/Ambience/EnvironmentEmitters/Play_FireAlarm
+      maxAttenuation: 50
+      maxDuration: 50.739105
+      minDuration: 50.739105
     - name: Play_Guitarloop
       guid: ce5e725a4fc5ca44acba9e386f3552c5
       id: 3813858242
@@ -1228,6 +1502,26 @@ MonoBehaviour:
       maxAttenuation: 10
       maxDuration: -1
       minDuration: -1
+    - name: Play_Smallbonfire
+      guid: 38deb925f710a44698a74b394fabffff
+      id: 255138028
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Ambience
+        ObjectType: 12
+        guid: eeb395ccf221bb469c4e1b139a88fa83
+      - ElementName: EnvironmentEmitters
+        ObjectType: 4
+        guid: 5166b4737d82eb4294c8ba372ae0b330
+      - ElementName: Play_Smallbonfire
+        ObjectType: 3
+        guid: 38deb925f710a44698a74b394fabffff
+      Path: Events/Ambience/EnvironmentEmitters/Play_Smallbonfire
+      maxAttenuation: 20
+      maxDuration: 28.396605
+      minDuration: 28.396605
     - name: Stop_Guitarloop
       guid: cf6a75465ff984408ea0ee1ada06ddef
       id: 4128836072
@@ -1259,7 +1553,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 8bbbad7cd7ba7c4ab964381de7f98bd9
     GuidInternal: 
-    m_lastTime: -8584694176474021170
+    m_lastTime: -8584693184154987951
     List: []
   - PhysicalPath: Events/Dialogue.wwu
     PathAndIcons:
@@ -1272,7 +1566,7 @@ MonoBehaviour:
     ParentPath: Events/Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584694010428263387
+    m_lastTime: -8584693182630043685
     List:
     - name: BossFight
       guid: 43770ea62435ff42863ec4b8587eea89
@@ -1348,23 +1642,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Dia_JohnDoe
-      guid: efb6edb945d3ea47ba3f968f0d5fd414
-      id: 1296777492
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Dialogue
-        ObjectType: 12
-        guid: 200b6a6a285dcd439f28a67e0a03cef1
-      - ElementName: Play_Dia_JohnDoe
-        ObjectType: 3
-        guid: efb6edb945d3ea47ba3f968f0d5fd414
-      Path: Events/Dialogue/Play_Dia_JohnDoe
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Play_Dia_Xaga
       guid: 307774708db9f6419e4bb50ffd99449d
       id: 16982058
@@ -1382,23 +1659,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 307774708db9f6419e4bb50ffd99449d
       Path: Events/Dialogue/lvl1_Hangar/Play_Dia_Xaga
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_Dia_Xaga_
-      guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
-      id: 3253445185
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Dialogue
-        ObjectType: 12
-        guid: 200b6a6a285dcd439f28a67e0a03cef1
-      - ElementName: Play_Dia_Xaga_
-        ObjectType: 3
-        guid: 0a1a90eae2c2f44bb1535495ee2ce6d1
-      Path: Events/Dialogue/Play_Dia_Xaga_
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1442,9 +1702,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Play_Sc4
-      guid: 97b61cdb45bcfb40aca1b8a1d4794035
-      id: 3191462592
+    - name: Play_Sc0Tr1
+      guid: dfee18bf570ae642ae260add07e5cfb5
+      id: 3993849055
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1455,16 +1715,16 @@ MonoBehaviour:
       - ElementName: lvl1_Hangar
         ObjectType: 4
         guid: c6967c8ce05f7c4a84e56627c4e3f8d0
-      - ElementName: Play_Sc4
+      - ElementName: Play_Sc0Tr1
         ObjectType: 3
-        guid: 97b61cdb45bcfb40aca1b8a1d4794035
-      Path: Events/Dialogue/lvl1_Hangar/Play_Sc4
+        guid: dfee18bf570ae642ae260add07e5cfb5
+      Path: Events/Dialogue/lvl1_Hangar/Play_Sc0Tr1
       maxAttenuation: 0
-      maxDuration: 0.17999999
-      minDuration: 0.17999999
-    - name: Play_Sc5
-      guid: 9b80f6320049e748bb838bdad2923d66
-      id: 3191462593
+      maxDuration: 3.1895761
+      minDuration: 3.1895761
+    - name: Play_SorryGuys
+      guid: 9fec078b9010f047b58aae51f5997333
+      id: 1685668713
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1475,13 +1735,13 @@ MonoBehaviour:
       - ElementName: lvl1_Hangar
         ObjectType: 4
         guid: c6967c8ce05f7c4a84e56627c4e3f8d0
-      - ElementName: Play_Sc5
+      - ElementName: Play_SorryGuys
         ObjectType: 3
-        guid: 9b80f6320049e748bb838bdad2923d66
-      Path: Events/Dialogue/lvl1_Hangar/Play_Sc5
+        guid: 9fec078b9010f047b58aae51f5997333
+      Path: Events/Dialogue/lvl1_Hangar/Play_SorryGuys
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 0.9062013
+      minDuration: 0.9062013
     - name: Play_Xaga_Dia_lvl2
       guid: 515f263000ec4d4f8e63af7b8fcfc2e4
       id: 2842468683
@@ -1522,7 +1782,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 41b68a4b7f89e142a417634b5cd9382b
       Path: Events/Dialogue/lvl2_Conference/BossFight/Play_Xaga_HurtSounds_DamageTaken
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.4367347
       minDuration: 0.78367347
     - name: Play_Xaga_StateDialogue
@@ -1545,7 +1805,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1639969a7e972649b92b9a45ac5dd16a
       Path: Events/Dialogue/lvl2_Conference/BossFight/Play_Xaga_StateDialogue
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_XagaCharge
@@ -1568,7 +1828,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9872439fcce15648ba80e20e5aa922e2
       Path: Events/Dialogue/lvl2_Conference/BossFight/Play_XagaCharge
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 5.002333
       minDuration: 5.002333
     - name: Play_XagaDeathScream
@@ -1591,7 +1851,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: a1610e97d0c9174986cd262c10b26f2c
       Path: Events/Dialogue/lvl2_Conference/BossFight/Play_XagaDeathScream
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.2394755
       minDuration: 1.2394755
   - PhysicalPath: Events/GameWorld.wwu
@@ -1976,9 +2236,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0f7a7f6bb163904ea8bf75d594e37c40
       Path: Events/NPC/Brute/Play_BruteBarks
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: Infinity
+      minDuration: 0.9594054
     - name: Play_DiplomatBarks
       guid: 4da6ff0e1193034fbc541f493c1031f3
       id: 4152854033
@@ -1997,8 +2257,8 @@ MonoBehaviour:
         guid: 4da6ff0e1193034fbc541f493c1031f3
       Path: Events/NPC/Diplomat/Play_DiplomatBarks
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: Infinity
+      minDuration: 0.9594054
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
       id: 2628165376
@@ -2097,8 +2357,8 @@ MonoBehaviour:
         guid: e52d0c1a7c93ca43b52e7c51e5281da8
       Path: Events/NPC/Soldier/Play_SoldierBarks
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: Infinity
+      minDuration: 0.9594054
     - name: Soldier
       guid: d5e99313e58c574496de742d174c1234
       id: 3121013053
@@ -2689,9 +2949,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 998f9ceb4ba7704a94441caa029302f3
       Path: Events/Weapons/Rifle/Play_Rifle_NoAmmo
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 0.11284363
+      minDuration: 0.11284363
     - name: Play_Unload_Rifle
       guid: 298d9293da1fc14aa984bea16cd9154b
       id: 1943012356
@@ -3320,7 +3580,7 @@ MonoBehaviour:
     ParentPath: States/Sound_States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584695774369280392
+    m_lastTime: -8584693182630005602
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -3799,6 +4059,44 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: 8ad9a7b380de704d8936ba9185719a0e
+      - name: Sc0_Tr1
+        guid: eb5f7f55cff4a84585f391f7f69413f5
+        id: 1568320811
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc0_Tr1
+          ObjectType: 8
+          guid: eb5f7f55cff4a84585f391f7f69413f5
+      - name: Sc1_Tr0
+        guid: d8fc6d57aebe0744a639c77a4dedfde3
+        id: 342028879
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl1
+          ObjectType: 9
+          guid: 8a1c68d19060dc43838936963323b27f
+        - ElementName: Sc1_Tr0
+          ObjectType: 8
+          guid: d8fc6d57aebe0744a639c77a4dedfde3
       - name: Sc1_tr1
         guid: 16062649c550dd44b3e3453af535a590
         id: 342028878
@@ -3876,7 +4174,7 @@ MonoBehaviour:
           ObjectType: 8
           guid: 16267201cf7e204ebf5700777c5bad22
       - name: Sc3_Tr1
-        guid: d8fc6d57aebe0744a639c77a4dedfde3
+        guid: 4959123f584cfa45a3bc372b2c860c9e
         id: 569325008
         PathAndIcons:
         - ElementName: States
@@ -3892,25 +4190,6 @@ MonoBehaviour:
           ObjectType: 9
           guid: 8a1c68d19060dc43838936963323b27f
         - ElementName: Sc3_Tr1
-          ObjectType: 8
-          guid: d8fc6d57aebe0744a639c77a4dedfde3
-      - name: Sc3_Tr2
-        guid: 4959123f584cfa45a3bc372b2c860c9e
-        id: 569325011
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Sound_States
-          ObjectType: 12
-          guid: 4d8ca50caf173545b4b3d20d71747df5
-        - ElementName: Dialogue
-          ObjectType: 4
-          guid: 9019064e3fa83a4090ce0c75b228dfd6
-        - ElementName: Scenes_lvl1
-          ObjectType: 9
-          guid: 8a1c68d19060dc43838936963323b27f
-        - ElementName: Sc3_Tr2
           ObjectType: 8
           guid: 4959123f584cfa45a3bc372b2c860c9e
       - name: Sc4_Tr1
@@ -4067,6 +4346,25 @@ MonoBehaviour:
         - ElementName: Sc7_Tr1
           ObjectType: 8
           guid: bd5df24adfdd0647a27cea29b512906a
+      - name: Sc7_Tr2
+        guid: e3a3f18667c6ff4998c6e1ed8da124fe
+        id: 3398158175
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Sound_States
+          ObjectType: 12
+          guid: 4d8ca50caf173545b4b3d20d71747df5
+        - ElementName: Dialogue
+          ObjectType: 4
+          guid: 9019064e3fa83a4090ce0c75b228dfd6
+        - ElementName: Scenes_lvl2
+          ObjectType: 9
+          guid: f15bcd04ffb00842b7cd73bad0d1bdd3
+        - ElementName: Sc7_Tr2
+          ObjectType: 8
+          guid: e3a3f18667c6ff4998c6e1ed8da124fe
       - name: Sc8_Tr1
         guid: efbf3c6d7856f14a802f1ea256addbff
         id: 3986144931
@@ -5625,7 +5923,7 @@ MonoBehaviour:
     m_lastTime: -8584720232967888287
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0300000004000000050000001a0000001b0000001c00000030000000390000003b0000003d00000044000000450000007800000079000000b400000078010000790100007c010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

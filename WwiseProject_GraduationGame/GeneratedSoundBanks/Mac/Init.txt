@@ -98,11 +98,12 @@ State	ID	Name	State Group			Notes
 	2059667105	Sc6_Tr1	Scenes_lvl2			
 	2239442679	WaitingOnTriggerEnter	Scenes_lvl2			
 	3398158172	Sc7_Tr1	Scenes_lvl2			
+	3398158175	Sc7_Tr2	Scenes_lvl2			
 	3986144931	Sc8_Tr1	Scenes_lvl2			
 	342028878	Sc1_tr1	Scenes_lvl1			
+	342028879	Sc1_Tr0	Scenes_lvl1			
 	551107239	Sc4_Tr1	Scenes_lvl1			
 	569325008	Sc3_Tr1	Scenes_lvl1			
-	569325011	Sc3_Tr2	Scenes_lvl1			
 	748895195	None	Scenes_lvl1			
 	2172575860	TriggerIsWaiting	Scenes_lvl1			
 	3079543733	Sc2_Tr1	Scenes_lvl1			
@@ -132,8 +133,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	47937584	PlayerVoice			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice	
 	196922711	NPCBarks			\Audio Master\Master Bus\Voicelines\NPCBarks	
 	223128778	NPC Aliens			\Audio Master\Master Bus\Voicelines\NPCBarks\NPC Aliens	
+	274948124	Xaga_FarAway			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\Xaga_ConferenceRoom\Xaga_FarAway	
 	309309195	2DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\2DAmbience	
 	344209961	01_Ai			\Audio Master\Master Bus\Voicelines\DialogueMaster\01_Ai	
+	346451691	ReverbEnvironments			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments	
+	385642153	Xaga_Conference			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\Xaga_ConferenceRoom\Xaga_Conference	
 	765206498	PlayerCloth			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerCloth	
 	840484792	NPC Humans			\Audio Master\Master Bus\Voicelines\NPCBarks\NPC Humans	
 	1182634443	AmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds	
@@ -144,30 +148,44 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1681012287	PlayerFootsteps			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerFootsteps	
 	2343802269	PlayerLocomotion			\Audio Master\Master Bus\SFX\PlayerLocomotion	
 	2645497833	DialogueMaster			\Audio Master\Master Bus\Voicelines\DialogueMaster	
+	2678230381	Level2			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2	
 	2997659434	NPC_SFX			\Audio Master\Master Bus\SFX\NPC_SFX	
-	3545700988	Reverbs			\Audio Master\Master Bus\SharedEffects\Reverbs	
+	3458995332	Xaga_ConferenceRoom			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\Xaga_ConferenceRoom	
 	3570874681	02_John Doe			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe	
 	3595451983	Music_Master			\Audio Master\Master Bus\Music\Music_Master	
+	3868067129	XagaHangar			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\XagaHangar	
 	4152869693	2DAmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds\2DAmbientBeds	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	350835844	HangarVerb_JD			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice\HangarVerb_JD	
-	425081994	DelaySlaps_HangarSpeaker			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps_HangarSpeaker	
-	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\Reverbs\DelaySlaps	
-	986249158	RoomHangarMain			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomHangarMain	
-	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomTunnel	
-	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\Reverbs\RoomSmall	
+	425081994	DelaySlaps_HangarSpeaker			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\DelaySlaps_HangarSpeaker	
+	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\DelaySlaps	
+	986249158	RoomHangarMain			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomHangarMain	
+	1289942167	Stairs			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\Stairs	
+	1448937718	ElevatorRoom			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\ElevatorRoom	
+	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomTunnel	
+	2042191905	PreHall			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\PreHall	
+	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomSmall	
+	3574333866	ConferenceHall			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\ConferenceHall	
 	3670417488	JD_DEAD			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice\JD_DEAD	
 
 Effect plug-ins	ID	Name	Type				Notes
+	41483680	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
 	51356967	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	104816223	Echoes_Linear (Custom)	Wwise Delay			
+	170601794	ElevatorRoom	Wwise RoomVerb			
 	260922761	Echoes_Linear (Custom)	Wwise Delay			
+	404704146	Hall_Conversation (Custom)	Wwise RoomVerb			
 	438276821	Caught_in_a_loop (Custom)	Wwise Stereo Delay			
 	535667444	Bathroom1	Wwise Matrix Reverb			
+	567187658	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
+	608453626	Tunnel1 (Custom)	Wwise Matrix Reverb			
 	695490779	Echoes_Linear (Custom)	Wwise Delay			
 	702543456	Tunnel1	Wwise Matrix Reverb			
+	793647857	Room_Small (Custom)	Wwise RoomVerb			
 	819943492	Fear_no_Evil	Wwise Harmonizer			
+	826000393	Hall_Large_Dark (Custom)	Wwise RoomVerb			
+	882945345	Hall_Large_Dark (Custom)	Wwise RoomVerb			
 	911411724	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	1259256166	New_RoomVerb	Wwise RoomVerb			
 	1711423976	Many_Odd_Harm_Notches	Wwise Flanger			

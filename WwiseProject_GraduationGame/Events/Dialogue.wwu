@@ -38,29 +38,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Sc4" ID="{DB1CB697-BC45-40FB-ACA1-B8A1D4794035}">
+						<Event Name="Play_Sc0Tr1" ID="{BF18EEDF-0A57-42E6-AE26-0ADD07E5CFB5}">
 							<ChildrenList>
-								<Action Name="" ID="{857EB0B4-6CBF-4880-BA1D-4EFC1BF7936B}" ShortID="86421310">
+								<Action Name="" ID="{EF038666-CDD5-41E6-B8E5-99D2C9161EB3}" ShortID="182811479">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Sfx_fs_TestSound" ID="{B506B50A-308F-46A1-9909-3DCB34D1AA8B}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{06F6545C-3D38-41F5-9496-4586C582EE71}" ShortID="1038499861">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-										<Property Name="Delay" Type="Real64" Value="3"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Sc6_Tr1" ID="{88F8AB37-92C3-4965-9FE8-9787B28915B3}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+											<ObjectRef Name="JD_PerfectLanding10" ID="{55E34325-44B1-43BE-8AFC-19A3F7B3B7C5}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Sc5" ID="{32F6809B-4900-48E7-BB83-8BDAD2923D66}"/>
+						<Event Name="Play_SorryGuys" ID="{8B07EC9F-1090-47F0-B58A-AE51F5997333}">
+							<ChildrenList>
+								<Action Name="" ID="{9F56D115-92C6-4BF9-8336-7FEB16CD52F1}" ShortID="534678097">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JD_SorryGuys" ID="{78AC6885-EBF2-4C24-9D84-F28F0BD6C41F}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="lvl2_Conference" ID="{3B71567B-F77B-4B7F-A906-F88B5E191254}" ShortID="815035599">
@@ -71,6 +70,13 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Xaga_Dia_lvl2" ID="{4C934206-40F2-4949-859E-A15FC6453F00}" WorkUnitID="{4525D387-513E-4AD3-8F63-63E8A8B0C74D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{82D5CEF2-9984-410B-9532-F234F8C61FB3}" ShortID="369904551">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ai+JD_StateDialogue" ID="{3A135883-C75C-4DFF-9132-2ADF0CFDAD72}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -137,18 +143,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_Dia_Xaga_" ID="{EA901A0A-C2E2-4BF4-B153-5495EE2CE6D1}">
-					<ChildrenList>
-						<Action Name="" ID="{18EB9DD4-B13C-4A36-9060-DCAFFC959D38}" ShortID="978817850">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Dia_JohnDoe" ID="{B9EDB6EF-D345-47EA-BA3F-968F0D5FD414}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

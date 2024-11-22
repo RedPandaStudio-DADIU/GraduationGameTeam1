@@ -76,6 +76,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="EnvironmentEmitters" ID="{73B46651-827D-42EB-94C8-BA372AE0B330}" ShortID="588899625">
+					<ChildrenList>
+						<Event Name="Play_FireAlarm" ID="{DD4D1EEB-AAC7-43C8-9269-FE6AA197D62E}">
+							<ChildrenList>
+								<Action Name="" ID="{8E2BAA9E-E57C-4BE1-9D5A-82296511C2F3}" ShortID="12696590">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FireAlarm" ID="{44789C63-876A-466E-BA44-0F8BB5C6B6A0}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Smallbonfire" ID="{25B9DE38-10F7-46A4-98A7-4B394FABFFFF}">
+							<ChildrenList>
+								<Action Name="" ID="{20794BEA-FAE0-4D84-BB42-CD7699CE9E8E}" ShortID="613818063">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Smallbonfire" ID="{CB12BBAD-A700-4E73-A84E-43BCA4E7D509}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
