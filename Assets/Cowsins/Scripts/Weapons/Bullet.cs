@@ -66,7 +66,7 @@ namespace cowsins
             // } 
             if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
-
+                Debug.LogError("Enemy " + other.gameObject.name + " hit!");
                 if(this.CompareTag("ChargeShot")){
                     
                     player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);
@@ -79,8 +79,6 @@ namespace cowsins
                     DestroyProjectile();
 
                 }
-
-               
 
             } else if(other.CompareTag("Window")){
                 DestroyProjectile();
@@ -152,11 +150,15 @@ namespace cowsins
 
                 enemy.SetForceDirection(pushDirection);
                 enemy.SetForce(bigRagdollForce);
-                enemy.ChangeState(new EnemyHitState());
+                if(enemy.GetCurrentState() is not EnemyHitState){
+                    enemy.ChangeState(new EnemyHitState());
+                }
 
                 if(enemy.GetEnemy().GetHealth() > 0){
                     Debug.Log("Inside health check");
-                    enemy.Recovery(ragdollDuration);
+                    if(!enemy.GetisInRecovery()){
+                        enemy.Recovery(ragdollDuration);
+                    }
                 } else {
                     enemy.ChangeState(new EnemyDieState());
                     Debug.Log("Health check not passed");

@@ -22,7 +22,7 @@ public class EnemyRagdollController : MonoBehaviour
     private Rigidbody mainRigidbody; 
     // private Rigidbody weaponRigidbody; 
     [SerializeField] private float fallThreshold = -5f;
-    [SerializeField] private float standUpDuration = 1.5f; // Duration for stand-up transition
+    [SerializeField] private float standUpDuration = 3f; // Duration for stand-up transition
     [SerializeField] private float animatorEnableDelay = 0.5f; // Delay before enabling Animator
     [SerializeField] private LayerMask groundLayer; // Ground layer for raycast check
 
@@ -41,6 +41,7 @@ public class EnemyRagdollController : MonoBehaviour
     void Awake()
     {
         ragdollRigidbodies = GetComponentsInChildren<Rigidbody>().Where(c => c.gameObject.CompareTag("Weapon") == false).ToArray();
+        
         ragdollColliders = GetComponentsInChildren<Collider>();
         hitboxColliders = GetComponents<Collider>();
 
@@ -111,6 +112,11 @@ public class EnemyRagdollController : MonoBehaviour
 
     public void SetRagdollActive(bool isActive)
     {   
+        if (isActive)
+        {
+            RecordBoneTransforms();
+        }
+
         if (animator != null && animator.enabled != !isActive)
         {
             animator.enabled = !isActive; 
@@ -121,6 +127,9 @@ public class EnemyRagdollController : MonoBehaviour
         {
             if(rb != null){
                 rb.isKinematic = !isActive;  
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                
             }
         }
 
@@ -141,10 +150,10 @@ public class EnemyRagdollController : MonoBehaviour
 
         isRagdoll = isActive;
 
-        if (isActive)
-        {
-            RecordBoneTransforms(); // Record transforms when entering ragdoll state
-        }
+        // if (isActive)
+        // {
+        //     RecordBoneTransforms(); // Record transforms when entering ragdoll state
+        // }
     }
 
     private void RecordBoneTransforms()
@@ -198,34 +207,77 @@ public class EnemyRagdollController : MonoBehaviour
     //     if (navMeshAgent != null) navMeshAgent.enabled = true;
     // }
 
+    // private IEnumerator StandUpCoroutine()
+    // {
+    //     AlignPositionToHips();
+
+    //     float elapsedTime = 0f;
+    //     const float tolerance = 0.01f; // Adjust based on acceptable precision
+    //     const float rotationTolerance = 1f; // Acceptable rotation angle in degrees
+
+    //     while (elapsedTime < standUpDuration)
+    //     {
+    //         bool bonesAligned = true;
+
+    //         foreach (var kvp in boneTransforms)
+    //         {
+    //             Transform bone = kvp.Key;
+    //             BoneTransform originalTransform = kvp.Value;
+
+    //             bone.localPosition = Vector3.Lerp(bone.localPosition, originalTransform.localPosition, elapsedTime / standUpDuration);
+    //             bone.localRotation = Quaternion.Slerp(bone.localRotation, originalTransform.localRotation, elapsedTime / standUpDuration);
+
+    //             if (Vector3.Distance(bone.localPosition, originalTransform.localPosition) > tolerance ||
+    //                 Quaternion.Angle(bone.localRotation, originalTransform.localRotation) > rotationTolerance)
+    //             {
+    //                 bonesAligned = false;
+    //             }
+    //         }
+
+    //         if (bonesAligned) break;
+
+    //         elapsedTime += Time.deltaTime;
+    //         yield return null;
+    //     }
+
+    //     foreach (var kvp in boneTransforms)
+    //     {
+    //         kvp.Key.localPosition = kvp.Value.localPosition;
+    //         kvp.Key.localRotation = kvp.Value.localRotation;
+    //     }
+
+    //     yield return new WaitForSeconds(animatorEnableDelay);
+
+    //     if (animator != null)
+    //     {
+    //         animator.Update(0); 
+    //         animator.enabled = true;
+    //     }
+
+    //     if (navMeshAgent != null)
+    //     {
+    //         navMeshAgent.enabled = true;
+    //     }
+
+
+    // }
+
     private IEnumerator StandUpCoroutine()
     {
         AlignPositionToHips();
 
         float elapsedTime = 0f;
-        const float tolerance = 0.01f; // Adjust based on acceptable precision
-        const float rotationTolerance = 1f; // Acceptable rotation angle in degrees
 
         while (elapsedTime < standUpDuration)
         {
-            bool bonesAligned = true;
-
             foreach (var kvp in boneTransforms)
             {
                 Transform bone = kvp.Key;
                 BoneTransform originalTransform = kvp.Value;
 
                 bone.localPosition = Vector3.Lerp(bone.localPosition, originalTransform.localPosition, elapsedTime / standUpDuration);
-                bone.localRotation = Quaternion.Lerp(bone.localRotation, originalTransform.localRotation, elapsedTime / standUpDuration);
-
-                if (Vector3.Distance(bone.localPosition, originalTransform.localPosition) > tolerance ||
-                    Quaternion.Angle(bone.localRotation, originalTransform.localRotation) > rotationTolerance)
-                {
-                    bonesAligned = false;
-                }
+                bone.localRotation = Quaternion.Slerp(bone.localRotation, originalTransform.localRotation, elapsedTime / standUpDuration);
             }
-
-            if (bonesAligned) break;
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -237,11 +289,10 @@ public class EnemyRagdollController : MonoBehaviour
             kvp.Key.localRotation = kvp.Value.localRotation;
         }
 
-        yield return new WaitForSeconds(animatorEnableDelay);
-
         if (animator != null)
         {
-            animator.Update(0); 
+            yield return new WaitForSeconds(animatorEnableDelay);
+            // animator.Update(0);
             animator.enabled = true;
         }
 
@@ -250,8 +301,9 @@ public class EnemyRagdollController : MonoBehaviour
             navMeshAgent.enabled = true;
         }
 
-
+        
     }
+
 
 
     private void AlignPositionToHips()
@@ -259,8 +311,11 @@ public class EnemyRagdollController : MonoBehaviour
         if (middleBodyBone == null) return; 
 
         Vector3 originalBonePosition = middleBodyBone.position;
+        // Quaternion originalBoneRotation = middleBodyBone.rotation;
 
         transform.position = originalBonePosition;
+        // transform.rotation = Quaternion.Euler(0, middleBodyBone.rotation.eulerAngles.y, 0);
+
 
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, Mathf.Infinity, groundLayer))
         {
@@ -272,6 +327,8 @@ public class EnemyRagdollController : MonoBehaviour
         }
 
         middleBodyBone.position = originalBonePosition;
+        // middleBodyBone.rotation = originalBoneRotation;
+
     }
 
     private Rigidbody FindTorsoRigidbody()

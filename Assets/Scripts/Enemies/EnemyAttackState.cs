@@ -53,7 +53,7 @@ public class EnemyAttackState : IEnemyState
 
             if (stateController.ReachedStoppingDistance()){
                 stateController.GetAnimator().SetBool("IsShooting", true);
-                stateController.GetAnimator().SetBool("IsAttacking", false);
+                // stateController.GetAnimator().SetBool("IsAttacking", false);
 
             } else {
                 stateController.GetAnimator().SetBool("IsAttacking", true);
@@ -90,7 +90,7 @@ public class EnemyAttackState : IEnemyState
             specialAttackCoroutine = null;
         }
         // stateController.GetAnimator().SetBool("IsAttacking", false);
-        stateController.GetAnimator().SetBool("IsShooting", false);
+        // stateController.GetAnimator().SetBool("IsShooting", false);
 
         // isSpecialStateActive = false;
 
