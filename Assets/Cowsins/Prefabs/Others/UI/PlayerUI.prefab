@@ -1023,8 +1023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerUI: {fileID: 1601152457072296405}
   disablePlayerUIWhilePaused: 1
-  menu: {fileID: 9031502160861266129}
-  fadeSpeed: 2
+  pauseMenuUI: {fileID: 0}
   stats: {fileID: 0}
 --- !u!1 &1227696230354243744
 GameObject:
@@ -5936,7 +5935,15 @@ MonoBehaviour:
   magazineUI: {fileID: 1411294434364808863}
   reloadUI: {fileID: 363562573098777533}
   lowAmmoUI: {fileID: 6528532238833378593}
+  lowAmmoSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   currentWeaponDisplay: {fileID: 1411294436069963685}
+  currentWeaponImage: {fileID: 0}
+  secondaryWeaponImage: {fileID: 0}
+  weapon1Image: {fileID: 0}
+  weapon2Image: {fileID: 0}
   chargedShotUI: {fileID: 0}
   chargedShotIcon: {fileID: 0}
   overheatUI: {fileID: 4664850783719453688}
@@ -10522,6 +10529,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 2897454223566355514}
+    - target: {fileID: 8779882850970700981, guid: 20697664ace7a224f9aa256ef9481caa, type: 3}
+      propertyPath: hitmarkerSoundEffect
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

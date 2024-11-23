@@ -26,6 +26,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
+					</ReferenceList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
