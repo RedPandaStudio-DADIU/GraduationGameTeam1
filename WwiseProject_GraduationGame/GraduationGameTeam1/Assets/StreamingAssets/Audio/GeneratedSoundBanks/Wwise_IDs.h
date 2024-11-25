@@ -17,17 +17,19 @@ namespace AK
         static const AkUniqueID PLAY_ALT_FIRE_RIFLE = 243729645U;
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
         static const AkUniqueID PLAY_BRUTE_FS = 989866120U;
+        static const AkUniqueID PLAY_BRUTEBARKS = 2283401379U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
+        static const AkUniqueID PLAY_DAMAGETAKEN = 1423098094U;
         static const AkUniqueID PLAY_DIA_AI = 4271692713U;
-        static const AkUniqueID PLAY_DIA_JOHNDOE = 1296777492U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
-        static const AkUniqueID PLAY_DIA_XAGA_ = 3253445185U;
+        static const AkUniqueID PLAY_DIPLOMATBARKS = 4152854033U;
         static const AkUniqueID PLAY_ELEVATOR_BP_OUTOFORDER = 2557748953U;
         static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
         static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
         static const AkUniqueID PLAY_ELEVATOR_POWER_LP = 1757009721U;
         static const AkUniqueID PLAY_ELEVATORDOOROPEN = 750231532U;
         static const AkUniqueID PLAY_EXPLODEBARREL = 757694329U;
+        static const AkUniqueID PLAY_FIREALARM = 3888840653U;
         static const AkUniqueID PLAY_FIREMAIN_HANDGUN = 3547089943U;
         static const AkUniqueID PLAY_FIREMAIN_RIFLE = 634184142U;
         static const AkUniqueID PLAY_GUITARLOOP = 3813858242U;
@@ -36,9 +38,9 @@ namespace AK
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
-        static const AkUniqueID PLAY_IDLE_RIFLE = 4057284179U;
         static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
+        static const AkUniqueID PLAY_JOHNDOEBARKS = 4112292984U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
         static const AkUniqueID PLAY_LOAD_HANDGUN = 249020240U;
         static const AkUniqueID PLAY_LOAD_RIFLE = 3060105905U;
@@ -47,11 +49,15 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_FS = 4078825889U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
+        static const AkUniqueID PLAY_PLAYERDEATH = 910581297U;
         static const AkUniqueID PLAY_RELOAD_HANDGUN = 449246991U;
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
         static const AkUniqueID PLAY_RIFLE_EMPTYMAG = 3334099943U;
-        static const AkUniqueID PLAY_SC4 = 3191462592U;
-        static const AkUniqueID PLAY_SC5 = 3191462593U;
+        static const AkUniqueID PLAY_RIFLE_NOAMMO = 2572917948U;
+        static const AkUniqueID PLAY_SC0TR1 = 3993849055U;
+        static const AkUniqueID PLAY_SMALLBONFIRE = 255138028U;
+        static const AkUniqueID PLAY_SOLDIERBARKS = 3340746321U;
+        static const AkUniqueID PLAY_SORRYGUYS = 1685668713U;
         static const AkUniqueID PLAY_TESTBEEP = 1955951874U;
         static const AkUniqueID PLAY_TESTBEEP_3D = 1681067324U;
         static const AkUniqueID PLAY_TESTBEEP_LP = 858964037U;
@@ -59,8 +65,10 @@ namespace AK
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAY_UNLOAD_RIFLE = 1943012356U;
         static const AkUniqueID PLAY_XAGA_DIA_LVL2 = 2842468683U;
+        static const AkUniqueID PLAY_XAGA_FS = 958734511U;
         static const AkUniqueID PLAY_XAGA_HURTSOUNDS_DAMAGETAKEN = 920126564U;
         static const AkUniqueID PLAY_XAGA_STATEDIALOGUE = 3452699959U;
+        static const AkUniqueID PLAY_XAGACHARGE = 2105779959U;
         static const AkUniqueID PLAY_XAGADEATHSCREAM = 655800824U;
         static const AkUniqueID STOP_GUITARLOOP = 4128836072U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
@@ -223,12 +231,13 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SC0_TR1 = 1568320811U;
+                static const AkUniqueID SC1_TR0 = 342028879U;
                 static const AkUniqueID SC1_TR1 = 342028878U;
                 static const AkUniqueID SC2_TR1 = 3079543733U;
                 static const AkUniqueID SC2_TR2 = 3079543734U;
                 static const AkUniqueID SC2_TR3 = 3079543735U;
                 static const AkUniqueID SC3_TR1 = 569325008U;
-                static const AkUniqueID SC3_TR2 = 569325011U;
                 static const AkUniqueID SC4_TR1 = 551107239U;
                 static const AkUniqueID SC5_TR1 = 3690529130U;
                 static const AkUniqueID SC5_TR2 = 3690529129U;
@@ -245,6 +254,7 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID SC6_TR1 = 2059667105U;
                 static const AkUniqueID SC7_TR1 = 3398158172U;
+                static const AkUniqueID SC7_TR2 = 3398158175U;
                 static const AkUniqueID SC8_TR1 = 3986144931U;
                 static const AkUniqueID WAITINGONTRIGGERENTER = 2239442679U;
             } // namespace STATE
@@ -324,6 +334,19 @@ namespace AK
                 static const AkUniqueID POWERON = 91680483U;
             } // namespace SWITCH
         } // namespace ELEVATORPOWER
+
+        namespace ENEMYSTATUSSWITCH
+        {
+            static const AkUniqueID GROUP = 2418780925U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ATTACKING = 1641806523U;
+                static const AkUniqueID DYING = 3328495488U;
+                static const AkUniqueID IDLELING = 4220276679U;
+                static const AkUniqueID TAKINGDAMAGE = 2921811866U;
+            } // namespace SWITCH
+        } // namespace ENEMYSTATUSSWITCH
 
         namespace GROUNDMATERIALSWITCH
         {
@@ -460,6 +483,7 @@ namespace AK
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID DIALOGUEMASTER = 2645497833U;
+        static const AkUniqueID LEVEL2 = 2678230381U;
         static const AkUniqueID MASTER_BUS = 1399649189U;
         static const AkUniqueID MUSIC_MASTER = 3595451983U;
         static const AkUniqueID NPC_ALIENS = 223128778U;
@@ -470,18 +494,27 @@ namespace AK
         static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
         static const AkUniqueID PLAYERVOICE = 47937584U;
-        static const AkUniqueID REVERBS = 3545700988U;
+        static const AkUniqueID REVERBENVIRONMENTS = 346451691U;
         static const AkUniqueID WEAPONS = 1467963052U;
+        static const AkUniqueID XAGA_CONFERENCE = 385642153U;
+        static const AkUniqueID XAGA_CONFERENCEROOM = 3458995332U;
+        static const AkUniqueID XAGA_FARAWAY = 274948124U;
+        static const AkUniqueID XAGAHANGAR = 3868067129U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID CONFERENCEHALL = 3574333866U;
         static const AkUniqueID DELAYSLAPS = 924856803U;
         static const AkUniqueID DELAYSLAPS_HANGARSPEAKER = 425081994U;
+        static const AkUniqueID ELEVATORROOM = 1448937718U;
         static const AkUniqueID HANGARVERB_JD = 350835844U;
+        static const AkUniqueID JD_DEAD = 3670417488U;
+        static const AkUniqueID PREHALL = 2042191905U;
         static const AkUniqueID ROOMHANGARMAIN = 986249158U;
         static const AkUniqueID ROOMSMALL = 3205342581U;
         static const AkUniqueID ROOMTUNNEL = 1603492950U;
+        static const AkUniqueID STAIRS = 1289942167U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
