@@ -214,6 +214,8 @@ GameObject:
   - component: {fileID: 6960619635021707408}
   - component: {fileID: 3619145621642663575}
   - component: {fileID: 4066634233076854444}
+  - component: {fileID: 910305664002865328}
+  - component: {fileID: 3806578469250054268}
   m_Layer: 0
   m_Name: GeneralManagers
   m_TagString: Untagged
@@ -230,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 4613120874038362621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -252,7 +254,7 @@ MonoBehaviour:
   defaultSoundEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0a8425211bc244faa8c955f8ba6da28e, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: d9345c69a8f264eba98eb9c4bffeb268, type: 2}
 --- !u!114 &4066634233076854444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +280,56 @@ MonoBehaviour:
   - 5300
   - 6000
   - 6700
+--- !u!114 &910305664002865328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613120874038362621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c11218f89014db08995f084eccfb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList:
+    - {fileID: 291181593862821641}
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!54 &3806578469250054268
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613120874038362621}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4643472865035618402
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,8 +360,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5363674576349871549}
-  - {fileID: 6960619635021707408}
   - {fileID: 3897380438235294847}
+  - {fileID: 6960619635021707408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5232670391706378902
@@ -1437,7 +1489,7 @@ GameObject:
   - component: {fileID: 3712564767629912338}
   m_Layer: 0
   m_Name: WeaponCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1569,6 +1621,7 @@ GameObject:
   - component: {fileID: 6099424375106423182}
   - component: {fileID: 291181593862821641}
   - component: {fileID: 1413924666299527354}
+  - component: {fileID: 8198013948276113927}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1808,6 +1861,33 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!54 &8198013948276113927
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064728332445424445}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1859662129998154059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2239,6 +2319,10 @@ PrefabInstance:
     - target: {fileID: 2066907751928954449, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144171899323729900, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
+      propertyPath: hitmarkerSoundEffect
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2613562278186925027, guid: 48487ed79b7a6b640af4e489a214b984, type: 3}
       propertyPath: cam

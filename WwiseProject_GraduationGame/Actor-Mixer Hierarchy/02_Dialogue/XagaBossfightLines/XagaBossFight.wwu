@@ -5,10 +5,119 @@
 			<ChildrenList>
 				<SwitchContainer Name="Xaga_StateDialogue" ID="{85081F6E-95D9-449B-828A-0FC4E995CBEB}" ShortID="908892081">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}">
+								<Attenuation Name="att_Generic_100m (Custom)" ID="{8E4730EB-D0C6-4E99-A0F1-C3E0879D9B6A}" ShortID="166273851">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{75FDEBB3-D31D-4BD6-BFBD-60F3BC38BE22}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>3.37243</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>6.89149</XPos>
+															<YPos>-2.15694</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>12.90324</XPos>
+															<YPos>-4.48257</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>29.32551</XPos>
+															<YPos>-10.97279</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>45.7478</XPos>
+															<YPos>-17.32121</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+										<ObstructionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionVolumeUsage>
+										<ObstructionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionLPFUsage>
+										<ObstructionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionHPFUsage>
+										<OcclusionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionVolumeUsage>
+										<OcclusionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionLPFUsage>
+										<OcclusionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionHPFUsage>
+										<DiffractionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionVolumeUsage>
+										<DiffractionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionLPFUsage>
+										<DiffractionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionHPFUsage>
+										<TransmissionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionVolumeUsage>
+										<TransmissionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionLPFUsage>
+										<TransmissionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionHPFUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
@@ -16,7 +125,7 @@
 							<ObjectRef Name="None" ID="{CFE4DD3B-CADD-4DA2-B984-776397838671}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+							<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="XagaBossfightStates" ID="{06167756-0970-4B73-8734-9FB15BD0CAFC}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
@@ -211,7 +320,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+									<ObjectRef Name="XagaHangar" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -320,7 +429,119 @@
 					</GroupingInfo>
 				</SwitchContainer>
 				<SwitchContainer Name="Xaga_HurtSounds_DamageTaken" ID="{348FD35E-4E70-4D7A-A01C-1FC1727BA174}" ShortID="349368412">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}">
+								<Attenuation Name="att_Generic_100m (Custom)" ID="{D19C3503-EEEB-4249-B922-45A760411CB3}" ShortID="845846906">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{00F4FA35-FCAB-4E37-BDB0-88BA144F5492}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>3.37243</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>6.89149</XPos>
+															<YPos>-2.15694</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>12.90324</XPos>
+															<YPos>-4.48257</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>29.32551</XPos>
+															<YPos>-10.97279</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>45.7478</XPos>
+															<YPos>-17.32121</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+										<ObstructionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionVolumeUsage>
+										<ObstructionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionLPFUsage>
+										<ObstructionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionHPFUsage>
+										<OcclusionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionVolumeUsage>
+										<OcclusionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionLPFUsage>
+										<OcclusionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionHPFUsage>
+										<DiffractionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionVolumeUsage>
+										<DiffractionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionLPFUsage>
+										<DiffractionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionHPFUsage>
+										<TransmissionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionVolumeUsage>
+										<TransmissionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionLPFUsage>
+										<TransmissionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionHPFUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
@@ -328,7 +549,7 @@
 							<ObjectRef Name="FullHealth" ID="{3623AB38-B4B7-4FD9-B9F5-83BB96328708}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+							<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="XagaHealth" ID="{9BBAB994-4181-45E4-B250-E82318BBE8EA}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
@@ -865,6 +1086,704 @@
 								<SwitchRef Name="LowHealth" ID="{CEC481A2-4871-4578-A194-E328BBDEC1D8}"/>
 								<ItemList>
 									<ItemRef Name="LowHealth" ID="{12D444CA-9B79-4D58-8841-7F3478EC8B38}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<RandomSequenceContainer Name="XagaCharge" ID="{A0B90F90-309F-4E60-92ED-1B7EE8D69195}" ShortID="701437152">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{2DFED257-CAB2-420D-ADF0-91AF7227D41F}">
+								<Attenuation Name="Hangar Dialogue 50m (Custom)" ID="{ED237197-3541-452E-A013-E4FDB35D971C}" ShortID="721907672">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="50"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{104D0752-A654-48CE-AAAE-022C62D6BE4A}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>8.52174</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>23.08951</XPos>
+															<YPos>-5.42995</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>33.565215</XPos>
+															<YPos>-16.28727</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+												<Curve Name="VolumeWetGame" ID="{FF11F993-5094-465C-9BEA-637CF72A4D39}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>-0.11659</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+												<Curve Name="VolumeWetUser" ID="{C7105C75-607C-433B-ADCB-EEFAD37A5CF0}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>8.52174</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>22.869565</XPos>
+															<YPos>-7.53501</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>33.565215</XPos>
+															<YPos>-16.28727</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="LowPassFilter" ID="{CD567B92-0370-4E81-A785-511ED1414732}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>9.26249</XPos>
+															<YPos>24</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>22.17465</XPos>
+															<YPos>40</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>41</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="HighPassFilter" ID="{6EBE9027-18CA-4D00-89F8-028594591412}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="65537"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>6.164375</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>23.374475</XPos>
+															<YPos>13</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>26</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+										<ObstructionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionVolumeUsage>
+										<ObstructionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionLPFUsage>
+										<ObstructionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionHPFUsage>
+										<OcclusionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionVolumeUsage>
+										<OcclusionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionLPFUsage>
+										<OcclusionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionHPFUsage>
+										<DiffractionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionVolumeUsage>
+										<DiffractionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionLPFUsage>
+										<DiffractionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionHPFUsage>
+										<TransmissionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionVolumeUsage>
+										<TransmissionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionLPFUsage>
+										<TransmissionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionHPFUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{921C19EB-38AA-457A-BD9D-51589C9C1C32}" ShortID="178505605">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{D9857244-2316-41FF-AA92-FA38715C068F}">
+									<Language>SFX</Language>
+									<AudioFile>Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="23377821"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{D9857244-2316-41FF-AA92-FA38715C068F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<SwitchContainer Name="Ai+JD_StateDialogue" ID="{3A135883-C75C-4DFF-9132-2ADF0CFDAD72}" ShortID="920646018">
+					<PropertyList>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="None" ID="{CFE4DD3B-CADD-4DA2-B984-776397838671}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="DialogueMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="XagaBossfightStates" ID="{06167756-0970-4B73-8734-9FB15BD0CAFC}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="AI_ShesGotAWeakspotOnHerArm" ID="{B0B0FD4C-75BF-44FE-B777-3440C9DB8CB4}" ShortID="992986529">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AI_ShesGotAWeakspotOnHerArm" ID="{CE7BFED2-E52C-4C53-94BA-1E84B2BAD018}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>AI_ShesGotAWeakspotOnHerArm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="437020248"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AI_ShesGotAWeakspotOnHerArm" ID="{CE7BFED2-E52C-4C53-94BA-1E84B2BAD018}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AI_ShesGotAWeakspotOnHerLeg" ID="{EF065817-1E64-4380-94A7-14589D6F818E}" ShortID="387273583">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AI_ShesGotAWeakspotOnHerLeg" ID="{F16FC36E-4423-45ED-91C2-8C393361560C}">
+									<Language>English(US)</Language>
+									<AudioFile>AI_ShesGotAWeakspotOnHerLeg.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="338863935"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AI_ShesGotAWeakspotOnHerLeg" ID="{F16FC36E-4423-45ED-91C2-8C393361560C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AI_WeakspotStomach_Serious" ID="{707828BC-1645-49D8-B6AF-965581741420}" ShortID="746224841">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AI_WeakspotStomach_Serious" ID="{30A8FECB-C737-4C00-8C1A-CDED9066DFE4}">
+									<Language>English(US)</Language>
+									<AudioFile>AI_WeakspotStomach_Serious.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="718220410"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AI_WeakspotStomach_Serious" ID="{30A8FECB-C737-4C00-8C1A-CDED9066DFE4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Sc8_Tr1" ID="{957AEADA-F050-4116-A5DA-77B7DD5E82C3}" ShortID="8340124">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="JD_IWantToFinishMyGame" ID="{4F82D2C3-77E1-4370-92EF-8C0C7E4F4247}" ShortID="807509016">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1.3</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_IWantToFinishMyGame" ID="{2E141A4E-5BCD-456A-A39B-9E15ED79B235}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_IWantToFinishMyGame.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="362121130"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_IWantToFinishMyGame" ID="{2E141A4E-5BCD-456A-A39B-9E15ED79B235}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_ThisIsForYouJane" ID="{864D316C-ABA9-4578-B0C6-023D45037607}" ShortID="186783143">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_ThisIsForYouJane" ID="{FC5112A4-61D1-4A16-9128-F9315B476C20}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0222693451839242"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.423117558494564"/>
+												<Property Name="FadeOutShape" Type="int16" Value="1"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.61580870180465"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>JD_ThisIsForYouJane.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="854674266"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_ThisIsForYouJane" ID="{FC5112A4-61D1-4A16-9128-F9315B476C20}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AI_SoWhatsNext" ID="{E084E72A-05C0-40EC-82ED-7BBD57E3E498}" ShortID="732464591">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>2.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AI_SoWhatsNext" ID="{B587A0BB-5834-4C64-90D1-C58864BB5386}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0351414390514695"/>
+												<Property Name="FadeInShape" Type="int16" Value="9"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0867056847676726"/>
+												<Property Name="FadeOutShape" Type="int16" Value="0"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.46072676837725"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.30115157519318"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.97952262201639"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>AI_SoWhatsNext.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="212330411"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AI_SoWhatsNext" ID="{B587A0BB-5834-4C64-90D1-C58864BB5386}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_ThisIsForYouJane2" ID="{3DC9B9C2-DA20-4398-864E-C0EAAA621725}" ShortID="802040555">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_ThisIsForYouJane2" ID="{3FF90C1B-E3B2-4E32-B3AA-A33D15098C95}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.185983358860786"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.171676946640725"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.844078320983566"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.93426336051662"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>JD_ThisIsForYouJane2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="955702526"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_ThisIsForYouJane2" ID="{3FF90C1B-E3B2-4E32-B3AA-A33D15098C95}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Ai_CanIKeepYouCompany" ID="{0691B799-9898-4778-8FCC-35ABD4BDB5F8}" ShortID="44440050">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>2.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ai_CanIKeepYouCompany" ID="{FBB2DD5C-1D01-4D61-A9A5-46F11D4E62FB}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.105494505494505"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.105494505494506"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.993406593406593"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.879120879120879"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.70769230769231"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Ai_CanIKeepYouCompany.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="858846467"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ai_CanIKeepYouCompany" ID="{FBB2DD5C-1D01-4D61-A9A5-46F11D4E62FB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_OkayKaren" ID="{61C3A11B-BABB-46B7-9EA9-55CDB2EC8C83}" ShortID="75073591">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>2.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_OkayKaren" ID="{353913A8-264D-471E-8CD3-4925F0E000AA}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_OkayKaren.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063794703"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_OkayKaren" ID="{353913A8-264D-471E-8CD3-4925F0E000AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Okay7" ID="{61AC2178-D0EF-4191-898E-498987146674}" ShortID="589183315">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Okay7" ID="{EF7C90FE-04DC-427A-9C6D-D3E8EB138695}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_Okay7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="638707504"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Okay7" ID="{EF7C90FE-04DC-427A-9C6D-D3E8EB138695}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="JD_ThisIsForYouJane" ID="{864D316C-ABA9-4578-B0C6-023D45037607}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="AI_SoWhatsNext" ID="{E084E72A-05C0-40EC-82ED-7BBD57E3E498}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="JD_IWantToFinishMyGame" ID="{4F82D2C3-77E1-4370-92EF-8C0C7E4F4247}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Ai_CanIKeepYouCompany" ID="{0691B799-9898-4778-8FCC-35ABD4BDB5F8}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="JD_OkayKaren" ID="{61C3A11B-BABB-46B7-9EA9-55CDB2EC8C83}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="AI_ShesGotAWeakspotOnHerLeg" ID="{EF065817-1E64-4380-94A7-14589D6F818E}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="AI_ShesGotAWeakspotOnHerArm" ID="{B0B0FD4C-75BF-44FE-B777-3440C9DB8CB4}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="AI_WeakspotStomach_Serious" ID="{707828BC-1645-49D8-B6AF-965581741420}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Sc8_Tr1" ID="{957AEADA-F050-4116-A5DA-77B7DD5E82C3}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="XagaDead" ID="{0CD28F13-CAD4-4581-8ED6-B1AB105FCBE8}"/>
+								<ItemList>
+									<ItemRef Name="Sc8_Tr1" ID="{957AEADA-F050-4116-A5DA-77B7DD5E82C3}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LostLeg" ID="{E484E637-624E-4C02-82C4-6C2B20DA28F5}"/>
+								<ItemList>
+									<ItemRef Name="AI_WeakspotStomach_Serious" ID="{707828BC-1645-49D8-B6AF-965581741420}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="InitiateFight" ID="{E6A1FE71-2DBC-4E32-BAB3-7687C460A4A5}"/>
+								<ItemList>
+									<ItemRef Name="AI_ShesGotAWeakspotOnHerArm" ID="{B0B0FD4C-75BF-44FE-B777-3440C9DB8CB4}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LostArm" ID="{F7CA30C3-8F8F-43FF-9B0A-E02DC51E7F55}"/>
+								<ItemList>
+									<ItemRef Name="AI_ShesGotAWeakspotOnHerLeg" ID="{EF065817-1E64-4380-94A7-14589D6F818E}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>

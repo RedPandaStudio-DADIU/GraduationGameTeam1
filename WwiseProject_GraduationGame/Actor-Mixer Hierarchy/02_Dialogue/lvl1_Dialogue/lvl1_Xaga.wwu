@@ -6,7 +6,27 @@
 				<ActorMixer Name="Xaga_Dia_effects" ID="{511EAA1F-D6BD-4FB4-A124-585866D3A475}" ShortID="391644081">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>18</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>17</Value>
+							</ValueList>
+						</Property>
+						<Property Name="ReflectionsVolume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>12</Value>
@@ -15,13 +35,19 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="Hangar Dialogue 100m" ID="{9EEB574E-0BE0-4CCA-970C-34F34052C145}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
+							<ObjectRef Name="att_Xaga_Hangar" ID="{4783256C-9878-4404-B76E-E8384513774F}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="03_Xaga" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+							<ObjectRef Name="XagaHangar" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="ReflectionsAuxSend">
+							<ObjectRef Name="DelaySlaps_HangarSpeaker" ID="{E88CBE0B-42F0-4BD5-BEF2-06004587CEEE}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="RoomHangarMain" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -354,11 +380,6 @@
 									<PropertyList>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-1</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

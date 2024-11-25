@@ -46,17 +46,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Idle_Rifle" ID="{D792364F-C6A9-49DC-9F78-66D8056AC20D}">
-							<ChildrenList>
-								<Action Name="" ID="{C6AAD08A-5646-4D62-9C37-DCDE9FA97F15}" ShortID="942000376">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="sfx_test_Beep_1000hz" ID="{95D810FC-2D52-4A2D-BC27-6EFB0BB4F5C3}" WorkUnitID="{701E75F9-54B2-4F40-B55C-5F61B716FFC8}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_Load_Rifle" ID="{AB8D80EE-36E4-4A1C-A362-E95ADE77C721}">
 							<ChildrenList>
 								<Action Name="" ID="{65A8C98E-754F-41D4-8F0C-48B029D82059}" ShortID="926062337">
@@ -81,20 +70,20 @@
 						</Event>
 						<Event Name="Play_Alt_Charge_Fifle" ID="{BE7889FE-7CC1-4E6C-AA7D-4AEF64CA70F4}">
 							<ChildrenList>
-								<Action Name="" ID="{1F67CBFA-6C3E-4A88-B4F4-D76C3377504F}" ShortID="966076747">
+								<Action Name="" ID="{1369D362-C6F0-4C48-B5A2-97F417F00E29}" ShortID="476295542">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Charge" ID="{D1769DBD-9FA7-4BF5-AA31-FA2B32561EDC}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{CC26C9B0-10D9-4726-8D0A-235D9CDA9D33}" ShortID="944950079">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="3.1"/>
-									</PropertyList>
+								<Action Name="" ID="{1F67CBFA-6C3E-4A88-B4F4-D76C3377504F}" ShortID="966076747">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Rifle_ChargeRdy" ID="{0E33DDE9-82D2-4C9A-B062-0D76E3F012FB}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
+											<ObjectRef Name="Charge" ID="{D1769DBD-9FA7-4BF5-AA31-FA2B32561EDC}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -127,6 +116,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Rifle_Mag_Empty" ID="{5D37285F-0571-4F84-A52B-CF4E49FA8186}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Rifle_NoAmmo" ID="{EB9C8F99-A74B-4A70-9444-1CAA029302F3}">
+							<ChildrenList>
+								<Action Name="" ID="{E16AC94C-A325-4995-8C95-71C6ECA5DF91}" ShortID="444991613">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rifle_NoAmmo" ID="{574DE200-58DF-4FB3-9B67-A6F2895BC5C9}" WorkUnitID="{F9ABAE62-DC4C-4359-89F7-2CFFBEEFE701}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

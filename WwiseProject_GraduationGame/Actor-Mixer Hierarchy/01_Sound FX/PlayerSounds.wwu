@@ -24,6 +24,1745 @@
 						<WorkUnit Name="Player_Locomotion" ID="{04B51F7B-58ED-43D7-9FDF-3505548C7E75}" PersistMode="Reference"/>
 					</ChildrenList>
 				</ActorMixer>
+				<ActorMixer Name="JD_Barks" ID="{7A4421FF-5518-49AC-A0E2-EB29A78E8288}" ShortID="326168600">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="JohnDoeBarks" ID="{1ACD4E79-57B4-4349-A821-2CB2D956C92A}" ShortID="594035024">
+							<PropertyList>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="JD_Daaamn" ID="{9684A902-2759-47A0-B8AF-4581758532E5}" ShortID="984596259">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Daaamn" ID="{CBD23789-B020-45B8-AE36-55DA7C22CC58}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_Daaamn.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="187414715"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Daaamn" ID="{CBD23789-B020-45B8-AE36-55DA7C22CC58}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Damn2" ID="{45AA89D1-1ADB-4923-80E1-D67FB2678F6D}" ShortID="107182781">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Damn2" ID="{899597A8-A703-4549-83A6-FB1C94B0F659}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_Damn2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="70651197"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Damn2" ID="{899597A8-A703-4549-83A6-FB1C94B0F659}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Damn3" ID="{37AAFD77-D614-47AC-A8FA-3E6C1DEA338E}" ShortID="656656750">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Damn3" ID="{1EF28963-9065-484B-9AED-252BED3F1F7C}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_Damn3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1025072598"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Damn3" ID="{1EF28963-9065-484B-9AED-252BED3F1F7C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Damn4" ID="{B9684C51-4F92-4FFD-B58C-53D701FF6E50}" ShortID="275858109">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Damn4" ID="{CDB385C8-6F32-445F-AB9F-BB7F670B6EB4}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_Damn4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="52927242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Damn4" ID="{CDB385C8-6F32-445F-AB9F-BB7F670B6EB4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThatHurt2" ID="{E2012AE9-7D35-43F9-A801-1ABA208FA2C9}" ShortID="667534567">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThatHurt2" ID="{D8A36F89-B084-4204-8033-E3BAD1C3687C}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThatHurt2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="827815878"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThatHurt2" ID="{D8A36F89-B084-4204-8033-E3BAD1C3687C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThatHurt3" ID="{C253A533-1813-4237-9863-99FBAB4C491B}" ShortID="739298041">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThatHurt3" ID="{356D19CC-8F5B-4FE8-B406-AAFC16B9E3B0}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThatHurt3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="314643732"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThatHurt3" ID="{356D19CC-8F5B-4FE8-B406-AAFC16B9E3B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThatHurt4" ID="{42049897-5F77-4AF0-81C5-FEE0E83B76D9}" ShortID="766327645">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThatHurt4" ID="{57CC6BBE-7394-42FB-965E-7157CF8FCA98}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThatHurt4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1059635452"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThatHurt4" ID="{57CC6BBE-7394-42FB-965E-7157CF8FCA98}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThatHurt5" ID="{39D7F558-BBB1-41E2-9FC5-ED9C05E91125}" ShortID="181924872">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThatHurt5" ID="{A0541193-B0AF-4F07-A26E-CE4B016A955E}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThatHurt5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="772915345"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThatHurt5" ID="{A0541193-B0AF-4F07-A26E-CE4B016A955E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThatHurt" ID="{B0FA4A44-504F-4D92-A4F9-121ED16C3541}" ShortID="137936803">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThatHurt" ID="{5DFB2728-3F5C-416E-AF20-67AE92BE8212}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThatHurt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="646430669"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThatHurt" ID="{5DFB2728-3F5C-416E-AF20-67AE92BE8212}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DAMNthatsGottaHurt" ID="{109309ED-C497-41B7-853A-18E21C612368}" ShortID="281016871">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DAMNthatsGottaHurt" ID="{AC1D2C3A-2119-496B-8489-1C1EB55B89EA}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DAMNthatsGottaHurt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="981611525"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DAMNthatsGottaHurt" ID="{AC1D2C3A-2119-496B-8489-1C1EB55B89EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DAMNThatsGotToHURT1" ID="{F575562F-4866-4D92-BC4B-FC9338CBEC21}" ShortID="353433383">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DAMNThatsGotToHURT1" ID="{3FC2338A-DA29-4E7B-BB82-EA52F0A6580D}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DAMNThatsGotToHURT1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="36456877"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DAMNThatsGotToHURT1" ID="{3FC2338A-DA29-4E7B-BB82-EA52F0A6580D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThatsGotToHurt" ID="{944FEE83-185A-4648-8AA5-E06A08D3309D}" ShortID="518497705">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThatsGotToHurt" ID="{A22BA10A-C454-4675-9D68-3A515737EFA2}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThatsGotToHurt.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="855706314"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThatsGotToHurt" ID="{A22BA10A-C454-4675-9D68-3A515737EFA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DAMNThis" ID="{7A16DCAD-A1E0-40A9-AF0C-0B8633244E01}" ShortID="683532904">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DAMNThis" ID="{85FC2249-4885-49D3-A156-112F5A493765}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DAMNThis.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="710699219"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DAMNThis" ID="{85FC2249-4885-49D3-A156-112F5A493765}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThis_" ID="{04EDD01C-88A9-49FE-A887-7FECB61B569E}" ShortID="588194923">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThis_" ID="{7B228DA8-0A3C-4760-8274-4C7CB4C39B8E}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThis_.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="24500900"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThis_" ID="{7B228DA8-0A3C-4760-8274-4C7CB4C39B8E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DamnThisShit" ID="{ADF23BC8-4388-4BD7-A923-475C7EB74A22}" ShortID="39243970">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-18</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="HangarVerb_JD" ID="{0F7FE884-2DE1-45B9-8BEF-BFA1F35C2545}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DamnThisShit" ID="{BE2F3271-B03F-468C-AF84-4FEE51C3179D}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_DamnThisShit.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="606303027"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DamnThisShit" ID="{BE2F3271-B03F-468C-AF84-4FEE51C3179D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence" ID="{4066AFBD-9BC1-4040-9FA9-65A2164A1CE2}" ShortID="623020719">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>90</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{FCFEDEA9-A1B4-473B-B95B-EB0ADE2AE7B9}" ShortID="218996696" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<Comment>Adds less probalility of voiceline
+</Comment>
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="0.2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{FCFEDEA9-A1B4-473B-B95B-EB0ADE2AE7B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Silence_01" ID="{8015A9E6-075E-40BA-A54E-6CDD271F5807}" ShortID="531530697">
+									<PropertyList>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>90</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{A6CC51D2-548D-4BD3-AD05-CF5830389310}" ShortID="1052405697" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<Comment>Adds less probalility of voiceline
+</Comment>
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="0.2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{A6CC51D2-548D-4BD3-AD05-CF5830389310}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Damage" ID="{0B8024C8-A710-4D46-993D-A4AEC0DE73B0}" ShortID="595161720">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="JD_AARGH1" ID="{4910FCE9-E36A-4682-A45D-B02B53BE9E4B}" ShortID="627987806">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_AARGH1" ID="{A0F03872-A8E7-4F1E-B58C-751A141BE341}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.232034632034632"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.788917748917749"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.61761286332715"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_AARGH1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="423647551"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_AARGH1" ID="{A0F03872-A8E7-4F1E-B58C-751A141BE341}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_AARH" ID="{70CAE84B-1C52-4C93-96AC-B9ECD1282B4C}" ShortID="177367194">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_AARH" ID="{7B5C83C0-7F2C-4252-8384-D84FF531B56A}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.117551020408163"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_AARH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="852140972"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_AARH" ID="{7B5C83C0-7F2C-4252-8384-D84FF531B56A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_ARH" ID="{44B7C2C7-DBBD-422C-9E8B-FA5710B2AFEE}" ShortID="845234375">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_ARH" ID="{F9C785AB-F0B5-4B7A-B6F4-BFDD4ED75F52}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_ARH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="660575917"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_ARH" ID="{F9C785AB-F0B5-4B7A-B6F4-BFDD4ED75F52}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_AUCH1" ID="{F956098F-7D8B-44E5-9AC9-20B67A4D3540}" ShortID="407170354">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_AUCH1" ID="{088144BB-21FB-42C1-BFE7-E85A45A96B5D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0115769944341373"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.436066790352505"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_AUCH1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="895602052"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_AUCH1" ID="{088144BB-21FB-42C1-BFE7-E85A45A96B5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_AUDAMN" ID="{84B06210-9E95-4751-9313-37D575F1F2FF}" ShortID="1067878603">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_AUDAMN" ID="{8ECC5E97-85D4-4CE8-A3BB-F135F2A5B5C3}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0676808905380334"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.864811379097093"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.57922077922078"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_AUDAMN.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="59686008"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_AUDAMN" ID="{8ECC5E97-85D4-4CE8-A3BB-F135F2A5B5C3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DAMN23" ID="{0EF5514E-6ECD-4900-8D87-08D2E5B4BD87}" ShortID="228986893">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DAMN23" ID="{667F6337-EF10-4E22-9728-B3FF68FD0BF2}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_DAMN23.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="249952242"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DAMN23" ID="{667F6337-EF10-4E22-9728-B3FF68FD0BF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DAMN24" ID="{51AFD681-87B9-4157-90DA-B819DEF759EA}" ShortID="940965924">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DAMN24" ID="{12A29EF3-621E-4BEF-9D4C-6EA38F84C667}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.631688311688312"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.94018552875696"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_DAMN24.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="166637973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DAMN24" ID="{12A29EF3-621E-4BEF-9D4C-6EA38F84C667}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_DAMN25" ID="{149CD423-3817-418A-88F8-474504AF2B70}" ShortID="491360266">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_DAMN25" ID="{36F4E6DD-57E5-451B-9064-531DE665A09A}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0772789115646259"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.625256648113791"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.27158936301793"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_DAMN25.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="204172700"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_DAMN25" ID="{36F4E6DD-57E5-451B-9064-531DE665A09A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_UF1" ID="{66715E6E-9123-486E-B028-67800A2526DF}" ShortID="117809910">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_UF1" ID="{19E28251-9870-4968-A2DC-AAD734813804}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_UF1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="964017005"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_UF1" ID="{19E28251-9870-4968-A2DC-AAD734813804}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_UF2" ID="{7238E84A-684B-4565-84A0-877FED2DEAE1}" ShortID="296078418">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_UF2" ID="{4663FC50-9D9D-40D1-87E9-0FD9233AB8BF}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0180154820548909"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0324278676988037"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.364895400166336"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_UF2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="944135865"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_UF2" ID="{4663FC50-9D9D-40D1-87E9-0FD9233AB8BF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_UF3" ID="{3797C88A-C3B7-45DF-B734-2977878BE8FB}" ShortID="235810205">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_UF3" ID="{011ABB24-7686-4C8D-B2C4-295123B91032}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0138118695754164"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.476509500351865"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_UF3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="195405486"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_UF3" ID="{011ABB24-7686-4C8D-B2C4-295123B91032}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_UH1" ID="{E8FE2C57-894D-410F-980C-6062328B3C05}" ShortID="348543649">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_UH1" ID="{013CEAE7-DEE7-415B-8DAD-04A282AA4288}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_UH1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="973384725"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_UH1" ID="{013CEAE7-DEE7-415B-8DAD-04A282AA4288}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_URH" ID="{8C0DB6CC-B7CD-4C3C-B16D-510D15211E83}" ShortID="137640700">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_URH" ID="{F2A882ED-C423-485F-8BC6-2F8338513B77}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_URH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="657415346"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_URH" ID="{F2A882ED-C423-485F-8BC6-2F8338513B77}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_URH1" ID="{4850A926-D9E0-4DE7-B73A-A259DBF6ED2F}" ShortID="1006597890">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_URH1" ID="{C00E8567-CF03-4333-AA74-FBF731912EAA}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_URH1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1021400988"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_URH1" ID="{C00E8567-CF03-4333-AA74-FBF731912EAA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_URH_UH" ID="{DBEE9A4B-40E2-4AE4-8715-9E5129085240}" ShortID="161796634">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_URH_UH" ID="{DAD99AD8-C037-4BC6-A348-DDBF73B42229}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.030278293135436"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0504638218923933"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.610612244897959"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_URH_UH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="479560020"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="JD_URH_UH_01" ID="{8EF23601-DA75-4E35-A11E-5C5E199AF9AD}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_URH_UH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="554400739"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="JD_URH_UH_02" ID="{90C9280D-B6A6-4508-9CFB-E20DD9301BC5}">
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_URH_UH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="554400739"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_URH_UH" ID="{DAD99AD8-C037-4BC6-A348-DDBF73B42229}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_URH_UH_01" ID="{CBDEE5C8-2914-4E2E-8676-79995109C94F}" ShortID="340050167">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_URH_UH" ID="{F1D63397-9BA8-41E1-B6B2-26CAC9DED70D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0555102040816327"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0302782931354362"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.625751391465678"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Damage\JD_URH_UH.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="121526837"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_URH_UH" ID="{F1D63397-9BA8-41E1-B6B2-26CAC9DED70D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Death5" ID="{240B28A4-9C62-4FA9-8930-1ADDC5520F8F}" ShortID="794218651">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>80</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="JD_DEAD" ID="{17422C62-9B85-4F3C-A41C-4CFF0C0660EC}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death5" ID="{5533BF77-2705-43D0-BA98-0333114BE82D}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0306263194933146"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.011484869809993"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.218212526389866"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.474707952146376"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1008862672"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death5" ID="{5533BF77-2705-43D0-BA98-0333114BE82D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Death" ID="{7626E9AC-9E11-4767-93F8-ED9B608D8160}" ShortID="84248450">
+							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-530</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="JD_DEAD" ID="{17422C62-9B85-4F3C-A41C-4CFF0C0660EC}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="JD_Death1" ID="{FF6305F9-914B-4ACA-83D3-2C7508520DD8}" ShortID="548403481">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death1" ID="{DF9EDD06-0859-4802-8D00-353C97EB71A7}">
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167932205"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death1" ID="{DF9EDD06-0859-4802-8D00-353C97EB71A7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Death2" ID="{C6CF25CA-4650-4F42-892A-CF44699A5EAE}" ShortID="933644009">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death2" ID="{C7730C7A-EC16-4230-A914-CCC99D09D60C}">
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="783890936"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death2" ID="{C7730C7A-EC16-4230-A914-CCC99D09D60C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Death3" ID="{8B8292D2-1B58-4532-B6EB-4E4F5DEC73B1}" ShortID="334848430">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death3" ID="{7F2B9F79-DF47-4AC1-A2BB-269F20A0CEFC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0808421052631579"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.15719298245614"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.23508771929825"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="240776954"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death3" ID="{7F2B9F79-DF47-4AC1-A2BB-269F20A0CEFC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Death4" ID="{D1E5F40E-A15F-41C3-9165-2F10ED66670E}" ShortID="1018924734">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death4" ID="{D1007ADF-7DD5-4404-8110-47B1BBB328FA}">
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="54736883"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death4" ID="{D1007ADF-7DD5-4404-8110-47B1BBB328FA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Death6" ID="{DBE308AA-801C-4B19-9339-4734F8F4CF94}" ShortID="1049604780">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>80</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death6" ID="{E6BD3573-7B08-45F5-A4E1-267210A0A6B4}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0551724137931034"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0315270935960585"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.10344827586207"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="155894028"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death6" ID="{E6BD3573-7B08-45F5-A4E1-267210A0A6B4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="JD_Death7" ID="{CF23274B-4F2E-4C4C-B9C8-98DFFB241564}" ShortID="890064725">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_Death7" ID="{8DF32460-1037-48E0-883A-77F5C204D331}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0111095472671827"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.799887403237157"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Death\JD_Death7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="328638876"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_Death7" ID="{8DF32460-1037-48E0-883A-77F5C204D331}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="JD_Hitmarker" ID="{F895F81A-16F5-4D29-ACAE-EB4D030263D1}" ShortID="759676003">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{BBD177CA-BB50-4274-893C-F3061A7337EA}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Fleshsound" ID="{F9818419-F099-4C83-BEA2-CB6AC951ED50}" ShortID="1062710597">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3532B8C5-10D0-457B-9D85-05E654805279}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Fleshmarker" ID="{F4F72E6A-09A4-48DB-97F6-4888219C85E3}" ShortID="16811132">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7C7BD66E-3343-440D-AE9E-D8461403CF28}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0502787558685446"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.100557511737089"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.670383411580595"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="994086495"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7C7BD66E-3343-440D-AE9E-D8461403CF28}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fleshmarker_01" ID="{CF729D18-09BC-4D30-8822-581E0BA613D9}" ShortID="322168191">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{DE341B9C-0373-4869-9DA7-22FC5F007200}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.02233470266041"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.77651604068858"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="315064986"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{DE341B9C-0373-4869-9DA7-22FC5F007200}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fleshmarker_02" ID="{9900CD68-CE4F-4B20-B204-22A56C6B3ADD}" ShortID="471597897">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{57FD745E-D230-4315-9D01-6B3D38C2E0BD}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.134076682316119"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.99439064945227"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.78209115805947"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="472632658"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{57FD745E-D230-4315-9D01-6B3D38C2E0BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fleshmarker_03" ID="{A8299148-32E4-4393-B730-00D11C3BDEAB}" ShortID="866999111">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{EEE1EBC5-5086-4334-8AA8-84995A87686C}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0502787558685447"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.96644659624413"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.7206279342723"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="467935248"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{EEE1EBC5-5086-4334-8AA8-84995A87686C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fleshmarker_04" ID="{176D0F00-2610-4F83-ACC7-DB1FC65AB078}" ShortID="547754175">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{C40BA6E4-FAF9-4FFE-A87F-292519D50433}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.100557511737089"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.95526212832551"/>
+														<Property Name="TrimEnd" Type="Real64" Value="4.70944346635368"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="706104011"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{C40BA6E4-FAF9-4FFE-A87F-292519D50433}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fleshmarker_05" ID="{943A17E0-8A1D-4DD1-BBB8-ED6AC6A2731F}" ShortID="890192111">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7D584E89-2DF1-423B-AF97-DDC965D500D9}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="4.8435201486698"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="4.82676056338029"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.59770148669797"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="864022316"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7D584E89-2DF1-423B-AF97-DDC965D500D9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Fleshmarker_06" ID="{03394EB3-4790-4102-94D1-E8D51CD05E4F}" ShortID="132616450">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{B7CABBC0-54C0-4C6A-A695-9CC223A52429}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="5.68149941314554"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.43568075117371"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="76136184"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{B7CABBC0-54C0-4C6A-A695-9CC223A52429}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{687631E4-5233-47C3-ACBA-CF16DC8F60B8}" ShortID="10164455">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8B7E8222-C36D-4F0F-8E0E-8ADD2FF623FA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="227"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{4F9E0A45-3A98-4A1D-A5F3-A55F5FD0ABFA}">
+											<Language>SFX</Language>
+											<AudioFile>Hitmarker_Sound_Effect_by_User391915396_Id_570335.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="666359023"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{4F9E0A45-3A98-4A1D-A5F3-A55F5FD0ABFA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{687631E4-5233-47C3-ACBA-CF16DC8F60B8}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Fleshsound" ID="{F9818419-F099-4C83-BEA2-CB6AC951ED50}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
