@@ -144,6 +144,7 @@ namespace cowsins
             if (enemy != null)
             {
                 enemy.GetEnemy().DecreaseHealth(damage);
+                enemy.GetEnemy().GetComponent<EnemyHealth>().Damage(damage, false);
                 
                 Vector3 pushDirection = this.transform.position - playerCamera.transform.position; 
                 pushDirection = pushDirection.normalized;
