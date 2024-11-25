@@ -22,10 +22,7 @@ public class PushEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.F))
-        // {
-        //     PushEnemiesInRange();
-        // }
+
     }
 
     public void PushEnemiesInRange()
@@ -55,35 +52,50 @@ public class PushEnemy : MonoBehaviour
         if (enemy != null)
         {
             enemy.GetEnemy().DecreaseHealth(damage);
-            // Debug.LogWarning("Enemy health: " + enemy.GetEnemy().GetHealth());
 
             Vector3 pushDirection = (hitCollider.transform.position - transform.position).normalized;
             Debug.Log("Pushing enemy: " + hitCollider.name + " with direction: " + pushDirection);
             
-            // enemy.SwitchToRagdollAndApplyForce(pushDirection, pushForce);
             enemy.SetForceDirection(pushDirection);
             enemy.SetForce(pushForce);
+            enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
 
-            enemy.ChangeState(new EnemyHitState());
+            // enemy.ChangeState(new EnemyHitState());
+
+            // if(enemy.GetEnemy().GetHealth() > 0){
+            //     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+            // }
+
+            if(enemy.GetCurrentState() is not EnemyHitState){
+                    enemy.ChangeState(new EnemyHitState());
+            }
+
 
             if(enemy.GetEnemy().GetHealth() > 0){
-                StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
+                Debug.Log("Inside health check");
+                if(!enemy.GetisInRecovery()){
+                    enemy.Recovery(ragdollDuration);
+                }
+            } else {
+                enemy.ChangeState(new EnemyDieState());
+                Debug.Log("Health check not passed");
             }
+
         }
     }
 
-    IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
-    {
+    // IEnumerator RecoverAfterDelay(EnemyStateController enemy, float delay)
+    // {
         
-        yield return new WaitForSeconds(delay);
+    //     yield return new WaitForSeconds(delay);
 
-        if (enemy != null)
-        {
-            Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
-            IEnemyState prevState = enemy.GetPreviousState();
-            enemy.ChangeState(prevState);
+    //     if (enemy != null)
+    //     {
+    //         Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+    //         IEnemyState prevState = enemy.GetPreviousState();
+    //         enemy.ChangeState(prevState);
 
-        }
-    }
+    //     }
+    // }
 
 }

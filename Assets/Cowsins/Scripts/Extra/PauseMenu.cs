@@ -190,7 +190,8 @@ namespace cowsins
             Time.timeScale = 1f; 
             isPaused = false;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
-             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            AkSoundEngine.WakeupFromSuspend();
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
 
 
