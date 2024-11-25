@@ -70,6 +70,7 @@ public class PushEnemy : MonoBehaviour
                 {
                     Debug.Log("change weapon and Animator successfully found and assigned via Tag.");
                     isLegRigInitialized = true; 
+                    animator.ResetTrigger(pushAnimationTrigger); 
                 }
             }
 
@@ -178,6 +179,10 @@ public class PushEnemy : MonoBehaviour
        animator.ResetTrigger("kickT"); // 确保没有遗留的触发器
         animator.SetTrigger("kickT");  
         Debug.Log("Push animation triggered.");
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log($"Animator State: {stateInfo.fullPathHash}, IsName Kick: {stateInfo.IsName("Kick")}, Normalized Time: {stateInfo.normalizedTime}");
+
         return true;
     }
 
