@@ -21,9 +21,10 @@ public class EnemyStateController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private bool inAFight = false;
     private MusicManager musicManager;
-
     private Queue<Transform> targetQueue;
     private GameObject player;
+    // [SerializeField] private bool isInRagdoll = false;
+    private bool isInRecovery = false;
 
 
     void Awake()
@@ -183,7 +184,6 @@ public class EnemyStateController : MonoBehaviour
     public bool ReachedStoppingDistance(){
         float stopDistance = enemy.GetStoppingDistance();
 
-
         Vector3 directionToPlayer = playerBodyTransform.position - enemy.transform.position;
         float distanceToPlayer = directionToPlayer.magnitude;
         Debug.Log("Distance to player: " + distanceToPlayer + " enemy: " + this.GetEnemy().name);
@@ -238,6 +238,7 @@ public class EnemyStateController : MonoBehaviour
     }
 
     public void Recovery(float ragdollDuration){
+        isInRecovery = true;
         StartCoroutine(RecoverAfterDelay(this, ragdollDuration));
     }
 
@@ -249,14 +250,24 @@ public class EnemyStateController : MonoBehaviour
         if (enemy != null)
         {
             Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+            enemy.GetEnemy().GetComponent<EnemyRagdollController>().RecoverFromRagdoll();
             IEnemyState prevState = enemy.GetPreviousState();
-            if(prevState is EnemyAttackState || prevState is EnemyIdleState){
-                enemy.ChangeState(prevState);
-            }
+            animator.SetBool("isAttacking", true);
+            yield return new WaitForSeconds(2f);
+            enemy.ChangeState(new EnemyAttackState());
+            
+
+            // if(prevState is EnemyAttackState || prevState is EnemyIdleState){
+            //     enemy.ChangeState(prevState);
+                
+            // } else {
+            //     enemy.ChangeState(new EnemyIdleState());
+            // }
 
         } else {
             Debug.Log("Enemy is null!!");
         }
+        isInRecovery = false;
     }
 
 
@@ -309,5 +320,22 @@ public class EnemyStateController : MonoBehaviour
     public GameObject GetPlayer(){
         return this.player;
     }
+
+    // public bool GetisInRagdoll(){
+    //     return this.isInRagdoll;
+    // }
+
+    // public void SetisInRagdoll(bool ragdollValue){
+    //     this.isInRagdoll = ragdollValue;
+    // }
+
+    public bool GetisInRecovery(){
+        return this.isInRecovery;
+    }
+
+    public void SetisInRecovery(bool recovery){
+        this.isInRecovery = recovery;
+    }
+
 }
 

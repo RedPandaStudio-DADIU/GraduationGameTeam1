@@ -253,6 +253,18 @@
 						<Switch Name="NearDeath" ID="{9CC6B738-2673-47B7-BBBF-CE1AF5A42363}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="EnemyStatusSwitch" ID="{4A032102-C8B1-4CC0-98DC-7B36D0F0C59E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Idleling" ID="{4398C7F2-A553-45EF-A255-7884FB34D042}"/>
+						<Switch Name="Attacking" ID="{13A3B766-97EB-4A1E-88D7-B95208B16D18}"/>
+						<Switch Name="Dying" ID="{033196D2-5350-4807-AA81-FB1D8AE84DD9}"/>
+						<Switch Name="TakingDamage" ID="{397A78E6-0275-4ECC-ACC8-0923DC2435DA}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

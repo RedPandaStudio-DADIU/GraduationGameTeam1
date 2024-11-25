@@ -6,6 +6,9 @@ public class EnemyIdleState : IEnemyState
 {
     public void OnEnter(EnemyStateController stateController){
         Debug.Log("Entering Idle State " + stateController.name);
+        stateController.GetAnimator().SetBool("IsShooting", false);
+        stateController.GetAnimator().SetBool("IsAttacking", false);
+
     }
     public void OnUpdate(EnemyStateController stateController){
         Debug.Log("Inside Idle State: " + stateController.GetEnemy().name);

@@ -147,44 +147,34 @@ namespace cowsins
                 enemy.SetForceDirection(pushDirection);
 
                 enemy.GetEnemy().DecreaseHealth(chargeDamage);
-                enemy.ChangeState(new EnemyHitState());
-                
-                if(enemy.GetEnemy().GetHealth() > 0){
-                    enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
-                    StartCoroutine(RecoverAfterDelay(enemy, delay));
+
+                if(enemy.GetCurrentState() is not EnemyHitState){
+                    enemy.ChangeState(new EnemyHitState());
                 }
+
+                // enemy.ChangeState(new EnemyHitState());
+                
+                // if(enemy.GetEnemy().GetHealth() > 0){
+                //     enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                //     StartCoroutine(RecoverAfterDelay(enemy, delay));
+                // }
+
+                if(enemy.GetEnemy().GetHealth() > 0){
+                    Debug.Log("Inside health check");
+                    if(!enemy.GetisInRecovery()){
+                        enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                        enemy.Recovery(ragdollDuration);
+                    }
+                } else {
+                    enemy.ChangeState(new EnemyDieState());
+                    Debug.Log("Health check not passed");
+                }
+
 
                 PushNearbyEnemies(projectilePosition, chargedPushForce, explosionRadius);
             }
             
         }
-
-        // private void HandleShotLogic(RaycastHit hit){
-        //     EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
-
-        //     if (enemy.GetEnemy().GetRagdollController() != null)
-
-        //     {
-        //         enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
-
-        //         Vector3 pushDirection = hit.point - playerCamera.transform.position;
-        //         pushDirection = pushDirection.normalized;
-        //         enemy.SetForce(chargedPushForce);
-        //         enemy.SetForceDirection(pushDirection);
-
-        //         enemy.GetEnemy().DecreaseHealth(chargeDamage);
-
-        //         enemy.ChangeState(new EnemyHitState());
-                
-        //         if(enemy.GetEnemy().GetHealth() > 0){
-        //             // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
-        //             StartCoroutine(RecoverAfterDelay(enemy, delay));
-        //         }
-
-        //         PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
-        //     }
-        // }
-
 
         public void PushNearbyEnemies(Vector3 center, float force, float explosionRadius )
         {
@@ -205,13 +195,31 @@ namespace cowsins
                     nearbyEnemyStateController.SetForceDirection(pushDirection);
 
                     nearbyEnemyStateController.GetEnemy().DecreaseHealth(chargeDamage);
-                    nearbyEnemyStateController.ChangeState(new EnemyHitState());
+                    // nearbyEnemyStateController.ChangeState(new EnemyHitState());
 
+
+                    // if(nearbyEnemyStateController.GetEnemy().GetHealth() > 0){
+                    //     StartCoroutine(RecoverAfterDelay(nearbyEnemyStateController, delay));
+                    //     // nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
+                    // }
+
+
+                    if(nearbyEnemyStateController.GetCurrentState() is not EnemyHitState){
+                        nearbyEnemyStateController.ChangeState(new EnemyHitState());
+                    }
 
                     if(nearbyEnemyStateController.GetEnemy().GetHealth() > 0){
-                        StartCoroutine(RecoverAfterDelay(nearbyEnemyStateController, delay));
-                        // nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
+                        Debug.Log("Inside health check");
+                        if(!nearbyEnemyStateController.GetisInRecovery()){
+                            nearbyEnemyStateController.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                            nearbyEnemyStateController.Recovery(ragdollDuration);
+                        }
+                    } else {
+                        nearbyEnemyStateController.ChangeState(new EnemyDieState());
+                        Debug.Log("Health check not passed");
                     }
+
+
 
                 }
             }   

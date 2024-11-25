@@ -3,7 +3,11 @@
 	<Busses>
 		<WorkUnit Name="SFX" ID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
-				<Bus Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}"/>
+				<Bus Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}">
+					<PropertyList>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+				</Bus>
 				<Bus Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}">
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
@@ -20,8 +24,13 @@
 				<Bus Name="Weapons" ID="{E43FDD2F-1184-43B4-BBF2-688F7FC66E13}">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
-						<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
+					</ReferenceList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
