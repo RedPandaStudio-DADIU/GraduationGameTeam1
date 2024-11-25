@@ -166,13 +166,13 @@ namespace cowsins
 
             // EXPERIENCE
             // Calculate the target XP value
-            if (ExperienceManager.instance.useExperience)
-            {  // Calculate the target XP value
-                float targetXp = ExperienceManager.instance.GetCurrentExperience() / ExperienceManager.instance.experienceRequirements[ExperienceManager.instance.playerLevel];
+            // if (ExperienceManager.instance.useExperience)
+            // {  // Calculate the target XP value
+            //     float targetXp = ExperienceManager.instance.GetCurrentExperience() / ExperienceManager.instance.experienceRequirements[ExperienceManager.instance.playerLevel];
 
-                // Lerp the XP image fill amount towards the target XP value
-                xpImage.fillAmount = Mathf.Lerp(xpImage.fillAmount, targetXp, lerpXpSpeed * Time.deltaTime);
-            }
+            //     // Lerp the XP image fill amount towards the target XP value
+            //     xpImage.fillAmount = Mathf.Lerp(xpImage.fillAmount, targetXp, lerpXpSpeed * Time.deltaTime);
+            // }
 
 
             // Handle Inspection UI
@@ -348,7 +348,7 @@ namespace cowsins
             GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.scopes, scopes_AttachmentsGroup, wcon.inventory[wcon.currentWeapon].scope, weapon.defaultAttachments.defaultScope);
             GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.stocks, stocks_AttachmentsGroup, wcon.inventory[wcon.currentWeapon].stock, weapon.defaultAttachments.defaultStock);
             GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.grips, grips_AttachmentsGroup, wcon.inventory[wcon.currentWeapon].grip, weapon.defaultAttachments.defaultGrip);
-            GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.magazines, magazines_AttachmentsGroup, wcon.inventory[wcon.currentWeapon].magazine, weapon.defaultAttachments.defaultMagazine);
+            //GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.magazines, magazines_AttachmentsGroup, wcon.inventory[wcon.currentWeapon].magazine, weapon.defaultAttachments.defaultMagazine);
             GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.flashlights, flashlights_AttachmentsGroup, wcon.inventory[wcon.currentWeapon].flashlight, weapon.defaultAttachments.defaultFlashlight);
             GenerateAttachmentGroup(displayCurrentAttachments, weapon.compatibleAttachments.lasers, lasers_AttachmentsGroup, wcon.id.laser, weapon.defaultAttachments.defaultLaser);
         }
@@ -444,7 +444,7 @@ namespace cowsins
         private void UpdateBullets(int bullets, int mag, bool activeReloadUI, bool activeLowAmmoUI)
         {
             bulletsUI.text = bullets.ToString();
-            magazineUI.text = mag.ToString();
+           // magazineUI.text = mag.ToString();
             reloadUI.gameObject.SetActive(activeReloadUI);
             lowAmmoUI.gameObject.SetActive(activeLowAmmoUI);
             

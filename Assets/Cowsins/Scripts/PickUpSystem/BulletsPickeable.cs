@@ -18,9 +18,18 @@ namespace cowsins
         }
         public override void Interact(Transform player)
         {
-            if (player.GetComponent<WeaponController>().weapon == null) return;
+            if (player.GetComponent<WeaponController>().weapon == null) 
+            {
+                Debug.Log("No weapon equipped");
+                return;
+            }
+            Debug.Log($"Before adding bullets: TotalBullets = {player.GetComponent<WeaponController>().id.totalBullets}");
+
+            
             base.Interact(player);
             player.GetComponent<WeaponController>().id.totalBullets += amountOfBullets;
+            Debug.Log($"After adding bullets: TotalBullets = {player.GetComponent<WeaponController>().id.totalBullets}");
+
             Destroy(this.gameObject);
         }
     }
