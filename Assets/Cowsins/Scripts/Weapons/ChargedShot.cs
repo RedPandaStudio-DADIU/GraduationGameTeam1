@@ -60,15 +60,17 @@ namespace cowsins
                 Debug.Log("begain to charge");
                 hasStoppedCharging = false;
                 hasPlayedReadySound = false;
+                this.gameObject.GetComponent<WeaponController>().canShoot = false;
 
             }
 
             if (Mouse.current.rightButton.IsPressed() && this.gameObject.GetComponent<WeaponController>().weapon != null && this.gameObject.GetComponent<WeaponController>().id.bulletsLeftInMagazine > this.gameObject.GetComponent<WeaponController>().weapon.ammoCostPerFire2) {
-                
+                this.gameObject.GetComponent<WeaponController>().canShoot = false;
+
                  
                 if (chargeProgressBar != null)
                 {
-                    Debug.Log("Logging inside if statement");
+                    // Debug.Log("Logging inside if statement");
 
                     rightClickHoldTime += Time.deltaTime;
                     
@@ -97,6 +99,7 @@ namespace cowsins
 
                 rightClickHoldTime = 0f;
                 chargeProgressBar.fillAmount = 0;
+                this.gameObject.GetComponent<WeaponController>().canShoot = true;
 
 
             }
