@@ -7,11 +7,6 @@
 					<PropertyList>
 						<Property Name="Tempo" Type="Real64" Value="110"/>
 						<Property Name="TimeSignatureLower" Type="int16" Value="32"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>6</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -263,7 +258,7 @@
 									<ChildrenList>
 										<MusicSegment Name="DG_Loop1A" ID="{A95C7394-E70A-465A-8CDC-C29D46127017}" ShortID="367771960">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="92529.6913239443"/>
+												<Property Name="EndPosition" Type="Real64" Value="104727.291666667"/>
 												<Property Name="Tempo" Type="Real64" Value="110"/>
 												<Property Name="TimeSignatureLower" Type="int16" Value="32"/>
 											</PropertyList>
@@ -276,14 +271,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<MusicTrack Name="DG_Loop_1A" ID="{7196B3F2-CF9E-4711-ABC3-EB59B5866C57}" ShortID="824640392">
+												<MusicTrack Name="DG_combat_percG_1" ID="{379EF000-03AE-4F88-A592-6626B1D5AAE6}" ShortID="753479009">
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 														</Reference>
 														<Reference Name="TransitionRoot">
 															<Custom>
-																<MusicTransition Name="Root" ID="{B003D6F8-3CEA-411F-B717-44EACEF1F752}">
+																<MusicTransition Name="Root" ID="{398E9521-81AA-46F1-A724-E00DADFB034B}">
 																	<PropertyList>
 																		<Property Name="IsFolder" Type="bool" Value="True"/>
 																	</PropertyList>
@@ -293,11 +288,11 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="DG_Loop_1A" ID="{B7505FD7-BAD4-41C7-BD8E-56335D9DD602}">
+														<AudioFileSource Name="DG_combat_percG_1" ID="{F175A9AE-EAA0-4EDD-872F-80B1BB345627}">
 															<Language>SFX</Language>
-															<AudioFile>DG_Loop_1A.wav</AudioFile>
+															<AudioFile>DG_combat_percG_1.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="690146370"/>
+																<MediaID ID="505715053"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -305,18 +300,278 @@
 														<ObjectList Name="Sequences">
 															<Reference>
 																<Local>
-																	<MusicTrackSequence Name="" ID="{AED38439-FB6F-4FCB-AC9C-9F7B6B11EA01}">
+																	<MusicTrackSequence Name="" ID="{469CD76F-D496-46A1-A1FA-A6383B051A3F}">
 																		<ObjectLists>
 																			<ObjectList Name="Clips">
 																				<Reference>
 																					<Local>
-																						<MusicClip Name="DG_Loop_1A" ID="{72F6BEB3-2728-4232-84F8-A429E0493972}">
+																						<MusicClip Name="DG_combat_percG_1" ID="{F9E3BFD2-EF8D-4134-B66A-70D3377DA9E5}">
 																							<PropertyList>
-																								<Property Name="EndTrimOffset" Type="Real64" Value="56727.2916666667"/>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
 																								<Property Name="FadeInMode" Type="int16" Value="0"/>
 																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																							</PropertyList>
-																							<AudioSourceRef Name="DG_Loop_1A" ID="{B7505FD7-BAD4-41C7-BD8E-56335D9DD602}"/>
+																							<AudioSourceRef Name="DG_combat_percG_1" ID="{F175A9AE-EAA0-4EDD-872F-80B1BB345627}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="DG_combat_audioG_1" ID="{A55F9FC5-AD19-40DF-AAF8-DEF4CF280D78}" ShortID="538909052">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+														<Reference Name="TransitionRoot">
+															<Custom>
+																<MusicTransition Name="Root" ID="{29971D18-40B1-4AAC-A564-8A0ADE0A6683}">
+																	<PropertyList>
+																		<Property Name="IsFolder" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<TransitionInfo/>
+																</MusicTransition>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="DG_combat_audioG_1" ID="{03B03014-2CA2-4220-9E4B-3CBA7D94949A}">
+															<Language>SFX</Language>
+															<AudioFile>DG_combat_audioG_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="576867238"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{52889CA4-6750-41A8-A5EB-9D3FCE275873}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="DG_combat_audioG_1" ID="{EA4172CD-9BC8-4FA0-A25E-A9684DD5090B}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="DG_combat_audioG_1" ID="{03B03014-2CA2-4220-9E4B-3CBA7D94949A}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="DG_combat_blæsG_1" ID="{72D308B8-B8F7-4D5A-BCDA-CA34FEDBBA63}" ShortID="934921900">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+														<Reference Name="TransitionRoot">
+															<Custom>
+																<MusicTransition Name="Root" ID="{37324FBE-4813-46C5-B746-ACEEC8A43328}">
+																	<PropertyList>
+																		<Property Name="IsFolder" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<TransitionInfo/>
+																</MusicTransition>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="DG_combat_blæsG_1" ID="{52E5FE49-1764-408C-B5CE-1D7BE349A03C}">
+															<Language>SFX</Language>
+															<AudioFile>DG_combat_blæsG_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="982758143"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{494899EA-C93F-4127-9F83-7B3260AC784F}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="DG_combat_blæsG_1" ID="{EFC58849-6A1B-428E-B11B-06D65423E297}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="DG_combat_blæsG_1" ID="{52E5FE49-1764-408C-B5CE-1D7BE349A03C}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="DG_combat_fladerG_1" ID="{7036A722-1F18-4026-B4FF-25B5381DBE04}" ShortID="577589439">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+														<Reference Name="TransitionRoot">
+															<Custom>
+																<MusicTransition Name="Root" ID="{9B414091-ED69-44E2-A359-BAC029B3AC06}">
+																	<PropertyList>
+																		<Property Name="IsFolder" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<TransitionInfo/>
+																</MusicTransition>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="DG_combat_fladerG_1" ID="{383E1B86-2B92-45B1-90D3-1912CA948F89}">
+															<Language>SFX</Language>
+															<AudioFile>DG_combat_fladerG_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1068075231"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{FCC7C616-BA77-4C2D-ADE6-94A9C1234CAC}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="DG_combat_fladerG_1" ID="{E29A6149-C868-407B-9ECA-42C86E7026A1}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="DG_combat_fladerG_1" ID="{383E1B86-2B92-45B1-90D3-1912CA948F89}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="DG_combat_stringsG_1" ID="{615AFEA8-DE26-48DB-91D9-3634C5FBBBE5}" ShortID="579961005">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+														<Reference Name="TransitionRoot">
+															<Custom>
+																<MusicTransition Name="Root" ID="{40D33F26-E5C6-4A13-8F92-A4131E61BBA9}">
+																	<PropertyList>
+																		<Property Name="IsFolder" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<TransitionInfo/>
+																</MusicTransition>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="DG_combat_stringsG_1" ID="{64F17068-53BD-4746-9B07-50E7D156B063}">
+															<Language>SFX</Language>
+															<AudioFile>DG_combat_stringsG_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="558341430"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{73E60C47-9C62-488A-A77C-C2E956726090}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="DG_combat_stringsG_1" ID="{4EC90F7D-B067-4CA4-BD19-8F2743710E12}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="DG_combat_stringsG_1" ID="{64F17068-53BD-4746-9B07-50E7D156B063}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+												<MusicTrack Name="DG_combat_vokalG_1" ID="{3F7E8407-6FCF-43DD-BD22-6F20A8478BF9}" ShortID="567835004">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+														</Reference>
+														<Reference Name="TransitionRoot">
+															<Custom>
+																<MusicTransition Name="Root" ID="{35FDCD62-0CE4-45F6-815E-02131C482E70}">
+																	<PropertyList>
+																		<Property Name="IsFolder" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<TransitionInfo/>
+																</MusicTransition>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="DG_combat_vokalG_1" ID="{B934E8E4-05D3-48BE-AFA9-77A39C178199}">
+															<Language>SFX</Language>
+															<AudioFile>DG_combat_vokalG_1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="882023033"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{2096388E-41F5-428B-9B76-92285BE6A5A9}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="DG_combat_vokalG_1" ID="{29BA54DD-8657-4F34-BECB-46C30694E2C7}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="DG_combat_vokalG_1" ID="{B934E8E4-05D3-48BE-AFA9-77A39C178199}"/>
 																						</MusicClip>
 																					</Local>
 																				</Reference>
@@ -333,11 +588,7 @@
 												<ObjectList Name="Cues">
 													<Reference>
 														<Local>
-															<MusicCue Name="Entry Cue" ID="{D2AB02D4-649A-47B4-8B9B-A875E4D2AF49}">
-																<PropertyList>
-																	<Property Name="TimeMs" Type="Real64" Value="4363.63636363636"/>
-																</PropertyList>
-															</MusicCue>
+															<MusicCue Name="Entry Cue" ID="{D2AB02D4-649A-47B4-8B9B-A875E4D2AF49}"/>
 														</Local>
 													</Reference>
 													<Reference>
@@ -445,6 +696,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicPlaylistContainer Name="Lv1_combat_high" ID="{4081CF9D-2E8D-4D03-AB11-627F85E748A8}" ShortID="499084447">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -496,7 +754,7 @@
 													<ChildrenList>
 														<MusicSegment Name="DG_combat_high" ID="{5B393578-D2C6-4B8B-8002-5C4DFA49BDE4}" ShortID="764114773">
 															<PropertyList>
-																<Property Name="EndPosition" Type="Real64" Value="30545.4583333333"/>
+																<Property Name="EndPosition" Type="Real64" Value="94819.8261384651"/>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -507,14 +765,14 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<MusicTrack Name="DG_combat_high" ID="{7F584B95-383D-4531-A321-4882E6591654}" ShortID="913593117">
+																<MusicTrack Name="DG_combatH_audioG_1" ID="{0D2664C4-4F43-47E3-A818-5EC2606341B9}" ShortID="837882837">
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 																		</Reference>
 																		<Reference Name="TransitionRoot">
 																			<Custom>
-																				<MusicTransition Name="Root" ID="{A3D78CBE-7D06-428D-8CB6-FB60EFAAD7D2}">
+																				<MusicTransition Name="Root" ID="{E766F76E-9BFE-4855-8919-D573947367C0}">
 																					<PropertyList>
 																						<Property Name="IsFolder" Type="bool" Value="True"/>
 																					</PropertyList>
@@ -524,11 +782,11 @@
 																		</Reference>
 																	</ReferenceList>
 																	<ChildrenList>
-																		<AudioFileSource Name="DG_combat_high" ID="{9E77FCB9-55B8-449E-98CF-A1C431C2B72E}">
+																		<AudioFileSource Name="DG_combatH_audioG_1" ID="{EC41F98D-6682-4AB0-8346-C823C8819284}">
 																			<Language>SFX</Language>
-																			<AudioFile>DG_combat_high.wav</AudioFile>
+																			<AudioFile>DG_combatH_audioG_1.wav</AudioFile>
 																			<MediaIDList>
-																				<MediaID ID="593644892"/>
+																				<MediaID ID="613824309"/>
 																			</MediaIDList>
 																		</AudioFileSource>
 																	</ChildrenList>
@@ -536,18 +794,278 @@
 																		<ObjectList Name="Sequences">
 																			<Reference>
 																				<Local>
-																					<MusicTrackSequence Name="" ID="{38D67F4F-9831-41CA-A53A-17990691D41F}">
+																					<MusicTrackSequence Name="" ID="{D9967962-2EA2-4AFA-8860-DB5630C3B2C4}">
 																						<ObjectLists>
 																							<ObjectList Name="Clips">
 																								<Reference>
 																									<Local>
-																										<MusicClip Name="DG_combat_high" ID="{F571D423-81E6-4B68-9F51-7C3E23FB428E}">
+																										<MusicClip Name="DG_combatH_audioG_1" ID="{3E974608-5C7A-4C7E-9491-58C7C7A04DB7}">
 																											<PropertyList>
-																												<Property Name="EndTrimOffset" Type="Real64" Value="30545.4583333333"/>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="87272.7291666667"/>
 																												<Property Name="FadeInMode" Type="int16" Value="0"/>
 																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																											</PropertyList>
-																											<AudioSourceRef Name="DG_combat_high" ID="{9E77FCB9-55B8-449E-98CF-A1C431C2B72E}"/>
+																											<AudioSourceRef Name="DG_combatH_audioG_1" ID="{EC41F98D-6682-4AB0-8346-C823C8819284}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="DG_combatH_blæsG_1" ID="{49274820-55A6-463B-B322-6F77584A1D84}" ShortID="482914683">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+																		</Reference>
+																		<Reference Name="TransitionRoot">
+																			<Custom>
+																				<MusicTransition Name="Root" ID="{86627B73-58D4-40A0-8C26-5EF2E3A276CA}">
+																					<PropertyList>
+																						<Property Name="IsFolder" Type="bool" Value="True"/>
+																					</PropertyList>
+																					<TransitionInfo/>
+																				</MusicTransition>
+																			</Custom>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="DG_combatH_blæsG_1" ID="{079D4E8D-0EE2-4573-837D-B0D5B32165CC}">
+																			<Language>SFX</Language>
+																			<AudioFile>DG_combatH_blæsG_1.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="372372360"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ObjectLists>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{63CF98D4-1156-4060-A5CE-F9F132B0A44C}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="DG_combatH_blæsG_1" ID="{C356A002-1352-44F1-AA67-9239F756B684}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="87272.7291666667"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="DG_combatH_blæsG_1" ID="{079D4E8D-0EE2-4573-837D-B0D5B32165CC}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="DG_combatH_fladerG_1" ID="{B545DC34-DC54-444D-ADDB-01A966AEF76F}" ShortID="998914109">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+																		</Reference>
+																		<Reference Name="TransitionRoot">
+																			<Custom>
+																				<MusicTransition Name="Root" ID="{248A0D68-8ED9-47AA-A182-E7A8F365C827}">
+																					<PropertyList>
+																						<Property Name="IsFolder" Type="bool" Value="True"/>
+																					</PropertyList>
+																					<TransitionInfo/>
+																				</MusicTransition>
+																			</Custom>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="DG_combatH_fladerG_1" ID="{5112F69E-1D2E-43BC-8CDC-9D66CDE97A1C}">
+																			<Language>SFX</Language>
+																			<AudioFile>DG_combatH_fladerG_1.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="192643928"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ObjectLists>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{C5AD527C-3612-4BCA-8FFA-B02342D9DE6B}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="DG_combatH_fladerG_1" ID="{2C3A0F74-3B06-4C94-9EF3-0D78DB3C29F6}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="87272.7291666667"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="DG_combatH_fladerG_1" ID="{5112F69E-1D2E-43BC-8CDC-9D66CDE97A1C}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="DG_combatH_percG_1" ID="{BA4C944B-0E91-430A-B6E4-04DA68B73CE3}" ShortID="23183622">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+																		</Reference>
+																		<Reference Name="TransitionRoot">
+																			<Custom>
+																				<MusicTransition Name="Root" ID="{4B0EB4C6-EC56-4D19-9145-583AE29E058B}">
+																					<PropertyList>
+																						<Property Name="IsFolder" Type="bool" Value="True"/>
+																					</PropertyList>
+																					<TransitionInfo/>
+																				</MusicTransition>
+																			</Custom>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="DG_combatH_percG_1" ID="{89A4DC0F-F581-4463-A07D-73B346A2DA2E}">
+																			<Language>SFX</Language>
+																			<AudioFile>DG_combatH_percG_1.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="366846819"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ObjectLists>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{07769F89-D0A1-4215-85CC-BFA7A69BFC19}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="DG_combatH_percG_1" ID="{142F2D4E-CB62-4F00-AD0F-841C94514007}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="87272.7291666667"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="DG_combatH_percG_1" ID="{89A4DC0F-F581-4463-A07D-73B346A2DA2E}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="DG_combatH_stringsG_1" ID="{9468AFDE-A7E6-46E0-B649-395347EC4610}" ShortID="804972163">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+																		</Reference>
+																		<Reference Name="TransitionRoot">
+																			<Custom>
+																				<MusicTransition Name="Root" ID="{98E54440-DBFA-4180-B857-CB1CB25FE897}">
+																					<PropertyList>
+																						<Property Name="IsFolder" Type="bool" Value="True"/>
+																					</PropertyList>
+																					<TransitionInfo/>
+																				</MusicTransition>
+																			</Custom>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="DG_combatH_stringsG_1" ID="{135C7BB7-CE08-420B-8FCC-79314F80BB3A}">
+																			<Language>SFX</Language>
+																			<AudioFile>DG_combatH_stringsG_1.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="112064426"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ObjectLists>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{73444491-60D0-4DD8-A3EF-392C4D7F4FCC}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="DG_combatH_stringsG_1" ID="{748A3F2D-85DA-4881-9C34-61E4E2AD7764}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="87272.7291666667"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="DG_combatH_stringsG_1" ID="{135C7BB7-CE08-420B-8FCC-79314F80BB3A}"/>
+																										</MusicClip>
+																									</Local>
+																								</Reference>
+																							</ObjectList>
+																						</ObjectLists>
+																					</MusicTrackSequence>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																</MusicTrack>
+																<MusicTrack Name="DG_combatH_vokalG_1" ID="{A8B45F05-C1DD-4876-8C7A-4B073628ABD8}" ShortID="433387438">
+																	<ReferenceList>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+																		</Reference>
+																		<Reference Name="TransitionRoot">
+																			<Custom>
+																				<MusicTransition Name="Root" ID="{883D03DD-00AC-4119-9609-F13B1C973142}">
+																					<PropertyList>
+																						<Property Name="IsFolder" Type="bool" Value="True"/>
+																					</PropertyList>
+																					<TransitionInfo/>
+																				</MusicTransition>
+																			</Custom>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="DG_combatH_vokalG_1" ID="{516ACB05-DF76-4C13-AFC1-963EC696FD5D}">
+																			<Language>SFX</Language>
+																			<AudioFile>DG_combatH_vokalG_1.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="689719486"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ObjectLists>
+																		<ObjectList Name="Sequences">
+																			<Reference>
+																				<Local>
+																					<MusicTrackSequence Name="" ID="{05020185-AE9C-4D60-8D36-DC160AB19A6B}">
+																						<ObjectLists>
+																							<ObjectList Name="Clips">
+																								<Reference>
+																									<Local>
+																										<MusicClip Name="DG_combatH_vokalG_1" ID="{66FB3EFE-01AF-4F40-B112-22B201D70757}">
+																											<PropertyList>
+																												<Property Name="EndTrimOffset" Type="Real64" Value="87272.7291666667"/>
+																												<Property Name="FadeInMode" Type="int16" Value="0"/>
+																												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																											</PropertyList>
+																											<AudioSourceRef Name="DG_combatH_vokalG_1" ID="{516ACB05-DF76-4C13-AFC1-963EC696FD5D}"/>
 																										</MusicClip>
 																									</Local>
 																								</Reference>
@@ -572,7 +1090,7 @@
 																			<MusicCue Name="Exit Cue" ID="{FA98C628-E38D-4404-ABD9-8C77899B929A}">
 																				<PropertyList>
 																					<Property Name="CueType" Type="int16" Value="1"/>
-																					<Property Name="TimeMs" Type="Real64" Value="30545.4583333333"/>
+																					<Property Name="TimeMs" Type="Real64" Value="87272.7272727273"/>
 																				</PropertyList>
 																			</MusicCue>
 																		</Local>
@@ -1395,6 +1913,337 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSwitchContainer>
+						<MusicPlaylistContainer Name="Menu" ID="{31A6884E-F816-4E05-BE1D-32ADC1BC8073}" ShortID="834455373">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{9D6C31CF-CB80-4F4B-9F11-355D263D199E}" ShortID="1041206966">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{C773059C-E55E-4C08-9054-ABAA00083CDB}" ShortID="698398387">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Menu_1" ID="{E6F95058-AE14-44A6-BC30-6811115F2BF8}" WorkUnitID="{99B7097A-5AF6-4BF6-BB88-1E58339C856F}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{BEFE9E64-F190-419A-9D21-7145C5DC43A0}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{2F4DCEB4-8BF7-4A16-88C2-333E2398F76F}">
+													<PropertyList>
+														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo>
+														<SourceFadeOut>
+															<MusicFade Name="Source Fade-out" ID="{CA7C2F87-3276-4523-87A8-77E6761A3312}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
+																	<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+																	<Property Name="FadeType" Type="int16" Value="1"/>
+																</PropertyList>
+															</MusicFade>
+														</SourceFadeOut>
+														<DestinationFadeIn>
+															<MusicFade Name="Destination Fade-in" ID="{A2505181-EBE7-4FFC-AA68-A4C5ACDC12D9}">
+																<PropertyList>
+																	<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
+																	<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+																</PropertyList>
+															</MusicFade>
+														</DestinationFadeIn>
+													</TransitionInfo>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Menu_1" ID="{E6F95058-AE14-44A6-BC30-6811115F2BF8}" ShortID="167276711">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="104727.291666667"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="DG_Menu_audioG_1" ID="{3412A1E7-E268-49F9-8572-1B06ED377B3E}" ShortID="1032804894">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{068DFCB5-134C-4FA1-8184-27E401E30B1F}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="DG_Menu_audioG_1" ID="{CD68E762-0FA8-4974-9F27-7D25F80C930B}">
+													<Language>SFX</Language>
+													<AudioFile>Menu_1\DG_Menu_audioG_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="401310845"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A8BE0791-5DD1-4E16-8CFB-C2CA2EAB0E48}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="DG_Menu_audioG_1" ID="{E113D468-3508-4DA6-811B-7402E7FC36BA}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="DG_Menu_audioG_1" ID="{CD68E762-0FA8-4974-9F27-7D25F80C930B}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{2A5856BE-FFAA-4C52-9E20-19AC1130C64A}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>104.727291666667</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="DG_Menu_blæsG_1" ID="{72FD52FA-BABD-4884-9176-26B09F02D6A5}" ShortID="927946405">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{8554F1B0-13F7-44A6-9FE6-52E3610A9A6C}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="DG_Menu_blæsG_1" ID="{ABA06CED-F140-4F43-B5BC-5B5B299E19DC}">
+													<Language>SFX</Language>
+													<AudioFile>Menu_1\DG_Menu_blæsG_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="743987542"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{C09C233F-C78D-4334-BB0B-98C34E3AC262}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="DG_Menu_blæsG_1" ID="{9C8A09C6-A288-4F0C-9277-5C510D7C9F4A}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="DG_Menu_blæsG_1" ID="{ABA06CED-F140-4F43-B5BC-5B5B299E19DC}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="DG_Menu_fladerG_1" ID="{84419DD0-B8D1-4DCF-B32D-B3EEC5E34561}" ShortID="942834773">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{28FD993E-74FB-4998-97DD-088A70ACA236}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="DG_Menu_fladerG_1" ID="{83B6100A-4F59-483F-810D-FDD3939AC4EF}">
+													<Language>SFX</Language>
+													<AudioFile>Menu_1\DG_Menu_fladerG_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="466866006"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{F2A6C77D-901E-49DF-A534-8266DA5EF71F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="DG_Menu_fladerG_1" ID="{3B42AB79-9283-4256-9394-E47703DD4AED}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="DG_Menu_fladerG_1" ID="{83B6100A-4F59-483F-810D-FDD3939AC4EF}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="DG_Menu_vokalG_1" ID="{73B0347E-B91A-4268-987B-15552A724037}" ShortID="608791941">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{BB982997-0031-4CA1-A14C-1A5E181B3634}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="DG_Menu_vokalG_1" ID="{1E15CA49-7835-49DE-B42F-227C03E181BE}">
+													<Language>SFX</Language>
+													<AudioFile>Menu_1\DG_Menu_vokalG_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="925240015"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B0B6216F-9E98-41A1-B996-5955B74BF342}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="DG_Menu_vokalG_1" ID="{89E6F562-B76A-4065-AB47-090431332E69}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="104727.291666667"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="DG_Menu_vokalG_1" ID="{1E15CA49-7835-49DE-B42F-227C03E181BE}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{11743B2E-5245-4390-A8F5-86A7CE88F07E}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{F869E6D4-9C48-448D-9397-85E205B3BB54}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="98897.3897600937"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
@@ -1468,6 +2317,24 @@
 											<ObjectList Name="EntryPath">
 												<Reference>
 													<ObjectRef Name="Lv2" ID="{5D8A7D52-040A-48E6-ABF8-D56ACE6A036B}" WorkUnitID="{9FBFF435-93B6-4A21-BC9C-2620BDF34D0F}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{A307F977-9646-49C7-B3EC-93DE843557CD}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Menu" ID="{31A6884E-F816-4E05-BE1D-32ADC1BC8073}" WorkUnitID="{99B7097A-5AF6-4BF6-BB88-1E58339C856F}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="Menu" ID="{286DE460-EC2C-45CB-A3B4-3E781ABA8282}" WorkUnitID="{9FBFF435-93B6-4A21-BC9C-2620BDF34D0F}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
