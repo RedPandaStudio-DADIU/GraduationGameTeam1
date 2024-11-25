@@ -25,6 +25,9 @@ public class EnemyHitState : IEnemyState
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
         weapon.gameObject.SetActive(false);
+
+        stateController.GetEnemy().GetComponent<EnemyHealth>().Damage(0f, false);
+
     }
     public void OnUpdate(EnemyStateController stateController){
        

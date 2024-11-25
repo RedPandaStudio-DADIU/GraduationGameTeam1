@@ -27,6 +27,10 @@ public class EnemyAttackState : IEnemyState
             stateController.GetMusicManager().CheckIfSameState(1);
 
         }
+        // if(!stateController.GetIsHuman()){
+        //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
+        //     child.gameObject.SetActive(true);
+        // }
 
     }
     public void OnUpdate(EnemyStateController stateController){
@@ -61,6 +65,11 @@ public class EnemyAttackState : IEnemyState
             }
            
         } 
+
+        // if(!stateController.GetIsHuman()){
+        //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
+        //     child.gameObject.SetActive(true);
+        // }
         // else {
         //     // reaches destination - goes into idle state
         //     if(stateController.CheckIfReachedDestination()){
@@ -93,6 +102,11 @@ public class EnemyAttackState : IEnemyState
         // stateController.GetAnimator().SetBool("IsShooting", false);
 
         // isSpecialStateActive = false;
+
+        // if(!stateController.GetIsHuman()){
+        //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
+        //     child.gameObject.SetActive(false);
+        // }
 
     }
 

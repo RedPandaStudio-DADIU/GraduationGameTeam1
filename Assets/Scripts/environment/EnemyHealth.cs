@@ -107,7 +107,12 @@ namespace cowsins
             //Handle UI 
 
             // calculate the total length of the slider - adjust the values so that math is mathing!!!
-            if (healthSlider != null) healthSlider.value = Mathf.Lerp(healthSlider.value, health, Time.deltaTime * 6);
+            if (healthSlider != null){
+                healthSlider.value = Mathf.Lerp(healthSlider.value, health, Time.deltaTime * 6);
+                healthSlider.value = Mathf.RoundToInt(health);
+            } 
+
+            Debug.Log($"Slider Value: {healthSlider.value}, Target Health: {health}");
 
 
 
@@ -119,6 +124,7 @@ namespace cowsins
 
         public void LateUpdate() {
             health = GetComponent<EnemyBaseClass>().GetHealth();
+            Debug.LogError("Current health: " + health);
 
         }
 

@@ -28,9 +28,15 @@ public class EnemyDieState : IEnemyState
             rb.useGravity = true;
         }
 
+        if(!stateController.GetIsHuman()){
+            Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
+            child.gameObject.SetActive(false);
+        }
+
         if(stateController.GetEnemy().gameObject.GetComponent<Animator>() != null){
             stateController.GetEnemy().gameObject.GetComponent<Animator>().enabled = false;
         }
+
 
     }
     public void OnUpdate(EnemyStateController stateController){
@@ -55,6 +61,8 @@ public class EnemyDieState : IEnemyState
     public void OnExit(EnemyStateController stateController){
         // Debug.Log("Exiting Die State");
     }
+
+
 
 }
 
