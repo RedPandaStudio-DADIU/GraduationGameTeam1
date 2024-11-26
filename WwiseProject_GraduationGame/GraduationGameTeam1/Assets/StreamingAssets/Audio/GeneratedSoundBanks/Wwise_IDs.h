@@ -38,6 +38,7 @@ namespace AK
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
+        static const AkUniqueID PLAY_INTROCUTSCENESOUND = 4273186141U;
         static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
         static const AkUniqueID PLAY_JOHNDOEBARKS = 4112292984U;
