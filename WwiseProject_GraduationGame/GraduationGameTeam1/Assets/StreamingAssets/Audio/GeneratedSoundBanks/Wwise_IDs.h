@@ -27,6 +27,8 @@ namespace AK
         static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
         static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
         static const AkUniqueID PLAY_ELEVATOR_POWER_LP = 1757009721U;
+        static const AkUniqueID PLAY_ELEVATOR_RUN_STARTUP = 537752340U;
+        static const AkUniqueID PLAY_ELEVATOR_RUNNING_LP = 591723123U;
         static const AkUniqueID PLAY_ELEVATORDOOROPEN = 750231532U;
         static const AkUniqueID PLAY_EXPLODEBARREL = 757694329U;
         static const AkUniqueID PLAY_FIREALARM = 3888840653U;
@@ -38,6 +40,7 @@ namespace AK
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
+        static const AkUniqueID PLAY_INTROCUTSCENESOUND = 4273186141U;
         static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
         static const AkUniqueID PLAY_JOHNDOEBARKS = 4112292984U;
