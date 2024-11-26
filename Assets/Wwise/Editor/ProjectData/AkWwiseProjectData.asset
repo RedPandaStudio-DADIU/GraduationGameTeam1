@@ -647,7 +647,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584689716834079259
+    m_lastTime: -8584689617092517672
     List:
     - name: ConferenceHall
       guid: ab2a4aacd30f714dbf118d68ac308fbc
@@ -957,7 +957,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584689716834069262
+    m_lastTime: -8584689617092507681
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -1393,7 +1393,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Sound FX
     guid: 0b3c71a7575222469054ad6a7751f8c0
     GuidInternal: 
-    m_lastTime: -8584689716814550588
+    m_lastTime: -8584689621180762924
     List:
     - name: MainSoundFXBank
       guid: 0c3439e1944d5a4b8385c27c400bab65
@@ -1595,7 +1595,7 @@ MonoBehaviour:
     ParentPath: Events\Dialogue
     guid: 200b6a6a285dcd439f28a67e0a03cef1
     GuidInternal: 
-    m_lastTime: -8584689716868147330
+    m_lastTime: -8584689621186737805
     List:
     - name: BossFight
       guid: 43770ea62435ff42863ec4b8587eea89
@@ -1894,7 +1894,7 @@ MonoBehaviour:
     ParentPath: Events\GameWorld
     guid: b9dee002a444974f876d94dadf6db20c
     GuidInternal: 
-    m_lastTime: -8584689716868147330
+    m_lastTime: -8584689617145842506
     List:
     - name: Elevator
       guid: 1d22329c1617c9448172562d58e45749
@@ -2256,7 +2256,7 @@ MonoBehaviour:
     ParentPath: Events\NonGameWorld
     guid: 5942c16c6b3ccc4d90d4d0f8d21aea38
     GuidInternal: 
-    m_lastTime: -8584689716868137255
+    m_lastTime: -8584689621186737805
     List:
     - name: Play_IntroCutsceneSound
       guid: 072a7b711e50a34aa609037c2081a58f
@@ -2286,7 +2286,7 @@ MonoBehaviour:
     ParentPath: Events\NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584689885047484310
+    m_lastTime: -8584689617145832503
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -2339,6 +2339,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Brute_Damage
+      guid: f7bbdc620ec7124787eb8b7de927a0ea
+      id: 2222339482
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      - ElementName: Play_Brute_Damage
+        ObjectType: 3
+        guid: f7bbdc620ec7124787eb8b7de927a0ea
+      Path: Events\NPC\Brute\Play_Brute_Damage
+      maxAttenuation: 100
+      maxDuration: 0.70339406
+      minDuration: 0.431602
+    - name: Play_BruteAttack
+      guid: 1562f9c098d97c4dbb12cf1603a1aa80
+      id: 334987570
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Brute
+        ObjectType: 4
+        guid: b40a645e462ab04598fb93ffebcbc9ad
+      - ElementName: Play_BruteAttack
+        ObjectType: 3
+        guid: 1562f9c098d97c4dbb12cf1603a1aa80
+      Path: Events\NPC\Brute\Play_BruteAttack
+      maxAttenuation: 100
+      maxDuration: 0.9443646
+      minDuration: 0.7866667
     - name: Play_BruteBarks
       guid: 0f7a7f6bb163904ea8bf75d594e37c40
       id: 2283401379
@@ -2357,8 +2397,8 @@ MonoBehaviour:
         guid: 0f7a7f6bb163904ea8bf75d594e37c40
       Path: Events\NPC\Brute\Play_BruteBarks
       maxAttenuation: 100
-      maxDuration: Infinity
-      minDuration: 0.9594054
+      maxDuration: -1
+      minDuration: -1
     - name: Play_DiplomatBarks
       guid: 4da6ff0e1193034fbc541f493c1031f3
       id: 4152854033
@@ -2377,8 +2417,8 @@ MonoBehaviour:
         guid: 4da6ff0e1193034fbc541f493c1031f3
       Path: Events\NPC\Diplomat\Play_DiplomatBarks
       maxAttenuation: 0
-      maxDuration: Infinity
-      minDuration: 0.9594054
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Headshot
       guid: c9b75f22062d044b89d2cd542543537b
       id: 2628165376
@@ -2477,8 +2517,28 @@ MonoBehaviour:
         guid: e52d0c1a7c93ca43b52e7c51e5281da8
       Path: Events\NPC\Soldier\Play_SoldierBarks
       maxAttenuation: 0
-      maxDuration: Infinity
-      minDuration: 0.9594054
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Solider_Damage
+      guid: 0f25d4d4614875409e30463353aaefaa
+      id: 2478119858
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: NPC
+        ObjectType: 12
+        guid: b80379d52c10a44581b347f021ebb1af
+      - ElementName: Soldier
+        ObjectType: 4
+        guid: d5e99313e58c574496de742d174c1234
+      - ElementName: Play_Solider_Damage
+        ObjectType: 3
+        guid: 0f25d4d4614875409e30463353aaefaa
+      Path: Events\NPC\Soldier\Play_Solider_Damage
+      maxAttenuation: 0
+      maxDuration: 0.5071274
+      minDuration: 0.28640068
     - name: Soldier
       guid: d5e99313e58c574496de742d174c1234
       id: 3121013053
@@ -2507,7 +2567,7 @@ MonoBehaviour:
     ParentPath: Events\Player
     guid: 8207cda29fb9e2459b243d8e7eaae86e
     GuidInternal: 
-    m_lastTime: -8584689716868137255
+    m_lastTime: -8584689617145822447
     List:
     - name: Play_DamageTaken
       guid: de15bb4f3c279345b20d713673af28a0
@@ -2813,7 +2873,7 @@ MonoBehaviour:
     ParentPath: Events\Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584689716868127315
+    m_lastTime: -8584689617145812501
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -3276,7 +3336,7 @@ MonoBehaviour:
     ParentPath: States\Music_States
     guid: 35f4bf9fb693214abc9c2620bdf34d0f
     GuidInternal: 
-    m_lastTime: -8584689716814540598
+    m_lastTime: -8584689617065148416
     List:
     - name: Combat_intensity_Lv1
       guid: ba037285b5dc8440b845055c4269ffca
@@ -3717,7 +3777,7 @@ MonoBehaviour:
     ParentPath: States\Sound_States
     guid: 4d8ca50caf173545b4b3d20d71747df5
     GuidInternal: 
-    m_lastTime: -8584689716814530597
+    m_lastTime: -8584689621180742907
     List:
     - name: AreaState
       guid: fed77a67db43b149b10b721d1e000093
@@ -6078,8 +6138,8 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584717647543868597
     List: []
-  ExpandedFileSystemItemIds: 030000000400000005000000060000001a0000001b0000001c000000240000003000000031000000390000003a0000003b0000003c0000003d0000004400000045000000600000007300000078000000790000007d00000084000000b1000000ce000000d8000000ea00000078010000790100007c010000cb060000
-  ExpandedWaapiItemIds: 030000000400000005000000060000001a0000001b0000001c000000240000003000000031000000390000003a0000003b0000003c0000003d0000004400000045000000600000007300000078000000790000007d00000084000000b1000000b300000078010000790100007c010000cb060000
+  ExpandedFileSystemItemIds: 030000000400000005000000060000001a0000001b0000001c000000240000003000000031000000390000003a0000003b0000003c0000003d000000440000004500000060000000630000007300000078000000790000007d00000084000000b1000000b3000000b4000000b6000000b7000000c2000000c700000078010000790100007c010000cb060000
+  ExpandedWaapiItemIds: 030000000400000005000000060000001a0000001b0000001c000000240000003000000031000000390000003a0000003b0000003c0000003d000000440000004500000060000000630000007300000078000000790000007d00000084000000b1000000b3000000b4000000b6000000c2000000c700000078010000790100007c010000cb060000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 1

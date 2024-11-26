@@ -22,12 +22,14 @@ public class EnemyAttackState : IEnemyState
         }
 
         stateController.GetAnimator().SetBool("IsAttacking", true);
-        if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
-            stateController.GetMusicManager().CheckIfSameState(2);
-        } else {
-            stateController.GetMusicManager().CheckIfSameState(1);
-
+        if(!stateController.GetIsHuman() && !stateController.GetInAFight()){
+            if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
+                stateController.GetMusicManager().CheckIfSameState("CombatIntense");
+            } else {
+                stateController.GetMusicManager().CheckIfSameState("Combat");
+            }
         }
+        
         // if(!stateController.GetIsHuman()){
         //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
         //     child.gameObject.SetActive(true);
@@ -48,13 +50,6 @@ public class EnemyAttackState : IEnemyState
                 isAttacking = true;
                 shootingCoroutine = stateController.StartCoroutine(ContinuousShooting(stateController));
             }
-            // not optimal
-            if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
-                stateController.GetMusicManager().CheckIfSameState(2);
-            } else {
-                stateController.GetMusicManager().CheckIfSameState(1);
-
-            }
 
             if (stateController.ReachedStoppingDistance()){
                 stateController.GetAnimator().SetBool("IsShooting", true);
@@ -66,6 +61,14 @@ public class EnemyAttackState : IEnemyState
             }
            
         } 
+
+        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && stateController.GetMusicManager().GetCurrentState()!="Control tower"){
+            if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
+                stateController.GetMusicManager().CheckIfSameState("CombatIntense");
+            } else {
+                stateController.GetMusicManager().CheckIfSameState("Combat");
+            }
+        }
 
         // if(!stateController.GetIsHuman()){
         //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
