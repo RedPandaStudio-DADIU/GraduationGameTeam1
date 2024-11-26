@@ -647,7 +647,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/SharedEffects
     guid: 8076f1e943eefc438b8dbb683da5f64b
     GuidInternal: 
-    m_lastTime: -8584689724847027655
+    m_lastTime: -8584689556988987630
     List:
     - name: ConferenceHall
       guid: ab2a4aacd30f714dbf118d68ac308fbc
@@ -957,7 +957,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584689724847022436
+    m_lastTime: -8584689551171236385
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -1006,9 +1006,9 @@ MonoBehaviour:
         guid: fbd896561687364b95ff732159c72be0
       Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/02_John
         Doe
-    - name: 03_Xaga
-      guid: 8900e9a781efe44bbea14a840739efaf
-      id: 1153792
+    - name: 03_XagaConferenceRoom
+      guid: bcd804264865bb49a298ecd45e5b7d91
+      id: 1243625655
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -1025,10 +1025,33 @@ MonoBehaviour:
       - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
-      - ElementName: 03_Xaga
+      - ElementName: 03_XagaConferenceRoom
+        ObjectType: 2
+        guid: bcd804264865bb49a298ecd45e5b7d91
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaConferenceRoom
+    - name: 03_XagaHangar
+      guid: 8900e9a781efe44bbea14a840739efaf
+      id: 1118754633
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_XagaHangar
         ObjectType: 2
         guid: 8900e9a781efe44bbea14a840739efaf
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaHangar
     - name: DialogueMaster
       guid: 9f67d9ffcfacf94ba6db2632b64af791
       id: 2645497833
@@ -1223,7 +1246,7 @@ MonoBehaviour:
       - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
-      - ElementName: 03_Xaga
+      - ElementName: 03_XagaHangar
         ObjectType: 2
         guid: 8900e9a781efe44bbea14a840739efaf
       - ElementName: Xaga_ConferenceRoom
@@ -1232,7 +1255,36 @@ MonoBehaviour:
       - ElementName: Xaga_Conference
         ObjectType: 2
         guid: bdeff93d90de884ba6b259d4918c76f3
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/Xaga_ConferenceRoom/Xaga_Conference
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaHangar/Xaga_ConferenceRoom/Xaga_Conference
+    - name: Xaga_Conference_01
+      guid: ce9f8762be6b204b973368b663d5daa1
+      id: 1038037717
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_XagaConferenceRoom
+        ObjectType: 2
+        guid: bcd804264865bb49a298ecd45e5b7d91
+      - ElementName: Xaga_ConferenceRoom_01
+        ObjectType: 2
+        guid: 8434eba3897535469bcfecca63f980cc
+      - ElementName: Xaga_Conference_01
+        ObjectType: 2
+        guid: ce9f8762be6b204b973368b663d5daa1
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaConferenceRoom/Xaga_ConferenceRoom_01/Xaga_Conference_01
     - name: Xaga_ConferenceRoom
       guid: f8277a6573aa4d459d79b59abf99aa24
       id: 3458995332
@@ -1252,13 +1304,39 @@ MonoBehaviour:
       - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
-      - ElementName: 03_Xaga
+      - ElementName: 03_XagaHangar
         ObjectType: 2
         guid: 8900e9a781efe44bbea14a840739efaf
       - ElementName: Xaga_ConferenceRoom
         ObjectType: 2
         guid: f8277a6573aa4d459d79b59abf99aa24
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/Xaga_ConferenceRoom
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaHangar/Xaga_ConferenceRoom
+    - name: Xaga_ConferenceRoom_01
+      guid: 8434eba3897535469bcfecca63f980cc
+      id: 424473642
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_XagaConferenceRoom
+        ObjectType: 2
+        guid: bcd804264865bb49a298ecd45e5b7d91
+      - ElementName: Xaga_ConferenceRoom_01
+        ObjectType: 2
+        guid: 8434eba3897535469bcfecca63f980cc
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaConferenceRoom/Xaga_ConferenceRoom_01
     - name: Xaga_FarAway
       guid: 0643cfdb5ea82a4d9695672f0f3e65db
       id: 274948124
@@ -1278,7 +1356,7 @@ MonoBehaviour:
       - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
-      - ElementName: 03_Xaga
+      - ElementName: 03_XagaHangar
         ObjectType: 2
         guid: 8900e9a781efe44bbea14a840739efaf
       - ElementName: Xaga_ConferenceRoom
@@ -1287,7 +1365,36 @@ MonoBehaviour:
       - ElementName: Xaga_FarAway
         ObjectType: 2
         guid: 0643cfdb5ea82a4d9695672f0f3e65db
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/Xaga_ConferenceRoom/Xaga_FarAway
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaHangar/Xaga_ConferenceRoom/Xaga_FarAway
+    - name: Xaga_FarAway_01
+      guid: 2b4ce513456cfd4b9f860df342726d14
+      id: 2768314818
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_XagaConferenceRoom
+        ObjectType: 2
+        guid: bcd804264865bb49a298ecd45e5b7d91
+      - ElementName: Xaga_ConferenceRoom_01
+        ObjectType: 2
+        guid: 8434eba3897535469bcfecca63f980cc
+      - ElementName: Xaga_FarAway_01
+        ObjectType: 2
+        guid: 2b4ce513456cfd4b9f860df342726d14
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaConferenceRoom/Xaga_ConferenceRoom_01/Xaga_FarAway_01
     - name: XagaHangar
       guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
       id: 3868067129
@@ -1307,13 +1414,39 @@ MonoBehaviour:
       - ElementName: DialogueMaster
         ObjectType: 2
         guid: 9f67d9ffcfacf94ba6db2632b64af791
-      - ElementName: 03_Xaga
+      - ElementName: 03_XagaHangar
         ObjectType: 2
         guid: 8900e9a781efe44bbea14a840739efaf
       - ElementName: XagaHangar
         ObjectType: 2
         guid: d85c8fbc23d7ff4f9ba982905e8ad1b7
-      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_Xaga/XagaHangar
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaHangar/XagaHangar
+    - name: XagaHangar_01
+      guid: 07495da694f9734aab6df373208c9fcb
+      id: 1591600229
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Voicelines
+        ObjectType: 12
+        guid: f4aed3b74e0ebb4e86c116581226443f
+      - ElementName: DialogueMaster
+        ObjectType: 2
+        guid: 9f67d9ffcfacf94ba6db2632b64af791
+      - ElementName: 03_XagaConferenceRoom
+        ObjectType: 2
+        guid: bcd804264865bb49a298ecd45e5b7d91
+      - ElementName: XagaHangar_01
+        ObjectType: 2
+        guid: 07495da694f9734aab6df373208c9fcb
+      Path: Master-Mixer Hierarchy/Audio Master/Master Bus/Voicelines/DialogueMaster/03_XagaConferenceRoom/XagaHangar_01
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -1894,7 +2027,7 @@ MonoBehaviour:
     ParentPath: Events/GameWorld
     guid: b9dee002a444974f876d94dadf6db20c
     GuidInternal: 
-    m_lastTime: -8584689679516511201
+    m_lastTime: -8584689587838025473
     List:
     - name: Elevator
       guid: 1d22329c1617c9448172562d58e45749
@@ -2286,7 +2419,7 @@ MonoBehaviour:
     ParentPath: Events/NPC
     guid: b80379d52c10a44581b347f021ebb1af
     GuidInternal: 
-    m_lastTime: -8584689673212319270
+    m_lastTime: -8584689587838023482
     List:
     - name: Brute
       guid: b40a645e462ab04598fb93ffebcbc9ad
@@ -2567,7 +2700,7 @@ MonoBehaviour:
     ParentPath: Events/Player
     guid: 8207cda29fb9e2459b243d8e7eaae86e
     GuidInternal: 
-    m_lastTime: -8584689724852271257
+    m_lastTime: -8584689587838019281
     List:
     - name: Play_DamageTaken
       guid: de15bb4f3c279345b20d713673af28a0
@@ -2873,7 +3006,7 @@ MonoBehaviour:
     ParentPath: Events/Weapons
     guid: 8d065d9541c977499e66c4fe8ba4ad73
     GuidInternal: 
-    m_lastTime: -8584689724852269684
+    m_lastTime: -8584689587838011590
     List:
     - name: Handgun
       guid: c01d6fccbf6a17428029b10014369636
@@ -3336,7 +3469,7 @@ MonoBehaviour:
     ParentPath: States/Music_States
     guid: 35f4bf9fb693214abc9c2620bdf34d0f
     GuidInternal: 
-    m_lastTime: -8584689724009010495
+    m_lastTime: -8584689587797774705
     List:
     - name: Combat_intensity_Lv1
       guid: ba037285b5dc8440b845055c4269ffca
