@@ -703,7 +703,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{A176E737-B7FF-A95D-BB21-C6EE2F1A2FC0}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{5E26E2FB-B2F3-E7B1-28D5-31E636C8EA36}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -890,6 +890,10 @@
 				<File Id="115131081" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_Federation_Sc2 Tr1.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_Federation_Sc2 Tr1_9E25809D.wem</CachePath>
+				</File>
+				<File Id="115585820" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_Startup.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_Startup_818F3B66.wem</CachePath>
 				</File>
 				<File Id="121526837" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Damage\JD_URH_UH.wav</ShortName>
@@ -1750,6 +1754,10 @@
 				<File Id="783890936" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Death\JD_Death2.wav</ShortName>
 					<CachePath>Voices/English(US)/Death/JD_Death2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="788156748" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Elevator\Elevator\Elevator_Running_lp.wav</ShortName>
+					<CachePath>SFX/Elevator/Elevator/Elevator_Running_lp_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="797320250" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_TheMainframeNeedsToBeRebooted.wav</ShortName>
@@ -3233,6 +3241,22 @@
 								<MediaRef Id="1048784781"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2942882794" Id="91680483" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="277098265"/>
+								<MediaRef Id="950647488"/>
+								<MediaRef Id="1048784781"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="2942882794" Id="2235177879"/>
+							<MediaRefs>
+								<MediaRef Id="277098265"/>
+								<MediaRef Id="323262943"/>
+								<MediaRef Id="1048784781"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="2038432148" Name="Play_Elevator_ConfirmationBeep" MaxAttenuation="10" DurationType="OneShot" DurationMin="0.7987292" DurationMax="0.7987292">
@@ -3243,6 +3267,17 @@
 				<Event Id="1757009721" Name="Play_Elevator_Power_lp" MaxAttenuation="10" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="651678197"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="537752340" Name="Play_Elevator_Run_Startup" MaxAttenuation="10" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="115585820"/>
+						<MediaRef Id="788156748"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="591723123" Name="Play_Elevator_Running_lp" MaxAttenuation="10" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="788156748"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="750231532" Name="Play_ElevatorDoorOpen" MaxAttenuation="10" DurationType="OneShot" DurationMin="3.854854" DurationMax="3.854854">
@@ -4815,5 +4850,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{843DE553-A7BF-FC29-E048-4CA43F2CC80E}</FileHash>
+	<FileHash>{35D9A4DA-F47E-67ED-B9CD-3FD88FBC815A}</FileHash>
 </SoundBanksInfo>
