@@ -17,6 +17,7 @@ public class EnemyAttackState : IEnemyState
             stateController.SetNavAgent();
         }
         if(stateController.GetEnemy().CompareTag("Boss")){
+
             specialAttackCoroutine = stateController.StartCoroutine(SpecialAttackCoroutine(stateController));
         }
 
