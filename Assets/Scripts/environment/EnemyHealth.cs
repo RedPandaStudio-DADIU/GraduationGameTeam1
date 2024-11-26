@@ -112,7 +112,7 @@ namespace cowsins
                 healthSlider.value = Mathf.RoundToInt(health);
             } 
 
-            Debug.Log($"Slider Value: {healthSlider.value}, Target Health: {health}");
+            // Debug.Log($"Slider Value: {healthSlider.value}, Target Health: {health}");
 
 
 

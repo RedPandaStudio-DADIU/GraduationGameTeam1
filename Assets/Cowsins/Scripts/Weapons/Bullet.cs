@@ -70,8 +70,9 @@ namespace cowsins
 
             // Set tag for enemy projectiles as EnemyBullet <- compare tag of this object (EnemyBullet) and of other (Enemy)
 
-
-            if(other.CompareTag("Enemy") && !isHuman) {
+            if(other.CompareTag("Enemy") && this.gameObject.CompareTag("EnemyFire")){
+                DestroyProjectile();
+            } else if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
                 // Debug.LogError("Enemy " + other.gameObject.name + " hit!");
                 if(this.CompareTag("ChargeShot")){
