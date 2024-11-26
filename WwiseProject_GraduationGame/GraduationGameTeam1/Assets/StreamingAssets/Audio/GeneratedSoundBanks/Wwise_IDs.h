@@ -105,19 +105,6 @@ namespace AK
             } // namespace STATE
         } // namespace AREASTATE
 
-        namespace COMBAT
-        {
-            static const AkUniqueID GROUP = 2764240573U;
-
-            namespace STATE
-            {
-                static const AkUniqueID ELEVATOR = 3705378287U;
-                static const AkUniqueID IN_COMBAT = 2116791127U;
-                static const AkUniqueID NO_COMBAT = 5260279U;
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace COMBAT
-
         namespace COMBAT_INTENSITY_LV1
         {
             static const AkUniqueID GROUP = 1358435973U;
@@ -125,7 +112,6 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID COMBAT_HIGH_LV1 = 2317668770U;
-                static const AkUniqueID COMBAT_LOW_LV1 = 3712483660U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace COMBAT_INTENSITY_LV1
@@ -190,6 +176,20 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace PLAYER_LEVEL
+
+        namespace PLAYER_STATE
+        {
+            static const AkUniqueID GROUP = 4071417932U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CONTROL_TOWER = 1960863454U;
+                static const AkUniqueID ELEVATOR = 3705378287U;
+                static const AkUniqueID IN_COMBAT = 2116791127U;
+                static const AkUniqueID NO_COMBAT = 5260279U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace PLAYER_STATE
 
         namespace PLAYER_STATE_HEALTH
         {
