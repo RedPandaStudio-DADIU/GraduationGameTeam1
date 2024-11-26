@@ -22,7 +22,7 @@ public class EnemyAttackState : IEnemyState
         }
 
         stateController.GetAnimator().SetBool("IsAttacking", true);
-        if(!stateController.GetIsHuman() && !stateController.GetInAFight()){
+        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && !stateController.gameObject.CompareTag("Boss")){
             if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
                 stateController.GetMusicManager().CheckIfSameState("CombatIntense");
             } else {
@@ -62,7 +62,7 @@ public class EnemyAttackState : IEnemyState
            
         } 
 
-        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && stateController.GetMusicManager().GetCurrentState()!="Control tower"){
+        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && stateController.GetMusicManager().GetCurrentState()!="Control tower" && !stateController.gameObject.CompareTag("Boss")){
             if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
                 stateController.GetMusicManager().CheckIfSameState("CombatIntense");
             } else {

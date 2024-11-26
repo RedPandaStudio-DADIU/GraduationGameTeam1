@@ -2,41 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AK.Wwise;
+using UnityEngine.SceneManagement;
+
 
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Event musicEvent;
-    // Level we are in
-    [SerializeField] private AK.Wwise.State levelState;
-    // State we are in - combat  non-combat
-    [SerializeField] private AK.Wwise.State playerState;
 
-    // combat intensity - only when in combat first - combat high
-    [SerializeField] private AK.Wwise.State intensityState;
     private string playerStateStateGroup = "Player_state";
     private string playerLevelStateGroup = "Player_Level";
     private string combatIntensityStateGroup = "Combat_intensity_Lv1";
-
-
-    // [SerializeField] private AK.Wwise.State combatState;
-    // [SerializeField] private AK.Wwise.State nonCombatState;
-    // [SerializeField] private AK.Wwise.State intensityLevelLowState;
-    // [SerializeField] private AK.Wwise.State intensityLevelHighState;
-    // [SerializeField] private AK.Wwise.State intensityNoneState;
+    private string level2CombatStateGroup = "Combat_Lv2";
     private string currentState = "No combat";
 
     void Start()
     {
 
-        AkSoundEngine.SetState(playerLevelStateGroup, "Lv1");
-        AkSoundEngine.SetState(playerStateStateGroup, "No_combat");
 
-
-        // levelState.SetValue();
-        // playerState.SetValue();
-
-        // nonCombatState.SetValue();
-        // intensityNoneState.SetValue();
+        if(SceneManager.GetActiveScene().buildIndex == 1){
+            AkSoundEngine.SetState(playerLevelStateGroup, "Lv1");
+            AkSoundEngine.SetState(playerStateStateGroup, "No_combat");
+        } else if(SceneManager.GetActiveScene().buildIndex == 2){
+            AkSoundEngine.SetState(playerLevelStateGroup, "Lv2");
+            AkSoundEngine.SetState(level2CombatStateGroup, "Combat_hall_lv2");
+        }
+        
 
         musicEvent.Post(gameObject);
 
@@ -80,6 +70,18 @@ public class MusicManager : MonoBehaviour
                 AkSoundEngine.SetState(playerStateStateGroup, "Elevator");
                 AkSoundEngine.SetState(combatIntensityStateGroup, "None");
                 Debug.Log("Playing music level 4 - Elevator");
+                break;
+            case "Combat hall":
+                AkSoundEngine.SetState(playerLevelStateGroup, "Lv2");
+                AkSoundEngine.SetState(level2CombatStateGroup, "Combat_hall_lv2");
+                AkSoundEngine.SetState(combatIntensityStateGroup, "None");
+                Debug.Log("Playing music level 5 - leval 2 hall");
+                break;
+            case "Xaga":
+                AkSoundEngine.SetState(playerLevelStateGroup, "Lv2");
+                AkSoundEngine.SetState(level2CombatStateGroup, "Combat_Xaga_Lv2");
+                AkSoundEngine.SetState(combatIntensityStateGroup, "None");
+                Debug.Log("Playing music level 6 - lvl 2 Xaga");
                 break;
             default:
                 AkSoundEngine.SetState(playerStateStateGroup, "No_combat");
