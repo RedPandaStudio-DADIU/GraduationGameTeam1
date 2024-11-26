@@ -8,9 +8,9 @@ public class DiplomatEnemy : EnemyBaseClass
     
     void Awake(){
         this.SetHealth(120f);
-        this.SetAttackDistance(20f);
+        this.SetAttackDistance(30f);
         this.SetFieldOfView(180f);
-        this.SetStoppingDistance(6f);
+        this.SetStoppingDistance(15f);
     }
 
     // assign different gun
