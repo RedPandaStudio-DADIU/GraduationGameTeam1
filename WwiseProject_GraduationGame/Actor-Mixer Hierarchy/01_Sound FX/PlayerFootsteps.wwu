@@ -1003,7 +1003,7 @@
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>23</Value>
+										<Value>60</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -1012,8 +1012,8 @@
 											<Modifier Name="" ID="{4C28D8FB-0BE4-44B1-8986-A1F05048AF64}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="202"/>
-													<Property Name="Min" Type="Real64" Value="-152"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-127"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -1022,7 +1022,7 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2163,6 +2163,13 @@
 							<ValueList>
 								<Value>12</Value>
 							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E414CF99-56C6-4F21-8E85-98F56E45A9DD}"/>
+								</ModifierInfo>
+							</ModifierList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
@@ -3341,6 +3348,13 @@
 				</SwitchContainer>
 				<SwitchContainer Name="Player_Jump_MaterialLayer" ID="{99F93661-AE3E-45F4-9A10-440DB59A41CB}" ShortID="717511808">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1B0CD511-BA3B-4B5F-A0EF-BEB7F1BEDEAE}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>
@@ -3385,7 +3399,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-1</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3621,6 +3635,12 @@
 						</GroupingBehaviorList>
 						<GroupingList>
 							<Grouping>
+								<SwitchRef Name="Metal2" ID="{6BEFC019-21F6-472E-BAE5-7355A0BE4FAE}"/>
+								<ItemList>
+									<ItemRef Name="Metal_Jump" ID="{0478468E-375B-47AF-81AC-33AA793F512B}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
 								<SwitchRef Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}"/>
 								<ItemList>
 									<ItemRef Name="Metal_Jump" ID="{0478468E-375B-47AF-81AC-33AA793F512B}"/>
@@ -3631,9 +3651,16 @@
 				</SwitchContainer>
 				<SwitchContainer Name="Play_Land_MaterialLayer" ID="{8213C246-8003-4BC5-9D80-A8A4107A6EAC}" ShortID="354728550">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C644FFEA-F23E-4BA8-8251-1FB42865C875}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>-5</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -3642,7 +3669,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="DefaultSwitchOrState">
-							<ObjectRef Name="NoMaterial" ID="{8153DAD8-812E-4B25-AB90-FFA7B29D01A0}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
+							<ObjectRef Name="Metal" ID="{AD1CC749-99EE-4E54-A6A8-26C348B1CEFE}" WorkUnitID="{8903C7BC-755F-4AF2-8555-7F1A1FC0CC7C}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -3671,6 +3698,15 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="Metal_Land_layer" ID="{7E8B8AA1-7E46-4ABA-8902-E9D91A3C24A5}" ShortID="398872608">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DD8B8C26-87F9-4580-988E-66E224398761}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -4061,6 +4097,13 @@
 						<RandomSequenceContainer Name="Metal2_Land_Layer" ID="{A097D0BC-21D3-475C-BB91-E231B56004C3}" ShortID="223018617">
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7478FBDF-388A-42F7-BDC6-B5966DD5910A}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4534,6 +4577,13 @@
 							</ValueList>
 						</Property>
 						<Property Name="OverrideEffect" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0101F369-55A1-4325-8A1D-793B88AE66F4}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -6120,6 +6170,13 @@
 				</SwitchContainer>
 				<ActorMixer Name="Jump+Land" ID="{865EB001-E183-4B97-A701-AD2757B52D4D}" ShortID="5079862">
 					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{34FB3F3C-B816-4603-8656-85BB5A990DAE}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-4</Value>
@@ -6136,6 +6193,15 @@
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="Jump" ID="{CFAA0A19-258A-4E48-94F0-9DC5F5FF8CB9}" ShortID="502319126">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{99A39584-95CB-4C7D-AC2E-BCE834801363}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -6574,6 +6640,13 @@
 													<Property Name="Min" Type="Real64" Value="-30"/>
 												</PropertyList>
 											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{4991734E-A9C2-4074-A93B-CB6C0C4F6C1F}"/>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>

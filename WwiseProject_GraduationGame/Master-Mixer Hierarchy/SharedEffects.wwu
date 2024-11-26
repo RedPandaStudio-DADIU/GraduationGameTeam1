@@ -12,7 +12,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>-24</Value>
+										<Value>-23</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -25,8 +25,17 @@
 												<Local>
 													<EffectSlot Name="" ID="{1E1364DF-6E8A-4197-9E36-1AC9E83FDB97}" ShortID="273490578">
 														<ReferenceList>
-															<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
-																<ObjectRef Name="Big_Garage1" ID="{172402A8-22F4-40FC-BE1D-5269594CB633}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{172402A8-22F4-40FC-BE1D-5269594CB633}">
+																	<Effect Name="Big_Garage1 (Custom)" ID="{89DF7C9E-0DA8-4832-9D0A-8422148A2B4F}" ShortID="753016132" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																		<PropertyList>
+																			<Property Name="HFRatio" Type="Real32" Value="1.4"/>
+																			<Property Name="NumberOfDelays" Type="int32" Value="16"/>
+																			<Property Name="ReverbTime" Type="Real32" Value="0.8"/>
+																			<Property Name="WetLevel" Type="Real32" Value="-19"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
 															</Reference>
 														</ReferenceList>
 													</EffectSlot>

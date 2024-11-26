@@ -30,10 +30,6 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Player_Fs" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}" WorkUnitID="{42B88A57-E40B-4377-81C9-DC30979D03C2}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -52,6 +48,10 @@
 						<Module>
 							<ObjectRef Name="Play_AmbienceMain" ID="{C32BAC48-A2CE-4880-B302-74D66694A8BE}" WorkUnitID="{CC95B3EE-21F2-46BB-9C4E-1B139A88FA83}"/>
 							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_Dia_Ai" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
@@ -81,8 +81,8 @@
 						<CurrentStateRef Name="Sc7_Tr1" ID="{4AF25DBD-DDDF-4706-A27C-EA29B512906A}"/>
 						<CurrentStateRef Name="None" ID="{F5D70421-08EA-47C4-9A07-5AF1242504C0}"/>
 						<CurrentStateRef Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
-						<CurrentStateRef Name="Sc1_Tr0" ID="{576DFCD8-BEAE-4407-A639-C77A4DEDFDE3}"/>
-						<CurrentStateRef Name="Elevator" ID="{D0A2DEAB-4D62-43CA-ABA2-EE4C60479D9B}"/>
+						<CurrentStateRef Name="Sc2_Tr1" ID="{B3BBC20D-92E0-45FF-8AC1-E9617B34011C}"/>
+						<CurrentStateRef Name="In_combat" ID="{789B1D6D-0E8B-4A6A-87AE-2C1F3B387078}"/>
 						<CurrentStateRef Name="None" ID="{88B4A91F-DC66-43CD-892E-3D1D26ED9126}"/>
 						<CurrentStateRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
 						<CurrentStateRef Name="Normal_health" ID="{8C83219C-973B-45AE-8967-CA7C8745AF30}"/>
@@ -102,7 +102,7 @@
 						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
 						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
 						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
-						<CurrentSwitchRef Name="Dying" ID="{033196D2-5350-4807-AA81-FB1D8AE84DD9}"/>
+						<CurrentSwitchRef Name="Attacking" ID="{13A3B766-97EB-4A1E-88D7-B95208B16D18}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
 					</CurrentSwitchList>
