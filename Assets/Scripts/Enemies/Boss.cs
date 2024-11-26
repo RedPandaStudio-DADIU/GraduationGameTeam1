@@ -8,7 +8,7 @@ public class Boss : DiplomatEnemy
 {
     [SerializeField] private List<Transform> weakSpots = new List<Transform>();
     [SerializeField] private List<Material> materials = new List<Material>();
-    [SerializeField] private float explosionRange = 200f;
+    [SerializeField] private float explosionRange = 20f;
     [SerializeField] private float damageEpxlosion = 20f;
     [SerializeField] private GameObject attackPreparationEffect;
     [SerializeField] private GameObject explosionEffect;
@@ -170,6 +170,13 @@ public class Boss : DiplomatEnemy
         } else{
             nearDeath.SetValue();
         }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRange);
     }
 
 }
