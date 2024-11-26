@@ -23,6 +23,7 @@ namespace AK
         static const AkUniqueID PLAY_DIA_AI = 4271692713U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
         static const AkUniqueID PLAY_DIPLOMATBARKS = 4152854033U;
+        static const AkUniqueID PLAY_DOORBEINGKICKED = 1268293438U;
         static const AkUniqueID PLAY_ELEVATOR_BP_OUTOFORDER = 2557748953U;
         static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
         static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
@@ -42,6 +43,7 @@ namespace AK
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
         static const AkUniqueID PLAY_INTROCUTSCENESOUND = 4273186141U;
         static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
+        static const AkUniqueID PLAY_JD_KICK = 3005152765U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
         static const AkUniqueID PLAY_JOHNDOEBARKS = 4112292984U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
@@ -116,17 +118,17 @@ namespace AK
             } // namespace STATE
         } // namespace COMBAT_INTENSITY_LV1
 
-        namespace COMBAT_INTENSITY_LV2
+        namespace COMBAT_LV2
         {
-            static const AkUniqueID GROUP = 1358435974U;
+            static const AkUniqueID GROUP = 2718506204U;
 
             namespace STATE
             {
-                static const AkUniqueID COMBAT_BASE_LV2 = 2939361434U;
-                static const AkUniqueID COMBAT_HIGH_LV2 = 2317668769U;
+                static const AkUniqueID COMBAT_HALL_LV2 = 1778785816U;
+                static const AkUniqueID COMBAT_XAGA_LV2 = 2625421100U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
-        } // namespace COMBAT_INTENSITY_LV2
+        } // namespace COMBAT_LV2
 
         namespace GAMESTATUS
         {
@@ -512,6 +514,7 @@ namespace AK
         static const AkUniqueID DELAYSLAPS = 924856803U;
         static const AkUniqueID DELAYSLAPS_HANGARSPEAKER = 425081994U;
         static const AkUniqueID ELEVATORROOM = 1448937718U;
+        static const AkUniqueID HANGAREARLYREFLECTIONS = 1616828069U;
         static const AkUniqueID HANGARVERB_JD = 350835844U;
         static const AkUniqueID JD_DEAD = 3670417488U;
         static const AkUniqueID PREHALL = 2042191905U;
