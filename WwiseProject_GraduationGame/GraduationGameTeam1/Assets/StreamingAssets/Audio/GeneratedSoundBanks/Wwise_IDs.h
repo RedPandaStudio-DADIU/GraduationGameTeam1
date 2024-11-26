@@ -16,7 +16,9 @@ namespace AK
         static const AkUniqueID PLAY_ALT_CHARGE_FIFLE = 2073520173U;
         static const AkUniqueID PLAY_ALT_FIRE_RIFLE = 243729645U;
         static const AkUniqueID PLAY_AMBIENCEMAIN = 903081441U;
+        static const AkUniqueID PLAY_BRUTE_DAMAGE = 2222339482U;
         static const AkUniqueID PLAY_BRUTE_FS = 989866120U;
+        static const AkUniqueID PLAY_BRUTEATTACK = 334987570U;
         static const AkUniqueID PLAY_BRUTEBARKS = 2283401379U;
         static const AkUniqueID PLAY_CHARGERDY_RIFLE = 3158001838U;
         static const AkUniqueID PLAY_DAMAGETAKEN = 1423098094U;
@@ -62,6 +64,7 @@ namespace AK
         static const AkUniqueID PLAY_SC0TR1 = 3993849055U;
         static const AkUniqueID PLAY_SMALLBONFIRE = 255138028U;
         static const AkUniqueID PLAY_SOLDIERBARKS = 3340746321U;
+        static const AkUniqueID PLAY_SOLIDER_DAMAGE = 2478119858U;
         static const AkUniqueID PLAY_SORRYGUYS = 1685668713U;
         static const AkUniqueID PLAY_TESTBEEP = 1955951874U;
         static const AkUniqueID PLAY_TESTBEEP_3D = 1681067324U;
