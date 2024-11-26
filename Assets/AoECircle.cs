@@ -19,7 +19,12 @@ public class AoECircle : MonoBehaviour
     }
 
     void Update()  {
-        DrawAoEWithObstacles(this.gameObject.transform.position, explosionRange, obstacleLayer);
+        if(this.gameObject.GetComponent<EnemyStateController>().GetCurrentState() is BossSpecialState){
+            lineRenderer.enabled = true;
+            DrawAoEWithObstacles(this.gameObject.transform.position, explosionRange, obstacleLayer);
+        } else {
+            lineRenderer.enabled = false;
+        }
     }
 
     private void DrawCircle(float radius)
