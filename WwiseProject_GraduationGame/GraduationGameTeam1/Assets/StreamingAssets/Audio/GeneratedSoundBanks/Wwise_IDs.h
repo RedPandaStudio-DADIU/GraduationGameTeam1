@@ -23,10 +23,13 @@ namespace AK
         static const AkUniqueID PLAY_DIA_AI = 4271692713U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
         static const AkUniqueID PLAY_DIPLOMATBARKS = 4152854033U;
+        static const AkUniqueID PLAY_DOORBEINGKICKED = 1268293438U;
         static const AkUniqueID PLAY_ELEVATOR_BP_OUTOFORDER = 2557748953U;
         static const AkUniqueID PLAY_ELEVATOR_BUTTONPRESS = 2373651556U;
         static const AkUniqueID PLAY_ELEVATOR_CONFIRMATIONBEEP = 2038432148U;
         static const AkUniqueID PLAY_ELEVATOR_POWER_LP = 1757009721U;
+        static const AkUniqueID PLAY_ELEVATOR_RUN_STARTUP = 537752340U;
+        static const AkUniqueID PLAY_ELEVATOR_RUNNING_LP = 591723123U;
         static const AkUniqueID PLAY_ELEVATORDOOROPEN = 750231532U;
         static const AkUniqueID PLAY_EXPLODEBARREL = 757694329U;
         static const AkUniqueID PLAY_FIREALARM = 3888840653U;
@@ -38,7 +41,9 @@ namespace AK
         static const AkUniqueID PLAY_HITFLESH = 86438937U;
         static const AkUniqueID PLAY_HITMARKER_MAIN = 941492189U;
         static const AkUniqueID PLAY_HUMANSSC1 = 3110068475U;
+        static const AkUniqueID PLAY_INTROCUTSCENESOUND = 4273186141U;
         static const AkUniqueID PLAY_JD_AI_LVL2 = 1584853492U;
+        static const AkUniqueID PLAY_JD_KICK = 3005152765U;
         static const AkUniqueID PLAY_JD_SPAWN = 1298310256U;
         static const AkUniqueID PLAY_JOHNDOEBARKS = 4112292984U;
         static const AkUniqueID PLAY_KILLCONFIRM = 513454534U;
@@ -102,19 +107,6 @@ namespace AK
             } // namespace STATE
         } // namespace AREASTATE
 
-        namespace COMBAT
-        {
-            static const AkUniqueID GROUP = 2764240573U;
-
-            namespace STATE
-            {
-                static const AkUniqueID ELEVATOR = 3705378287U;
-                static const AkUniqueID IN_COMBAT = 2116791127U;
-                static const AkUniqueID NO_COMBAT = 5260279U;
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace COMBAT
-
         namespace COMBAT_INTENSITY_LV1
         {
             static const AkUniqueID GROUP = 1358435973U;
@@ -122,22 +114,21 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID COMBAT_HIGH_LV1 = 2317668770U;
-                static const AkUniqueID COMBAT_LOW_LV1 = 3712483660U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace COMBAT_INTENSITY_LV1
 
-        namespace COMBAT_INTENSITY_LV2
+        namespace COMBAT_LV2
         {
-            static const AkUniqueID GROUP = 1358435974U;
+            static const AkUniqueID GROUP = 2718506204U;
 
             namespace STATE
             {
-                static const AkUniqueID COMBAT_BASE_LV2 = 2939361434U;
-                static const AkUniqueID COMBAT_HIGH_LV2 = 2317668769U;
+                static const AkUniqueID COMBAT_HALL_LV2 = 1778785816U;
+                static const AkUniqueID COMBAT_XAGA_LV2 = 2625421100U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
-        } // namespace COMBAT_INTENSITY_LV2
+        } // namespace COMBAT_LV2
 
         namespace GAMESTATUS
         {
@@ -188,6 +179,20 @@ namespace AK
             } // namespace STATE
         } // namespace PLAYER_LEVEL
 
+        namespace PLAYER_STATE
+        {
+            static const AkUniqueID GROUP = 4071417932U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CONTROL_TOWER = 1960863454U;
+                static const AkUniqueID ELEVATOR = 3705378287U;
+                static const AkUniqueID IN_COMBAT = 2116791127U;
+                static const AkUniqueID NO_COMBAT = 5260279U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace PLAYER_STATE
+
         namespace PLAYER_STATE_HEALTH
         {
             static const AkUniqueID GROUP = 3626020801U;
@@ -234,6 +239,7 @@ namespace AK
                 static const AkUniqueID SC0_TR1 = 1568320811U;
                 static const AkUniqueID SC1_TR0 = 342028879U;
                 static const AkUniqueID SC1_TR1 = 342028878U;
+                static const AkUniqueID SC1_TR2 = 342028877U;
                 static const AkUniqueID SC2_TR1 = 3079543733U;
                 static const AkUniqueID SC2_TR2 = 3079543734U;
                 static const AkUniqueID SC2_TR3 = 3079543735U;
@@ -508,6 +514,7 @@ namespace AK
         static const AkUniqueID DELAYSLAPS = 924856803U;
         static const AkUniqueID DELAYSLAPS_HANGARSPEAKER = 425081994U;
         static const AkUniqueID ELEVATORROOM = 1448937718U;
+        static const AkUniqueID HANGAREARLYREFLECTIONS = 1616828069U;
         static const AkUniqueID HANGARVERB_JD = 350835844U;
         static const AkUniqueID JD_DEAD = 3670417488U;
         static const AkUniqueID PREHALL = 2042191905U;

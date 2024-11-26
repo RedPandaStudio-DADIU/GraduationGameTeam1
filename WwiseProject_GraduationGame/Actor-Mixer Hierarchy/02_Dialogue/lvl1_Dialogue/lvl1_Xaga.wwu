@@ -14,22 +14,17 @@
 						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>17</Value>
+								<Value>20</Value>
 							</ValueList>
 						</Property>
 						<Property Name="ReflectionsVolume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>-1</Value>
 							</ValueList>
 						</Property>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>12</Value>
+								<Value>-77</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -225,17 +220,36 @@
 												<ActiveSource Name="Xaha_Haha" ID="{EDDEF087-9EDB-4071-B924-757AB9F11422}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Xaga Sc2 Tr2_Amuses" ID="{4C298718-59C7-46AE-9E79-63101C9420C6}" ShortID="5124576">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Xaga Sc2 Tr2_Amuses" ID="{A353BD73-F4CA-4231-9F7C-EC7A484AEBDC}">
+													<Language>English(US)</Language>
+													<AudioFile>Xaga Sc2 Tr2_Amuses.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="250159426"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Xaga Sc2 Tr2_Amuses" ID="{A353BD73-F4CA-4231-9F7C-EC7A484AEBDC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
 											<Reference>
-												<ObjectRef Name="Xaha_Haha" ID="{EF5E4438-9244-4035-8DEE-17D80EF83F42}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-											</Reference>
-											<Reference>
-												<ObjectRef Name="Xaga_OhDear" ID="{AF1D9DE5-7B19-4CE1-93EE-8B8000986272}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-											</Reference>
-											<Reference>
-												<ObjectRef Name="Xaga_ThisAmusesMe" ID="{F8995B39-468C-4ACC-A1B2-1F9C5950D5B6}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+												<ObjectRef Name="Xaga Sc2 Tr2_Amuses" ID="{4C298718-59C7-46AE-9E79-63101C9420C6}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
 											</Reference>
 										</ObjectList>
 									</ObjectLists>
@@ -361,17 +375,74 @@
 												<ActiveSource Name="Xaga_HAHAHA" ID="{72A4E330-4AB7-4296-8ED7-ED31E4A1259F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Xaga_Federation_Sc2 Tr1" ID="{43AC1412-EF7A-40EC-B174-AB72A917187C}" ShortID="875727027">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Xaga_Federation_Sc2 Tr1" ID="{A3DF977A-4D60-46A4-9D93-7CA474072E67}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.3549918699187"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Xaga_Federation_Sc2 Tr1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="115131081"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Xaga_Federation_Sc2 Tr1" ID="{A3DF977A-4D60-46A4-9D93-7CA474072E67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Xaga_Federation_Sc2 Tr1_01" ID="{EA8589F7-4A2A-4D97-81D9-CD73B8D1684C}" ShortID="674320624">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Xaga_Federation_Sc2 Tr1" ID="{46AE172C-BA1F-4649-BE86-3E5801B973E1}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="2.87115447154472"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.87115447154472"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Xaga_Federation_Sc2 Tr1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="436330246"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Xaga_Federation_Sc2 Tr1" ID="{46AE172C-BA1F-4649-BE86-3E5801B973E1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
 											<Reference>
-												<ObjectRef Name="ThefederationReallySentYou" ID="{12BEFB47-C752-4385-9C86-D61D43CB11B5}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+												<ObjectRef Name="Xaga_Federation_Sc2 Tr1" ID="{43AC1412-EF7A-40EC-B174-AB72A917187C}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
 											</Reference>
 											<Reference>
-												<ObjectRef Name="Xaga_HAHAHA" ID="{1DF98147-5F91-416F-99BF-483DC4856151}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-											</Reference>
-											<Reference>
-												<ObjectRef Name="ThefederationReallySentYou_01" ID="{E036EDE6-DEAD-4B77-AA6E-EAD0FE7B5317}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+												<ObjectRef Name="Xaga_Federation_Sc2 Tr1_01" ID="{EA8589F7-4A2A-4D97-81D9-CD73B8D1684C}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
 											</Reference>
 										</ObjectList>
 									</ObjectLists>
@@ -411,9 +482,10 @@
 											<ChildrenList>
 												<AudioFileSource Name="Xaga_IfYouWantToAvenge" ID="{FD9223CE-9BFE-4701-BBC7-185E3C7AFBEE}">
 													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.322731707317073"/>
 														<Property Name="LoopBegin" Type="Real64" Value="0.696190476190476"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.696190476190476"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.014867982965544"/>
 													</PropertyList>
 													<Language>English(US)</Language>
 													<AudioFile>Xaga_IfYouWantToAvenge.wav</AudioFile>
@@ -435,6 +507,107 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Sc2_Tr3" ID="{5D8267FA-08B4-4FD7-8D4B-2E78F9260AD9}" ShortID="170234213">
+									<PropertyList>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Xaga Sc2 Tr3_Popcorn" ID="{90196187-07D3-47C1-9C6C-D674A20832E1}" ShortID="753356903">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Xaga Sc2 Tr3_Popcorn" ID="{AAEC473E-33E7-4054-BE44-BD5D77F0A37D}">
+													<Language>English(US)</Language>
+													<AudioFile>Xaga Sc2 Tr3_Popcorn.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1046829958"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Xaga Sc2 Tr3_Popcorn" ID="{AAEC473E-33E7-4054-BE44-BD5D77F0A37D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Xaga Sc2 Tr3_Popcorn" ID="{90196187-07D3-47C1-9C6C-D674A20832E1}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Sc1_Tr2" ID="{97239E89-8E48-418A-B39E-F7795EADA6E3}" ShortID="553005084">
+									<PropertyList>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Xaga_EgnarrSlarim" ID="{3F47FC58-98B7-4EDB-B1F9-9289412C1959}" ShortID="404863872">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Xaga_EgnarrSlarim" ID="{92794D4D-35CD-4FD5-8089-50D9151DF254}">
+													<Language>English(US)</Language>
+													<AudioFile>Xaga_EgnarrSlarim.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="255325268"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Xaga_EgnarrSlarim" ID="{92794D4D-35CD-4FD5-8089-50D9151DF254}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="Xaga_EgnarrSlarim" ID="{3F47FC58-98B7-4EDB-B1F9-9289412C1959}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
@@ -442,10 +615,16 @@
 										<ItemRef Name="Sc4_Tr1" ID="{F2FD9B86-5BFC-482C-9BF2-CC4D0B6E9BDB}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
+										<ItemRef Name="Sc1_Tr2" ID="{97239E89-8E48-418A-B39E-F7795EADA6E3}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
 										<ItemRef Name="Sc2_Tr1" ID="{3F8754CA-8B23-45F1-AD43-18B2F754A16D}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Silence" ID="{756702F6-6CA4-426E-B668-F20A54884BEA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Sc2_Tr3" ID="{5D8267FA-08B4-4FD7-8D4B-2E78F9260AD9}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Sc2_Tr2" ID="{032927FF-5561-4A8C-B5FD-3696EAA1098B}"/>
@@ -459,9 +638,21 @@
 										</ItemList>
 									</Grouping>
 									<Grouping>
+										<SwitchRef Name="Sc2_Tr3" ID="{01722616-7ECF-4E20-BF57-00777C5BAD22}"/>
+										<ItemList>
+											<ItemRef Name="Sc2_Tr3" ID="{5D8267FA-08B4-4FD7-8D4B-2E78F9260AD9}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
 										<SwitchRef Name="Sc2_Tr2" ID="{78A5035D-B882-49F8-919B-A0F8FF467A67}"/>
 										<ItemList>
 											<ItemRef Name="Sc2_Tr2" ID="{032927FF-5561-4A8C-B5FD-3696EAA1098B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Sc1_Tr2" ID="{6270E4AB-1369-44BD-994A-25332DAB50E1}"/>
+										<ItemList>
+											<ItemRef Name="Sc1_Tr2" ID="{97239E89-8E48-418A-B39E-F7795EADA6E3}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>

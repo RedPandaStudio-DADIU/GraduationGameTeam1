@@ -35,14 +35,14 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1045871717	GameStatus			\Sound_States\GameStatus	
 	1314730481	Player_Level			\Music_States\Player_Level	
 	1358435973	Combat_intensity_Lv1			\Music_States\Combat_intensity_Lv1	
-	1358435974	Combat_intensity_Lv2			\Music_States\Combat_intensity_Lv2	
 	1972315911	Lv2_ending			\Music_States\Lv2_ending	
 	2064552269	AreaState			\Sound_States\AreaState	
-	2764240573	Combat			\Music_States\Combat	
+	2718506204	Combat_Lv2			\Music_States\Combat_Lv2	
 	3285234865	PlayerState			\Sound_States\PlayerState	
 	3305603258	GuitarSpeaker			\Sound_States\Speakers\GuitarSpeaker	
 	3568468165	XagaBossfightStates			\Sound_States\Dialogue\XagaBossfightStates	
 	3626020801	Player_State_health			\Music_States\Player_State_health	
+	4071417932	Player_state			\Music_States\Player_state	
 	4121174865	Scenes_lvl2			\Sound_States\Dialogue\Scenes_lvl2	
 	4121174866	Scenes_lvl1			\Sound_States\Dialogue\Scenes_lvl1	
 
@@ -59,10 +59,6 @@ State	ID	Name	State Group			Notes
 	2607556080	Menu	Player_Level			
 	748895195	None	Combat_intensity_Lv1			
 	2317668770	Combat_high_Lv1	Combat_intensity_Lv1			
-	3712483660	Combat_low_Lv1	Combat_intensity_Lv1			
-	748895195	None	Combat_intensity_Lv2			
-	2317668769	Combat_high_Lv2	Combat_intensity_Lv2			
-	2939361434	Combat_base_lv2	Combat_intensity_Lv2			
 	174960569	Loose	Lv2_ending			
 	748895195	None	Lv2_ending			
 	979765101	Win	Lv2_ending			
@@ -74,10 +70,9 @@ State	ID	Name	State Group			Notes
 	2782928028	ConferenceRoom2	AreaState			
 	2782928029	ConferenceRoom3	AreaState			
 	2782928031	ConferenceRoom1	AreaState			
-	5260279	No_combat	Combat			
-	748895195	None	Combat			
-	2116791127	In_combat	Combat			
-	3705378287	Elevator	Combat			
+	748895195	None	Combat_Lv2			
+	1778785816	Combat_hall_lv2	Combat_Lv2			
+	2625421100	Combat_Xaga_Lv2	Combat_Lv2			
 	655265632	Alive	PlayerState			
 	748895195	None	PlayerState			
 	2044049779	Dead	PlayerState			
@@ -94,13 +89,19 @@ State	ID	Name	State Group			Notes
 	72790338	Low_health	Player_State_health			
 	748895195	None	Player_State_health			
 	3268324997	Normal_health	Player_State_health			
+	5260279	No_combat	Player_state			
+	748895195	None	Player_state			
+	1960863454	Control_tower	Player_state			
+	2116791127	In_combat	Player_state			
+	3705378287	Elevator	Player_state			
 	748895195	None	Scenes_lvl2			
 	2059667105	Sc6_Tr1	Scenes_lvl2			
 	2239442679	WaitingOnTriggerEnter	Scenes_lvl2			
 	3398158172	Sc7_Tr1	Scenes_lvl2			
 	3398158175	Sc7_Tr2	Scenes_lvl2			
 	3986144931	Sc8_Tr1	Scenes_lvl2			
-	342028878	Sc1_tr1	Scenes_lvl1			
+	342028877	Sc1_Tr2	Scenes_lvl1			
+	342028878	Sc1_Tr1	Scenes_lvl1			
 	342028879	Sc1_Tr0	Scenes_lvl1			
 	551107239	Sc4_Tr1	Scenes_lvl1			
 	569325008	Sc3_Tr1	Scenes_lvl1			
@@ -159,12 +160,13 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	350835844	HangarVerb_JD			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice\HangarVerb_JD	
-	425081994	DelaySlaps_HangarSpeaker			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\DelaySlaps_HangarSpeaker	
+	425081994	DelaySlaps_HangarSpeaker			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomHangarMain\DelaySlaps_HangarSpeaker	
 	924856803	DelaySlaps			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\DelaySlaps	
 	986249158	RoomHangarMain			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomHangarMain	
 	1289942167	Stairs			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\Stairs	
 	1448937718	ElevatorRoom			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\ElevatorRoom	
 	1603492950	RoomTunnel			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomTunnel	
+	1616828069	HangarEarlyReflections			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomHangarMain\HangarEarlyReflections	
 	2042191905	PreHall			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\PreHall	
 	3205342581	RoomSmall			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\RoomSmall	
 	3574333866	ConferenceHall			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2\ConferenceHall	
@@ -173,6 +175,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	41483680	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
 	51356967	Medium_Room1 (Custom)	Wwise Matrix Reverb			
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
 	104816223	Echoes_Linear (Custom)	Wwise Delay			
 	170601794	ElevatorRoom	Wwise RoomVerb			
 	260922761	Echoes_Linear (Custom)	Wwise Delay			
@@ -192,7 +195,9 @@ Effect plug-ins	ID	Name	Type				Notes
 	1711423976	Many_Odd_Harm_Notches	Wwise Flanger			
 	2849147824	Medium	Wwise RoomVerb			
 	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
+	3360962705	XagaShifter	Wwise Pitch Shifter			
 	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
+	3546444380	Big_Garage1	Wwise Matrix Reverb			
 	4119703916	HelmetEQ	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes

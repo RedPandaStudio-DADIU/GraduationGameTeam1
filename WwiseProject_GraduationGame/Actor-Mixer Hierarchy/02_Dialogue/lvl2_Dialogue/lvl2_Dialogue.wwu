@@ -163,8 +163,6 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0667791928801595"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.106846708608255"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="1.76227987279952"/>
-												<Property Name="TrimEnd" Type="Real64" Value="5.12225193525686"/>
 											</PropertyList>
 											<Language>English(US)</Language>
 											<AudioFile>Xaga_YouUselessFucks.wav</AudioFile>
@@ -200,52 +198,36 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Xaga_ImReadyForYouDJ" ID="{AA28CB2D-F799-4717-9EC4-6D882EADCD61}" ShortID="431765267">
+								<Sound Name="Xaga_ImReadyForYouJD" ID="{5C188EF2-B90A-4FA6-86FC-BDF4D12A335E}" ShortID="437985370">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
-										<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
-										<Property Name="OverrideOutput" Type="bool" Value="True"/>
-										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
-										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-										<Property Name="UserAuxSendVolume0" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-										</Reference>
-										<Reference Name="UserAuxSend0">
-											<ObjectRef Name="PreHall" ID="{91268839-CB36-454A-B8FB-D7916AD9AE30}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Xaga_ImReadyForYouDJ" ID="{D274DE4F-7C8B-4CBB-923F-F15566BE10F4}">
-											<PropertyList>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="1.77475017593244"/>
-											</PropertyList>
+										<AudioFileSource Name="Xaga_ImReadyForYouJD" ID="{C621EE84-ECE5-4D15-B290-A7E088785459}">
 											<Language>English(US)</Language>
-											<AudioFile>Xaga_ImReadyForYouDJ.wav</AudioFile>
+											<AudioFile>Xaga_ImReadyForYouJD.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="312731527"/>
+												<MediaID ID="349503547"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Xaga_ImReadyForYouDJ" ID="{D274DE4F-7C8B-4CBB-923F-F15566BE10F4}" Platform="Linked"/>
+										<ActiveSource Name="Xaga_ImReadyForYouJD" ID="{C621EE84-ECE5-4D15-B290-A7E088785459}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Playlist">
 									<Reference>
-										<ObjectRef Name="Xaga_ImReadyForYouDJ" ID="{AA28CB2D-F799-4717-9EC4-6D882EADCD61}" WorkUnitID="{4525D387-513E-4AD3-8F63-63E8A8B0C74D}"/>
+										<ObjectRef Name="Xaga_ImReadyForYouJD" ID="{5C188EF2-B90A-4FA6-86FC-BDF4D12A335E}" WorkUnitID="{4525D387-513E-4AD3-8F63-63E8A8B0C74D}"/>
 									</Reference>
 								</ObjectList>
 							</ObjectLists>

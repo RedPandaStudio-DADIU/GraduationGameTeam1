@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7FD4AE20-B5CC-4ECA-BD9C-4363942D90E8}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Cutscenes" ID="{7FD4AE20-B5CC-4ECA-BD9C-4363942D90E8}" PersistMode="Standalone">
+			<ChildrenList>
+				<BlendContainer Name="IntroCutsceneSound" ID="{818C6653-3BA3-4926-A790-27CD46D0900F}" ShortID="244434010">
+					<PropertyList>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="IntroSequence_Finalmix_001_L" ID="{DF3B4B2A-2B71-4634-BEC8-BE672F5A1E0B}" ShortID="831577618">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IntroSequence_Finalmix_001_L" ID="{4E5362D6-08D7-49C7-82F1-86327533C296}">
+									<Language>SFX</Language>
+									<AudioFile>IntroSequence_Finalmix_001.L.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="773016008"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{CD3A7DAE-E65F-4ABE-A601-A12E788C7977}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-100"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="IntroSequence_Finalmix_001_L" ID="{4E5362D6-08D7-49C7-82F1-86327533C296}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IntroSequence_Finalmix_001_C" ID="{11962FB3-FF5D-4441-A57F-E99B102E82F7}" ShortID="620207354">
+							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IntroSequence_Finalmix_001_C" ID="{16523EE1-B4FF-4BA2-AE84-A17598A27D06}">
+									<Language>SFX</Language>
+									<AudioFile>IntroSequence_Finalmix_001.C.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="842262263"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{FF87210E-8FE4-453A-BA0B-1D60734F3E41}">
+									<PropertyList>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="IntroSequence_Finalmix_001_C" ID="{16523EE1-B4FF-4BA2-AE84-A17598A27D06}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IntroSequence_Finalmix_001_LFE" ID="{6A54BED2-9A06-4784-8D8C-423F6DBFD245}" ShortID="811142378">
+							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IntroSequence_Finalmix_001_LFE" ID="{8DDEC532-2BD7-44BA-95C3-EF89228A85BA}">
+									<Language>SFX</Language>
+									<AudioFile>IntroSequence_Finalmix_001.LFE.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="654959864"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{06264D0B-42E8-4F20-89B8-7B21EDAFA2CF}"/>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="IntroSequence_Finalmix_001_LFE" ID="{8DDEC532-2BD7-44BA-95C3-EF89228A85BA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IntroSequence_Finalmix_001_Ls" ID="{B371F7B6-9AC3-4F20-9D4E-275A49D52045}" ShortID="457402547">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IntroSequence_Finalmix_001_Ls" ID="{6B905FC6-D88C-4BE1-9C0D-B9FB1770F20A}">
+									<Language>SFX</Language>
+									<AudioFile>IntroSequence_Finalmix_001.Ls.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="387187359"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{58B4D4E7-7E85-414A-BAD4-EF2579AD4CF7}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-100"/>
+										<Property Name="PanY" Type="Real64" Value="-100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="IntroSequence_Finalmix_001_Ls" ID="{6B905FC6-D88C-4BE1-9C0D-B9FB1770F20A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IntroSequence_Finalmix_001_R" ID="{05A5B078-CC57-4FD9-87F6-73AAECBED9ED}" ShortID="236961222">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IntroSequence_Finalmix_001_R" ID="{EBB27217-CC32-4C4C-8361-223C9254A699}">
+									<Language>SFX</Language>
+									<AudioFile>IntroSequence_Finalmix_001.R.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="321672319"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{7E5D131F-6713-451F-8183-805F0A0F4EEC}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="100"/>
+										<Property Name="PanY" Type="Real64" Value="100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="IntroSequence_Finalmix_001_R" ID="{EBB27217-CC32-4C4C-8361-223C9254A699}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="IntroSequence_Finalmix_001_Rs" ID="{6C446A98-445E-41DF-959C-E92FFCBED376}" ShortID="763769035">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="IntroSequence_Finalmix_001_Rs" ID="{D7C4A17F-9B16-4011-B8BA-A3F89BA2D917}">
+									<Language>SFX</Language>
+									<AudioFile>IntroSequence_Finalmix_001.Rs.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="722334247"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{786E004A-F60D-456C-95C6-4F42A2044DF8}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="100"/>
+										<Property Name="PanY" Type="Real64" Value="-100"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="IntroSequence_Finalmix_001_Rs" ID="{D7C4A17F-9B16-4011-B8BA-A3F89BA2D917}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{7D349850-A7E6-4D49-B3E5-851AF4F22F8D}"/>
+					</PositioningInfo>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
