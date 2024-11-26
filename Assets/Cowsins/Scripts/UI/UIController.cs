@@ -152,7 +152,7 @@ namespace cowsins
         {
             intManager = PlayerStates.instance.GetComponent<InteractManager>();
             WeaponStates.instance.inspectionUI = inspectionUI;
-            if (ExperienceManager.instance.useExperience) UpdateXP();
+    //        if (ExperienceManager.instance.useExperience) UpdateXP();
 
             playerDataManager = PlayerDataManager.Instance;
             weaponController = FindObjectOfType<WeaponController>();

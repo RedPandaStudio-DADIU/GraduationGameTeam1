@@ -31,7 +31,7 @@ namespace cowsins
 
         public Transform aimPoint;
 
-        [HideInInspector] public int totalMagazines, magazineSize, bulletsLeftInMagazine, totalBullets=45; // Internal use
+        [HideInInspector] public int totalMagazines, magazineSize, bulletsLeftInMagazine, totalBullets=30; // Internal use
 
         [Tooltip("Defines the default attachments for your weapon. The first time you pick it up, these attachments will be equipped.")] public DefaultAttachment defaultAttachments;
 

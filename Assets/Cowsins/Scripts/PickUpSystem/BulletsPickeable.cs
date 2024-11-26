@@ -9,6 +9,7 @@ namespace cowsins
 
         [SerializeField] private GameObject bulletsGraphics;
 
+       
         public override void Start()
         {
             image.sprite = bulletsIcon;
