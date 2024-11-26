@@ -17,6 +17,122 @@
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="HangarEarlyReflections" ID="{C4F7DD0E-1264-4FA9-A2ED-8543CF2962DD}">
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{1E1364DF-6E8A-4197-9E36-1AC9E83FDB97}" ShortID="273490578">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																<ObjectRef Name="Big_Garage1" ID="{172402A8-22F4-40FC-BE1D-5269594CB633}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+								<AuxBus Name="DelaySlaps_HangarSpeaker" ID="{E88CBE0B-42F0-4BD5-BEF2-06004587CEEE}">
+									<PropertyList>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{0243977E-69A8-4BD1-9699-F450A45E1CF4}" ShortID="926355759">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}">
+																	<Effect Name="Medium_Room1 (Custom)" ID="{544940DD-94CF-4FA6-96E0-D4B29D48E7B5}" ShortID="911411724" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DryLevel" Type="Real32" Value="-34.3"/>
+																			<Property Name="HFRatio" Type="Real32" Value="6"/>
+																			<Property Name="NumberOfDelays" Type="int32" Value="16"/>
+																			<Property Name="ReverbTime" Type="Real32" Value="0.8"/>
+																			<Property Name="WetLevel" Type="Real32" Value="-15"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{EBEBC317-5F12-4F82-A644-7DA1C4CD4F43}" ShortID="782287875">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{ABFA9875-521E-451F-AAB9-AB148847B9C0}">
+																	<Effect Name="Blue_Distant_Echoes (Custom)" ID="{301FEBBE-A423-495A-801A-979D73657338}" ShortID="567187658" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DryLevel" Type="Real32" Value="-4"/>
+																			<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+																			<Property Name="EnableFeedback" Type="bool" Value="True"/>
+																			<Property Name="FilterFrequency" Type="Real32" Value="2507"/>
+																			<Property Name="FilterGain" Type="Real32" Value="-24"/>
+																			<Property Name="FilterType" Type="int32" Value="3"/>
+																			<Property Name="FrontRearBalance" Type="Real32" Value="-46"/>
+																			<Property Name="LeftCrossfeed" Type="Real32" Value="-10"/>
+																			<Property Name="LeftDelayTime" Type="Real32" Value="0.33"/>
+																			<Property Name="LeftFeedback" Type="Real32" Value="-30.3"/>
+																			<Property Name="RightCrossfeed" Type="Real32" Value="-8"/>
+																			<Property Name="RightDelayTime" Type="Real32" Value="0.45"/>
+																			<Property Name="RightFeedback" Type="Real32" Value="-34.6"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{94D2FFB4-91B1-43EC-8968-D9F3E6067F44}" ShortID="256588480">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}">
+																	<Effect Name="Echoes_Linear (Custom)" ID="{B002CD6C-B501-43FD-98CE-FC94EAD94CD9}" ShortID="695490779" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DelayTime" Type="Real32" Value="0.3"/>
+																			<Property Name="Feedback" Type="Real32" Value="6"/>
+																			<Property Name="WetDryMix" Type="Real32" Value="16"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{C8BC7477-1074-46B1-8D5E-343DDD01065D}" ShortID="777893132">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}">
+																	<Effect Name="Echoes_Linear (Custom)" ID="{82B1AD88-8521-4C91-AC58-F984555FA70A}" ShortID="104816223" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DelayTime" Type="Real32" Value="0.43"/>
+																			<Property Name="Feedback" Type="Real32" Value="6"/>
+																			<Property Name="WetDryMix" Type="Real32" Value="12"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</AuxBus>
+							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Effects">
 									<Reference>
@@ -125,103 +241,6 @@
 																	<Property Name="DelayTime" Type="Real32" Value="0.11"/>
 																	<Property Name="Feedback" Type="Real32" Value="6"/>
 																	<Property Name="WetDryMix" Type="Real32" Value="24"/>
-																</PropertyList>
-															</Effect>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</AuxBus>
-						<AuxBus Name="DelaySlaps_HangarSpeaker" ID="{E88CBE0B-42F0-4BD5-BEF2-06004587CEEE}">
-							<PropertyList>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ObjectLists>
-								<ObjectList Name="Effects">
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{0243977E-69A8-4BD1-9699-F450A45E1CF4}" ShortID="926355759">
-												<ReferenceList>
-													<Reference Name="Effect">
-														<Custom CreatedFrom="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}">
-															<Effect Name="Medium_Room1 (Custom)" ID="{544940DD-94CF-4FA6-96E0-D4B29D48E7B5}" ShortID="911411724" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
-																<PropertyList>
-																	<Property Name="DryLevel" Type="Real32" Value="-34.3"/>
-																	<Property Name="HFRatio" Type="Real32" Value="6"/>
-																	<Property Name="NumberOfDelays" Type="int32" Value="16"/>
-																	<Property Name="ReverbTime" Type="Real32" Value="0.8"/>
-																	<Property Name="WetLevel" Type="Real32" Value="-15"/>
-																</PropertyList>
-															</Effect>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{EBEBC317-5F12-4F82-A644-7DA1C4CD4F43}" ShortID="782287875">
-												<ReferenceList>
-													<Reference Name="Effect">
-														<Custom CreatedFrom="{ABFA9875-521E-451F-AAB9-AB148847B9C0}">
-															<Effect Name="Blue_Distant_Echoes (Custom)" ID="{301FEBBE-A423-495A-801A-979D73657338}" ShortID="567187658" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
-																<PropertyList>
-																	<Property Name="DryLevel" Type="Real32" Value="-4"/>
-																	<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
-																	<Property Name="EnableFeedback" Type="bool" Value="True"/>
-																	<Property Name="FilterFrequency" Type="Real32" Value="2507"/>
-																	<Property Name="FilterGain" Type="Real32" Value="-24"/>
-																	<Property Name="FilterType" Type="int32" Value="3"/>
-																	<Property Name="FrontRearBalance" Type="Real32" Value="-46"/>
-																	<Property Name="LeftCrossfeed" Type="Real32" Value="-10"/>
-																	<Property Name="LeftDelayTime" Type="Real32" Value="0.33"/>
-																	<Property Name="LeftFeedback" Type="Real32" Value="-30.3"/>
-																	<Property Name="RightCrossfeed" Type="Real32" Value="-8"/>
-																	<Property Name="RightDelayTime" Type="Real32" Value="0.45"/>
-																	<Property Name="RightFeedback" Type="Real32" Value="-34.6"/>
-																</PropertyList>
-															</Effect>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{94D2FFB4-91B1-43EC-8968-D9F3E6067F44}" ShortID="256588480">
-												<ReferenceList>
-													<Reference Name="Effect">
-														<Custom CreatedFrom="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}">
-															<Effect Name="Echoes_Linear (Custom)" ID="{B002CD6C-B501-43FD-98CE-FC94EAD94CD9}" ShortID="695490779" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-																<PropertyList>
-																	<Property Name="DelayTime" Type="Real32" Value="0.3"/>
-																	<Property Name="Feedback" Type="Real32" Value="6"/>
-																	<Property Name="WetDryMix" Type="Real32" Value="16"/>
-																</PropertyList>
-															</Effect>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{C8BC7477-1074-46B1-8D5E-343DDD01065D}" ShortID="777893132">
-												<ReferenceList>
-													<Reference Name="Effect">
-														<Custom CreatedFrom="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}">
-															<Effect Name="Echoes_Linear (Custom)" ID="{82B1AD88-8521-4C91-AC58-F984555FA70A}" ShortID="104816223" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
-																<PropertyList>
-																	<Property Name="DelayTime" Type="Real32" Value="0.43"/>
-																	<Property Name="Feedback" Type="Real32" Value="6"/>
-																	<Property Name="WetDryMix" Type="Real32" Value="12"/>
 																</PropertyList>
 															</Effect>
 														</Custom>

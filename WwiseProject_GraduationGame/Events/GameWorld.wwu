@@ -3,87 +3,103 @@
 	<Events>
 		<WorkUnit Name="GameWorld" ID="{02E0DEB9-44A4-4F97-876D-94DADF6DB20C}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Elevator" ID="{9C32221D-1716-44C9-8172-562D58E45749}" ShortID="698566457">
+				<Folder Name="Lvl_2" ID="{80045318-B0AF-4E76-9AE8-0F1A979AFEC7}" ShortID="249951542"/>
+				<Folder Name="Lvl_1" ID="{4A7D9D37-17F4-4C91-BDEB-9439877C9345}" ShortID="662609268">
 					<ChildrenList>
-						<Event Name="Play_Elevator_Buttonpress" ID="{43274CF9-3A4D-41BD-AED5-24B3D1B8A156}">
+						<Folder Name="Elevator" ID="{9C32221D-1716-44C9-8172-562D58E45749}" ShortID="698566457">
 							<ChildrenList>
-								<Action Name="" ID="{5847ED93-5BF4-41BE-AC7C-0E78BBFFE4FA}" ShortID="346738296">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ButtonPress" ID="{B0240988-4BE8-4C79-B9CA-C88D562B9437}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
+								<Event Name="Play_Elevator_Buttonpress" ID="{43274CF9-3A4D-41BD-AED5-24B3D1B8A156}">
+									<ChildrenList>
+										<Action Name="" ID="{5847ED93-5BF4-41BE-AC7C-0E78BBFFE4FA}" ShortID="346738296">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="ButtonPress" ID="{B0240988-4BE8-4C79-B9CA-C88D562B9437}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Elevator_ConfirmationBeep" ID="{461A121A-FD46-4F61-BEE8-3013523DC0FB}">
+									<ChildrenList>
+										<Action Name="" ID="{A56253B6-C4FB-4506-87FF-B71746E7BEA6}" ShortID="389194733">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Elevator_ConfirmationBeep" ID="{EA006F08-DD3A-426A-BE99-F80CE41A439C}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Elevator_BP_OutofOrder" ID="{431D9A87-E2CB-44DB-98BF-9E8401D4F313}">
+									<ChildrenList>
+										<Action Name="" ID="{A237873F-8A70-4A4A-BC83-481ED2294517}" ShortID="727006841">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Elevator_OutofOrderBeep" ID="{FBCF4321-2E85-41C7-879A-A7EDD8080D71}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{5F70C1B7-8E6A-4909-B69C-4A4A2C1C20EE}" ShortID="422303861">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Elevator_Button" ID="{BA906DCA-547C-4DAF-9AAF-78E1FDFE5B2F}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Elevator_Running_lp" ID="{4430B123-68F2-4A6E-AE23-9962ABDCF02F}">
+									<ChildrenList>
+										<Action Name="" ID="{4C044265-A2AA-4660-82C0-505457D0B033}" ShortID="589043634">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Elevator_Running_lp" ID="{D4AEBE4F-7E6A-41FE-8586-052ED3302DAA}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Elevator_Run_Startup" ID="{62A7C608-C1A1-4367-B099-E4D84EB23A7D}">
+									<ChildrenList>
+										<Action Name="" ID="{6E8AB211-DA1D-426C-8BC2-3E1BDE1B9C66}" ShortID="668796602">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Elevator_Power_lp" ID="{4969E773-53F0-43F4-87FE-B35853EE2F81}">
+									<ChildrenList>
+										<Action Name="" ID="{B9333EB2-1A94-4551-88F9-3F082C9B6AF6}" ShortID="793835049">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Elevator_PowerON_lp" ID="{30504C88-90AF-49D4-BA34-F0ED7248A69E}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_ElevatorDoorOpen" ID="{DECAD8AA-E118-404A-91F0-60CDADD9B457}">
+									<ChildrenList>
+										<Action Name="" ID="{B2C00709-F352-4E39-BD2B-100797FC1A2A}" ShortID="601692918">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="ElevatorDoorOpen" ID="{DE8360EC-4768-45C6-A2B5-686ABAF18A71}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
-						</Event>
-						<Event Name="Play_Elevator_ConfirmationBeep" ID="{461A121A-FD46-4F61-BEE8-3013523DC0FB}">
+						</Folder>
+						<Event Name="Play_DoorBeingKicked" ID="{48BD75A8-CBC3-46F3-8FF8-E8784B3EDABB}">
 							<ChildrenList>
-								<Action Name="" ID="{A56253B6-C4FB-4506-87FF-B71746E7BEA6}" ShortID="389194733">
+								<Action Name="" ID="{973E4B44-56CA-48DC-9651-07B0FC029F5D}" ShortID="230882869">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Elevator_ConfirmationBeep" ID="{EA006F08-DD3A-426A-BE99-F80CE41A439C}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Elevator_BP_OutofOrder" ID="{431D9A87-E2CB-44DB-98BF-9E8401D4F313}">
-							<ChildrenList>
-								<Action Name="" ID="{A237873F-8A70-4A4A-BC83-481ED2294517}" ShortID="727006841">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Elevator_OutofOrderBeep" ID="{FBCF4321-2E85-41C7-879A-A7EDD8080D71}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{5F70C1B7-8E6A-4909-B69C-4A4A2C1C20EE}" ShortID="422303861">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Elevator_Button" ID="{BA906DCA-547C-4DAF-9AAF-78E1FDFE5B2F}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Elevator_Running_lp" ID="{4430B123-68F2-4A6E-AE23-9962ABDCF02F}">
-							<ChildrenList>
-								<Action Name="" ID="{4C044265-A2AA-4660-82C0-505457D0B033}" ShortID="589043634">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Elevator_Running_lp" ID="{D4AEBE4F-7E6A-41FE-8586-052ED3302DAA}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Elevator_Run_Startup" ID="{62A7C608-C1A1-4367-B099-E4D84EB23A7D}">
-							<ChildrenList>
-								<Action Name="" ID="{6E8AB211-DA1D-426C-8BC2-3E1BDE1B9C66}" ShortID="668796602">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Startup_Run" ID="{32ACBE57-8014-4B05-BFD8-2663470E89AD}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Elevator_Power_lp" ID="{4969E773-53F0-43F4-87FE-B35853EE2F81}">
-							<ChildrenList>
-								<Action Name="" ID="{B9333EB2-1A94-4551-88F9-3F082C9B6AF6}" ShortID="793835049">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Elevator_PowerON_lp" ID="{30504C88-90AF-49D4-BA34-F0ED7248A69E}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_ElevatorDoorOpen" ID="{DECAD8AA-E118-404A-91F0-60CDADD9B457}">
-							<ChildrenList>
-								<Action Name="" ID="{B2C00709-F352-4E39-BD2B-100797FC1A2A}" ShortID="601692918">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ElevatorDoorOpen" ID="{DE8360EC-4768-45C6-A2B5-686ABAF18A71}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+											<ObjectRef Name="DoorBeingKicked" ID="{EEB2AE37-FBBE-499D-8565-5C76FF95DCDD}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -106,7 +122,6 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Lvl_2" ID="{80045318-B0AF-4E76-9AE8-0F1A979AFEC7}" ShortID="249951542"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
