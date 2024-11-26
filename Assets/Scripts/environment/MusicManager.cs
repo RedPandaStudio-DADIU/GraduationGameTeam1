@@ -6,9 +6,16 @@ using AK.Wwise;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Event musicEvent;
+    // Level we are in
+    [SerializeField] private AK.Wwise.State levelState;
+    // State we are in - combat  non-combat
+    [SerializeField] private AK.Wwise.State playerState;
+
+    // combat intensity - only when in combat first - combat high
+    [SerializeField] private AK.Wwise.State intensityState;
+
     [SerializeField] private AK.Wwise.State combatState;
     [SerializeField] private AK.Wwise.State nonCombatState;
-    [SerializeField] private AK.Wwise.State levelState;
     [SerializeField] private AK.Wwise.State intensityLevelLowState;
     [SerializeField] private AK.Wwise.State intensityLevelHighState;
     [SerializeField] private AK.Wwise.State intensityNoneState;
@@ -16,9 +23,11 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
+        levelState.SetValue();
+        playerState.SetValue();
+
         nonCombatState.SetValue();
         intensityNoneState.SetValue();
-        levelState.SetValue();
 
         musicEvent.Post(gameObject);
 
@@ -61,3 +70,23 @@ public class MusicManager : MonoBehaviour
         }
     }
 }
+
+
+/* In level 1:
+
+*/
+
+
+/* In level 2:
+    2 stages:
+
+    
+    When you start - combat hall (from the very beginning) - no no-combat state
+    Combat Xaga - it needs to be activated once we get to Xaga
+*/
+
+/* Level 2 ending:
+    Loose vs. Win
+*/
+
+// 
