@@ -6,7 +6,7 @@ using cowsins;
 public class BossSpecialState : IEnemyState
 {
     private Coroutine chargeBeforeShotCoroutine;
-    private float chargeTime = 3f;
+    private float chargeTime = 5f;
     private float backToAttackDelay = 3f;
 
     public void OnEnter(EnemyStateController stateController){
