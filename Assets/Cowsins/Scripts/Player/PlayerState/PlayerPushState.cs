@@ -16,26 +16,14 @@ namespace cowsins
         private Transform playerTransform;
         private global::PushEnemy pushEnemyComponent;
 
-        //private Animator animator; 
-        //private readonly string pushAnimationName = "Kick"; 
+        private Animator animator; 
+        private readonly string pushAnimationName = "Push"; 
 
         public PlayerPushState(PlayerStates currentContext, PlayerStateFactory playerStateFactory)
             : base(currentContext, playerStateFactory) { 
             //     this.playerTransform =  playerTransform;
             //     this.coroutineHandler = coroutineHandler;
             this.playerTransform = currentContext.transform;
-            //this.animator = currentContext.GetComponent<Animator>();
-           // animator = currentContext.GetComponentInChildren<Animator>();
-            //animator = playerTransform.GetComponentInChildren<Animator>();
-            // Transform legRig = playerTransform.Find("Leg rig (1)");
-            // if (legRig != null)
-            // {
-            //     animator = legRig.GetComponent<Animator>();
-            // }
-            // Debug.Log($"Animator is {(animator != null ? "found" : "null")}");
-
-
-            
              }
 
         public override void EnterState()
@@ -57,27 +45,26 @@ namespace cowsins
                 Debug.LogWarning("PushEnemy component not found on player.");
             }
 
-            // if (animator != null)
-            // {
-            //     Debug.Log("turn the trigger");
-            //     animator.SetTrigger("kickT");
-            // }
-            // else
-            // {
-            //     Debug.LogWarning("Animator not found on player.");
-            // }
+            if (animator != null)
+            {
+                
+                animator.Play(pushAnimationName);
+            }
+            else
+            {
+                Debug.LogWarning("Animator not found on player.");
+            }
 
 
         }
 
         public override void UpdateState()
         {
-            //PrintAnimatorState();
-        //    if (IsAnimationFinished())
-        //     {
-        //         CheckSwitchState();
-        //     } 
-            CheckSwitchState();
+            
+           if (IsAnimationFinished())
+            {
+                CheckSwitchState();
+            } 
         }
 
         public override void FixedUpdateState() { }
@@ -97,29 +84,13 @@ namespace cowsins
             }
         }
 
-        // private bool IsAnimationFinished()
-        // {
-        //     if (animator == null) return true;
-        //     Debug.Log("Exiting animation");
+        private bool IsAnimationFinished()
+        {
+            if (animator == null) return true;
 
-        //     AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        //     //return stateInfo.IsName(pushAnimationName) && stateInfo.normalizedTime >= 1f;
-        //     return stateInfo.normalizedTime >= 1f;
-        // }
-
-        // private void PrintAnimatorState()
-        // {
-        //     if (animator == null)
-        //     {
-        //         Debug.LogError("Animator is null!");
-        //         return;
-        //     }
-
-        //     AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); // 获取第0层（Base Layer）的状态信息
-        //     Debug.Log($"Current Animation Name: {stateInfo.fullPathHash}");
-        //     Debug.Log($"IsPlayingKick: {stateInfo.IsName("Kick")}");
-        //     Debug.Log($"Normalized Time: {stateInfo.normalizedTime}");
-        // }
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            return stateInfo.IsName(pushAnimationName) && stateInfo.normalizedTime >= 1f;
+        }
 
         // private void PushEnemiesInRange()
         // {

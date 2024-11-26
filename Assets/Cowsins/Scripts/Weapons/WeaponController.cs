@@ -175,53 +175,51 @@ namespace cowsins
             CreateInventoryUI();
             GetInitialWeapons();
             weaponController = GetComponent<WeaponController>();
-            autoReload = false;
-
-            reload = DefaultReload;
-            
-            StartCoroutine(DelayedInit());
-        }
-
-        private IEnumerator DelayedInit()
-        {
-        
-            yield return new WaitForSeconds(0.1f);
-
-        
-            InitialSettings();
-            CreateInventoryUI();
-            GetInitialWeapons();
-
-        
-            if (weapon == null)
-            {
-                Debug.LogError("Weapon not initialized in WeaponController.");
-                yield break;
-            }
-
-            if (id == null)
-            {
-                Debug.LogError("WeaponIdentification not initialized in WeaponController.");
-                yield break;
-            }
 
             
-            StartCoroutine(UpdateLoop());
+            //StartCoroutine(DelayedInit());
         }
 
-        private IEnumerator UpdateLoop()
-        {
-            while (true)
-            {
-                HandleUI();
-                HandleAimingMotion();
-                ManageWeaponMethodsInputs();
-                HandleRecoil();
-                HandleHeatRatio();
+        // private IEnumerator DelayedInit()
+        // {
+        
+        //     yield return new WaitForSeconds(0.1f);
 
-                yield return null; 
-            }
-        }
+        
+        //     InitialSettings();
+        //     CreateInventoryUI();
+        //     GetInitialWeapons();
+
+        
+        //     if (weapon == null)
+        //     {
+        //         Debug.LogError("Weapon not initialized in WeaponController.");
+        //         yield break;
+        //     }
+
+        //     if (id == null)
+        //     {
+        //         Debug.LogError("WeaponIdentification not initialized in WeaponController.");
+        //         yield break;
+        //     }
+
+            
+        //     StartCoroutine(UpdateLoop());
+        // }
+
+        // private IEnumerator UpdateLoop()
+        // {
+        //     while (true)
+        //     {
+        //         HandleUI();
+        //         HandleAimingMotion();
+        //         ManageWeaponMethodsInputs();
+        //         HandleRecoil();
+        //         HandleHeatRatio();
+
+        //         yield return null; 
+        //     }
+        // }
 
         private void Update()
         {
@@ -743,14 +741,8 @@ namespace cowsins
             yield return new WaitForSeconds(.001f);
 
             // Play animation
-            var animator = inventory[currentWeapon].GetComponentInChildren<Animator>();
-            if (animator == null)
-            {
-                Debug.LogError("Animator not found on the current weapon!");
-                
-            }
             CowsinsUtilities.PlayAnim("reloading", inventory[currentWeapon].GetComponentInChildren<Animator>());
-            Debug.Log("Reloading animation playedplayed on animator: " + animator.name);
+
             // Wait reloadTime seconds, assigned in the weapon scriptable object.
             yield return new WaitForSeconds(reloadTime);
 
@@ -779,15 +771,14 @@ namespace cowsins
                     id.totalBullets = id.totalBullets - (id.magazineSize - id.bulletsLeftInMagazine);
                     id.bulletsLeftInMagazine = id.magazineSize;
                 }
-                else if (id.totalBullets < id.magazineSize && id.totalBullets > 0) // You cant reload a whole magazine
+                else if (id.totalBullets < id.magazineSize) // You cant reload a whole magazine
                 {
                     int bulletsLeft = id.bulletsLeftInMagazine;
                     if (id.bulletsLeftInMagazine + id.totalBullets <= id.magazineSize)
                     {
                         id.bulletsLeftInMagazine = id.bulletsLeftInMagazine + id.totalBullets;
-                        //if (id.totalBullets - (id.magazineSize - bulletsLeft) >= 0) id.totalBullets = id.totalBullets - (id.magazineSize - bulletsLeft);
-                        //else id.totalBullets = 0;
-                        id.totalBullets = 0;
+                        if (id.totalBullets - (id.magazineSize - bulletsLeft) >= 0) id.totalBullets = id.totalBullets - (id.magazineSize - bulletsLeft);
+                        else id.totalBullets = 0;
                     }
                     else
                     {
@@ -1113,7 +1104,7 @@ namespace cowsins
             {
                 if (!weapon.infiniteBullets)
                 {
-                   // Debug.LogError("ID: " + id + ", weapon" + weapon);
+
                     bool activeReloadUI = id.bulletsLeftInMagazine == 0 && !autoReload && !weapon.infiniteBullets;
                     bool activeLowAmmoUI = id.bulletsLeftInMagazine < id.magazineSize / 3.5f && id.bulletsLeftInMagazine > 0;
                     // Set different display settings for each shoot style 

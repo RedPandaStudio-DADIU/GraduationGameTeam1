@@ -214,14 +214,6 @@ namespace cowsins
                 currentSectionIndex = 1;
 
             }
-
-             if (mainMenuSections[3].section.gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape))
-            {
-                mainMenuSections[3].section.gameObject.SetActive(false);
-                Debug.Log("Back to main menu");
-                currentSectionIndex = 1;
-
-            }
         }
 
 
@@ -303,20 +295,6 @@ namespace cowsins
 
            
         }
-         public void ShowCredits()
-    {   
-        if (mainMenuSections[3].section.gameObject.activeSelf)
-        {
-            mainMenuSections[3].section.gameObject.SetActive(false);
-        }
-        else
-        {
-            mainMenuSections[3].section.gameObject.SetActive(true);
-        }
-    }
-
-
-
         private void OnVideoEnd(VideoPlayer vp)
         {
             Debug.Log("Video playback finished. Loading game scene.");

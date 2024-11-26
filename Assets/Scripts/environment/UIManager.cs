@@ -7,8 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject startCanvas;    
     public GameObject mainMenuCanvas; 
-    public GameObject pauseCanvas;   
-     public GameObject creditsCanvas; 
+    public GameObject pauseCanvas;    
 
     private bool isPaused = false; 
 
@@ -38,12 +37,6 @@ public class UIManager : MonoBehaviour
                 PauseGame();
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape) &&creditsCanvas.activeSelf)
-        {
-             HideCredits(); 
-        }
-
     }
 
     public void ShowStartCanvas()
@@ -51,7 +44,6 @@ public class UIManager : MonoBehaviour
         startCanvas.SetActive(true);
         mainMenuCanvas.SetActive(false);
         pauseCanvas.SetActive(false);
-         creditsCanvas.SetActive(false);
     }
 
     public void ShowMainMenuCanvas()
@@ -59,7 +51,6 @@ public class UIManager : MonoBehaviour
         startCanvas.SetActive(false);
         mainMenuCanvas.SetActive(true);
         pauseCanvas.SetActive(false);
-        creditsCanvas.SetActive(false);
     }
 
     public void StartGame()
@@ -87,19 +78,4 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void ShowCredits()
-    {
-        creditsCanvas.SetActive(true); // 显示 Credits
-        mainMenuCanvas.SetActive(false); // 确保主菜单被隐藏
-        pauseCanvas.SetActive(false); 
-        startCanvas.SetActive(false); 
-    }
-
-    public void HideCredits()
-    {
-        creditsCanvas.SetActive(false); // 隐藏 Credits
-        mainMenuCanvas.SetActive(true); // 显示主菜单
-    }
-
 }
