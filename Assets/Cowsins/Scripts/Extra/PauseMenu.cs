@@ -9,6 +9,7 @@ namespace cowsins
         [SerializeField] private GameObject playerUI;
         [SerializeField] private bool disablePlayerUIWhilePaused;
         [SerializeField] private GameObject pauseMenuUI;
+        [SerializeField] private GameObject credits;
         //[SerializeField] private float fadeSpeed;
 
         public static PauseMenu Instance { get; private set; }
@@ -45,7 +46,7 @@ namespace cowsins
         private void Update()
         {
             HandlePauseInput();
-             Debug.Log("UPDATE OF PAUSEMENU ");
+             //Debug.Log("UPDATE OF PAUSEMENU ");
             // if (isPaused)
             // {
             //     HandlePause();
@@ -55,6 +56,10 @@ namespace cowsins
             // {
             //     HandleUnpause();
             // }
+            if(InputManager.pausing&&credits.activeSelf)
+            {
+                credits.SetActive(false);
+            }
         }
 
         private void HandlePauseInput()
@@ -157,8 +162,6 @@ namespace cowsins
                     Debug.Log("hide user ui ");
                 }
 
-                AkSoundEngine.Suspend();
-
                 OnPause?.Invoke();
             }
             else
@@ -173,7 +176,6 @@ namespace cowsins
                 Cursor.visible = false;
                 playerUI.SetActive(true);
 
-                AkSoundEngine.WakeupFromSuspend();
                 OnUnpause?.Invoke();
             }
         }
@@ -190,8 +192,13 @@ namespace cowsins
             Time.timeScale = 1f; 
             isPaused = false;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
-            AkSoundEngine.WakeupFromSuspend();
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void ShowCredits()
+        {
+            credits.SetActive(true); 
+           
         }
 
 
