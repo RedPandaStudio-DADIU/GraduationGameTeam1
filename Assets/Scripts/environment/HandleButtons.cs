@@ -12,13 +12,14 @@ public class HandleButtons : Interactable
 
     [SerializeField] private AK.Wwise.Event elevatorDoorOpen;
     [SerializeField] private AK.Wwise.Event elevatorButtonPress;
+    [SerializeField] private AK.Wwise.State myState;
 
 
     void Start()
     {
         elevatorDoor = GameObject.FindWithTag("Door");
         AkSoundEngine.SetSwitch("ElevatorPower", "PowerOff", gameObject);
-        // GetComponent<AkState>().enabled = false;
+    
     }
 
     void Update()
@@ -38,12 +39,11 @@ public class HandleButtons : Interactable
             if (GameObject.FindWithTag("MainframeButton").GetComponent<HandleButtons>().GetInteractionOccured()){
                 AkSoundEngine.SetSwitch("ElevatorPower", "PowerOn", gameObject);
                 elevatorButtonPress.Post(gameObject);
-                // GetComponent<AkState>().enabled = true;
 
                 DestroyDoor();
             } else {
                 elevatorButtonPress.Post(gameObject);
-
+                myState.SetValue();
             }
 
 
@@ -51,7 +51,7 @@ public class HandleButtons : Interactable
             interactionOccured = true;
             AkSoundEngine.SetSwitch("ElevatorPower", "PowerOn", gameObject);
             elevatorButtonPress.Post(gameObject);
-            // GetComponent<AkState>().enabled = true;
+            myState.SetValue();
 
         }
     }
