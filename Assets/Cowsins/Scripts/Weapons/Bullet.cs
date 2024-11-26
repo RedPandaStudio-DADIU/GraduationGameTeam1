@@ -163,15 +163,15 @@ namespace cowsins
                     enemy.ChangeState(new EnemyHitState());
                 }
 
-                if(enemy.GetEnemy().GetHealth() > 0){
-                    Debug.Log("Inside health check");
-                    if(!enemy.GetisInRecovery()){
-                        enemy.Recovery(ragdollDuration);
-                    }
-                } else {
-                    enemy.ChangeState(new EnemyDieState());
-                    Debug.Log("Health check not passed");
-                }
+                // if(enemy.GetEnemy().GetHealth() > 0){
+                //     Debug.Log("Inside health check");
+                //     if(!enemy.GetisInRecovery()){
+                //         enemy.Recovery(ragdollDuration);
+                //     }
+                // } else {
+                //     enemy.ChangeState(new EnemyDieState());
+                //     Debug.Log("Health check not passed");
+                // }
 
             }
 
