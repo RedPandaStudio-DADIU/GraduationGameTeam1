@@ -85,8 +85,8 @@ namespace cowsins
         }
 
 
-        public bool shooting { get; private set; } = false;
-        public bool shooting2 { get; private set; } = false;
+        public bool shooting { get;  set; } = false;
+        public bool shooting2 { get;  set; } = false;
 
         private float spread;
 

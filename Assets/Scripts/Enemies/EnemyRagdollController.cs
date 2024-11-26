@@ -117,7 +117,7 @@ public class EnemyRagdollController : MonoBehaviour
             RecordBoneTransforms();
         }
 
-        if (animator != null && animator.enabled != !isActive)
+        if (animator != null)
         {
             animator.enabled = !isActive; 
         }
