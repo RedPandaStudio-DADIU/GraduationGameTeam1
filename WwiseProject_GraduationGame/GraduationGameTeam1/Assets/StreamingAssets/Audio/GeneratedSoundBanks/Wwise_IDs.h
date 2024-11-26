@@ -234,6 +234,7 @@ namespace AK
                 static const AkUniqueID SC0_TR1 = 1568320811U;
                 static const AkUniqueID SC1_TR0 = 342028879U;
                 static const AkUniqueID SC1_TR1 = 342028878U;
+                static const AkUniqueID SC1_TR2 = 342028877U;
                 static const AkUniqueID SC2_TR1 = 3079543733U;
                 static const AkUniqueID SC2_TR2 = 3079543734U;
                 static const AkUniqueID SC2_TR3 = 3079543735U;
