@@ -20,10 +20,10 @@ MonoBehaviour:
   shootMethod: 1
   holdProgressSpeed: 4
   reloadStyle: 0
-  projectile: {fileID: 1524923703965971472, guid: 69c2a2b66c7fc784989088d24b834b71, type: 3}
+  projectile: {fileID: -9030219361790644124, guid: bd43fad435b85a54da88d527e121d06b, type: 3}
   projectileUsesGravity: 1
-  shootDelay: 0.8
-  bulletDuration: 2
+  shootDelay: 0
+  bulletDuration: 0.5
   speed: 20
   explosionOnHit: 0
   hurtsPlayer: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   explosionForce: 0
   explosionVFX: {fileID: 0}
   continuousFire: 0
-  fireRate: 0.8
+  fireRate: 0.5
   reloadTime: 2
   coolSpeed: 0
   cooledPercentageAfterOverheat: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   magazineSize: 15
   bulletsPerFire: 1
   ammoCostPerFire: 1
-  bulletRange: 5
+  bulletRange: 0
   timeBetweenShots: 0
   penetrationAmount: 10
   penetrationDamageReduction: 0.579
@@ -173,7 +173,7 @@ MonoBehaviour:
   applyDifferentRecoilOnAiming2: 0
   xRecoilAmountOnAiming2: 0
   yRecoilAmountOnAiming2: 0
-  damagePerBullet: 10
+  damagePerBullet: 50
   applyDamageReductionBasedOnDistance: 0
   minimumDistanceToApplyDamageReduction: 0
   damageReductionMultiplier: 0
