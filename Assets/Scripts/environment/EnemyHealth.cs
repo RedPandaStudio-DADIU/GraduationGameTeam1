@@ -124,7 +124,7 @@ namespace cowsins
 
         public void LateUpdate() {
             health = GetComponent<EnemyBaseClass>().GetHealth();
-            Debug.LogError("Current health: " + health);
+            // Debug.LogError("Current health: " + health);
 
         }
 

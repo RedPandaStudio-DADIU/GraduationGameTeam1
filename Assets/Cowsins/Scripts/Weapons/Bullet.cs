@@ -66,7 +66,7 @@ namespace cowsins
             // } 
             if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
-                Debug.LogError("Enemy " + other.gameObject.name + " hit!");
+                // Debug.LogError("Enemy " + other.gameObject.name + " hit!");
                 if(this.CompareTag("ChargeShot")){
                     
                     player.gameObject.GetComponent<ChargedShot>().ShootCharge(other.gameObject, this.transform.position);

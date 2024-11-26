@@ -14,9 +14,27 @@ public class EnemyDieState : IEnemyState
             stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
         }
 
+        stateController.GetAnimator().SetBool("IsAttacking", false);
+        stateController.GetAnimator().SetBool("IsShooting", false);
+
+        if(stateController.GetEnemy().gameObject.GetComponent<Animator>() != null){
+            stateController.GetEnemy().gameObject.GetComponent<Animator>().enabled = false;
+        }
+
         if(stateController.GetEnemy().CompareTag("Boss")){
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(true);
         }
+
+        if(!stateController.GetIsHuman()){
+            stateController.gameObject.GetComponent<EnemyHealth>().enabled = false;
+        }
+
+        if(!stateController.GetIsHuman()){
+            Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
+            child.gameObject.SetActive(false);
+        }
+
+
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
@@ -28,32 +46,37 @@ public class EnemyDieState : IEnemyState
             rb.useGravity = true;
         }
 
-        if(!stateController.GetIsHuman()){
-            Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
-            child.gameObject.SetActive(false);
-        }
 
-        if(stateController.GetEnemy().gameObject.GetComponent<Animator>() != null){
-            stateController.GetEnemy().gameObject.GetComponent<Animator>().enabled = false;
-        }
+        stateController.GetEnemy().GetComponent<NavMeshAgent>().enabled = false;
+
+        stateController.GetEnemy().tag = "Untagged";
+
+        // if(!stateController.GetIsHuman()){
+        //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
+        //     child.gameObject.SetActive(false);
+        // }
+
+
+        // if(!rigidbodyChanged){
+        //     Rigidbody rbc = stateController.GetEnemy().GetComponent<Rigidbody>();
+        //     if (rbc != null)
+        //     {
+        //         rbc.isKinematic = true;
+        //     }
+
+        //     // stateController.GetEnemy().gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+        //     stateController.GetEnemy().GetComponent<NavMeshAgent>().enabled = false;
+
+        //     stateController.GetEnemy().tag = "Untagged";
+        //     rigidbodyChanged = true;
+        // }
 
 
     }
     public void OnUpdate(EnemyStateController stateController){
-        // Activate Ragdoll + deactivate navmesh agent + shooting collider
 
-        if(!rigidbodyChanged){
-             Rigidbody rb = stateController.GetEnemy().GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-            }
-
-            // stateController.GetEnemy().gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-            stateController.GetEnemy().GetComponent<NavMeshAgent>().enabled = false;
-
-            stateController.GetEnemy().tag = "Untagged";
-            rigidbodyChanged = true;
+        if(stateController.GetEnemy().gameObject.GetComponent<Animator>() != null){
+            stateController.GetEnemy().gameObject.GetComponent<Animator>().enabled = false;
         }
 
        
