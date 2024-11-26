@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AK.Wwise;
 
 public class PushEnemy : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PushEnemy : MonoBehaviour
     [SerializeField] private float pushForce = 500f; 
     [SerializeField] private float pushRadius = 3f; 
     [SerializeField] private float damage = 10f;  
+    [SerializeField] private AK.Wwise.Event kickEvent;  
 
     private float ragdollDuration = 5.0f; 
  
@@ -27,6 +29,7 @@ public class PushEnemy : MonoBehaviour
 
     public void PushEnemiesInRange()
     {
+        kickEvent.Post(this.gameObject);
         
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, pushRadius);
 

@@ -18,6 +18,7 @@ public class Boss : DiplomatEnemy
     [SerializeField] private AK.Wwise.Event bossChargeSoundEvent;
 
     [SerializeField] private AK.Wwise.Event dialogueXaga;
+    [SerializeField] private AK.Wwise.Event specialChargeXaga;
 
     [SerializeField] private AK.Wwise.State lostArm;
     [SerializeField] private AK.Wwise.State lostLeg;
@@ -142,6 +143,12 @@ public class Boss : DiplomatEnemy
     {
         return this.bossChargeSoundEvent;
     }
+
+    public override AK.Wwise.Event GetSpecialAttackSound()
+    {
+        return this.specialChargeXaga;
+    }
+
 
     public GameObject GetAttackPrepVFX()
     {

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using cowsins;
+using AK.Wwise;
+
 
 public class EnemyHitState : IEnemyState
 {
@@ -19,10 +21,14 @@ public class EnemyHitState : IEnemyState
 
             stateController.ChangeState(new EnemyDieState());
         } 
+
         // else{
         //     // stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
         //     // stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
         // }
+
+        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "TakingDamage");
+        stateController.GetEnemy().GetDamageSound().Post(stateController.GetEnemy().gameObject);
 
         if(stateController.GetEnemy().CompareTag("Boss") && stateController.GetEnemy().GetHealth() == 40f){
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);

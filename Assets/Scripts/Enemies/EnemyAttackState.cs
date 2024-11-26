@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using cowsins;
+using AK.Wwise;
 
 public class EnemyAttackState : IEnemyState
 {
@@ -29,6 +30,9 @@ public class EnemyAttackState : IEnemyState
                 stateController.GetMusicManager().CheckIfSameState("Combat");
             }
         }
+
+        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Attacking");
+
         
         // if(!stateController.GetIsHuman()){
         //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");

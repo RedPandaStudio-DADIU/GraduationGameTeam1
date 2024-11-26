@@ -4,6 +4,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using cowsins;
+using AK.Wwise;
 namespace cowsins
 {
     [System.Serializable]
@@ -16,6 +17,9 @@ namespace cowsins
         }
 
         #region variables
+        [SerializeField] private AK.Wwise.Event playerDamage;
+        [SerializeField] private AK.Wwise.Event playerDeath;
+        [SerializeField] private AK.Wwise.Event playerBark;
 
         [ReadOnly]
         public float health, shield;
@@ -74,6 +78,8 @@ namespace cowsins
 
             if (enableAutoHeal)
                 StartAutoHeal();
+
+            playerBark.Post(this.gameObject);
         }
 
         private void Update()
@@ -118,6 +124,7 @@ namespace cowsins
             // }
             if(health > 0){
                 health -= damage;
+                playerDamage.Post(this.gameObject);
             }
 
             // Notify UI about the health change
@@ -168,6 +175,8 @@ namespace cowsins
         private void Die()
         {
             isDead = true;
+            playerDeath.Post(this.gameObject);
+
             events.OnDeath.Invoke(); // Invoke a custom event
         }
         /// <summary>

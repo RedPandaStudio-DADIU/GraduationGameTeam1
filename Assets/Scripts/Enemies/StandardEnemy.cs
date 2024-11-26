@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using cowsins;
+using AK.Wwise;
 
 public class StandardEnemy : EnemyBaseClass
 {
+    [SerializeField] private AK.Wwise.Event takeDamageEvent;
+    [SerializeField] private AK.Wwise.Event barkEvent;
+
 
     void Awake(){
         this.SetHealth(80f);
@@ -13,6 +17,9 @@ public class StandardEnemy : EnemyBaseClass
         this.SetStoppingDistance(8f);
     }
 
+    void Start(){
+        // this.barkEvent.Post(this.gameObject);
+    }
 
     public override void Attack(){
         // turn towards the player and do the raycast
@@ -29,6 +36,10 @@ public class StandardEnemy : EnemyBaseClass
         // Immediately goes into IdleState
         GetComponent<EnemyStateController>().ChangeState(new EnemyIdleState());
 
+    }
+
+    public override AK.Wwise.Event GetDamageSound(){
+        return this.takeDamageEvent;
     }
 
 }
