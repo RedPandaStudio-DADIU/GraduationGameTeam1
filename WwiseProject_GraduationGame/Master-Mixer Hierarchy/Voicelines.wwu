@@ -366,11 +366,6 @@
 										<Value>23</Value>
 									</ValueList>
 								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-170</Value>
-									</ValueList>
-								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1248,10 +1243,32 @@
 								<ObjectList Name="Effects">
 									<Reference>
 										<Local>
+											<EffectSlot Name="" ID="{6D6380BE-F07F-4D30-B8A2-07612B677DDA}" ShortID="406524617">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
 											<EffectSlot Name="" ID="{94471CF8-9C9E-4D9F-8238-B205F15D3587}" ShortID="494111780">
 												<ReferenceList>
 													<Reference Name="Effect" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 														<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{43910BF8-818A-46B9-86AA-2D142EB263B3}" ShortID="40291135">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+														<ObjectRef Name="XagaShifter" ID="{2A65CD3B-38E7-40B9-8472-61197DA973CA}" WorkUnitID="{1381E90E-CEBA-4A13-AD41-8ECCD1E9FEFD}"/>
 													</Reference>
 												</ReferenceList>
 											</EffectSlot>

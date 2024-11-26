@@ -6,6 +6,8 @@
 				<SwitchContainer Name="Xaga_StateDialogue" ID="{85081F6E-95D9-449B-828A-0FC4E995CBEB}" ShortID="908892081">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
@@ -306,36 +308,6 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
-						<Sound Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}" ShortID="1040995155">
-							<PropertyList>
-								<Property Name="IsVoice" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>20</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="XagaHangar" ID="{BC8F5CD8-D723-4FFF-9BA9-82905E8AD1B7}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}">
-									<Language>English(US)</Language>
-									<AudioFile>DamageTaken\ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="544073228"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="ElevenLabs_2024-11-18T17_00_48_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{73F275AB-C36F-4D79-8454-B1944330B347}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}" ShortID="161393741">
 							<PropertyList>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
@@ -366,6 +338,171 @@
 								<ActiveSource Name="Xaga_LetsDoThis" ID="{676CC4D7-4C00-4263-B6B5-5CBC62848538}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="XagaDeathScream" ID="{E360F594-B790-46A3-BB73-1EABC78A12E8}" ShortID="432576691">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="XagaDeathScream" ID="{05386029-177A-41FD-A40B-F3F0AE45BF8C}">
+									<Language>English(US)</Language>
+									<AudioFile>XagaDeathScream.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="856090677"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="XagaDeathScream" ID="{05386029-177A-41FD-A40B-F3F0AE45BF8C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Xaga_WeGaveYouOurPower" ID="{AB2A1675-0ED4-45F0-BD29-4B8032D01BB5}" ShortID="623786705">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom CreatedFrom="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}">
+										<Attenuation Name="att_Generic_100m (Custom)" ID="{75948E20-7694-44DC-9B55-56FF43D43611}" ShortID="197294156">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{ECD0D001-EF50-4C96-A6B6-AE02C07EC67B}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>3.37243</XPos>
+																	<YPos>0</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>6.89149</XPos>
+																	<YPos>-2.15694</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>12.90324</XPos>
+																	<YPos>-4.48257</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>29.32551</XPos>
+																	<YPos>-10.97279</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>45.7478</XPos>
+																	<YPos>-17.32121</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_WeGaveYouOurPower" ID="{AC89FDA4-61FC-4250-BF79-838747C08243}">
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_WeGaveYouOurPower.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="708242724"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_WeGaveYouOurPower" ID="{AC89FDA4-61FC-4250-BF79-838747C08243}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
@@ -373,10 +510,13 @@
 								<ItemRef Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}"/>
+								<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
-								<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
+								<ItemRef Name="Xaga_WeGaveYouOurPower" ID="{AB2A1675-0ED4-45F0-BD29-4B8032D01BB5}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="XagaDeathScream" ID="{E360F594-B790-46A3-BB73-1EABC78A12E8}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}"/>
@@ -392,7 +532,7 @@
 							<Grouping>
 								<SwitchRef Name="XagaDead" ID="{0CD28F13-CAD4-4581-8ED6-B1AB105FCBE8}"/>
 								<ItemList>
-									<ItemRef Name="XagaDeathScream" ID="{9E550153-0C01-483C-87AE-8D526C66FFB2}"/>
+									<ItemRef Name="XagaDeathScream" ID="{E360F594-B790-46A3-BB73-1EABC78A12E8}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -411,6 +551,7 @@
 								<SwitchRef Name="LostStomach" ID="{A93F9EAD-6E61-430A-80E1-4D0C2ED30FB8}"/>
 								<ItemList>
 									<ItemRef Name="NooMystomach" ID="{286A5BCD-27E4-4E19-BAB0-DCD07E89C16B}"/>
+									<ItemRef Name="Xaga_WeGaveYouOurPower" ID="{AB2A1675-0ED4-45F0-BD29-4B8032D01BB5}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -431,7 +572,14 @@
 				<SwitchContainer Name="Xaga_HurtSounds_DamageTaken" ID="{348FD35E-4E70-4D7A-A01C-1FC1727BA174}" ShortID="349368412">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -795,6 +943,91 @@
 										<ActiveSource Name="ElevenLabs_2024-11-18T17_11_56_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D8C9524D-792D-4188-8FA1-71AB5EC4DAC5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="XagaBarks_Highdamage_1" ID="{7D66137C-393E-45E4-9561-F02BC9A222DD}" ShortID="449446069">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="XagaBarks_Highdamage_1" ID="{BC7E9989-BE42-4EDE-9294-16725D2D47C0}">
+											<Language>English(US)</Language>
+											<AudioFile>XagaBarks_Highdamage.1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="276946385"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="XagaBarks_Highdamage_1" ID="{BC7E9989-BE42-4EDE-9294-16725D2D47C0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="XagaBarks_Highdamage_2" ID="{0D250D16-CE99-4AAD-B075-A61871AB5427}" ShortID="614028487">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="XagaBarks_Highdamage_2" ID="{1514430F-C4F3-4E39-981E-F7B1174D17CF}">
+											<Language>English(US)</Language>
+											<AudioFile>XagaBarks_Highdamage.2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="371620356"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="XagaBarks_Highdamage_2" ID="{1514430F-C4F3-4E39-981E-F7B1174D17CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="XagaBarks_Highdamage" ID="{8019D032-B0EF-4D2C-A0DF-F09BA3DDB813}" ShortID="276921674">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="XagaBarks_Highdamage" ID="{41BBAFFD-42DF-4542-B256-5D24CB9EB720}">
+											<Language>English(US)</Language>
+											<AudioFile>XagaBarks_Highdamage.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="265224162"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="XagaBarks_Highdamage" ID="{41BBAFFD-42DF-4542-B256-5D24CB9EB720}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Playlist">
@@ -1091,254 +1324,11 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
-				<RandomSequenceContainer Name="XagaCharge" ID="{A0B90F90-309F-4E60-92ED-1B7EE8D69195}" ShortID="701437152">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<Custom CreatedFrom="{2DFED257-CAB2-420D-ADF0-91AF7227D41F}">
-								<Attenuation Name="Hangar Dialogue 50m (Custom)" ID="{ED237197-3541-452E-A013-E4FDB35D971C}" ShortID="721907672">
-									<PropertyList>
-										<Property Name="RadiusMax" Type="Real64" Value="50"/>
-									</PropertyList>
-									<CurveUsageInfoList>
-										<VolumeDryUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="VolumeDry" ID="{104D0752-A654-48CE-AAAE-022C62D6BE4A}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>8.52174</XPos>
-															<YPos>0</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>23.08951</XPos>
-															<YPos>-5.42995</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>33.565215</XPos>
-															<YPos>-16.28727</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>-200</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeDryUsage>
-										<VolumeWetGameUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
-												<Curve Name="VolumeWetGame" ID="{FF11F993-5094-465C-9BEA-637CF72A4D39}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>-0.11659</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeWetGameUsage>
-										<VolumeWetUserUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
-												<Curve Name="VolumeWetUser" ID="{C7105C75-607C-433B-ADCB-EEFAD37A5CF0}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="3"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>8.52174</XPos>
-															<YPos>0</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>22.869565</XPos>
-															<YPos>-7.53501</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>33.565215</XPos>
-															<YPos>-16.28727</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>-200</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</VolumeWetUserUsage>
-										<LowPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="LowPassFilter" ID="{CD567B92-0370-4E81-A785-511ED1414732}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="65537"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>9.26249</XPos>
-															<YPos>24</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>22.17465</XPos>
-															<YPos>40</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>41</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</LowPassFilterUsage>
-										<HighPassFilterUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-												<Curve Name="HighPassFilter" ID="{6EBE9027-18CA-4D00-89F8-028594591412}">
-													<PropertyList>
-														<Property Name="Flags" Type="int32" Value="65537"/>
-													</PropertyList>
-													<PointList>
-														<Point>
-															<XPos>0</XPos>
-															<YPos>0</YPos>
-															<Flags>5</Flags>
-														</Point>
-														<Point>
-															<XPos>6.164375</XPos>
-															<YPos>0</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>23.374475</XPos>
-															<YPos>13</YPos>
-															<Flags>0</Flags>
-														</Point>
-														<Point>
-															<XPos>50</XPos>
-															<YPos>26</YPos>
-															<Flags>37</Flags>
-														</Point>
-													</PointList>
-												</Curve>
-											</CurveUsageInfo>
-										</HighPassFilterUsage>
-										<SpreadUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</SpreadUsage>
-										<FocusUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
-										</FocusUsage>
-										<ObstructionVolumeUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</ObstructionVolumeUsage>
-										<ObstructionLPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</ObstructionLPFUsage>
-										<ObstructionHPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</ObstructionHPFUsage>
-										<OcclusionVolumeUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</OcclusionVolumeUsage>
-										<OcclusionLPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</OcclusionLPFUsage>
-										<OcclusionHPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</OcclusionHPFUsage>
-										<DiffractionVolumeUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</DiffractionVolumeUsage>
-										<DiffractionLPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</DiffractionLPFUsage>
-										<DiffractionHPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</DiffractionHPFUsage>
-										<TransmissionVolumeUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</TransmissionVolumeUsage>
-										<TransmissionLPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</TransmissionLPFUsage>
-										<TransmissionHPFUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
-										</TransmissionHPFUsage>
-									</CurveUsageInfoList>
-								</Attenuation>
-							</Custom>
-						</Reference>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{921C19EB-38AA-457A-BD9D-51589C9C1C32}" ShortID="178505605">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{D9857244-2316-41FF-AA92-FA38715C068F}">
-									<Language>SFX</Language>
-									<AudioFile>Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="23377821"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{D9857244-2316-41FF-AA92-FA38715C068F}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<SwitchContainer Name="Ai+JD_StateDialogue" ID="{3A135883-C75C-4DFF-9132-2ADF0CFDAD72}" ShortID="920646018">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
 						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 					</PropertyList>
 					<ReferenceList>
@@ -1784,6 +1774,787 @@
 								<SwitchRef Name="LostArm" ID="{F7CA30C3-8F8F-43FF-9B0A-E02DC51E7F55}"/>
 								<ItemList>
 									<ItemRef Name="AI_ShesGotAWeakspotOnHerLeg" ID="{EF065817-1E64-4380-94A7-14589D6F818E}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<Sound Name="Xaga Barks - Breath_03-01" ID="{97382DA9-6B0C-44B8-BE92-637E7D77DF9D}" ShortID="417154495">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga Barks - Breath_03-01" ID="{7DCE2B5A-A7E4-436B-A457-16E751042FA4}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga Barks - Breath_03-01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="707408875"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga Barks - Breath_03-01" ID="{7DCE2B5A-A7E4-436B-A457-16E751042FA4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga Barks - Breath_04-01" ID="{8C1EBA07-2A80-4603-B380-43168CD80A39}" ShortID="221015799">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga Barks - Breath_04-01" ID="{AB510DA9-D89F-44AB-B6D0-9876CCD277A1}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga Barks - Breath_04-01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="13142237"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga Barks - Breath_04-01" ID="{AB510DA9-D89F-44AB-B6D0-9876CCD277A1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga Sc2 Tr2_Amuses" ID="{03DFE101-C9D3-4E01-A19E-1B35F7A89ED8}" ShortID="541861046">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga Sc2 Tr2_Amuses" ID="{E5029962-075D-4785-8E68-BA845B397F27}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga Sc2 Tr2_Amuses.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="250159426"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga Sc2 Tr2_Amuses" ID="{E5029962-075D-4785-8E68-BA845B397F27}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga Sc2 Tr3_Popcorn" ID="{678BD52C-782D-41B0-9719-A80A4080877C}" ShortID="570399075">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga Sc2 Tr3_Popcorn" ID="{04302914-32ED-4B5C-B78A-CE16AC5E657A}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga Sc2 Tr3_Popcorn.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1046829958"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga Sc2 Tr3_Popcorn" ID="{04302914-32ED-4B5C-B78A-CE16AC5E657A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga_Egnarrstadrr" ID="{54C05C01-A204-43EB-B2C8-032005634879}" ShortID="271823707">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga_Egnarrstadrr" ID="{FC1BDD1D-FD61-4A15-BB4F-D8AC80C406E7}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga_Egnarrstadrr.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="127579888"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga_Egnarrstadrr" ID="{FC1BDD1D-FD61-4A15-BB4F-D8AC80C406E7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga_Laugh" ID="{6741E6B7-B21F-48E1-B328-B949F7995B14}" ShortID="486613781">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga_Laugh" ID="{C1B8DD94-7FD4-4D4C-AD3B-0FB9F24EDE40}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga_Laugh.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="211942121"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga_Laugh" ID="{C1B8DD94-7FD4-4D4C-AD3B-0FB9F24EDE40}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga_LaughLong" ID="{8C49D674-2CE9-4806-A7B2-344E7D2F49DE}" ShortID="337973363">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga_LaughLong" ID="{0188A304-27C7-4667-8F10-7D21B1B86C18}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga_LaughLong.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="294255802"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga_LaughLong" ID="{0188A304-27C7-4667-8F10-7D21B1B86C18}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga_LaughShort" ID="{91521192-DEDB-4599-87B9-9C2C2753C536}" ShortID="292714000">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga_LaughShort" ID="{3D2963DA-F7A6-4738-B33A-07D8FE2C898A}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga_LaughShort.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1045218399"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga_LaughShort" ID="{3D2963DA-F7A6-4738-B33A-07D8FE2C898A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Xaga_YouUselessFucks" ID="{DC8EC436-A2FA-4745-B6C3-588969BFCCAA}" ShortID="817021168">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Xaga_YouUselessFucks" ID="{EFF1D532-89C4-49E1-B49A-1DD1FCA332E4}">
+							<Language>English(US)</Language>
+							<AudioFile>Xaga_YouUselessFucks.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="994057007"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Xaga_YouUselessFucks" ID="{EFF1D532-89C4-49E1-B49A-1DD1FCA332E4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="XagaCharge" ID="{7CC7B1DB-7D06-41A1-848E-69E03A50A911}" ShortID="377886466">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Weapons" ID="{E43FDD2F-1184-43B4-BBF2-688F7FC66E13}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="XagaChargeweapon" ID="{A0B90F90-309F-4E60-92ED-1B7EE8D69195}" ShortID="701437152">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{921C19EB-38AA-457A-BD9D-51589C9C1C32}" ShortID="178505605">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{D9857244-2316-41FF-AA92-FA38715C068F}">
+											<Language>SFX</Language>
+											<AudioFile>Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="23377821"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Electricity_Misc_Huge_Electric_Charge_Burst_Fizzle_Out_Magic_SND122499 1" ID="{D9857244-2316-41FF-AA92-FA38715C068F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="XagaChargeScream" ID="{CD09ADAD-0701-47DC-8987-49D301FF0D1F}" ShortID="205436645">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>3.9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="XagaBarks_chargingscream3" ID="{39CA92FD-644F-42E7-9494-ECC321342469}" ShortID="438134100">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="XagaBarks_chargingscream3" ID="{B018F4E2-C1F5-42F3-B586-B23A953185EA}">
+											<Language>English(US)</Language>
+											<AudioFile>XagaBarks_chargingscream3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1012116253"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="XagaBarks_chargingscream3" ID="{B018F4E2-C1F5-42F3-B586-B23A953185EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Scream2" ID="{F620B767-1636-46BA-B0DF-D98D07C17BB1}" ShortID="411237029">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.5</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.05"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="XagaBarks_Chargingp1" ID="{60959D7D-BF43-4201-A5F2-BCF0879123F1}" ShortID="570870089">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="XagaBarks_ChargingScream4" ID="{75087B2D-B3A8-4F1F-98B1-43815DAA6E20}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0190464824120603"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0171418341708543"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.337122738693467"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>XagaBarks_ChargingScream4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="584786532"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="XagaBarks_ChargingScream4" ID="{75087B2D-B3A8-4F1F-98B1-43815DAA6E20}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="XagaBarks_Chargingp2" ID="{A3B54F67-A683-4E23-A74D-ACC20E2E408B}" ShortID="685926695">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.5</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="XagaBarks_ChargingScream4" ID="{FA40304A-5596-4820-8619-D0510C4CB6A1}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00857091708542712"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.253318216080402"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>XagaBarks_ChargingScream4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="319594492"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="XagaBarks_ChargingScream4" ID="{FA40304A-5596-4820-8619-D0510C4CB6A1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="XagaBarks_Chargingp1" ID="{60959D7D-BF43-4201-A5F2-BCF0879123F1}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="XagaBarks_Chargingp2" ID="{A3B54F67-A683-4E23-A74D-ACC20E2E408B}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<Sound Name="Xaga Barks - Charging Scream_01-06" ID="{0B84A077-63AA-4C00-8DFD-DE7567C6A2F9}" ShortID="25830155">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - Charging Scream_01-06" ID="{20585492-04B4-4600-A145-2725845C57C2}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - Charging Scream_01-06.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="330938769"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - Charging Scream_01-06" ID="{20585492-04B4-4600-A145-2725845C57C2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - Charging Scream_01-05" ID="{45F4A5DB-1BD5-4C77-B9C8-197D171BCAFD}" ShortID="143212308">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - Charging Scream_01-05" ID="{1A17F708-D15A-4C57-A9DE-7982F7D750B4}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - Charging Scream_01-05.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="18741844"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - Charging Scream_01-05" ID="{1A17F708-D15A-4C57-A9DE-7982F7D750B4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Explosions_Designed_Futuristic_Explosion_04_SND73980" ID="{D38D4665-293A-42EB-A40D-81201C60FB2A}" ShortID="100726384">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>4.9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosions_Designed_Futuristic_Explosion_04_SND73980" ID="{9A10CCC8-4C5C-4B0E-944A-2DA3A44A2131}">
+									<Language>SFX</Language>
+									<AudioFile>Explosions_Designed_Futuristic_Explosion_04_SND73980.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="26803068"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosions_Designed_Futuristic_Explosion_04_SND73980" ID="{9A10CCC8-4C5C-4B0E-944A-2DA3A44A2131}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Explosions_Designed_Loud_Powerful_Blast_Heavy_impact_Deep_Rumble_Subtle_Wooden_Debris_Low_Explosion_Sweetener_03_SND59003 1" ID="{E8772825-644A-473E-A82C-E66D41F3AFF7}" ShortID="1734791">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5.2</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9DDC967F-AB2A-44C1-89EF-00C707C52425}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosions_Designed_Loud_Powerful_Blast_Heavy_impact_Deep_Rumble_Subtle_Wooden_Debris_Low_Explosion_Sweetener_03_SND59003 1" ID="{2D3304EF-A8A5-43F2-A3EE-7D13B62F553B}">
+									<Language>SFX</Language>
+									<AudioFile>Explosions_Designed_Loud_Powerful_Blast_Heavy_impact_Deep_Rumble_Subtle_Wooden_Debris_Low_Explosion_Sweetener_03_SND59003 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="91379258"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosions_Designed_Loud_Powerful_Blast_Heavy_impact_Deep_Rumble_Subtle_Wooden_Debris_Low_Explosion_Sweetener_03_SND59003 1" ID="{2D3304EF-A8A5-43F2-A3EE-7D13B62F553B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="XagaChargeweapon" ID="{A0B90F90-309F-4E60-92ED-1B7EE8D69195}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="XagaChargeScream" ID="{CD09ADAD-0701-47DC-8987-49D301FF0D1F}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Explosions_Designed_Futuristic_Explosion_04_SND73980" ID="{D38D4665-293A-42EB-A40D-81201C60FB2A}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Explosions_Designed_Loud_Powerful_Blast_Heavy_impact_Deep_Rumble_Subtle_Wooden_Debris_Low_Explosion_Sweetener_03_SND59003 1" ID="{E8772825-644A-473E-A82C-E66D41F3AFF7}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<SwitchContainer Name="Xaga_PlayerDeadTaunts" ID="{BA1B8D63-73B3-4BEB-996B-6CF6BA6BF378}" ShortID="474804135">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}" WorkUnitID="{0CA58C4D-17AF-4535-B4B3-D20D71747DF5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Taunts" ID="{E1872984-98DD-4474-B91F-84163A9631AB}" ShortID="533744367">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>1.5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Xaga_Killingblow_TooEasy" ID="{8406DD48-971B-4716-B599-93821CF3D46E}" ShortID="857174002">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga_Killingblow_TooEasy" ID="{B61C3507-38C5-4E11-8BF8-0D9233D907D5}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Xaga_Killingblow_TooEasy.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="223142145"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga_Killingblow_TooEasy" ID="{B61C3507-38C5-4E11-8BF8-0D9233D907D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga_KillingBlow_Snail" ID="{52686CF9-AA75-48CB-A52C-A6482B3897AC}" ShortID="1013786637">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga_KillingBlow_Snail" ID="{FD545B44-4432-4E67-AE96-B3FF73EB8928}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga_KillingBlow_Snail.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="319959684"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga_KillingBlow_Snail" ID="{FD545B44-4432-4E67-AE96-B3FF73EB8928}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga killing lines_01-02" ID="{2254247A-6BE1-430F-8371-57A7B2EF6869}" ShortID="362980568">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga killing lines_01-02" ID="{2675D59A-2A3F-41A6-9D2E-FA162ED573D9}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga killing lines_01-02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="384783833"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga killing lines_01-02" ID="{2675D59A-2A3F-41A6-9D2E-FA162ED573D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga_KillingTaunt_Slugs" ID="{0E8201B8-FC9A-4400-8E4E-77F6D8231AA0}" ShortID="259364166">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga_KillingTaunt_Slugs" ID="{430461B7-3627-4C16-95C8-3BF33EBB7BC2}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga_KillingTaunt_Slugs.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="405887288"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga_KillingTaunt_Slugs" ID="{430461B7-3627-4C16-95C8-3BF33EBB7BC2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga_Laugh_1" ID="{6034E5E4-5221-4232-8981-60F8198C9497}" ShortID="260735283">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga_Laugh_1" ID="{9A3C475F-6023-475A-8AB9-394BD4A59F4A}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga_Laugh.1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="232220397"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga_Laugh_1" ID="{9A3C475F-6023-475A-8AB9-394BD4A59F4A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga_wasthatall" ID="{D30D09E3-9E6F-44E3-8DFB-AC6AF68BDFC6}" ShortID="580992602">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga_wasthatall" ID="{095F2F85-707B-4BD8-B95B-34526D6276EE}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga_wasthatall.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="883554159"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga_wasthatall" ID="{095F2F85-707B-4BD8-B95B-34526D6276EE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Taunts" ID="{E1872984-98DD-4474-B91F-84163A9631AB}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Dead" ID="{96FF9BB9-8FCC-463B-A6A6-BB664FDFCC1F}"/>
+								<ItemList>
+									<ItemRef Name="Taunts" ID="{E1872984-98DD-4474-B91F-84163A9631AB}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>

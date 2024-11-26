@@ -9,9 +9,14 @@ public class EnemyHitState : IEnemyState
     public void OnEnter(EnemyStateController stateController){
         Debug.Log("Entering Hit State " + stateController.name);
         isDying = false;
+        stateController.GetEnemy().GetComponent<EnemyHealth>().Damage(0f, false);
+
         if(stateController.GetEnemy().GetHealth()<=0){
             Debug.Log("0 HEALTH - into death");
             isDying = true;
+            stateController.GetEnemy().gameObject.GetComponent<Animator>().enabled = false;
+            stateController.GetEnemy().gameObject.GetComponentInChildren<Animator>().enabled = false;
+
             stateController.ChangeState(new EnemyDieState());
         } else{
             stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
@@ -25,6 +30,9 @@ public class EnemyHitState : IEnemyState
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
         weapon.gameObject.SetActive(false);
+
+        // stateController.GetEnemy().GetComponent<EnemyHealth>().Damage(0f, false);
+
     }
     public void OnUpdate(EnemyStateController stateController){
        

@@ -297,6 +297,21 @@ public class EnemyStateController : MonoBehaviour
         }
     }
 
+    public Transform FindChildByName(Transform parent, string childName)
+    {
+        foreach (Transform child in parent)
+        {
+            if (child.name == childName)
+                return child;
+
+            Transform found = FindChildByName(child, childName);
+            if (found != null)
+                return found;
+        }
+
+        return null;
+    }
+
     public bool GetIsHuman(){
         return this.isHuman;
     }
