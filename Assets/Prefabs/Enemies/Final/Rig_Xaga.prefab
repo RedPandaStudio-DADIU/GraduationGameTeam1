@@ -427,6 +427,10 @@ PrefabInstance:
       propertyPath: m_TranslationOffsets.Array.data[0].y
       value: 0.1590004
       objectReference: {fileID: 0}
+    - target: {fileID: 8434243341100858070, guid: 500ef394eb6f1c9408c63b9faf3e453c, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: -0.86800194
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1972,7 +1976,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753835945527847353}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: d9be9f3ac8ee3984a8fd26aff13347a1, type: 3}
   m_Controller: {fileID: 9100000, guid: d660ba1ba6cf3ba4ab191dc8cd7da62a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2008,8 +2012,10 @@ MonoBehaviour:
   - {fileID: 2875903002662990680}
   - {fileID: 99414795780857346}
   - {fileID: 7437570798612784784}
+  materials: []
   explosionRange: 200
   damageEpxlosion: 20
+  attackPreparationEffect: {fileID: 0}
   explosionEffect: {fileID: 1839965894259638184, guid: da34e9356a368a74b9e9258679df15f9, type: 3}
   weakSpotDefeatedEffect: {fileID: 5036233001951137825, guid: 871b55e333cc46945ab315cd395d92d9, type: 3}
   bossExplosionSoundEvent:
@@ -2020,6 +2026,40 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 80595e11a70055740843ddb7ed3024d2, type: 2}
+  dialogueXaga:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  lostArm:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  lostLeg:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  lostStomach:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  nearDeath:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Dead:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &7227864312738753976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3834132971535382864, guid: d9be9f3ac8ee3984a8fd26aff13347a1, type: 3}

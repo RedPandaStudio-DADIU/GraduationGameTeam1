@@ -15,6 +15,7 @@ namespace cowsins
         [SerializeField] private float smallRagdollForce = 200f;
         [SerializeField] private float ragdollDuration = 4.0f; 
         [SerializeField] private float smallRagdollDuration = 3.0f;
+
         [HideInInspector] public bool isEnemy = false; 
         [HideInInspector] public bool isHuman = false; 
 
@@ -64,6 +65,12 @@ namespace cowsins
             //     GameObject parentObject = other.transform.parent.gameObject;
             //     Shoot(damage, parentObject.GetComponent<Collider>());
             // } 
+
+
+
+            // Set tag for enemy projectiles as EnemyBullet <- compare tag of this object (EnemyBullet) and of other (Enemy)
+
+
             if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
                 // Debug.LogError("Enemy " + other.gameObject.name + " hit!");
@@ -80,7 +87,7 @@ namespace cowsins
 
                 }
 
-            } else if(other.CompareTag("Window")){
+            }  else if(other.CompareTag("Window")){
                 DestroyProjectile();
             } 
             else if(other.CompareTag("WeakSpot")){
