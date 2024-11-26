@@ -1191,14 +1191,15 @@
 						<Panner Name="" ID="{567E930D-8B21-4EFA-AAC2-1A96FD0236A5}"/>
 					</PositioningInfo>
 				</ActorMixer>
-				<Sound Name="Hitmarker_Air_v1" ID="{6E9DC5F0-472A-4E64-8129-F5EAC6F2181B}" ShortID="376378571">
+				<BlendContainer Name="Hitmarker" ID="{35A648DB-C9D1-4BD6-8636-9DE51CCC4F97}" ShortID="354901006">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
-						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
@@ -1207,23 +1208,415 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Hitmarker_Air_v1" ID="{2F39954F-5395-405F-83BB-8BB5B374B8CA}">
+						<RandomSequenceContainer Name="Hitmarker_Flesh" ID="{0D690A75-8BCE-4F83-8696-1124F10FB67A}" ShortID="734561051">
 							<PropertyList>
-								<Property Name="LoopBegin" Type="Real64" Value="0.00723467432950192"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimBegin" Type="Real64" Value="0.00222605363984674"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Hitmarker_Air_v1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="700561171"/>
-							</MediaIDList>
-						</AudioFileSource>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 2" ID="{728C6498-9E43-4421-8B2D-29E7652A636E}" ShortID="546876897">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 2" ID="{9E412540-04D0-4EE4-974C-196C39FFB210}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0257498916341569"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="330868900"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 2" ID="{9E412540-04D0-4EE4-974C-196C39FFB210}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 3" ID="{E41B362C-DF20-4961-AA37-1B4FF954AC0A}" ShortID="359660233">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 3" ID="{92CA9838-54CF-4B7A-81A2-F72E4C949D42}">
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="689093024"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 3" ID="{92CA9838-54CF-4B7A-81A2-F72E4C949D42}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 4" ID="{BD41B776-7D76-4DA0-BEAA-F8DC210FB30C}" ShortID="405539287">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 4" ID="{4A7FD8A7-C375-4BF4-8262-0F553394BC48}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00932269993498049"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0207171109666233"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="503261555"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 4" ID="{4A7FD8A7-C375-4BF4-8262-0F553394BC48}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 5" ID="{F3C5AB84-9C6F-454E-BBA2-C307056F0498}" ShortID="676307421">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 5" ID="{4C75BC24-3E57-4999-BA60-A349795B8A69}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00966356469440832"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0397279881881231"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="773678558"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 5" ID="{4C75BC24-3E57-4999-BA60-A349795B8A69}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 6" ID="{7D8EC40E-3A1A-40F3-B92F-958567D39C8B}" ShortID="795477385">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 6" ID="{297037EC-8DE5-475E-BD87-01A3337E58F4}">
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 6.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1012630284"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 6" ID="{297037EC-8DE5-475E-BD87-01A3337E58F4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 7" ID="{B4825ACE-704B-4D03-A080-6F68BF914183}" ShortID="14570459">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 7" ID="{6834E0A0-BA63-45BC-9E74-9A04E5863CD4}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00658772214997833"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0263508885999133"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 7.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="16234486"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 7" ID="{6834E0A0-BA63-45BC-9E74-9A04E5863CD4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 8" ID="{BA8FC574-54CB-413C-9D28-48E7F080E91A}" ShortID="466758340">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 8" ID="{149FEDD2-92C2-4EE0-9CAD-A01F07A4B5D2}">
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 8.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="64997843"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 8" ID="{149FEDD2-92C2-4EE0-9CAD-A01F07A4B5D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Body_Flesh_SND6368 9" ID="{48923560-28B3-4D37-AC7B-DCBC1787BDF7}" ShortID="560487783">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 9" ID="{EE09B128-0A35-40DF-A641-30682317283B}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00555797572605115"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0305688664932813"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 9.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="622319643"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 9" ID="{EE09B128-0A35-40DF-A641-30682317283B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="Hitmarker_Air_v1" ID="{6E9DC5F0-472A-4E64-8129-F5EAC6F2181B}" ShortID="376378571">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hitmarker_Air_v1" ID="{2F39954F-5395-405F-83BB-8BB5B374B8CA}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.00723467432950192"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00222605363984674"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Hitmarker_Air_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="700561171"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hitmarker_Air_v1" ID="{2F39954F-5395-405F-83BB-8BB5B374B8CA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Hitmarker_Bullet" ID="{339878E1-D7A2-47E8-AC89-4FA1E507A37D}" ShortID="1002456770">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293" ID="{9F12F555-7A23-42CD-AA74-576C5522BE31}" ShortID="202594858">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293" ID="{13EADE84-AFA9-4EFE-A3AC-EA1052757935}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00373309492847854"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0516411465106198"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Hit_Body_Flesh_01_SND50293.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="193016637"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293" ID="{13EADE84-AFA9-4EFE-A3AC-EA1052757935}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 1" ID="{22002EA4-62E0-48FF-BB92-3A8FC364ECEE}" ShortID="554125483">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 1" ID="{F2730A77-A351-4655-874B-AB7D285BFFF0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00516065236237538"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0474780017338535"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Hit_Body_Flesh_01_SND50293 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="376644678"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 1" ID="{F2730A77-A351-4655-874B-AB7D285BFFF0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 2" ID="{E9D829E6-B9BC-4724-8B25-7ABD4C30372F}" ShortID="373984077">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 2" ID="{2ECC4DA7-4A17-458E-8AB0-AD7025558A58}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00368385619852624"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.098411587017772"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Hit_Body_Flesh_01_SND50293 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="796087690"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 2" ID="{2ECC4DA7-4A17-458E-8AB0-AD7025558A58}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 3" ID="{F45E3C18-AEB6-4EF8-8378-938F403D96D3}" ShortID="116990184">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 3" ID="{4C949B8A-4A70-42BF-8ED6-0A5144ADB915}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00496060901603814"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0649388816644993"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Hit_Body_Flesh_01_SND50293 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="248855016"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 3" ID="{4C949B8A-4A70-42BF-8ED6-0A5144ADB915}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 4" ID="{794D4ABC-93B2-41F4-AC34-548FD1CD9674}" ShortID="433691364">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 4" ID="{3B39179E-4FA5-40FB-A55B-1B6D7D0B8577}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00557932379713914"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0469593086259211"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Hit_Body_Flesh_01_SND50293 4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="560151172"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Hit_Body_Flesh_01_SND50293 4" ID="{3B39179E-4FA5-40FB-A55B-1B6D7D0B8577}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Hitmarker_Air_v1" ID="{2F39954F-5395-405F-83BB-8BB5B374B8CA}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
