@@ -88,7 +88,10 @@ namespace cowsins
 
             if (stats.isDead) return; // If player is alive, continue
 
-            if (health <= 0) Die(); // Die in case we ran out of health   
+            if (health <= 0){
+                health = 0;
+                Die(); // Die in case we ran out of health  
+            }  
 
             // Manage fall damage
             if (!takesFallDamage || player.Climbing) return;
