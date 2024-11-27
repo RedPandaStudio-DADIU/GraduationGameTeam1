@@ -27,6 +27,7 @@ public class PushEnemy : MonoBehaviour
 
     }
 
+
     public void PushEnemiesInRange()
     {
         kickEvent.Post(this.gameObject);
@@ -36,7 +37,7 @@ public class PushEnemy : MonoBehaviour
         foreach (Collider hitCollider in hitColliders)
         {
             
-            if (hitCollider.CompareTag("Enemy"))
+            if (hitCollider.CompareTag("Enemy") && !(hitCollider.gameObject.GetType() == typeof(ShieldEnemy)))
             {
                 PushLogic(hitCollider);
                

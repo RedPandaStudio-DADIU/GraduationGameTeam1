@@ -72,7 +72,9 @@ namespace cowsins
 
             if(other.CompareTag("Enemy") && this.gameObject.CompareTag("EnemyFire")){
                 DestroyProjectile();
-            } else if(other.CompareTag("Enemy") && !isHuman) {
+            } else if(other.CompareTag("Shield")) {
+                DestroyProjectile();
+            }else if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
                 // Debug.LogError("Enemy " + other.gameObject.name + " hit!");
                 if(this.CompareTag("ChargeShot")){
@@ -100,6 +102,7 @@ namespace cowsins
                 if(other.gameObject.GetComponent<Boss>().GetAreWeakSpotsDefeated()){
                     Shoot(damage, other);
                 }
+                DestroyProjectile();
             } 
             
             else if (other.CompareTag("Barrel"))
