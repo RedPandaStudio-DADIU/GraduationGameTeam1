@@ -32,7 +32,7 @@ MonoBehaviour:
   explosionVFX: {fileID: 0}
   continuousFire: 0
   fireRate: 0.8
-  reloadTime: 2
+  reloadTime: 0.8
   coolSpeed: 0
   cooledPercentageAfterOverheat: 0
   infiniteBullets: 0
@@ -53,13 +53,13 @@ MonoBehaviour:
   movementSpeedWhileAiming: 0
   setMovementSpeedWhileAiming: 0
   crosshairResize: 40
-  crosshairPreset: {fileID: 2655988077585873504, guid: c578889a819b05c4aacc11a6abb692ac, type: 2}
+  crosshairPreset: {fileID: 2655988077585873504, guid: 339dc1e687484c544b2b203166ea9a5f, type: 2}
   applyBulletSpread: 1
   applyWeight: 1
   spreadAmount: 0.03
   aimSpreadAmount: 0
   weightMultiplier: 1
-  applyRecoil: 1
+  applyRecoil: 0
   recoilX:
     serializedVersion: 2
     m_Curve:
@@ -133,7 +133,7 @@ MonoBehaviour:
   coolSpeed2: 0
   cooledPercentageAfterOverheat2: 0
   bulletsPerFire2: 1
-  ammoCostPerFire2: 1
+  ammoCostPerFire2: 10
   bulletRange2: 100
   timeBetweenShots2: 0
   penetrationAmount2: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
       WwiseObjectReference: {fileID: 11400000, guid: 76546b486a5270c418b17515ba166619, type: 2}
   pitchVariationFiringSFX: 0
   grapplesFromTip: 0
-  camShakeAmount: 0.04
+  camShakeAmount: 0.06
   camShakeAimMultiplier: 0
   camShakeCrouchMultiplier: 0
   applyFOVEffectOnShooting: 0
