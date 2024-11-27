@@ -17,7 +17,7 @@ public class HandleButtons : Interactable
 
     void Start()
     {
-        elevatorDoor = GameObject.FindWithTag("Door");
+        elevatorDoor = GameObject.FindWithTag("ElevDoor");
         AkSoundEngine.SetSwitch("ElevatorPower", "PowerOff", gameObject);
     
     }

@@ -31,7 +31,13 @@ public class EnemyAttackState : IEnemyState
             }
         }
 
-        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Attacking");
+        if(stateController.GetEnemy().CompareTag("Boss") && !stateController.GetEnemy().GetComponent<Boss>().GetSaidFirstLine()){
+            stateController.GetEnemy().GetComponent<Boss>().SetSaidFirstLine();
+            stateController.GetEnemy().GetComponent<Boss>().PostInitialEvent();
+        } else{
+            stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Attacking");
+        }
+
 
         
         // if(!stateController.GetIsHuman()){
