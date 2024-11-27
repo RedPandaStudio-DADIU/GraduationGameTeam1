@@ -82,8 +82,8 @@ public class Boss : DiplomatEnemy
         state.SetValue();
         Material material = queueMaterials.Dequeue();
         this.renderer.material = material;
-        GameObject weakspotDefeatedVFX = Instantiate(weakSpotDefeatedEffect, weakspot.position, Quaternion.identity);
-        StartCoroutine(PlayAndStop(weakspotDefeatedVFX));
+        // GameObject weakspotDefeatedVFX = Instantiate(weakSpotDefeatedEffect, weakspot.position, Quaternion.identity);
+        // StartCoroutine(PlayAndStop(weakspotDefeatedVFX));
     }
 
     private IEnumerator PlayAndStop(GameObject effect)
