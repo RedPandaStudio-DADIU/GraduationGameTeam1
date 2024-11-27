@@ -88,7 +88,7 @@ namespace cowsins
 
                 }
 
-            }  else if(other.CompareTag("Window")){
+            }  else if(other.CompareTag("Window") || other.CompareTag("Door")){
                 DestroyProjectile();
             } 
             else if(other.CompareTag("WeakSpot")){

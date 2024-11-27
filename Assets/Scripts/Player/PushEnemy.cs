@@ -44,6 +44,8 @@ public class PushEnemy : MonoBehaviour
                 if(hitCollider.GetComponent<Collider>().gameObject.GetComponent<Boss>().GetAreWeakSpotsDefeated()){
                     PushLogic(hitCollider);
                 }
+            } else if(hitCollider.CompareTag("Door")){
+                hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
             }
         }
     }
