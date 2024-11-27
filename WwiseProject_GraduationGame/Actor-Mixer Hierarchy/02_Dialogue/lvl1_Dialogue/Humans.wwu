@@ -1110,6 +1110,11 @@
 										<Sound Name="JD_DamnComputerDoYouSeeThis" ID="{A8A0A08B-C173-493B-9863-32C9718E8764}" ShortID="488856304">
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="4"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.2</Value>
+													</ValueList>
+												</Property>
 												<Property Name="IsVoice" Type="bool" Value="True"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -1144,6 +1149,31 @@
 												<ActiveSource Name="JD_DamnComputerDoYouSeeThis" ID="{DF3A0A00-3BDF-44AF-9721-7DC4D7DAF4CB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="JD_Okay_Question" ID="{D96854F3-CF7C-47AE-8F33-5702CE76937F}" ShortID="910495373">
+											<PropertyList>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Okay_Question" ID="{110EBF33-9394-444D-9D26-387F71C767FC}">
+													<Language>SFX</Language>
+													<AudioFile>JD_Okay_Question.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="962069064"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Okay_Question" ID="{110EBF33-9394-444D-9D26-387F71C767FC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
@@ -1152,6 +1182,9 @@
 											</Reference>
 											<Reference>
 												<ObjectRef Name="AI_ImNotReallyaComputer_Happy" ID="{43C9844F-615D-4557-BE4A-FD0EA7523C97}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_Okay_Question" ID="{D96854F3-CF7C-47AE-8F33-5702CE76937F}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 											</Reference>
 											<Reference>
 												<ObjectRef Name="AI_AndYesISeeIt2" ID="{AB51EFA5-6AA1-4A54-866F-C579AD749D8D}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>

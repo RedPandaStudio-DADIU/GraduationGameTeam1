@@ -63,6 +63,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4112292984	Play_JohnDoeBarks			\Player\Play_JohnDoeBarks	
 	4128836072	Stop_Guitarloop			\Ambience\Guitarloop\Stop_Guitarloop	
 	4152854033	Play_DiplomatBarks			\NPC\Diplomat\Play_DiplomatBarks	
+	4162822944	Play_Diplomat_Damage			\NPC\Diplomat\Play_Diplomat_Damage	
 	4249207015	Play_Player_Land			\Locomotion\PlayerLocomotion\Play_Player_Land	
 	4271692713	Play_Dia_Ai			\Dialogue\lvl1_Hangar\Play_Dia_Ai	
 	4273186141	Play_IntroCutsceneSound			\NonGameWorld\Play_IntroCutsceneSound	
@@ -391,31 +392,36 @@ Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	1069259374	Modulator Envelope (Custom)				
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	1153792	03_Xaga			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga	
 	47937584	PlayerVoice			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice	
 	196922711	NPCBarks			\Audio Master\Master Bus\Voicelines\NPCBarks	
 	223128778	NPC Aliens			\Audio Master\Master Bus\Voicelines\NPCBarks\NPC Aliens	
-	274948124	Xaga_FarAway			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\Xaga_ConferenceRoom\Xaga_FarAway	
+	274948124	Xaga_FarAway			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar\Xaga_ConferenceRoom\Xaga_FarAway	
 	309309195	2DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\2DAmbience	
 	344209961	01_Ai			\Audio Master\Master Bus\Voicelines\DialogueMaster\01_Ai	
 	346451691	ReverbEnvironments			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments	
-	385642153	Xaga_Conference			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\Xaga_ConferenceRoom\Xaga_Conference	
+	385642153	Xaga_Conference			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar\Xaga_ConferenceRoom\Xaga_Conference	
+	424473642	Xaga_ConferenceRoom_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\Xaga_ConferenceRoom_01	
 	765206498	PlayerCloth			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerCloth	
 	840484792	NPC Humans			\Audio Master\Master Bus\Voicelines\NPCBarks\NPC Humans	
+	1038037717	Xaga_Conference_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\Xaga_ConferenceRoom_01\Xaga_Conference_01	
+	1118754633	03_XagaHangar			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar	
 	1182634443	AmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds	
+	1243625655	03_XagaConferenceRoom			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom	
 	1301074112	3DAmbience			\Audio Master\Master Bus\Ambience\AmbientMaster\3DAmbience	
 	1399649189	Master Bus			\Audio Master\Master Bus	
 	1459460693	AmbientMaster			\Audio Master\Master Bus\Ambience\AmbientMaster	
 	1467963052	Weapons			\Audio Master\Master Bus\SFX\Weapons	
+	1591600229	XagaHangar_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\XagaHangar_01	
 	1681012287	PlayerFootsteps			\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerFootsteps	
 	2343802269	PlayerLocomotion			\Audio Master\Master Bus\SFX\PlayerLocomotion	
 	2645497833	DialogueMaster			\Audio Master\Master Bus\Voicelines\DialogueMaster	
 	2678230381	Level2			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2	
+	2768314818	Xaga_FarAway_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\Xaga_ConferenceRoom_01\Xaga_FarAway_01	
 	2997659434	NPC_SFX			\Audio Master\Master Bus\SFX\NPC_SFX	
-	3458995332	Xaga_ConferenceRoom			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\Xaga_ConferenceRoom	
+	3458995332	Xaga_ConferenceRoom			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar\Xaga_ConferenceRoom	
 	3570874681	02_John Doe			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe	
 	3595451983	Music_Master			\Audio Master\Master Bus\Music\Music_Master	
-	3868067129	XagaHangar			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_Xaga\XagaHangar	
+	3868067129	XagaHangar			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar\XagaHangar	
 	4152869693	2DAmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds\2DAmbientBeds	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
@@ -446,13 +452,16 @@ Effect plug-ins	ID	Name	Type				Notes
 	111393647	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	125311153	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	139549955	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	139669556	Dual_Filters_Radio_Comm (Custom)	Wwise Parametric EQ			
 	145985174	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	147930550	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	154042449	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	166165081	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	170601794	ElevatorRoom	Wwise RoomVerb			
 	180835918	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	188638094	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	192993247	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
+	193201454	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
 	205245498	Wwise Stereo Delay (Custom)	Wwise Stereo Delay			
 	206109583	BootRunCompressor (Custom)	Wwise Compressor			
 	232030741	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
@@ -469,6 +478,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	386254885	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	404704146	Hall_Conversation (Custom)	Wwise RoomVerb			
 	434448086	Monsterize (Custom)	Wwise Pitch Shifter			
+	435876957	Dialog_Too_Quiet (Custom)	Wwise Compressor			
 	438276821	Caught_in_a_loop (Custom)	Wwise Stereo Delay			
 	490166798	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	492715124	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
@@ -489,6 +499,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	642953192	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	646908088	BootRunCompressor (Custom)	Wwise Compressor			
 	652845231	BootRunCompressor (Custom)	Wwise Compressor			
+	657286783	Hall_Large_Dark (Custom)	Wwise RoomVerb			
 	667002179	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	684844176	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	695490779	Echoes_Linear (Custom)	Wwise Delay			
@@ -497,8 +508,11 @@ Effect plug-ins	ID	Name	Type				Notes
 	718730717	New_Guitar_Distortion_01 (Custom)	Wwise Guitar Distortion			
 	727638997	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
 	727759499	New_Guitar_Distortion_01 (Custom)	Wwise Guitar Distortion			
+	729418241	Room_Small (Custom)	Wwise RoomVerb			
+	730700392	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	731159820	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	751144099	BootRunCompressor (Custom)	Wwise Compressor			
+	753016132	Big_Garage1 (Custom)	Wwise Matrix Reverb			
 	755913846	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	776490616	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	793647857	Room_Small (Custom)	Wwise RoomVerb			
@@ -525,6 +539,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	1011994727	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	1012283269	BootRunCompressor (Custom)	Wwise Compressor			
 	1033593795	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	1044763549	Dual_Filters_Radio_Comm (Custom)	Wwise Parametric EQ			
 	1057443910	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	1059035731	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	1059488289	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
@@ -536,7 +551,6 @@ Effect plug-ins	ID	Name	Type				Notes
 	2952825346	Dual_Filters_Radio_Comm	Wwise Parametric EQ			
 	3360962705	XagaShifter	Wwise Pitch Shifter			
 	3435419520	New_Guitar_Distortion	Wwise Guitar Distortion			
-	3546444380	Big_Garage1	Wwise Matrix Reverb			
 	4119703916	HelmetEQ	Wwise Parametric EQ			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
@@ -992,6 +1006,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	955860884	Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Temp_TestAmbiences\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528_EF24AC07.wem		\Actor-Mixer Hierarchy\01_Sound FX\Ambience\Amb_MainMixer\Amb_MainBiomeSwitch\Amb_TimeOfDay_MainHub\Evening\Ambience, Scifi, Space Atmosphere, Dark, Creepy, Resonant SND50528		7495556
 	956433349	ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Xaga_HurtSounds_DamageTaken\FullHealth\ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2		73824
 	959559467	Rifle_Alt_Chargev1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Weapons\Rifle\Rifle_Alt_Chargev1_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Alt_Fire\Charge\Rifle_Alt_Chargev1		707188
+	962069064	JD_Okay_Question	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\JD_Okay_Question_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc3_Tr1\JD_Okay_Question		73824
 	963954882	NoooMyleg	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\NoooMyleg_818F3B66.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Xaga_StateDialogue\NoooMyleg		297312
 	964017005	JD_UF1	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Damage\JD_UF1_818F3B66.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\JD_UF1		133728
 	966105362	Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_04	Y:\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_B0A66FF5.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Xaga\Xaga_Fs\Xaga_fs_Metallayer\Fight_Bodyfall_Hard_Metal_Rolling_Fall_02_SND120916_04		103472

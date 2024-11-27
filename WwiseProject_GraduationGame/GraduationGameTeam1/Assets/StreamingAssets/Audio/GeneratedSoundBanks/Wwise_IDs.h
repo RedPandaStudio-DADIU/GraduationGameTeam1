@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID PLAY_DAMAGETAKEN = 1423098094U;
         static const AkUniqueID PLAY_DIA_AI = 4271692713U;
         static const AkUniqueID PLAY_DIA_XAGA = 16982058U;
+        static const AkUniqueID PLAY_DIPLOMAT_DAMAGE = 4162822944U;
         static const AkUniqueID PLAY_DIPLOMATBARKS = 4152854033U;
         static const AkUniqueID PLAY_DOORBEINGKICKED = 1268293438U;
         static const AkUniqueID PLAY_ELEVATOR_BP_OUTOFORDER = 2557748953U;
@@ -487,7 +488,8 @@ namespace AK
         static const AkUniqueID _02_JOHN_DOE = 3570874681U;
         static const AkUniqueID _2DAMBIENCE = 309309195U;
         static const AkUniqueID _2DAMBIENTBEDS = 4152869693U;
-        static const AkUniqueID _03_XAGA = 1153792U;
+        static const AkUniqueID _03_XAGACONFERENCEROOM = 1243625655U;
+        static const AkUniqueID _03_XAGAHANGAR = 1118754633U;
         static const AkUniqueID _3DAMBIENCE = 1301074112U;
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
@@ -506,9 +508,13 @@ namespace AK
         static const AkUniqueID REVERBENVIRONMENTS = 346451691U;
         static const AkUniqueID WEAPONS = 1467963052U;
         static const AkUniqueID XAGA_CONFERENCE = 385642153U;
+        static const AkUniqueID XAGA_CONFERENCE_01 = 1038037717U;
         static const AkUniqueID XAGA_CONFERENCEROOM = 3458995332U;
+        static const AkUniqueID XAGA_CONFERENCEROOM_01 = 424473642U;
         static const AkUniqueID XAGA_FARAWAY = 274948124U;
+        static const AkUniqueID XAGA_FARAWAY_01 = 2768314818U;
         static const AkUniqueID XAGAHANGAR = 3868067129U;
+        static const AkUniqueID XAGAHANGAR_01 = 1591600229U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
