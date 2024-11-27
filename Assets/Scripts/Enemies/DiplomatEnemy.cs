@@ -12,7 +12,7 @@ public class DiplomatEnemy : EnemyBaseClass
 
 
     void Awake(){
-        this.SetHealth(120f);
+        this.SetHealth(90f);
         this.SetAttackDistance(30f);
         this.SetFieldOfView(180f);
         this.SetStoppingDistance(15f);
