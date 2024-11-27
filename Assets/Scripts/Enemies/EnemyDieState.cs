@@ -35,7 +35,7 @@ public class EnemyDieState : IEnemyState
             child.gameObject.SetActive(false);
         }
 
-        // stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
+        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
 
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;

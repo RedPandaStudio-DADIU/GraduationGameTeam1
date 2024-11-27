@@ -18,7 +18,7 @@ public class ShieldEnemy : EnemyBaseClass
     }
 
     void Start(){
-        // this.barkEvent.Post(this.gameObject);
+        this.barkEvent.Post(this.gameObject);
     }
 
     // assign different gun

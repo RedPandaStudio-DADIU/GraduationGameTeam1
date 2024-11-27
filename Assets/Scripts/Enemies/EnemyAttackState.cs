@@ -31,7 +31,7 @@ public class EnemyAttackState : IEnemyState
             }
         }
 
-        //stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Attacking");
+        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Attacking");
 
         
         // if(!stateController.GetIsHuman()){

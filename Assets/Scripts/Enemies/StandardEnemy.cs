@@ -18,7 +18,7 @@ public class StandardEnemy : EnemyBaseClass
     }
 
     void Start(){
-        // this.barkEvent.Post(this.gameObject);
+        this.barkEvent.Post(this.gameObject);
     }
 
     public override void Attack(){
