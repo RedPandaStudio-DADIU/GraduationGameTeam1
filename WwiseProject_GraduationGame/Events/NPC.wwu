@@ -108,6 +108,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Brute_Damage" ID="{62DCBBF7-C70E-4712-87EB-8B7DE927A0EA}">
+							<ChildrenList>
+								<Action Name="" ID="{C33BDECD-2B76-42A6-89D3-FC91270892FA}" ShortID="809412466">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Brute_Damage" ID="{D6494C97-6B86-416D-9D2D-4F7960FBD670}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BruteAttack" ID="{C0F96215-D998-4D7C-BB12-CF1603A1AA80}">
+							<ChildrenList>
+								<Action Name="" ID="{36FC9D4C-572F-4A30-BE86-FB1F00581D49}" ShortID="256278466">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BruteAttack" ID="{7DFB9AD4-9925-4B87-822A-1327A04F88B9}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Soldier" ID="{1393E9D5-8CE5-4457-96DE-742D174C1234}" ShortID="934237553">
@@ -163,6 +185,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Solider_Damage" ID="{D4D4250F-4861-4075-9E30-463353AAEFAA}">
+							<ChildrenList>
+								<Action Name="" ID="{3CE47E2F-09B5-4A76-82EF-D5B47EFAF76B}" ShortID="246254616">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Solider_Damage" ID="{27D8CE60-9A21-492B-B9F7-3B2660EDFCEF}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Diplomat" ID="{239F10AF-C2BB-471C-B919-2791AF17581E}" ShortID="51536644">
@@ -213,6 +246,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="DiplomatBarks" ID="{0604FB3F-C155-47E9-B4EE-F06769B5C02A}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Diplomat_Damage" ID="{20F06F22-3FC7-4994-BB84-0A226CD5C7B4}">
+							<ChildrenList>
+								<Action Name="" ID="{5CD32776-D18C-421B-8B38-DCDCF1FB8395}" ShortID="139536540">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Diplomat_Damage" ID="{65EEB69C-73A6-4B7A-8E69-71315E04A44A}" WorkUnitID="{B2C95192-BFBE-4CA3-9887-4A4AC89C716E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

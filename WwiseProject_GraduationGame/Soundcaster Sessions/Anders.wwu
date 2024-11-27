@@ -30,10 +30,6 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
-							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_Player_Fs" ID="{0D892871-3C28-4402-AE37-C5C00FA299F1}" WorkUnitID="{42B88A57-E40B-4377-81C9-DC30979D03C2}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -54,8 +50,20 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Hangar_Xaga" ID="{D25C5D12-2AA9-433A-BB58-E12F38910B89}" WorkUnitID="{1AAF6FA7-6C10-45F2-AD0F-5A42F0F44870}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_Dia_Ai" ID="{EAFFA92A-9871-4ACF-B471-6623341EF49E}" WorkUnitID="{6A6A0B20-5D28-43CD-9F28-A67E0A03CEF1}"/>
 							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Solider_Damage" ID="{D4D4250F-4861-4075-9E30-463353AAEFAA}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SoldierBarks" ID="{1A0C2DE5-937C-43CA-B52E-7C51E5281DA8}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}"/>
+							<Position X="4" Y="3"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="MainMusicSW" ID="{8A7DDC65-0397-4977-9732-7BEBC4C7C9DA}" WorkUnitID="{99B7097A-5AF6-4BF6-BB88-1E58339C856F}"/>
@@ -77,15 +85,15 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{B06E66B7-3E87-49A6-81A9-F25120B275D9}"/>
+						<CurrentStateRef Name="Combat_high_Lv1" ID="{053F5B01-CCB5-49F0-A56B-4A4AB40ACC87}"/>
 						<CurrentStateRef Name="Sc7_Tr1" ID="{4AF25DBD-DDDF-4706-A27C-EA29B512906A}"/>
 						<CurrentStateRef Name="None" ID="{F5D70421-08EA-47C4-9A07-5AF1242504C0}"/>
 						<CurrentStateRef Name="None" ID="{6FF92945-36F0-45CF-96CF-0C2496A746A6}"/>
-						<CurrentStateRef Name="Sc1_Tr0" ID="{576DFCD8-BEAE-4407-A639-C77A4DEDFDE3}"/>
+						<CurrentStateRef Name="Sc2_Tr1" ID="{B3BBC20D-92E0-45FF-8AC1-E9617B34011C}"/>
 						<CurrentStateRef Name="None" ID="{5F2F25BC-EF38-4DB3-8DF4-52E7BA412DF8}"/>
 						<CurrentStateRef Name="None" ID="{88B4A91F-DC66-43CD-892E-3D1D26ED9126}"/>
 						<CurrentStateRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
-						<CurrentStateRef Name="None" ID="{86461271-D073-44C7-BFD3-AB9EF9B30F7C}"/>
+						<CurrentStateRef Name="Normal_health" ID="{8C83219C-973B-45AE-8967-CA7C8745AF30}"/>
 						<CurrentStateRef Name="None" ID="{1725FE84-7321-45EB-8265-EAA10E64B31A}"/>
 						<CurrentStateRef Name="LostStomach" ID="{A93F9EAD-6E61-430A-80E1-4D0C2ED30FB8}"/>
 						<CurrentStateRef Name="None" ID="{DA74BF0D-A590-4C8D-912C-990697B0C03F}"/>
@@ -102,7 +110,7 @@
 						<CurrentSwitchRef Name="False" ID="{E3A1158F-2D16-41B1-8030-C023E72F0A49}"/>
 						<CurrentSwitchRef Name="Sneak" ID="{36DE7F9B-BEE4-4420-88F7-D7E82FF83A1C}"/>
 						<CurrentSwitchRef Name="FullRain" ID="{558542B5-4740-4A41-BB86-02E6010621D2}"/>
-						<CurrentSwitchRef Name="Attacking" ID="{13A3B766-97EB-4A1E-88D7-B95208B16D18}"/>
+						<CurrentSwitchRef Name="Idleling" ID="{4398C7F2-A553-45EF-A255-7884FB34D042}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
 					</CurrentSwitchList>
@@ -160,6 +168,27 @@
 						<CurrentSwitchRef Name="Attacking" ID="{13A3B766-97EB-4A1E-88D7-B95208B16D18}"/>
 						<CurrentSwitchRef Name="PowerOff" ID="{0AC2D8F9-9524-422B-AE18-511F66B48E5C}"/>
 						<CurrentSwitchRef Name="Off" ID="{288D563D-1979-4D4D-9C07-65738CCA8392}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="EnemyBarksAndDamageSession" ID="{54C8BE7C-C707-4F3B-BC7F-911E96CAE7BB}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_BruteBarks" ID="{6B7F7A0F-63B1-4E90-A8BF-75D594E37C40}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_DiplomatBarks" ID="{0EFFA64D-9311-4F03-BC54-1F493C1031F3}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_SoldierBarks" ID="{1A0C2DE5-937C-43CA-B52E-7C51E5281DA8}" WorkUnitID="{D57903B8-102C-45A4-81B3-47F021EBB1AF}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Dying" ID="{033196D2-5350-4807-AA81-FB1D8AE84DD9}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

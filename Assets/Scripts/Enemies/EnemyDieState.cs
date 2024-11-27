@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using cowsins;
+using AK.Wwise;
 
 public class EnemyDieState : IEnemyState
 {
@@ -34,6 +35,7 @@ public class EnemyDieState : IEnemyState
             child.gameObject.SetActive(false);
         }
 
+        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
 
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;

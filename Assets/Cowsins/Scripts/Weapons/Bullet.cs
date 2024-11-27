@@ -15,6 +15,7 @@ namespace cowsins
         [SerializeField] private float smallRagdollForce = 200f;
         [SerializeField] private float ragdollDuration = 4.0f; 
         [SerializeField] private float smallRagdollDuration = 3.0f;
+
         [HideInInspector] public bool isEnemy = false; 
         [HideInInspector] public bool isHuman = false; 
 
@@ -64,7 +65,14 @@ namespace cowsins
             //     GameObject parentObject = other.transform.parent.gameObject;
             //     Shoot(damage, parentObject.GetComponent<Collider>());
             // } 
-            if(other.CompareTag("Enemy") && !isHuman) {
+
+
+
+            // Set tag for enemy projectiles as EnemyBullet <- compare tag of this object (EnemyBullet) and of other (Enemy)
+
+            if(other.CompareTag("Enemy") && this.gameObject.CompareTag("EnemyFire")){
+                DestroyProjectile();
+            } else if(other.CompareTag("Enemy") && !isHuman) {
                 // DamageTarget(other.transform, damage, false);
                 // Debug.LogError("Enemy " + other.gameObject.name + " hit!");
                 if(this.CompareTag("ChargeShot")){
@@ -80,7 +88,7 @@ namespace cowsins
 
                 }
 
-            } else if(other.CompareTag("Window")){
+            }  else if(other.CompareTag("Window") || other.CompareTag("Door")){
                 DestroyProjectile();
             } 
             else if(other.CompareTag("WeakSpot")){
@@ -155,15 +163,15 @@ namespace cowsins
                     enemy.ChangeState(new EnemyHitState());
                 }
 
-                if(enemy.GetEnemy().GetHealth() > 0){
-                    Debug.Log("Inside health check");
-                    if(!enemy.GetisInRecovery()){
-                        enemy.Recovery(ragdollDuration);
-                    }
-                } else {
-                    enemy.ChangeState(new EnemyDieState());
-                    Debug.Log("Health check not passed");
-                }
+                // if(enemy.GetEnemy().GetHealth() > 0){
+                //     Debug.Log("Inside health check");
+                //     if(!enemy.GetisInRecovery()){
+                //         enemy.Recovery(ragdollDuration);
+                //     }
+                // } else {
+                //     enemy.ChangeState(new EnemyDieState());
+                //     Debug.Log("Health check not passed");
+                // }
 
             }
 

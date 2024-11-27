@@ -31,9 +31,6 @@ namespace cowsins
 
         [Tooltip("max amount of weapons you can have")] public int inventorySize;
 
-        [Tooltip("What objects should be hit")] public LayerMask hitLayer;
-
-
         public bool shooting { get; private set; } = false;
 
         private float damagePerBullet;

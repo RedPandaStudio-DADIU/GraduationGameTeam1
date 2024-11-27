@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
 using UnityEditor;
@@ -37,6 +37,9 @@ namespace cowsins
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("shield"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("maxHealth"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("maxShield"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("playerDamage"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("playerDeath"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("playerBark"));
                         break;
                     case "Fall Damage":
                         EditorGUILayout.LabelField("FALL DAMAGE", EditorStyles.boldLabel);

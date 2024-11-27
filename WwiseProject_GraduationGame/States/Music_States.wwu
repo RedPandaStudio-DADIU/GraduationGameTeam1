@@ -6,15 +6,14 @@
 				<StateGroup Name="Combat_intensity_Lv1" ID="{857203BA-DCB5-4084-B845-055C4269FFCA}">
 					<ChildrenList>
 						<State Name="None" ID="{B06E66B7-3E87-49A6-81A9-F25120B275D9}"/>
-						<State Name="Combat_low_Lv1" ID="{053F5B01-CCB5-49F0-A56B-4A4AB40ACC87}"/>
-						<State Name="Combat_high_Lv1" ID="{39E35C94-AD1E-4E9A-81F2-848C10CBFB05}"/>
+						<State Name="Combat_high_Lv1" ID="{053F5B01-CCB5-49F0-A56B-4A4AB40ACC87}"/>
 					</ChildrenList>
 				</StateGroup>
-				<StateGroup Name="Combat_intensity_Lv2" ID="{D06D187A-F794-458E-84B0-32848A952069}">
+				<StateGroup Name="Combat_Lv2" ID="{D06D187A-F794-458E-84B0-32848A952069}">
 					<ChildrenList>
 						<State Name="None" ID="{88B4A91F-DC66-43CD-892E-3D1D26ED9126}"/>
-						<State Name="Combat_high_Lv2" ID="{AD366E52-C944-4627-97CA-6E3DB937C575}"/>
-						<State Name="Combat_base_lv2" ID="{5D021475-9B83-4FC0-B022-CE6776E7795A}"/>
+						<State Name="Combat_Xaga_Lv2" ID="{AD366E52-C944-4627-97CA-6E3DB937C575}"/>
+						<State Name="Combat_hall_lv2" ID="{5D021475-9B83-4FC0-B022-CE6776E7795A}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Player_State_health" ID="{4944659A-FA20-4983-BBFB-9F0F617A2B7E}">
@@ -24,12 +23,13 @@
 						<State Name="Normal_health" ID="{8C83219C-973B-45AE-8967-CA7C8745AF30}"/>
 					</ChildrenList>
 				</StateGroup>
-				<StateGroup Name="Combat" ID="{1A0BCBDB-3CB8-4443-A3A8-DAD991CE1030}">
+				<StateGroup Name="Player_state" ID="{1A0BCBDB-3CB8-4443-A3A8-DAD991CE1030}">
 					<ChildrenList>
 						<State Name="None" ID="{5F2F25BC-EF38-4DB3-8DF4-52E7BA412DF8}"/>
 						<State Name="In_combat" ID="{789B1D6D-0E8B-4A6A-87AE-2C1F3B387078}"/>
 						<State Name="No_combat" ID="{CEA5D50E-21F4-4645-88AC-E1EE79145F5F}"/>
 						<State Name="Elevator" ID="{D0A2DEAB-4D62-43CA-ABA2-EE4C60479D9B}"/>
+						<State Name="Control_tower" ID="{4F532692-BA69-4B41-A33F-3F97F9170C89}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Player_Level" ID="{7B1B52E6-4837-4EFF-A630-033C7EC35697}">

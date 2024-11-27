@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using cowsins;
+using AK.Wwise;
+
 
 public class EnemyHitState : IEnemyState
 {
@@ -18,37 +20,42 @@ public class EnemyHitState : IEnemyState
             stateController.GetEnemy().gameObject.GetComponentInChildren<Animator>().enabled = false;
 
             stateController.ChangeState(new EnemyDieState());
-        } else{
-            stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
-            stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
-        }
+        } 
+
+        // else{
+        //     // stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
+        //     // stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
+        // }
+
+        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "TakingDamage");
+        stateController.GetEnemy().GetDamageSound().Post(stateController.GetEnemy().gameObject);
 
         if(stateController.GetEnemy().CompareTag("Boss") && stateController.GetEnemy().GetHealth() == 40f){
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
         }
 
-        stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
-        Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
-        weapon.gameObject.SetActive(false);
+        // stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
+        // Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
+        // weapon.gameObject.SetActive(false);
 
-        // stateController.GetEnemy().GetComponent<EnemyHealth>().Damage(0f, false);
+        stateController.GetEnemy().GetComponent<EnemyHealth>().Damage(0f, false);
 
     }
     public void OnUpdate(EnemyStateController stateController){
        
     }
     public void OnExit(EnemyStateController stateController){     
-        if(stateController.GetEnemy().GetHealth()>0){
-            // stateController.GetEnemy().GetRagdollController().RecoverFromRagdoll();
-            if(!isDying){
-                stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = true;
+        // if(stateController.GetEnemy().GetHealth()>0){
+        //     // stateController.GetEnemy().GetRagdollController().RecoverFromRagdoll();
+        //     if(!isDying){
+        //         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = true;
 
-                Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
-                weapon.gameObject.SetActive(true);
-            }
+        //         Transform weapon = stateController.gameObject.transform.Find("WeaponHolder");
+        //         weapon.gameObject.SetActive(true);
+        //     }
            
 
-        }
+        // }
 
     }
 

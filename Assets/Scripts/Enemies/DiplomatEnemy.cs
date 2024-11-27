@@ -2,15 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using cowsins;
+using AK.Wwise;
+
 
 public class DiplomatEnemy : EnemyBaseClass
 {
-    
+    [SerializeField] private AK.Wwise.Event takeDamageEvent;
+    [SerializeField] private AK.Wwise.Event barkEvent;
+
+
     void Awake(){
         this.SetHealth(120f);
         this.SetAttackDistance(30f);
         this.SetFieldOfView(180f);
         this.SetStoppingDistance(15f);
+    }
+
+    void Start(){
+        this.barkEvent.Post(this.gameObject);
     }
 
     // assign different gun
@@ -30,4 +39,8 @@ public class DiplomatEnemy : EnemyBaseClass
         GetComponent<UnityEngine.AI.NavMeshAgent>().destination = playerPosition;
     }
 
+
+    public override AK.Wwise.Event GetDamageSound(){
+        return this.takeDamageEvent;
+    }
 }

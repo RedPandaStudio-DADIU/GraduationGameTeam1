@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AK.Wwise;
 
 public abstract class EnemyBaseClass : MonoBehaviour
 {
@@ -15,20 +16,25 @@ public abstract class EnemyBaseClass : MonoBehaviour
     
     public Animator animator;
 
-    [Header("Sound Events")]
-    [SerializeField] private AK.Wwise.Event hitSoundEvent;
+    // [Header("Sound Events")]
+    // [SerializeField] private AK.Wwise.Event hitSoundEvent;
     //[SerializeField] private AK.Wwise.Event deathSoundEvent;
-
 
 
     public abstract void Attack();
     public abstract void Die();
     public abstract void LosePlayer(Vector3 playerPosition);
+    public abstract AK.Wwise.Event GetDamageSound();
+
     public virtual void SpecialAttack(Transform playe){
         Debug.Log("Inside Special Attack");
     }
 
     public virtual AK.Wwise.Event GetChargeSound(){
+        return null;
+    }
+    
+    public virtual AK.Wwise.Event GetSpecialAttackSound(){
         return null;
     }
 
@@ -54,11 +60,11 @@ public abstract class EnemyBaseClass : MonoBehaviour
             
         }
 
-        if (hitSoundEvent != null)
-        {
-            hitSoundEvent.Post(gameObject);
-            Debug.Log("Played hit sound for enemy.");
-        }
+        // if (hitSoundEvent != null)
+        // {
+        //     hitSoundEvent.Post(gameObject);
+        //     Debug.Log("Played hit sound for enemy.");
+        // }
 
     }
 
@@ -98,5 +104,8 @@ public abstract class EnemyBaseClass : MonoBehaviour
         return this.GetComponent<EnemyRagdollController>();
     }
 
+    public void SetSwitchValue(string switchGroup, string switchValue){
+        AkSoundEngine.SetSwitch(switchGroup, switchValue, this.gameObject);
+    }
 
 }

@@ -7,10 +7,15 @@
 					<PropertyList>
 						<Property Name="GameAuxSendVolume" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>-15</Value>
 							</ValueList>
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -25,6 +30,14 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="JD_Barks" ID="{7A4421FF-5518-49AC-A0E2-EB29A78E8288}" ShortID="326168600">
+					<PropertyList>
+						<Property Name="GameAuxSendVolume" Type="Real64">
+							<ValueList>
+								<Value>-21</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -680,6 +693,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Damage" ID="{0B8024C8-A710-4D46-993D-A4AEC0DE73B0}" ShortID="595161720">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -1462,24 +1482,70 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="JD_Hitmarker" ID="{F895F81A-16F5-4D29-ACAE-EB4D030263D1}" ShortID="759676003">
+					</ChildrenList>
+				</ActorMixer>
+				<RandomSequenceContainer Name="JD_Kick" ID="{F6105757-8C29-4369-83B3-D84DC7D2D979}" ShortID="887405076">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2D031C05-CEFC-4514-A92E-AAE4A43C297E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="126"/>
+											<Property Name="Min" Type="Real64" Value="-101"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{3D9DCDC6-1C17-4B81-ADA6-05240DB9C7E9}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Fight_Cloth_Punch_Block_Swoosh_SND4355" ID="{FD40E8B0-7C00-4CBC-828D-DF42E2FB4187}" ShortID="895578024">
 							<PropertyList>
-								<Property Name="OverrideOutput" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
+								<Property Name="Lowpass" Type="int16">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{BBD177CA-BB50-4274-893C-F3061A7337EA}"/>
+											<Modifier Name="" ID="{B056F4C3-D3CC-47DA-9549-B342D6C97BA4}"/>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FE83B11A-0E34-47BC-8D7F-6DC9B117AF45}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1488,246 +1554,175 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="Fleshsound" ID="{F9818419-F099-4C83-BEA2-CB6AC951ED50}" ShortID="1062710597">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{3532B8C5-10D0-457B-9D85-05E654805279}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-7</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Fleshmarker" ID="{F4F72E6A-09A4-48DB-97F6-4888219C85E3}" ShortID="16811132">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7C7BD66E-3343-440D-AE9E-D8461403CF28}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0502787558685446"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.100557511737089"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.670383411580595"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="994086495"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7C7BD66E-3343-440D-AE9E-D8461403CF28}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Fleshmarker_01" ID="{CF729D18-09BC-4D30-8822-581E0BA613D9}" ShortID="322168191">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{DE341B9C-0373-4869-9DA7-22FC5F007200}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.02233470266041"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.77651604068858"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="315064986"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{DE341B9C-0373-4869-9DA7-22FC5F007200}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Fleshmarker_02" ID="{9900CD68-CE4F-4B20-B204-22A56C6B3ADD}" ShortID="471597897">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{57FD745E-D230-4315-9D01-6B3D38C2E0BD}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.134076682316119"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.99439064945227"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.78209115805947"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="472632658"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{57FD745E-D230-4315-9D01-6B3D38C2E0BD}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Fleshmarker_03" ID="{A8299148-32E4-4393-B730-00D11C3BDEAB}" ShortID="866999111">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{EEE1EBC5-5086-4334-8AA8-84995A87686C}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0502787558685447"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="2.96644659624413"/>
-														<Property Name="TrimEnd" Type="Real64" Value="3.7206279342723"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="467935248"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{EEE1EBC5-5086-4334-8AA8-84995A87686C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Fleshmarker_04" ID="{176D0F00-2610-4F83-ACC7-DB1FC65AB078}" ShortID="547754175">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{C40BA6E4-FAF9-4FFE-A87F-292519D50433}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.100557511737089"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.95526212832551"/>
-														<Property Name="TrimEnd" Type="Real64" Value="4.70944346635368"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="706104011"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{C40BA6E4-FAF9-4FFE-A87F-292519D50433}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Fleshmarker_05" ID="{943A17E0-8A1D-4DD1-BBB8-ED6AC6A2731F}" ShortID="890192111">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7D584E89-2DF1-423B-AF97-DDC965D500D9}">
-													<PropertyList>
-														<Property Name="LoopBegin" Type="Real64" Value="4.8435201486698"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="4.82676056338029"/>
-														<Property Name="TrimEnd" Type="Real64" Value="5.59770148669797"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="864022316"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7D584E89-2DF1-423B-AF97-DDC965D500D9}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Fleshmarker_06" ID="{03394EB3-4790-4102-94D1-E8D51CD05E4F}" ShortID="132616450">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{B7CABBC0-54C0-4C6A-A695-9CC223A52429}">
-													<PropertyList>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="5.68149941314554"/>
-														<Property Name="TrimEnd" Type="Real64" Value="6.43568075117371"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="76136184"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{B7CABBC0-54C0-4C6A-A695-9CC223A52429}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<Sound Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{687631E4-5233-47C3-ACBA-CF16DC8F60B8}" ShortID="10164455">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{8B7E8222-C36D-4F0F-8E0E-8ADD2FF623FA}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="227"/>
-															<Property Name="Min" Type="Real64" Value="-202"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
+								<AudioFileSource Name="Fight_Cloth_Punch_Block_Swoosh_SND4355" ID="{7189F687-7BAA-4AAD-A44B-ED9D1A13EFB8}">
+									<Language>SFX</Language>
+									<AudioFile>Fight_Cloth_Punch_Block_Swoosh_SND4355.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="528638751"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fight_Cloth_Punch_Block_Swoosh_SND4355" ID="{7189F687-7BAA-4AAD-A44B-ED9D1A13EFB8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fight_Impact_Kick_Soft_Body_Impact_Short_02_SND85345" ID="{35F83D25-8B76-4286-8BE4-8F1EC2A31F91}" ShortID="544517635">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.08</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C00E3C33-5BC6-4FAB-9E73-09E07AF77877}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fight_Impact_Kick_Soft_Body_Impact_Short_02_SND85345" ID="{3E5EAB25-F9ED-4DE9-8C6A-23C6989AB3AE}">
+									<Language>SFX</Language>
+									<AudioFile>Fight_Impact_Kick_Soft_Body_Impact_Short_02_SND85345.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="707666134"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fight_Impact_Kick_Soft_Body_Impact_Short_02_SND85345" ID="{3E5EAB25-F9ED-4DE9-8C6A-23C6989AB3AE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fight_Impact_Kick_Body_Hit_Fast_Variations_01_SND107137" ID="{8812B7D4-26C0-40BA-A7C2-DEFD18D152FD}" ShortID="268908715">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E215E0F5-B914-4926-92CE-46CB7A791F19}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fight_Impact_Kick_Body_Hit_Fast_Variations_01_SND107137" ID="{69B635FF-67DB-4ACE-B37A-6D595CE896C7}">
+									<Language>SFX</Language>
+									<AudioFile>Fight_Impact_Kick_Body_Hit_Fast_Variations_01_SND107137.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="232218603"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fight_Impact_Kick_Body_Hit_Fast_Variations_01_SND107137" ID="{69B635FF-67DB-4ACE-B37A-6D595CE896C7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Fight_Cloth_Punch_Block_Swoosh_SND4355" ID="{FD40E8B0-7C00-4CBC-828D-DF42E2FB4187}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Fight_Impact_Kick_Soft_Body_Impact_Short_02_SND85345" ID="{35F83D25-8B76-4286-8BE4-8F1EC2A31F91}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Fight_Impact_Kick_Body_Hit_Fast_Variations_01_SND107137" ID="{8812B7D4-26C0-40BA-A7C2-DEFD18D152FD}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="JD_Hitmarker" ID="{F895F81A-16F5-4D29-ACAE-EB4D030263D1}" ShortID="759676003">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{BBD177CA-BB50-4274-893C-F3061A7337EA}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Fleshsound" ID="{F9818419-F099-4C83-BEA2-CB6AC951ED50}" ShortID="1062710597">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3532B8C5-10D0-457B-9D85-05E654805279}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Fleshmarker" ID="{F4F72E6A-09A4-48DB-97F6-4888219C85E3}" ShortID="16811132">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -1737,32 +1732,241 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{4F9E0A45-3A98-4A1D-A5F3-A55F5FD0ABFA}">
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7C7BD66E-3343-440D-AE9E-D8461403CF28}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0502787558685446"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.100557511737089"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.670383411580595"/>
+											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Hitmarker_Sound_Effect_by_User391915396_Id_570335.wav</AudioFile>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="666359023"/>
+												<MediaID ID="994086495"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{4F9E0A45-3A98-4A1D-A5F3-A55F5FD0ABFA}" Platform="Linked"/>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7C7BD66E-3343-440D-AE9E-D8461403CF28}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fleshmarker_01" ID="{CF729D18-09BC-4D30-8822-581E0BA613D9}" ShortID="322168191">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{DE341B9C-0373-4869-9DA7-22FC5F007200}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.02233470266041"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.77651604068858"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="315064986"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{DE341B9C-0373-4869-9DA7-22FC5F007200}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fleshmarker_02" ID="{9900CD68-CE4F-4B20-B204-22A56C6B3ADD}" ShortID="471597897">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{57FD745E-D230-4315-9D01-6B3D38C2E0BD}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.134076682316119"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.99439064945227"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.78209115805947"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="472632658"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{57FD745E-D230-4315-9D01-6B3D38C2E0BD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fleshmarker_03" ID="{A8299148-32E4-4393-B730-00D11C3BDEAB}" ShortID="866999111">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{EEE1EBC5-5086-4334-8AA8-84995A87686C}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0502787558685447"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.96644659624413"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.7206279342723"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="467935248"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{EEE1EBC5-5086-4334-8AA8-84995A87686C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fleshmarker_04" ID="{176D0F00-2610-4F83-ACC7-DB1FC65AB078}" ShortID="547754175">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{C40BA6E4-FAF9-4FFE-A87F-292519D50433}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.100557511737089"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.95526212832551"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.70944346635368"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="706104011"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{C40BA6E4-FAF9-4FFE-A87F-292519D50433}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fleshmarker_05" ID="{943A17E0-8A1D-4DD1-BBB8-ED6AC6A2731F}" ShortID="890192111">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7D584E89-2DF1-423B-AF97-DDC965D500D9}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="4.8435201486698"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.82676056338029"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.59770148669797"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="864022316"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{7D584E89-2DF1-423B-AF97-DDC965D500D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Fleshmarker_06" ID="{03394EB3-4790-4102-94D1-E8D51CD05E4F}" ShortID="132616450">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{B7CABBC0-54C0-4C6A-A695-9CC223A52429}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="5.68149941314554"/>
+												<Property Name="TrimEnd" Type="Real64" Value="6.43568075117371"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bullets_Impact_Body_Flesh_SND6368 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="76136184"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullets_Impact_Body_Flesh_SND6368 1" ID="{B7CABBC0-54C0-4C6A-A695-9CC223A52429}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Playlist">
-									<Reference>
-										<ObjectRef Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{687631E4-5233-47C3-ACBA-CF16DC8F60B8}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
-									</Reference>
-									<Reference>
-										<ObjectRef Name="Fleshsound" ID="{F9818419-F099-4C83-BEA2-CB6AC951ED50}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
 						</RandomSequenceContainer>
+						<Sound Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{687631E4-5233-47C3-ACBA-CF16DC8F60B8}" ShortID="10164455">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8B7E8222-C36D-4F0F-8E0E-8ADD2FF623FA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="227"/>
+													<Property Name="Min" Type="Real64" Value="-202"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{4F9E0A45-3A98-4A1D-A5F3-A55F5FD0ABFA}">
+									<Language>SFX</Language>
+									<AudioFile>Hitmarker_Sound_Effect_by_User391915396_Id_570335.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="666359023"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{4F9E0A45-3A98-4A1D-A5F3-A55F5FD0ABFA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-				</ActorMixer>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Hitmarker_Sound_Effect_by_User391915396_Id_570335" ID="{687631E4-5233-47C3-ACBA-CF16DC8F60B8}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Fleshsound" ID="{F9818419-F099-4C83-BEA2-CB6AC951ED50}" WorkUnitID="{194AC71F-FA23-4DA9-89A8-B23BA47DC2D3}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

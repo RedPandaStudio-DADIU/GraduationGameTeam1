@@ -20,6 +20,9 @@ public class ElevatorManager : MonoBehaviour
             PlayerDataManager.Instance.playerHealth = other.gameObject.GetComponent<PlayerStats>().health;
             Debug.Log("Health: " + PlayerDataManager.Instance.playerHealth);
             PlayerDataManager.Instance.currentWeaponIndex = other.gameObject.GetComponent<WeaponController>().currentWeapon;
+            MusicManager musicManager = GameObject.Find("GeneralSoundAmbience").GetComponent<MusicManager>();
+            musicManager.CheckIfSameState("Elevator");
+
             int index = 0;
             foreach (WeaponIdentification id in other.gameObject.GetComponent<WeaponController>().inventory){
                 // Debug.Log("ELEVATOR: ""Weapon identification: " + id.name);

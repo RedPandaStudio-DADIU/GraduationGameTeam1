@@ -908,6 +908,59 @@
 						<ActiveSource Name="Fire_Burning_Burning_Wood_Bonfire_Soft_Intensity_Loop_SND122310" ID="{B0B45DB9-CFF6-4F2E-B29E-9550B556749D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="DoorBeingKicked" ID="{EEB2AE37-FBBE-499D-8565-5C76FF95DCDD}" ShortID="155531487">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{B6A7F2A7-DA86-40EA-B5CC-2B9E5EE482CA}" ShortID="296985517">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{05D02043-BC81-4461-8361-2BF1CC3618DD}">
+									<Language>SFX</Language>
+									<AudioFile>Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="270623365"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{05D02043-BC81-4461-8361-2BF1CC3618DD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{B6A7F2A7-DA86-40EA-B5CC-2B9E5EE482CA}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

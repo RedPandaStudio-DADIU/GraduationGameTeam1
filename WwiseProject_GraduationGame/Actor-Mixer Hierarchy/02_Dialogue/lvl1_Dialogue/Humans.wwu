@@ -1110,6 +1110,11 @@
 										<Sound Name="JD_DamnComputerDoYouSeeThis" ID="{A8A0A08B-C173-493B-9863-32C9718E8764}" ShortID="488856304">
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="4"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.2</Value>
+													</ValueList>
+												</Property>
 												<Property Name="IsVoice" Type="bool" Value="True"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
 												<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -1144,6 +1149,281 @@
 												<ActiveSource Name="JD_DamnComputerDoYouSeeThis" ID="{DF3A0A00-3BDF-44AF-9721-7DC4D7DAF4CB}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="JD_Okay_Question" ID="{D96854F3-CF7C-47AE-8F33-5702CE76937F}" ShortID="910495373">
+											<PropertyList>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Okay_Question" ID="{110EBF33-9394-444D-9D26-387F71C767FC}">
+													<Language>SFX</Language>
+													<AudioFile>JD_Okay_Question.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="962069064"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Okay_Question" ID="{110EBF33-9394-444D-9D26-387F71C767FC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_Nice" ID="{1DB54F6A-A088-46AB-AB5C-F87308F1BF3C}" ShortID="227258536">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Nice" ID="{7DA3F518-A54E-4CBB-AFBA-DB9E6DE5C73C}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_Nice.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="619097722"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Nice" ID="{7DA3F518-A54E-4CBB-AFBA-DB9E6DE5C73C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_Okay" ID="{CB7E0143-7526-435F-8630-8EC49C75E939}" ShortID="147111891">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Okay" ID="{C4761167-B545-4025-B319-D8C0D2197065}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_Okay.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="330433020"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Okay" ID="{C4761167-B545-4025-B319-D8C0D2197065}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_Right" ID="{8225391D-C6C4-4808-9819-1CD979462158}" ShortID="981087805">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Right" ID="{15493F71-2F5C-41F6-BCBD-287F2D7EF9CC}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_Right.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="296992937"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Right" ID="{15493F71-2F5C-41F6-BCBD-287F2D7EF9CC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_SheMadeADealWithTheRomans" ID="{C7CE43E6-7446-4929-A279-A54B830D2853}" ShortID="533196023">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_SheMadeADealWithTheRomans" ID="{B39262A4-53AC-42D1-B60D-D5ACEC239394}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_SheMadeADealWithTheRomans.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="36107049"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_SheMadeADealWithTheRomans" ID="{B39262A4-53AC-42D1-B60D-D5ACEC239394}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AI_And-MyNameIsKaren" ID="{53972080-3DDD-4CAD-B92E-B82E7DFAAC87}" ShortID="787527331">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AI_And-MyNameIsKaren" ID="{16F31594-F4DB-4BE4-B3F3-64DE6130FD7E}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0573558118899734"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.831659272404614"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>AI_And-MyNameIsKaren.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="500080815"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AI_And-MyNameIsKaren" ID="{16F31594-F4DB-4BE4-B3F3-64DE6130FD7E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ai_AfterXagaTookOverSheSaid" ID="{4C122CA8-6D79-4495-AE09-B163C3312983}" ShortID="814779014">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_AfterXagaTookOverSheSaid" ID="{8AB4837A-01D3-414B-B416-CF911FF0BFC9}">
+													<Language>English(US)</Language>
+													<AudioFile>Ai_AfterXagaTookOverSheSaid.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="698207332"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_AfterXagaTookOverSheSaid" ID="{8AB4837A-01D3-414B-B416-CF911FF0BFC9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ai_ICanTellYouAllAboutItAfter" ID="{82D25EEB-D4F2-46A9-8020-837EB6651627}" ShortID="588623952">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>0.2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_ICanTellYouAllAboutItAfter" ID="{27206956-E7E9-457E-A71F-3B71C47B7E76}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0193006777483232"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.797497255254451"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>Ai_ICanTellYouAllAboutItAfter.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="570910821"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_ICanTellYouAllAboutItAfter" ID="{27206956-E7E9-457E-A71F-3B71C47B7E76}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Ai_Yea3000YearsAgo" ID="{2864FC1B-1C61-492D-AD0E-B76DE76CBA19}" ShortID="381286499">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Ai_Yea3000YearsAgo" ID="{F983A06F-DC12-4908-8B76-5E58F6618E92}">
+													<Language>English(US)</Language>
+													<AudioFile>Ai_Yea3000YearsAgo.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="986711901"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Ai_Yea3000YearsAgo" ID="{F983A06F-DC12-4908-8B76-5E58F6618E92}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="JD_Huh" ID="{6705092F-6046-4DFA-81EA-94DC10D003DD}" ShortID="650077139">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="PlayerVoice" ID="{30C2C9C8-9D91-4B80-9978-50FC91CB75BE}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="JD_Huh" ID="{A0736B14-D55B-4A4A-A376-B9B3EE01AA6D}">
+													<Language>English(US)</Language>
+													<AudioFile>JD_Huh.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="332571154"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="JD_Huh" ID="{A0736B14-D55B-4A4A-A376-B9B3EE01AA6D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Playlist">
@@ -1151,10 +1431,28 @@
 												<ObjectRef Name="JD_DamnComputerDoYouSeeThis" ID="{A8A0A08B-C173-493B-9863-32C9718E8764}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 											</Reference>
 											<Reference>
-												<ObjectRef Name="AI_ImNotReallyaComputer_Happy" ID="{43C9844F-615D-4557-BE4A-FD0EA7523C97}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+												<ObjectRef Name="Ai_AfterXagaTookOverSheSaid" ID="{4C122CA8-6D79-4495-AE09-B163C3312983}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 											</Reference>
 											<Reference>
-												<ObjectRef Name="AI_AndYesISeeIt2" ID="{AB51EFA5-6AA1-4A54-866F-C579AD749D8D}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+												<ObjectRef Name="JD_SheMadeADealWithTheRomans" ID="{C7CE43E6-7446-4929-A279-A54B830D2853}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Ai_Yea3000YearsAgo" ID="{2864FC1B-1C61-492D-AD0E-B76DE76CBA19}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_Huh" ID="{6705092F-6046-4DFA-81EA-94DC10D003DD}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Ai_ICanTellYouAllAboutItAfter" ID="{82D25EEB-D4F2-46A9-8020-837EB6651627}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_Nice" ID="{1DB54F6A-A088-46AB-AB5C-F87308F1BF3C}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="AI_And-MyNameIsKaren" ID="{53972080-3DDD-4CAD-B92E-B82E7DFAAC87}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="JD_Right" ID="{8225391D-C6C4-4808-9819-1CD979462158}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 											</Reference>
 										</ObjectList>
 									</ObjectLists>

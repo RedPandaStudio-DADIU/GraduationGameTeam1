@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using AK.Wwise;
+
 
 public class GlobalEnemyStateMachine : MonoBehaviour
 {
@@ -77,7 +80,11 @@ public class GlobalEnemyStateMachine : MonoBehaviour
 
     public void LosePlayer(){
         Debug.Log("PLAYER IS LOST!");
-        this.enemies[0].GetMusicManager().CheckIfSameState(0);
+        if(SceneManager.GetActiveScene().buildIndex == 1){
+            this.enemies[0].GetMusicManager().CheckIfSameState("No combat");
+        } else {
+            this.enemies[0].GetMusicManager().CheckIfSameState("Combat hall");
+        }
 
         if (playerDetected)
         {

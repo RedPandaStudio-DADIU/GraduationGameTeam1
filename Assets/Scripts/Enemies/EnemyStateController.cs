@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using cowsins;
+using AK.Wwise;
 
 public class EnemyStateController : MonoBehaviour
 {

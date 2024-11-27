@@ -144,6 +144,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using AK.Wwise;
 
 namespace cowsins
 {
@@ -159,8 +160,7 @@ namespace cowsins
 
         [SerializeField] private VideoPlayer videoPlayer;
         [SerializeField] private string videoFileName ; 
-        
-   
+        [SerializeField] private AK.Wwise.Event cutsceneSound; 
 
 
         [SerializeField, Header("Sections")] private MainMenuSection[] mainMenuSections;
@@ -255,13 +255,13 @@ namespace cowsins
                 
                 #if UNITY_EDITOR || UNITY_STANDALONE
                     // Correct the file path for VideoPlayer
-                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Final_Cutscene.mp4";
                     videoPlayer.url = videoPath;
                 #elif UNITY_ANDROID
-                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov"; // Android handles StreamingAssets differently
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Final_Cutscene.mp4"; // Android handles StreamingAssets differently
                     videoPlayer.url = videoPath;
                 #elif UNITY_IOS
-                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Final_Cutscene.mp4";
                     videoPlayer.url = videoPath;
                 #endif
                 
@@ -278,6 +278,7 @@ namespace cowsins
                  videoPlayer.loopPointReached += OnVideoEnd;
                  mainMenuSections[1].section.gameObject.SetActive(false);
                 
+                cutsceneSound.Post(this.gameObject);
                 videoPlayer.Play();
                 Debug.Log("Is playing: " + videoPlayer.isPlaying);
 

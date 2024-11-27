@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 6874317759649944159}
   - component: {fileID: 6463514462530511863}
   - component: {fileID: 3797153368351518180}
-  - component: {fileID: 9218112862655758215}
   m_Layer: 0
   m_Name: GeneralManagers
   m_TagString: Untagged
@@ -84,24 +83,7 @@ MonoBehaviour:
   defaultSoundEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
---- !u!114 &3866752064014184287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2998051602686989831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ead1eedae63625498244a83493d2cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useCoins: 1
-  defaultSoundEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e3fb2a6d883107943b091165e5323c44, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 8fd674008c3705041988cd9dc93e832d, type: 2}
 --- !u!114 &3797153368351518180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,102 +109,6 @@ MonoBehaviour:
   - 5300
   - 6000
   - 6700
---- !u!82 &9218112862655758215
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2998051602686989831}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 3dc5bcb72860b6345a662a8ccec7587f, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &3473707595666798071
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,23 +246,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7b1b4c8f8cfb1ba44aca4c2fb3b82679, type: 2}
-  defaultStep: []
-  grassStep: []
-  metalStep: []
-  mudStep: []
-  woodStep: []
-  footstepEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  jumpEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  landingEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
   playerCam: {fileID: 4612824603648159582}
   orientation: {fileID: 4612824604376541686}
   canRunBackwards: 0
@@ -427,15 +296,6 @@ MonoBehaviour:
   maximumDistanceToAssistAim: 50
   aimAssistSpeed: 1.5
   aimAssistSensitivity: 0.5
-  usesStamina: 1
-  stamina: 0
-  minStaminaRequiredToRun: 2
-  maxStamina: 10
-  staminaRegenMultiplier: 1
-  LoseStaminaWalking: 0
-  staminaLossOnJump: 2
-  staminaLossOnSlide: 0.4
-  staminaLossOnDash: 0
   canWallRun: 0
   useGravity: 1
   cancelWallRunMethod: 0
@@ -456,22 +316,7 @@ MonoBehaviour:
   wallBounceForce: 0
   wallBounceUpwardsForce: 0
   oppositeWallDetectionDistance: 1
-  canDash: 0
-  dashMethod: 0
-  infiniteDashes: 0
-  dashing: 0
-  amountOfDashes: 3
-  dashCooldown: 0
-  damageProtectionWhileDashing: 0
-  currentDashes: 0
-  dashForce: 0
-  dashDuration: 0
-  canShootWhileDashing: 0
   isCrouching: 0
-  footstepsEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
   footstepsEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -512,15 +357,6 @@ MonoBehaviour:
     OnWallBounce:
       m_PersistentCalls:
         m_Calls: []
-    OnStartDash:
-      m_PersistentCalls:
-        m_Calls: []
-    OnDashing:
-      m_PersistentCalls:
-        m_Calls: []
-    OnEndDash:
-      m_PersistentCalls:
-        m_Calls: []
     OnStartClimb:
       m_PersistentCalls:
         m_Calls: []
@@ -528,18 +364,6 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     OnEndClimb:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStartGrapple:
-      m_PersistentCalls:
-        m_Calls: []
-    OnGrappling:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStopGrapple:
-      m_PersistentCalls:
-        m_Calls: []
-    OnGrappleEnabled:
       m_PersistentCalls:
         m_Calls: []
   maxCameraAngle: 89.7
@@ -551,7 +375,6 @@ MonoBehaviour:
   normalFOV: 60
   runningFOV: 70
   wallrunningFOV: 80
-  fovToAddOnDash: 0
   fadeInFOVAmount: 5
   fadeOutFOVAmount: 10
   allowGrapple: 0
@@ -679,6 +502,14 @@ MonoBehaviour:
   healAmount: 0
   restartAutoHealAfterBeingDamaged: 0
   restartAutoHealTime: 0
+  playerDamage:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  playerDeath:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   isDead: 0
   events:
     OnDeath:
