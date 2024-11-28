@@ -207,7 +207,7 @@ namespace cowsins
                     //     // nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
                     // }
 
-
+                    nearbyEnemyStateController.SetShouldRagdoll(true);
                     if(nearbyEnemyStateController.GetCurrentState() is not EnemyHitState){
                         nearbyEnemyStateController.ChangeState(new EnemyHitState());
                     }

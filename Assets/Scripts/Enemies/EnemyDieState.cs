@@ -34,14 +34,9 @@ public class EnemyDieState : IEnemyState
 
         if(!stateController.GetIsHuman()){
             stateController.gameObject.GetComponent<EnemyHealth>().enabled = false;
+            stateController.GetEnemy().GetComponentInChildren<Canvas>().enabled = false;
         }
 
-        if(!stateController.GetIsHuman()){
-            Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
-            child.gameObject.SetActive(false);
-        }
-
-    
 
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
