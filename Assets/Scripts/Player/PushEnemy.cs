@@ -11,7 +11,9 @@ public class PushEnemy : MonoBehaviour
     [SerializeField] private float damage = 10f;  
     [SerializeField] private AK.Wwise.Event kickEvent;  
     [SerializeField] private GameObject doorManager;  
-
+    [SerializeField] private string pushAnimatorTrigger = "kickT";
+    private bool isLegRigInitialized = false;
+    private Animator animator;
     private float ragdollDuration = 5.0f; 
  
 
@@ -25,12 +27,31 @@ public class PushEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject legRig = GameObject.FindWithTag("kick");
 
+        if (legRig != null)
+        {
+            animator = legRig.GetComponent<Animator>();
+            if (animator == null)
+            {
+                Debug.LogWarning("Animator component not found on the object with tag 'kick'.");
+            }
+            else
+            {
+                Debug.Log("Animator successfully found and assigned via Tag.");
+                isLegRigInitialized = true; 
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No object found with the tag 'kick'.");
+        }
     }
 
 
     public void PushEnemiesInRange()
     {
+        PlayPushAnimation();
         kickEvent.Post(this.gameObject);
         
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, pushRadius);
@@ -107,5 +128,25 @@ public class PushEnemy : MonoBehaviour
 
     //     }
     // }
+
+    private bool PlayPushAnimation()
+    {
+
+        if (animator == null)
+        {
+            Debug.LogWarning("Animator not yet initialized. Cannot play animation.");
+            return false;
+        }
+
+       animator.ResetTrigger("kickT");
+        animator.SetTrigger("kickT");
+        Debug.Log("Push animation triggered.");
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log($"Animator State: {stateInfo.fullPathHash}, IsName Kick: {stateInfo.IsName("Kick")}, Normalized Time: {stateInfo.normalizedTime}");
+
+        return true;
+    }
+
 
 }
