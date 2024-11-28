@@ -10,7 +10,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
-							<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+							<ObjectRef Name="Hangar Dialogue 50m" ID="{2DFED257-CAB2-420D-ADF0-91AF7227D41F}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -48,7 +48,18 @@
 									<ChildrenList>
 										<SwitchContainer Name="DiplomatBarks" ID="{0604FB3F-C155-47E9-B4EE-F06769B5C02A}" ShortID="1068477208">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
 												<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -67,10 +78,21 @@
 											<ChildrenList>
 												<RandomSequenceContainer Name="DiplomatIdle" ID="{49781C61-C138-4C63-AF71-38428D931F58}" ShortID="600894219">
 													<PropertyList>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
 														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -303,6 +325,41 @@
 																<ActiveSource Name="Silence" ID="{64AB4578-1EB8-48C0-8B00-84F3A4249DAC}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="Silence_1sec_01" ID="{F2369A1E-133F-42C9-971B-75F4182E02E9}" ShortID="831255158">
+															<PropertyList>
+																<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>30</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Silence" ID="{494D253A-9497-4303-9909-CB766F244B11}" ShortID="352087767" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="5"/>
+																		<Property Name="LengthMax" Type="Real32" Value="3"/>
+																		<Property Name="LengthMin" Type="Real32" Value="-3"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{6D4D973B-901B-419B-BCFD-3642E88BECD0}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="Silence" ID="{494D253A-9497-4303-9909-CB766F244B11}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 													<PositioningInfo>
 														<Position Name="" ID="{634740B9-8B84-4D10-B671-BF52B7C7C46E}"/>
@@ -529,11 +586,15 @@
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="Diplomat_DeathSounds" ID="{6A3A0CB8-BE26-43B9-A2A6-C2FE7F9B492B}" ShortID="89815355">
 													<PropertyList>
-														<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Hangar Dialogue 100m" ID="{9EEB574E-0BE0-4CCA-970C-34F34052C145}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
@@ -1576,6 +1637,7 @@
 												<Value>17</Value>
 											</ValueList>
 										</Property>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 										<Property Name="LoudnessNormalizationTarget" Type="Real64" Value="-41"/>
 										<Property Name="LoudnessNormalizationType" Type="int16" Value="1"/>
@@ -1583,6 +1645,11 @@
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>50</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
@@ -1602,7 +1669,18 @@
 									<ChildrenList>
 										<SwitchContainer Name="BruteBarks" ID="{EF4F03D3-56D8-462D-9150-F18D4B44932E}" ShortID="857862345">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
 												<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -2107,9 +2185,15 @@
 																<Value>8</Value>
 															</ValueList>
 														</Property>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="Lowpass" Type="int16">
 															<ValueList>
 																<Value>32</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
 															</ValueList>
 														</Property>
 														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -2117,6 +2201,11 @@
 														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>2</Value>
@@ -2384,6 +2473,41 @@
 																<ActiveSource Name="Silence" ID="{02D8E563-E973-4F27-9557-51C6AD226BFF}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="Silence_1sec_01" ID="{99AF1F61-47D0-474C-A16A-2D1035D52F7B}" ShortID="844369233">
+															<PropertyList>
+																<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>30</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Silence" ID="{6DFDE6FC-D871-4639-ACDC-60A0399A5E37}" ShortID="151166188" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="5"/>
+																		<Property Name="LengthMax" Type="Real32" Value="3"/>
+																		<Property Name="LengthMin" Type="Real32" Value="-3"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{E5558D94-9922-49BA-97A0-C5FB921AC7C4}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="Silence" ID="{6DFDE6FC-D871-4639-ACDC-60A0399A5E37}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="Brute_DeathSounds" ID="{007877E5-910C-4CD2-8853-8F3354199DEE}" ShortID="400630371">
@@ -2396,12 +2520,13 @@
 															</ValueList>
 														</Property>
 														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
 														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
-															<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+															<ObjectRef Name="Hangar Dialogue 100m" ID="{9EEB574E-0BE0-4CCA-970C-34F34052C145}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
 														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -3401,7 +3526,18 @@
 									<ChildrenList>
 										<SwitchContainer Name="SoldierBarks" ID="{F1BEB712-AC3A-4E55-89A8-D7469AAF3D81}" ShortID="818463676">
 											<PropertyList>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
 												<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3426,14 +3562,25 @@
 																<Value>8</Value>
 															</ValueList>
 														</Property>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 														<Property Name="Lowpass" Type="int16">
 															<ValueList>
 																<Value>32</Value>
 															</ValueList>
 														</Property>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>10</Value>
+															</ValueList>
+														</Property>
 														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>2</Value>
@@ -3701,6 +3848,41 @@
 																<ActiveSource Name="Silence" ID="{92B45314-670C-45D7-8BB0-948428A36D1C}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="Silence_1sec_01" ID="{376D3908-80B6-4424-AEF2-AC493AC8D767}" ShortID="870927083">
+															<PropertyList>
+																<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>30</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<SourcePlugin Name="Silence" ID="{189AE7D1-7ABF-469E-903D-975093BB2455}" ShortID="927902857" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+																	<PropertyList>
+																		<Property Name="Length" Type="Real32" Value="5"/>
+																		<Property Name="LengthMax" Type="Real32" Value="3"/>
+																		<Property Name="LengthMin" Type="Real32" Value="-3"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																</SourcePlugin>
+															</ChildrenList>
+															<PositioningInfo>
+																<Position Name="" ID="{0A14B745-998C-45D2-AA38-B0BBC7E9D99E}"/>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="Silence" ID="{189AE7D1-7ABF-469E-903D-975093BB2455}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="SoldierAttackBarks" ID="{CD57B89A-E118-49D3-9527-FDEB07ACD122}" ShortID="43754375">
@@ -3944,12 +4126,16 @@
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="Solider_DeathSounds" ID="{89D44DD5-8E12-42A3-BE46-C58D318A97D1}" ShortID="213483812">
 													<PropertyList>
-														<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
 														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
+														<Reference Name="Attenuation">
+															<ObjectRef Name="Hangar Dialogue 100m" ID="{9EEB574E-0BE0-4CCA-970C-34F34052C145}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
+														</Reference>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 														</Reference>
