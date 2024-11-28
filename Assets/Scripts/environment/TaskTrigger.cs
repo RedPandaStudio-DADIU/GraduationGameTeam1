@@ -12,16 +12,12 @@ public class TaskTrigger : MonoBehaviour
         {
             TaskManager taskManager = FindObjectOfType<TaskManager>();
              Debug.Log("Task at here.");
-             if (taskManager = null ) // 确保任务顺序正确
+             if (taskManager ==null ) // 确保任务顺序正确
             {
                 
                 Debug.Log("no Task manager.");
             }
-
-            // if (taskManager != null && taskManager.GetCurrentTaskID() == taskID) // 确保任务顺序正确
-             if (taskManager != null ) // 确保任务顺序正确
-          
-             {
+             else {
                 taskManager.CompleteTask(); 
                 gameObject.SetActive(false); 
                 Debug.Log("Task " + taskID + " completed.");

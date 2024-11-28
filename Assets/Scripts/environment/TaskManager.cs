@@ -8,18 +8,30 @@ public class TaskManager : MonoBehaviour
     private Dictionary<int, Sprite> taskDictionary = new Dictionary<int, Sprite>();
 
     [SerializeField] private Image taskDisplayUI; 
-     //[SerializeField] private List<Sprite> taskSprites;
+     [SerializeField] private List<Sprite> taskSprites;
     private int currentTaskID = 0; 
 
     void Start()
     {
-        taskDictionary.Add(0, Resources.Load<Sprite>("Assets/TaskImages/1.png"));
-       taskDictionary.Add(0, Resources.Load<Sprite>("Assets/TaskImages/2.png"));
-       taskDictionary.Add(0, Resources.Load<Sprite>("Assets/TaskImages/3.png"));
-       taskDictionary.Add(0, Resources.Load<Sprite>("Assets/TaskImages/4.png"));
-       
-    
+       // taskDictionary.Add(0, Resources.Load<Sprite>("./Assets/TaskImages/1.png"));
+        // taskDictionary.Add(1, Resources.Load<Sprite>("./Assets/TaskImages/2.png"));
+        // taskDictionary.Add(2, Resources.Load<Sprite>("./Assets/TaskImages/3.png"));
+        // taskDictionary.Add(3, Resources.Load<Sprite>("./Assets/TaskImages/4.png"));
+        // foreach(var task in taskDictionary){
+        // Debug.Log($"task {task.key},spirit{task.Value.name}");
+        // }
         
+        for (int i = 0; i < taskSprites.Count; i++)
+    {
+        if (taskSprites[i] != null)
+        {
+            taskDictionary.Add(i, taskSprites[i]);
+        }
+        else
+        {
+            Debug.LogError($"Task {i} has a missing sprite in the list.");
+        }
+    }
         UpdateTaskUI();
     }
 
@@ -35,6 +47,7 @@ public class TaskManager : MonoBehaviour
         {
             taskDisplayUI.gameObject.SetActive(true); 
             taskDisplayUI.sprite = taskDictionary[currentTaskID];
+            Debug.Log("Task update.");
         }
         else
         {
