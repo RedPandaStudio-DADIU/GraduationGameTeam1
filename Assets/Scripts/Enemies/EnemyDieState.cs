@@ -26,6 +26,7 @@ public class EnemyDieState : IEnemyState
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(true);
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
             stateController.GetMusicManager().CheckIfSameState("Win");
+            stateController.StartEndGame();
 
         } else{
             stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
