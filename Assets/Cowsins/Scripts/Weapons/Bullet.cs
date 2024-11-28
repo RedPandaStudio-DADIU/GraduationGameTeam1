@@ -70,7 +70,7 @@ namespace cowsins
 
             // Set tag for enemy projectiles as EnemyBullet <- compare tag of this object (EnemyBullet) and of other (Enemy)
 
-            if(other.CompareTag("Enemy") && this.gameObject.CompareTag("EnemyFire")){
+            if((other.CompareTag("Enemy") || other.CompareTag("Boss")) && this.gameObject.CompareTag("EnemyFire")){
                 DestroyProjectile();
             } else if(other.CompareTag("Shield")) {
                 DestroyProjectile();
