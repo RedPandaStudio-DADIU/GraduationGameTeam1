@@ -138,7 +138,7 @@ public class PushEnemy : MonoBehaviour
             return false;
         }
 
-       animator.ResetTrigger("kickT");
+        animator.ResetTrigger("kickT");
         animator.SetTrigger("kickT");
         Debug.Log("Push animation triggered.");
 
