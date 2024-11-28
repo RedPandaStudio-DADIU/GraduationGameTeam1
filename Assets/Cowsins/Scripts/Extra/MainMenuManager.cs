@@ -162,11 +162,13 @@ namespace cowsins
         [SerializeField] private string videoFileName ; 
         [SerializeField] private AK.Wwise.Event cutsceneSound; 
 
+        [SerializeField] private AK.Wwise.Event musicEvent; 
 
         [SerializeField, Header("Sections")] private MainMenuSection[] mainMenuSections;
 
         private CanvasGroup objectToLerp;
         private int currentSectionIndex = 0;
+        private uint musicEventId;
 
         //private AudioSource audioSource;
 
@@ -180,6 +182,7 @@ namespace cowsins
             {
                 Destroy(gameObject);
             }
+
         }
 
         private void Start()
@@ -195,6 +198,9 @@ namespace cowsins
                 mainMenuSections[i].section.gameObject.SetActive(false);
                 //mainMenuSections[i].section.alpha = 0;
             }
+
+            AkSoundEngine.SetState("Player_Level", "Menu");
+            musicEventId = musicEvent.Post(this.gameObject);
 
             //audioSource = GetComponent<AudioSource>();
         }
@@ -248,6 +254,9 @@ namespace cowsins
                 //  mainMenuSections[1].section.gameObject.SetActive(false);
                 
                 // videoPlayer.Play();
+                // AkSoundEngine.StopPlayingID(musicEventId);
+                AkSoundEngine.ExecuteActionOnPlayingID(AkActionOnEventType.AkActionOnEventType_Pause, musicEventId);
+
                 mainMenuSections[2].section.gameObject.SetActive(true);
            
                 // string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName).Replace("\\", "/");
@@ -275,6 +284,7 @@ namespace cowsins
                 // {
                 //     Debug.LogError("Video file not found: " + videoPlayer.url);
                 // }
+                
                  videoPlayer.loopPointReached += OnVideoEnd;
                  mainMenuSections[1].section.gameObject.SetActive(false);
                 
@@ -287,8 +297,9 @@ namespace cowsins
             }
             else
             {
-                 Debug.Log("LoadGameScene and we dont have video.");
-
+                Debug.Log("LoadGameScene and we dont have video.");
+                AkSoundEngine.ExecuteActionOnPlayingID( AkActionOnEventType.AkActionOnEventType_Resume, musicEventId);
+                // musicEventId = musicEvent.Post(this.gameObject);
                 SceneManager.LoadScene("Level 1 Design 1.1");
                 DynamicGI.UpdateEnvironment();
 

@@ -10,7 +10,10 @@ public class PushEnemy : MonoBehaviour
     [SerializeField] private float pushRadius = 3f; 
     [SerializeField] private float damage = 10f;  
     [SerializeField] private AK.Wwise.Event kickEvent;  
-
+    [SerializeField] private GameObject doorManager;  
+    [SerializeField] private string pushAnimatorTrigger = "kickT";
+    private bool isLegRigInitialized = false;
+    private Animator animator;
     private float ragdollDuration = 5.0f; 
  
 
@@ -24,11 +27,31 @@ public class PushEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject legRig = GameObject.FindWithTag("kick");
 
+        if (legRig != null)
+        {
+            animator = legRig.GetComponent<Animator>();
+            if (animator == null)
+            {
+                Debug.LogWarning("Animator component not found on the object with tag 'kick'.");
+            }
+            else
+            {
+                Debug.Log("Animator successfully found and assigned via Tag.");
+                isLegRigInitialized = true; 
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No object found with the tag 'kick'.");
+        }
     }
+
 
     public void PushEnemiesInRange()
     {
+        PlayPushAnimation();
         kickEvent.Post(this.gameObject);
         
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, pushRadius);
@@ -36,7 +59,7 @@ public class PushEnemy : MonoBehaviour
         foreach (Collider hitCollider in hitColliders)
         {
             
-            if (hitCollider.CompareTag("Enemy"))
+            if (hitCollider.CompareTag("Enemy") && !(hitCollider.gameObject.GetType() == typeof(ShieldEnemy)))
             {
                 PushLogic(hitCollider);
                
@@ -45,7 +68,8 @@ public class PushEnemy : MonoBehaviour
                     PushLogic(hitCollider);
                 }
             } else if(hitCollider.CompareTag("Door")){
-                hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
+                // hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
+                doorManager.GetComponent<Door>().KickTheDoor();
             }
         }
     }
@@ -63,7 +87,7 @@ public class PushEnemy : MonoBehaviour
             
             enemy.SetForceDirection(pushDirection);
             enemy.SetForce(pushForce);
-            enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
+            // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
 
             // enemy.ChangeState(new EnemyHitState());
 
@@ -71,14 +95,16 @@ public class PushEnemy : MonoBehaviour
             //     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
             // }
 
+            enemy.SetShouldRagdoll(true);
             if(enemy.GetCurrentState() is not EnemyHitState){
-                    enemy.ChangeState(new EnemyHitState());
+                enemy.ChangeState(new EnemyHitState());
             }
 
 
             if(enemy.GetEnemy().GetHealth() > 0){
                 Debug.Log("Inside health check");
                 if(!enemy.GetisInRecovery()){
+                    enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
                     enemy.Recovery(ragdollDuration);
                 }
             } else {
@@ -102,5 +128,25 @@ public class PushEnemy : MonoBehaviour
 
     //     }
     // }
+
+    private bool PlayPushAnimation()
+    {
+
+        if (animator == null)
+        {
+            Debug.LogWarning("Animator not yet initialized. Cannot play animation.");
+            return false;
+        }
+
+        animator.ResetTrigger("kickT");
+        animator.SetTrigger("kickT");
+        Debug.Log("Push animation triggered.");
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log($"Animator State: {stateInfo.fullPathHash}, IsName Kick: {stateInfo.IsName("Kick")}, Normalized Time: {stateInfo.normalizedTime}");
+
+        return true;
+    }
+
 
 }

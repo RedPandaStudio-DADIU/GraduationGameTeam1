@@ -3,6 +3,7 @@
 /// </summary>
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using cowsins;
 using AK.Wwise;
 namespace cowsins
@@ -20,6 +21,8 @@ namespace cowsins
         [SerializeField] private AK.Wwise.Event playerDamage;
         [SerializeField] private AK.Wwise.Event playerDeath;
         [SerializeField] private AK.Wwise.Event playerBark;
+        [SerializeField] private MusicManager musicManager;
+
 
         [ReadOnly]
         public float health, shield;
@@ -179,6 +182,9 @@ namespace cowsins
         {
             isDead = true;
             playerDeath.Post(this.gameObject);
+            if(SceneManager.GetActiveScene().buildIndex == 2){
+                musicManager.CheckIfSameState("Loose");
+            }
 
             events.OnDeath.Invoke(); // Invoke a custom event
         }

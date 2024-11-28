@@ -24,6 +24,12 @@ public class EnemyDieState : IEnemyState
 
         if(stateController.GetEnemy().CompareTag("Boss")){
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(true);
+            stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
+            stateController.GetMusicManager().CheckIfSameState("Win");
+
+        } else{
+            stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
+
         }
 
         if(!stateController.GetIsHuman()){
@@ -35,7 +41,7 @@ public class EnemyDieState : IEnemyState
             child.gameObject.SetActive(false);
         }
 
-        stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
+    
 
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
@@ -50,8 +56,13 @@ public class EnemyDieState : IEnemyState
 
 
         stateController.GetEnemy().GetComponent<NavMeshAgent>().enabled = false;
-
         stateController.GetEnemy().tag = "Untagged";
+        if(stateController.GetEnemy().GetComponent<Rigidbody>() != null){
+            stateController.GetEnemy().GetComponent<EnemyRagdollController>().SetRagdollActive(true);
+            stateController.GetEnemy().GetComponent<Rigidbody>().isKinematic = true;
+        }
+
+
 
         // if(!stateController.GetIsHuman()){
         //     Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");

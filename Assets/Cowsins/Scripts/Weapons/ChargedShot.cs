@@ -151,6 +151,7 @@ namespace cowsins
 
                 enemy.GetEnemy().DecreaseHealth(chargeDamage);
 
+                enemy.SetShouldRagdoll(true);
                 if(enemy.GetCurrentState() is not EnemyHitState){
                     enemy.ChangeState(new EnemyHitState());
                 }

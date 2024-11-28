@@ -20,11 +20,15 @@ public abstract class EnemyBaseClass : MonoBehaviour
     // [SerializeField] private AK.Wwise.Event hitSoundEvent;
     //[SerializeField] private AK.Wwise.Event deathSoundEvent;
 
-
     public abstract void Attack();
     public abstract void Die();
     public abstract void LosePlayer(Vector3 playerPosition);
     public abstract AK.Wwise.Event GetDamageSound();
+
+    
+    public virtual float GetMaxHealth(){
+        return 0f;
+    }
 
     public virtual void SpecialAttack(Transform playe){
         Debug.Log("Inside Special Attack");

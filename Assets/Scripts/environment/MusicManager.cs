@@ -13,6 +13,8 @@ public class MusicManager : MonoBehaviour
     private string playerLevelStateGroup = "Player_Level";
     private string combatIntensityStateGroup = "Combat_intensity_Lv1";
     private string level2CombatStateGroup = "Combat_Lv2";
+    private string level2EndingStateGroup = "Lv2_ending";
+
     private string currentState = "No combat";
 
     void Start()
@@ -82,6 +84,12 @@ public class MusicManager : MonoBehaviour
                 AkSoundEngine.SetState(level2CombatStateGroup, "Combat_Xaga_Lv2");
                 AkSoundEngine.SetState(combatIntensityStateGroup, "None");
                 Debug.Log("Playing music level 6 - lvl 2 Xaga");
+                break;
+            case "Win":
+                AkSoundEngine.SetState(level2EndingStateGroup, "Win");
+                break;
+            case "Loose":
+                AkSoundEngine.SetState(level2EndingStateGroup, "Loose");
                 break;
             default:
                 AkSoundEngine.SetState(playerStateStateGroup, "No_combat");
