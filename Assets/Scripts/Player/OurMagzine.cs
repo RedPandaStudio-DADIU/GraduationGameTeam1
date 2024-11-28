@@ -59,7 +59,15 @@ public class OurMagzine : Pickeable
         if (bulletsUIText != null&& Player != null) 
         {
             WeaponController weaponController = Player.GetComponent<WeaponController>();
-            bulletsUIText.text = $"{weaponController.id.totalBullets - 15}";
+            if(weaponController.id.totalBullets > 15)
+            {
+                bulletsUIText.text = $"{weaponController.id.totalBullets - 15}";
+            }
+            else
+            {
+                bulletsUIText.text = $"{0}";
+            }
+            
             Debug.Log($"reload and Updated bullets UI: {weaponController.id.totalBullets }");
         }
     }
