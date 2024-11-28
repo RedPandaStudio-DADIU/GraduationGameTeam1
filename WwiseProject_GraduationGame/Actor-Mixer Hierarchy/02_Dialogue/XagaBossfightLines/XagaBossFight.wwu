@@ -173,6 +173,12 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="NoooMyleg" ID="{BFE91028-0643-4050-92C4-AD116EF3AF1F}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.188173758865248"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.188173758865248"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.92257369237589"/>
+									</PropertyList>
 									<Language>English(US)</Language>
 									<AudioFile>NoooMyleg.wav</AudioFile>
 									<MediaIDList>
@@ -414,9 +420,8 @@
 							<ChildrenList>
 								<AudioFileSource Name="Xaga_LetsDoThis" ID="{676CC4D7-4C00-4263-B6B5-5CBC62848538}">
 									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0.723611626468769"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.723611626468769"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0757629267051765"/>
 									</PropertyList>
 									<Language>English(US)</Language>
 									<AudioFile>Xaga_LetsDoThis.wav</AudioFile>
@@ -642,11 +647,67 @@
 								<ActiveSource Name="XagaDeathScream" ID="{F4F34251-D27C-46AF-AB76-5DC9A33CCBE6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Xaga_LetsDoThis_Alt" ID="{E910BC1B-B4AD-4B42-9CB6-2696A12C0066}" ShortID="484771589">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_LetsDoThis_Alt" ID="{741F4AD8-A84A-4DE9-9893-2E43C9A23AA2}">
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_LetsDoThis_Alt.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="178605701"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_LetsDoThis_Alt" ID="{741F4AD8-A84A-4DE9-9893-2E43C9A23AA2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Xaga_YouHaveNeverBeenWorthy" ID="{AD1C4D56-0AC8-41A0-932E-D043E49705B5}" ShortID="655892608">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_YouHaveNeverBeenWorthy" ID="{5C65D7E3-A33F-4717-A350-A69CA13DF649}">
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_YouHaveNeverBeenWorthy.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="689012130"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_YouHaveNeverBeenWorthy" ID="{5C65D7E3-A33F-4717-A350-A69CA13DF649}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
+								<ItemRef Name="Xaga_LetsDoThis_Alt" ID="{E910BC1B-B4AD-4B42-9CB6-2696A12C0066}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
 								<ItemRef Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Xaga_YouHaveNeverBeenWorthy" ID="{AD1C4D56-0AC8-41A0-932E-D043E49705B5}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
@@ -687,7 +748,7 @@
 							<Grouping>
 								<SwitchRef Name="InitiateFight" ID="{E6A1FE71-2DBC-4E32-BAB3-7687C460A4A5}"/>
 								<ItemList>
-									<ItemRef Name="Xaga_LetsDoThis" ID="{92038297-6187-42BF-9DFF-51AE473B9BF6}"/>
+									<ItemRef Name="Xaga_LetsDoThis_Alt" ID="{E910BC1B-B4AD-4B42-9CB6-2696A12C0066}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -1202,6 +1263,11 @@
 							<PropertyList>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1212,14 +1278,9 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{0A28CFB5-3B30-45A7-A4D6-F46BE4F10B32}" ShortID="843626345">
+								<Sound Name="Xaga Barks - damage scream_01-02" ID="{FC2C1C6A-166B-41BA-A2A8-A71815F5A309}" ShortID="283632845">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>2</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1230,26 +1291,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{0C0D090E-6AD3-46F6-BAC3-3EF55E26B30B}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-02" ID="{13D83421-E08B-4728-B492-01009236F573}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1051484675"/>
+												<MediaID ID="332924010"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_20_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{0C0D090E-6AD3-46F6-BAC3-3EF55E26B30B}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-02" ID="{13D83421-E08B-4728-B492-01009236F573}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{DEB50F62-4711-4302-BAF1-47475C9A3699}" ShortID="1049481696">
+								<Sound Name="Xaga Barks - damage scream_01-04" ID="{B8950D35-594C-43DB-B67B-6D52F9B5FB6F}" ShortID="279779623">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1260,19 +1316,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{62ADC629-9F6C-4B23-817F-E7E77B07601A}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-04" ID="{FEBE4F6A-02BF-4AD1-88C4-1F36D915F13A}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-04.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1046563186"/>
+												<MediaID ID="363780248"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_29_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{62ADC629-9F6C-4B23-817F-E7E77B07601A}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-04" ID="{FEBE4F6A-02BF-4AD1-88C4-1F36D915F13A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{62377ABD-3A9B-40BC-9EB5-5C89DD964B8B}" ShortID="271400056">
+								<Sound Name="Xaga Barks - damage scream_01-06" ID="{319CF1BA-2048-4BB1-B35F-CEA3C75265AF}" ShortID="639763995">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 									</PropertyList>
@@ -1285,26 +1341,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A57A26AB-2C37-4C73-BA57-D21FAAEE34FE}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-06" ID="{93C9BACE-C446-4CA7-BE0E-DF5159AE89A6}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-06.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="956433349"/>
+												<MediaID ID="130135002"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_37_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A57A26AB-2C37-4C73-BA57-D21FAAEE34FE}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-06" ID="{93C9BACE-C446-4CA7-BE0E-DF5159AE89A6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{D7C274CE-154F-4652-81B0-CA226CBD68A5}" ShortID="197669604">
+								<Sound Name="Xaga Barks - damage scream_01-08" ID="{344AC279-304E-42D6-A309-1770026F30C0}" ShortID="697430202">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1315,19 +1366,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CA36D741-690F-44C6-93FA-FA804CC79D91}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-08" ID="{B9EBB386-880D-4F73-BA22-BE8C902345B3}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-08.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="979542133"/>
+												<MediaID ID="784246739"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_42_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CA36D741-690F-44C6-93FA-FA804CC79D91}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-08" ID="{B9EBB386-880D-4F73-BA22-BE8C902345B3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{A50DC926-5DDA-4A3B-A9D0-C57C0E0157F3}" ShortID="533722472">
+								<Sound Name="Xaga Barks - damage scream_01-10" ID="{D679407B-B9A9-4FC2-8F51-C7AE848E4D71}" ShortID="260729289">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 									</PropertyList>
@@ -1340,19 +1391,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{9568B11A-971C-481B-A285-F9DFAA93FF24}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-10" ID="{8E256390-A5A6-464B-B5B7-49D73FF3B500}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-10.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="881801895"/>
+												<MediaID ID="819107755"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_47_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{9568B11A-971C-481B-A285-F9DFAA93FF24}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-10" ID="{8E256390-A5A6-464B-B5B7-49D73FF3B500}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{DF29304E-56FA-4508-99A6-187DFFE4E47B}" ShortID="655660089">
+								<Sound Name="Xaga Barks - damage scream_01-12" ID="{BF605427-FD31-4D94-BC90-319F229C1B77}" ShortID="133839900">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 									</PropertyList>
@@ -1365,19 +1416,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CE839239-F762-49CD-AD62-2887CDD7CB8E}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-12" ID="{B0C6C6EA-3794-43C4-9C23-2AE96A9E6527}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-12.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="167253598"/>
+												<MediaID ID="141936447"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_12_57_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{CE839239-F762-49CD-AD62-2887CDD7CB8E}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-12" ID="{B0C6C6EA-3794-43C4-9C23-2AE96A9E6527}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{BFEB71EE-945D-44F9-8889-2657B005E6D4}" ShortID="658490651">
+								<Sound Name="Xaga Barks - damage scream_01-14" ID="{401A0B95-4408-4B46-A20E-47CA06D95500}" ShortID="417619112">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 									</PropertyList>
@@ -1390,19 +1441,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{5407AEC8-D771-42E4-8285-8CFFB3DD3BF8}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-14" ID="{83A2258C-076B-41C6-A329-6FBFBF6F142E}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-14.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="529957158"/>
+												<MediaID ID="376584244"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_13_08_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{5407AEC8-D771-42E4-8285-8CFFB3DD3BF8}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-14" ID="{83A2258C-076B-41C6-A329-6FBFBF6F142E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{1EFB6BB8-8DC7-4051-8A03-A180A894FD98}" ShortID="722023964">
+								<Sound Name="Xaga Barks - damage scream_01-16" ID="{64BDB34D-93A4-4FFB-9C3C-426E6747AE8B}" ShortID="873835141">
 									<PropertyList>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 									</PropertyList>
@@ -1415,16 +1466,391 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{59B4E05C-2029-4F81-AE74-316D204AAAC2}">
+										<AudioFileSource Name="Xaga Barks - damage scream_01-16" ID="{2AA7B5FD-E626-44FE-A4C8-F6E4BCA6231B}">
 											<Language>English(US)</Language>
-											<AudioFile>ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</AudioFile>
+											<AudioFile>Xaga Barks - damage scream_01-16.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="721212282"/>
+												<MediaID ID="967557093"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="ElevenLabs_2024-11-18T17_13_12_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2" ID="{59B4E05C-2029-4F81-AE74-316D204AAAC2}" Platform="Linked"/>
+										<ActiveSource Name="Xaga Barks - damage scream_01-16" ID="{2AA7B5FD-E626-44FE-A4C8-F6E4BCA6231B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-18" ID="{30F75395-B08D-4A95-A58F-5C9286BD55E3}" ShortID="500326952">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-18" ID="{EC9687C7-B912-4463-A4AE-DAE6C58DEFBA}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-18.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="667974143"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-18" ID="{EC9687C7-B912-4463-A4AE-DAE6C58DEFBA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-20" ID="{6CFEDA21-0094-45AD-BA01-F331B4AFBD87}" ShortID="725019988">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-20" ID="{EAA0D1C8-D9CA-43F4-9550-E8629BD15606}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-20.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="466630328"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-20" ID="{EAA0D1C8-D9CA-43F4-9550-E8629BD15606}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-22" ID="{A8603E8D-7D0E-4C66-AAD1-0DDEFC1267F2}" ShortID="378134938">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-22" ID="{5DF6CDF5-9FAD-4F37-AE45-E18C8A7D8FE1}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-22.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="123486091"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-22" ID="{5DF6CDF5-9FAD-4F37-AE45-E18C8A7D8FE1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-24" ID="{38E249D0-314B-4EAF-BC5C-0CC42FA171DD}" ShortID="689613638">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-24" ID="{B851D48E-EA49-4FC7-8FE3-CE26E05D4E5A}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-24.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="994372152"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-24" ID="{B851D48E-EA49-4FC7-8FE3-CE26E05D4E5A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-26" ID="{8EFC6853-9673-46A7-9E1F-253E612237AB}" ShortID="101264501">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-26" ID="{EE77EFE2-C03C-43C3-84B4-7A04356051B0}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-26.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="446104147"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-26" ID="{EE77EFE2-C03C-43C3-84B4-7A04356051B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-28" ID="{0D6B9F9F-D695-4001-9576-0EC32BFB9F79}" ShortID="248448948">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-28" ID="{BD6FA95B-90F6-4770-8ED4-E500C47447B2}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-28.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="283620207"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-28" ID="{BD6FA95B-90F6-4770-8ED4-E500C47447B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-30" ID="{079CEE41-3836-4162-B4E7-03C07BB4B11F}" ShortID="1069091830">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-30" ID="{58108E88-E7EB-4858-BADF-781EDB3FD2B1}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-30.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="723057854"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-30" ID="{58108E88-E7EB-4858-BADF-781EDB3FD2B1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-32" ID="{5FC55B5D-896A-410D-934D-ECA7CE56EA89}" ShortID="661674700">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-32" ID="{BEB264E0-5B94-4198-9865-00CA2B048835}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-32.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="380059407"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-32" ID="{BEB264E0-5B94-4198-9865-00CA2B048835}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-33" ID="{B7FFA3CF-F4D0-4418-B73D-68D67FAD94A4}" ShortID="178171318">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-33" ID="{02C331AD-60C3-4DB9-9C6B-F5FA71445948}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-33.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="159884158"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-33" ID="{02C331AD-60C3-4DB9-9C6B-F5FA71445948}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-35" ID="{8FD0ECBD-190A-44D0-A757-6E15A186E5CB}" ShortID="707818807">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-35" ID="{E730F53A-832B-4C03-91DF-65F36C59A457}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-35.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="167449417"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-35" ID="{E730F53A-832B-4C03-91DF-65F36C59A457}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-37" ID="{30282E4C-5154-4714-B2FB-42BBCE9DD68C}" ShortID="880500184">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-37" ID="{556649EF-AFCA-4F67-B159-5B60D5969BD5}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-37.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="388210170"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-37" ID="{556649EF-AFCA-4F67-B159-5B60D5969BD5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-39" ID="{C5122014-D568-4F32-A91E-E4B4EA072948}" ShortID="198189781">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-39" ID="{A4E5C2A3-97C6-4256-9226-A28A2D6A6CE4}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-39.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="534379024"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-39" ID="{A4E5C2A3-97C6-4256-9226-A28A2D6A6CE4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-43" ID="{5309DBAD-FBFF-4448-BFD5-3C396BE103F4}" ShortID="382544532">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-43" ID="{FE846934-D025-4819-A13C-BFEB15556ED6}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-43.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="935849880"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-43" ID="{FE846934-D025-4819-A13C-BFEB15556ED6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-46" ID="{00CC2D64-EB00-4DF8-A9C9-A79C9DF801C9}" ShortID="796581812">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-46" ID="{98D35152-9108-4FA0-BB53-7324EACBAB79}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-46.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="867012342"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-46" ID="{98D35152-9108-4FA0-BB53-7324EACBAB79}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - damage scream_01-47" ID="{45489D06-D962-4646-BA49-CF450BD71A9D}" ShortID="430230402">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - damage scream_01-47" ID="{B6FBC0AF-619F-4017-A980-EF729A7F8F5F}">
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - damage scream_01-47.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="616051833"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - damage scream_01-47" ID="{B6FBC0AF-619F-4017-A980-EF729A7F8F5F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -2101,6 +2527,7 @@
 				</Sound>
 				<RandomSequenceContainer Name="XagaCharge" ID="{7CC7B1DB-7D06-41A1-848E-69E03A50A911}" ShortID="377886466">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Color" Type="int16" Value="12"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -2110,6 +2537,112 @@
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}">
+								<Attenuation Name="att_Generic_50m (Custom)" ID="{C430FB82-BC3D-4076-935F-038C6A53A39C}" ShortID="10015615">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="50"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{92F3D5C9-DB24-48FC-AB42-E2EDD38AE34C}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>3.60503</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>9.86129</XPos>
+															<YPos>-4.40823</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>22.5416</XPos>
+															<YPos>-11.47099</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>38.04985</XPos>
+															<YPos>-18.38611</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>50</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+										<ObstructionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionVolumeUsage>
+										<ObstructionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionLPFUsage>
+										<ObstructionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionHPFUsage>
+										<OcclusionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionVolumeUsage>
+										<OcclusionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionLPFUsage>
+										<OcclusionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionHPFUsage>
+										<DiffractionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionVolumeUsage>
+										<DiffractionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionLPFUsage>
+										<DiffractionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionHPFUsage>
+										<TransmissionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionVolumeUsage>
+										<TransmissionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionLPFUsage>
+										<TransmissionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionHPFUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
@@ -2332,6 +2865,11 @@
 											</ValueList>
 										</Property>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2352,6 +2890,65 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Xaga Barks - Charging Scream_01-05" ID="{1A17F708-D15A-4C57-A9DE-7982F7D750B4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - Charging Scream_02-03" ID="{A4BCFA21-14DC-4CAB-B88A-09558B6F45B1}" ShortID="375096848">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - Charging Scream_02-03" ID="{18885BC6-89F3-45B5-909F-C8389BCB215A}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.103673241725768"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - Charging Scream_02-03.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="74657692"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - Charging Scream_02-03" ID="{18885BC6-89F3-45B5-909F-C8389BCB215A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Xaga Barks - Charging Scream_02-04" ID="{BC0E62B0-90B2-4CD0-9113-B86FEBAEBBA8}" ShortID="848143094">
+									<PropertyList>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Xaga Barks - Charging Scream_02-04" ID="{63B15DD5-2766-4A24-B10E-61FE59C07596}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0419270833333333"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.293489583333333"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>Xaga Barks - Charging Scream_02-04.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="231204514"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Xaga Barks - Charging Scream_02-04" ID="{63B15DD5-2766-4A24-B10E-61FE59C07596}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -2447,10 +3044,119 @@
 				</RandomSequenceContainer>
 				<SwitchContainer Name="Xaga_PlayerDeadTaunts" ID="{BA1B8D63-73B3-4BEB-996B-6CF6BA6BF378}" ShortID="474804135">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Color" Type="int16" Value="11"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom CreatedFrom="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}">
+								<Attenuation Name="att_Generic_100m (Custom)" ID="{F0B8DEDF-3B76-4C91-8BFE-634891BCEDA2}" ShortID="859935667">
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{693C9479-73C3-4C18-B18C-1F08EDF09659}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>3.37243</XPos>
+															<YPos>0</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>6.59823</XPos>
+															<YPos>-2.27432</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>12.90324</XPos>
+															<YPos>-4.48257</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>29.32551</XPos>
+															<YPos>-10.97279</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>45.7478</XPos>
+															<YPos>-17.32121</YPos>
+															<Flags>0</Flags>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+										<ObstructionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionVolumeUsage>
+										<ObstructionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionLPFUsage>
+										<ObstructionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionHPFUsage>
+										<OcclusionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionVolumeUsage>
+										<OcclusionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionLPFUsage>
+										<OcclusionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionHPFUsage>
+										<DiffractionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionVolumeUsage>
+										<DiffractionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionLPFUsage>
+										<DiffractionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionHPFUsage>
+										<TransmissionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionVolumeUsage>
+										<TransmissionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionLPFUsage>
+										<TransmissionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionHPFUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
