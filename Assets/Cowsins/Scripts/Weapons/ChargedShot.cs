@@ -40,6 +40,9 @@ namespace cowsins
         private float ragdollDuration = 5.0f; 
         private float delay = 5f;
 
+         private int popID=5; 
+    private bool showed = false;
+
 
         void Start()
         {
@@ -47,6 +50,8 @@ namespace cowsins
             {
                 chargeProgressBar.fillAmount = 0;  
             }
+             PopupManager popupManager = FindObjectOfType<PopupManager>();
+             
         }
 
 
@@ -95,6 +100,24 @@ namespace cowsins
                 if (rightClickHoldTime >= chargeTime){
                     Shoot();
                     chargedShotEvent.Post(gameObject);
+
+                    PopupManager popupManager = FindObjectOfType<PopupManager>();
+       
+
+                    if (popupManager ==null ) 
+                    {
+                        
+                        Debug.Log("no pop manager.");
+                    }
+                    else
+                    {
+                        if (popupManager.GetCurrentpopUpID()== popID&& !showed)
+                        {
+                            popupManager.CompletepopUp();
+                            showed = true;
+                            Debug.Log("Taskpop " + popID + " completed.");
+                        }
+                    }   
                 }
 
                 rightClickHoldTime = 0f;

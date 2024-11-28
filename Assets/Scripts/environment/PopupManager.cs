@@ -8,7 +8,9 @@ public class PopupManager : MonoBehaviour
 
     [SerializeField] private Image popUpDisplayUI; 
      [SerializeField] private List<Sprite> popUpSprites;
-    private int currentpopUpID = 0; 
+      [SerializeField] private GameObject pop4; // Represents task for popUp ID 4
+    [SerializeField] private GameObject pop5;
+    public int currentpopUpID = 0; 
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class PopupManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckPopConditions();
     }
 
     void UpdatepopUpUI()
@@ -46,6 +48,20 @@ public class PopupManager : MonoBehaviour
             popUpDisplayUI.gameObject.SetActive(false); 
         }
     }  
+
+    void CheckPopConditions()
+    {
+        if (currentpopUpID == 3 &&  !pop4.activeSelf)
+        {
+            Debug.Log("Task for Pop4 completed.");
+            CompletepopUp();
+        }
+        else if (currentpopUpID == 4 &&  (pop5 == null || !pop5.activeSelf))
+        {
+            Debug.Log("Task for Pop5 completed.");
+            CompletepopUp();
+        }
+    }
 
     public void CompletepopUp()
     {
