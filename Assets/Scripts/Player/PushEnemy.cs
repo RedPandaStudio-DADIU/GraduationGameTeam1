@@ -10,6 +10,7 @@ public class PushEnemy : MonoBehaviour
     [SerializeField] private float pushRadius = 3f; 
     [SerializeField] private float damage = 10f;  
     [SerializeField] private AK.Wwise.Event kickEvent;  
+    [SerializeField] private GameObject doorManager;  
 
     private float ragdollDuration = 5.0f; 
  
@@ -27,6 +28,7 @@ public class PushEnemy : MonoBehaviour
 
     }
 
+
     public void PushEnemiesInRange()
     {
         kickEvent.Post(this.gameObject);
@@ -36,7 +38,7 @@ public class PushEnemy : MonoBehaviour
         foreach (Collider hitCollider in hitColliders)
         {
             
-            if (hitCollider.CompareTag("Enemy"))
+            if (hitCollider.CompareTag("Enemy") && !(hitCollider.gameObject.GetType() == typeof(ShieldEnemy)))
             {
                 PushLogic(hitCollider);
                
@@ -45,7 +47,8 @@ public class PushEnemy : MonoBehaviour
                     PushLogic(hitCollider);
                 }
             } else if(hitCollider.CompareTag("Door")){
-                hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
+                // hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
+                doorManager.GetComponent<Door>().KickTheDoor();
             }
         }
     }
@@ -63,7 +66,7 @@ public class PushEnemy : MonoBehaviour
             
             enemy.SetForceDirection(pushDirection);
             enemy.SetForce(pushForce);
-            enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
+            // enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
 
             // enemy.ChangeState(new EnemyHitState());
 
@@ -71,14 +74,16 @@ public class PushEnemy : MonoBehaviour
             //     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
             // }
 
+            enemy.SetShouldRagdoll(true);
             if(enemy.GetCurrentState() is not EnemyHitState){
-                    enemy.ChangeState(new EnemyHitState());
+                enemy.ChangeState(new EnemyHitState());
             }
 
 
             if(enemy.GetEnemy().GetHealth() > 0){
                 Debug.Log("Inside health check");
                 if(!enemy.GetisInRecovery()){
+                    enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, pushForce);
                     enemy.Recovery(ragdollDuration);
                 }
             } else {

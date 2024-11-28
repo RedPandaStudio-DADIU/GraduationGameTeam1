@@ -26,6 +26,7 @@ public class Boss : DiplomatEnemy
 
     [SerializeField] private AK.Wwise.State nearDeath;
     [SerializeField] private AK.Wwise.State Dead;
+    [SerializeField] private AK.Wwise.State firstLine;
 
     private Queue<Transform> queueWeakSpots;
     private Queue<Material> queueMaterials;
@@ -35,15 +36,17 @@ public class Boss : DiplomatEnemy
     private bool areWeakSpotsDefeated = false;
     private Renderer renderer;
     private GameObject instantiatedExplosion;
+    private float maxHealth;
+    private bool saidInitialLine = false;
 
     void Awake()
     {
-        this.SetHealth(200f);
+        this.SetHealth(400f);
         this.SetStoppingDistance(8f);
         queueWeakSpots = new Queue<Transform>(weakSpots);
         queueMaterials = new Queue<Material>(materials);
         renderer = transform.Find("Xaga").GetComponent<Renderer>();
-
+        maxHealth = this.GetHealth();
     }
 
     void Start(){
@@ -111,6 +114,7 @@ public class Boss : DiplomatEnemy
         LayerMask obstacleLayer = LayerMask.GetMask("Default", "Player", "Obstacle");
 
         GameObject explosion = Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
+        explosion.GetComponent<VisualEffect>().Play();
         if (bossExplosionSoundEvent != null)
         {
             bossExplosionSoundEvent.Post(gameObject);
@@ -137,6 +141,10 @@ public class Boss : DiplomatEnemy
                 }
             }
         }
+    }
+
+    public float GetMaxHealth(){
+        return this.maxHealth;
     }
 
     public override AK.Wwise.Event GetChargeSound()
@@ -179,11 +187,26 @@ public class Boss : DiplomatEnemy
         }
     }
 
+    public void PlayHitSound(){
+        base.GetDamageSound().Post(this.gameObject);
+    }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, explosionRange);
+    }
+
+    public void SetSaidFirstLine(){
+        this.saidInitialLine = true;
+    }
+
+    public bool GetSaidFirstLine(){
+        return this.saidInitialLine;
+    }
+
+    public void PostInitialEvent(){
+        firstLine.SetValue();
     }
 
 }

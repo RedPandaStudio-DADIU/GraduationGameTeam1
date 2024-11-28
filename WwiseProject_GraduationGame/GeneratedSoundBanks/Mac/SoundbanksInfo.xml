@@ -451,7 +451,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4666A2D5-CD4D-1B80-56F6-61C7ECA70D0C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DC27A546-C19D-16FE-3678-3217D4BEBEA4}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1085,7 +1085,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{426B2D35-89BA-C4A7-641D-BAF4A2213956}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{2D33BF53-7CEB-7EBD-389F-354A461EC326}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1883,7 +1883,7 @@
 				</File>
 				<File Id="500080815" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_And-MyNameIsKaren.wav</ShortName>
-					<CachePath>Voices/English(US)/AI_And-MyNameIsKaren_E3DA2324.wem</CachePath>
+					<CachePath>Voices/English(US)/AI_And-MyNameIsKaren_80FAC37E.wem</CachePath>
 				</File>
 				<File Id="503261555" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bullets_Impact_Body_Flesh_SND6368 4.wav</ShortName>
@@ -1955,7 +1955,7 @@
 				</File>
 				<File Id="570910821" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_ICanTellYouAllAboutItAfter.wav</ShortName>
-					<CachePath>Voices/English(US)/Ai_ICanTellYouAllAboutItAfter_1939B9A5.wem</CachePath>
+					<CachePath>Voices/English(US)/Ai_ICanTellYouAllAboutItAfter_5410D1F7.wem</CachePath>
 				</File>
 				<File Id="580276444" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_FuckHagnOn.wav</ShortName>
@@ -2762,6 +2762,7 @@
 					<Plugin Id="145985174" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="147930550" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="148861226" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="151166188" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="154042449" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="166165081" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="170601794" Name="ElevatorRoom" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -2798,6 +2799,7 @@
 					<Plugin Id="339952054" Name="FM 01" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="345343286" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="350983413" Name="Monsterize (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="352087767" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="355881059" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="365032581" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="376107952" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -2897,6 +2899,7 @@
 					<Plugin Id="913085549" Name="BASS 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="917880623" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="923032550" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="927902857" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="928768213" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="931078222" Name="OPENING" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="932439781" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -2969,7 +2972,7 @@
 						<MediaRef Id="942527291"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2222339482" Name="Play_Brute_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.431602" DurationMax="0.70339406">
+				<Event Id="2222339482" Name="Play_Brute_Damage" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.431602" DurationMax="0.70339406">
 					<MediaRefs>
 						<MediaRef Id="73697646"/>
 						<MediaRef Id="149323924"/>
@@ -3213,7 +3216,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="334987570" Name="Play_BruteAttack" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.7866667" DurationMax="0.9443646">
+				<Event Id="334987570" Name="Play_BruteAttack" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.7866667" DurationMax="0.9443646">
 					<MediaRefs>
 						<MediaRef Id="166680844"/>
 						<MediaRef Id="383127668"/>
@@ -3243,6 +3246,7 @@
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
+							<PluginRef Id="151166188"/>
 							<PluginRef Id="272614866"/>
 							<PluginRef Id="275606619"/>
 							<PluginRef Id="350983413"/>
@@ -3316,6 +3320,7 @@
 							</MediaRefs>
 							<PluginRefs>
 								<Custom>
+									<PluginRef Id="151166188"/>
 									<PluginRef Id="350983413"/>
 									<PluginRef Id="386102668"/>
 									<PluginRef Id="471653830"/>
@@ -3386,6 +3391,7 @@
 							</MediaRefs>
 							<PluginRefs>
 								<Custom>
+									<PluginRef Id="151166188"/>
 									<PluginRef Id="350983413"/>
 									<PluginRef Id="386102668"/>
 									<PluginRef Id="471653830"/>
@@ -3693,7 +3699,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="4162822944" Name="Play_Diplomat_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.26232734" DurationMax="0.5533459">
+				<Event Id="4162822944" Name="Play_Diplomat_Damage" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.26232734" DurationMax="0.5533459">
 					<MediaRefs>
 						<MediaRef Id="10599150"/>
 						<MediaRef Id="85731172"/>
@@ -3725,6 +3731,7 @@
 						<Custom>
 							<PluginRef Id="84334370"/>
 							<PluginRef Id="108626646"/>
+							<PluginRef Id="352087767"/>
 							<PluginRef Id="376107952"/>
 							<PluginRef Id="510824629"/>
 							<PluginRef Id="547103039"/>
@@ -3787,6 +3794,7 @@
 							<PluginRefs>
 								<Custom>
 									<PluginRef Id="84334370"/>
+									<PluginRef Id="352087767"/>
 									<PluginRef Id="376107952"/>
 									<PluginRef Id="510824629"/>
 									<PluginRef Id="697273487"/>
@@ -3847,6 +3855,7 @@
 							<PluginRefs>
 								<Custom>
 									<PluginRef Id="84334370"/>
+									<PluginRef Id="352087767"/>
 									<PluginRef Id="376107952"/>
 									<PluginRef Id="510824629"/>
 									<PluginRef Id="697273487"/>
@@ -4722,6 +4731,7 @@
 							<PluginRef Id="872009371"/>
 							<PluginRef Id="887902621"/>
 							<PluginRef Id="910904535"/>
+							<PluginRef Id="927902857"/>
 							<PluginRef Id="932439781"/>
 							<PluginRef Id="1073388838"/>
 						</Custom>
@@ -4784,6 +4794,7 @@
 									<PluginRef Id="866977587"/>
 									<PluginRef Id="887902621"/>
 									<PluginRef Id="910904535"/>
+									<PluginRef Id="927902857"/>
 								</Custom>
 							</PluginRefs>
 						</SwitchContainer>
@@ -4844,12 +4855,13 @@
 									<PluginRef Id="866977587"/>
 									<PluginRef Id="887902621"/>
 									<PluginRef Id="910904535"/>
+									<PluginRef Id="927902857"/>
 								</Custom>
 							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2478119858" Name="Play_Solider_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.28640068" DurationMax="0.5071274">
+				<Event Id="2478119858" Name="Play_Solider_Damage" MaxAttenuation="50" DurationType="OneShot" DurationMin="0.28640068" DurationMax="0.5071274">
 					<MediaRefs>
 						<MediaRef Id="10599150"/>
 						<MediaRef Id="85731172"/>
@@ -5613,5 +5625,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0BFA4C22-1ECD-46AE-30C6-2773E6DA4E7C}</FileHash>
+	<FileHash>{12340370-A687-EA5F-3817-862408321C12}</FileHash>
 </SoundBanksInfo>

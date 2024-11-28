@@ -11,7 +11,7 @@ public class StandardEnemy : EnemyBaseClass
 
 
     void Awake(){
-        this.SetHealth(80f);
+        this.SetHealth(60f);
         this.SetAttackDistance(30f);
         this.SetFieldOfView(180f);
         this.SetStoppingDistance(8f);

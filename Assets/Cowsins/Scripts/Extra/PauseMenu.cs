@@ -148,16 +148,20 @@ namespace cowsins
                 Time.timeScale = 0f; 
                 
                 pauseMenuUI.SetActive(true); 
+                Debug.Log("Suspending All Audio");
+                AkSoundEngine.Suspend();
                 Debug.Log("pause ui ");
                 stats.LoseControl();
 
                 if (disablePlayerUIWhilePaused && !stats.isDead)
                 {
                     playerUI.SetActive(false);
+                    
+                    Debug.Log("Wake up All Audio");
+                    AkSoundEngine.WakeupFromSuspend();
                     Debug.Log("hide user ui ");
                 }
 
-                AkSoundEngine.Suspend();
 
                 OnPause?.Invoke();
             }
@@ -167,13 +171,15 @@ namespace cowsins
 
                 Time.timeScale = 1f; 
                 pauseMenuUI.SetActive(false); 
+                
+                Debug.Log("Wake up All Audio");
+                AkSoundEngine.WakeupFromSuspend();
                 Debug.Log("un pause ui ");
 
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 playerUI.SetActive(true);
 
-                AkSoundEngine.WakeupFromSuspend();
                 OnUnpause?.Invoke();
             }
         }
@@ -182,6 +188,7 @@ namespace cowsins
         {
             isPaused = false;
             Time.timeScale = 1f; 
+            // AkSoundEngine.StopAll();
             SceneManager.LoadScene(0); 
         }
 
@@ -189,9 +196,11 @@ namespace cowsins
         {
             Time.timeScale = 1f; 
             isPaused = false;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
             AkSoundEngine.WakeupFromSuspend();
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            // AkSoundEngine.StopAll();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+            // SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+
         }
 
 

@@ -26,6 +26,7 @@ public class EnemyStateController : MonoBehaviour
     private GameObject player;
     // [SerializeField] private bool isInRagdoll = false;
     private bool isInRecovery = false;
+    private bool shouldRagdoll = false;
 
 
     void Awake()
@@ -250,10 +251,14 @@ public class EnemyStateController : MonoBehaviour
 
         if (enemy != null)
         {
-            Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
-            enemy.GetEnemy().GetComponent<EnemyRagdollController>().RecoverFromRagdoll();
-            IEnemyState prevState = enemy.GetPreviousState();
-            animator.SetBool("isAttacking", true);
+            if(enemy.GetShouldRagdoll()){
+                Debug.Log("Enemy " + enemy.name + " is recovering from ragdoll");
+                enemy.GetEnemy().GetComponent<EnemyRagdollController>().RecoverFromRagdoll();
+                IEnemyState prevState = enemy.GetPreviousState();
+                animator.SetBool("isAttacking", true);
+                enemy.SetShouldRagdoll(false);
+            }
+            
             yield return new WaitForSeconds(2f);
             enemy.ChangeState(new EnemyAttackState());
             
@@ -351,6 +356,15 @@ public class EnemyStateController : MonoBehaviour
 
     public void SetisInRecovery(bool recovery){
         this.isInRecovery = recovery;
+    }
+
+
+    public void SetShouldRagdoll(bool shouldRagdoll){
+       this.shouldRagdoll = shouldRagdoll;  
+    }
+
+    public bool GetShouldRagdoll(){
+        return this.shouldRagdoll;
     }
 
 }
