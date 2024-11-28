@@ -23,30 +23,30 @@ public class ElevatorManager : MonoBehaviour
             MusicManager musicManager = GameObject.Find("GeneralSoundAmbience").GetComponent<MusicManager>();
             musicManager.CheckIfSameState("Elevator");
 
-            // int index = 0;
-            // foreach (WeaponIdentification id in other.gameObject.GetComponent<WeaponController>().inventory){
-            //     // Debug.Log("ELEVATOR: ""Weapon identification: " + id.name);
+            int index = 0;
+            foreach (WeaponIdentification id in other.gameObject.GetComponent<WeaponController>().inventory){
+                // Debug.Log("ELEVATOR: ""Weapon identification: " + id.name);
 
-            //     if(id != null){
-            //         PlayerDataManager.Instance.inventory[index] = id;
-            //         PlayerDataManager.Instance.weapons[index] = id.weapon;
+                if(id != null){
+                    PlayerDataManager.Instance.inventory[index] = id;
+                    PlayerDataManager.Instance.weapons[index] = id.weapon;
 
-            //         Debug.Log("Weapon identification: " + id.name);
-            //         PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
-            //         index++;
-            //     }
+                    Debug.Log("Weapon identification: " + id.name);
+                    PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
+                    index++;
+                }
 
-            //     // PlayerDataManager.Instance.inventory[index] = id;
-            //     // PlayerDataManager.Instance.weapons[index] = id.weapon;
+                // PlayerDataManager.Instance.inventory[index] = id;
+                // PlayerDataManager.Instance.weapons[index] = id.weapon;
 
-            //     // Debug.Log("Weapon identification: " + id.name);
-            //     // PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
-            //     // index++;
+                // Debug.Log("Weapon identification: " + id.name);
+                // PlayerDataManager.Instance.bulletsLeftInMagazine[index] = id.bulletsLeftInMagazine;
+                // index++;
             
 
 
-            // }
-            // // StartCoroutine(FadeOutAndLoadScene());
+            }
+            // StartCoroutine(FadeOutAndLoadScene());
 
             SceneManager.LoadScene("Level 2.1 Design");
             //Time.timeScale = 1;

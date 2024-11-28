@@ -935,7 +935,7 @@ namespace cowsins
             //Slow down sliding + prevent from infinite sliding
             if (InputManager.crouching && allowCrouch)
             {
-                // rb.AddForce(acceleration * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
+                rb.AddForce(acceleration * Time.deltaTime * -rb.velocity.normalized * slideCounterMovement);
                 return;
             }
             // Counter movement ( Friction while moving )

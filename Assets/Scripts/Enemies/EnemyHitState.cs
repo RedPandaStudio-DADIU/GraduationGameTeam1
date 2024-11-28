@@ -60,7 +60,6 @@ public class EnemyHitState : IEnemyState
 
     }
     public void OnUpdate(EnemyStateController stateController){
-        stateController.Recovery(0f);
        
     }
     public void OnExit(EnemyStateController stateController){     

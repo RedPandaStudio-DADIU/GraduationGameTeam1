@@ -20,7 +20,7 @@ namespace cowsins
             crouching,
             crouchingDown,
             interacting,
-            // dropping,
+            dropping,
             // nextweapon,
             // previousweapon,
             inspecting,
@@ -201,7 +201,7 @@ namespace cowsins
             }
 
             interacting = inputActions.GameControls.Interacting.IsPressed();
-            // dropping = inputActions.GameControls.Drop.IsPressed();
+            dropping = inputActions.GameControls.Drop.IsPressed();
 
             // inspecting = inputActions.GameControls.Inspect.IsPressed();
 
