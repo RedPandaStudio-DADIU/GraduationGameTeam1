@@ -257,6 +257,9 @@ public class EnemyStateController : MonoBehaviour
                 IEnemyState prevState = enemy.GetPreviousState();
                 animator.SetBool("isAttacking", true);
                 enemy.SetShouldRagdoll(false);
+                enemy.GetComponent<EnemyHealth>().enabled = true;
+                enemy.GetComponentInChildren<Canvas>().enabled = true;
+
             }
             
             yield return new WaitForSeconds(2f);

@@ -24,6 +24,10 @@ public class EnemyHitState : IEnemyState
             if(stateController.GetShouldRagdoll()){
                 stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
                 stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
+
+                stateController.GetEnemy().GetComponent<EnemyHealth>().enabled = false;
+                stateController.GetEnemy().GetComponentInChildren<Canvas>().enabled = false;
+                // stateController.GetEnemy().GetComponentInChildren<>
             }
 
         }
