@@ -506,6 +506,7 @@ namespace AK
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
         static const AkUniqueID PLAYERVOICE = 47937584U;
         static const AkUniqueID REVERBENVIRONMENTS = 346451691U;
+        static const AkUniqueID SFXMASTER = 1681633080U;
         static const AkUniqueID WEAPONS = 1467963052U;
         static const AkUniqueID XAGA_CONFERENCE = 385642153U;
         static const AkUniqueID XAGA_CONFERENCE_01 = 1038037717U;

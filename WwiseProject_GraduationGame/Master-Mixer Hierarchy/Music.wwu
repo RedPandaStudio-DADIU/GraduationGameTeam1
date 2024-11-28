@@ -3,7 +3,15 @@
 	<Busses>
 		<WorkUnit Name="Music" ID="{89C77C7D-2A70-4F6E-A79C-5590C19167CB}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
-				<Bus Name="Music_Master" ID="{551353D5-6854-4C7B-8CC5-B6F4363A4826}"/>
+				<Bus Name="Music_Master" ID="{551353D5-6854-4C7B-8CC5-B6F4363A4826}">
+					<PropertyList>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

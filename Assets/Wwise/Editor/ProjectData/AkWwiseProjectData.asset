@@ -309,7 +309,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\Ambience
     guid: dacf75d8cd7fda4f8c9c1b6ee38a0f2f
     GuidInternal: 
-    m_lastTime: -8584688063666311203
+    m_lastTime: -8584687815904478147
     List:
     - name: 2DAmbience
       guid: 078218de11fe064e80eeb58c458d4232
@@ -483,7 +483,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\Music
     guid: 7d7cc789702a6e4fa79c5590c19167cb
     GuidInternal: 
-    m_lastTime: -8584688063666279544
+    m_lastTime: -8584687820752182887
     List:
     - name: Music_Master
       guid: d553135554687b4c8cc5b6f4363a4826
@@ -522,7 +522,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX
     guid: d2201e2c39a40c4b940fb6d4f3340678
     GuidInternal: 
-    m_lastTime: -8584688063666269518
+    m_lastTime: -8584687815904528128
     List:
     - name: NPC_SFX
       guid: d133aa54d4d02a428820498561de2572
@@ -540,10 +540,13 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: SFXMaster
+        ObjectType: 2
+        guid: b8ca4a561f534842bc65caa9d504d775
       - ElementName: NPC_SFX
         ObjectType: 2
         guid: d133aa54d4d02a428820498561de2572
-      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\NPC_SFX
+      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\SFXMaster\NPC_SFX
     - name: PlayerCloth
       guid: add9da113d0ac84087b5c2f9e27a9e94
       id: 765206498
@@ -560,13 +563,16 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: SFXMaster
+        ObjectType: 2
+        guid: b8ca4a561f534842bc65caa9d504d775
       - ElementName: PlayerLocomotion
         ObjectType: 2
         guid: 001728eff519904eb0ecccfee0fd38e3
       - ElementName: PlayerCloth
         ObjectType: 2
         guid: add9da113d0ac84087b5c2f9e27a9e94
-      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerCloth
+      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\SFXMaster\PlayerLocomotion\PlayerCloth
     - name: PlayerFootsteps
       guid: 56d57834e194ae4e9e44971e57fb6e7a
       id: 1681012287
@@ -583,13 +589,16 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: SFXMaster
+        ObjectType: 2
+        guid: b8ca4a561f534842bc65caa9d504d775
       - ElementName: PlayerLocomotion
         ObjectType: 2
         guid: 001728eff519904eb0ecccfee0fd38e3
       - ElementName: PlayerFootsteps
         ObjectType: 2
         guid: 56d57834e194ae4e9e44971e57fb6e7a
-      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\PlayerLocomotion\PlayerFootsteps
+      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\SFXMaster\PlayerLocomotion\PlayerFootsteps
     - name: PlayerLocomotion
       guid: 001728eff519904eb0ecccfee0fd38e3
       id: 2343802269
@@ -606,10 +615,33 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: SFXMaster
+        ObjectType: 2
+        guid: b8ca4a561f534842bc65caa9d504d775
       - ElementName: PlayerLocomotion
         ObjectType: 2
         guid: 001728eff519904eb0ecccfee0fd38e3
-      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\PlayerLocomotion
+      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\SFXMaster\PlayerLocomotion
+    - name: SFXMaster
+      guid: b8ca4a561f534842bc65caa9d504d775
+      id: 1681633080
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Audio Master
+        ObjectType: 12
+        guid: d2b3f9926e5be84bbd1fcd54538eb6e9
+      - ElementName: Master Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 12
+        guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: SFXMaster
+        ObjectType: 2
+        guid: b8ca4a561f534842bc65caa9d504d775
+      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\SFXMaster
     - name: Weapons
       guid: 2fdd3fe48411b443bbf2688f7fc66e13
       id: 1467963052
@@ -626,10 +658,13 @@ MonoBehaviour:
       - ElementName: SFX
         ObjectType: 12
         guid: d2201e2c39a40c4b940fb6d4f3340678
+      - ElementName: SFXMaster
+        ObjectType: 2
+        guid: b8ca4a561f534842bc65caa9d504d775
       - ElementName: Weapons
         ObjectType: 2
         guid: 2fdd3fe48411b443bbf2688f7fc66e13
-      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\Weapons
+      Path: Master-Mixer Hierarchy\Audio Master\Master Bus\SFX\SFXMaster\Weapons
   - PhysicalPath: Master-Mixer Hierarchy\SharedEffects.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
@@ -957,7 +992,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Audio Master\Master Bus\Voicelines
     guid: f4aed3b74e0ebb4e86c116581226443f
     GuidInternal: 
-    m_lastTime: -8584688063666252971
+    m_lastTime: -8584687815673859462
     List:
     - name: 01_Ai
       guid: 9750bf7b455dc14f8626ca7ed402a240
@@ -1946,7 +1981,7 @@ MonoBehaviour:
       Path: Events\Dialogue\lvl2_Conference\BossFight\Play_Xaga_HurtSounds_DamageTaken
       maxAttenuation: 100
       maxDuration: 1.4367347
-      minDuration: 0.78367347
+      minDuration: 0.008375
     - name: Play_Xaga_StateDialogue
       guid: 1639969a7e972649b92b9a45ac5dd16a
       id: 3452699959
@@ -1990,7 +2025,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9872439fcce15648ba80e20e5aa922e2
       Path: Events\Dialogue\lvl2_Conference\BossFight\Play_XagaCharge
-      maxAttenuation: 0
+      maxAttenuation: 50
       maxDuration: 11.833376
       minDuration: 11.109665
     - name: Play_XagaDeathScream
@@ -2490,8 +2525,8 @@ MonoBehaviour:
         guid: f7bbdc620ec7124787eb8b7de927a0ea
       Path: Events\NPC\Brute\Play_Brute_Damage
       maxAttenuation: 50
-      maxDuration: 0.70339406
-      minDuration: 0.431602
+      maxDuration: 1.1900052
+      minDuration: 0.6526468
     - name: Play_BruteAttack
       guid: 1562f9c098d97c4dbb12cf1603a1aa80
       id: 334987570
@@ -2529,7 +2564,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0f7a7f6bb163904ea8bf75d594e37c40
       Path: Events\NPC\Brute\Play_BruteBarks
-      maxAttenuation: 100
+      maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
     - name: Play_Diplomat_Damage
@@ -2550,8 +2585,8 @@ MonoBehaviour:
         guid: 226ff020c73f9449bb840a226cd5c7b4
       Path: Events\NPC\Diplomat\Play_Diplomat_Damage
       maxAttenuation: 50
-      maxDuration: 0.5533459
-      minDuration: 0.26232734
+      maxDuration: 10.600753
+      minDuration: 0.704258
     - name: Play_DiplomatBarks
       guid: 4da6ff0e1193034fbc541f493c1031f3
       id: 4152854033
@@ -2569,7 +2604,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4da6ff0e1193034fbc541f493c1031f3
       Path: Events\NPC\Diplomat\Play_DiplomatBarks
-      maxAttenuation: 100
+      maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
     - name: Play_Headshot
@@ -2669,7 +2704,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e52d0c1a7c93ca43b52e7c51e5281da8
       Path: Events\NPC\Soldier\Play_SoldierBarks
-      maxAttenuation: 100
+      maxAttenuation: 50
       maxDuration: -1
       minDuration: -1
     - name: Play_Solider_Damage
@@ -2690,8 +2725,8 @@ MonoBehaviour:
         guid: 0f25d4d4614875409e30463353aaefaa
       Path: Events\NPC\Soldier\Play_Solider_Damage
       maxAttenuation: 50
-      maxDuration: 0.5071274
-      minDuration: 0.28640068
+      maxDuration: 7.7722554
+      minDuration: 0.37207648
     - name: Soldier
       guid: d5e99313e58c574496de742d174c1234
       id: 3121013053

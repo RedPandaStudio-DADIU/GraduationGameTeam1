@@ -2371,16 +2371,32 @@
 						<DuckItem>
 							<BusRef Name="Music_Master" ID="{551353D5-6854-4C7B-8CC5-B6F4363A4826}"/>
 							<DuckingParam>
-								<Volume>-3</Volume>
+								<Volume>-6</Volume>
 								<FadeInTime>1</FadeInTime>
 								<FadeOutTime>1</FadeOutTime>
 								<FadeCurve>FadeLinear</FadeCurve>
 								<TargetProp>BusVolume</TargetProp>
 							</DuckingParam>
 						</DuckItem>
+						<DuckItem>
+							<BusRef Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}"/>
+							<DuckingParam>
+								<Volume>-6</Volume>
+								<FadeInTime>0.5</FadeInTime>
+								<FadeOutTime>0.5</FadeOutTime>
+								<FadeCurve>FadeLinear</FadeCurve>
+							</DuckingParam>
+						</DuckItem>
 					</DuckingList>
 				</Bus>
 				<Bus Name="NPCBarks" ID="{057AB715-157F-4D2F-B8A3-345BBE895021}">
+					<PropertyList>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>45</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ChildrenList>
 						<Bus Name="NPC Humans" ID="{D368196C-31BD-4063-A8C0-8BB470A59A5B}"/>
 						<Bus Name="NPC Aliens" ID="{90B7454E-E22B-4E84-83B9-9740C406C3E3}"/>
