@@ -20,12 +20,13 @@ public class EnemyHitState : IEnemyState
             stateController.GetEnemy().gameObject.GetComponentInChildren<Animator>().enabled = false;
 
             stateController.ChangeState(new EnemyDieState());
-        } 
+        } else{
+            if(stateController.GetShouldRagdoll()){
+                stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
+                stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
+            }
 
-        // else{
-        //     // stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
-        //     // stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
-        // }
+        }
 
         if(!stateController.GetEnemy().CompareTag("Boss")){
             stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "TakingDamage");
@@ -69,6 +70,8 @@ public class EnemyHitState : IEnemyState
            
 
         // }
+        // stateController.SetShouldRagdoll(false);
+
 
     }
 
