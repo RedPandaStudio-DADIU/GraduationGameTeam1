@@ -3,34 +3,69 @@
 	<Busses>
 		<WorkUnit Name="SFX" ID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
-				<Bus Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}">
-					<PropertyList>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-				</Bus>
-				<Bus Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}">
-					<PropertyList>
-						<Property Name="BusVolume" Type="Real64">
-							<ValueList>
-								<Value>-5</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
+				<Bus Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}">
 					<ChildrenList>
-						<Bus Name="PlayerCloth" ID="{11DAD9AD-0A3D-40C8-87B5-C2F9E27A9E94}"/>
-						<Bus Name="PlayerFootsteps" ID="{3478D556-94E1-4EAE-9E44-971E57FB6E7A}"/>
+						<Bus Name="NPC_SFX" ID="{54AA33D1-D0D4-422A-8820-498561DE2572}">
+							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>48</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="PlayerLocomotion" ID="{EF281700-19F5-4E90-B0EC-CCFEE0FD38E3}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>82</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="PlayerCloth" ID="{11DAD9AD-0A3D-40C8-87B5-C2F9E27A9E94}">
+									<PropertyList>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>52</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
+								<Bus Name="PlayerFootsteps" ID="{3478D556-94E1-4EAE-9E44-971E57FB6E7A}">
+									<PropertyList>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>49</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Weapons" ID="{E43FDD2F-1184-43B4-BBF2-688F7FC66E13}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>82</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 					</ChildrenList>
-				</Bus>
-				<Bus Name="Weapons" ID="{E43FDD2F-1184-43B4-BBF2-688F7FC66E13}">
-					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="1"/>
-						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="att_Generic_100m" ID="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
-						</Reference>
-					</ReferenceList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

@@ -4,6 +4,13 @@
 		<WorkUnit Name="Ambience" ID="{D875CFDA-7FCD-4FDA-8C9C-1B6EE38A0F2F}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
 				<Bus Name="AmbientMaster" ID="{370467A9-3249-4187-926F-49EFC6B408E4}">
+					<PropertyList>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>51</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ChildrenList>
 						<Bus Name="AmbientBeds" ID="{EEFEC5C9-D87B-4169-8AF9-2635DA5C5D98}">
 							<ChildrenList>
