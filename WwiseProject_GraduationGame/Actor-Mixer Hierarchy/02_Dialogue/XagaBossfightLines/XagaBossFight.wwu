@@ -216,6 +216,12 @@
 						</Sound>
 						<RandomSequenceContainer Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}" ShortID="245159429">
 							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.1"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
@@ -252,7 +258,7 @@
 											<PropertyList>
 												<Property Name="FadeInDuration" Type="Real64" Value="0.15424684159378"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="1.48462585034014"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.75335529891304"/>
 											</PropertyList>
 											<Language>English(US)</Language>
 											<AudioFile>IDidntMeanToKill.wav</AudioFile>
@@ -267,6 +273,11 @@
 								</Sound>
 								<Sound Name="ItWasAMistake" ID="{1A71FBFB-209C-408A-833A-737C7E5D2FD2}" ShortID="545251662">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsVoice" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -296,14 +307,94 @@
 										<ActiveSource Name="ItWasAMistake" ID="{76A59249-075D-4F78-A41B-6652D9A2E159}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="IDidntMeanToKill_01" ID="{5D5AC5D1-F4D6-46B7-AF0E-F6085DBA8789}" ShortID="628558281">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="IDidntMeanToKill" ID="{78B94972-886C-4EA1-ADB7-BD9CDD42B582}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.15424684159378"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.194817255434782"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.94817255434783"/>
+											</PropertyList>
+											<Language>English(US)</Language>
+											<AudioFile>IDidntMeanToKill.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="917628522"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="IDidntMeanToKill" ID="{78B94972-886C-4EA1-ADB7-BD9CDD42B582}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{FA116D0F-D48D-4BBC-8088-DF1C51187620}" ShortID="771472385">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom CreatedFrom="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}">
+															<Effect Name="New_Guitar_Distortion (Custom)" ID="{5134BB5B-69F3-4D48-B730-C9AEA8E7B5E0}" ShortID="21767409" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																<PropertyList>
+																	<Property Name="DistortionDrive" Type="Real32" Value="45"/>
+																	<Property Name="DistortionTone" Type="Real32" Value="70"/>
+																	<Property Name="DistortionType" Type="int32" Value="2"/>
+																	<Property Name="PostEQBand1Frequency" Type="Real32" Value="239"/>
+																	<Property Name="PostEQBand1Gain" Type="Real32" Value="4"/>
+																	<Property Name="PostEQBand3Enable" Type="bool" Value="True"/>
+																	<Property Name="PostEQBand3FilterType" Type="int32" Value="1"/>
+																	<Property Name="PostEQBand3Frequency" Type="Real32" Value="2864"/>
+																	<Property Name="PostEQBand3Gain" Type="Real32" Value="1.5"/>
+																	<Property Name="PostEQBand3QFactor" Type="Real32" Value="3.3"/>
+																	<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+																	<Property Name="PreEQBand3FilterType" Type="int32" Value="1"/>
+																	<Property Name="PreEQBand3Frequency" Type="Real32" Value="1569"/>
+																	<Property Name="PreEQBand3Gain" Type="Real32" Value="10.5"/>
+																	<Property Name="PreEQBand3QFactor" Type="Real32" Value="0.8"/>
+																	<Property Name="Rectification" Type="Real32" Value="43"/>
+																	<Property Name="WetDryMix" Type="Real32" Value="64"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 								<ObjectList Name="Playlist">
 									<Reference>
 										<ObjectRef Name="IDidntMeanToKill" ID="{EA01E875-2670-4424-B8B8-F518398CA096}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
 									</Reference>
 									<Reference>
 										<ObjectRef Name="ItWasAMistake" ID="{1A71FBFB-209C-408A-833A-737C7E5D2FD2}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="IDidntMeanToKill_01" ID="{5D5AC5D1-F4D6-46B7-AF0E-F6085DBA8789}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
@@ -341,6 +432,11 @@
 						<Sound Name="XagaDeathScream" ID="{E360F594-B790-46A3-BB73-1EABC78A12E8}" ShortID="432576691">
 							<PropertyList>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -352,6 +448,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="XagaDeathScream" ID="{05386029-177A-41FD-A40B-F3F0AE45BF8C}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.415625"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.259765625"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.38984375"/>
+										<Property Name="TrimEnd" Type="Real64" Value="10.754296875"/>
+									</PropertyList>
 									<Language>English(US)</Language>
 									<AudioFile>XagaDeathScream.wav</AudioFile>
 									<MediaIDList>
@@ -503,6 +606,42 @@
 								<ActiveSource Name="Xaga_WeGaveYouOurPower" ID="{AC89FDA4-61FC-4250-BF79-838747C08243}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="XagaDeathScream_01" ID="{84CCF358-FA7D-4793-89B7-2105D72ACBB7}" ShortID="226982714">
+							<PropertyList>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="XagaDeathScream" ID="{F4F34251-D27C-46AF-AB76-5DC9A33CCBE6}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.415625"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.259765625"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.545703125"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>XagaDeathScream.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="434367207"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="XagaDeathScream" ID="{F4F34251-D27C-46AF-AB76-5DC9A33CCBE6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
@@ -511,6 +650,9 @@
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="XagaDeathScream_01" ID="{84CCF358-FA7D-4793-89B7-2105D72ACBB7}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Xaga_WeGaveYouOurPower" ID="{AB2A1675-0ED4-45F0-BD29-4B8032D01BB5}"/>
@@ -533,6 +675,7 @@
 								<SwitchRef Name="XagaDead" ID="{0CD28F13-CAD4-4581-8ED6-B1AB105FCBE8}"/>
 								<ItemList>
 									<ItemRef Name="XagaDeathScream" ID="{E360F594-B790-46A3-BB73-1EABC78A12E8}"/>
+									<ItemRef Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -558,12 +701,6 @@
 								<SwitchRef Name="LostArm" ID="{F7CA30C3-8F8F-43FF-9B0A-E02DC51E7F55}"/>
 								<ItemList>
 									<ItemRef Name="NooooMyArm" ID="{6D5DA52A-8C36-4829-B352-570EFCA4CCDF}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="NearDead_LastSentence" ID="{7231C3E3-CC09-449A-8D08-F1E737DA3E5A}"/>
-								<ItemList>
-									<ItemRef Name="LastSentence" ID="{990A88E5-CC65-4F0F-9FB8-C9DAC313CC28}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
@@ -1502,7 +1639,7 @@
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1658,7 +1795,7 @@
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1714,11 +1851,44 @@
 										<ActiveSource Name="JD_Okay7" ID="{EF7C90FE-04DC-427A-9C6D-D3E8EB138695}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="JD_FuckYouXaga" ID="{FDB7B7F8-7C0B-4F69-87CA-07D1E63F47CE}" ShortID="287476609">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsVoice" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="JD_FuckYouXaga" ID="{C7DC5808-098C-4DA7-B67A-1B90465A268A}">
+											<Language>English(US)</Language>
+											<AudioFile>JD_FuckYouXaga.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="549081892"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="JD_FuckYouXaga" ID="{C7DC5808-098C-4DA7-B67A-1B90465A268A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Playlist">
 									<Reference>
 										<ObjectRef Name="JD_ThisIsForYouJane" ID="{864D316C-ABA9-4578-B0C6-023D45037607}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="JD_FuckYouXaga" ID="{FDB7B7F8-7C0B-4F69-87CA-07D1E63F47CE}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
 									</Reference>
 									<Reference>
 										<ObjectRef Name="AI_SoWhatsNext" ID="{E084E72A-05C0-40EC-82ED-7BBD57E3E498}" WorkUnitID="{72B132CD-D0DF-47B4-B08A-529FE6DE13F8}"/>
@@ -1927,31 +2097,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Xaga_LaughShort" ID="{3D2963DA-F7A6-4738-B33A-07D8FE2C898A}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Xaga_YouUselessFucks" ID="{DC8EC436-A2FA-4745-B6C3-588969BFCCAA}" ShortID="817021168">
-					<PropertyList>
-						<Property Name="IsVoice" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Xaga_YouUselessFucks" ID="{EFF1D532-89C4-49E1-B49A-1DD1FCA332E4}">
-							<Language>English(US)</Language>
-							<AudioFile>Xaga_YouUselessFucks.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="994057007"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Xaga_YouUselessFucks" ID="{EFF1D532-89C4-49E1-B49A-1DD1FCA332E4}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="XagaCharge" ID="{7CC7B1DB-7D06-41A1-848E-69E03A50A911}" ShortID="377886466">
