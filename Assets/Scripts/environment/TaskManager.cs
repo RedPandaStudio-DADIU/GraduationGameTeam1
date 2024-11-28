@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class TaskManager : MonoBehaviour
         taskDictionary.Add(2, Resources.Load<Sprite>("TaskImages/3")); 
         taskDictionary.Add(3, Resources.Load<Sprite>("TaskImages/4")); 
 
-        // 显示初始任务
+        
         UpdateTaskUI();
     }
 
@@ -42,7 +43,7 @@ public class TaskManager : MonoBehaviour
     public void CompleteTask()
     {
         Debug.Log($"Task {currentTaskID} completed.");
-        currentTaskID++; /
+        currentTaskID++; 
 
         if (currentTaskID < taskDictionary.Count)
         {
