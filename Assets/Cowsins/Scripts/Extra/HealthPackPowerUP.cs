@@ -17,6 +17,8 @@ namespace cowsins
           private bool used = false;
           private bool showed = false;
 
+          private int popID=0; 
+
           private PopupManager popupManager;
  
          private void Start()
@@ -47,6 +49,11 @@ namespace cowsins
         private void Update()
         {
  
+            if (popupManager != null && popupManager.GetCurrentpopUpID() != popID)
+        {
+            return; // This popup is not the current task
+        }
+        
             if ( InputManager.heal && able)
             {
                 Debug.Log("Healing player.");
