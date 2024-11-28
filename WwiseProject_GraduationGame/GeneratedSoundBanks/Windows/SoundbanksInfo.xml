@@ -1085,7 +1085,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{2D33BF53-7CEB-7EBD-389F-354A461EC326}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{2021756D-0D20-7452-ACFC-F6D0325CC4E8}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1252,10 +1252,6 @@
 				<File Id="95896769" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 1_C79660D5.wem</CachePath>
-				</File>
-				<File Id="100377375" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>ItWasAMistake.wav</ShortName>
-					<CachePath>Voices/English(US)/ItWasAMistake_4DC8B021.wem</CachePath>
 				</File>
 				<File Id="102202114" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TestDeathrattles.wav</ShortName>
@@ -1503,7 +1499,7 @@
 				</File>
 				<File Id="257021756" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>IDidntMeanToKill.wav</ShortName>
-					<CachePath>Voices/English(US)/IDidntMeanToKill_90564052.wem</CachePath>
+					<CachePath>Voices/English(US)/IDidntMeanToKill_B5443582.wem</CachePath>
 				</File>
 				<File Id="259744675" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 3.wav</ShortName>
@@ -1937,6 +1933,10 @@
 					<ShortName>TheCaelariHaveBetrayedUs.wav</ShortName>
 					<CachePath>Voices/English(US)/TheCaelariHaveBetrayedUs_818F3B66.wem</CachePath>
 				</File>
+				<File Id="549081892" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_FuckYouXaga.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_FuckYouXaga_818F3B66.wem</CachePath>
+				</File>
 				<File Id="560151172" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bullets_Impact_Hit_Body_Flesh_01_SND50293 4.wav</ShortName>
 					<CachePath>SFX/Bullets_Impact_Hit_Body_Flesh_01_SND50293 4_F1AB610D.wem</CachePath>
@@ -2347,7 +2347,7 @@
 				</File>
 				<File Id="856090677" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>XagaDeathScream.wav</ShortName>
-					<CachePath>Voices/English(US)/XagaDeathScream_818F3B66.wem</CachePath>
+					<CachePath>Voices/English(US)/XagaDeathScream_B4F5C8C6.wem</CachePath>
 				</File>
 				<File Id="858846467" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_CanIKeepYouCompany.wav</ShortName>
@@ -2448,6 +2448,10 @@
 				<File Id="914001236" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Creatures_Monster_Alien_Scream_01_SND32355 2.wav</ShortName>
 					<CachePath>SFX/Creatures_Monster_Alien_Scream_01_SND32355 2_8AD8B40D.wem</CachePath>
+				</File>
+				<File Id="917628522" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>IDidntMeanToKill.wav</ShortName>
+					<CachePath>Voices/English(US)/IDidntMeanToKill_427E4E07.wem</CachePath>
 				</File>
 				<File Id="921613273" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TestFiles\Beep 1000 Hz, Length Of 1 Frame To 25 FrameSec Code ( Pal) by OneiroidState Id-195926.wav</ShortName>
@@ -2584,10 +2588,6 @@
 				<File Id="987801719" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>DamageTaken\ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2.wav</ShortName>
 					<CachePath>Voices/English(US)/DamageTaken/ElevenLabs_2024-11-18T17_00_45_Jessica Anne Bogart - Character and Animation_pvc_s30_sb100_t2_818F3B66.wem</CachePath>
-				</File>
-				<File Id="994057007" Language="English(US)" Streaming="false" Location="Memory">
-					<ShortName>Xaga_YouUselessFucks.wav</ShortName>
-					<CachePath>Voices/English(US)/Xaga_YouUselessFucks_818F3B66.wem</CachePath>
 				</File>
 				<File Id="994086495" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bullets_Impact_Body_Flesh_SND6368 1.wav</ShortName>
@@ -2737,6 +2737,7 @@
 					<Plugin Id="8145371" Name="CONFIRM 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="16454064" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="18080721" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="21767409" Name="New_Guitar_Distortion (Custom)" LibName="Wwise Guitar Distortion" LibId="8257539"/>
 					<Plugin Id="26154250" Name="PAD 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="28380969" Name="FLUTISH" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="41483680" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
@@ -4942,6 +4943,7 @@
 							<MediaRefs>
 								<MediaRef Id="212330411"/>
 								<MediaRef Id="362121130"/>
+								<MediaRef Id="549081892"/>
 								<MediaRef Id="638707504"/>
 								<MediaRef Id="854674266"/>
 								<MediaRef Id="858846467"/>
@@ -4990,6 +4992,7 @@
 							<MediaRefs>
 								<MediaRef Id="212330411"/>
 								<MediaRef Id="362121130"/>
+								<MediaRef Id="549081892"/>
 								<MediaRef Id="638707504"/>
 								<MediaRef Id="854674266"/>
 								<MediaRef Id="858846467"/>
@@ -5135,8 +5138,15 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="1062602090"/>
 							<MediaRefs>
+								<MediaRef Id="257021756"/>
 								<MediaRef Id="856090677"/>
+								<MediaRef Id="917628522"/>
 							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="21767409"/>
+								</Custom>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="2676857933"/>
@@ -5161,20 +5171,20 @@
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="2961238679"/>
 							<MediaRefs>
 								<MediaRef Id="705500713"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3568468165" Id="863260099"/>
-							<MediaRefs>
-								<MediaRef Id="100377375"/>
-								<MediaRef Id="257021756"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="1062602090"/>
 							<MediaRefs>
+								<MediaRef Id="257021756"/>
 								<MediaRef Id="856090677"/>
+								<MediaRef Id="917628522"/>
 							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="21767409"/>
+								</Custom>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="2676857933"/>
@@ -5199,13 +5209,6 @@
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="2961238679"/>
 							<MediaRefs>
 								<MediaRef Id="705500713"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="3568468165" Id="863260099"/>
-							<MediaRefs>
-								<MediaRef Id="100377375"/>
-								<MediaRef Id="257021756"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -5222,7 +5225,7 @@
 						<MediaRef Id="1012116253"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="655800824" Name="Play_XagaDeathScream" MaxAttenuation="100" DurationType="OneShot" DurationMin="14.339063" DurationMax="14.339063">
+				<Event Id="655800824" Name="Play_XagaDeathScream" MaxAttenuation="100" DurationType="OneShot" DurationMin="8.364453" DurationMax="8.364453">
 					<MediaRefs>
 						<MediaRef Id="856090677"/>
 					</MediaRefs>
@@ -5625,5 +5628,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{34B345F9-4A08-6880-59DB-08E621639A74}</FileHash>
+	<FileHash>{0BE62024-7751-2BFE-27C5-DCFFC011244B}</FileHash>
 </SoundBanksInfo>
