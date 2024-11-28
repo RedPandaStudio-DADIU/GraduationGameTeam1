@@ -114,6 +114,7 @@ public class Boss : DiplomatEnemy
         LayerMask obstacleLayer = LayerMask.GetMask("Default", "Player", "Obstacle");
 
         GameObject explosion = Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
+        explosion.GetComponent<VisualEffect>().Play();
         if (bossExplosionSoundEvent != null)
         {
             bossExplosionSoundEvent.Post(gameObject);
