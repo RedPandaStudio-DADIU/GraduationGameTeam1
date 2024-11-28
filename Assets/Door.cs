@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [Tooltip("Instantiate this when the barrel explodes"), SerializeField]
-    private GameObject destroyedObject; //, explosionVFX;
+    [SerializeField]  private GameObject destroyedObject; //, explosionVFX;
     [SerializeField] private GameObject originalDoor;
     [SerializeField] private AK.Wwise.Event doorKicked;
 
@@ -30,6 +29,17 @@ public class Door : MonoBehaviour
             piece.AddExplosionForce(explosionForce, explosionPosition, explosionRadius);
         }
         
+        StartCoroutine(DestroyPieces());
+
+    }
+
+    
+    IEnumerator DestroyPieces()
+    {
+        
+        yield return new WaitForSeconds(1f);
+        Destroy(destroyedObject);
+
     }
 
 

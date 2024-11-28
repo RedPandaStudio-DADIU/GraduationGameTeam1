@@ -10,6 +10,7 @@ public class PushEnemy : MonoBehaviour
     [SerializeField] private float pushRadius = 3f; 
     [SerializeField] private float damage = 10f;  
     [SerializeField] private AK.Wwise.Event kickEvent;  
+    [SerializeField] private GameObject doorManager;  
 
     private float ragdollDuration = 5.0f; 
  
@@ -46,7 +47,8 @@ public class PushEnemy : MonoBehaviour
                     PushLogic(hitCollider);
                 }
             } else if(hitCollider.CompareTag("Door")){
-                hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
+                // hitCollider.gameObject.GetComponent<Door>().KickTheDoor();
+                doorManager.GetComponent<Door>().KickTheDoor();
             }
         }
     }
