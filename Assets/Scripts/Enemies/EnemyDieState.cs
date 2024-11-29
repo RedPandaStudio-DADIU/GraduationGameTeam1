@@ -26,6 +26,7 @@ public class EnemyDieState : IEnemyState
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(true);
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
             stateController.GetMusicManager().CheckIfSameState("Win");
+            stateController.StartEndGame();
 
         } else{
             stateController.GetEnemy().SetSwitchValue("EnemyStatusSwitch", "Dying");
@@ -34,14 +35,9 @@ public class EnemyDieState : IEnemyState
 
         if(!stateController.GetIsHuman()){
             stateController.gameObject.GetComponent<EnemyHealth>().enabled = false;
+            stateController.GetEnemy().GetComponentInChildren<Canvas>().enabled = false;
         }
 
-        if(!stateController.GetIsHuman()){
-            Transform child = stateController.FindChildByName(stateController.GetEnemy().transform, "HealthSlider");
-            child.gameObject.SetActive(false);
-        }
-
-    
 
         
         stateController.gameObject.GetComponent<EnemyWeaponController>().enabled = false;
