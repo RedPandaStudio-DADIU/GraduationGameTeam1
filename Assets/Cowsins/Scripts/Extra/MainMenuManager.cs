@@ -19,6 +19,7 @@ namespace cowsins
         [SerializeField] private string videoFileName ;
 
 
+        [SerializeField] private AK.Wwise.Event cutsceneEvent; 
 
         [SerializeField] private AK.Wwise.Event musicEvent; 
 
@@ -138,13 +139,13 @@ namespace cowsins
 
                 #if UNITY_EDITOR || UNITY_STANDALONE
                     // Correct the file path for VideoPlayer
-                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Finished_Cutscene.mp4";
                     videoPlayer.url = videoPath;
                 #elif UNITY_ANDROID
-                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov"; // Android handles StreamingAssets differently
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Finished_Cutscene.mp4"; // Android handles StreamingAssets differently
                     videoPlayer.url = videoPath;
                 #elif UNITY_IOS
-                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Dream_6.mov";
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Finished_Cutscene.mp4";
                     videoPlayer.url = videoPath;
                 #endif
 
@@ -152,7 +153,7 @@ namespace cowsins
                 Debug.Log("Video path set to: " + videoPlayer.url);
                 videoPlayer.loopPointReached += OnVideoEnd;
                  mainMenuSections[1].section.gameObject.SetActive(false);
-
+                cutsceneEvent.Post(this.gameObject);
                 videoPlayer.Play();
                 Debug.Log("Is playing: " + videoPlayer.isPlaying);
 
