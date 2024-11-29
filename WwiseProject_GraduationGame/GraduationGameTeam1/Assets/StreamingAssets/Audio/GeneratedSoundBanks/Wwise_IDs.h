@@ -241,14 +241,17 @@ namespace AK
             {
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID SC0_TR1 = 1568320811U;
+                static const AkUniqueID SC0_TR2 = 1568320808U;
                 static const AkUniqueID SC1_TR0 = 342028879U;
                 static const AkUniqueID SC1_TR1 = 342028878U;
                 static const AkUniqueID SC1_TR2 = 342028877U;
+                static const AkUniqueID SC1_TR3 = 342028876U;
                 static const AkUniqueID SC2_TR1 = 3079543733U;
                 static const AkUniqueID SC2_TR2 = 3079543734U;
                 static const AkUniqueID SC2_TR3 = 3079543735U;
                 static const AkUniqueID SC3_TR1 = 569325008U;
                 static const AkUniqueID SC4_TR1 = 551107239U;
+                static const AkUniqueID SC5_TR0 = 3690529131U;
                 static const AkUniqueID SC5_TR1 = 3690529130U;
                 static const AkUniqueID SC5_TR2 = 3690529129U;
                 static const AkUniqueID TRIGGERISWAITING = 2172575860U;
@@ -495,6 +498,7 @@ namespace AK
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID DIALOGUEMASTER = 2645497833U;
         static const AkUniqueID LEVEL2 = 2678230381U;
+        static const AkUniqueID LFE = 696369880U;
         static const AkUniqueID MASTER_BUS = 1399649189U;
         static const AkUniqueID MUSIC_MASTER = 3595451983U;
         static const AkUniqueID NPC_ALIENS = 223128778U;
