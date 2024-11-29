@@ -24,7 +24,7 @@ public class EnemyDieState : IEnemyState
 
         if(stateController.GetEnemy().CompareTag("Boss")){
             stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(true);
-            stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
+            // stateController.GetEnemy().GetComponent<Boss>().PlayHitOrDeadSound(false);
             stateController.GetMusicManager().CheckIfSameState("Win");
             stateController.StartEndGame();
 
