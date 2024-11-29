@@ -7,9 +7,11 @@ public class WeakSpot : MonoBehaviour
     [SerializeField] private float noHitsToDestroy = 3f;
     [SerializeField] private Boss boss;
 
+    private bossTask bossTask;
+
     void Start()
     {
-        
+        bossTask = FindObjectOfType<bossTask>();
     }
 
     void Update()
@@ -39,6 +41,12 @@ public class WeakSpot : MonoBehaviour
 
         if(boss.CheckIfEmpty()){
             boss.SetAreWeakSpotsDefeated(true);
+        }
+
+         if (bossTask != null)
+        {
+            bossTask.CompletepopUp(); 
+            Debug.Log("boss task completed!");
         }
 
         Debug.LogWarning("Weakspot " + this.gameObject.name + " defeated!");

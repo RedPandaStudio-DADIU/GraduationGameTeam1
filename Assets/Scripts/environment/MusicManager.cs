@@ -87,9 +87,11 @@ public class MusicManager : MonoBehaviour
                 break;
             case "Win":
                 AkSoundEngine.SetState(level2EndingStateGroup, "Win");
+                Debug.Log("Playing music level 7 - Win");
                 break;
             case "Loose":
                 AkSoundEngine.SetState(level2EndingStateGroup, "Loose");
+                Debug.Log("Playing music level 8 - Loose");
                 break;
             default:
                 AkSoundEngine.SetState(playerStateStateGroup, "No_combat");

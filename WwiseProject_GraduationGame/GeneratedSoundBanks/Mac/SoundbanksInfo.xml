@@ -14,7 +14,7 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{CC716496-C1C9-1EC9-D252-970E9813635A}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{5CF35608-0BA7-6375-630C-6437272B4F76}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 			<Media>
@@ -471,7 +471,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{289DADA4-26BE-6332-2DA5-A0C1B1B4A1E4}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{78FECB1B-CFA9-1630-8CA0-A1BDD1A33C42}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -548,6 +548,7 @@
 				<Bus Id="346451691" Name="ReverbEnvironments"/>
 				<Bus Id="385642153" Name="Xaga_Conference" MaxAttenuation="100"/>
 				<Bus Id="424473642" Name="Xaga_ConferenceRoom_01" MaxAttenuation="100"/>
+				<Bus Id="696369880" Name="LFE"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
 				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1038037717" Name="Xaga_Conference_01" MaxAttenuation="100"/>
@@ -609,6 +610,7 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="2808420495" Name="JohnDoeBarks"/>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
 				<Bus Id="3458995332" Name="Xaga_ConferenceRoom" MaxAttenuation="100"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
@@ -843,12 +845,14 @@
 				</StateGroup>
 				<StateGroup Id="4121174866" Name="Scenes_lvl1">
 					<States>
+						<State Id="342028876" Name="Sc1_Tr3"/>
 						<State Id="342028877" Name="Sc1_Tr2"/>
 						<State Id="342028878" Name="Sc1_Tr1"/>
 						<State Id="342028879" Name="Sc1_Tr0"/>
 						<State Id="551107239" Name="Sc4_Tr1"/>
 						<State Id="569325008" Name="Sc3_Tr1"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="1568320808" Name="Sc0_Tr2"/>
 						<State Id="1568320811" Name="Sc0_Tr1"/>
 						<State Id="2172575860" Name="TriggerIsWaiting"/>
 						<State Id="3079543733" Name="Sc2_Tr1"/>
@@ -856,6 +860,7 @@
 						<State Id="3079543735" Name="Sc2_Tr3"/>
 						<State Id="3690529129" Name="Sc5_Tr2"/>
 						<State Id="3690529130" Name="Sc5_Tr1"/>
+						<State Id="3690529131" Name="Sc5_Tr0"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -1106,7 +1111,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{659AA87F-8DE1-EBE6-C30B-AFD9D0A4BF05}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{E1CE7DA7-11EE-9558-ADA1-C41B0770BFB5}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1338,6 +1343,10 @@
 					<ShortName>Xaga_ThisAmusesMe.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_ThisAmusesMe_BD035DAE.wem</CachePath>
 				</File>
+				<File Id="114334621" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroSequence_Finalmix_002.C.wav</ShortName>
+					<CachePath>SFX/IntroSequence_Finalmix_002.C_BD035DAE.wem</CachePath>
+				</File>
 				<File Id="115131081" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_Federation_Sc2 Tr1.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_Federation_Sc2 Tr1_FCFC35D5.wem</CachePath>
@@ -1409,6 +1418,10 @@
 				<File Id="143878709" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Damage_7.wav</ShortName>
 					<CachePath>SFX/Soldier_Damage_7_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="148178849" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_TryKickingTheDoor.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_TryKickingTheDoor_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="149099509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Death_3.wav</ShortName>
@@ -1512,7 +1525,7 @@
 				</File>
 				<File Id="200692930" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_LetsDoThis.wav</ShortName>
-					<CachePath>Voices/English(US)/Xaga_LetsDoThis_3771B1C8.wem</CachePath>
+					<CachePath>Voices/English(US)/Xaga_LetsDoThis_F5D973DC.wem</CachePath>
 				</File>
 				<File Id="201956695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 3.wav</ShortName>
@@ -1581,6 +1594,10 @@
 				<File Id="226586573" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Damage_7.wav</ShortName>
 					<CachePath>SFX/Diplomat_Damage_7_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="229531246" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroSequence_Finalmix_002.Rs.wav</ShortName>
+					<CachePath>SFX/IntroSequence_Finalmix_002.Rs_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="231204514" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga Barks - Charging Scream_02-04.wav</ShortName>
@@ -1750,6 +1767,10 @@
 					<ShortName>JD_WhereIsIt1.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_WhereIsIt1_BD035DAE.wem</CachePath>
 				</File>
+				<File Id="296950766" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroSequence_Finalmix_002.L.wav</ShortName>
+					<CachePath>SFX/IntroSequence_Finalmix_002.L_BD035DAE.wem</CachePath>
+				</File>
 				<File Id="296992937" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_Right.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_Right_BD035DAE.wem</CachePath>
@@ -1805,10 +1826,6 @@
 				<File Id="319959684" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_KillingBlow_Snail.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_KillingBlow_Snail_BD035DAE.wem</CachePath>
-				</File>
-				<File Id="321672319" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>IntroSequence_Finalmix_001.R.wav</ShortName>
-					<CachePath>SFX/IntroSequence_Finalmix_001.R_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="323131388" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Death_10.wav</ShortName>
@@ -1908,7 +1925,7 @@
 				</File>
 				<File Id="365131947" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_SureOkay3.wav</ShortName>
-					<CachePath>Voices/English(US)/Ai_SureOkay3_BD035DAE.wem</CachePath>
+					<CachePath>Voices/English(US)/Ai_SureOkay3_4AA00259.wem</CachePath>
 				</File>
 				<File Id="367693753" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Idle_6.wav</ShortName>
@@ -1973,10 +1990,6 @@
 				<File Id="384783833" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga killing lines_01-02.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga killing lines_01-02_BD035DAE.wem</CachePath>
-				</File>
-				<File Id="387187359" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>IntroSequence_Finalmix_001.Ls.wav</ShortName>
-					<CachePath>SFX/IntroSequence_Finalmix_001.Ls_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="387590038" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Attack_4.wav</ShortName>
@@ -2081,6 +2094,10 @@
 				<File Id="431774946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Brute_Idle-cm_08.wav</ShortName>
 					<CachePath>SFX/Brute_Idle-cm_08_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="433425623" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroSequence_Finalmix_002.Ls.wav</ShortName>
+					<CachePath>SFX/IntroSequence_Finalmix_002.Ls_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="434954068" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Brute_Attack-cm_012.wav</ShortName>
@@ -2434,10 +2451,6 @@
 					<ShortName>Elevator\Elevator\Elevator_PowerON_lp.wav</ShortName>
 					<CachePath>SFX/Elevator/Elevator/Elevator_PowerON_lp_3D796F78.wem</CachePath>
 				</File>
-				<File Id="654959864" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>IntroSequence_Finalmix_001.LFE.wav</ShortName>
-					<CachePath>SFX/IntroSequence_Finalmix_001.LFE_BD035DAE.wem</CachePath>
-				</File>
 				<File Id="655758477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_FireMainv2.wav</ShortName>
 					<CachePath>SFX/Rifle_FireMainv2_BD035DAE.wem</CachePath>
@@ -2548,7 +2561,7 @@
 				</File>
 				<File Id="711008697" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_SureOkay2.wav</ShortName>
-					<CachePath>Voices/English(US)/Ai_SureOkay2_BD035DAE.wem</CachePath>
+					<CachePath>Voices/English(US)/Ai_SureOkay2_99997D08.wem</CachePath>
 				</File>
 				<File Id="711013141" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 5.wav</ShortName>
@@ -2585,10 +2598,6 @@
 				<File Id="721294669" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Death_11.wav</ShortName>
 					<CachePath>SFX/Diplomat_Death_11_BD035DAE.wem</CachePath>
-				</File>
-				<File Id="722334247" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>IntroSequence_Finalmix_001.Rs.wav</ShortName>
-					<CachePath>SFX/IntroSequence_Finalmix_001.Rs_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="723057854" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga Barks - damage scream_01-30.wav</ShortName>
@@ -2686,10 +2695,6 @@
 					<ShortName>JD_DamnThatHurt5.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_DamnThatHurt5_BD035DAE.wem</CachePath>
 				</File>
-				<File Id="773016008" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>IntroSequence_Finalmix_001.L.wav</ShortName>
-					<CachePath>SFX/IntroSequence_Finalmix_001.L_BD035DAE.wem</CachePath>
-				</File>
 				<File Id="773481961" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_03.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_03_26674AC4.wem</CachePath>
@@ -2704,7 +2709,7 @@
 				</File>
 				<File Id="777393195" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_SureOkay4.wav</ShortName>
-					<CachePath>Voices/English(US)/Ai_SureOkay4_BD035DAE.wem</CachePath>
+					<CachePath>Voices/English(US)/Ai_SureOkay4_207F2283.wem</CachePath>
 				</File>
 				<File Id="781227673" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Attack_2.wav</ShortName>
@@ -2798,6 +2803,10 @@
 					<ShortName>Run\Boots_Run_Heel_02.wav</ShortName>
 					<CachePath>SFX/Run/Boots_Run_Heel_02_7F782B62.wem</CachePath>
 				</File>
+				<File Id="831728715" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_OhRight.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_OhRight_3560C373.wem</CachePath>
+				</File>
 				<File Id="835681084" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Attack_3.wav</ShortName>
 					<CachePath>SFX/Diplomat_Attack_3_BD035DAE.wem</CachePath>
@@ -2806,13 +2815,13 @@
 					<ShortName>JD_iNeedTheRadio.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_iNeedTheRadio_BD035DAE.wem</CachePath>
 				</File>
-				<File Id="842262263" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>IntroSequence_Finalmix_001.C.wav</ShortName>
-					<CachePath>SFX/IntroSequence_Finalmix_001.C_BD035DAE.wem</CachePath>
-				</File>
 				<File Id="844964757" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_GetToThePointPlease1.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_GetToThePointPlease1_F045F667.wem</CachePath>
+				</File>
+				<File Id="852148347" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_OhRight_Serious.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_OhRight_Serious_C838A14B.wem</CachePath>
 				</File>
 				<File Id="854674266" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_ThisIsForYouJane.wav</ShortName>
@@ -2922,6 +2931,14 @@
 					<ShortName>Soundly Audio\Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Animals_Wild_Foley_Stage_Elephant_Footsteps_01_SND73240 5_5E31F6DE.wem</CachePath>
 				</File>
+				<File Id="895927408" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_TakeTheElevator.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_TakeTheElevator_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="897196974" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroSequence_Finalmix_002.R.wav</ShortName>
+					<CachePath>SFX/IntroSequence_Finalmix_002.R_BD035DAE.wem</CachePath>
+				</File>
 				<File Id="897500196" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Brute_Attack-cm_013.wav</ShortName>
 					<CachePath>SFX/Brute_Attack-cm_013_BD035DAE.wem</CachePath>
@@ -2933,6 +2950,10 @@
 				<File Id="900843406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Brute_Attack-cm_02.wav</ShortName>
 					<CachePath>SFX/Brute_Attack-cm_02_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="901698402" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>IntroSequence_Finalmix_002.LFE.wav</ShortName>
+					<CachePath>SFX/IntroSequence_Finalmix_002.LFE_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="902368461" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_Slime.wav</ShortName>
@@ -3246,6 +3267,10 @@
 					<ShortName>Boots_StartStop_02.wav</ShortName>
 					<CachePath>SFX/Boots_StartStop_02_BD035DAE.wem</CachePath>
 				</File>
+				<File Id="1044395216" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_UseTheElevator.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_UseTheElevator_53338200.wem</CachePath>
+				</File>
 				<File Id="1045218399" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_LaughShort.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga_LaughShort_BD035DAE.wem</CachePath>
@@ -3328,6 +3353,7 @@
 					<Plugin Id="28380969" Name="FLUTISH" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="28381762" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="41483680" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="47855474" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="51356967" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="53494169" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="53513454" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -3436,7 +3462,9 @@
 					<Plugin Id="388686749" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="398018437" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="399588100" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="400122884" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="400285706" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="401351751" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="401397510" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="404704146" Name="Hall_Conversation (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="412198041" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -3471,6 +3499,7 @@
 					<Plugin Id="509939808" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="510824629" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="511021499" Name="ALARM 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="511345386" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="513100109" Name="DRONE 01" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="514597024" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="515061136" Name="Static_Sibilance_Remover_Male (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -3582,6 +3611,7 @@
 					<Plugin Id="923155237" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="927902857" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="928768213" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="929255065" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="931078222" Name="OPENING" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="931246966" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="932439781" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -4262,6 +4292,15 @@
 						<MediaRef Id="1008862672"/>
 						<MediaRef Id="1021400988"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="47855474"/>
+							<PluginRef Id="400122884"/>
+							<PluginRef Id="401351751"/>
+							<PluginRef Id="511345386"/>
+							<PluginRef Id="929255065"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="4271692713" Name="Play_Dia_Ai" DurationType="Infinite">
 					<SwitchContainers>
@@ -4272,6 +4311,8 @@
 								<MediaRef Id="493237573"/>
 								<MediaRef Id="531390771"/>
 								<MediaRef Id="797320250"/>
+								<MediaRef Id="831728715"/>
+								<MediaRef Id="852148347"/>
 								<MediaRef Id="869232112"/>
 								<MediaRef Id="934986776"/>
 								<MediaRef Id="952718673"/>
@@ -4293,6 +4334,13 @@
 								<MediaRef Id="962069064"/>
 								<MediaRef Id="986711901"/>
 								<MediaRef Id="1007587335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529131"/>
+							<MediaRefs>
+								<MediaRef Id="895927408"/>
+								<MediaRef Id="1044395216"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -4326,6 +4374,12 @@
 								<MediaRef Id="338036065"/>
 								<MediaRef Id="799930274"/>
 								<MediaRef Id="952718673"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="1568320811"/>
+							<MediaRefs>
+								<MediaRef Id="148178849"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -4335,6 +4389,8 @@
 								<MediaRef Id="493237573"/>
 								<MediaRef Id="531390771"/>
 								<MediaRef Id="797320250"/>
+								<MediaRef Id="831728715"/>
+								<MediaRef Id="852148347"/>
 								<MediaRef Id="869232112"/>
 								<MediaRef Id="934986776"/>
 								<MediaRef Id="952718673"/>
@@ -4356,6 +4412,13 @@
 								<MediaRef Id="962069064"/>
 								<MediaRef Id="986711901"/>
 								<MediaRef Id="1007587335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529131"/>
+							<MediaRefs>
+								<MediaRef Id="895927408"/>
+								<MediaRef Id="1044395216"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -4389,6 +4452,12 @@
 								<MediaRef Id="338036065"/>
 								<MediaRef Id="799930274"/>
 								<MediaRef Id="952718673"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="1568320811"/>
+							<MediaRefs>
+								<MediaRef Id="148178849"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -4990,7 +5059,7 @@
 						<MediaRef Id="493325606"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="757694329" Name="Play_ExplodeBarrel" DurationType="OneShot" DurationMin="2.4526527" DurationMax="3.0021782">
+				<Event Id="757694329" Name="Play_ExplodeBarrel" MaxAttenuation="50" DurationType="OneShot" DurationMin="2.4526527" DurationMax="3.0021782">
 					<MediaRefs>
 						<MediaRef Id="718891495"/>
 					</MediaRefs>
@@ -5121,12 +5190,12 @@
 				</Event>
 				<Event Id="4273186141" Name="Play_IntroCutsceneSound" DurationType="OneShot" DurationMin="61.233334" DurationMax="61.233334">
 					<MediaRefs>
-						<MediaRef Id="321672319"/>
-						<MediaRef Id="387187359"/>
-						<MediaRef Id="654959864"/>
-						<MediaRef Id="722334247"/>
-						<MediaRef Id="773016008"/>
-						<MediaRef Id="842262263"/>
+						<MediaRef Id="114334621"/>
+						<MediaRef Id="229531246"/>
+						<MediaRef Id="296950766"/>
+						<MediaRef Id="433425623"/>
+						<MediaRef Id="897196974"/>
+						<MediaRef Id="901698402"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1584853492" Name="Play_JD_AI_lvl2" DurationType="Infinite">
@@ -5145,7 +5214,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3005152765" Name="Play_JD_Kick" DurationType="OneShot" DurationMin="0.38086468" DurationMax="0.5022637">
+				<Event Id="3005152765" Name="Play_JD_Kick" DurationType="OneShot" DurationMin="0.58086467" DurationMax="0.7022637">
 					<MediaRefs>
 						<MediaRef Id="232218603"/>
 						<MediaRef Id="528638751"/>
@@ -6557,6 +6626,7 @@
 				<Bus Id="346451691" Name="ReverbEnvironments"/>
 				<Bus Id="385642153" Name="Xaga_Conference" MaxAttenuation="100"/>
 				<Bus Id="424473642" Name="Xaga_ConferenceRoom_01" MaxAttenuation="100"/>
+				<Bus Id="696369880" Name="LFE"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
 				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1038037717" Name="Xaga_Conference_01" MaxAttenuation="100"/>
@@ -6618,6 +6688,7 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="2808420495" Name="JohnDoeBarks"/>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
 				<Bus Id="3458995332" Name="Xaga_ConferenceRoom" MaxAttenuation="100"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
@@ -6790,12 +6861,14 @@
 				</StateGroup>
 				<StateGroup Id="4121174866" Name="Scenes_lvl1">
 					<States>
+						<State Id="342028876" Name="Sc1_Tr3"/>
 						<State Id="342028877" Name="Sc1_Tr2"/>
 						<State Id="342028878" Name="Sc1_Tr1"/>
 						<State Id="342028879" Name="Sc1_Tr0"/>
 						<State Id="551107239" Name="Sc4_Tr1"/>
 						<State Id="569325008" Name="Sc3_Tr1"/>
 						<State Id="748895195" Name="None"/>
+						<State Id="1568320808" Name="Sc0_Tr2"/>
 						<State Id="1568320811" Name="Sc0_Tr1"/>
 						<State Id="2172575860" Name="TriggerIsWaiting"/>
 						<State Id="3079543733" Name="Sc2_Tr1"/>
@@ -6803,6 +6876,7 @@
 						<State Id="3079543735" Name="Sc2_Tr3"/>
 						<State Id="3690529129" Name="Sc5_Tr2"/>
 						<State Id="3690529130" Name="Sc5_Tr1"/>
+						<State Id="3690529131" Name="Sc5_Tr0"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -6913,5 +6987,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{080F54F5-673A-07A1-2B84-AFF0F02CF53A}</FileHash>
+	<FileHash>{CE3BF758-FFA7-4CD9-B0DA-0364A974C671}</FileHash>
 </SoundBanksInfo>
