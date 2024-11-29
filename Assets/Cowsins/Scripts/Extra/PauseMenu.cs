@@ -11,6 +11,9 @@ namespace cowsins
         [SerializeField] private GameObject pauseMenuUI;
         //[SerializeField] private float fadeSpeed;
 
+        [SerializeField] private GameObject controlImageUI; // The image to show when the button is pressed
+        private bool isShowing = false; 
+
         public static PauseMenu Instance { get; private set; }
 
         /// <summary>
@@ -55,6 +58,12 @@ namespace cowsins
             // {
             //     HandleUnpause();
             // }
+            if (isShowing && InputManager.pausing)
+            {
+                isShowing = false;
+                controlImageUI.SetActive(false); // Hide the info image
+                pauseMenuUI.SetActive(true); // Show the pause menu
+            }
         }
 
         private void HandlePauseInput()
@@ -66,7 +75,18 @@ namespace cowsins
                 TogglePause();
             }
         }
+        public void ShowCreImage()
+        {
+            if (controlImageUI == null)
+            {
+                Debug.LogError("Info Image UI is not assigned.");
+                return;
+            }
 
+            isShowing = true;
+            controlImageUI.SetActive(true); // Show the image
+            //pauseMenuUI.SetActive(false); // Hide the pause menu
+        }
         // private void HandlePause()
         // {
         //     // if (!menu.gameObject.activeSelf)

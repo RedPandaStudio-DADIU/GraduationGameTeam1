@@ -85,6 +85,8 @@ namespace cowsins
                 mainMenuSections[3].section.gameObject.SetActive(false);
                 Debug.Log("Back to main menu");
                 currentSectionIndex = 1;
+                mainMenuSections[1].section.gameObject.SetActive(true);
+               
 
             }
 
@@ -93,6 +95,8 @@ namespace cowsins
                 mainMenuSections[4].section.gameObject.SetActive(false);
                 Debug.Log("Back to main menu");
                 currentSectionIndex = 1;
+                mainMenuSections[1].section.gameObject.SetActive(true);
+               
 
             }
         }
@@ -174,6 +178,7 @@ namespace cowsins
         }
          public void ShowCredits()
     {
+        mainMenuSections[1].section.gameObject.SetActive(false);
         if (mainMenuSections[3].section.gameObject.activeSelf)
         {
             mainMenuSections[3].section.gameObject.SetActive(false);
@@ -186,6 +191,7 @@ namespace cowsins
 
          public void ShowControl()
     {
+        mainMenuSections[1].section.gameObject.SetActive(false);
         if (mainMenuSections[4].section.gameObject.activeSelf)
         {
             mainMenuSections[4].section.gameObject.SetActive(false);
