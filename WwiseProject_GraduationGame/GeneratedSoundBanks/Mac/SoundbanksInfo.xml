@@ -1152,7 +1152,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{46E50AB6-022E-C521-0F31-143853F3C3D6}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{A542A7E8-EC4D-5452-7175-20BBA2A8660A}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1462,7 +1462,7 @@
 				</File>
 				<File Id="148178849" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_TryKickingTheDoor.wav</ShortName>
-					<CachePath>Voices/English(US)/AI_TryKickingTheDoor_BD035DAE.wem</CachePath>
+					<CachePath>Voices/English(US)/AI_TryKickingTheDoor_5F945BFE.wem</CachePath>
 				</File>
 				<File Id="149099509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Death_3.wav</ShortName>
@@ -5876,6 +5876,11 @@
 						<AuxBusRef Id="3205342581" Name="RoomSmall"/>
 					</AuxBusRefs>
 				</Event>
+				<Event Id="2430196030" Name="Play_Sc0_Tr1" DurationType="OneShot" DurationMin="22.103964" DurationMax="22.103964">
+					<MediaRefs>
+						<MediaRef Id="148178849"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3993849055" Name="Play_Sc0Tr1" DurationType="OneShot" DurationMin="3.066283" DurationMax="3.066283">
 					<MediaRefs>
 						<MediaRef Id="874813844"/>
@@ -6652,6 +6657,11 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="4128836072" Name="Stop_Guitarloop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2748713136" Name="Stop_Sc0_Tr1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="148178849"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3106700779" Name="Stop_TestBeep_lp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="911602909"/>
@@ -7091,5 +7101,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{892F75BD-3B63-72B6-F5E6-FC7F2F4BEABE}</FileHash>
+	<FileHash>{23F2E8C0-19F7-4D02-0281-286EAD3F2AB7}</FileHash>
 </SoundBanksInfo>

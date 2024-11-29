@@ -62,6 +62,7 @@ namespace AK
         static const AkUniqueID PLAY_RELOAD_RIFLE = 2435533942U;
         static const AkUniqueID PLAY_RIFLE_EMPTYMAG = 3334099943U;
         static const AkUniqueID PLAY_RIFLE_NOAMMO = 2572917948U;
+        static const AkUniqueID PLAY_SC0_TR1 = 2430196030U;
         static const AkUniqueID PLAY_SC0TR1 = 3993849055U;
         static const AkUniqueID PLAY_SMALLBONFIRE = 255138028U;
         static const AkUniqueID PLAY_SOLDIERBARKS = 3340746321U;
@@ -80,6 +81,7 @@ namespace AK
         static const AkUniqueID PLAY_XAGACHARGE = 2105779959U;
         static const AkUniqueID PLAY_XAGADEATHSCREAM = 655800824U;
         static const AkUniqueID STOP_GUITARLOOP = 4128836072U;
+        static const AkUniqueID STOP_SC0_TR1 = 2748713136U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
     } // namespace EVENTS
