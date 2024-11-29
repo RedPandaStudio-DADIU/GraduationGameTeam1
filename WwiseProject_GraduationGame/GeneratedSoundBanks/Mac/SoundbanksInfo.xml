@@ -1152,7 +1152,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{A542A7E8-EC4D-5452-7175-20BBA2A8660A}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{DCE266D5-7602-A479-24E3-797FF66A797E}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1462,7 +1462,7 @@
 				</File>
 				<File Id="148178849" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_TryKickingTheDoor.wav</ShortName>
-					<CachePath>Voices/English(US)/AI_TryKickingTheDoor_5F945BFE.wem</CachePath>
+					<CachePath>Voices/English(US)/AI_TryKickingTheDoor_E967ED94.wem</CachePath>
 				</File>
 				<File Id="149099509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Death_3.wav</ShortName>
@@ -1471,6 +1471,10 @@
 				<File Id="150870703" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Damage_11.wav</ShortName>
 					<CachePath>SFX/Soldier_Damage_11_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="154781338" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_AmmoAndHealthpacks.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_AmmoAndHealthpacks_83219205.wem</CachePath>
 				</File>
 				<File Id="155894028" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Death\JD_Death6.wav</ShortName>
@@ -1566,7 +1570,7 @@
 				</File>
 				<File Id="199591454" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AI_YouveMadeXagaVulnerable.wav</ShortName>
-					<CachePath>SFX/AI_YouveMadeXagaVulnerable_8C9083AC.wem</CachePath>
+					<CachePath>SFX/AI_YouveMadeXagaVulnerable_007119AC.wem</CachePath>
 				</File>
 				<File Id="200692930" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_LetsDoThis.wav</ShortName>
@@ -2336,6 +2340,10 @@
 					<ShortName>TheCaelariHaveBetrayedUs.wav</ShortName>
 					<CachePath>Voices/English(US)/TheCaelariHaveBetrayedUs_BD035DAE.wem</CachePath>
 				</File>
+				<File Id="545399152" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>AI_RememberHeadshot.wav</ShortName>
+					<CachePath>Voices/English(US)/AI_RememberHeadshot_FFCB1E94.wem</CachePath>
+				</File>
 				<File Id="549081892" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_FuckYouXaga.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_FuckYouXaga_BD035DAE.wem</CachePath>
@@ -2531,6 +2539,10 @@
 				<File Id="669493922" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Death_1.wav</ShortName>
 					<CachePath>SFX/Soldier_Death_1_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="670676809" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>JD_isntMyFirstRodeo.wav</ShortName>
+					<CachePath>Voices/English(US)/JD_isntMyFirstRodeo_5226C822.wem</CachePath>
 				</File>
 				<File Id="670922056" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Ai_iNormallyControlTheMainframe.wav</ShortName>
@@ -2862,7 +2874,7 @@
 				</File>
 				<File Id="841320162" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_LaughLong.wav</ShortName>
-					<CachePath>Voices/English(US)/Xaga_LaughLong_695A81E2.wem</CachePath>
+					<CachePath>Voices/English(US)/Xaga_LaughLong_ED76CD69.wem</CachePath>
 				</File>
 				<File Id="844964757" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_GetToThePointPlease1.wav</ShortName>
@@ -4398,9 +4410,22 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028876"/>
+							<MediaRefs>
+								<MediaRef Id="545399152"/>
+								<MediaRef Id="670676809"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
 							<MediaRefs>
 								<MediaRef Id="374402712"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="1568320808"/>
+							<MediaRefs>
+								<MediaRef Id="154781338"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -4476,9 +4501,22 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028876"/>
+							<MediaRefs>
+								<MediaRef Id="545399152"/>
+								<MediaRef Id="670676809"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
 							<MediaRefs>
 								<MediaRef Id="374402712"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="1568320808"/>
+							<MediaRefs>
+								<MediaRef Id="154781338"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -7101,5 +7139,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{23F2E8C0-19F7-4D02-0281-286EAD3F2AB7}</FileHash>
+	<FileHash>{48F6110A-E3B4-BE2F-409C-E93D5A783E99}</FileHash>
 </SoundBanksInfo>

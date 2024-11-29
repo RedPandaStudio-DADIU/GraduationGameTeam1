@@ -2069,6 +2069,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Sc5_Tr0" ID="{45C3DC3E-E96B-4BB7-8F73-5E81B99B9A83}" ShortID="698069829">
 									<PropertyList>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
@@ -2174,6 +2175,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="AI_AmmoAndHealthpacks" ID="{E2DE3C74-F3F4-405F-92F1-4EE9017E8AEE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0709733656174334"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.253476305776547"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.79461224489796"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.86037218955379"/>
+													</PropertyList>
 													<Language>English(US)</Language>
 													<AudioFile>AI_AmmoAndHealthpacks.wav</AudioFile>
 													<MediaIDList>
@@ -2404,9 +2412,21 @@
 										</ItemList>
 									</Grouping>
 									<Grouping>
+										<SwitchRef Name="Sc1_Tr3" ID="{514DB78D-6A88-453B-8107-BC4C1596BDA6}"/>
+										<ItemList>
+											<ItemRef Name="Sc1_Tr3" ID="{611DA51B-71E8-43F5-A72B-F041F5F5D8C3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
 										<SwitchRef Name="Sc5_Tr2" ID="{53BD08A9-9995-4611-B0CC-FE29E967E5D5}"/>
 										<ItemList>
 											<ItemRef Name="Sc5_Tr2" ID="{1065C00F-B546-4BB7-A45E-DC15E8D1F04D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Sc0_Tr2" ID="{2E2F70BF-7611-4021-A200-495C8A92E2A4}"/>
+										<ItemList>
+											<ItemRef Name="Sc0_Tr2" ID="{BCF76B1E-117B-4F95-A69D-83F4EA6E7C64}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
