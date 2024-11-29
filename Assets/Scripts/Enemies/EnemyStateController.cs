@@ -257,6 +257,9 @@ public class EnemyStateController : MonoBehaviour
                 IEnemyState prevState = enemy.GetPreviousState();
                 animator.SetBool("isAttacking", true);
                 enemy.SetShouldRagdoll(false);
+                enemy.GetComponent<EnemyHealth>().enabled = true;
+                enemy.GetComponentInChildren<Canvas>().enabled = true;
+
             }
             
             yield return new WaitForSeconds(2f);
@@ -365,6 +368,19 @@ public class EnemyStateController : MonoBehaviour
 
     public bool GetShouldRagdoll(){
         return this.shouldRagdoll;
+    }
+
+
+    public void StartEndGame(){
+        StartCoroutine(WaitForBlack());
+    }
+
+    private IEnumerator WaitForBlack()
+    {
+        
+        yield return new WaitForSeconds(3f);
+        GameObject.FindWithTag("EndScreen").GetComponent<FinalFadeIn>().StartFading();
+       
     }
 
 }

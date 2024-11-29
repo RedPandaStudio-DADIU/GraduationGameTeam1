@@ -372,17 +372,70 @@
 													<Reference>
 														<ObjectRef Name="JD_Damn" ID="{8A70B871-2BD0-450E-9566-DCDE215607AF}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
 													</Reference>
-													<Reference>
-														<ObjectRef Name="JD_ThisIsLookingGrim" ID="{8610385D-A822-4123-AE22-6FC457845967}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
-													</Reference>
 												</ObjectList>
 											</ObjectLists>
 										</RandomSequenceContainer>
+										<Sound Name="Dialogue_SFX_Rifle_ShootSoldier" ID="{AA070CF8-31EB-4481-93C0-4AE9A410A32A}" ShortID="697563958">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="GameAuxSendVolume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>16</Value>
+													</ValueList>
+												</Property>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Hangar Dialogue 50m" ID="{2DFED257-CAB2-420D-ADF0-91AF7227D41F}" WorkUnitID="{6116965A-CE1C-4741-B3EF-5FCCCCEA09D3}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+												<Reference Name="ReflectionsAuxSend">
+													<ObjectRef Name="DelaySlaps" ID="{A9EFF5A0-FCBE-4478-BFCF-8F9B76C0944B}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Dialogue_SFX_Rifle_ShootSoldier" ID="{A886D052-C859-4168-9D32-C913A8B77AB9}">
+													<Language>SFX</Language>
+													<AudioFile>Dialogue_SFX_Rifle_ShootSoldier.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="472812625"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Dialogue_SFX_Rifle_ShootSoldier" ID="{A886D052-C859-4168-9D32-C913A8B77AB9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<GroupingInfo>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
 												<ItemRef Name="Sc1" ID="{0CE82F57-8D40-470C-80B3-18A238F2FA39}"/>
+												<PropertyList>
+													<Property Name="ContinuePlay" Type="bool" Value="True"/>
+												</PropertyList>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Dialogue_SFX_Rifle_ShootSoldier" ID="{AA070CF8-31EB-4481-93C0-4AE9A410A32A}"/>
+												<PropertyList>
+													<Property Name="ContinuePlay" Type="bool" Value="True"/>
+												</PropertyList>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
 										<GroupingList>
@@ -390,6 +443,7 @@
 												<SwitchRef Name="Sc1_Tr1" ID="{49260616-50C5-44DD-B3E3-453AF535A590}"/>
 												<ItemList>
 													<ItemRef Name="Sc1" ID="{0CE82F57-8D40-470C-80B3-18A238F2FA39}"/>
+													<ItemRef Name="Dialogue_SFX_Rifle_ShootSoldier" ID="{AA070CF8-31EB-4481-93C0-4AE9A410A32A}"/>
 												</ItemList>
 											</Grouping>
 										</GroupingList>

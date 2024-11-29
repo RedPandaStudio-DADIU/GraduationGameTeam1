@@ -8,6 +8,7 @@ using AK.Wwise;
 public class EnemyHitState : IEnemyState
 {
     private bool isDying = false;
+    private bool isRecovering = false;
     public void OnEnter(EnemyStateController stateController){
         Debug.Log("Entering Hit State " + stateController.name);
         isDying = false;
@@ -24,6 +25,10 @@ public class EnemyHitState : IEnemyState
             if(stateController.GetShouldRagdoll()){
                 stateController.GetEnemy().GetRagdollController().SetRagdollActive(true);
                 stateController.GetEnemy().GetRagdollController().ApplyForce(stateController.GetForceDirection(), stateController.GetForce());
+
+                stateController.GetEnemy().GetComponent<EnemyHealth>().enabled = false;
+                stateController.GetEnemy().GetComponentInChildren<Canvas>().enabled = false;
+                // stateController.GetEnemy().GetComponentInChildren<>
             }
 
         }
@@ -56,6 +61,10 @@ public class EnemyHitState : IEnemyState
 
     }
     public void OnUpdate(EnemyStateController stateController){
+        if(stateController.GetEnemy().CompareTag("Boss") && !isRecovering){
+            stateController.Recovery(0f);
+            isRecovering = true;
+        }
        
     }
     public void OnExit(EnemyStateController stateController){     

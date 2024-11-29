@@ -332,6 +332,8 @@ namespace cowsins
 
         public void HandleSecondaryHitscanProjectileShot()
         {
+            // inventory[currentWeapon].GetComponentInChildren<Animator>().ResetTrigger("shooting");
+
             foreach (var p in firePoint)
             {
                 canShoot = false; // since you have already shot, you will have to wait in order to being able to shoot again
@@ -421,7 +423,9 @@ namespace cowsins
                     if (muzzleVFX != null)
                         Instantiate(muzzleVFX, p.position, mainCamera.transform.rotation, mainCamera.transform); // VFX
                 }
-                CowsinsUtilities.ForcePlayAnim("shooting", inventory[currentWeapon].GetComponentInChildren<Animator>());
+                // CowsinsUtilities.ForcePlayAnim("shooting", inventory[currentWeapon].GetComponentInChildren<Animator>());
+                inventory[currentWeapon].GetComponentInChildren<Animator>().ResetTrigger("shooting");
+                inventory[currentWeapon].GetComponentInChildren<Animator>().SetTrigger("shooting");
                 //if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
 
                 if (weapon.timeBetweenShots == 0)
@@ -486,6 +490,8 @@ namespace cowsins
                 }
                 // CowsinsUtilities.ForcePlayAnim("shooting", inventory[currentWeapon].GetComponentInChildren<Animator>());
                 //if (weapon.timeBetweenShots != 0) SoundManager.Instance.PlaySound(fireSFX, 0, weapon.pitchVariationFiringSFX, true, 0);
+                inventory[currentWeapon].GetComponentInChildren<Animator>().ResetTrigger("secondary");
+                inventory[currentWeapon].GetComponentInChildren<Animator>().SetTrigger("secondary");
                 if (weapon.timeBetweenShots == 0)
                 {
                     SoundManager.Instance.PlaySound(weapon.audioSFX.fireSFX);
@@ -591,7 +597,6 @@ namespace cowsins
 
             Ray ray = mainCamera.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
             Vector3 destination = (Physics.Raycast(ray, out hit) && !hit.transform.CompareTag("Player")) ? destination = hit.point + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera) : destination = ray.GetPoint(50f) + CowsinsUtilities.GetSpreadDirection(weapon.spreadAmount, mainCamera);
-
             foreach (var p in firePoint)
             {
                 Bullet bullet = Instantiate(weapon.projectile, p.position, p.transform.rotation) as Bullet;
@@ -741,7 +746,9 @@ namespace cowsins
             yield return new WaitForSeconds(.001f);
 
             // Play animation
-            CowsinsUtilities.PlayAnim("reloading", inventory[currentWeapon].GetComponentInChildren<Animator>());
+            inventory[currentWeapon].GetComponentInChildren<Animator>().ResetTrigger("reloading");
+            inventory[currentWeapon].GetComponentInChildren<Animator>().SetTrigger("reloading");
+            // CowsinsUtilities.PlayAnim("reloading", inventory[currentWeapon].GetComponentInChildren<Animator>());
 
             // Wait reloadTime seconds, assigned in the weapon scriptable object.
             yield return new WaitForSeconds(reloadTime);
@@ -1024,8 +1031,8 @@ namespace cowsins
             // Disable current attachment if it exists
             currentAttachment?.gameObject.SetActive(false);
             // Drop it in case it is not a default attachment
-            if (currentAttachment != null && currentAttachment != defaultAttachment)
-                GetComponent<InteractManager>().DropAttachment(currentAttachment, false);
+            // if (currentAttachment != null && currentAttachment != defaultAttachment)
+            //     GetComponent<InteractManager>().DropAttachment(currentAttachment, false);
             // Enable new attachment
             newAttachment.gameObject.SetActive(true);
         }
@@ -1470,6 +1477,7 @@ namespace cowsins
             currentWeapon = 0;
             canShoot = true;
             mainCamera.fieldOfView = GetComponent<PlayerMovement>().normalFOV;
+
         }
 
     }
