@@ -14,7 +14,7 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{CC716496-C1C9-1EC9-D252-970E9813635A}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{5CF35608-0BA7-6375-630C-6437272B4F76}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 			<Media>
@@ -471,7 +471,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{28A025F7-DA80-82E3-3A76-CE2B81F0D345}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{00772F47-F771-457C-78CD-9F24ACB32328}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -610,6 +610,7 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="2808420495" Name="JohnDoeBarks"/>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
 				<Bus Id="3458995332" Name="Xaga_ConferenceRoom" MaxAttenuation="100"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
@@ -1110,7 +1111,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{EF07A825-EE76-939D-7824-BE0A37A4B8A5}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{E1CE7DA7-11EE-9558-ADA1-C41B0770BFB5}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -3352,6 +3353,7 @@
 					<Plugin Id="28380969" Name="FLUTISH" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="28381762" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="41483680" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="47855474" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="51356967" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="53494169" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="53513454" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -3460,7 +3462,9 @@
 					<Plugin Id="388686749" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="398018437" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="399588100" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="400122884" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="400285706" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="401351751" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="401397510" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="404704146" Name="Hall_Conversation (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="412198041" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -3495,6 +3499,7 @@
 					<Plugin Id="509939808" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="510824629" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="511021499" Name="ALARM 01" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="511345386" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="513100109" Name="DRONE 01" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="514597024" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="515061136" Name="Static_Sibilance_Remover_Male (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -3606,6 +3611,7 @@
 					<Plugin Id="923155237" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="927902857" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="928768213" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="929255065" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="931078222" Name="OPENING" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="931246966" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="932439781" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -4286,6 +4292,15 @@
 						<MediaRef Id="1008862672"/>
 						<MediaRef Id="1021400988"/>
 					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="47855474"/>
+							<PluginRef Id="400122884"/>
+							<PluginRef Id="401351751"/>
+							<PluginRef Id="511345386"/>
+							<PluginRef Id="929255065"/>
+						</Custom>
+					</PluginRefs>
 				</Event>
 				<Event Id="4271692713" Name="Play_Dia_Ai" DurationType="Infinite">
 					<SwitchContainers>
@@ -5044,7 +5059,7 @@
 						<MediaRef Id="493325606"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="757694329" Name="Play_ExplodeBarrel" DurationType="OneShot" DurationMin="2.4526527" DurationMax="3.0021782">
+				<Event Id="757694329" Name="Play_ExplodeBarrel" MaxAttenuation="50" DurationType="OneShot" DurationMin="2.4526527" DurationMax="3.0021782">
 					<MediaRefs>
 						<MediaRef Id="718891495"/>
 					</MediaRefs>
@@ -5199,7 +5214,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3005152765" Name="Play_JD_Kick" DurationType="OneShot" DurationMin="0.38086468" DurationMax="0.5022637">
+				<Event Id="3005152765" Name="Play_JD_Kick" DurationType="OneShot" DurationMin="0.58086467" DurationMax="0.7022637">
 					<MediaRefs>
 						<MediaRef Id="232218603"/>
 						<MediaRef Id="528638751"/>
@@ -6673,6 +6688,7 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
+				<Bus Id="2808420495" Name="JohnDoeBarks"/>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
 				<Bus Id="3458995332" Name="Xaga_ConferenceRoom" MaxAttenuation="100"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
@@ -6971,5 +6987,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EDCAFE94-2890-E367-859F-A0C482F3F8F1}</FileHash>
+	<FileHash>{BCA5BAC1-6438-41AE-76B4-A2AEC2046BB1}</FileHash>
 </SoundBanksInfo>

@@ -6,7 +6,13 @@
 				<ActorMixer Name="Weapons" ID="{497C62F9-BB98-4681-BDD1-5CB2520D90DA}" ShortID="222765867">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
 						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="2"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
 							<ValueList>
@@ -56,7 +62,7 @@
 										<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
-												<Value>4</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
@@ -73,11 +79,6 @@
 											</ValueList>
 										</Property>
 										<Property Name="VirtualVoiceQueueBehavior" Type="int16" Value="0"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -575,8 +576,8 @@
 															<Modifier Name="" ID="{7861C497-9016-4542-AEAD-2D603B460D02}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="76"/>
-																	<Property Name="Min" Type="Real64" Value="-50"/>
+																	<Property Name="Max" Type="Real64" Value="152"/>
+																	<Property Name="Min" Type="Real64" Value="-51"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
@@ -598,6 +599,10 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Rifle_FireMainv2" ID="{9DDB9E29-5BB9-4E95-9228-AD8862229C88}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.019197345890411"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Rifle_FireMainv2.wav</AudioFile>
 													<MediaIDList>
@@ -1087,11 +1092,6 @@
 											</ModifierList>
 										</Property>
 										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1188,7 +1188,12 @@
 						</ActorMixer>
 					</ChildrenList>
 					<PositioningInfo>
-						<Panner Name="" ID="{567E930D-8B21-4EFA-AAC2-1A96FD0236A5}"/>
+						<Panner Name="" ID="{567E930D-8B21-4EFA-AAC2-1A96FD0236A5}">
+							<PropertyList>
+								<Property Name="PanX" Type="Real64" Value="3.89170896785107"/>
+								<Property Name="PanY" Type="Real64" Value="6.35208711433757"/>
+							</PropertyList>
+						</Panner>
 					</PositioningInfo>
 				</ActorMixer>
 				<BlendContainer Name="Hitmarker" ID="{35A648DB-C9D1-4BD6-8636-9DE51CCC4F97}" ShortID="354901006">

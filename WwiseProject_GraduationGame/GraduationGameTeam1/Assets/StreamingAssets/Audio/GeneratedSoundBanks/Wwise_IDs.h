@@ -497,6 +497,7 @@ namespace AK
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
         static const AkUniqueID DIALOGUEMASTER = 2645497833U;
+        static const AkUniqueID JOHNDOEBARKS = 2808420495U;
         static const AkUniqueID LEVEL2 = 2678230381U;
         static const AkUniqueID LFE = 696369880U;
         static const AkUniqueID MASTER_BUS = 1399649189U;

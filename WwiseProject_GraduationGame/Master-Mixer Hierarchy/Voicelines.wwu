@@ -14,6 +14,7 @@
 												<Value>-8</Value>
 											</ValueList>
 										</Property>
+										<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
 												<Value>-2</Value>
@@ -212,6 +213,7 @@
 												</ObjectList>
 											</ObjectLists>
 										</AuxBus>
+										<Bus Name="JohnDoeBarks" ID="{BFB5F77E-DC66-42EE-AA15-63EBF7A7778C}"/>
 									</ChildrenList>
 									<StateInfo>
 										<StateGroupList>
@@ -300,6 +302,17 @@
 											</Reference>
 										</ObjectList>
 									</ObjectLists>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="JohnDoeBarks" ID="{BFB5F77E-DC66-42EE-AA15-63EBF7A7778C}"/>
+											<DuckingParam>
+												<Volume>-96</Volume>
+												<FadeInTime>0.5</FadeInTime>
+												<FadeOutTime>0.5</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
 								</Bus>
 							</ChildrenList>
 						</Bus>
@@ -356,6 +369,11 @@
 						<Bus Name="03_XagaHangar" ID="{A7E90089-EF81-4BE4-BEA1-4A840739EFAF}">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>31</Value>
@@ -1775,7 +1793,7 @@
 												<Property Name="3DSpatialization" Type="int16" Value="1"/>
 												<Property Name="BusVolume" Type="Real64">
 													<ValueList>
-														<Value>-16</Value>
+														<Value>-13</Value>
 													</ValueList>
 												</Property>
 												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
@@ -2387,6 +2405,15 @@
 								<FadeCurve>FadeLinear</FadeCurve>
 							</DuckingParam>
 						</DuckItem>
+						<DuckItem>
+							<BusRef Name="NPCBarks" ID="{057AB715-157F-4D2F-B8A3-345BBE895021}"/>
+							<DuckingParam>
+								<Volume>-6</Volume>
+								<FadeInTime>1</FadeInTime>
+								<FadeOutTime>1</FadeOutTime>
+								<FadeCurve>FadeLinear</FadeCurve>
+							</DuckingParam>
+						</DuckItem>
 					</DuckingList>
 				</Bus>
 				<Bus Name="NPCBarks" ID="{057AB715-157F-4D2F-B8A3-345BBE895021}">
@@ -2398,8 +2425,1028 @@
 						</Property>
 					</PropertyList>
 					<ChildrenList>
-						<Bus Name="NPC Humans" ID="{D368196C-31BD-4063-A8C0-8BB470A59A5B}"/>
-						<Bus Name="NPC Aliens" ID="{90B7454E-E22B-4E84-83B9-9740C406C3E3}"/>
+						<Bus Name="NPC Humans" ID="{D368196C-31BD-4063-A8C0-8BB470A59A5B}">
+							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>46</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="NPC Aliens" ID="{90B7454E-E22B-4E84-83B9-9740C406C3E3}">
+							<PropertyList>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>38</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
+						<Bus Name="03_XagaBossFightBarks" ID="{B6F92FD0-286F-41FF-987E-6015CD04A49A}">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>31</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>23</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<Custom CreatedFrom="{DB2ABF5A-7E4D-47C0-A0EC-6F3C7AB1895D}">
+										<Attenuation Name="att_Generic_100m (Custom)" ID="{84AAD770-0537-489C-AEBB-53656A617820}" ShortID="359725626">
+											<CurveUsageInfoList>
+												<VolumeDryUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+														<Curve Name="VolumeDry" ID="{3D23DE4B-4D11-4E76-B0F2-5D59A739ADD1}">
+															<PropertyList>
+																<Property Name="Flags" Type="int32" Value="3"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>0</YPos>
+																	<Flags>5</Flags>
+																</Point>
+																<Point>
+																	<XPos>3.37243</XPos>
+																	<YPos>0</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>6.89149</XPos>
+																	<YPos>-2.15694</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>12.90324</XPos>
+																	<YPos>-4.48257</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>29.32551</XPos>
+																	<YPos>-10.97279</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>45.7478</XPos>
+																	<YPos>-17.32121</YPos>
+																	<Flags>0</Flags>
+																</Point>
+																<Point>
+																	<XPos>100</XPos>
+																	<YPos>-200</YPos>
+																	<Flags>37</Flags>
+																</Point>
+															</PointList>
+														</Curve>
+													</CurveUsageInfo>
+												</VolumeDryUsage>
+												<VolumeWetGameUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetGameUsage>
+												<VolumeWetUserUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+												</VolumeWetUserUsage>
+												<LowPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</LowPassFilterUsage>
+												<HighPassFilterUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</HighPassFilterUsage>
+												<SpreadUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</SpreadUsage>
+												<FocusUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+												</FocusUsage>
+												<ObstructionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionVolumeUsage>
+												<ObstructionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionLPFUsage>
+												<ObstructionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</ObstructionHPFUsage>
+												<OcclusionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionVolumeUsage>
+												<OcclusionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionLPFUsage>
+												<OcclusionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</OcclusionHPFUsage>
+												<DiffractionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionVolumeUsage>
+												<DiffractionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionLPFUsage>
+												<DiffractionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</DiffractionHPFUsage>
+												<TransmissionVolumeUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionVolumeUsage>
+												<TransmissionLPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionLPFUsage>
+												<TransmissionHPFUsage>
+													<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+												</TransmissionHPFUsage>
+											</CurveUsageInfoList>
+										</Attenuation>
+									</Custom>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="HangarEarlyReflections" ID="{C4F7DD0E-1264-4FA9-A2ED-8543CF2962DD}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Bus Name="XagaHangar_02" ID="{958B8D0B-2827-4CD3-8836-D8A4E5910964}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>0</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="RoomHangarMain" ID="{002CA26D-5372-4B06-92DE-6BE6553F130D}" WorkUnitID="{E9F17680-EE43-43FC-8B8D-BB683DA5F64B}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{003697EE-2487-40CB-A283-6611BC5AE442}" ShortID="763891652">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{71B802A7-03E2-4998-B241-B2B84FE9DDFF}">
+																	<Effect Name="Medium_Room1 (Custom)" ID="{CCACD717-E2E4-4B0D-A9A9-D2841B6F8DED}" ShortID="610638398" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+																		<PropertyList>
+																			<Property Name="DryLevel" Type="Real32" Value="-0.3"/>
+																			<Property Name="HFRatio" Type="Real32" Value="6"/>
+																			<Property Name="NumberOfDelays" Type="int32" Value="16"/>
+																			<Property Name="PreDelay" Type="Real32" Value="0.01"/>
+																			<Property Name="ReverbTime" Type="Real32" Value="0.8"/>
+																			<Property Name="WetLevel" Type="Real32" Value="-18"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{54CD9888-476C-4D49-A91C-FE4D716A9E38}" ShortID="412485280">
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom CreatedFrom="{69479ACD-2C87-4007-B83E-55210A3B36B7}">
+																	<Effect Name="Dual_Filters_Radio_Comm (Custom)" ID="{A0C98C4A-9A9B-46B7-9F32-960653B409DA}" ShortID="620025229" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+																			<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
+																			<Property Name="FrequencyBand1" Type="Real32" Value="772"/>
+																			<Property Name="FrequencyBand2" Type="Real32" Value="971"/>
+																			<Property Name="FrequencyBand3" Type="Real32" Value="5522"/>
+																			<Property Name="GainBand2" Type="Real32" Value="4.5"/>
+																			<Property Name="OutputLevel" Type="Real32" Value="-1"/>
+																			<Property Name="ProcessLFE" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</Bus>
+								<Bus Name="Xaga_ConferenceRoom_02" ID="{13D6E1FB-DCC8-47AE-9519-C477A8A4AD03}">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom CreatedFrom="{9EEB574E-0BE0-4CCA-970C-34F34052C145}">
+												<Attenuation Name="Hangar Dialogue 100m (Custom)" ID="{8F8BFC9E-3F5B-40B7-9EE2-9A06CD019F83}" ShortID="253316999">
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{A0A69043-709F-422B-972A-64B38E00FBC3}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>17.04348</XPos>
+																			<YPos>0</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>45.73913</XPos>
+																			<YPos>-7.53501</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>67.13043</XPos>
+																			<YPos>-16.28727</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+																<Curve Name="VolumeWetGame" ID="{996A8A85-F782-4D5B-B85E-AB367BA2C7AD}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-0.11659</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+																<Curve Name="VolumeWetUser" ID="{FBEFD506-A28E-41DF-A593-E208E97DF3A0}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>17.04348</XPos>
+																			<YPos>0</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>45.73913</XPos>
+																			<YPos>-7.53501</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>67.13043</XPos>
+																			<YPos>-16.28727</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="LowPassFilter" ID="{47E71A20-16AA-4A89-99E5-D7682A01A992}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>15.92005</XPos>
+																			<YPos>0</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>44.3493</XPos>
+																			<YPos>30</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>50</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="HighPassFilter" ID="{59C52DBA-D491-49AF-B2C8-FFBE4A2CD186}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>12.32875</XPos>
+																			<YPos>0</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>46.74895</XPos>
+																			<YPos>13</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>26</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</HighPassFilterUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+														<ObstructionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionVolumeUsage>
+														<ObstructionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionLPFUsage>
+														<ObstructionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</ObstructionHPFUsage>
+														<OcclusionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionVolumeUsage>
+														<OcclusionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionLPFUsage>
+														<OcclusionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</OcclusionHPFUsage>
+														<DiffractionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionVolumeUsage>
+														<DiffractionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionLPFUsage>
+														<DiffractionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</DiffractionHPFUsage>
+														<TransmissionVolumeUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionVolumeUsage>
+														<TransmissionLPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionLPFUsage>
+														<TransmissionHPFUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+														</TransmissionHPFUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Bus Name="Xaga_FarAway_02" ID="{ADD93237-BD9F-419D-BFDF-8F04AAC82EF7}">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="1"/>
+												<Property Name="BusVolume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+												</Property>
+												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<Custom CreatedFrom="{9EEB574E-0BE0-4CCA-970C-34F34052C145}">
+														<Attenuation Name="Hangar Dialogue 100m (Custom)" ID="{BB610D3C-1F27-4CAC-8CD8-DF9AAB2E9FDF}" ShortID="937426729">
+															<CurveUsageInfoList>
+																<VolumeDryUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="VolumeDry" ID="{27741C5C-3356-4EF4-9E06-0DEB7D99BDA3}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>17.04348</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>45.73913</XPos>
+																					<YPos>-7.53501</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>67.13043</XPos>
+																					<YPos>-16.28727</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeDryUsage>
+																<VolumeWetGameUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+																		<Curve Name="VolumeWetGame" ID="{F1CE939D-541B-4324-9B75-EF019A555221}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-0.11659</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeWetGameUsage>
+																<VolumeWetUserUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+																		<Curve Name="VolumeWetUser" ID="{F40571C7-85C4-432F-8588-C350A5875B4B}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>17.04348</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>45.73913</XPos>
+																					<YPos>-7.53501</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>67.13043</XPos>
+																					<YPos>-16.28727</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeWetUserUsage>
+																<LowPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="LowPassFilter" ID="{691F032E-4121-4248-A85B-CA89593F6949}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="65537"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>15.92005</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>44.3493</XPos>
+																					<YPos>30</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>50</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</LowPassFilterUsage>
+																<HighPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="HighPassFilter" ID="{660D1E95-A81E-4C3F-9BCD-B76CAE3DF048}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="65537"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>12.32875</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>46.74895</XPos>
+																					<YPos>13</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>26</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</HighPassFilterUsage>
+																<SpreadUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</SpreadUsage>
+																<FocusUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</FocusUsage>
+																<ObstructionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionVolumeUsage>
+																<ObstructionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionLPFUsage>
+																<ObstructionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionHPFUsage>
+																<OcclusionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionVolumeUsage>
+																<OcclusionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionLPFUsage>
+																<OcclusionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionHPFUsage>
+																<DiffractionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionVolumeUsage>
+																<DiffractionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionLPFUsage>
+																<DiffractionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionHPFUsage>
+																<TransmissionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionVolumeUsage>
+																<TransmissionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionLPFUsage>
+																<TransmissionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionHPFUsage>
+															</CurveUsageInfoList>
+														</Attenuation>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{D61488E4-C54B-47F9-8D37-1E6E68B1A76E}" ShortID="440163243">
+																<PropertyList>
+																	<Property Name="Bypass" Type="bool" Value="True"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom CreatedFrom="{ABFA9875-521E-451F-AAB9-AB148847B9C0}">
+																			<Effect Name="Blue_Distant_Echoes (Custom)" ID="{CAE73261-476A-496F-9BD1-AFD8E9804430}" ShortID="233878680" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+																				<PropertyList>
+																					<Property Name="DryLevel" Type="Real32" Value="-3"/>
+																					<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
+																					<Property Name="FilterFrequency" Type="Real32" Value="2507"/>
+																					<Property Name="FilterGain" Type="Real32" Value="-24"/>
+																					<Property Name="FilterType" Type="int32" Value="3"/>
+																					<Property Name="FrontRearBalance" Type="Real32" Value="-46"/>
+																					<Property Name="LeftCrossfeed" Type="Real32" Value="-10"/>
+																					<Property Name="LeftDelayTime" Type="Real32" Value="0.33"/>
+																					<Property Name="LeftFeedback" Type="Real32" Value="-30.3"/>
+																					<Property Name="RightCrossfeed" Type="Real32" Value="-8"/>
+																					<Property Name="RightDelayTime" Type="Real32" Value="0.45"/>
+																					<Property Name="RightFeedback" Type="Real32" Value="-48"/>
+																				</PropertyList>
+																			</Effect>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{5195211C-F56E-4641-AE9F-73E2A0456CD2}" ShortID="117499038">
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom CreatedFrom="{577F1466-A63B-47F7-98BD-C56E433F8B5D}">
+																			<Effect Name="Room_Small (Custom)" ID="{4C76F545-CCA2-4C0D-A47E-A6330FF4BED6}" ShortID="826998781" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																				<PropertyList>
+																					<Property Name="DecayTime" Type="Real32" Value="0.3"/>
+																					<Property Name="Density" Type="Real32" Value="44"/>
+																					<Property Name="Diffusion" Type="Real32" Value="46"/>
+																					<Property Name="DryLevel" Type="Real32" Value="-11.3"/>
+																					<Property Name="ERLevel" Type="Real32" Value="-96"/>
+																					<Property Name="ERPattern" Type="int32" Value="22"/>
+																					<Property Name="Filter1Freq" Type="Real32" Value="590"/>
+																					<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
+																					<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
+																					<Property Name="HFDamping" Type="Real32" Value="2.7"/>
+																					<Property Name="PreDelay" Type="Real32" Value="64"/>
+																					<Property Name="ReverbLevel" Type="Real32" Value="-13"/>
+																					<Property Name="RoomShape" Type="Real32" Value="55"/>
+																					<Property Name="RoomSize" Type="Real32" Value="15"/>
+																					<Property Name="StereoWidth" Type="Real32" Value="90"/>
+																				</PropertyList>
+																			</Effect>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{52171078-CAD6-4B1E-9E59-65FF915089A8}" ShortID="278575957">
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom CreatedFrom="{0F6A7D6D-131C-4650-9561-FC05F5C7A37B}">
+																			<Effect Name="Hall_Large_Dark (Custom)" ID="{6D1EB9B0-FD6B-4839-9CDE-03E31B0AFCCC}" ShortID="1000076214" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																				<PropertyList>
+																					<Property Name="DecayTime" Type="Real32" Value="1.1"/>
+																					<Property Name="Density" Type="Real32" Value="90"/>
+																					<Property Name="Diffusion" Type="Real32" Value="39"/>
+																					<Property Name="DryLevel" Type="Real32" Value="-6.3"/>
+																					<Property Name="ERFrontBackDelay" Type="Real32" Value="8"/>
+																					<Property Name="ERLevel" Type="Real32" Value="-24"/>
+																					<Property Name="ERPattern" Type="int32" Value="2"/>
+																					<Property Name="Filter1Freq" Type="Real32" Value="490"/>
+																					<Property Name="Filter1Gain" Type="Real32" Value="4"/>
+																					<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
+																					<Property Name="Filter3Freq" Type="Real32" Value="11000"/>
+																					<Property Name="Filter3Gain" Type="Real32" Value="-11.5"/>
+																					<Property Name="HFDamping" Type="Real32" Value="3.35"/>
+																					<Property Name="PreDelay" Type="Real32" Value="75"/>
+																					<Property Name="Quality" Type="int32" Value="16"/>
+																					<Property Name="ReverbLevel" Type="Real32" Value="-32"/>
+																					<Property Name="RoomShape" Type="Real32" Value="69"/>
+																					<Property Name="RoomSize" Type="Real32" Value="14"/>
+																					<Property Name="StereoWidth" Type="Real32" Value="40"/>
+																				</PropertyList>
+																			</Effect>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</Bus>
+										<Bus Name="Xaga_Conference_02" ID="{07421CBB-CF53-496F-8B5D-52BEF0ADD158}">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<Custom CreatedFrom="{9EEB574E-0BE0-4CCA-970C-34F34052C145}">
+														<Attenuation Name="Hangar Dialogue 100m (Custom)" ID="{719AEAA2-0AA6-406F-AEC4-FEC84AA6D564}" ShortID="650650820">
+															<CurveUsageInfoList>
+																<VolumeDryUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="VolumeDry" ID="{2827C445-93FE-4076-87C5-90879412BFD1}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>15.28395</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>45.73913</XPos>
+																					<YPos>-7.4274</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>67.13043</XPos>
+																					<YPos>-16.28727</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeDryUsage>
+																<VolumeWetGameUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+																		<Curve Name="VolumeWetGame" ID="{A7A83C2F-FDCF-4DF3-947A-F40F3437FF96}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-0.11659</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeWetGameUsage>
+																<VolumeWetUserUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+																		<Curve Name="VolumeWetUser" ID="{645FBAC8-7758-4EC3-9C8F-A1118463C10F}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="3"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>17.04348</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>45.73913</XPos>
+																					<YPos>-7.53501</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>67.13043</XPos>
+																					<YPos>-16.28727</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>-200</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</VolumeWetUserUsage>
+																<LowPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="LowPassFilter" ID="{3628C61B-C4CC-4BB7-B5B5-8A7F4662E102}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="65537"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>13.60457</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>30.45639</XPos>
+																					<YPos>23</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>32</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</LowPassFilterUsage>
+																<HighPassFilterUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																		<Curve Name="HighPassFilter" ID="{62A71B3B-168A-476F-AB7D-EEF7497B74BC}">
+																			<PropertyList>
+																				<Property Name="Flags" Type="int32" Value="65537"/>
+																			</PropertyList>
+																			<PointList>
+																				<Point>
+																					<XPos>0</XPos>
+																					<YPos>0</YPos>
+																					<Flags>5</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>12.32875</XPos>
+																					<YPos>0</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>33.57963</XPos>
+																					<YPos>20</YPos>
+																					<Flags>0</Flags>
+																				</Point>
+																				<Point>
+																					<XPos>100</XPos>
+																					<YPos>26</YPos>
+																					<Flags>37</Flags>
+																				</Point>
+																			</PointList>
+																		</Curve>
+																	</CurveUsageInfo>
+																</HighPassFilterUsage>
+																<SpreadUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</SpreadUsage>
+																<FocusUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+																</FocusUsage>
+																<ObstructionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionVolumeUsage>
+																<ObstructionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionLPFUsage>
+																<ObstructionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</ObstructionHPFUsage>
+																<OcclusionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionVolumeUsage>
+																<OcclusionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionLPFUsage>
+																<OcclusionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</OcclusionHPFUsage>
+																<DiffractionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionVolumeUsage>
+																<DiffractionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionLPFUsage>
+																<DiffractionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</DiffractionHPFUsage>
+																<TransmissionVolumeUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionVolumeUsage>
+																<TransmissionLPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionLPFUsage>
+																<TransmissionHPFUsage>
+																	<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+																</TransmissionHPFUsage>
+															</CurveUsageInfoList>
+														</Attenuation>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+										</Bus>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{DCAE5F9E-973A-48B2-80D2-3C2806839F83}" ShortID="576554435">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+														<ObjectRef Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{1C298148-0BCE-4266-B34E-80B3FEF54F36}" ShortID="97487488">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+														<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{25E8DCCC-16E5-4BE6-B249-DB3F1C8E3CC5}" ShortID="339005880">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
+														<ObjectRef Name="XagaShifter" ID="{2A65CD3B-38E7-40B9-8472-61197DA973CA}" WorkUnitID="{1381E90E-CEBA-4A13-AD41-8ECCD1E9FEFD}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{83D111BB-43E1-4371-9074-1106D7D022C8}" ShortID="122187217">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+														<ObjectRef Name="New_Guitar_Distortion" ID="{3EE9E8A8-DEC4-4B5D-9FB2-74C7D38007EA}" WorkUnitID="{8373369A-7B69-4C0E-971D-8604368A2E27}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{3547F0B2-F4C1-4E7D-B3A3-C9A5920E3D66}" ShortID="865627067">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
