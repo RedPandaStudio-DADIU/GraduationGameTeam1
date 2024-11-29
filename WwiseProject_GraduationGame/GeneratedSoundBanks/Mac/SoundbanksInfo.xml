@@ -471,7 +471,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{78FECB1B-CFA9-1630-8CA0-A1BDD1A33C42}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{69E647F9-A603-DEFE-26DE-20810D63A4E5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -483,11 +483,14 @@
 					<Plugin Id="154042449" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="170601794" Name="ElevatorRoom" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="193201454" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="233878680" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="260922761" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="404704146" Name="Hall_Conversation (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="438276821" Name="Caught_in_a_loop (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="567187658" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="608453626" Name="Tunnel1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="610638398" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="620025229" Name="Dual_Filters_Radio_Comm (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="657286783" Name="Hall_Large_Dark (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="695490779" Name="Echoes_Linear (Custom)" LibName="Wwise Delay" LibId="6946819"/>
 					<Plugin Id="729418241" Name="Room_Small (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -495,8 +498,10 @@
 					<Plugin Id="753016132" Name="Big_Garage1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="793647857" Name="Room_Small (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="826000393" Name="Hall_Large_Dark (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="826998781" Name="Room_Small (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="882945345" Name="Hall_Large_Dark (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="911411724" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1000076214" Name="Hall_Large_Dark (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1044763549" Name="Dual_Filters_Radio_Comm (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</Custom>
 				<ShareSets>
@@ -547,11 +552,27 @@
 				</Bus>
 				<Bus Id="346451691" Name="ReverbEnvironments"/>
 				<Bus Id="385642153" Name="Xaga_Conference" MaxAttenuation="100"/>
+				<Bus Id="424473641" Name="Xaga_ConferenceRoom_02" MaxAttenuation="100"/>
 				<Bus Id="424473642" Name="Xaga_ConferenceRoom_01" MaxAttenuation="100"/>
+				<Bus Id="692393568" Name="03_XagaBossFightBarks">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="59662939"/>
+							<PluginRef Id="819943492"/>
+							<PluginRef Id="2952825346"/>
+							<PluginRef Id="3360962705"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1616828069" Name="HangarEarlyReflections"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="696369880" Name="LFE"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
 				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1038037717" Name="Xaga_Conference_01" MaxAttenuation="100"/>
+				<Bus Id="1038037718" Name="Xaga_Conference_02" MaxAttenuation="100"/>
 				<Bus Id="1118754633" Name="03_XagaHangar">
 					<PluginRefs>
 						<ShareSets>
@@ -596,11 +617,31 @@
 						<AuxBusRef Id="986249158" Name="RoomHangarMain"/>
 					</AuxBusRefs>
 				</Bus>
+				<Bus Id="1591600230" Name="XagaHangar_02">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="610638398"/>
+							<PluginRef Id="620025229"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="986249158" Name="RoomHangarMain"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="1681633080" Name="SFXMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
 				<Bus Id="2645497833" Name="DialogueMaster"/>
 				<Bus Id="2678230381" Name="Level2"/>
+				<Bus Id="2768314817" Name="Xaga_FarAway_02" MaxAttenuation="100">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="233878680"/>
+							<PluginRef Id="826998781"/>
+							<PluginRef Id="1000076214"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2768314818" Name="Xaga_FarAway_01" MaxAttenuation="100">
 					<PluginRefs>
 						<Custom>
@@ -1111,7 +1152,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{E1CE7DA7-11EE-9558-ADA1-C41B0770BFB5}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{46E50AB6-022E-C521-0F31-143853F3C3D6}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1522,6 +1563,10 @@
 				<File Id="199293111" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Walk\Boots_Walk_Heel_02.wav</ShortName>
 					<CachePath>SFX/Walk/Boots_Walk_Heel_02_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="199591454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AI_YouveMadeXagaVulnerable.wav</ShortName>
+					<CachePath>SFX/AI_YouveMadeXagaVulnerable_8C9083AC.wem</CachePath>
 				</File>
 				<File Id="200692930" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>Xaga_LetsDoThis.wav</ShortName>
@@ -2453,7 +2498,7 @@
 				</File>
 				<File Id="655758477" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Rifle_FireMainv2.wav</ShortName>
-					<CachePath>SFX/Rifle_FireMainv2_BD035DAE.wem</CachePath>
+					<CachePath>SFX/Rifle_FireMainv2_F8DED13B.wem</CachePath>
 				</File>
 				<File Id="658072977" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Attack_7.wav</ShortName>
@@ -2814,6 +2859,10 @@
 				<File Id="838699214" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_iNeedTheRadio.wav</ShortName>
 					<CachePath>Voices/English(US)/JD_iNeedTheRadio_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="841320162" Language="English(US)" Streaming="false" Location="Memory">
+					<ShortName>Xaga_LaughLong.wav</ShortName>
+					<CachePath>Voices/English(US)/Xaga_LaughLong_695A81E2.wem</CachePath>
 				</File>
 				<File Id="844964757" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>JD_GetToThePointPlease1.wav</ShortName>
@@ -3410,6 +3459,7 @@
 					<Plugin Id="219418982" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="227287439" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="232030741" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="233878680" Name="Blue_Distant_Echoes (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 					<Plugin Id="235435514" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="239882333" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="243202446" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -3524,8 +3574,10 @@
 					<Plugin Id="604384534" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="605552019" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="608453626" Name="Tunnel1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="610638398" Name="Medium_Room1 (Custom)" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="611651787" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="616453918" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="620025229" Name="Dual_Filters_Radio_Comm (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="620125035" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="629061771" Name="COMM 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="632445509" Name="DRONE 02" LibName="Wwise Synth One" LibId="9699330"/>
@@ -3583,6 +3635,7 @@
 					<Plugin Id="822153338" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="825530890" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="826000393" Name="Hall_Large_Dark (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="826998781" Name="Room_Small (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="830079984" Name="Wwise Pitch Shifter (Custom)" LibName="Wwise Pitch Shifter" LibId="8912899"/>
 					<Plugin Id="838933861" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="842792654" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
@@ -3634,6 +3687,7 @@
 					<Plugin Id="984265762" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="986046449" Name="DENIED 02" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="999756589" Name="New_Parametric_EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1000076214" Name="Hall_Large_Dark (Custom)" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="1007256781" Name="NOISE RND" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="1009122945" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="1011994727" Name="Wwise Parametric EQ (Custom)" LibName="Wwise Parametric EQ" LibId="6881283"/>
@@ -6269,6 +6323,12 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="1031154770"/>
+							<MediaRefs>
+								<MediaRef Id="199591454"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="2961238679"/>
 							<MediaRefs>
 								<MediaRef Id="338863935"/>
@@ -6315,6 +6375,12 @@
 							<SwitchValue GroupType="State" GroupId="3568468165" Id="3887839274"/>
 							<MediaRefs>
 								<MediaRef Id="437020248"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="3568468165" Id="1031154770"/>
+							<MediaRefs>
+								<MediaRef Id="199591454"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -6495,6 +6561,7 @@
 							<MediaRefs>
 								<MediaRef Id="178605701"/>
 								<MediaRef Id="294255802"/>
+								<MediaRef Id="841320162"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -6541,6 +6608,7 @@
 							<MediaRefs>
 								<MediaRef Id="178605701"/>
 								<MediaRef Id="294255802"/>
+								<MediaRef Id="841320162"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -6625,11 +6693,27 @@
 				</Bus>
 				<Bus Id="346451691" Name="ReverbEnvironments"/>
 				<Bus Id="385642153" Name="Xaga_Conference" MaxAttenuation="100"/>
+				<Bus Id="424473641" Name="Xaga_ConferenceRoom_02" MaxAttenuation="100"/>
 				<Bus Id="424473642" Name="Xaga_ConferenceRoom_01" MaxAttenuation="100"/>
+				<Bus Id="692393568" Name="03_XagaBossFightBarks">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="59662939"/>
+							<PluginRef Id="819943492"/>
+							<PluginRef Id="2952825346"/>
+							<PluginRef Id="3360962705"/>
+							<PluginRef Id="3435419520"/>
+						</ShareSets>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1616828069" Name="HangarEarlyReflections"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="696369880" Name="LFE"/>
 				<Bus Id="765206498" Name="PlayerCloth"/>
 				<Bus Id="840484792" Name="NPC Humans"/>
 				<Bus Id="1038037717" Name="Xaga_Conference_01" MaxAttenuation="100"/>
+				<Bus Id="1038037718" Name="Xaga_Conference_02" MaxAttenuation="100"/>
 				<Bus Id="1118754633" Name="03_XagaHangar">
 					<PluginRefs>
 						<ShareSets>
@@ -6674,11 +6758,31 @@
 						<AuxBusRef Id="986249158" Name="RoomHangarMain"/>
 					</AuxBusRefs>
 				</Bus>
+				<Bus Id="1591600230" Name="XagaHangar_02">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="610638398"/>
+							<PluginRef Id="620025229"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="986249158" Name="RoomHangarMain"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="1681012287" Name="PlayerFootsteps"/>
 				<Bus Id="1681633080" Name="SFXMaster"/>
 				<Bus Id="2343802269" Name="PlayerLocomotion"/>
 				<Bus Id="2645497833" Name="DialogueMaster"/>
 				<Bus Id="2678230381" Name="Level2"/>
+				<Bus Id="2768314817" Name="Xaga_FarAway_02" MaxAttenuation="100">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="233878680"/>
+							<PluginRef Id="826998781"/>
+							<PluginRef Id="1000076214"/>
+						</Custom>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2768314818" Name="Xaga_FarAway_01" MaxAttenuation="100">
 					<PluginRefs>
 						<Custom>
@@ -6987,5 +7091,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CE3BF758-FFA7-4CD9-B0DA-0364A974C671}</FileHash>
+	<FileHash>{892F75BD-3B63-72B6-F5E6-FC7F2F4BEABE}</FileHash>
 </SoundBanksInfo>

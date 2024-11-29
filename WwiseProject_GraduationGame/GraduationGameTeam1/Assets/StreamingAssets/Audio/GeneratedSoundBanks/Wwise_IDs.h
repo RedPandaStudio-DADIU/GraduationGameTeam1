@@ -491,6 +491,7 @@ namespace AK
         static const AkUniqueID _02_JOHN_DOE = 3570874681U;
         static const AkUniqueID _2DAMBIENCE = 309309195U;
         static const AkUniqueID _2DAMBIENTBEDS = 4152869693U;
+        static const AkUniqueID _03_XAGABOSSFIGHTBARKS = 692393568U;
         static const AkUniqueID _03_XAGACONFERENCEROOM = 1243625655U;
         static const AkUniqueID _03_XAGAHANGAR = 1118754633U;
         static const AkUniqueID _3DAMBIENCE = 1301074112U;
@@ -515,12 +516,16 @@ namespace AK
         static const AkUniqueID WEAPONS = 1467963052U;
         static const AkUniqueID XAGA_CONFERENCE = 385642153U;
         static const AkUniqueID XAGA_CONFERENCE_01 = 1038037717U;
+        static const AkUniqueID XAGA_CONFERENCE_02 = 1038037718U;
         static const AkUniqueID XAGA_CONFERENCEROOM = 3458995332U;
         static const AkUniqueID XAGA_CONFERENCEROOM_01 = 424473642U;
+        static const AkUniqueID XAGA_CONFERENCEROOM_02 = 424473641U;
         static const AkUniqueID XAGA_FARAWAY = 274948124U;
         static const AkUniqueID XAGA_FARAWAY_01 = 2768314818U;
+        static const AkUniqueID XAGA_FARAWAY_02 = 2768314817U;
         static const AkUniqueID XAGAHANGAR = 3868067129U;
         static const AkUniqueID XAGAHANGAR_01 = 1591600229U;
+        static const AkUniqueID XAGAHANGAR_02 = 1591600230U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
