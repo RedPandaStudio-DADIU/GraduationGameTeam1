@@ -8,7 +8,7 @@ public class FinalFadeIn : MonoBehaviour
 {
     [SerializeField] private Image blackScreenImage; 
 
-    [SerializeField] private float fadeDuration = 25f; 
+    [SerializeField] private float fadeDuration = 33f; 
 
     [SerializeField] private  GameObject blackScreen;
     private bool startFading = false;
