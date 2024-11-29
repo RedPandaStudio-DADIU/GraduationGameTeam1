@@ -4,6 +4,14 @@
 		<WorkUnit Name="Voicelines" ID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}" OwnerID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" PersistMode="Nested">
 			<ChildrenList>
 				<Bus Name="DialogueMaster" ID="{FFD9679F-ACCF-4BF9-A6DB-2632B64AF791}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RecoveryTime" Type="Real64" Value="0.3"/>
+					</PropertyList>
 					<ChildrenList>
 						<Bus Name="02_John Doe" ID="{5696D8FB-8716-4B36-95FF-732159C72BE0}">
 							<ChildrenList>
@@ -2385,13 +2393,49 @@
 							</ObjectLists>
 						</Bus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Lv2_ending" ID="{25662F38-735D-4B8A-A64F-921300740EB5}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
+								<CustomState Name="" ID="{BDCC9B96-0B49-454E-974A-78D32CFDFA79}" ShortID="440083181"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{96FF9BB9-8FCC-463B-A6A6-BB664FDFCC1F}"/>
+								<CustomState Name="" ID="{E0E5AA67-9CC4-4538-A78D-2052BFEF0D7C}" ShortID="308027401">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="47"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Loose" ID="{AF8C80B9-D2F8-4B95-B6D0-7BD426379E23}"/>
+								<CustomState Name="" ID="{0CD9C874-A60C-4F71-86C6-2CE0CE388C8A}" ShortID="61080027">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="63"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Win" ID="{71B81B41-18D2-4F8A-A601-716048A6E731}"/>
+								<CustomState Name="" ID="{AC8303A0-F786-4EE6-820C-77F2531E100A}" ShortID="309555709"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<DuckingList>
 						<DuckItem>
 							<BusRef Name="Music_Master" ID="{551353D5-6854-4C7B-8CC5-B6F4363A4826}"/>
 							<DuckingParam>
-								<Volume>-6</Volume>
-								<FadeInTime>1</FadeInTime>
-								<FadeOutTime>1</FadeOutTime>
+								<Volume>-10</Volume>
+								<FadeInTime>0.5</FadeInTime>
+								<FadeOutTime>0.5</FadeOutTime>
 								<FadeCurve>FadeLinear</FadeCurve>
 								<TargetProp>BusVolume</TargetProp>
 							</DuckingParam>
@@ -2407,6 +2451,15 @@
 						</DuckItem>
 						<DuckItem>
 							<BusRef Name="NPCBarks" ID="{057AB715-157F-4D2F-B8A3-345BBE895021}"/>
+							<DuckingParam>
+								<Volume>-6</Volume>
+								<FadeInTime>1</FadeInTime>
+								<FadeOutTime>1</FadeOutTime>
+								<FadeCurve>FadeLinear</FadeCurve>
+							</DuckingParam>
+						</DuckItem>
+						<DuckItem>
+							<BusRef Name="AmbientMaster" ID="{370467A9-3249-4187-926F-49EFC6B408E4}"/>
 							<DuckingParam>
 								<Volume>-6</Volume>
 								<FadeInTime>1</FadeInTime>
@@ -3448,6 +3501,42 @@
 							</ObjectLists>
 						</Bus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Lv2_ending" ID="{25662F38-735D-4B8A-A64F-921300740EB5}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
+								<CustomState Name="" ID="{77BF3136-376C-428A-AD20-6DB280AB3D34}" ShortID="658791339"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{96FF9BB9-8FCC-463B-A6A6-BB664FDFCC1F}"/>
+								<CustomState Name="" ID="{9072D7C3-E9C6-43E0-A14F-8F89E132EF2C}" ShortID="136387468">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="100"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Loose" ID="{AF8C80B9-D2F8-4B95-B6D0-7BD426379E23}"/>
+								<CustomState Name="" ID="{DD365733-1341-4571-978A-CB7897C33FFD}" ShortID="230706149">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="94"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Win" ID="{71B81B41-18D2-4F8A-A601-716048A6E731}"/>
+								<CustomState Name="" ID="{549DDD49-C7AD-499C-8C4F-2D2CF2CAC0BD}" ShortID="73440122"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

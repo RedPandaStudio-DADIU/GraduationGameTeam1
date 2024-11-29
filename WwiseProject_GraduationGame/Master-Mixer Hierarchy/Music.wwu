@@ -11,6 +11,28 @@
 							</ValueList>
 						</Property>
 					</PropertyList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
+								<CustomState Name="" ID="{C3B82728-7074-4BF6-AA0F-9DA30532CDAD}" ShortID="648415131"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{96FF9BB9-8FCC-463B-A6A6-BB664FDFCC1F}"/>
+								<CustomState Name="" ID="{2EAA5D58-F4BC-455F-AE27-6C2D1A9F642D}" ShortID="483648254">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+										<Property Name="Volume" Type="Real64" Value="-2"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

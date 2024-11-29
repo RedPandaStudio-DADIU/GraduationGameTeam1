@@ -14,10 +14,18 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{5CF35608-0BA7-6375-630C-6437272B4F76}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{1B3A019E-B8C6-4455-1A12-96A88ED27B4D}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 			<Media>
+				<File Id="1184144" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>combat_Lv2_blæs_1.wav</ShortName>
+					<CachePath>SFX/combat_Lv2_blæs_1_3D796F78.wem</CachePath>
+				</File>
+				<File Id="41006985" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>combat_Lv2_flader_1.wav</ShortName>
+					<CachePath>SFX/combat_Lv2_flader_1_3D796F78.wem</CachePath>
+				</File>
 				<File Id="112064426" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DG_combatH_stringsG_1.wav</ShortName>
 					<CachePath>SFX/DG_combatH_stringsG_1_3D796F78.wem</CachePath>
@@ -30,13 +38,17 @@
 					<ShortName>DG_combatH_fladerG_1.wav</ShortName>
 					<CachePath>SFX/DG_combatH_fladerG_1_3D796F78.wem</CachePath>
 				</File>
-				<File Id="196207872" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>combat_Lv2_Battleloop.wav</ShortName>
-					<CachePath>SFX/combat_Lv2_Battleloop_3D796F78.wem</CachePath>
-				</File>
 				<File Id="212922215" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DG_nocombat_percG_2.wav</ShortName>
 					<CachePath>SFX/DG_nocombat_percG_2_3D796F78.wem</CachePath>
+				</File>
+				<File Id="242292721" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>combat_Lv2_perc_1.wav</ShortName>
+					<CachePath>SFX/combat_Lv2_perc_1_3D796F78.wem</CachePath>
+				</File>
+				<File Id="249437997" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>combat_Lv2_strings_1.wav</ShortName>
+					<CachePath>SFX/combat_Lv2_strings_1_3D796F78.wem</CachePath>
 				</File>
 				<File Id="255757780" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>nocombat4_audioG.wav</ShortName>
@@ -86,6 +98,10 @@
 					<ShortName>DG_combat_audioG_1.wav</ShortName>
 					<CachePath>SFX/DG_combat_audioG_1_3D796F78.wem</CachePath>
 				</File>
+				<File Id="590397815" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>combat_Lv2_vokal_1.wav</ShortName>
+					<CachePath>SFX/combat_Lv2_vokal_1_3D796F78.wem</CachePath>
+				</File>
 				<File Id="599858517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>trans_loose4.wav</ShortName>
 					<CachePath>SFX/trans_loose4_3D796F78.wem</CachePath>
@@ -109,6 +125,10 @@
 				<File Id="763471552" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>nocombat4_fladerG.wav</ShortName>
 					<CachePath>SFX/nocombat4_fladerG_3D796F78.wem</CachePath>
+				</File>
+				<File Id="768324117" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>combat_Lv2_audio_1.wav</ShortName>
+					<CachePath>SFX/combat_Lv2_audio_1_3D796F78.wem</CachePath>
 				</File>
 				<File Id="783790631" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DG_nocombat_vokalG_2.wav</ShortName>
@@ -247,8 +267,13 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="1972315911" Id="0"/>
 											<MediaRefs>
-												<MediaRef Id="196207872"/>
+												<MediaRef Id="1184144"/>
+												<MediaRef Id="41006985"/>
+												<MediaRef Id="242292721"/>
+												<MediaRef Id="249437997"/>
 												<MediaRef Id="454691659"/>
+												<MediaRef Id="590397815"/>
+												<MediaRef Id="768324117"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -386,8 +411,13 @@
 										<SwitchContainer>
 											<SwitchValue GroupType="State" GroupId="1972315911" Id="0"/>
 											<MediaRefs>
-												<MediaRef Id="196207872"/>
+												<MediaRef Id="1184144"/>
+												<MediaRef Id="41006985"/>
+												<MediaRef Id="242292721"/>
+												<MediaRef Id="249437997"/>
 												<MediaRef Id="454691659"/>
+												<MediaRef Id="590397815"/>
+												<MediaRef Id="768324117"/>
 											</MediaRefs>
 										</SwitchContainer>
 									</Children>
@@ -471,7 +501,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{69E647F9-A603-DEFE-26DE-20810D63A4E5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EF04D02D-AA74-E854-A568-0CF6AE55E025}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1152,7 +1182,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{F0DFB3F3-2250-708A-3EA4-FC30EA291949}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{9B493AFE-36CC-F69D-B2D2-030406667423}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -6964,6 +6994,13 @@
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="1972315911" Name="Lv2_ending">
+					<States>
+						<State Id="174960569" Name="Loose"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="979765101" Name="Win"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2064552269" Name="AreaState">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -6974,6 +7011,13 @@
 						<State Id="2782928028" Name="ConferenceRoom2"/>
 						<State Id="2782928029" Name="ConferenceRoom3"/>
 						<State Id="2782928031" Name="ConferenceRoom1"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2718506204" Name="Combat_Lv2">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1778785816" Name="Combat_hall_lv2"/>
+						<State Id="2625421100" Name="Combat_Xaga_Lv2"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="3285234865" Name="PlayerState">
@@ -7139,5 +7183,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{37276E05-27D0-33F1-8A32-0ED353DF1A72}</FileHash>
+	<FileHash>{E795A6C3-E1C8-9CC1-B57E-CD5CAF4805A3}</FileHash>
 </SoundBanksInfo>
