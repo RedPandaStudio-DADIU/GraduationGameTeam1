@@ -13,8 +13,6 @@ public class PlayerDataManager : MonoBehaviour
     public float maxPlayerHealth;
 
     public int[] bulletsLeftInMagazine;
-    public WeaponIdentification[] inventory;
-    public Weapon_SO[] weapons;
 
     public int currentWeaponIndex;
 
@@ -36,8 +34,6 @@ public class PlayerDataManager : MonoBehaviour
     {
         playerHealth = maxPlayerHealth;
         bulletsLeftInMagazine = new int[length];  
-        inventory = new WeaponIdentification[length]; 
-        weapons = new Weapon_SO[length]; 
         currentWeaponIndex = 0;
     }
 }
