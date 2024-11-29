@@ -8,6 +8,7 @@ using AK.Wwise;
 public class EnemyHitState : IEnemyState
 {
     private bool isDying = false;
+    private bool isRecovering = false;
     public void OnEnter(EnemyStateController stateController){
         Debug.Log("Entering Hit State " + stateController.name);
         isDying = false;
@@ -60,7 +61,10 @@ public class EnemyHitState : IEnemyState
 
     }
     public void OnUpdate(EnemyStateController stateController){
-        stateController.Recovery(0f);
+        if(!isRecovering){
+            stateController.Recovery(0f);
+            isRecovering = true;
+        }
        
     }
     public void OnExit(EnemyStateController stateController){     
