@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using cowsins;
 using AK.Wwise;
+using UnityEngine.SceneManagement;
 
 public class EnemyAttackState : IEnemyState
 {
@@ -11,9 +12,11 @@ public class EnemyAttackState : IEnemyState
     private float specialStateIntervals = 5f;
     private bool isSpecialStateActive = false;
     private Coroutine specialAttackCoroutine;
+    private int sceneNumber = 1;
 
     public void OnEnter(EnemyStateController stateController){
         // Debug.Log("Entering Attack State");
+        sceneNumber = SceneManager.GetActiveScene().buildIndex;
         if(stateController.GetEnemy().GetIsMovable()){
             stateController.SetNavAgent();
         }
@@ -23,7 +26,7 @@ public class EnemyAttackState : IEnemyState
         }
 
         stateController.GetAnimator().SetBool("IsAttacking", true);
-        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && !stateController.gameObject.CompareTag("Boss")){
+        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && sceneNumber==1){
             if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
                 stateController.GetMusicManager().CheckIfSameState("CombatIntense");
             } else {
@@ -72,7 +75,8 @@ public class EnemyAttackState : IEnemyState
            
         } 
 
-        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && stateController.GetMusicManager().GetCurrentState()!="Control tower" && !stateController.gameObject.CompareTag("Boss")){
+
+        if(!stateController.GetIsHuman() && !stateController.GetInAFight() && stateController.GetMusicManager().GetCurrentState()!="Control tower" && sceneNumber==1){
             if(stateController.GetPlayer().GetComponent<PlayerStats>().health <= (stateController.GetPlayer().GetComponent<PlayerStats>().maxHealth/2)){
                 stateController.GetMusicManager().CheckIfSameState("CombatIntense");
             } else {
