@@ -49,10 +49,10 @@ namespace cowsins
         private void Update()
         {
  
-            if (popupManager != null && popupManager.GetCurrentpopUpID() != popID)
-        {
-            return; // This popup is not the current task
-        }
+            // if (popupManager != null && popupManager.GetCurrentpopUpID() != popID)
+            // {
+            //     return; // This popup is not the current task
+            // }
         
             if ( InputManager.heal && able)
             {
@@ -62,7 +62,7 @@ namespace cowsins
                 used= true;
                 able = false;
 
-                if (popupManager != null&& showed==false)
+                if (popupManager != null&& showed==false&& popupManager.GetCurrentpopUpID() == popID)
                 {
                     popupManager.CompletepopUp();
                     showed = true;

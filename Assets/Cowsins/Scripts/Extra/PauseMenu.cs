@@ -63,7 +63,30 @@ namespace cowsins
                 isShowing = false;
                 controlImageUI.SetActive(false); // Hide the info image
                 pauseMenuUI.SetActive(true); // Show the pause menu
-            }
+                isPaused=true;
+            
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0f; 
+                
+             
+                Debug.Log("Suspending All Audio");
+                AkSoundEngine.Suspend();
+                Debug.Log("pause ui ");
+                stats.LoseControl();
+
+                if (disablePlayerUIWhilePaused && !stats.isDead)
+                {
+                    playerUI.SetActive(false);
+                    
+                    Debug.Log("Wake up All Audio");
+                    AkSoundEngine.WakeupFromSuspend();
+                    Debug.Log("hide user ui ");
+                }
+
+
+                //OnPause?.Invoke();
+             }
         }
 
         private void HandlePauseInput()
