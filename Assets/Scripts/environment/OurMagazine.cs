@@ -13,6 +13,9 @@ public class OurMagazine : Pickeable
     [SerializeField] private TextMeshProUGUI bulletsUIText;
     private GameObject Player;
     private WeaponController weaponController;
+
+    private int popID=1; 
+    private bool showed = false;
     
 
     
@@ -33,6 +36,25 @@ public class OurMagazine : Pickeable
     {
         base.Interact(player);
        // cachedPlayer = player; 
+
+       PopupManager popupManager = FindObjectOfType<PopupManager>();
+             
+             if (popupManager ==null ) 
+            {
+                
+                Debug.Log("no pop manager.");
+            }
+             else
+            {
+                if (popupManager.GetCurrentpopUpID()== popID&& !showed)
+                {
+                    popupManager.CompletepopUp();
+                    showed = true;
+                    Debug.Log("Taskpop " + popID + " completed.");
+                }
+            }   
+                
+            
 
         Debug.Log("Picked up magzine");
        // WeaponController weaponController = player.GetComponent<WeaponController>();

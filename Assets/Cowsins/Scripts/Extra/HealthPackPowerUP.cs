@@ -15,44 +15,22 @@ namespace cowsins
  
           private bool able = false;
           private bool used = false;
+          private bool showed = false;
+
+          private int popID=0; 
+
+          private PopupManager popupManager;
  
- 
-        // public override void Interact(PlayerStats player)
-        // {
- 
-        //     if (player != null)
-        //     {
-        //         player.Heal(healAmount); 
-        //          if (healthPackUI != null)
-        //         {
-        //             SetUIAlpha(0.5f); 
-        //         }
-        //         // used = true; 
-        //         // timer = reappearTime; 
-        //          Destroy(gameObject); 
-        //     }
-        // }
- 
-        // private void OnTriggerStay(Collider other)
-        // {
-        //     if (other.CompareTag("Player") && !used)
-        //     {
- 
-        //          Debug.Log("collide.healpack");
-        //          used = true;
-        //         timer = reappearTime;
-        //         if (healthPackUI != null)
-        //         {
-        //             SetUIAlpha(1f); 
-        //         }
- 
-        //         if (InputManager.heal) 
-        //         {
-        //             Debug.Log("heal.");
-        //             Interact(other.GetComponent<PlayerStats>());
-        //         }
-        //     }
-        // }
+         private void Start()
+        {
+            // Find the PopupManager in the scene
+            popupManager = FindObjectOfType<PopupManager>();
+            if (popupManager == null)
+            {
+                Debug.LogError("PopupManager not found in the scene.");
+            }
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player") && !used)
@@ -71,6 +49,11 @@ namespace cowsins
         private void Update()
         {
  
+            if (popupManager != null && popupManager.GetCurrentpopUpID() != popID)
+        {
+            return; // This popup is not the current task
+        }
+        
             if ( InputManager.heal && able)
             {
                 Debug.Log("Healing player.");
@@ -78,6 +61,13 @@ namespace cowsins
                 SetUIAlpha(0.5f); 
                 used= true;
                 able = false;
+
+                if (popupManager != null&& showed==false)
+                {
+                    popupManager.CompletepopUp();
+                    showed = true;
+                }
+
                 Destroy(gameObject); 
  
             }
