@@ -61,7 +61,7 @@ public class EnemyHitState : IEnemyState
 
     }
     public void OnUpdate(EnemyStateController stateController){
-        if(!isRecovering){
+        if(stateController.GetEnemy().CompareTag("Boss") && !isRecovering){
             stateController.Recovery(0f);
             isRecovering = true;
         }
