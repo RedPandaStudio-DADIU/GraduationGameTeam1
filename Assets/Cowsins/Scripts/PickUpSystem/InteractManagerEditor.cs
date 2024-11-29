@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 /// <summary>
-/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
+/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
 using UnityEditor;
@@ -50,13 +50,13 @@ namespace cowsins
                             EditorGUILayout.Space(5);
                         }
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("duplicateWeaponAddsBullets"));
-                        // EditorGUILayout.PropertyField(serializedObject.FindProperty("canDrop"));
-                        // if (myScript.canDrop)
-                        // {
-                        //     EditorGUI.indentLevel++;
-                        //     EditorGUILayout.PropertyField(serializedObject.FindProperty("droppingDistance"));
-                        //     EditorGUI.indentLevel--;
-                        // }
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("canDrop"));
+                        if (myScript.canDrop)
+                        {
+                            EditorGUI.indentLevel++;
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("droppingDistance"));
+                            EditorGUI.indentLevel--;
+                        }
                         EditorGUILayout.LabelField("INSPECTION & REALTIME CUSTOMIZATION", EditorStyles.boldLabel);
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("canInspect"));
                         if (myScript.canInspect)
