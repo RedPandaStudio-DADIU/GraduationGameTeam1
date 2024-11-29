@@ -34,26 +34,26 @@ public class PlayerManager : MonoBehaviour
 
             }
 
-            // WeaponController wc = GameObject.FindWithTag("Player").GetComponent<WeaponController>();
-            // if(wc != null && PlayerDataManager.Instance.inventory.Length>0){
-            //     int index = 0;
+            WeaponController wc = GameObject.FindWithTag("Player").GetComponent<WeaponController>();
+            if(wc != null && PlayerDataManager.Instance.inventory.Length>0){
+                int index = 0;
 
-            //     foreach(Weapon_SO weapon in PlayerDataManager.Instance.weapons){
+                foreach(Weapon_SO weapon in PlayerDataManager.Instance.weapons){
                     
-            //         Debug.LogError("Identification weapon player manager: " + weapon);
+                    Debug.LogError("Identification weapon player manager: " + weapon);
 
-            //         if (weapon == null)
-            //         {
-            //             continue;
-            //         } 
+                    if (weapon == null)
+                    {
+                        continue;
+                    } 
 
-            //         AddWeaponToInventory(wc, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], weapon.magazineSize, weapon);
-            //         index++;
-            //     }
+                    AddWeaponToInventory(wc, index, PlayerDataManager.Instance.bulletsLeftInMagazine[index], weapon.magazineSize, weapon);
+                    index++;
+                }
 
-            //     wc.currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
-            //     dataSet = true;
-            // }
+                wc.currentWeapon = PlayerDataManager.Instance.currentWeaponIndex;
+                dataSet = true;
+            }
 
             
         }
