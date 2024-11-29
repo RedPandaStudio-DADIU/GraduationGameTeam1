@@ -180,35 +180,42 @@ public class HitScanBasic : MonoBehaviour
             Debug.Log("Charged Hit: " + hit.transform.name);
 
             
-            if (hit.collider.CompareTag("Enemy"))
+            if (hit.collider.CompareTag("Enemy")||hit.collider.CompareTag("Boss"))
             {
+
                 EnemyStateController enemy = hit.transform.GetComponent<EnemyStateController>();
 
-                // EnemyRagdollController enemyRagdollController = hit.transform.GetComponent<EnemyRagdollController>();
-                // if (enemyRagdollController != null)
                 if (enemy.GetEnemy().GetRagdollController() != null)
+
                 {
-                    
-                    // enemyRagdollController.SetRagdollActive(true);
                     enemy.GetEnemy().GetRagdollController().SetRagdollActive(true);
 
+                    // Vector3 pushDirection = hit.point - playerCamera.transform.position;
                     Vector3 pushDirection = hit.point - playerCamera.transform.position;
+
                     pushDirection = pushDirection.normalized;
+                    enemy.SetForce(chargedPushForce);
+                    enemy.SetForceDirection(pushDirection);
+
+                    enemy.GetEnemy().DecreaseHealth(chargeDamage);
+
+                    enemy.SetShouldRagdoll(true);
+                    if(enemy.GetCurrentState() is not EnemyHitState){
+                        enemy.ChangeState(new EnemyHitState());
+                    }
+
+                    if(enemy.GetEnemy().GetHealth() > 0){
+                        Debug.Log("Inside health check");
+                        if(!enemy.GetisInRecovery()){
+                            enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                            enemy.Recovery(ragdollDuration);
+                        }
+                    } else {
+                        enemy.ChangeState(new EnemyDieState());
+                        Debug.Log("Health check not passed");
+                    }
 
 
-                    // // enemy.SetForceDirection(pushDirection);
-                    // // enemy.SetForce(pushForce);
-                    enemy.ChangeState(new EnemyHitState());
-
-                  
-                    // enemyRagdollController.ApplyForce(pushDirection, chargedPushForce);
-                    enemy.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
-
-                    // // if(enemy.GetEnemy().GetHealth() > 0){
-                    // //     StartCoroutine(RecoverAfterDelay(enemy, ragdollDuration));
-                    // // }
-
-                
                     PushNearbyEnemies(hit.transform.position, chargedPushForce, explosionRadius);
                 }
             }
@@ -225,23 +232,36 @@ public class HitScanBasic : MonoBehaviour
         {
             EnemyRagdollController nearbyEnemyRagdollController = hitCollider.GetComponent<EnemyRagdollController>();
             EnemyStateController nearbyEnemyStateController = hitCollider.GetComponent<EnemyStateController>();
-            // EnemyRagdollController nearbyEnemyRagdollController = nearbyEnemyStateController.GetEnemy().GetRagdollController();
 
             if (nearbyEnemyRagdollController != null)
             {
-               
+            
                 nearbyEnemyRagdollController.SetRagdollActive(true);
 
                 Vector3 pushDirection = hitCollider.transform.position - center;
                 pushDirection = pushDirection.normalized;
+                nearbyEnemyStateController.SetForce(chargedPushForce);
+                nearbyEnemyStateController.SetForceDirection(pushDirection);
 
-                nearbyEnemyStateController.ChangeState(new EnemyHitState());
-             
-                nearbyEnemyRagdollController.ApplyForce(pushDirection, force);
+                nearbyEnemyStateController.GetEnemy().DecreaseHealth(chargeDamage);
 
-                // if(nearbyEnemyStateController.GetEnemy().GetHealth() > 0){
-                //         StartCoroutine(RecoverAfterDelay(nearbyEnemyStateController, ragdollDuration));
-                // }
+                nearbyEnemyStateController.SetShouldRagdoll(true);
+                if(nearbyEnemyStateController.GetCurrentState() is not EnemyHitState){
+                    nearbyEnemyStateController.ChangeState(new EnemyHitState());
+                }
+
+                if(nearbyEnemyStateController.GetEnemy().GetHealth() > 0){
+                    Debug.Log("Inside health check");
+                    if(!nearbyEnemyStateController.GetisInRecovery()){
+                        nearbyEnemyStateController.GetEnemy().GetRagdollController().ApplyForce(pushDirection, chargedPushForce);
+                        nearbyEnemyStateController.Recovery(ragdollDuration);
+                    }
+                } else {
+                    nearbyEnemyStateController.ChangeState(new EnemyDieState());
+                    Debug.Log("Health check not passed");
+                }
+
+
 
             }
         }   

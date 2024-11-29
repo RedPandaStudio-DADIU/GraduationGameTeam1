@@ -370,5 +370,18 @@ public class EnemyStateController : MonoBehaviour
         return this.shouldRagdoll;
     }
 
+
+    public void StartEndGame(){
+        StartCoroutine(WaitForBlack());
+    }
+
+    private IEnumerator WaitForBlack()
+    {
+        
+        yield return new WaitForSeconds(3f);
+        GameObject.FindWithTag("EndScreen").GetComponent<FinalFadeIn>().StartFading();
+       
+    }
+
 }
 

@@ -60,7 +60,7 @@ namespace cowsins
             {
                 
                 hitScanBasic.PushNearbyEnemies(transform.position, explosionForce, explosionRadius);
-                 Collider[] nearbyBarrels = Physics.OverlapSphere(transform.position, explosionRadius);
+                Collider[] nearbyBarrels = Physics.OverlapSphere(transform.position, explosionRadius);
                 foreach (Collider barrelCollider in nearbyBarrels)
                 {
                     if (barrelCollider.CompareTag("Barrel") && barrelCollider.gameObject != this.gameObject)
