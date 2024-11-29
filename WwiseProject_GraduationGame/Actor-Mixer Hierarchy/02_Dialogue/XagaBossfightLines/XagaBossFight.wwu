@@ -12,7 +12,7 @@
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>2</Value>
+								<Value>1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -167,6 +167,11 @@
 						<Sound Name="NoooMyleg" ID="{A3B11857-F39E-4298-994F-9B40561DE070}" ShortID="464480542">
 							<PropertyList>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -679,7 +684,17 @@
 						</Sound>
 						<Sound Name="Xaga_YouHaveNeverBeenWorthy" ID="{AD1C4D56-0AC8-41A0-932E-D043E49705B5}" ShortID="655892608">
 							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -777,6 +792,41 @@
 								<ActiveSource Name="Xaga Barks - Breath_03-01" ID="{7DCE2B5A-A7E4-436B-A457-16E751042FA4}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Xaga_LaughLong2" ID="{8C49D674-2CE9-4806-A7B2-344E7D2F49DE}" ShortID="337973363">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsVoice" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Xaga_LaughLong" ID="{0188A304-27C7-4667-8F10-7D21B1B86C18}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0905340748587569"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="3.82829802259887"/>
+									</PropertyList>
+									<Language>English(US)</Language>
+									<AudioFile>Xaga_LaughLong.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="841320162"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Xaga_LaughLong" ID="{0188A304-27C7-4667-8F10-7D21B1B86C18}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
@@ -794,6 +844,9 @@
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="XagaDeathScream_01" ID="{84CCF358-FA7D-4793-89B7-2105D72ACBB7}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Xaga_LaughLong2" ID="{8C49D674-2CE9-4806-A7B2-344E7D2F49DE}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Xaga_WeGaveYouOurPower" ID="{AB2A1675-0ED4-45F0-BD29-4B8032D01BB5}"/>
@@ -840,6 +893,7 @@
 								<ItemList>
 									<ItemRef Name="Xaga_LetsDoThis_Alt" ID="{E910BC1B-B4AD-4B42-9CB6-2696A12C0066}"/>
 									<ItemRef Name="Xaga_LaughLong" ID="{820556FE-5E6B-4A96-BC6E-B29DADF83F61}"/>
+									<ItemRef Name="Xaga_LaughLong2" ID="{8C49D674-2CE9-4806-A7B2-344E7D2F49DE}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -2010,11 +2064,16 @@
 							<PropertyList>
 								<Property Name="InitialDelay" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>8.5</Value>
 									</ValueList>
 								</Property>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2050,6 +2109,11 @@
 								</Property>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2081,6 +2145,11 @@
 								</Property>
 								<Property Name="IsVoice" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2428,6 +2497,46 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<Sound Name="AI_YouveMadeXagaVulnerable" ID="{DA4BEDC7-BFCB-4EDA-A001-3C1A08B46029}" ShortID="11802799">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AI_YouveMadeXagaVulnerable" ID="{F604C6C8-B6F8-4A58-AD98-7FA78D59EE93}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.231914216534071"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0343576617087513"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>AI_YouveMadeXagaVulnerable.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="199591454"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AI_YouveMadeXagaVulnerable" ID="{F604C6C8-B6F8-4A58-AD98-7FA78D59EE93}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<GroupingInfo>
 						<GroupingBehaviorList>
@@ -2439,6 +2548,9 @@
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="AI_WeakspotStomach_Serious" ID="{707828BC-1645-49D8-B6AF-965581741420}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="AI_YouveMadeXagaVulnerable" ID="{DA4BEDC7-BFCB-4EDA-A001-3C1A08B46029}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Sc8_Tr1" ID="{957AEADA-F050-4116-A5DA-77B7DD5E82C3}"/>
@@ -2461,6 +2573,12 @@
 								<SwitchRef Name="InitiateFight" ID="{E6A1FE71-2DBC-4E32-BAB3-7687C460A4A5}"/>
 								<ItemList>
 									<ItemRef Name="AI_ShesGotAWeakspotOnHerArm" ID="{B0B0FD4C-75BF-44FE-B777-3440C9DB8CB4}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="LostStomach" ID="{A93F9EAD-6E61-430A-80E1-4D0C2ED30FB8}"/>
+								<ItemList>
+									<ItemRef Name="AI_YouveMadeXagaVulnerable" ID="{DA4BEDC7-BFCB-4EDA-A001-3C1A08B46029}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>
@@ -2552,35 +2670,6 @@
 						<ActiveSource Name="Xaga_Laugh" ID="{C1B8DD94-7FD4-4D4C-AD3B-0FB9F24EDE40}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Xaga_LaughLong" ID="{8C49D674-2CE9-4806-A7B2-344E7D2F49DE}" ShortID="337973363">
-					<PropertyList>
-						<Property Name="IsVoice" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Xaga_LaughLong" ID="{0188A304-27C7-4667-8F10-7D21B1B86C18}">
-							<PropertyList>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimEnd" Type="Real64" Value="3.61953171091443"/>
-							</PropertyList>
-							<Language>English(US)</Language>
-							<AudioFile>Xaga_LaughLong.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="294255802"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Xaga_LaughLong" ID="{0188A304-27C7-4667-8F10-7D21B1B86C18}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Xaga_LaughShort" ID="{91521192-DEDB-4599-87B9-9C2C2753C536}" ShortID="292714000">
 					<PropertyList>
 						<Property Name="IsVoice" Type="bool" Value="True"/>
@@ -2616,6 +2705,12 @@
 						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -2780,7 +2875,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Xaga_Conference" ID="{3DF9EFBD-DE90-4B88-A6B2-59D4918C76F3}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+									<ObjectRef Name="Xaga_ConferenceRoom_02" ID="{13D6E1FB-DCC8-47AE-9519-C477A8A4AD03}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3106,6 +3201,14 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{DA01E602-80B6-40F8-AA15-F4DC1C561E47}">
+							<PropertyList>
+								<Property Name="PanX" Type="Real64" Value="-0.676818950930626"/>
+								<Property Name="PanY" Type="Real64" Value="-0.362976406533579"/>
+							</PropertyList>
+						</Panner>
+					</PositioningInfo>
 					<ObjectLists>
 						<ObjectList Name="Playlist">
 							<Reference>

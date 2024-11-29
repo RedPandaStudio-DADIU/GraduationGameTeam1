@@ -66,6 +66,42 @@
 							</ReferenceList>
 						</Bus>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Combat_Lv2" ID="{D06D187A-F794-458E-84B0-32848A952069}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="PlayerState" ID="{34884DE8-1ADF-46BF-8CE0-57B5FA8144FF}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Alive" ID="{C6996606-5775-4008-AF36-16EE011ED2CC}"/>
+								<CustomState Name="" ID="{012B8D53-F57F-433A-8114-951C520F12FC}" ShortID="94908842"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Combat_Xaga_Lv2" ID="{AD366E52-C944-4627-97CA-6E3DB937C575}"/>
+								<CustomState Name="" ID="{D5135310-2AA6-4FA2-9942-5514595B7355}" ShortID="956066144"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Dead" ID="{96FF9BB9-8FCC-463B-A6A6-BB664FDFCC1F}"/>
+								<CustomState Name="" ID="{6887425A-971F-4DD9-9B72-DF13BB2083DD}" ShortID="175442764">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="100"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Combat_hall_lv2" ID="{5D021475-9B83-4FC0-B022-CE6776E7795A}"/>
+								<CustomState Name="" ID="{E6FD87CB-24A2-44DE-94BB-3785AA739C7E}" ShortID="132363490">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="94"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

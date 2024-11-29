@@ -60,6 +60,45 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Sc0" ID="{EE51CEB9-AB1B-4C60-935F-448F10695C7A}" ShortID="334269769">
+							<ChildrenList>
+								<Event Name="Stop_Sc0_Tr1" ID="{2B028904-FBBB-4FCE-B67E-4DE9118007C3}">
+									<ChildrenList>
+										<Action Name="" ID="{0372EE1E-5044-4AC2-AE91-EBF6C58FE770}" ShortID="15171616">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Sc0_Tr1" ID="{0F5DF02F-03CE-4CEA-82D2-7FC8ED830BF5}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{4F1D4B2E-FE30-4E1B-A220-502DE3779354}" ShortID="674063501">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="4"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Sc0_Tr1" ID="{0F5DF02F-03CE-4CEA-82D2-7FC8ED830BF5}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_Sc0_Tr1" ID="{9F206A24-23C2-499F-8728-96CDC223FF73}">
+									<ChildrenList>
+										<Action Name="" ID="{1D095E38-5A1C-4DEB-B9F0-5A431319C365}" ShortID="153682169">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Sc0_Tr1" ID="{0F5DF02F-03CE-4CEA-82D2-7FC8ED830BF5}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="lvl2_Conference" ID="{3B71567B-F77B-4B7F-A906-F88B5E191254}" ShortID="815035599">
