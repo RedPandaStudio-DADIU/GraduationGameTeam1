@@ -17603,6 +17603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 601372227}
   - component: {fileID: 601372226}
+  - component: {fileID: 601372228}
   m_Layer: 0
   m_Name: GameObject 3
   m_TagString: Untagged
@@ -17646,6 +17647,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609503334}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601372228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601372224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767462667ea6702458117d0356652c91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpDisplayUI: {fileID: 1875986837}
 --- !u!1001 &602169192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48276,7 +48290,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cccb29618db52734caccb4c17a3073f7, type: 3}
   - {fileID: 21300000, guid: f11f43419b4cbe64ba60825ca8ab5b20, type: 3}
   - {fileID: 21300000, guid: f94eae6df932ad14f9ac7dea398bdc77, type: 3}
-  startDoor: {fileID: 601372224}
   currentpopUpID: 0
 --- !u!1001 &1611226393
 PrefabInstance:
