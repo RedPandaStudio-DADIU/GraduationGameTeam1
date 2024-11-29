@@ -143,13 +143,13 @@ namespace cowsins
 
                 #if UNITY_EDITOR || UNITY_STANDALONE
                     // Correct the file path for VideoPlayer
-                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/Finished_Cutscene.mp4";
+                    string videoPath = "file:///" + Application.streamingAssetsPath + "/Cutscene/3.mp4";
                     videoPlayer.url = videoPath;
                 #elif UNITY_ANDROID
-                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Finished_Cutscene.mp4"; // Android handles StreamingAssets differently
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/3.mp4"; // Android handles StreamingAssets differently
                     videoPlayer.url = videoPath;
                 #elif UNITY_IOS
-                    string videoPath = Application.streamingAssetsPath + "/Cutscene/Finished_Cutscene.mp4";
+                    string videoPath = Application.streamingAssetsPath + "/Cutscene/3.mp4";
                     videoPlayer.url = videoPath;
                 #endif
 
