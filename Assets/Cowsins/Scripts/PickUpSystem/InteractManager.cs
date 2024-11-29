@@ -1,5 +1,5 @@
 /// <summary>
-/// This script belongs to cowsins™ as a part of the cowsins´ FPS Engine. All rights reserved. 
+/// This script belongs to cowsinsï¿½ as a part of the cowsinsï¿½ FPS Engine. All rights reserved. 
 /// </summary>
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,7 +25,7 @@ namespace cowsins
 
         public Interactable HighlightedInteractable { get { return highlightedInteractable; } }
 
-        [Tooltip("Enable this toggle if you want to be able to drop your weapons")] public bool canDrop;
+        // [Tooltip("Enable this toggle if you want to be able to drop your weapons")] public bool canDrop;
 
         [Tooltip("Attach the generic pickeable object here"), SerializeField] private Pickeable weaponGenericPickeable;
 
@@ -33,7 +33,7 @@ namespace cowsins
 
         [Tooltip("Distance from the player to detect interactable objects"), SerializeField] private float detectInteractionDistance;
 
-        [Tooltip("Distance from the player where the pickeable will be instantiated"), SerializeField] private float droppingDistance;
+        // [Tooltip("Distance from the player where the pickeable will be instantiated"), SerializeField] private float droppingDistance;
 
         [SerializeField, Tooltip("How much time player has to hold the interact button in order to successfully interact")] private float progressRequiredToInteract;
 
@@ -66,7 +66,7 @@ namespace cowsins
         private void OnEnable()
         {
             // Subscribe to the event
-            UIEvents.onAttachmentUIElementClicked += DropAttachment;
+            // UIEvents.onAttachmentUIElementClicked += DropAttachment;
         }
 
         private void OnDisable()
@@ -91,7 +91,7 @@ namespace cowsins
 
             DetectPickeable();
             DetectInput();
-            HandleDrop();
+            // HandleDrop();
         }
         private void DetectPickeable()
         {
@@ -211,20 +211,20 @@ namespace cowsins
             UIEvents.onFinishInteractionProgress?.Invoke();
             events.OnFinishedInteraction.Invoke(); // Call our event
         }
-        private void HandleDrop()
-        {
-            // Handles weapon dropping by pressing the drop button
-            if (!InputManager.dropping || wcon.weapon == null || wcon.Reloading || !canDrop) return;
+        // private void HandleDrop()
+        // {
+        //     // Handles weapon dropping by pressing the drop button
+        //     if (!InputManager.dropping || wcon.weapon == null || wcon.Reloading || !canDrop) return;
 
-            WeaponPickeable pick = Instantiate(weaponGenericPickeable, orientation.position + orientation.forward * droppingDistance, orientation.rotation) as WeaponPickeable;
-            pick.Drop(wcon, orientation);
-            WeaponIdentification wp = wcon.inventory[wcon.currentWeapon];
-            pick.SetPickeableAttachments(wp.barrel, wp.scope, wp.stock, wp.grip, wp.magazine, wp.flashlight, wp.laser);
-            events.onDrop?.Invoke();
+        //     WeaponPickeable pick = Instantiate(weaponGenericPickeable, orientation.position + orientation.forward * droppingDistance, orientation.rotation) as WeaponPickeable;
+        //     pick.Drop(wcon, orientation);
+        //     WeaponIdentification wp = wcon.inventory[wcon.currentWeapon];
+        //     pick.SetPickeableAttachments(wp.barrel, wp.scope, wp.stock, wp.grip, wp.magazine, wp.flashlight, wp.laser);
+        //     events.onDrop?.Invoke();
 
-            wcon.ForceAimReset();
-            wcon.ReleaseCurrentWeapon();
-        }
+        //     wcon.ForceAimReset();
+        //     wcon.ReleaseCurrentWeapon();
+        // }
         private void ResetInteractTimer() => alreadyInteracted = false;
 
         public void GenerateInspectionUI()
@@ -237,107 +237,107 @@ namespace cowsins
         /// </summary>
         /// <param name="atc">Attachment to drop </param>
         /// <param name="enableDefault">Enables the default attachment when dropped if true.</param>
-        public void DropAttachment(Attachment atc, bool enableDefault)
-        {
-            // Spawn a new pickeable.
-            AttachmentPickeable pick = Instantiate(attachmentGenericPickeable, orientation.position + orientation.forward * droppingDistance, orientation.rotation) as AttachmentPickeable;
-            // Assign the appropriate attachment identifier to the spawned pickeable.
-            pick.attachmentIdentifier = atc.attachmentIdentifier;
-            // Get visuals
-            pick.Drop(wcon, orientation);
+    //     public void DropAttachment(Attachment atc, bool enableDefault)
+    //     {
+    //         // Spawn a new pickeable.
+    //         AttachmentPickeable pick = Instantiate(attachmentGenericPickeable, orientation.position + orientation.forward * droppingDistance, orientation.rotation) as AttachmentPickeable;
+    //         // Assign the appropriate attachment identifier to the spawned pickeable.
+    //         pick.attachmentIdentifier = atc.attachmentIdentifier;
+    //         // Get visuals
+    //         pick.Drop(wcon, orientation);
 
-            // Grab the current weaponidentification object.
-            WeaponIdentification weapon = wcon.inventory[wcon.currentWeapon];
-            // Store all the types of attachments and the current attachment of each type inside a dictionary.
-            Dictionary<Type, Attachment> attachments = new Dictionary<Type, Attachment> {
-        { typeof(Barrel), weapon.barrel },
-        { typeof(Scope), weapon.scope },
-        { typeof(Stock), weapon.stock },
-        { typeof(Grip), weapon.grip },
-        { typeof(Magazine), weapon.magazine },
-        { typeof(Flashlight), weapon.flashlight },
-        { typeof(Laser), weapon.laser }
-    };
+    //         // Grab the current weaponidentification object.
+    //         WeaponIdentification weapon = wcon.inventory[wcon.currentWeapon];
+    //         // Store all the types of attachments and the current attachment of each type inside a dictionary.
+    //         Dictionary<Type, Attachment> attachments = new Dictionary<Type, Attachment> {
+    //     { typeof(Barrel), weapon.barrel },
+    //     { typeof(Scope), weapon.scope },
+    //     { typeof(Stock), weapon.stock },
+    //     { typeof(Grip), weapon.grip },
+    //     { typeof(Magazine), weapon.magazine },
+    //     { typeof(Flashlight), weapon.flashlight },
+    //     { typeof(Laser), weapon.laser }
+    // };
 
-            // Grab what type of attachment it is, returns barrel, Scope, etc...
-            Type attachmentType = atc.GetType();
-            // Check if any of the attachments saved in the dictionary is the same type as the attachment to drop type.
-            if (attachments.ContainsKey(attachmentType))
-            {
-                Attachment defAtc = null;
+    //         // Grab what type of attachment it is, returns barrel, Scope, etc...
+    //         Type attachmentType = atc.GetType();
+    //         // Check if any of the attachments saved in the dictionary is the same type as the attachment to drop type.
+    //         if (attachments.ContainsKey(attachmentType))
+    //         {
+    //             Attachment defAtc = null;
 
-                // Check all the attachment types 
-                // This will determine which attachment type matches the dropped attachment
-                switch (attachmentType)
-                {
-                    // If the type is Barrel:
-                    case Type t when t == typeof(Barrel):
-                        // If the current barrel is not null, disable it
-                        if (weapon.barrel != null)
-                            weapon.barrel.gameObject.SetActive(false);
-                        // Because it dropped, store the default barrel in case it exists for later usage.
-                        defAtc = weapon.defaultAttachments.defaultBarrel;
-                        break;
-                    case Type t when t == typeof(Scope):
-                        if (weapon.scope != null)
-                            weapon.scope.gameObject.SetActive(false);
-                        defAtc = weapon.defaultAttachments.defaultScope;
-                        break;
-                    case Type t when t == typeof(Stock):
-                        if (weapon.stock != null)
-                            weapon.stock.gameObject.SetActive(false);
-                        defAtc = weapon.defaultAttachments.defaultStock;
-                        break;
-                    case Type t when t == typeof(Grip):
-                        if (weapon.grip != null)
-                            weapon.grip.gameObject.SetActive(false);
-                        defAtc = weapon.defaultAttachments.defaultGrip;
-                        break;
-                    case Type t when t == typeof(Magazine):
-                        weapon.magazine.gameObject.SetActive(false);
-                        defAtc = weapon.defaultAttachments.defaultMagazine;
-                        break;
-                    case Type t when t == typeof(Flashlight):
-                        if (weapon.flashlight != null)
-                            weapon.flashlight.gameObject.SetActive(false);
-                        defAtc = weapon.defaultAttachments.defaultFlashlight;
-                        break;
-                    case Type t when t == typeof(Laser):
-                        if (weapon.laser != null)
-                            weapon.laser.gameObject.SetActive(false);
-                        defAtc = weapon.defaultAttachments.defaultLaser;
-                        break;
-                }
+    //             // Check all the attachment types 
+    //             // This will determine which attachment type matches the dropped attachment
+    //             switch (attachmentType)
+    //             {
+    //                 // If the type is Barrel:
+    //                 case Type t when t == typeof(Barrel):
+    //                     // If the current barrel is not null, disable it
+    //                     if (weapon.barrel != null)
+    //                         weapon.barrel.gameObject.SetActive(false);
+    //                     // Because it dropped, store the default barrel in case it exists for later usage.
+    //                     defAtc = weapon.defaultAttachments.defaultBarrel;
+    //                     break;
+    //                 case Type t when t == typeof(Scope):
+    //                     if (weapon.scope != null)
+    //                         weapon.scope.gameObject.SetActive(false);
+    //                     defAtc = weapon.defaultAttachments.defaultScope;
+    //                     break;
+    //                 case Type t when t == typeof(Stock):
+    //                     if (weapon.stock != null)
+    //                         weapon.stock.gameObject.SetActive(false);
+    //                     defAtc = weapon.defaultAttachments.defaultStock;
+    //                     break;
+    //                 case Type t when t == typeof(Grip):
+    //                     if (weapon.grip != null)
+    //                         weapon.grip.gameObject.SetActive(false);
+    //                     defAtc = weapon.defaultAttachments.defaultGrip;
+    //                     break;
+    //                 case Type t when t == typeof(Magazine):
+    //                     weapon.magazine.gameObject.SetActive(false);
+    //                     defAtc = weapon.defaultAttachments.defaultMagazine;
+    //                     break;
+    //                 case Type t when t == typeof(Flashlight):
+    //                     if (weapon.flashlight != null)
+    //                         weapon.flashlight.gameObject.SetActive(false);
+    //                     defAtc = weapon.defaultAttachments.defaultFlashlight;
+    //                     break;
+    //                 case Type t when t == typeof(Laser):
+    //                     if (weapon.laser != null)
+    //                         weapon.laser.gameObject.SetActive(false);
+    //                     defAtc = weapon.defaultAttachments.defaultLaser;
+    //                     break;
+    //             }
 
-                Attachment defaultAttachment = defAtc ?? null;
+    //             Attachment defaultAttachment = defAtc ?? null;
 
-                // If the default attachment is not null, and we should enable default attachments, assign it and enable it
-                if (defaultAttachment != null && enableDefault)
-                {
-                    attachments[attachmentType] = defaultAttachment;
-                    defaultAttachment.gameObject.SetActive(true);
-                }
-                else
-                {
-                    // Otherwise do not assign anything
-                    attachments[attachmentType] = null;
-                }
-            }
+    //             // If the default attachment is not null, and we should enable default attachments, assign it and enable it
+    //             if (defaultAttachment != null && enableDefault)
+    //             {
+    //                 attachments[attachmentType] = defaultAttachment;
+    //                 defaultAttachment.gameObject.SetActive(true);
+    //             }
+    //             else
+    //             {
+    //                 // Otherwise do not assign anything
+    //                 attachments[attachmentType] = null;
+    //             }
+    //         }
 
-            weapon.barrel = attachments[typeof(Barrel)] as Barrel;
-            weapon.scope = attachments[typeof(Scope)] as Scope;
-            weapon.stock = attachments[typeof(Stock)] as Stock;
-            weapon.grip = attachments[typeof(Grip)] as Grip;
-            weapon.magazine = attachments[typeof(Magazine)] as Magazine;
-            weapon.flashlight = attachments[typeof(Flashlight)] as Flashlight;
-            weapon.laser = attachments[typeof(Laser)] as Laser;
+    //         weapon.barrel = attachments[typeof(Barrel)] as Barrel;
+    //         weapon.scope = attachments[typeof(Scope)] as Scope;
+    //         weapon.stock = attachments[typeof(Stock)] as Stock;
+    //         weapon.grip = attachments[typeof(Grip)] as Grip;
+    //         weapon.magazine = attachments[typeof(Magazine)] as Magazine;
+    //         weapon.flashlight = attachments[typeof(Flashlight)] as Flashlight;
+    //         weapon.laser = attachments[typeof(Laser)] as Laser;
 
-            // Adjust the magazine size and unholster the weapon
-            wcon.id.GetMagazineSize();
-            wcon.UnHolster(weapon.gameObject, false);
+    //         // Adjust the magazine size and unholster the weapon
+    //         wcon.id.GetMagazineSize();
+    //         wcon.UnHolster(weapon.gameObject, false);
 
-            if (displayCurrentAttachmentsOnly)
-                UIController.instance.GenerateInspectionUI(wcon);
-        }
+    //         if (displayCurrentAttachmentsOnly)
+    //             UIController.instance.GenerateInspectionUI(wcon);
     }
+
 }

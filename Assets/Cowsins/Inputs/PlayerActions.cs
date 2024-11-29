@@ -100,15 +100,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Drop"",
-                    ""type"": ""Button"",
-                    ""id"": ""6585e1ce-930d-419c-b8a7-4bec2d88309e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""ChangeWeapons"",
                     ""type"": ""Button"",
                     ""id"": ""223d3d3c-488b-41b3-8a8c-a655223ef323"",
@@ -353,28 +344,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Interacting"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ab03914d-c2c1-4e35-ba1d-aed93f505d9d"",
-                    ""path"": ""<Keyboard>/g"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Drop"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1dc19de7-6b7f-495d-ad4e-111722434112"",
-                    ""path"": ""<Gamepad>/select"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1245,7 +1214,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_GameControls_Scrolling = m_GameControls.FindAction("Scrolling", throwIfNotFound: true);
         m_GameControls_Aiming = m_GameControls.FindAction("Aiming", throwIfNotFound: true);
         m_GameControls_Interacting = m_GameControls.FindAction("Interacting", throwIfNotFound: true);
-        m_GameControls_Drop = m_GameControls.FindAction("Drop", throwIfNotFound: true);
         m_GameControls_ChangeWeapons = m_GameControls.FindAction("ChangeWeapons", throwIfNotFound: true);
         m_GameControls_Pause = m_GameControls.FindAction("Pause", throwIfNotFound: true);
         m_GameControls_Movement = m_GameControls.FindAction("Movement", throwIfNotFound: true);
@@ -1336,7 +1304,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_GameControls_Scrolling;
     private readonly InputAction m_GameControls_Aiming;
     private readonly InputAction m_GameControls_Interacting;
-    private readonly InputAction m_GameControls_Drop;
     private readonly InputAction m_GameControls_ChangeWeapons;
     private readonly InputAction m_GameControls_Pause;
     private readonly InputAction m_GameControls_Movement;
@@ -1358,7 +1325,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @Scrolling => m_Wrapper.m_GameControls_Scrolling;
         public InputAction @Aiming => m_Wrapper.m_GameControls_Aiming;
         public InputAction @Interacting => m_Wrapper.m_GameControls_Interacting;
-        public InputAction @Drop => m_Wrapper.m_GameControls_Drop;
         public InputAction @ChangeWeapons => m_Wrapper.m_GameControls_ChangeWeapons;
         public InputAction @Pause => m_Wrapper.m_GameControls_Pause;
         public InputAction @Movement => m_Wrapper.m_GameControls_Movement;
@@ -1401,9 +1367,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Interacting.started += instance.OnInteracting;
             @Interacting.performed += instance.OnInteracting;
             @Interacting.canceled += instance.OnInteracting;
-            @Drop.started += instance.OnDrop;
-            @Drop.performed += instance.OnDrop;
-            @Drop.canceled += instance.OnDrop;
             @ChangeWeapons.started += instance.OnChangeWeapons;
             @ChangeWeapons.performed += instance.OnChangeWeapons;
             @ChangeWeapons.canceled += instance.OnChangeWeapons;
@@ -1459,9 +1422,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Interacting.started -= instance.OnInteracting;
             @Interacting.performed -= instance.OnInteracting;
             @Interacting.canceled -= instance.OnInteracting;
-            @Drop.started -= instance.OnDrop;
-            @Drop.performed -= instance.OnDrop;
-            @Drop.canceled -= instance.OnDrop;
             @ChangeWeapons.started -= instance.OnChangeWeapons;
             @ChangeWeapons.performed -= instance.OnChangeWeapons;
             @ChangeWeapons.canceled -= instance.OnChangeWeapons;
@@ -1652,7 +1612,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnScrolling(InputAction.CallbackContext context);
         void OnAiming(InputAction.CallbackContext context);
         void OnInteracting(InputAction.CallbackContext context);
-        void OnDrop(InputAction.CallbackContext context);
         void OnChangeWeapons(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);

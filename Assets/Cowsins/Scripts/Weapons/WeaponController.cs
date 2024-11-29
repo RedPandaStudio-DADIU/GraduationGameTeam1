@@ -1031,8 +1031,8 @@ namespace cowsins
             // Disable current attachment if it exists
             currentAttachment?.gameObject.SetActive(false);
             // Drop it in case it is not a default attachment
-            if (currentAttachment != null && currentAttachment != defaultAttachment)
-                GetComponent<InteractManager>().DropAttachment(currentAttachment, false);
+            // if (currentAttachment != null && currentAttachment != defaultAttachment)
+            //     GetComponent<InteractManager>().DropAttachment(currentAttachment, false);
             // Enable new attachment
             newAttachment.gameObject.SetActive(true);
         }
