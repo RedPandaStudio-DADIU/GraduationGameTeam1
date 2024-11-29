@@ -2069,6 +2069,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Sc5_Tr0" ID="{45C3DC3E-E96B-4BB7-8F73-5E81B99B9A83}" ShortID="698069829">
 									<PropertyList>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
@@ -2146,55 +2147,9 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Sc0_Tr1" ID="{0F5DF02F-03CE-4CEA-82D2-7FC8ED830BF5}" ShortID="1063724964">
-									<PropertyList>
-										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="AI_TryKickingTheDoor" ID="{4353389B-F629-4252-90F8-93D9E85165B4}" ShortID="790591438">
-											<PropertyList>
-												<Property Name="IsVoice" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="AI_TryKickingTheDoor" ID="{64B82451-B7C1-43BE-B483-350CF7858314}">
-													<Language>English(US)</Language>
-													<AudioFile>AI_TryKickingTheDoor.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="148178849"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="AI_TryKickingTheDoor" ID="{64B82451-B7C1-43BE-B483-350CF7858314}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Playlist">
-											<Reference>
-												<ObjectRef Name="AI_TryKickingTheDoor" ID="{4353389B-F629-4252-90F8-93D9E85165B4}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Sc0_Tr2" ID="{BCF76B1E-117B-4F95-A69D-83F4EA6E7C64}" ShortID="113639482">
 									<PropertyList>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
@@ -2220,6 +2175,13 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="AI_AmmoAndHealthpacks" ID="{E2DE3C74-F3F4-405F-92F1-4EE9017E8AEE}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0709733656174334"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.253476305776547"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.79461224489796"/>
+														<Property Name="TrimEnd" Type="Real64" Value="5.86037218955379"/>
+													</PropertyList>
 													<Language>English(US)</Language>
 													<AudioFile>AI_AmmoAndHealthpacks.wav</AudioFile>
 													<MediaIDList>
@@ -2331,6 +2293,65 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Sc0_Tr1" ID="{0F5DF02F-03CE-4CEA-82D2-7FC8ED830BF5}" ShortID="1063724964">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="01_Ai" ID="{7BBF5097-5D45-4FC1-8626-CA7ED402A240}" WorkUnitID="{B7D3AEF4-0E4E-4EBB-86C1-16581226443F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="AI_TryKickingTheDoor" ID="{4353389B-F629-4252-90F8-93D9E85165B4}" ShortID="790591438">
+											<PropertyList>
+												<Property Name="IsVoice" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AI_TryKickingTheDoor" ID="{64B82451-B7C1-43BE-B483-350CF7858314}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0701321342096159"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0510051885160845"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.65766862677274"/>
+													</PropertyList>
+													<Language>English(US)</Language>
+													<AudioFile>AI_TryKickingTheDoor.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="148178849"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="AI_TryKickingTheDoor" ID="{64B82451-B7C1-43BE-B483-350CF7858314}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="AI_TryKickingTheDoor" ID="{4353389B-F629-4252-90F8-93D9E85165B4}" WorkUnitID="{9F0DD1D6-3B44-4D6A-81B2-22509738C79B}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<GroupingInfo>
 								<GroupingBehaviorList>
@@ -2345,12 +2366,21 @@
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Sc0_Tr2" ID="{BCF76B1E-117B-4F95-A69D-83F4EA6E7C64}"/>
+										<PropertyList>
+											<Property Name="ContinuePlay" Type="bool" Value="True"/>
+										</PropertyList>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Sc1_Tr0" ID="{AE742D22-E92C-4DFC-BDEE-61D9ABEF889E}"/>
+										<PropertyList>
+											<Property Name="ContinuePlay" Type="bool" Value="True"/>
+										</PropertyList>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Sc0_Tr1" ID="{0F5DF02F-03CE-4CEA-82D2-7FC8ED830BF5}"/>
+										<PropertyList>
+											<Property Name="ContinuePlay" Type="bool" Value="True"/>
+										</PropertyList>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="Sc5_Tr0" ID="{45C3DC3E-E96B-4BB7-8F73-5E81B99B9A83}"/>
@@ -2382,9 +2412,21 @@
 										</ItemList>
 									</Grouping>
 									<Grouping>
+										<SwitchRef Name="Sc1_Tr3" ID="{514DB78D-6A88-453B-8107-BC4C1596BDA6}"/>
+										<ItemList>
+											<ItemRef Name="Sc1_Tr3" ID="{611DA51B-71E8-43F5-A72B-F041F5F5D8C3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
 										<SwitchRef Name="Sc5_Tr2" ID="{53BD08A9-9995-4611-B0CC-FE29E967E5D5}"/>
 										<ItemList>
 											<ItemRef Name="Sc5_Tr2" ID="{1065C00F-B546-4BB7-A45E-DC15E8D1F04D}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Sc0_Tr2" ID="{2E2F70BF-7611-4021-A200-495C8A92E2A4}"/>
+										<ItemList>
+											<ItemRef Name="Sc0_Tr2" ID="{BCF76B1E-117B-4F95-A69D-83F4EA6E7C64}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>

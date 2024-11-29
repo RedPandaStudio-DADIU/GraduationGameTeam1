@@ -738,6 +738,9 @@
 						</Property>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{FD697A92-B8B2-4D32-8455-004D042A954A}"/>
@@ -746,11 +749,14 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+							<ObjectRef Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -808,23 +814,14 @@
 				<Sound Name="FireAlarm" ID="{44789C63-876A-466E-BA44-0F8BB5C6B6A0}" ShortID="149990796">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
-						<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-						<Property Name="Soundly:FileID" Type="string" Value="SND7469"/>
-						<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpdml3u3b1/afcache/1426367345Ff4sxqvM_wkFwGSND7469sfy.sfy"/>
-						<Property Name="Soundly:HandleStartTime" Type="string" Value="0.0"/>
-						<Property Name="Soundly:HandleStopTime" Type="string" Value="50.739104166666664"/>
-						<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-						<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-						<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-						<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-						<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-						<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Alarms_Buzzer_Evacuation_Malfunction_Large_Danger_Nuclear_Control_Room_SND7469 7.wav"/>
-						<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-						<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.0"/>
-						<Property Name="Soundly:SelectionStopTime" Type="string" Value="1.0"/>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>38</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-10</Value>
+								<Value>-14</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -842,7 +839,6 @@
 					<ChildrenList>
 						<AudioFileSource Name="Alarms_Buzzer_Evacuation_Malfunction_Large_Danger_Nuclear_Control_Room_SND7469 7" ID="{8FA990CC-7ECB-46EA-8B0F-CA2B76CA6988}">
 							<PropertyList>
-								<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND7469"/>
 								<Property Name="TrimEnd" Type="Real64" Value="50.7391041666667"/>
 							</PropertyList>
 							<Language>SFX</Language>
@@ -859,20 +855,11 @@
 				<Sound Name="Smallbonfire" ID="{CB12BBAD-A700-4E73-A84E-43BCA4E7D509}" ShortID="725969594">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
-						<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-						<Property Name="Soundly:FileID" Type="string" Value="SND122310"/>
-						<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xg/9164lyrn3p7dw6fdp86zfd_h0000gp/T/tmpdml3u3b1/afcache/1426367345Ff4sxqvM_wkFwGSND122310sfy.sfy"/>
-						<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-						<Property Name="Soundly:HandleStopTime" Type="string" Value="28.396604166666666"/>
-						<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-						<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-						<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-						<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-						<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-						<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/andersnorddaljendresen/Documents/Soundly Audio/Fire_Burning_Burning_Wood_Bonfire_Soft_Intensity_Loop_SND122310.wav"/>
-						<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-						<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.3582830106592851"/>
-						<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.3582830106592851"/>
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>27</Value>
+							</ValueList>
+						</Property>
 						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="59"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -894,7 +881,6 @@
 					<ChildrenList>
 						<AudioFileSource Name="Fire_Burning_Burning_Wood_Bonfire_Soft_Intensity_Loop_SND122310" ID="{B0B45DB9-CFF6-4F2E-B29E-9550B556749D}">
 							<PropertyList>
-								<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND122310"/>
 								<Property Name="TrimEnd" Type="Real64" Value="28.3966041666667"/>
 							</PropertyList>
 							<Language>SFX</Language>

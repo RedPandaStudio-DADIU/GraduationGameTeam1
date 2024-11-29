@@ -39,11 +39,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	2222339482	Play_Brute_Damage			\NPC\Brute\Play_Brute_Damage	
 	2283401379	Play_BruteBarks			\NPC\Brute\Play_BruteBarks	
 	2373651556	Play_Elevator_Buttonpress			\GameWorld\Lvl_1\Elevator\Play_Elevator_Buttonpress	
+	2430196030	Play_Sc0_Tr1			\Dialogue\lvl1_Hangar\Sc0\Play_Sc0_Tr1	
 	2435533942	Play_Reload_Rifle			\Weapons\Rifle\Play_Reload_Rifle	
 	2478119858	Play_Solider_Damage			\NPC\Soldier\Play_Solider_Damage	
 	2557748953	Play_Elevator_BP_OutofOrder			\GameWorld\Lvl_1\Elevator\Play_Elevator_BP_OutofOrder	
 	2572917948	Play_Rifle_NoAmmo			\Weapons\Rifle\Play_Rifle_NoAmmo	
 	2628165376	Play_Headshot			\NPC\Damage\Play_Headshot	
+	2748713136	Stop_Sc0_Tr1			\Dialogue\lvl1_Hangar\Sc0\Stop_Sc0_Tr1	
 	2752533807	Play_TestSound			\TestEvents\Play_TestSound	
 	2842468683	Play_Xaga_Dia_lvl2			\Dialogue\lvl2_Conference\Play_Xaga_Dia_lvl2	
 	3005152765	Play_JD_Kick			\Player\Play_JD_Kick	
@@ -135,7 +137,9 @@ Switch	ID	Name	Switch Group			Notes
 	3789021730	Nightfall	AmbTimeOfDay			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	1972315911	Lv2_ending			\Music_States\Lv2_ending	
 	2064552269	AreaState			\Sound_States\AreaState	
+	2718506204	Combat_Lv2			\Music_States\Combat_Lv2	
 	3285234865	PlayerState			\Sound_States\PlayerState	
 	3305603258	GuitarSpeaker			\Sound_States\Speakers\GuitarSpeaker	
 	3568468165	XagaBossfightStates			\Sound_States\Dialogue\XagaBossfightStates	
@@ -143,6 +147,9 @@ State Group	ID	Name			Wwise Object Path	Notes
 	4121174866	Scenes_lvl1			\Sound_States\Dialogue\Scenes_lvl1	
 
 State	ID	Name	State Group			Notes
+	174960569	Loose	Lv2_ending			
+	748895195	None	Lv2_ending			
+	979765101	Win	Lv2_ending			
 	748895195	None	AreaState			
 	1814387309	Hangar1	AreaState			
 	1814387310	Hangar2	AreaState			
@@ -151,6 +158,9 @@ State	ID	Name	State Group			Notes
 	2782928028	ConferenceRoom2	AreaState			
 	2782928029	ConferenceRoom3	AreaState			
 	2782928031	ConferenceRoom1	AreaState			
+	748895195	None	Combat_Lv2			
+	1778785816	Combat_hall_lv2	Combat_Lv2			
+	2625421100	Combat_Xaga_Lv2	Combat_Lv2			
 	655265632	Alive	PlayerState			
 	748895195	None	PlayerState			
 	2044049779	Dead	PlayerState			
@@ -403,11 +413,14 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	344209961	01_Ai			\Audio Master\Master Bus\Voicelines\DialogueMaster\01_Ai	
 	346451691	ReverbEnvironments			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments	
 	385642153	Xaga_Conference			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar\Xaga_ConferenceRoom\Xaga_Conference	
+	424473641	Xaga_ConferenceRoom_02			\Audio Master\Master Bus\Voicelines\NPCBarks\03_XagaBossFightBarks\Xaga_ConferenceRoom_02	
 	424473642	Xaga_ConferenceRoom_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\Xaga_ConferenceRoom_01	
+	692393568	03_XagaBossFightBarks			\Audio Master\Master Bus\Voicelines\NPCBarks\03_XagaBossFightBarks	
 	696369880	LFE			\Audio Master\Master Bus\LFE	
 	765206498	PlayerCloth			\Audio Master\Master Bus\SFX\SFXMaster\PlayerLocomotion\PlayerCloth	
 	840484792	NPC Humans			\Audio Master\Master Bus\Voicelines\NPCBarks\NPC Humans	
 	1038037717	Xaga_Conference_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\Xaga_ConferenceRoom_01\Xaga_Conference_01	
+	1038037718	Xaga_Conference_02			\Audio Master\Master Bus\Voicelines\NPCBarks\03_XagaBossFightBarks\Xaga_ConferenceRoom_02\Xaga_Conference_02	
 	1118754633	03_XagaHangar			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar	
 	1182634443	AmbientBeds			\Audio Master\Master Bus\Ambience\AmbientMaster\AmbientBeds	
 	1243625655	03_XagaConferenceRoom			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom	
@@ -416,12 +429,15 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1459460693	AmbientMaster			\Audio Master\Master Bus\Ambience\AmbientMaster	
 	1467963052	Weapons			\Audio Master\Master Bus\SFX\SFXMaster\Weapons	
 	1591600229	XagaHangar_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\XagaHangar_01	
+	1591600230	XagaHangar_02			\Audio Master\Master Bus\Voicelines\NPCBarks\03_XagaBossFightBarks\XagaHangar_02	
 	1681012287	PlayerFootsteps			\Audio Master\Master Bus\SFX\SFXMaster\PlayerLocomotion\PlayerFootsteps	
 	1681633080	SFXMaster			\Audio Master\Master Bus\SFX\SFXMaster	
 	2343802269	PlayerLocomotion			\Audio Master\Master Bus\SFX\SFXMaster\PlayerLocomotion	
 	2645497833	DialogueMaster			\Audio Master\Master Bus\Voicelines\DialogueMaster	
 	2678230381	Level2			\Audio Master\Master Bus\SharedEffects\ReverbEnvironments\Level2	
+	2768314817	Xaga_FarAway_02			\Audio Master\Master Bus\Voicelines\NPCBarks\03_XagaBossFightBarks\Xaga_ConferenceRoom_02\Xaga_FarAway_02	
 	2768314818	Xaga_FarAway_01			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaConferenceRoom\Xaga_ConferenceRoom_01\Xaga_FarAway_01	
+	2808420495	JohnDoeBarks			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe\PlayerVoice\JohnDoeBarks	
 	2997659434	NPC_SFX			\Audio Master\Master Bus\SFX\SFXMaster\NPC_SFX	
 	3458995332	Xaga_ConferenceRoom			\Audio Master\Master Bus\Voicelines\DialogueMaster\03_XagaHangar\Xaga_ConferenceRoom	
 	3570874681	02_John Doe			\Audio Master\Master Bus\Voicelines\DialogueMaster\02_John Doe	
@@ -471,6 +487,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	205245498	Wwise Stereo Delay (Custom)	Wwise Stereo Delay			
 	206109583	BootRunCompressor (Custom)	Wwise Compressor			
 	232030741	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
+	233878680	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
 	260922761	Echoes_Linear (Custom)	Wwise Delay			
 	280114799	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	292207345	BootRunCompressor (Custom)	Wwise Compressor			
@@ -499,7 +516,9 @@ Effect plug-ins	ID	Name	Type				Notes
 	556812336	BootRunCompressor (Custom)	Wwise Compressor			
 	567187658	Blue_Distant_Echoes (Custom)	Wwise Stereo Delay			
 	608453626	Tunnel1 (Custom)	Wwise Matrix Reverb			
+	610638398	Medium_Room1 (Custom)	Wwise Matrix Reverb			
 	611651787	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	620025229	Dual_Filters_Radio_Comm (Custom)	Wwise Parametric EQ			
 	620125035	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	638945112	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	642953192	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
@@ -525,6 +544,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	796249169	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	819943492	Fear_no_Evil	Wwise Harmonizer			
 	826000393	Hall_Large_Dark (Custom)	Wwise RoomVerb			
+	826998781	Room_Small (Custom)	Wwise RoomVerb			
 	830079984	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	863753366	BootRunCompressor (Custom)	Wwise Compressor			
 	882945345	Hall_Large_Dark (Custom)	Wwise RoomVerb			
@@ -541,6 +561,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	972709751	Wwise Pitch Shifter (Custom)	Wwise Pitch Shifter			
 	976512786	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	999756589	New_Parametric_EQ (Custom)	Wwise Parametric EQ			
+	1000076214	Hall_Large_Dark (Custom)	Wwise RoomVerb			
 	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
 	1011994727	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 	1012283269	BootRunCompressor (Custom)	Wwise Compressor			
@@ -569,6 +590,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	26154250	PAD 02	Wwise Synth One		\Actor-Mixer Hierarchy\03_Non-Game\Factory Synth One\Instruments\PAD 02\PAD 02	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 	28380969	FLUTISH	Wwise Synth One		\Actor-Mixer Hierarchy\03_Non-Game\Factory Synth One\Instruments\FLUTISH\FLUTISH	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 	28381762	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\TestDiplomatAttackBarks\Silence_2sec_02\Silence	
+	47855474	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\Silence_04\Silence	
 	53513454	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_2sec_03\Silence	
 	55681271	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\Solider_Damage\Silence_2sec\Silence	
 	57713389	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_2sec_04\Silence	
@@ -643,7 +665,9 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	388686749	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\DiplomatIdle\Silence_2sec_07\Silence	
 	398018437	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\TestDiplomatAttackBarks\Silence_1sec_06\Silence	
 	399588100	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteAttackBarks\Silence_2sec_07\Silence	
+	400122884	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\Silence\Silence	
 	400285706	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\SoldierIdle\Silence_2sec_09\Silence	
+	401351751	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\Silence_03\Silence	
 	401397510	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\TestDiplomatAttackBarks\Silence_1sec_09\Silence	
 	412198041	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_2sec_08\Silence	
 	412472127	MAGIC 03	Wwise Synth One		\Actor-Mixer Hierarchy\03_Non-Game\Factory Synth One\SFX\MAGIC 03\MAGIC 03	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
@@ -670,6 +694,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	509939808	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\SoldierAttackBarks\Silence_2sec_06\Silence	
 	510824629	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\DiplomatIdle\Silence_1sec\Silence	
 	511021499	ALARM 01	Wwise Synth One		\Actor-Mixer Hierarchy\03_Non-Game\Factory Synth One\SFX\ALARM 01\ALARM 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
+	511345386	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\Silence_02\Silence	
 	513100109	DRONE 01	Wwise Synth One		\Actor-Mixer Hierarchy\03_Non-Game\Factory Synth One\SFX\DRONE 01\DRONE 01	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 	514597024	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_2sec_05\Silence	
 	524167236	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_1sec_04\Silence	
@@ -740,6 +765,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	923155237	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_2sec_07\Silence	
 	927902857	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\SoldierIdle\Silence_1sec_01\Silence	
 	928768213	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_1sec\Silence	
+	929255065	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\Silence_01\Silence	
 	931078222	OPENING	Wwise Synth One		\Actor-Mixer Hierarchy\03_Non-Game\Factory Synth One\Instruments\OPENING\OPENING	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
 	931246966	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteIdle\Silence_1sec_05\Silence	
 	932439781	Silence	Wwise Silence		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\SoldierAttackBarks\Silence_1sec\Silence	
@@ -846,9 +872,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	141207199	Tile_Fs_07	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps_Human_Linoleum_Bare_Foot_Medium_Heavy_SND1072 6_C229BB60.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Footsteps_MaterialLayer\Tile_Fs_Layer\Tile_Fs_07		4794
 	141936447	Xaga Barks - damage scream_01-12	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga Barks - damage scream_01-12_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Xaga_HurtSounds_DamageTaken\FullHealth\Xaga Barks - damage scream_01-12		7034
 	143878709	Soldier_Damage_7	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Damage_7_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\Solider_Damage\Soldier_Damage_7		10002
-	148178849	AI_TryKickingTheDoor	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\AI_TryKickingTheDoor_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc0_Tr1\AI_TryKickingTheDoor		58524
+	148178849	AI_TryKickingTheDoor	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\AI_TryKickingTheDoor_E967ED94.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc0_Tr1\AI_TryKickingTheDoor		31156
 	149099509	Soldier_Death_3	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Death_3_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\Solider_DeathSounds\Soldier_Death_3		14773
 	150870703	Soldier_Damage_11	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Damage_11_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\Solider_Damage\Soldier_Damage_11		8257
+	154781338	AI_AmmoAndHealthpacks	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\AI_AmmoAndHealthpacks_BFE8D193.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc0_Tr2\AI_AmmoAndHealthpacks		67117
 	155894028	JD_Death6	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Death\JD_Death6_6C644063.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Death\JD_Death6		23242
 	157072511	Boots_Walk_Toe_04	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Walk\Boots_Walk_Toe_04_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Walk\Toe\Boots_Walk_Toe_04		9234
 	159884158	Xaga Barks - damage scream_01-33	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga Barks - damage scream_01-33_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Xaga_HurtSounds_DamageTaken\FullHealth\Xaga Barks - damage scream_01-33		576
@@ -872,6 +899,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	195405486	JD_UF3	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Damage\JD_UF3_025CF6E7.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\JD_Barks\Damage\JD_UF3		8316
 	198542798	Brute_Damage 4-cm	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Brute_Damage 4-cm_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\Brute_Damage\Brute_Damage 4-cm		16448
 	199293111	Boots_Walk_Heel_02	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Walk\Boots_Walk_Heel_02_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Sprint\Heel_01\Boots_Walk_Heel_02		2686
+	199591454	AI_YouveMadeXagaVulnerable	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\AI_YouveMadeXagaVulnerable_007119AC.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Ai+JD_StateDialogue\AI_YouveMadeXagaVulnerable		39747
 	200692930	Xaga_LetsDoThis	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga_LetsDoThis_F5D973DC.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl2_Dialogue\lvl2_Dialogue\Xaga_Dia_lvl2\Xaga_LetsDoThis		34732
 	201956695	Metal2_Fs_03	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps, Human, Metal Ladder, Sneakers SND4062 3_9D214993.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Play_Land_MaterialLayer\Metal2_Land_Layer\Metal2_Land2\Metal2_Fs_03		5592
 	203606127	Soldier_Death_7	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Death_7_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\Solider_DeathSounds\Soldier_Death_7		11285
@@ -1064,6 +1092,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	536626738	Soldier_Attack_7	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Attack_7_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\SoldierAttackBarks\Soldier_Attack_7		1228
 	544217206	Brute_Attack-cm_010	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Brute_Attack-cm_010_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\BruteBarks\BruteAttackBarks\Brute_Attack-cm_010		16195
 	544283314	TheCaelariHaveBetrayedUs	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\TheCaelariHaveBetrayedUs_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\lvl1_Soldiers\Sc1_Tr1\Trigger1Switch\Sc1\TheCaelariHaveBetrayedUs		33693
+	545399152	AI_RememberHeadshot	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\AI_RememberHeadshot_FFCB1E94.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc1_Tr3\AI_RememberHeadshot		81343
 	549081892	JD_FuckYouXaga	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_FuckYouXaga_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Ai+JD_StateDialogue\Sc8_Tr1\JD_FuckYouXaga		28993
 	555520633	Diplomat_Idle_8	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Diplomat_Idle_8_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\DiplomatIdle\Diplomat_Idle_8		27769
 	556416454	Brute_Damage 11-cm	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Brute_Damage 11-cm_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteBarksMixer\Brute_Damage\Brute_Damage 11-cm		12615
@@ -1104,7 +1133,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	649692269	Doors_Metal_Impact_Old_Metal_Locker_Door_Close_02_SND55054	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Doors_Metal_Impact_Old_Metal_Locker_Door_Close_02_SND55054_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Brute\BruteAttack\BruteAttack_ShieldSound\Doors_Metal_Impact_Old_Metal_Locker_Door_Close_02_SND55054		26429
 	650359451	Test_DeadDiplomat1	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Deaths_testsounds_14AFBDEC.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Test_DeadDiplomat\Test_DeadDiplomat1		55258
 	651678197	Elevator_PowerON_lp	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Elevator\Elevator\Elevator_PowerON_lp_3D796F78.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Environment\Elevator\Elevator_PowerState\Elevator_PowerON\Elevator_PowerON_lp		238195
-	655758477	Rifle_FireMainv2	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_FireMainv2_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_FireMainv2		13144
+	655758477	Rifle_FireMainv2	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Rifle_FireMainv2_F8DED13B.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\Weapons\Weapons\Rifle\Rifle_Fire\Rifle_FireMainv2		12417
 	658072977	Diplomat_Attack_7	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Diplomat_Attack_7_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\TestDiplomatAttackBarks\Diplomat_Attack_7		25055
 	662185199	Boots_Run_Toe_02	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Run\Boots_Run_Toe_02_CAD2FDA1.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_Base\Sprint\Toe\Boots_Run_Toe_02		8000
 	663684163	Diplomat_Attack_9	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Diplomat_Attack_9_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\TestDiplomatAttackBarks\Diplomat_Attack_9		36965
@@ -1113,6 +1142,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	667974143	Xaga Barks - damage scream_01-18	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga Barks - damage scream_01-18_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Xaga_HurtSounds_DamageTaken\FullHealth\Xaga Barks - damage scream_01-18		10544
 	668778325	Diplomat_Death_8	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Diplomat_Death_8_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\Diplomat_DeathSounds\Diplomat_Death_8		6211
 	669493922	Soldier_Death_1	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Death_1_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\Solider_DeathSounds\Soldier_Death_1		12135
+	670676809	JD_isntMyFirstRodeo	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_isntMyFirstRodeo_5226C822.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc1_Tr3\JD_isntMyFirstRodeo		103452
 	670922056	Ai_iNormallyControlTheMainframe	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Ai_iNormallyControlTheMainframe_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc1_Tr0\Ai_iNormallyControlTheMainframe		91615
 	679071479	Soldier_Idle_11	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soldier_Idle_11_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Soldier\SoldierBarksMixer\SoldierBarks\SoldierIdle\Soldier_Idle_11		39277
 	685074737	Leatherboots_07	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Soundly Audio\Footsteps_Boots_Tile_Mono_by_Nox_Sound_Id_530588 9_DB426581.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\PlayerSounds\PlayerLocomotion\Player_Locomotion\PlayerFootsteps\Player_fs_LeatherBoots\Walk\Leatherboots_07		8570
@@ -1195,6 +1225,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	831728715	AI_OhRight	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\AI_OhRight_3560C373.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc5_Tr1\AI_OhRight		12022
 	835681084	Diplomat_Attack_3	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\SFX\Diplomat_Attack_3_BD035DAE.wem		\Actor-Mixer Hierarchy\01_Sound FX\Sounds\NPC_Sounds\NPC_SFX\Diplomat\DiplomatBarksMixer\DiplomatBarks\TestDiplomatAttackBarks\Diplomat_Attack_3		45375
 	838699214	JD_iNeedTheRadio	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_iNeedTheRadio_BD035DAE.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\JD_Dialogue\lvl1_JohnDoe\JD_iNeedTheRadio		32918
+	841320162	Xaga_LaughLong2	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\Xaga_LaughLong_ED76CD69.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Xaga_StateDialogue\Xaga_LaughLong2		53673
 	844964757	JD_GetToThePointPlease1	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_GetToThePointPlease1_F045F667.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc1_Tr0\JD_GetToThePointPlease1		29339
 	852148347	AI_OhRight_Serious	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\AI_OhRight_Serious_C838A14B.wem		\Actor-Mixer Hierarchy\02_Dialogue\lvl1_Dialogue\Humans\AiConversation_lvl1\Dialogue_JD+Ai\Sc5_Tr1\AI_OhRight_Serious		16064
 	854674266	JD_ThisIsForYouJane	C:\Users\lp_ko\Documents\GitHub\GraduationGameTeam1\WwiseProject_GraduationGame\.cache\Mac\Voices\English(US)\JD_ThisIsForYouJane_DF39AF16.wem		\Actor-Mixer Hierarchy\02_Dialogue\XagaBossfightLines\XagaBossFight\Ai+JD_StateDialogue\Sc8_Tr1\JD_ThisIsForYouJane		28851
