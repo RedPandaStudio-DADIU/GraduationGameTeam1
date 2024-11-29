@@ -644,17 +644,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""dad47727-7f76-42d3-bf81-05b2b4515de4"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad;Keyboard"",
-                    ""action"": ""Quit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""6f99845e-3979-4cfd-abdb-5437e8fb43f6"",
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
