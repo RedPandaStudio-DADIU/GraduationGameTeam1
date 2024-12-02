@@ -1401,6 +1401,11 @@
 									</ValueList>
 								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3526,38 +3531,6 @@
 														<ObjectRef Name="HelmetEQ" ID="{CD354935-84E0-46B4-B687-2395F28D157F}" WorkUnitID="{1381E90E-CEBA-4A13-AD41-8ECCD1E9FEFD}"/>
 													</Reference>
 												</ReferenceList>
-												<StateInfo>
-													<CustomStateList>
-														<CustomState>
-															<StateRef Name="ConferenceRoom1" ID="{5DD48288-6DBE-408F-B285-2AA35BD9E4BD}"/>
-															<CustomState Name="" ID="{CF3B9552-1046-4511-A446-1B0311DE4322}" ShortID="747606728"/>
-														</CustomState>
-														<CustomState>
-															<StateRef Name="ConferenceRoom3" ID="{4DAB72A0-B5FC-42ED-858D-40EEDFA26294}"/>
-															<CustomState Name="" ID="{13142860-E90F-41E8-BEDB-84D2F706D2A5}" ShortID="957382933"/>
-														</CustomState>
-														<CustomState>
-															<StateRef Name="Hangar3" ID="{754F7001-FFBE-4350-AF17-7DFE9FC09B6B}"/>
-															<CustomState Name="" ID="{1162CAC6-028E-4021-B622-62C015909E1B}" ShortID="865062236"/>
-														</CustomState>
-														<CustomState>
-															<StateRef Name="ConferenceRoom2" ID="{9E37382B-A51B-4650-9E61-15D5AA8692FC}"/>
-															<CustomState Name="" ID="{1D6850C8-CE91-4672-BC0F-E24BF76687F0}" ShortID="799756997"/>
-														</CustomState>
-														<CustomState>
-															<StateRef Name="InsideElevator" ID="{BF48CD71-9D34-4687-98C4-8856085FBD07}"/>
-															<CustomState Name="" ID="{6ACCF212-7E7E-49E6-A789-B1BD8A18B4F4}" ShortID="511046403"/>
-														</CustomState>
-														<CustomState>
-															<StateRef Name="Hangar2" ID="{753C1D45-A477-482A-8558-D42CE93E72A1}"/>
-															<CustomState Name="" ID="{53D1DD4D-9E5E-451C-96E8-766160F95111}" ShortID="92438780"/>
-														</CustomState>
-														<CustomState>
-															<StateRef Name="Hangar1" ID="{4468B167-364C-4B75-8E87-1E126A38887B}"/>
-															<CustomState Name="" ID="{F7292DA1-B7CE-4612-B926-78845FD43E27}" ShortID="497369047"/>
-														</CustomState>
-													</CustomStateList>
-												</StateInfo>
 											</EffectSlot>
 										</Local>
 									</Reference>
