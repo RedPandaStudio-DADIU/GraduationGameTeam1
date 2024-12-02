@@ -84,6 +84,7 @@ namespace AK
         static const AkUniqueID STOP_SC0_TR1 = 2748713136U;
         static const AkUniqueID STOP_TESTBEEP_LP = 3106700779U;
         static const AkUniqueID STOP_TESTBEEP_LP_3D = 1670385919U;
+        static const AkUniqueID STOPALL = 3086540886U;
     } // namespace EVENTS
 
     namespace DIALOGUE_EVENTS
@@ -499,6 +500,7 @@ namespace AK
         static const AkUniqueID _3DAMBIENCE = 1301074112U;
         static const AkUniqueID AMBIENTBEDS = 1182634443U;
         static const AkUniqueID AMBIENTMASTER = 1459460693U;
+        static const AkUniqueID BARKS = 2769710370U;
         static const AkUniqueID DIALOGUEMASTER = 2645497833U;
         static const AkUniqueID JOHNDOEBARKS = 2808420495U;
         static const AkUniqueID LEVEL2 = 2678230381U;
@@ -508,7 +510,6 @@ namespace AK
         static const AkUniqueID NPC_ALIENS = 223128778U;
         static const AkUniqueID NPC_HUMANS = 840484792U;
         static const AkUniqueID NPC_SFX = 2997659434U;
-        static const AkUniqueID NPCBARKS = 196922711U;
         static const AkUniqueID PLAYERCLOTH = 765206498U;
         static const AkUniqueID PLAYERFOOTSTEPS = 1681012287U;
         static const AkUniqueID PLAYERLOCOMOTION = 2343802269U;
