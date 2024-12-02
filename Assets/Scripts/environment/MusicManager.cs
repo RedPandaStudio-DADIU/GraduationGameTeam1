@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Event musicEvent;
+    [SerializeField] private AK.Wwise.Event StopAllEvent;
 
     private string playerStateStateGroup = "Player_state";
     private string playerLevelStateGroup = "Player_Level";
@@ -17,9 +18,32 @@ public class MusicManager : MonoBehaviour
 
     private string currentState = "No combat";
 
+    private static MusicManager instance;
+
+    public static MusicManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                GameObject obj = new GameObject("MusicManager");
+                instance = obj.AddComponent<MusicManager>();
+                DontDestroyOnLoad(obj);
+            }
+            return instance;
+        }
+    }
+
+    public void PostStopAllEvent()
+    {
+        AkSoundEngine.PostEvent("Stop_All", gameObject);
+    }
+
     void Start()
     {
-
+         //AkSoundEngine.PostEvent("StopAll", gameObject);
+         StopAllEvent.Post(gameObject);
+         //SoundManager.Instance.PostStopAllEvent();
 
         if(SceneManager.GetActiveScene().buildIndex == 1){
             AkSoundEngine.SetState(playerLevelStateGroup, "Lv1");
@@ -33,6 +57,13 @@ public class MusicManager : MonoBehaviour
         musicEvent.Post(gameObject);
 
     }
+
+     private void OnDestroy()
+    {
+        // Ensure music stops when the manager is destroyed
+        AkSoundEngine.PostEvent("StopAll", gameObject);
+    }
+
 
     void Update()
     {
