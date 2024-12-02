@@ -68,7 +68,9 @@ namespace cowsins
         {
             GetAllReferences();
             // Apply basic settings 
-            health = maxHealth;
+            // health = maxHealth;
+            health = 125f;
+
             // shield = maxShield;
             shield = 0;
 

@@ -63,6 +63,13 @@ namespace cowsins
                 isShowing = false;
                 controlImageUI.SetActive(false); // Hide the info image
                 pauseMenuUI.SetActive(true); // Show the pause menu
+
+                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0f; 
+                playerUI.SetActive(false);
+                
+               
             }
         }
 

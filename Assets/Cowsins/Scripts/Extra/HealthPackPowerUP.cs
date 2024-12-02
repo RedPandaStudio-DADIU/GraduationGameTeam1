@@ -49,10 +49,7 @@ namespace cowsins
         private void Update()
         {
  
-            if (popupManager != null && popupManager.GetCurrentpopUpID() != popID)
-        {
-            return; // This popup is not the current task
-        }
+        
         
             if ( InputManager.heal && able)
             {
@@ -71,6 +68,13 @@ namespace cowsins
                 Destroy(gameObject); 
  
             }
+
+                if (popupManager != null && popupManager.GetCurrentpopUpID() != popID)
+                {
+                    return; // This popup is not the current task
+                }
+
+
         }
  
  
