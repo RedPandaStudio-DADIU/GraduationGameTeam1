@@ -184,11 +184,13 @@ namespace cowsins
         {
             isDead = true;
             playerDeath.Post(this.gameObject);
-            if(SceneManager.GetActiveScene().buildIndex == 2){
-                musicManager.CheckIfSameState("Loose");
-            }
+           
 
             events.OnDeath.Invoke(); // Invoke a custom event
+
+             if(SceneManager.GetActiveScene().buildIndex == 2){
+                musicManager.CheckIfSameState("Loose");
+            }
         }
         /// <summary>
         /// Basically find everything the script needs to work

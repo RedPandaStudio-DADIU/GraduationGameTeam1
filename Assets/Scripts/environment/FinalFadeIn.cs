@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using cowsins;
 
 public class FinalFadeIn : MonoBehaviour
 {
@@ -56,6 +57,13 @@ public class FinalFadeIn : MonoBehaviour
             StartCoroutine(FadeInAndEnd());
 
         }
+        if ( InputManager.pausing)
+        {
+        
+
+            Application.Quit();
+        }
+
     }
 
     public void StartFading(){
@@ -66,3 +74,4 @@ public class FinalFadeIn : MonoBehaviour
         return this.finished;
     }
 }
+
