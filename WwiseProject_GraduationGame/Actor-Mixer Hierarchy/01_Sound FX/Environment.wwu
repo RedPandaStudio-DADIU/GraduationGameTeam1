@@ -736,10 +736,15 @@
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.01"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-7</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -770,6 +775,9 @@
 									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{68F53C37-475E-4791-8A32-8795D66A149C}">
@@ -809,7 +817,189 @@
 								<ActiveSource Name="Explosions_Designed_Explosion_No_Fragments_SND81684" ID="{6EAF3F42-2DA4-4ED9-A616-1BF0F8CA6A2D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="explo" ID="{53F2FE40-8B59-46EA-89D8-7E87E8AAB22E}" ShortID="485153442">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{435DA78D-017D-49A3-99D1-D2C859B7A4A0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="51"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486" ID="{3D1DDE2B-F16B-468F-AA56-E0000D85386D}" ShortID="799115252">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486" ID="{6125FB86-4C20-44DC-83FD-465D343C2192}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="4.77237030579399"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="413768627"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486" ID="{6125FB86-4C20-44DC-83FD-465D343C2192}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 2" ID="{BAB10F6B-5D4A-474D-9585-87ED4F7D9540}" ShortID="516367662">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 2" ID="{165E04BC-28F0-4CAF-A9CA-0A64758B7354}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.64964887339056"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="823905191"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 2" ID="{165E04BC-28F0-4CAF-A9CA-0A64758B7354}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5" ID="{60DA56B5-6682-4D2A-B094-F920458D2FAB}" ShortID="289370223">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5" ID="{02532547-52B4-4E8E-95D1-686459ABDD21}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.81586313036481"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="150068337"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5" ID="{02532547-52B4-4E8E-95D1-686459ABDD21}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3" ID="{F433B13A-E5C6-4E96-AC40-04B926B04B20}" ShortID="95217522">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="att_Generic_50m" ID="{9E3DDE40-C98E-469E-877C-F0C2029D73EF}" WorkUnitID="{7B971A67-E13F-45A5-926D-374841AD5C50}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFXMaster" ID="{564ACAB8-531F-4248-BC65-CAA9D504D775}" WorkUnitID="{2C1E20D2-A439-4B0C-940F-B6D4F3340678}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3" ID="{C93951DB-0002-43D0-8792-29D538E78C88}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.57449991058655"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="331432523"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3" ID="{C93951DB-0002-43D0-8792-29D538E78C88}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Playlist">
+							<Reference>
+								<ObjectRef Name="Explosions_Designed_Explosion_No_Fragments_SND81684" ID="{5E99E5CD-CD0B-4227-A391-2E8E1BD47C97}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="explo" ID="{53F2FE40-8B59-46EA-89D8-7E87E8AAB22E}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</RandomSequenceContainer>
 				<Sound Name="FireAlarm" ID="{44789C63-876A-466E-BA44-0F8BB5C6B6A0}" ShortID="149990796">
 					<PropertyList>
@@ -917,6 +1107,18 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{B6A7F2A7-DA86-40EA-B5CC-2B9E5EE482CA}" ShortID="296985517">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.05</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -938,11 +1140,117 @@
 								<ActiveSource Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{05D02043-BC81-4461-8361-2BF1CC3618DD}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411" ID="{A3E2837A-18DF-42D4-AB13-8A9C1FCAA0CD}" ShortID="70082369">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411" ID="{F3D4968D-B6FE-4D87-B529-0F473E8D3513}">
+									<Language>SFX</Language>
+									<AudioFile>Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="2720347"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411" ID="{F3D4968D-B6FE-4D87-B529-0F473E8D3513}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113" ID="{F786D934-8B29-4F67-905A-D2A59CD5FE66}" ShortID="268235983">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.15</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113" ID="{ECDE4315-8DA3-4844-870D-BCBB684DF0D6}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.138543328900709"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="149707960"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113" ID="{ECDE4315-8DA3-4844-870D-BCBB684DF0D6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015" ID="{C6852E5B-AFAC-49D0-9E9C-6AE16C5BE824}" ShortID="710036222">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015" ID="{1263C544-E2FF-4879-8C2A-255EE269D61D}">
+									<Language>SFX</Language>
+									<AudioFile>Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="437871513"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015" ID="{1263C544-E2FF-4879-8C2A-255EE269D61D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="Playlist">
 							<Reference>
 								<ObjectRef Name="Doors_Wood_70_s_Aggressive_Kick_Out_01_SND46059" ID="{B6A7F2A7-DA86-40EA-B5CC-2B9E5EE482CA}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411" ID="{A3E2837A-18DF-42D4-AB13-8A9C1FCAA0CD}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113" ID="{F786D934-8B29-4F67-905A-D2A59CD5FE66}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
+							</Reference>
+							<Reference>
+								<ObjectRef Name="Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015" ID="{C6852E5B-AFAC-49D0-9E9C-6AE16C5BE824}" WorkUnitID="{20B4A93F-25CD-41F4-AE13-D31254C3B704}"/>
 							</Reference>
 						</ObjectList>
 					</ObjectLists>
