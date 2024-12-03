@@ -33,6 +33,8 @@ public class PlayerDataManager : MonoBehaviour
     public void ResetData(int length)
     {
         playerHealth = maxPlayerHealth;
+        // playerHealth=125;
+
         bulletsLeftInMagazine = new int[length];  
         currentWeaponIndex = 0;
     }

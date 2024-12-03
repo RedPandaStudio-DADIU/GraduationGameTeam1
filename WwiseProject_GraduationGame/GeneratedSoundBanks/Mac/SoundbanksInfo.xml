@@ -501,7 +501,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6F739EA0-1C1D-8126-F528-59159615D3B9}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3EEEA30B-4EA9-BF56-A147-003760E5F1FC}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -560,7 +560,6 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="196922711" Name="NPCBarks"/>
 				<Bus Id="223128778" Name="NPC Aliens"/>
 				<Bus Id="274948124" Name="Xaga_FarAway" MaxAttenuation="100">
 					<PluginRefs>
@@ -681,7 +680,14 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="2808420495" Name="JohnDoeBarks"/>
+				<Bus Id="2769710370" Name="Barks"/>
+				<Bus Id="2808420495" Name="JohnDoeBarks">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4119703916"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
 				<Bus Id="3458995332" Name="Xaga_ConferenceRoom" MaxAttenuation="100"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
@@ -1182,13 +1188,17 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{40AFDFE4-B9EB-7DD5-F2E5-36D0D6C65DC7}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{F0E9707C-864A-7909-9884-85F8E9F7947E}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
 				<File Id="1760059" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Cloth_Movement_Jacket_Thick_Fast_Slow_SND50986 3_EE118FF4.wem</CachePath>
+				</File>
+				<File Id="2720347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411.wav</ShortName>
+					<CachePath>SFX/Rocks_Crash_Debris_Heavy_Big_Hit_Stone_Debris_01_SND45411_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="3534778" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Idle_14.wav</ShortName>
@@ -1497,6 +1507,14 @@
 				<File Id="149099509" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Death_3.wav</ShortName>
 					<CachePath>SFX/Soldier_Death_3_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="149707960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113.wav</ShortName>
+					<CachePath>SFX/Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113_71593F1E.wem</CachePath>
+				</File>
+				<File Id="150068337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5.wav</ShortName>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5_63B2B4E8.wem</CachePath>
 				</File>
 				<File Id="150870703" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Damage_11.wav</ShortName>
@@ -1938,6 +1956,10 @@
 					<ShortName>Xaga Barks - Charging Scream_01-06.wav</ShortName>
 					<CachePath>Voices/English(US)/Xaga Barks - Charging Scream_01-06_BD035DAE.wem</CachePath>
 				</File>
+				<File Id="331432523" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3.wav</ShortName>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3_74BA894E.wem</CachePath>
+				</File>
 				<File Id="331611502" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Attack_1.wav</ShortName>
 					<CachePath>SFX/Soldier_Attack_1_BD035DAE.wem</CachePath>
@@ -2126,6 +2148,10 @@
 					<ShortName>Fight_Impact_Punch_Body_SND14128 1.wav</ShortName>
 					<CachePath>SFX/Fight_Impact_Punch_Body_SND14128 1_BD035DAE.wem</CachePath>
 				</File>
+				<File Id="413768627" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486.wav</ShortName>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486_1CC42DE3.wem</CachePath>
+				</File>
 				<File Id="414982698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Attack_11.wav</ShortName>
 					<CachePath>SFX/Soldier_Attack_11_BD035DAE.wem</CachePath>
@@ -2197,6 +2223,10 @@
 				<File Id="437020248" Language="English(US)" Streaming="false" Location="Memory">
 					<ShortName>AI_ShesGotAWeakspotOnHerArm.wav</ShortName>
 					<CachePath>Voices/English(US)/AI_ShesGotAWeakspotOnHerArm_BD035DAE.wem</CachePath>
+				</File>
+				<File Id="437871513" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015.wav</ShortName>
+					<CachePath>SFX/Metal_Impact_Heavy_Metal_Object_Drop_On_Trailer_Floor_Repeatedly_Wooden_Surface_Deep_Thud_Schoeps_MS_02_SND102015_BD035DAE.wem</CachePath>
 				</File>
 				<File Id="438291055" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Diplomat_Attack_1.wav</ShortName>
@@ -2877,6 +2907,10 @@
 				<File Id="823800221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soundly Audio\Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 13.wav</ShortName>
 					<CachePath>SFX/Soundly Audio/Footsteps, Human, Boots, Walking, Metal, Resonance, Hard, Irregular Rhythm SND85371 13_2CD577F4.wem</CachePath>
+				</File>
+				<File Id="823905191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 2.wav</ShortName>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 2_99FAA06C.wem</CachePath>
 				</File>
 				<File Id="825794070" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Run\Boots_Run_Heel_01.wav</ShortName>
@@ -5106,9 +5140,12 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="1268293438" Name="Play_DoorBeingKicked" DurationType="OneShot" DurationMin="1.9778125" DurationMax="1.9778125">
+				<Event Id="1268293438" Name="Play_DoorBeingKicked" DurationType="OneShot" DurationMin="2.7546146" DurationMax="2.7546146">
 					<MediaRefs>
+						<MediaRef Id="2720347"/>
+						<MediaRef Id="149707960"/>
 						<MediaRef Id="270623365"/>
+						<MediaRef Id="437871513"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2557748953" Name="Play_Elevator_BP_OutofOrder" MaxAttenuation="10" DurationType="OneShot" DurationMin="1.6336875" DurationMax="1.6336875">
@@ -5181,9 +5218,13 @@
 						<MediaRef Id="493325606"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="757694329" Name="Play_ExplodeBarrel" MaxAttenuation="50" DurationType="OneShot" DurationMin="2.4526527" DurationMax="3.0021782">
+				<Event Id="757694329" Name="Play_ExplodeBarrel" MaxAttenuation="50" DurationType="OneShot" DurationMin="3.807745" DurationMax="7.598872">
 					<MediaRefs>
+						<MediaRef Id="150068337"/>
+						<MediaRef Id="331432523"/>
+						<MediaRef Id="413768627"/>
 						<MediaRef Id="718891495"/>
+						<MediaRef Id="823905191"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3888840653" Name="Play_FireAlarm" MaxAttenuation="50" DurationType="OneShot" DurationMin="50.739105" DurationMax="50.739105">
@@ -6740,6 +6781,7 @@
 						<MediaRef Id="911602909"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3086540886" Name="StopAll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<Busses>
 				<Bus Id="47937584" Name="PlayerVoice">
@@ -6749,7 +6791,6 @@
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="196922711" Name="NPCBarks"/>
 				<Bus Id="223128778" Name="NPC Aliens"/>
 				<Bus Id="274948124" Name="Xaga_FarAway" MaxAttenuation="100">
 					<PluginRefs>
@@ -6870,7 +6911,14 @@
 						</Custom>
 					</PluginRefs>
 				</Bus>
-				<Bus Id="2808420495" Name="JohnDoeBarks"/>
+				<Bus Id="2769710370" Name="Barks"/>
+				<Bus Id="2808420495" Name="JohnDoeBarks">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="4119703916"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="2997659434" Name="NPC_SFX"/>
 				<Bus Id="3458995332" Name="Xaga_ConferenceRoom" MaxAttenuation="100"/>
 				<Bus Id="3570874681" Name="02_John Doe"/>
@@ -7176,5 +7224,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A2FBC95F-2D09-EA10-09C6-CFDBAEC56349}</FileHash>
+	<FileHash>{AD212D8E-54A9-5ACC-9861-57067BFD093F}</FileHash>
 </SoundBanksInfo>

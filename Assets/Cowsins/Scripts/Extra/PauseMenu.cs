@@ -26,6 +26,8 @@ namespace cowsins
         public event Action OnPause;
         public event Action OnUnpause;
 
+        
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -63,6 +65,13 @@ namespace cowsins
                 isShowing = false;
                 controlImageUI.SetActive(false); // Hide the info image
                 pauseMenuUI.SetActive(true); // Show the pause menu
+
+                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Time.timeScale = 0f; 
+                playerUI.SetActive(false);
+                
+               
             }
         }
 
@@ -87,69 +96,10 @@ namespace cowsins
             controlImageUI.SetActive(true); // Show the image
             //pauseMenuUI.SetActive(false); // Hide the pause menu
         }
-        // private void HandlePause()
-        // {
-        //     // if (!menu.gameObject.activeSelf)
-        //     // {
-        //     //     menu.gameObject.SetActive(true);
-        //     //     menu.alpha = 0;
-        //     // }
+ 
+    
 
-        //     // menu.alpha = Mathf.Min(menu.alpha + Time.deltaTime * fadeSpeed, 1);
-
-        //     // if (disablePlayerUIWhilePaused && !stats.isDead)
-        //     // {
-        //     //     playerUI.SetActive(false);
-        //     // }
-
-        //    // isPaused = true;
-        //     Time.timeScale = 0f; 
-        //     pauseMenuUI.SetActive(true); 
-        //     Debug.Log("pause ui ");
        
-        //     // Cursor.lockState = CursorLockMode.None;
-        //     // Cursor.visible = true;
-
-        //     // if (disablePlayerUIWhilePaused)
-        //     // {
-        //     //     playerUI.SetActive(false); 
-        //     // }
-        // }
-
-        // private void HandleUnpause()
-        // {
-        //     // menu.alpha = Mathf.Max(menu.alpha - Time.deltaTime * fadeSpeed, 0);
-
-        //     // if (menu.alpha <= 0)
-        //     // {
-        //     //     menu.gameObject.SetActive(false);
-        //     // }
-
-        //     // playerUI.SetActive(true);
-        //    // isPaused = false;
-        //     Time.timeScale = 1f; 
-        //     pauseMenuUI.SetActive(false); 
-        //     Debug.Log("un pause ui ");
-        //     // Cursor.lockState = CursorLockMode.Locked;
-        //     // Cursor.visible = false;
-
-        //     // if (disablePlayerUIWhilePaused)
-        //     // {
-        //     //     playerUI.SetActive(true); // 显示玩家 UI
-        //     // }
-
-        // }
-
-        // public void UnPause()
-        // {
-        //     isPaused = false;
-        //     stats.CheckIfCanGrantControl();
-        //     Cursor.lockState = CursorLockMode.Locked;
-        //     Cursor.visible = false;
-        //     playerUI.SetActive(true);
-
-        //     OnUnpause?.Invoke();
-        // }
 
         public void QuitGame()
         {
@@ -216,6 +166,9 @@ namespace cowsins
         {
             Time.timeScale = 1f; 
             isPaused = false;
+            //AkSoundEngine.PostEvent("StopAll", gameObject); // Replace "Stop_All" with the actual name of your Wwise event
+            MusicManager.Instance.PostStopAllEvent();
+
             AkSoundEngine.WakeupFromSuspend();
             // AkSoundEngine.StopAll();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
