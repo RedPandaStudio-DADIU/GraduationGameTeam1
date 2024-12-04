@@ -5,8 +5,19 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="MainMusicSW" ID="{8A7DDC65-0397-4977-9732-7BEBC4C7C9DA}" ShortID="332535398">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="110"/>
 						<Property Name="TimeSignatureLower" Type="int16" Value="32"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-12</Value>
@@ -43,6 +54,7 @@
 						<MusicSwitchContainer Name="Lv1_hangard" ID="{D62D8A98-D7A7-4617-975D-4A22642A8E5E}" ShortID="640068192">
 							<PropertyList>
 								<Property Name="GridFrequencyPreset" Type="int16" Value="53"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="OverrideClockSettings" Type="bool" Value="True"/>
 								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 								<Property Name="Tempo" Type="Real64" Value="110"/>
@@ -404,6 +416,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="DG_combat_percG_1" ID="{379EF000-03AE-4F88-A592-6626B1D5AAE6}" ShortID="753479009">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -587,6 +611,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_combat_audioG_1" ID="{A55F9FC5-AD19-40DF-AAF8-DEF4CF280D78}" ShortID="538909052">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -699,6 +735,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_combat_blæsG_1" ID="{72D308B8-B8F7-4D5A-BCDA-CA34FEDBBA63}" ShortID="934921900">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -751,6 +799,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_combat_fladerG_1" ID="{7036A722-1F18-4026-B4FF-25B5381DBE04}" ShortID="577589439">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -803,6 +863,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_combat_stringsG_1" ID="{615AFEA8-DE26-48DB-91D9-3634C5FBBBE5}" ShortID="579961005">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -855,6 +927,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_combat_vokalG_1" ID="{3F7E8407-6FCF-43DD-BD22-6F20A8478BF9}" ShortID="567835004">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1094,6 +1178,18 @@
 															</ReferenceList>
 															<ChildrenList>
 																<MusicTrack Name="DG_combatH_audioG_1" ID="{0D2664C4-4F43-47E3-A818-5EC2606341B9}" ShortID="837882837">
+																	<PropertyList>
+																		<Property Name="MaxSoundPerInstance" Type="int16">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="UseMaxSoundPerInstance" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1146,6 +1242,18 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="DG_combatH_blæsG_1" ID="{49274820-55A6-463B-B322-6F77584A1D84}" ShortID="482914683">
+																	<PropertyList>
+																		<Property Name="MaxSoundPerInstance" Type="int16">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="UseMaxSoundPerInstance" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1198,6 +1306,18 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="DG_combatH_fladerG_1" ID="{B545DC34-DC54-444D-ADDB-01A966AEF76F}" ShortID="998914109">
+																	<PropertyList>
+																		<Property Name="MaxSoundPerInstance" Type="int16">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="UseMaxSoundPerInstance" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1250,6 +1370,18 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="DG_combatH_percG_1" ID="{BA4C944B-0E91-430A-B6E4-04DA68B73CE3}" ShortID="23183622">
+																	<PropertyList>
+																		<Property Name="MaxSoundPerInstance" Type="int16">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="UseMaxSoundPerInstance" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1302,6 +1434,18 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="DG_combatH_stringsG_1" ID="{9468AFDE-A7E6-46E0-B649-395347EC4610}" ShortID="804972163">
+																	<PropertyList>
+																		<Property Name="MaxSoundPerInstance" Type="int16">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="UseMaxSoundPerInstance" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1354,6 +1498,18 @@
 																	</ObjectLists>
 																</MusicTrack>
 																<MusicTrack Name="DG_combatH_vokalG_1" ID="{A8B45F05-C1DD-4876-8C7A-4B073628ABD8}" ShortID="433387438">
+																	<PropertyList>
+																		<Property Name="MaxSoundPerInstance" Type="int16">
+																			<ValueList>
+																				<Value>1</Value>
+																			</ValueList>
+																		</Property>
+																		<Property Name="UseMaxSoundPerInstance" Type="bool">
+																			<ValueList>
+																				<Value>True</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
 																	<ReferenceList>
 																		<Reference Name="OutputBus">
 																			<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1540,6 +1696,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="DG_transition2" ID="{142C5965-B5ED-4CD4-9233-7FCA46D784D8}" ShortID="784038159">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1635,6 +1803,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="DG_trans_high-low_2" ID="{FA5B095E-0D5F-4AFB-B07E-9045FEB9CFD1}" ShortID="434158432">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1730,6 +1910,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="DG_trans-low-combat_3" ID="{06F87D9C-59B5-4616-BFFE-DE7CC8EE6ADE}" ShortID="747464333">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1875,6 +2067,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="DG_nocombat_percG_2" ID="{193A26BC-A633-4DBE-8978-646D93525DB9}" ShortID="176448695">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1927,6 +2131,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_nocombat_audioG_2" ID="{69ED790F-DB60-4DFF-ABE4-4ADE3FE657C2}" ShortID="548719594">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -1979,6 +2195,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_nocombat_blaesG_2" ID="{E5164E3D-B792-40F1-BC39-A47CD7ED7089}" ShortID="460878521">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2031,6 +2259,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_nocombat_fladerG_2" ID="{000A6E2E-5F25-4D4E-B002-C8598007DC00}" ShortID="624799759">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2083,6 +2323,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_nocombat_stringsG_2" ID="{4F741580-443B-4826-A4B3-1FC31D5CCBC4}" ShortID="893077514">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2135,6 +2387,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="DG_nocombat_vokalG_2" ID="{101C075E-BCA3-4E8C-83ED-0A5D4B397F1C}" ShortID="928477059">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2300,6 +2564,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<MusicTrack Name="nocombat4_stringsG" ID="{876291C5-C490-48E8-A743-F5F67E3A5948}" ShortID="196112964">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2352,6 +2628,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="nocombat4_audioG" ID="{B627F154-ACF5-4159-8C34-591E01DDD0A2}" ShortID="261370549">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2404,6 +2692,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="nocombat4_fladerG" ID="{E3503956-7025-4AA4-A77B-C9E31CF9AFDF}" ShortID="175408102">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2456,6 +2756,18 @@
 													</ObjectLists>
 												</MusicTrack>
 												<MusicTrack Name="nocombat4_vokalG" ID="{D41A14C7-63AE-4251-B2A0-21826E1B058C}" ShortID="570894670">
+													<PropertyList>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{92F9B3D2-5B6E-4BE8-BD1F-CD54538EB6E9}"/>
@@ -2772,6 +3084,18 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicPlaylistContainer Name="Lv2_base_theme" ID="{1DE43229-7AA9-48CE-8AB6-897FD056363C}" ShortID="118480503">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -2906,6 +3230,13 @@
 									</ChildrenList>
 								</MusicPlaylistContainer>
 								<MusicPlaylistContainer Name="Lv2_combat_xaga" ID="{6BCDD0BA-50DE-4017-BF8D-39C4FFF1E7C0}" ShortID="488022198">
+									<PropertyList>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C873042D-66D9-4EA0-A4E7-A8123391A0BD}"/>
@@ -2969,6 +3300,16 @@
 										<MusicSegment Name="combat_Lv2_Battleloop" ID="{56EA411C-45E4-4691-BF66-B8EAD219F059}" ShortID="288427066">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="69818.1875"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-3</Value>
@@ -3320,6 +3661,16 @@
 										<MusicSegment Name="combat_Lv2_intro_1" ID="{CF9CD050-9547-40A9-87F4-60C43C40EF56}" ShortID="692702141">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="37090.9166666667"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3410,6 +3761,16 @@
 										<MusicSegment Name="DG_trans_1xagawin" ID="{ACDAFA36-339C-4902-8B1C-8FB9E5365172}" ShortID="298115265">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="24308.6041666667"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3500,6 +3861,16 @@
 										<MusicSegment Name="control room reverb tales" ID="{834F0BB5-FE70-49B3-B20F-DD83245312A7}" ShortID="153001469">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="16000"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3586,6 +3957,16 @@
 										<MusicSegment Name="DG_trans_xagaloose" ID="{CD804B84-5348-407D-9BFB-0D9CBFD545AE}" ShortID="1007123969">
 											<PropertyList>
 												<Property Name="EndPosition" Type="Real64" Value="17454.5625"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -3845,6 +4226,16 @@
 								<MusicSegment Name="Menu_1" ID="{E6F95058-AE14-44A6-BC30-6811115F2BF8}" ShortID="167276711">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="104727.291666667"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-6</Value>
