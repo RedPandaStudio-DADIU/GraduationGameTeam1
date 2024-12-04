@@ -14,7 +14,7 @@
 		<DialogueEvent Id="4123380240" Name="Xaga"/>
 	</DialogueEvents>
 	<SoundBanks>
-		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{1B3A019E-B8C6-4455-1A12-96A88ED27B4D}">
+		<SoundBank Id="376630845" Type="User" Language="SFX" Hash="{EF7D81FF-DA5F-C4A5-9E81-5C9D73192BEC}">
 			<ShortName>MainMusicBank</ShortName>
 			<Path>MainMusicBank.bnk</Path>
 			<Media>
@@ -501,7 +501,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3EEEA30B-4EA9-BF56-A147-003760E5F1FC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1A917B72-CF0A-562B-F6A8-6257A49413D8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1188,7 +1188,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{F0E9707C-864A-7909-9884-85F8E9F7947E}">
+		<SoundBank Id="1768418619" Type="User" Language="English(US)" Hash="{D21D915D-EF81-AEFE-0DBA-A07B385C0AD0}">
 			<ShortName>MainSoundFXBank</ShortName>
 			<Path>English(US)/MainSoundFXBank.bnk</Path>
 			<Media>
@@ -1510,11 +1510,11 @@
 				</File>
 				<File Id="149707960" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113.wav</ShortName>
-					<CachePath>SFX/Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113_71593F1E.wem</CachePath>
+					<CachePath>SFX/Destruction_Crash_Debris_Car_Crash_Heavy_01_SND14113_381EE105.wem</CachePath>
 				</File>
 				<File Id="150068337" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5.wav</ShortName>
-					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5_63B2B4E8.wem</CachePath>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 5_2BFE8225.wem</CachePath>
 				</File>
 				<File Id="150870703" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Damage_11.wav</ShortName>
@@ -1958,7 +1958,7 @@
 				</File>
 				<File Id="331432523" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3.wav</ShortName>
-					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3_74BA894E.wem</CachePath>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486 3_CB30C4FD.wem</CachePath>
 				</File>
 				<File Id="331611502" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Attack_1.wav</ShortName>
@@ -2150,7 +2150,7 @@
 				</File>
 				<File Id="413768627" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486.wav</ShortName>
-					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486_1CC42DE3.wem</CachePath>
+					<CachePath>SFX/Explosions_Real_Heavy_Explosion_Huge_Blasts_Debris_SND122486_A6EED316.wem</CachePath>
 				</File>
 				<File Id="414982698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soldier_Attack_11.wav</ShortName>
@@ -6781,7 +6781,101 @@
 						<MediaRef Id="911602909"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3086540886" Name="StopAll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3086540886" Name="StopAll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529130"/>
+							<MediaRefs>
+								<MediaRef Id="324158094"/>
+								<MediaRef Id="493237573"/>
+								<MediaRef Id="531390771"/>
+								<MediaRef Id="797320250"/>
+								<MediaRef Id="831728715"/>
+								<MediaRef Id="852148347"/>
+								<MediaRef Id="869232112"/>
+								<MediaRef Id="934986776"/>
+								<MediaRef Id="952718673"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="569325008"/>
+							<MediaRefs>
+								<MediaRef Id="36107049"/>
+								<MediaRef Id="125610014"/>
+								<MediaRef Id="296992937"/>
+								<MediaRef Id="330433020"/>
+								<MediaRef Id="332571154"/>
+								<MediaRef Id="500080815"/>
+								<MediaRef Id="570910821"/>
+								<MediaRef Id="619097722"/>
+								<MediaRef Id="698207332"/>
+								<MediaRef Id="767570935"/>
+								<MediaRef Id="962069064"/>
+								<MediaRef Id="986711901"/>
+								<MediaRef Id="1007587335"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529131"/>
+							<MediaRefs>
+								<MediaRef Id="895927408"/>
+								<MediaRef Id="1044395216"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028876"/>
+							<MediaRefs>
+								<MediaRef Id="545399152"/>
+								<MediaRef Id="670676809"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="3690529129"/>
+							<MediaRefs>
+								<MediaRef Id="374402712"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="1568320808"/>
+							<MediaRefs>
+								<MediaRef Id="154781338"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="342028879"/>
+							<MediaRefs>
+								<MediaRef Id="111408999"/>
+								<MediaRef Id="262623482"/>
+								<MediaRef Id="340515145"/>
+								<MediaRef Id="380369711"/>
+								<MediaRef Id="425120084"/>
+								<MediaRef Id="425179418"/>
+								<MediaRef Id="508446791"/>
+								<MediaRef Id="580276444"/>
+								<MediaRef Id="670922056"/>
+								<MediaRef Id="844964757"/>
+								<MediaRef Id="944226106"/>
+								<MediaRef Id="1002694858"/>
+								<MediaRef Id="1004420237"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="551107239"/>
+							<MediaRefs>
+								<MediaRef Id="127885864"/>
+								<MediaRef Id="338036065"/>
+								<MediaRef Id="799930274"/>
+								<MediaRef Id="952718673"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4121174866" Id="1568320811"/>
+							<MediaRefs>
+								<MediaRef Id="148178849"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 			</Events>
 			<Busses>
 				<Bus Id="47937584" Name="PlayerVoice">
@@ -7224,5 +7318,5 @@
 			</DialogueEvents>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AD212D8E-54A9-5ACC-9861-57067BFD093F}</FileHash>
+	<FileHash>{78D93AFC-F818-66DD-A3FC-7767D7892A1B}</FileHash>
 </SoundBanksInfo>
