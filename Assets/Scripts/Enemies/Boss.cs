@@ -43,6 +43,7 @@ public class Boss : DiplomatEnemy
     {
         this.SetHealth(400f);
         this.SetStoppingDistance(8f);
+        this.SetAttackDistance(20f);
         queueWeakSpots = new Queue<Transform>(weakSpots);
         queueMaterials = new Queue<Material>(materials);
         renderer = transform.Find("Xaga").GetComponent<Renderer>();

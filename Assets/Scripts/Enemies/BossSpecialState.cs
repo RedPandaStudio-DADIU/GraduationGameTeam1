@@ -31,8 +31,9 @@ public class BossSpecialState : IEnemyState
 
     private IEnumerator ChargeBeforeShotCoroutine(EnemyStateController stateController)
     {
-        while (true)
-        {
+        //while (true)
+        //{
+            Debug.LogWarning("Entering the ChargeBeforeShot Coroutine: " + Time.time);
             if (stateController.GetEnemy().CompareTag("Boss") && stateController.GetEnemy().GetChargeSound() != null)
             {
                 stateController.GetEnemy().GetComponent<Boss>().GetSpecialAttackSound().Post(stateController.GetEnemy().gameObject);
@@ -51,7 +52,7 @@ public class BossSpecialState : IEnemyState
             }
 
             stateController.GetEnemy().GetComponent<Boss>().StopAttackPrepVFX();
-        }
+        //}
     }
 
 }

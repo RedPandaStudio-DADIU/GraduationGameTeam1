@@ -22,7 +22,7 @@ public class EnemyRagdollController : MonoBehaviour
     private Rigidbody mainRigidbody; 
     // private Rigidbody weaponRigidbody; 
     [SerializeField] private float fallThreshold = -5f;
-    [SerializeField] private float standUpDuration = 3f; // Duration for stand-up transition
+    [SerializeField] private float standUpDuration = 7f; // Duration for stand-up transition
     [SerializeField] private float animatorEnableDelay = 0.5f; // Delay before enabling Animator
     [SerializeField] private LayerMask groundLayer; // Ground layer for raycast check
 
