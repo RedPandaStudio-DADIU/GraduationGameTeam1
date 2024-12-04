@@ -63,17 +63,35 @@ public class OurMagazine : Pickeable
 
         if (bulletsUIText != null)
             {
-                weaponController.id.totalBullets += bulletAmount;
-                int currentBullets = 0;
-                if(weaponController.id.totalBullets - 15 >=0){
-                    currentBullets = weaponController.id.totalBullets - 15;
+                Debug.LogWarning("Weapon ID: " + weaponController.id.gameObject.name);
+                if(weaponController.id.gameObject.name == "PrimaryWeapon(Clone)"){
+                    Debug.LogWarning("Weapon ID inside PrimaryWeapon if: " + weaponController.id.gameObject.name);
+                    weaponController.id.totalBullets += bulletAmount;
+                    int currentBullets = 0;
+                    if(weaponController.id.totalBullets - 15 >=0){
+                        currentBullets = weaponController.id.totalBullets - 15;
+                    }
+
+                    bulletsUIText.text = $"{weaponController.id.totalBullets}";  // Update the text field
+                    Debug.Log($"Updated bullets UI: {weaponController.id.totalBullets}");
+                } else {
+                    Debug.LogWarning("Weapon ID inside Pistol if: " + weaponController.id.gameObject.name);
+                    weaponController.inventory[0].totalBullets += bulletAmount;
+                    int currentBullets = 0;
+                    if(weaponController.inventory[0].totalBullets - 15 >=0){
+                        currentBullets = weaponController.inventory[0].totalBullets - 15;
+                    }
+
+                    bulletsUIText.text = $"{weaponController.inventory[0].totalBullets}";  // Update the text field
+                    Debug.Log($"Updated bullets UI: {weaponController.inventory[0].totalBullets}");
                 }
+
                 
-                //int currentBullets = int.Parse(bulletsUIText.text);  // Assuming bullets are displayed as an integer
-                //currentBullets += bulletAmount;  // Add the picked up amount to the current bullets
-                //weaponController.id.totalBullets += bulletAmount;
-                bulletsUIText.text = $"{weaponController.id.totalBullets}";  // Update the text field
-                Debug.Log($"Updated bullets UI: {weaponController.id.totalBullets}");
+                ////int currentBullets = int.Parse(bulletsUIText.text);  // Assuming bullets are displayed as an integer
+                ////currentBullets += bulletAmount;  // Add the picked up amount to the current bullets
+                ////weaponController.id.totalBullets += bulletAmount;
+                //bulletsUIText.text = $"{weaponController.id.totalBullets}";  // Update the text field
+                //Debug.Log($"Updated bullets UI: {weaponController.id.totalBullets}");
             }
 
         Destroy(this.gameObject);
