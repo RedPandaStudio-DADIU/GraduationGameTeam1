@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AK.Wwise;
+using System.Text.RegularExpressions;
 
 public class PushEnemy : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class PushEnemy : MonoBehaviour
         foreach (Collider hitCollider in hitColliders)
         {
             
-            if (hitCollider.CompareTag("Enemy") && !(hitCollider.gameObject.GetType() == typeof(ShieldEnemy)))
+            if (hitCollider.CompareTag("Enemy") && Regex.IsMatch(hitCollider.gameObject.name, "Shield", RegexOptions.IgnoreCase))
             {
                 PushLogic(hitCollider);
                
